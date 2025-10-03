@@ -5805,7 +5805,8 @@ a.mapboxgl-ctrl-logo {
     margin-right: 22px;
   }
   .page-title-home .image {
-    margin-right: -33%;
+    /* margin-right: -33%; */
+    margin-right: 0;
   }
 }
 @media (min-width: 1201px) {
