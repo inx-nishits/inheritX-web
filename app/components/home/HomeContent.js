@@ -496,7 +496,7 @@ export default function HomeContent () {
               <div className='left-section'>
                 <div className='heading-section mb-53'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    <span className="text-primary">Grow</span> & Development
+                    <span className='text-primary'>Grow</span> & Development
                   </div>
                   <h2 className='title fw-6 title-animation'>
                     Modern Technology and
@@ -854,7 +854,10 @@ export default function HomeContent () {
                         <div className='desc lh-30'>
                           Robust, reliable, and responsive corporate websites
                         </div>
-                        <a href='services-details.html' className='image rounded-3 overflow-hidden'>
+                        <a
+                          href='services-details.html'
+                          className='image rounded-3 overflow-hidden'
+                        >
                           <img
                             src='image/home/services-1.jpg'
                             data-src='image/home/services-1.jpg'
@@ -890,7 +893,10 @@ export default function HomeContent () {
                           Predictive analytics, chatbots, computer vision, and
                           custom LLM integrations.
                         </div>
-                        <a href='services-details.html' className='image rounded-3 overflow-hidden'>
+                        <a
+                          href='services-details.html'
+                          className='image rounded-3 overflow-hidden'
+                        >
                           <img
                             src='image/home/services-2.jpg'
                             data-src='image/home/services-2.jpg'
@@ -923,9 +929,12 @@ export default function HomeContent () {
                           </a>
                         </h6>
                         <div className='desc lh-30'>
-                          Feature-rich apps with a seamless performance
+                          Feature-rich apps delivering seamless performance and smooth, reliable functionality.
                         </div>
-                        <a href='services-details.html' className='image rounded-3 overflow-hidden'>
+                        <a
+                          href='services-details.html'
+                          className='image rounded-3 overflow-hidden'
+                        >
                           <img
                             src='image/home/services-3.jpg'
                             data-src='image/home/services-3.jpg'
@@ -962,7 +971,10 @@ export default function HomeContent () {
                           Customized solutions by integrating technological
                           advancements
                         </div>
-                        <a href='services-details.html' className='image rounded-3 overflow-hidden'>
+                        <a
+                          href='services-details.html'
+                          className='image rounded-3 overflow-hidden'
+                        >
                           <img
                             src='image/home/services-3.jpg'
                             data-src='image/home/services-3.jpg'
@@ -998,7 +1010,10 @@ export default function HomeContent () {
                         <div className='desc lh-30'>
                           Secure and Scalable Cloud-based Apps for Business
                         </div>
-                        <a href='services-details.html' className='image rounded-3 overflow-hidden'>
+                        <a
+                          href='services-details.html'
+                          className='image rounded-3 overflow-hidden'
+                        >
                           <img
                             src='image/home/services-3.jpg'
                             data-src='image/home/services-3.jpg'
@@ -1085,7 +1100,7 @@ export default function HomeContent () {
               <div className='col-lg-3'>
                 <div className='heading-section'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    Our <span className="text-primary">Professionals</span>
+                    Our <span className='text-primary'>Professionals</span>
                   </div>
                   <h2 className='title fw-6 mb-4 title-animation'>
                     Meet Our Experience
