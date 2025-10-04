@@ -1170,6 +1170,7 @@ a:hover, a:focus {
 }
 .menu-primary-menu .menu-item {
   cursor: pointer;
+  white-space: nowrap;
 }
 .menu-primary-menu .menu-item:not(.menu-item-has-children) {
   padding-right: 0;
@@ -1258,7 +1259,7 @@ a:hover, a:focus {
   left: 0px;
   background: var(--main-dark);
       border-bottom: 1px solid var(--stroke-2);
-    max-height: 380px;
+    max-height: calc(100dvh - 180px);
     overflow-y: auto;
 }
 .cursor-default {
@@ -1884,6 +1885,7 @@ a:hover, a:focus {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  white-space: nowrap;
 }
 .tf-btn span {
   color: var(--white);
@@ -5941,10 +5943,10 @@ a.mapboxgl-ctrl-logo {
     padding-right: 70px;
   }
   .header .logo-header {
-    padding-right: 91px;
+    padding-right: 30px;
   }
   .header .main-menu {
-    padding-left: 70px;
+    padding-left: 24px;
   }
   .header .header-right {
     gap: 51px;
@@ -5952,7 +5954,7 @@ a.mapboxgl-ctrl-logo {
 }
 @media (max-width: 1500px) {
   .menu-primary-menu {
-    gap: 17px;
+    gap: 14px;
   }
 }
 @media (max-width: 1200px) {
