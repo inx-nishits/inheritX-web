@@ -1,13 +1,11 @@
-import ServicesHero from '../components/services/ServicesHero';
-import ServicesList from '../components/services/ServicesList';
+import ServicesContent from '../components/services/ServicesContent';
 
 export const dynamic = 'force-static';
 
 export default function Page() {
   return (
     <main>
-      <ServicesHero />
-      <ServicesList />
+      <ServicesContent />
     </main>
   );
 }

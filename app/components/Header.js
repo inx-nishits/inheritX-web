@@ -32,12 +32,19 @@ export default function Header () {
                 <Link
                   href='https://www.facebook.com/InheritxSolutions/'
                   className='icon-social'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <i className='icon-fb'></i>
                 </Link>
               </li>
               <li>
-                <Link href='https://x.com/inheritx' className='icon-social'>
+                <Link
+                  href='https://x.com/inheritx'
+                  className='icon-social'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <i className='icon-X'></i>
                 </Link>
               </li>
@@ -45,6 +52,8 @@ export default function Header () {
                 <Link
                   href='https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/'
                   className='icon-social'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <i className='icon-linkedin'></i>
                 </Link>
@@ -53,6 +62,8 @@ export default function Header () {
                 <Link
                   href='https://www.instagram.com/inheritxsolutions/'
                   className='icon-social'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <i className='icon-instagram'></i>
                 </Link>
@@ -127,7 +138,7 @@ export default function Header () {
                       : ''
                   }`}
                 >
-                  <a href='javascript:void(0)' className='item-link body-2'>
+                  <a href='/services' className='item-link body-2'>
                     <span>Solutions</span>
                   </a>
                   <div className='sub-menu mega-menu p-4 py-5'>
@@ -549,7 +560,7 @@ export default function Header () {
                       : ''
                   }`}
                 >
-                  <a href='javascript:void(0)' className='item-link body-2'>
+                  <a href='/hire-experts' className='item-link body-2'>
                     <span>Hire Experts</span>
                   </a>
                   <div className='sub-menu mega-menu p-4 py-5'>
@@ -792,7 +803,7 @@ export default function Header () {
                     isActive('/career') ? 'current-menu-item' : ''
                   }`}
                 >
-                  <Link href='/career' className='item-link body-2'>
+                  <Link href='/join-our-team' className='item-link body-2'>
                     <span>Join Our Team</span>
                   </Link>
                 </li>

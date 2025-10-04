@@ -85,8 +85,8 @@ export default function HomeContent () {
                   </p>
                 </div>
 
-                <div className='wg-counter flex gap-0 row'>
-                  <div className='counter-item col-12 col-lg-6'>
+                <div className='wg-counter flex gap-0 row mb-0'>
+                  <div className='counter-item col-12 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -105,7 +105,7 @@ export default function HomeContent () {
                     </div>
                   </div>
 
-                  <div className='counter-item col-12 col-lg-6'>
+                  <div className='counter-item col-12 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -125,8 +125,8 @@ export default function HomeContent () {
                   </div>
                 </div>
 
-                <div className='wg-counter flex gap-0 row'>
-                  <div className='counter-item col-12 col-lg-6'>
+                <div className='wg-counter flex gap-0 row mb-0'>
+                  <div className='counter-item col-12 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -145,7 +145,7 @@ export default function HomeContent () {
                     </div>
                   </div>
 
-                  <div className='counter-item col-12 col-lg-6'>
+                  <div className='counter-item col-12 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -165,8 +165,8 @@ export default function HomeContent () {
                   </div>
                 </div>
 
-                <div className='wg-counter flex gap-0 row'>
-                  <div className='counter-item col-12 col-lg-6'>
+                <div className='wg-counter flex gap-0 row mb-0'>
+                  <div className='counter-item col-12 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -185,7 +185,7 @@ export default function HomeContent () {
                     </div>
                   </div>
 
-                  <div className='counter-item col-12 col-lg-6'>
+                  <div className='counter-item col-12 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -204,7 +204,7 @@ export default function HomeContent () {
                 </div>
 
                 <a href='services.html' className='tf-btn'>
-                  <span> Click for Free Consultancy </span>
+                  <span>Click for Free Consultancy</span>
                   <i className='icon-arrow-right'></i>
                 </a>
               </div>
@@ -212,8 +212,8 @@ export default function HomeContent () {
             <div className='col-lg-7'>
               <div className='image tf-animate-1 rounded-3 overflow-hidden'>
                 <img
-                  src='image/page-title/img-page-title.jpg'
-                  data-src='image/page-title/img-page-title.jpg'
+                  src='image/page-title/img-page-title.jpeg'
+                  data-src='image/page-title/img-page-title.jpeg'
                   alt=''
                   className='lazyload'
                 />
@@ -374,8 +374,8 @@ export default function HomeContent () {
               <div className='left rounded-3 overflow-hidden'>
                 <div className='image tf-animate-1'>
                   <img
-                    src='image/home/img-section-counting-1.jpg'
-                    data-src='image/home/img-section-counting-1.jpg'
+                    src='image/home/img-section-counting-1.png'
+                    data-src='image/home/img-section-counting-1.png'
                     alt=''
                     className='lazyload'
                   />
@@ -563,8 +563,8 @@ export default function HomeContent () {
                       <div className='according-content'>
                         <div className='image left'>
                           <img
-                            src='image/home/img-according-1.jpg'
-                            data-src='image/home/img-according-1.jpg'
+                            src='image/home/img-according-2.jpg'
+                            data-src='image/home/img-according-2.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -604,8 +604,8 @@ export default function HomeContent () {
                       <div className='according-content'>
                         <div className='image left'>
                           <img
-                            src='image/home/img-according-1.jpg'
-                            data-src='image/home/img-according-1.jpg'
+                            src='image/home/img-according-3.jpg'
+                            data-src='image/home/img-according-3.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -643,8 +643,8 @@ export default function HomeContent () {
                       <div className='according-content'>
                         <div className='image left'>
                           <img
-                            src='image/home/img-according-1.jpg'
-                            data-src='image/home/img-according-1.jpg'
+                            src='image/home/img-according-4.jpg'
+                            data-src='image/home/img-according-4.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -664,8 +664,8 @@ export default function HomeContent () {
               <div className='right-section'>
                 <div className='image image-section tf-animate-1 rounded-3 overflow-hidden'>
                   <img
-                    src='image/home/img-section-company.jpg'
-                    data-src='image/home/img-section-company.jpg'
+                    src='image/home/img-section-company.png'
+                    data-src='image/home/img-section-company.png'
                     alt=''
                     className='lazyload'
                   />
@@ -802,6 +802,7 @@ export default function HomeContent () {
               </div>
             </div>
           </div>
+          
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
@@ -836,7 +837,7 @@ export default function HomeContent () {
                                     }
                                 }'
                 >
-                  <div className='swiper-wrapper'>
+                  <div className='swiper-wrapper cursor-grab'>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon'>
@@ -879,7 +880,7 @@ export default function HomeContent () {
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon'>
-                          <i className='icon-outsourcing'></i>
+                          <i className='icon-software-product'></i>
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <a
@@ -892,6 +893,56 @@ export default function HomeContent () {
                         <div className='desc lh-30'>
                           Predictive analytics, chatbots, computer vision, and
                           custom LLM integrations.
+                        </div>
+                        <a
+                          href='services-details.html'
+                          className='image rounded-3 overflow-hidden'
+                        >
+                          <img
+                            src='image/home/services-4.jpg'
+                            data-src='image/home/services-4.jpg'
+                            alt=''
+                            className='lazyload'
+                          />
+                        </a>
+                        <div className='bottom-item'>
+                          <a
+                            href='services-details.html'
+                            className='tf-btn-readmore'
+                          >
+                            <span className='plus'>+</span>
+                            <span className='text'>Read More</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='swiper-slide'>
+                      <div className='services-item hover-image px-md-15 style-1'>
+                        <div className='icon'>
+                          <i className='icon icon-mobile-app'>
+                            <svg
+                              id='Layer_1'
+                              viewBox='0 0 24 24'
+                              xmlns='http://www.w3.org/2000/svg'
+                              data-name='Layer 1'
+                              fill='currentColor'
+                              style={{ marginTop: '-20px' }}
+                            >
+                              <path d='m15.437 21.68c-.793 1.432-2.302 2.32-3.937 2.32h-7c-2.481 0-4.5-2.019-4.5-4.5v-15c0-2.481 2.019-4.5 4.5-4.5h7c2.481 0 4.5 2.019 4.5 4.5v3c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-3c0-1.93-1.57-3.5-3.5-3.5h-7c-1.93 0-3.5 1.57-3.5 3.5v12.5h8.5c.276 0 .5.224.5.5s-.224.5-.5.5h-8.5v1.5c0 1.93 1.57 3.5 3.5 3.5h7c1.272 0 2.446-.691 3.062-1.805.135-.242.437-.326.68-.195.241.134.329.438.195.68zm-5.937-1.68h-3c-.276 0-.5.224-.5.5s.224.5.5.5h3c.276 0 .5-.224.5-.5s-.224-.5-.5-.5zm.5-11c0 1.103-.897 2-2 2s-2-.897-2-2 .897-2 2-2 2 .897 2 2zm-1 0c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1zm3.64-.987-.233.138c.063.299.094.575.094.85s-.03.551-.095.851l.234.138c.704.393.955 1.367.532 2.053-.394.704-1.365.956-2.054.532l-.223-.131c-.407.34-.881.606-1.396.786v.271c0 .827-.673 1.5-1.5 1.5-1.101 0-1.5-.897-1.5-1.5v-.271c-.515-.18-.988-.446-1.396-.786l-.223.131c-.688.424-1.66.172-2.055-.533-.422-.685-.17-1.659.533-2.053l.233-.138c-.063-.299-.094-.575-.094-.85s.03-.551.095-.851l-.234-.138c-.704-.393-.955-1.367-.532-2.053.394-.703 1.367-.957 2.054-.532l.223.131c.407-.34.881-.606 1.396-.786v-.271c0-.827.673-1.5 1.5-1.5 1.101 0 1.5.897 1.5 1.5v.271c.515.18.988.446 1.396.786l.223-.131c.689-.425 1.659-.171 2.055.533.422.685.17 1.659-.533 2.053zm-1.063-.536.556-.326c.234-.13.318-.456.178-.684-.13-.236-.458-.319-.685-.179l-.54.318c-.197.116-.448.084-.607-.077-.431-.432-.984-.743-1.604-.903-.221-.058-.375-.257-.375-.484v-.642c-.006-.225-.098-.5-.5-.5-.275 0-.5.225-.5.5v.642c0 .228-.154.427-.375.484-.619.16-1.173.472-1.604.903-.159.162-.41.194-.607.077l-.54-.318c-.228-.142-.553-.057-.684.178-.142.229-.058.552.177.684l.557.328c.196.115.289.349.227.567-.103.361-.15.665-.15.955s.048.594.15.955c.062.219-.031.452-.228.568l-.556.326c-.234.13-.318.456-.178.684.13.236.458.32.685.179l.54-.318c.195-.115.446-.085.607.077.431.432.984.743 1.604.903.221.058.375.257.375.484v.642c.006.225.098.5.5.5.275 0 .5-.225.5-.5v-.642c0-.228.154-.427.375-.484.619-.16 1.173-.472 1.604-.903.16-.161.411-.192.607-.077l.54.318c.226.139.554.058.684-.178.142-.229.058-.552-.177-.684l-.557-.328c-.196-.115-.289-.349-.227-.567.103-.361.15-.665.15-.955s-.048-.594-.15-.955c-.062-.219.031-.452.228-.568zm12.37-3.253-3.648 7.296 1.501.808c.885.475 1.359 1.491 1.152 2.473-.336 1.59-1.054 3.192-2.133 4.764-.378.551-1 .86-1.646.86-.347.015-.74-.132-1.064-.26-.316-.12-.561-.357-.691-.669-.131-.313-.128-.673.009-.985.177-.402.319-.778.419-1.178-.827.685-1.62 1.104-2 1.287-.378.181-.813.164-1.163-.039-.701-.408-1.419-.876-2.077-1.352-.437-.316-.717-.806-.768-1.344-.052-.546.136-1.089.513-1.489 1.005-1.066 1.92-2.222 2.647-3.34.657-1.011 1.942-1.346 2.985-.784l1.436.773 3.635-7.269c.124-.246.424-.347.671-.224.247.124.347.424.224.671zm-2.621 8.985-3.818-2.056c-.586-.316-1.303-.121-1.673.448-.77 1.185-1.697 2.355-2.757 3.48-.181.191-.271.45-.246.71.024.255.151.478.358.627.632.457 1.321.906 1.994 1.298.089.052.182.022.229 0 .482-.231 1.714-.894 2.709-2.045.137-.159.359-.214.553-.142.195.073.325.26.325.469 0 1.172-.264 2.012-.658 2.912-.047.122-.018.257.121.318l.365.135c.428.154.91.005 1.167-.367 1.004-1.462 1.67-2.943 1.979-4.404.115-.549-.15-1.118-.646-1.385z' />
+                            </svg>
+                          </i>
+                        </div>
+                        <h6 className='lh-30 fw-6'>
+                          <a
+                            href='services-details.html'
+                            className='title-service'
+                          >
+                            Mobile App Development
+                          </a>
+                        </h6>
+                        <div className='desc lh-30'>
+                          Feature-rich apps delivering seamless performance and
+                          smooth, reliable functionality.
                         </div>
                         <a
                           href='services-details.html'
@@ -915,49 +966,22 @@ export default function HomeContent () {
                         </div>
                       </div>
                     </div>
-                    <div className='swiper-slide'>
-                      <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon'>
-                          <i className='icon-software-product'></i>
-                        </div>
-                        <h6 className='lh-30 fw-6'>
-                          <a
-                            href='services-details.html'
-                            className='title-service'
-                          >
-                            Mobile App Development
-                          </a>
-                        </h6>
-                        <div className='desc lh-30'>
-                          Feature-rich apps delivering seamless performance and smooth, reliable functionality.
-                        </div>
-                        <a
-                          href='services-details.html'
-                          className='image rounded-3 overflow-hidden'
-                        >
-                          <img
-                            src='image/home/services-3.jpg'
-                            data-src='image/home/services-3.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </a>
-                        <div className='bottom-item'>
-                          <a
-                            href='services-details.html'
-                            className='tf-btn-readmore'
-                          >
-                            <span className='plus'>+</span>
-                            <span className='text'>Read More</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
 
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon'>
-                          <i className='icon-software-product'></i>
+                          <i className='icon icon-mobile-app'>
+                            <svg
+                              id='Layer_1'
+                              viewBox='0 0 24 24'
+                              xmlns='http://www.w3.org/2000/svg'
+                              data-name='Layer 1'
+                              fill='currentColor'
+                              style={{ marginTop: '-20px' }}
+                            >
+                              <path d='m4.5 13c-1.671 0-4.5.369-4.5 1.75v7.583c0 1.315 2.829 1.667 4.5 1.667s4.5-.351 4.5-1.667v-7.583c0-1.381-2.829-1.75-4.5-1.75zm3.508 6.782c-.133.214-1.314.718-3.508.718-2.151 0-3.33-.484-3.5-.705v-1.349c.976.419 2.461.555 3.5.555s2.53-.137 3.506-.557l.002 1.339zm-.004-2.496c-.143.216-1.321.714-3.504.714-2.151 0-3.33-.484-3.5-.705v-1.377c.976.44 2.461.582 3.5.582s2.526-.143 3.502-.583zm-3.504-3.286c2.216 0 3.405.558 3.505.721-.1.222-1.289.779-3.505.779-2.123 0-3.304-.512-3.486-.75.183-.238 1.363-.75 3.486-.75zm0 9c-2.205 0-3.389-.509-3.5-.667v-1.388c.976.419 2.461.555 3.5.555s2.534-.137 3.51-.558l.002 1.337c-.123.212-1.307.722-3.512.722zm8.5-13c0-.552.448-1 1-1s1 .448 1 1-.448 1-1 1-1-.448-1-1zm10.5-3h-12c-.276 0-.5.224-.5.5v3c0 1.378 1.121 2.5 2.5 2.5h8c1.379 0 2.5-1.122 2.5-2.5v-3c0-.276-.224-.5-.5-.5zm-.5 3.5c0 .827-.673 1.5-1.5 1.5h-8c-.827 0-1.5-.673-1.5-1.5v-2.5h11zm-6-.5c0-.276.224-.5.5-.5h3c.276 0 .5.224.5.5s-.224.5-.5.5h-3c-.276 0-.5-.224-.5-.5zm-2-7c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1zm6.5-3h-8c-1.379 0-2.5 1.122-2.5 2.5v3c0 .276.224.5.5.5h12c.276 0 .5-.224.5-.5v-3c0-1.378-1.121-2.5-2.5-2.5zm1.5 5h-11v-2.5c0-.827.673-1.5 1.5-1.5h8c.827 0 1.5.673 1.5 1.5zm-2-2c0 .276-.224.5-.5.5h-3c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h3c.276 0 .5.224.5.5zm-12-.5c0 .276-.224.5-.5.5h-2c-1.379 0-2.5 1.122-2.5 2.5v3.199l2.154-2.06c.199-.191.516-.183.707.016.19.2.184.516-.016.707l-2.32 2.218c-.268.268-.635.42-1.025.42s-.758-.152-1.033-.428l-2.313-2.211c-.199-.191-.206-.507-.016-.707.189-.199.508-.207.707-.016l2.154 2.06v-3.198c0-1.93 1.57-3.5 3.5-3.5h2c.276 0 .5.224.5.5zm11 13v2c0 1.93-1.57 3.5-3.5 3.5h-3.199l2.061 2.154c.19.2.184.516-.016.707-.199.191-.516.184-.707-.016l-2.219-2.32c-.562-.562-.562-1.49.008-2.06l2.211-2.312c.192-.198.508-.206.707-.016.199.191.206.507.016.707l-2.06 2.154h3.199c1.379 0 2.5-1.122 2.5-2.5v-2c0-.276.224-.5.5-.5s.5.224.5.5z' />
+                            </svg>
+                          </i>
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <a
@@ -997,7 +1021,18 @@ export default function HomeContent () {
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon'>
-                          <i className='icon-software-product'></i>
+                          <i className='icon icon-mobile-app'>
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              id='Layer_1'
+                              data-name='Layer 1'
+                              viewBox='0 0 24 24'
+                              fill='currentColor'
+                              style={{ marginTop: '-20px' }}
+                            >
+                              <path d='M14,17h-4c-.827,0-1.5,.673-1.5,1.5v3.5h3v1h-1.5v1h4v-1h-1.5v-1h3v-3.5c0-.827-.673-1.5-1.5-1.5Zm.5,4h-5v-2.5c0-.276,.225-.5,.5-.5h4c.275,0,.5,.224,.5,.5v2.5Zm9.5,1v-3.5c0-.827-.673-1.5-1.5-1.5h-4c-.827,0-1.5,.673-1.5,1.5v3.5h3v1h-1.5v1h4v-1h-1.5v-1h3Zm-6-3.5c0-.276,.225-.5,.5-.5h4c.275,0,.5,.224,.5,.5v2.5h-5v-2.5ZM4,13h7.5v2h1v-2h7.5v2h1v-3H12.5v-2h2c1.93,0,3.5-1.57,3.5-3.5,0-1.382-.822-2.625-2.076-3.184-.327-1.912-1.963-3.316-3.924-3.316-2.206,0-4,1.794-4,4,0,.195,.017,.391,.053,.596-1.189,.307-2.053,1.378-2.053,2.654,0,1.517,1.233,2.75,2.75,2.75h2.75v2H3v3h1v-2Zm4.75-4c-.965,0-1.75-.785-1.75-1.75,0-.941,.739-1.706,1.684-1.742l.646-.024-.187-.619c-.098-.327-.144-.602-.144-.865,0-1.654,1.346-3,3-3,1.547,0,2.823,1.169,2.969,2.72l.03,.321,.306,.105c1.014,.347,1.695,1.293,1.695,2.354,0,1.378-1.121,2.5-2.5,2.5h-5.75Zm-3.25,8H1.5c-.827,0-1.5,.673-1.5,1.5v3.5H3v1H1.5v1H5.5v-1h-1.5v-1h3v-3.5c0-.827-.673-1.5-1.5-1.5Zm.5,4H1v-2.5c0-.276,.225-.5,.5-.5H5.5c.275,0,.5,.224,.5,.5v2.5Z' />
+                            </svg>
+                          </i>
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <a
@@ -1015,8 +1050,8 @@ export default function HomeContent () {
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
-                            src='image/home/services-3.jpg'
-                            data-src='image/home/services-3.jpg'
+                            src='image/home/services-5.jpg'
+                            data-src='image/home/services-5.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -1567,32 +1602,32 @@ export default function HomeContent () {
                 <div className='list-image'>
                   <div className='img-section img-1 img-elip tf-animate-1'>
                     <img
-                      src='image/home/section-testimonial-1.jpg'
-                      data-src='image/home/section-testimonial-1.jpg'
+                      src='image/home/section-testimonial-1.png'
+                      data-src='image/home/section-testimonial-1.png'
                       alt=''
                       className='lazyload'
                     />
                   </div>
                   <div className='img-section img-2 tf-animate-2'>
                     <img
-                      src='image/home/section-testimonial-2.jpg'
-                      data-src='image/home/section-testimonial-2.jpg'
+                      src='image/home/section-testimonial-2.png'
+                      data-src='image/home/section-testimonial-2.png'
                       alt=''
                       className='lazyload'
                     />
                   </div>
                   <div className='img-section img-3 tf-animate-3'>
                     <img
-                      src='image/home/section-testimonial-3.jpg'
-                      data-src='image/home/section-testimonial-3.jpg'
+                      src='image/home/section-testimonial-3.png'
+                      data-src='image/home/section-testimonial-3.png'
                       alt=''
                       className='lazyload'
                     />
                   </div>
                   <div className='img-section img-4 img-elip tf-animate-4'>
                     <img
-                      src='image/home/section-testimonial-4.jpg'
-                      data-src='image/home/section-testimonial-4.jpg'
+                      src='image/home/section-testimonial-4.png'
+                      data-src='image/home/section-testimonial-4.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1684,9 +1719,9 @@ export default function HomeContent () {
                         viewBox='0 0 24 24'
                         fill='none'
                         stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
+                        strokeWidth='2'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
                       >
                         <circle cx='12' cy='12' r='10' />
                         <line x1='2' y1='12' x2='22' y2='12' />
@@ -1749,6 +1784,415 @@ export default function HomeContent () {
                   <i className='icon-arrow-right'></i>
                 </button>
               </form>
+            </div>
+          </div>
+        </section>
+
+        <section className='section-about tf-spacing-2'>
+          <div className='tf-container text-center mb-5'>
+            <h2 className='title fw-6 title-animation mb-5'>
+              Our <span className='text-primary'>Partners</span>
+            </h2>
+            <p className='title-animation fs-2'>
+              We Feel Pride in Having Partnerships with Some of the Most Reputed
+              Companies in the World
+            </p>
+          </div>
+
+          <div className='about-top'>
+            <div className='tf-marquee'>
+              <div
+                className='marquee-wrapper'
+                style={{
+                  animation: 'infiniteScroll 50s linear infinite'
+                }}
+              >
+                <div className='initial-child-container'>
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/amazon.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/clutouc.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/gesia.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/guru.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/partner.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/upwork.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/amazon.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/clutouc.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/gesia.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/guru.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/partner.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/upwork.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/amazon.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/clutouc.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/gesia.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/guru.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/partner.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/upwork.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/amazon.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/clutouc.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/gesia.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/guru.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/partner.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/upwork.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1890,6 +2334,367 @@ export default function HomeContent () {
                         <span className='plus'>+</span>
                         <span className='text'>Read More</span>
                       </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className='section-about tf-spacing-2'>
+          <div className='tf-container text-center mb-5'>
+            <h2 className='title fw-6 title-animation mb-5'>
+              Our Valuable <span className='text-primary'>Clients</span>
+            </h2>
+            <p className='title-animation fs-2'>
+              We are pleased to serve one of the most reputed and respected
+              brands across different sectors globally
+            </p>
+          </div>
+
+          <div className='about-top'>
+            <div className='tf-marquee'>
+              <div
+                className='marquee-wrapper'
+                style={{
+                  animation: 'infiniteScroll 50s linear infinite'
+                }}
+              >
+                <div className='initial-child-container'>
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/stockteamup.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/perfit-1-1.jpg'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/dearcows.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/bubble_logo.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients1.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients2.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/stockteamup.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/perfit-1-1.jpg'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/dearcows.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/bubble_logo.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients1.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients2.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/stockteamup.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/perfit-1-1.jpg'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/dearcows.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/bubble_logo.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients1.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients2.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className='big-text fs-initial'>
+                    <div className='image left'>
+                      <img
+                        src='image/partners/OurClients.png'
+                        alt=''
+                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        style={{
+                          width: '200px',
+                          height: '100px',
+                          objectFit: 'none',
+                          objectPosition: 'center'
+                        }}
+                      />
                     </div>
                   </div>
                 </div>

@@ -4390,6 +4390,7 @@ a.mapboxgl-ctrl-logo {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  min-width: 55px;
 }
 .services-item .icon i {
   font-size: 55px;
@@ -4411,6 +4412,7 @@ a.mapboxgl-ctrl-logo {
 .services-item .image {
   margin-bottom: 40px;
   background-color: var(--main-dark);
+  display: block;
 }
 .services-item .image img {
   width: 100%;
@@ -6599,4 +6601,43 @@ a.mapboxgl-ctrl-logo {
 .text-primary {
 color: var(--primary) !important;
 }
-/*# sourceMappingURL=styles.css.map */
+
+
+.year-animate {
+  color: #00C5DE; /* base color */
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+
+  background: linear-gradient(90deg, #00C5DE, #6C5BFF, #00F0FF, #00C5DE);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.fs-initial {font-size: initial;}
+.swiper-wrapper {
+  cursor: grab;
+}
+
+
+.custom-services-wrapper .services-item-force {
+  width: 50% !important;        /* Force 50% width */
+  max-width: 50% !important;    /* Ensure it doesn’t exceed 50% */
+  border: 1px solid #ddd !important; /* Only this border applied */
+  box-sizing: border-box;       /* Include padding in width */
+  border-radius: 0 !important;  /* Remove any border-radius conflicts if needed */
+  border-style: solid !important; /* Ensure only solid border is applied */
+}
