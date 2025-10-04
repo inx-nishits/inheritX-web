@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" viewBox="0 0 45 45">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_2" data-name="Path 2" d="M43.771,22.04,31.658,34.158,43.771,46.276H29.929L17.812,34.158,29.929,22.04ZM29.929,1.276l-22.5,22.5L14.354,30.7,43.771,1.276Z" transform="translate(-7.431 -1.276)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.197" y1="1.193" x2="0.699" y2="0.448" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a237e" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#1a237e" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.028" cy="0.068" r="1.223" gradientTransform="matrix(1.238, 0, 0, -1, -2.189, -5.539)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.102"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-flutter">
+      <rect width="45" height="45"/>
+    </clipPath>
+  </defs>
+  <g id="flutter" clip-path="url(#clip-flutter)">
+    <g id="flutter-2" data-name="flutter" transform="translate(-3.431 -1.276)">
+      <g id="Group_1" data-name="Group 1" transform="translate(7.431 1.276)" clip-path="url(#clip-path)">
+        <path id="Path_1" data-name="Path 1" d="M22.2,42.928l6.919,6.923L48.157,30.81H34.315Z" transform="translate(-11.817 -10.045)" fill="#39cefd"/>
+      </g>
+      <g id="Group_2" data-name="Group 2" transform="translate(7.431 1.276)" clip-path="url(#clip-path)">
+        <path id="Path_3" data-name="Path 3" d="M29.929,1.276H43.771L14.354,30.7,7.431,23.773Z" transform="translate(-7.431 -1.276)" fill="#39cefd"/>
+      </g>
+      <g id="Group_3" data-name="Group 3" transform="translate(7.431 1.276)" clip-path="url(#clip-path)">
+        <path id="Path_5" data-name="Path 5" d="M32.042,54.968l5.194,5.19H51.079L38.965,48.045Z" transform="translate(-14.739 -15.163)" fill="#03569b"/>
+      </g>
+      <g id="Group_4" data-name="Group 4" transform="translate(7.431 1.276)" clip-path="url(#clip-path)">
+        <path id="Path_7" data-name="Path 7" d="M42.31,51.411l-3.345-3.366-6.923,6.923Z" transform="translate(-14.739 -15.163)" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="Group_5" data-name="Group 5" transform="translate(7.431 1.276)" clip-path="url(#clip-path)">
+        <path id="Path_9" data-name="Path 9" d="M22.2,45.118l6.923-6.923,6.924,6.923-6.924,6.923Z" transform="translate(-11.817 -12.238)" fill="#16b9fd"/>
+      </g>
+      <path id="Path_11" data-name="Path 11" d="M43.771,22.04,31.658,34.158,43.771,46.276H29.929L17.812,34.158,29.929,22.04ZM29.929,1.276l-22.5,22.5L14.354,30.7,43.771,1.276Z" fill="url(#radial-gradient)"/>
+    </g>
+  </g>
+</svg>

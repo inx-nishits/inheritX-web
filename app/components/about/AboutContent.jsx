@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function AboutContent () {
   return (
@@ -41,7 +41,6 @@ export default function AboutContent () {
                     src='/image/home/img-section-counting-1.png'
                     alt='Counting section'
                     fill
-                    priority={false} // Set to true for above-fold images
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>

@@ -6645,7 +6645,7 @@ color: var(--primary) !important;
 .custom-services-wrapper .services-item-force {
   width: 50% !important;        /* Force 50% width */
   max-width: 50% !important;    /* Ensure it doesn’t exceed 50% */
-  border: 1px solid #ddd !important; /* Only this border applied */
+  border: 0.5px solid var(--stroke-2) !important; /* Only this border applied */
   box-sizing: border-box;       /* Include padding in width */
   border-radius: 0 !important;  /* Remove any border-radius conflicts if needed */
   border-style: solid !important; /* Ensure only solid border is applied */
