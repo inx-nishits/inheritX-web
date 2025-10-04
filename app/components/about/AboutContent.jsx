@@ -1,3 +1,7 @@
+'use client'
+import { useState, useEffect } from 'react'
+import Image from "next/image";
+
 export default function AboutContent () {
   return (
     <>
@@ -18,7 +22,7 @@ export default function AboutContent () {
               </span>
             </div>
 
-            <p className='pt-4 fs-2'>Our Only Aim - Make Clients Happy!</p>
+            <p className='pt-4'>Our Only Aim - Make Clients Happy!</p>
           </div>
         </div>
       </div>
@@ -32,12 +36,12 @@ export default function AboutContent () {
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
               <div className='left rounded-3 overflow-hidden'>
-                <div className='image tf-animate-1'>
-                  <img
-                    src='image/home/img-section-counting-1.png'
-                    data-src='image/home/img-section-counting-1.png'
-                    alt=''
-                    className='lazyload'
+                <div className='position-relative image tf-animate-1'>
+                  <Image
+                    src='/image/home/img-section-counting-1.png'
+                    alt='Counting section'
+                    fill
+                    priority={false} // Set to true for above-fold images
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>
@@ -1046,8 +1050,8 @@ export default function AboutContent () {
                   </div>
                   <div className='img-section img-4 img-elip tf-animate-4'>
                     <img
-                      src='image/home/section-testimonial-4.png'
-                      data-src='image/home/section-testimonial-4.png'
+                      src='image/home/section-testimonial-4.jpg'
+                      data-src='image/home/section-testimonial-4.jpg'
                       alt=''
                       className='lazyload'
                     />
