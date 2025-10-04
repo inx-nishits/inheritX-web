@@ -1256,6 +1256,13 @@ a:hover, a:focus {
 .sub-menu.mega-menu {
   width: 100%;
   left: 0px;
+  background: var(--main-dark);
+      border-bottom: 1px solid var(--stroke-2);
+    max-height: 380px;
+    overflow-y: auto;
+}
+.cursor-default {
+  cursor: default !important;
 }
 
 .sub-menu .sub-menu-item {

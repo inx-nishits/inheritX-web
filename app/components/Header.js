@@ -146,7 +146,7 @@ export default function Header () {
                       <div className='row'>
                         {/* Mobile App Development */}
                         <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5'>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
                             Mobile App Development
                           </h6>
                           <ul className='list-unstyled'>
@@ -159,7 +159,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/iphone-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 iPhone App Development
                               </Link>
@@ -173,7 +173,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/android-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Android App Development
                               </Link>
@@ -187,7 +187,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/kotlin-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Kotlin App Development
                               </Link>
@@ -201,7 +201,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/flutter-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Flutter App Development
                               </Link>
@@ -217,7 +217,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/react-native-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 React Native App Development
                               </Link>
@@ -233,7 +233,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/ipad-tablet-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 iPad/Tablet App Development
                               </Link>
@@ -247,7 +247,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/xamarin-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Xamarin App Development
                               </Link>
@@ -261,7 +261,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/ionic-app-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Ionic App Development
                               </Link>
@@ -271,7 +271,7 @@ export default function Header () {
 
                         {/* Web Development */}
                         <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5'>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
                             Web Development
                           </h6>
                           <ul className='list-unstyled'>
@@ -284,7 +284,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/python-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Python Development
                               </Link>
@@ -298,7 +298,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/nextjs-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 NextJS Development
                               </Link>
@@ -312,7 +312,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/laravel-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Laravel Development
                               </Link>
@@ -326,7 +326,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/reactjs-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 ReactJS Development
                               </Link>
@@ -340,7 +340,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/nodejs-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Node.js Development
                               </Link>
@@ -354,7 +354,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/php-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 PHP Development
                               </Link>
@@ -368,7 +368,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/java-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 JAVA Development
                               </Link>
@@ -382,7 +382,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/wordpress-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 WordPress Development
                               </Link>
@@ -396,7 +396,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/magento-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Magento Development
                               </Link>
@@ -406,7 +406,7 @@ export default function Header () {
 
                         {/* AI / ML */}
                         <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5'>AI / ML</h6>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>AI / ML</h6>
                           <ul className='list-unstyled'>
                             <li
                               className={`mb-4 ${
@@ -419,7 +419,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/machine-learning-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Machine Learning Development
                               </Link>
@@ -433,7 +433,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/ai-agents'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 AI Agents
                               </Link>
@@ -447,7 +447,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/ai-ml-model-expertise'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 AI & ML Model Expertise
                               </Link>
@@ -457,7 +457,7 @@ export default function Header () {
 
                         {/* Other Services */}
                         <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5'>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
                             Other Services
                           </h6>
                           <ul className='list-unstyled'>
@@ -470,7 +470,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/aws-services'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 AWS Services
                               </Link>
@@ -484,7 +484,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/google-cloud-services'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Google Cloud Services
                               </Link>
@@ -498,7 +498,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/pwa-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 PWA Development
                               </Link>
@@ -512,7 +512,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/seo-services'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 SEO Services
                               </Link>
@@ -526,7 +526,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/services/iot-development'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 IOT Development
                               </Link>
@@ -568,7 +568,7 @@ export default function Header () {
                       <div className='row'>
                         {/* Mobile App Dev */}
                         <div className='col-lg-4'>
-                          <h6 className='text-primary fw-bold mb-5'>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
                             Mobile App Development
                           </h6>
                           <ul className='list-unstyled'>
@@ -581,7 +581,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/iphone-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire iPhone Developer
                               </Link>
@@ -595,7 +595,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/android-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire Android Developer
                               </Link>
@@ -609,7 +609,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/react-native-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire React Native Developer
                               </Link>
@@ -623,7 +623,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/flutter-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire Flutter Developer
                               </Link>
@@ -637,7 +637,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/phonegap-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire Phonegap Developer
                               </Link>
@@ -647,7 +647,7 @@ export default function Header () {
 
                         {/* Web Dev */}
                         <div className='col-lg-4'>
-                          <h6 className='text-primary fw-bold mb-5'>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
                             Web Development
                           </h6>
                           <ul className='list-unstyled'>
@@ -660,7 +660,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/angularjs-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire AngularJS Developer
                               </Link>
@@ -674,7 +674,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/reactjs-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire ReactJS Developer
                               </Link>
@@ -688,7 +688,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/nodejs-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire Node.js Developer
                               </Link>
@@ -702,7 +702,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/php-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire PHP Developer
                               </Link>
@@ -716,7 +716,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/laravel-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire Laravel Developer
                               </Link>
@@ -726,7 +726,7 @@ export default function Header () {
 
                         {/* Other Tech */}
                         <div className='col-lg-4'>
-                          <h6 className='text-primary fw-bold mb-5'>
+                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
                             Other Technologies
                           </h6>
                           <ul className='list-unstyled'>
@@ -739,7 +739,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/python-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire Python Developer
                               </Link>
@@ -753,7 +753,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/wordpress-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire WordPress Developer
                               </Link>
@@ -767,7 +767,7 @@ export default function Header () {
                             >
                               <Link
                                 href='/hire/asp-developer'
-                                className='text-decoration-none text-dark'
+                                className='text-decoration-none text-white'
                               >
                                 Hire ASP Developer
                               </Link>
