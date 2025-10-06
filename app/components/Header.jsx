@@ -107,40 +107,14 @@ export default function Header () {
                 {/* Solutions Mega Menu */}
                 <li
                   className={`menu-item menu-item-has-children position-static ${
-                    isParentActive([
-                      '/services/iphone-app-development',
-                      '/services/android-app-development',
-                      '/services/kotlin-app-development',
-                      '/services/flutter-app-development',
-                      '/services/react-native-app-development',
-                      '/services/ipad-tablet-app-development',
-                      '/services/xamarin-app-development',
-                      '/services/ionic-app-development',
-                      '/services/python-development',
-                      '/services/nextjs-development',
-                      '/services/laravel-development',
-                      '/services/reactjs-development',
-                      '/services/nodejs-development',
-                      '/services/php-development',
-                      '/services/java-development',
-                      '/services/wordpress-development',
-                      '/services/magento-development',
-                      '/services/machine-learning-development',
-                      '/services/ai-agents',
-                      '/services/ai-ml-model-expertise',
-                      '/services/aws-services',
-                      '/services/google-cloud-services',
-                      '/services/pwa-development',
-                      '/services/seo-services',
-                      '/services/iot-development'
-                    ])
+                    isParentActive(['/services']) || isActive('/services')
                       ? 'current-menu-item'
                       : ''
                   }`}
                 >
-                  <a href='/services' className='item-link body-2'>
+                  <Link href='/services' className='item-link body-2'>
                     <span>Solutions</span>
-                  </a>
+                  </Link>
                   <div className='sub-menu mega-menu p-4 py-5'>
                     <div className='container'>
                       <div className='row'>
@@ -541,28 +515,14 @@ export default function Header () {
                 {/* Hire Experts Mega Menu */}
                 <li
                   className={`menu-item menu-item-has-children position-static ${
-                    isParentActive([
-                      '/hire/iphone-developer',
-                      '/hire/android-developer',
-                      '/hire/react-native-developer',
-                      '/hire/flutter-developer',
-                      '/hire/phonegap-developer',
-                      '/hire/angularjs-developer',
-                      '/hire/reactjs-developer',
-                      '/hire/nodejs-developer',
-                      '/hire/php-developer',
-                      '/hire/laravel-developer',
-                      '/hire/python-developer',
-                      '/hire/wordpress-developer',
-                      '/hire/asp-developer'
-                    ])
+                    isParentActive(['/hire-experts']) || isActive('/hire-experts')
                       ? 'current-menu-item'
                       : ''
                   }`}
                 >
-                  <a href='/hire-experts' className='item-link body-2'>
+                  <Link href='/hire-experts' className='item-link body-2'>
                     <span>Hire Experts</span>
-                  </a>
+                  </Link>
                   <div className='sub-menu mega-menu p-4 py-5'>
                     <div className='container'>
                       <div className='row'>
@@ -782,10 +742,13 @@ export default function Header () {
                 {/* Other Menu Items */}
                 <li
                   className={`menu-item ${
-                    isActive('/porfolio-grid') ? 'current-menu-item' : ''
+                    isParentActive(['/portfolio', '/porfolio-details', '/porfolio']) ||
+                    isActive('/portfolio')
+                      ? 'current-menu-item'
+                      : ''
                   }`}
                 >
-                  <Link href='/porfolio-grid' className='item-link body-2'>
+                  <Link href='/portfolio' className='item-link body-2'>
                     <span>Portfolio</span>
                   </Link>
                 </li>
@@ -885,22 +848,24 @@ export default function Header () {
               </li>
               <li
                 className={
-                  isParentActive(['/services']) ? 'current-menu-item' : ''
+                  isParentActive(['/services']) || isActive('/services') ? 'current-menu-item' : ''
                 }
               >
                 <Link href='/services'>Solutions</Link>
               </li>
               <li
-                className={isParentActive(['/hire']) ? 'current-menu-item' : ''}
+                className={isParentActive(['/hire-experts']) || isActive('/hire-experts') ? 'current-menu-item' : ''}
               >
-                <Link href='/hire'>Hire Experts</Link>
+                <Link href='/hire-experts'>Hire Experts</Link>
               </li>
               <li
                 className={
-                  isActive('/porfolio-grid') ? 'current-menu-item' : ''
+                  isParentActive(['/portfolio', '/porfolio-details', '/porfolio']) || isActive('/portfolio')
+                    ? 'current-menu-item'
+                    : ''
                 }
               >
-                <Link href='/porfolio-grid'>Portfolio</Link>
+                <Link href='/portfolio'>Portfolio</Link>
               </li>
               <li className={isActive('/blog') ? 'current-menu-item' : ''}>
                 <Link href='/blog'>Blog</Link>

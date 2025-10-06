@@ -1,19 +1,19 @@
-export default function HireExpertContent () {
+export default function HireExpertContent() {
   return (
     <>
-      <div class='page-title'>
-        <div class='tf-container'>
-          <div class='page-title-content text-center'>
-            <h1 class='title split-text effect-right'>Hire Experts</h1>
-            <div class='breadkcum'>
+      <div className='page-title'>
+        <div className='tf-container'>
+          <div className='page-title-content text-center'>
+            <h1 className='title split-text effect-right'>Hire Experts</h1>
+            <div className='breadkcum'>
               <a
                 href='index.html'
-                class='link-breadkcum body-2 fw-7 split-text effect-right'
+                className='link-breadkcum body-2 fw-7 split-text effect-right'
               >
                 Home
               </a>
-              <span class='dot'></span>
-              <span class='page-breadkcum body-2 fw-7 split-text effect-right'>
+              <span className='dot'></span>
+              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
                 Hire Experts
               </span>
             </div>
@@ -25,8 +25,8 @@ export default function HireExpertContent () {
 
       {/* // <!-- Main-content --> */}
 
-      <div class='main-content position-relative'>
-        <div class='mask mask-service-4'>
+      <div className='main-content position-relative'>
+        <div className='mask mask-service-4 d-none'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='800'
@@ -38,49 +38,49 @@ export default function HireExpertContent () {
               cy='400'
               r='325'
               stroke='url(#b6)'
-              stroke-width='150'
+              strokeWidth='150'
             />
             <defs>
               <linearGradient id='b6' x1='176' x2='569' y1='70.5' y2='674'>
-                <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                <stop offset='1' stopColor='#fff' stopOpacity='0' />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <section class='section-about p-services tf-spacing-3'>
-          <div class='tf-container'>
-            <div class='row'>
-              <div class='col-lg-6'>
-                <div class='left'>
-                  <div class='image tf-animate-2'>
+        <section className='section-about p-services tf-spacing-3'>
+          <div className='tf-container'>
+            <div className='row'>
+              <div className='col-lg-6'>
+                <div className='left'>
+                  <div className='image tf-animate-2'>
                     <img
                       src='image/section/img-section-about-p-serveic-1.jpg'
                       data-src='image/section/img-section-about-p-serveic-1.jpg'
                       alt=''
-                      class='lazyload'
+                      className='lazyload'
                     />
                   </div>
-                  <div class='img-secion-item img-1 tf-animate-3'>
+                  <div className='img-secion-item img-1 tf-animate-3'>
                     <img
                       src='image/section/img-section-about-p-serveic-2.jpg'
                       data-src='image/section/img-section-about-p-serveic-2.jpg'
                       alt=''
-                      class='lazyload'
+                      className='lazyload'
                     />
                   </div>
                 </div>
               </div>
-              <div class='col-lg-6'>
-                <div class='right'>
-                  <div class='heading-section mb-45'>
-                    <h2 class='title fw-6 title-animation'>
+              <div className='col-lg-6'>
+                <div className='right'>
+                  <div className='heading-section mb-45'>
+                    <h2 className='title fw-6 title-animation'>
                       Hire Dedicated and Professional Developers
                     </h2>
                   </div>
-                  <div class='section-content'>
-                    <div class='desc mb-5 '>
-                      <p class='lh-30 fs-2 mb-5'>
+                  <div className='section-content'>
+                    <div className='desc mb-5 '>
+                      <p className='lh-30 fs-2 mb-5'>
                         A Robust Website or an Engaging App- We Have Developers
                         for Every Need of Yours!
                       </p>
@@ -113,57 +113,57 @@ export default function HireExpertContent () {
           </div>
         </section>
 
-        <section class='section-services p-services tf-spacing-2'>
-          <div class='top-section'>
-            <div class='tf-marquee'>
-              <div class='marquee-wrapper'>
-                <div class='initial-child-container'>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+        <section className='section-services p-services tf-spacing-2'>
+          <div className='top-section'>
+            <div className='tf-marquee'>
+              <div className='marquee-wrapper'>
+                <div className='initial-child-container'>
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
-                  <div class='big-text'>
-                    Four <span class='text-stroke'>Pillars</span> of Our Hiring
+                  <div className='big-text'>
+                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
                     Model
                   </div>
                 </div>
@@ -171,7 +171,7 @@ export default function HireExpertContent () {
             </div>
           </div>
 
-          <div class='tf-container'>
+          <div className='tf-container'>
             <h3 className='text-center p-2 lh-40 mb-5'>
               Whether it is a DRE (Dedicated Resource Engagement), T&M (Time and
               Material), or a Fixed Price model, our flexible engagement models
@@ -188,7 +188,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/collaboration.png'
+                    src='/image/services-icon/collaboration.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -219,7 +219,95 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/transparency.png'
+                    src='/image/services-icon/App_Maintenance.png'
+                    alt=''
+                    className='lazyload img-fluid'
+                    style={{
+                      width: '60px',
+                      height: '60px',
+                      objectFit: 'contain',
+                      display: 'block',
+                      margin: '0 auto'
+                    }}
+                  />
+                </div>
+                <h5 className='lh-30 fw-6 mt-3'>
+                  <h3 className='title-service'>App Maintenance</h3>
+                </h5>
+                <div className='desc lh-30 fs-3'>
+                  We provide regular updates, performance optimization, and bug fixes to ensure your app runs smoothly, securely, and efficiently across all devices.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img services-item-force'>
+                <div
+                  className='icon bg-white p-3 rounded-circle overflow-hidden d-flex align-items-center justify-content-center text-center'
+                  style={{
+                    width: '100px',
+                    height: '100px'
+                  }}
+                >
+                  <img
+                    src='/image/services-icon/appplatformmigration.png'
+                    alt=''
+                    className='lazyload img-fluid'
+                    style={{
+                      width: '60px',
+                      height: '60px',
+                      objectFit: 'contain',
+                      display: 'block',
+                      margin: '0 auto'
+                    }}
+                  />
+                </div>
+                <h5 className='lh-30 fw-6 mt-3'>
+                  <h3 className='title-service'>App Platform Migration Service
+                  </h3>
+                </h5>
+                <div className='desc lh-30 fs-3'>
+                  Seamlessly migrate your app across platforms or technologies with zero data loss, ensuring enhanced performance, scalability, and compatibility.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img services-item-force'>
+                <div
+                  className='icon bg-white p-3 rounded-circle overflow-hidden d-flex align-items-center justify-content-center text-center'
+                  style={{
+                    width: '100px',
+                    height: '100px'
+                  }}
+                >
+                  <img
+                    src='/image/services-icon/App_Marketing.png'
+                    alt=''
+                    className='lazyload img-fluid'
+                    style={{
+                      width: '60px',
+                      height: '60px',
+                      objectFit: 'contain',
+                      display: 'block',
+                      margin: '0 auto'
+                    }}
+                  />
+                </div>
+                <h5 className='lh-30 fw-6 mt-3'>
+                  <h3 className='title-service'>Mobile App Marketing</h3>
+                </h5>
+                <div className='desc lh-30 fs-3'>
+                  Boost your app’s visibility and downloads with our targeted marketing strategies, including ASO, social campaigns, and user engagement optimization.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img services-item-force'>
+                <div
+                  className='icon bg-white p-3 rounded-circle overflow-hidden d-flex align-items-center justify-content-center text-center'
+                  style={{
+                    width: '100px',
+                    height: '100px'
+                  }}
+                >
+                  <img
+                    src='/image/services-icon/transparency.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -250,7 +338,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/communication.png'
+                    src='/image/services-icon/communication.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -281,7 +369,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/trust.png'
+                    src='/image/services-icon/trust.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -312,7 +400,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/support-after-development.png'
+                    src='/image/services-icon/support-after-development.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -344,7 +432,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/Web_Maintenance_and_Upgrade.png'
+                    src='/image/services-icon/Web_Maintenance_and_Upgrade.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -375,7 +463,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/migrationservice.png'
+                    src='/image/services-icon/migrationservice.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -406,7 +494,7 @@ export default function HireExpertContent () {
                   }}
                 >
                   <img
-                    src='image/services-icon/Digital_Marketing_and_SEO_Services.png'
+                    src='/image/services-icon/Digital_Marketing_and_SEO_Services.png'
                     alt=''
                     className='lazyload img-fluid'
                     style={{
@@ -427,6 +515,35 @@ export default function HireExpertContent () {
                   maximize conversions for sustainable business growth
                 </div>
               </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img services-item-force'>
+                <div
+                  className='icon bg-white p-3 rounded-circle overflow-hidden d-flex align-items-center justify-content-center text-center'
+                  style={{
+                    width: '100px',
+                    height: '100px'
+                  }}
+                >
+                  <img
+                    src='/image/services-icon/migration_service.png'
+                    alt=''
+                    className='lazyload img-fluid'
+                    style={{
+                      width: '60px',
+                      height: '60px',
+                      objectFit: 'contain',
+                      display: 'block',
+                      margin: '0 auto'
+                    }}
+                  />
+                </div>
+                <h5 className='lh-30 fw-6 mt-3'>
+                  <h3 className='title-service'>Migration Service</h3>
+                </h5>
+                <div className='desc lh-30 fs-3'>
+                  Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize infrastructure and optimize performance seamlessly.
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -442,8 +559,7 @@ export default function HireExpertContent () {
                   <i className='icon-chat-2'></i>
                 </div>
                 <h5 className='fw-4 title'>
-                  Let’s discuss your app idea and implement the innovative
-                  mobility solution for your business needs.
+                Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
                   href='#'
@@ -457,54 +573,54 @@ export default function HireExpertContent () {
           </div>
         </div>
 
-     
-        <section class='section-services p-services tf-spacing-2'>
-          <div class='top-section'>
-            <div class='tf-marquee'>
-              <div class='marquee-wrapper'>
-                <div class='initial-child-container'>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+
+        <section className='section-services p-services tf-spacing-2'>
+          <div className='top-section'>
+            <div className='tf-marquee'>
+              <div className='marquee-wrapper'>
+                <div className='initial-child-container'>
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class='tf-container'>
+          <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
@@ -519,346 +635,346 @@ export default function HireExpertContent () {
               </div>
             </div>
 
-            <div class='list-services flex flex-wrap'>
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+            <div className='list-services flex flex-wrap'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/apple.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     iOS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/android.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Android Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/flutter.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Flutter Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/react.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     React Native Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     AngularJS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Python Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     NextJS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Laravel Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/react.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     ReactJS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/node.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Node.js Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/php.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     PHP Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/pwa.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     AWS Services
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/IOT.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     IOT Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/pwa.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     PWA Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/digitalmarketing.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Digital Marketing
                   </a>

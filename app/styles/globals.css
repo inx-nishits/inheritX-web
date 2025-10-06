@@ -1,3 +1,69 @@
 ﻿* { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; }
+
+/* Opt-in utility: make container full-width from 1024px and up */
+.fullwidth-from-1024 {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .fullwidth-from-1024 {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Blog section image normalization */
+.section-blog .tf-post-list .image {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9; /* keep consistent height across columns */
+}
+
+.section-blog .tf-post-list .image img {
+  width: 100%;
+  height: 100% !important; /* override fixed heights from theme */
+  object-fit: cover;
+  display: block;
+}
+
+/* Match theme specificity to override forced heights */
+.section-blog .tf-post-list.style-2 .image img {
+  height: 100% !important;
+}
+
+/* Reduce unnecessary spacing on small screens for blog section */
+@media (max-width: 767.98px) {
+  .section-blog.tf-spacing-2 {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .section-blog .heading-section.mb-60 {
+    margin-bottom: 24px !important;
+  }
+
+  /* tighten vertical gaps between blog cards */
+  .section-blog .tf-post-list {
+    margin-bottom: 16px;
+  }
+
+  /* Show full image on mobile without cropping and remove forced heights */
+  .section-blog .tf-post-list.style-2 .image {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  .section-blog .tf-post-list.style-2 .image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+}
+
+/* (reverted) visibility fallback removed */

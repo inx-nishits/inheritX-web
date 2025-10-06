@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function JoinOurTeam () {
   return (
     <>
@@ -6,12 +8,12 @@ export default function JoinOurTeam () {
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>Join Our Team</h1>
             <div className='breadkcum mb-5'>
-              <a
-                href='index.html'
+              <Link
+                href='/'
                 className='link-breadkcum body-2 fw-7 split-text effect-right'
               >
                 Home
-              </a>
+              </Link>
               <span className='dot'></span>
               <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
                 Join Our Team
@@ -140,12 +142,12 @@ export default function JoinOurTeam () {
                 cy='400'
                 r='325'
                 stroke='url(#a3)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a3' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -344,12 +346,12 @@ export default function JoinOurTeam () {
                 cy='400'
                 r='325'
                 stroke='url(#a3)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a3' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -466,10 +468,10 @@ export default function JoinOurTeam () {
                           ReactJS • JavaScript • Redux • TypeScript • Next.js
                         </div>
 
-                        <a href='/apply' className='tf-btn-readmore style-open'>
+                        <Link href='/apply' className='tf-btn-readmore style-open'>
                           <span className='plus'>+</span>
                           <span className='text'>Apply Now</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -491,10 +493,10 @@ export default function JoinOurTeam () {
                           iOS • Swift • Objective-C
                         </div>
 
-                        <a href='/apply' className='tf-btn-readmore style-open'>
+                        <Link href='/apply' className='tf-btn-readmore style-open'>
                           <span className='plus'>+</span>
                           <span className='text'>Apply Now</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -517,10 +519,10 @@ export default function JoinOurTeam () {
                           Bucket
                         </div>
 
-                        <a href='/apply' className='tf-btn-readmore style-open'>
+                        <Link href='/apply' className='tf-btn-readmore style-open'>
                           <span className='plus'>+</span>
                           <span className='text'>Apply Now</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -542,10 +544,10 @@ export default function JoinOurTeam () {
                           Flutter • Android • iOS • OOP
                         </div>
 
-                        <a href='/apply' className='tf-btn-readmore style-open'>
+                        <Link href='/apply' className='tf-btn-readmore style-open'>
                           <span className='plus'>+</span>
                           <span className='text'>Apply Now</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -568,12 +570,12 @@ export default function JoinOurTeam () {
                 cy='400'
                 r='325'
                 stroke='url(#a3)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a3' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -607,8 +609,8 @@ export default function JoinOurTeam () {
                     </li>
                   </ul>
                   <ul className='lh-45 fw-6'>
-                    <li class='top-bar-item fs-2 justify-content-center'>
-                      <i class='icon-phone'></i>
+                    <li className='top-bar-item fs-2 justify-content-center'>
+                      <i className='icon-phone'></i>
                       <a href='tel:+13473940007' className='mb-0 fs-1'>
                         +1(347) 394-0007
                       </a>
@@ -633,12 +635,12 @@ export default function JoinOurTeam () {
                 cy='400'
                 r='325'
                 stroke='url(#a4)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a4' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -677,18 +679,18 @@ export default function JoinOurTeam () {
                           company, InheritX is a right choice for you!
                         </div>
                         <div className='user-testimonial'>
-                          <a
+                          <Link
                             href='javascript:void(0)'
                             className='name-user body-2 '
                           >
                             Krish Hinduja
-                          </a>
-                          <a
+                          </Link>
+                          <Link
                             href='javascript:void(0)'
                             className='position text-medium'
                           >
                             - Business Development Manager
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -708,18 +710,18 @@ export default function JoinOurTeam () {
                           us to give our best.
                         </div>
                         <div className='user-testimonial'>
-                          <a
+                          <Link
                             href='javascript:void(0)'
                             className='name-user body-2 '
                           >
                             Dhwanik Gandhi
-                          </a>
-                          <a
+                          </Link>
+                          <Link
                             href='javascript:void(0)'
                             className='position text-medium'
                           >
                             - Senior Android Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -738,18 +740,18 @@ export default function JoinOurTeam () {
                           that strives by putting employees first.
                         </div>
                         <div className='user-testimonial'>
-                          <a
+                          <Link
                             href='javascript:void(0)'
                             className='name-user body-2 '
                           >
                             Vishal Patel
-                          </a>
-                          <a
+                          </Link>
+                          <Link
                             href='javascript:void(0)'
                             className='position text-medium'
                           >
                             - Admin Executive
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

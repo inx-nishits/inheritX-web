@@ -1,19 +1,22 @@
+import Link from 'next/link'
+import { servicesData } from './servicesData'
+
 export default function ServicesContent () {
   return (
     <>
-      <div class='page-title'>
-        <div class='tf-container'>
-          <div class='page-title-content text-center'>
-            <h1 class='title split-text effect-right'>Services</h1>
-            <div class='breadkcum'>
-              <a
-                href='index.html'
-                class='link-breadkcum body-2 fw-7 split-text effect-right'
+      <div className='page-title'>
+        <div className='tf-container'>
+          <div className='page-title-content text-center'>
+            <h1 className='title split-text effect-right'>Services</h1>
+            <div className='breadkcum'>
+              <Link
+                href='/'
+                className='link-breadkcum body-2 fw-7 split-text effect-right'
               >
                 Home
-              </a>
-              <span class='dot'></span>
-              <span class='page-breadkcum body-2 fw-7 split-text effect-right'>
+              </Link>
+              <span className='dot'></span>
+              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
                 Our Services
               </span>
             </div>
@@ -25,8 +28,8 @@ export default function ServicesContent () {
 
       {/* // <!-- Main-content --> */}
 
-      <div class='main-content position-relative'>
-        <div class='mask mask-service-4'>
+      <div className='main-content position-relative'>
+        <div className='mask mask-service-4 d-none'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='800'
@@ -38,75 +41,75 @@ export default function ServicesContent () {
               cy='400'
               r='325'
               stroke='url(#b6)'
-              stroke-width='150'
+              strokeWidth='150'
             />
             <defs>
               <linearGradient id='b6' x1='176' x2='569' y1='70.5' y2='674'>
-                <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                <stop offset='1' stopColor='#fff' stopOpacity='0' />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <section class='section-about p-services tf-spacing-3'>
-          <div class='tf-container'>
-            <div class='row'>
-              <div class='col-lg-6'>
-                <div class='left'>
-                  <div class='image tf-animate-2'>
+        <section className='section-about p-services tf-spacing-3'>
+          <div className='tf-container'>
+            <div className='row'>
+              <div className='col-lg-6'>
+                <div className='left'>
+                  <div className='image tf-animate-2'>
                     <img
                       src='image/section/img-section-about-p-serveic-1.jpg'
                       data-src='image/section/img-section-about-p-serveic-1.jpg'
                       alt=''
-                      class='lazyload'
+                      className='lazyload'
                     />
                   </div>
-                  <div class='img-secion-item img-1 tf-animate-3'>
+                  <div className='img-secion-item img-1 tf-animate-3'>
                     <img
                       src='image/section/img-section-about-p-serveic-2.jpg'
                       data-src='image/section/img-section-about-p-serveic-2.jpg'
                       alt=''
-                      class='lazyload'
+                      className='lazyload'
                     />
                   </div>
                 </div>
               </div>
-              <div class='col-lg-6'>
-                <div class='right'>
-                  <div class='heading-section mb-45'>
-                    <div class='sub-title body-2 fw-7 mb-17 title-animation'>
+              <div className='col-lg-6'>
+                <div className='right'>
+                  <div className='heading-section mb-45'>
+                    <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                       We Are <span className='text-primary'>InheritX</span>{' '}
                       Solutions
                     </div>
-                    <h2 class='title fw-6 title-animation'>
+                    <h2 className='title fw-6 title-animation'>
                       From Web to Mobility and DevOps to Cloud Management
-                      <span class='fw-3'>&nbsp;- We Excel in All Services</span>
+                      <span className='fw-3'>&nbsp;- We Excel in All Services</span>
                     </h2>
                   </div>
-                  <div class='section-content'>
-                    <div class='desc mb-5 '>
-                      <p class='lh-30 fs-2'>
+                  <div className='section-content'>
+                    <div className='desc mb-5 '>
+                      <p className='lh-30 fs-2'>
                         Our range of IT services includes web development,
                         enterprise mobility, and cloud management.
                       </p>
                     </div>
-                    <div class='list-benefit'>
-                      <div class='benefit-item style-big title-animation'>
-                        <i class='icon-star-of-life'></i>
-                        <span class='fs-20'>15+ Years Of Experience</span>
+                    <div className='list-benefit'>
+                      <div className='benefit-item style-big title-animation'>
+                        <i className='icon-star-of-life'></i>
+                        <span className='fs-20'>15+ Years Of Experience</span>
                       </div>
-                      <div class='benefit-item style-big title-animation'>
-                        <i class='icon-star-of-life'></i>
-                        <span class='fs-20'>Elite Developer Team</span>
+                      <div className='benefit-item style-big title-animation'>
+                        <i className='icon-star-of-life'></i>
+                        <span className='fs-20'>Elite Developer Team</span>
                       </div>
-                      <div class='benefit-item style-big title-animation'>
-                        <i class='icon-star-of-life'></i>
-                        <span class='fs-20'>40+ Industries Served</span>
+                      <div className='benefit-item style-big title-animation'>
+                        <i className='icon-star-of-life'></i>
+                        <span className='fs-20'>40+ Industries Served</span>
                       </div>
 
-                      <div class='benefit-item style-big title-animation'>
-                        <i class='icon-star-of-life'></i>
-                        <span class='fs-20'>24/7 Support</span>
+                      <div className='benefit-item style-big title-animation'>
+                        <i className='icon-star-of-life'></i>
+                        <span className='fs-20'>24/7 Support</span>
                       </div>
                     </div>
                   </div>
@@ -116,191 +119,71 @@ export default function ServicesContent () {
           </div>
         </section>
 
-        <section class='section-services p-services tf-spacing-2'>
-          <div class='top-section'>
-            <div class='tf-marquee'>
-              <div class='marquee-wrapper'>
-                <div class='initial-child-container'>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+        <section className='section-services p-services tf-spacing-2'>
+          <div className='top-section'>
+            <div className='tf-marquee'>
+              <div className='marquee-wrapper'>
+                <div className='initial-child-container'>
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class='tf-container'>
-            <div class='list-services flex flex-wrap'>
-              <div class='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  <img
-                    src='image/services-item/WebDevelopment.png'
-                    alt=''
-                    class='lazyload'
-                  />
+          <div className='tf-container'>
+            <div className='list-services flex flex-wrap'>
+              {Object.values(servicesData).map((item) => (
+                <div key={item.category} className='services-item px-lg-15 col-md-4 no-img'>
+                  <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                    {/* icon intentionally omitted per requirement */}
+                  </div>
+
+                  <h5 className='lh-30 fw-6'>
+                    <Link href={`/services/${item.category}`} className='title-service'>
+                      {item.heading || item.title}
+                    </Link>
+                  </h5>
+
+                  <div className='desc lh-30'>
+                    {item.content_caption || item.heading_caption}
+                  </div>
                 </div>
-
-                <h5 class='lh-30 fw-6'>
-                  <a href='/' class='title-service'>
-                    Web Development
-                  </a>
-                </h5>
-
-                <div class='desc lh-30'>
-                  Since inception, InheritX Solutions has delivered
-                  seamlessly-performing websites that meet our clients’
-                  corporate needs efficiently. We craft excellent and elegant
-                  websites in all major frameworks. Delve in to know more.
-                </div>
-              </div>
-
-              <div class='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  <img
-                    src='image/services-item/MobileApplicationDevelopment.png'
-                    alt=''
-                    class='lazyload'
-                  />
-                </div>
-
-                <h5 class='lh-30 fw-6'>
-                  <a href='/' class='title-service'>
-                    Enterprise Mobility
-                  </a>
-                </h5>
-
-                <div class='desc lh-30'>
-                  We offer a comprehensive range of enterprise mobility
-                  solutions that can enhance the productivity, security, and
-                  scalability of your business processes. We always meet
-                  deadlines while developing quality apps.
-                </div>
-              </div>
-
-              <div class='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  <img
-                    src='image/services-item/Blockchain.png'
-                    alt=''
-                    class='lazyload'
-                  />
-                </div>
-
-                <h5 class='lh-30 fw-6'>
-                  <a href='/' class='title-service'>
-                    Blockchain
-                  </a>
-                </h5>
-
-                <div class='desc lh-30'>
-                  Our Blockchain-based app solutions ensure the safety of your
-                  online, high-volume transactions. You can build trust and
-                  bring flexibility by providing your customers with a highly
-                  secure way of online transactions.
-                </div>
-              </div>
-
-              <div class='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  <img
-                    src='image/services-item/DevOps.png'
-                    alt=''
-                    class='lazyload'
-                  />
-                </div>
-
-                <h5 class='lh-30 fw-6'>
-                  <a href='/' class='title-service'>
-                    DevOps
-                  </a>
-                </h5>
-
-                <div class='desc lh-30'>
-                  We integrate advancements from contemporary and emerging
-                  technologies to build customized and high-end enterprise
-                  software solutions. We serve our global corporate clientele
-                  with the best-in-class IT solutions.
-                </div>
-              </div>
-
-              <div class='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  <img
-                    src='image/services-item/CloudComputing.png'
-                    alt=''
-                    class='lazyload'
-                  />
-                </div>
-
-                <h5 class='lh-30 fw-6'>
-                  <a href='/' class='title-service'>
-                    Cloud Management Services
-                  </a>
-                </h5>
-
-                <div class='desc lh-30'>
-                  We offer reliable cloud management services at reasonable
-                  rates. You can meet data storage and access needs effectively
-                  with our cloud-based solutions. Welcome to new opportunities
-                  and scope for expansion.
-                </div>
-              </div>
-
-              <div class='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  <img
-                    src='image/services-item/IOT.png'
-                    alt=''
-                    class='lazyload'
-                  />
-                </div>
-
-                <h5 class='lh-30 fw-6'>
-                  <a href='/' class='title-service'>
-                    Internet of Things (IoT)
-                  </a>
-                </h5>
-
-                <div class='desc lh-30'>
-                  From smart homes to smart offices, IoT takes it all! We
-                  provide IoT app development services for individuals,
-                  healthcare and manufacturing sectors, and our corporate
-                  clients across the world at competitive rates.
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -316,8 +199,7 @@ export default function ServicesContent () {
                   <i className='icon-chat-2'></i>
                 </div>
                 <h5 className='fw-4 title'>
-                  Let’s discuss your app idea and implement the innovative
-                  mobility solution for your business needs.
+                 Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
                   href='#'
@@ -371,16 +253,10 @@ export default function ServicesContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            Since inception, InheritX Solutions has set many
-                            milestones by offering quality IT solutions and
-                            services that are capable of bringing disruptive
-                            changes in the corporate world.
+                          Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc lh-30 mb-0'>
-                            We are striving for offering superior quality
-                            solutions that CLIENTS prefer for their customers,
-                            EMPLOYEES feel pride of, CUSTOMERS appreciate, and
-                            INVESTORS choose to get long-term returns.
+                           We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
                           </div>
                         </div>
                       </div>
@@ -412,16 +288,11 @@ export default function ServicesContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            To be recognized as leaders in quality services and
-                            developing relationships that make a positive
-                            difference in our customer’s lives.
+                          To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
                           </div>
 
                           <div className='desc lh-30 mb-0'>
-                            We provide enterprise-grade design and development
-                            services to our clients to boost the productivity of
-                            their business across the world with a vision to
-                            become the most reliable offshore partner.
+                           We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
                           </div>
                         </div>
                       </div>
@@ -453,14 +324,7 @@ export default function ServicesContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            InheritX Solutions is a leading tablet app
-                            development company in India and the USA,
-                            specializing in iPad and Android tablet apps. We
-                            deliver customized, cost-effective solutions that
-                            enhance business value, boost ROI, and meet complex
-                            requirements. With on-time delivery and excellent
-                            performance, our expert iPad developers build
-                            scalable apps across diverse industries.
+                          InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
                           </div>
                         </div>
                       </div>
@@ -516,53 +380,53 @@ export default function ServicesContent () {
           </div>
         </section>
 
-        <section class='section-services p-services tf-spacing-2'>
-          <div class='top-section'>
-            <div class='tf-marquee'>
-              <div class='marquee-wrapper'>
-                <div class='initial-child-container'>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+        <section className='section-services p-services tf-spacing-2'>
+          <div className='top-section'>
+            <div className='tf-marquee'>
+              <div className='marquee-wrapper'>
+                <div className='initial-child-container'>
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Our</span> Platforms
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Our</span> Platforms
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class='tf-container'>
+          <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
@@ -577,346 +441,346 @@ export default function ServicesContent () {
               </div>
             </div>
 
-            <div class='list-services flex flex-wrap'>
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+            <div className='list-services flex flex-wrap'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/apple.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     iOS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/android.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Android Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/flutter.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Flutter Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/react.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     React Native Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     AngularJS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Python Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     NextJS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/angular.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Laravel Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/react.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     ReactJS Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/node.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Node.js Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/php.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     PHP Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/pwa.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     AWS Services
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/IOT.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     IOT Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/pwa.png'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     PWA Development
                   </a>
                 </h5>
               </div>
 
-              <div class='services-item px-lg-15 col-md-4 no-img'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
                     src='image/services-icon/digitalmarketing.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '80px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
+                <h5 className='lh-30 fw-6'>
                   <a
                     href='services-details.html'
-                    class='title-service text-primary'
+                    className='title-service text-primary'
                   >
                     Digital Marketing
                   </a>

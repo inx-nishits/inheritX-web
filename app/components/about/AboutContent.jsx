@@ -1,8 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
-export default function AboutContent () {
+export default function AboutContent() {
   return (
     <>
       <div className='page-title'>
@@ -10,19 +11,19 @@ export default function AboutContent () {
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>About Us</h1>
             <div className='breadkcum mb-5'>
-              <a
-                href='index.html'
+              <Link
+                href='/'
                 className='link-breadkcum body-2 fw-7 split-text effect-right'
               >
                 Home
-              </a>
+              </Link>
               <span className='dot'></span>
               <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
                 About Us
               </span>
             </div>
 
-            <p className='pt-4'>Our Only Aim - Make Clients Happy!</p>
+            <p className='pt-4'>Our only aim — to make clients happy!</p>
           </div>
         </div>
       </div>
@@ -97,24 +98,12 @@ export default function AboutContent () {
                   <div className='fs-1 fw-7 mb-5 title-animation'>
                     Who We Are
                   </div>
-                  <p className='lh-30 fs-2 title-animation mb-5'>
-                    Since 2011, excellent customer service is not just a phrase,
-                    but a core value of InheritX Solutions. Developing
-                    high-quality solutions in web and mobile app domains has
-                    been a way of life at InheritX for over eight years. Our
-                    client-centric approach and no compromise on performance
-                    have made us an undisputed leader in mobile app, web, game,
-                    and digital marketing.
+                  <p className='lh-30 fs-3 title-animation mb-5'>
+                    Since 2011, excellent customer service has not just been a phrase, but a core value of InheritX Solutions. Developing high-quality solutions in the web and mobile app domains has been a way of life at InheritX for over eight years. Our client-centric approach and no compromise on performance have made us an undisputed leader in mobile app, web, game, and digital marketing.
                   </p>
 
-                  <p className='lh-30 fs-2 title-animation mb-5'>
-                    At InheritX, our aim has remained the same since inception –
-                    to make and keep our clients happy. This is the reason why
-                    we have a large clientele across different industry sectors
-                    worldwide. Our happy clients include startups, SMEs, and
-                    even a few Fortune 500 companies. Our in-house team of
-                    experienced developers makes it possible to transform your
-                    creative concepts into innovative IT solutions.
+                  <p className='lh-30 fs-3 title-animation mb-5'>
+                    At InheritX, our aim has remained the same since inception – to make and keep our clients happy. This is the reason why we have a large clientele across different industry sectors worldwide. Our happy clients include startups, SMEs, and even a few Fortune 500 companies. Our in-house team of experienced developers makes it possible to transform your creative concepts into innovative IT solutions.
                   </p>
                 </div>
               </div>
@@ -199,11 +188,7 @@ export default function AboutContent () {
                 <div className='section-content'>
                   <div className='desc mb-40 text-animation'>
                     <p className='lh-30'>
-                      A small team of experienced and dedicated IT professionals
-                      founded InheritX Solutions back in 2011. Since then, we
-                      have never looked back in providing high-quality,
-                      result-driven, advanced technology solutions to our
-                      esteemed clients.
+                      A small team of experienced and dedicated IT professionals founded InheritX Solutions back in 2011. Since then, we have never looked back in providing high-quality, result-driven, advanced technology solutions to our esteemed clients.
                     </p>
                   </div>
                 </div>
@@ -222,8 +207,7 @@ export default function AboutContent () {
                     Birth of InheritX
                   </h3>
                   <p className='lh-30'>
-                    Started with a small team of passionate IT professionals,
-                    aiming to deliver quality technology solutions.
+                    Started with a small team of passionate IT professionals, aiming to deliver quality technology solutions.
                   </p>
                 </div>
               </div>
@@ -253,8 +237,7 @@ export default function AboutContent () {
                     Expansion Phase
                   </h3>
                   <p className='lh-30'>
-                    Moved to a larger office with employee strength reaching 50,
-                    setting the stage for more ambitious projects.
+                    Moved to a larger office, with employee strength reaching 50, setting the stage for more ambitious projects.
                   </p>
                 </div>
               </div>
@@ -491,16 +474,10 @@ export default function AboutContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            Since inception, InheritX Solutions has set many
-                            milestones by offering quality IT solutions and
-                            services that are capable of bringing disruptive
-                            changes in the corporate world.
+                            Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc lh-30 mb-0'>
-                            We are striving for offering superior quality
-                            solutions that CLIENTS prefer for their customers,
-                            EMPLOYEES feel pride of, CUSTOMERS appreciate, and
-                            INVESTORS choose to get long-term returns.
+                            We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
                           </div>
                         </div>
                       </div>
@@ -532,16 +509,11 @@ export default function AboutContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            To be recognized as leaders in quality services and
-                            developing relationships that make a positive
-                            difference in our customer’s lives.
+                            To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
                           </div>
 
                           <div className='desc lh-30 mb-0'>
-                            We provide enterprise-grade design and development
-                            services to our clients to boost the productivity of
-                            their business across the world with a vision to
-                            become the most reliable offshore partner.
+                            We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
                           </div>
                         </div>
                       </div>
@@ -563,53 +535,53 @@ export default function AboutContent () {
           </div>
         </section>
 
-        <section class='section-services p-services tf-spacing-2'>
-          <div class='top-section'>
-            <div class='tf-marquee'>
-              <div class='marquee-wrapper'>
-                <div class='initial-child-container'>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+        <section className='section-services p-services tf-spacing-2'>
+          <div className='top-section'>
+            <div className='tf-marquee'>
+              <div className='marquee-wrapper'>
+                <div className='initial-child-container'>
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
-                  <div class='big-text'>
-                    Explore <span class='text-stroke'>Popular</span> Services
+                  <div className='big-text'>
+                    Explore <span className='text-stroke'>Popular</span> Services
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class='tf-container'>
+          <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
@@ -625,88 +597,88 @@ export default function AboutContent () {
               </div>
             </div>
 
-            <div class='list-services flex flex-wrap'>
-              <div class='services-item px-lg-15 no-img'>
+            <div className='list-services flex flex-wrap'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/certificate.svg'
                     data-src='image/about/certificate.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
 
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     Certified Developers
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   Our skilled developers have a knack for developing futuristic
                   solutions in web and mobile app development.
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/email.svg'
                     data-src='image/about/email.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     Quick Delivery
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   At InheritX, we ensure timely project completion through our
                   structured work approach. We also provide regular updates on
                   the progress of your project.
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/office.svg'
                     data-src='image/about/office.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     State-of-the-art Infrastructure
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   Excellent digital infrastructure can be the key to success for
                   an IT company. At InheritX, we have advanced infrastructure
                   equipped with servers, cutting-edge tools, and the latest
@@ -714,87 +686,87 @@ export default function AboutContent () {
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/receipt.svg'
                     data-src='image/about/receipt.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     Competitive Pricing
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   Our flexible pricing models can easily adapt to your
                   ever-changing business needs. We offer transparent pricing
                   with no hidden charges.
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/innovation.svg'
                     data-src='image/about/innovation.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     Domain Expertise
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   When it comes to domain insight and hands-on experience with
                   the latest tools, our developers always stay updated with
                   modern trends and advancements.
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/customer-service.svg'
                     data-src='image/about/customer-service.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     IT Consultancy
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   We provide top-notch IT consulting services along with
                   end-to-end IT solutions. From design to deployment, and
                   maintenance to marketing, we take care of every aspect of your
@@ -802,58 +774,58 @@ export default function AboutContent () {
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/responsive.svg'
                     data-src='image/about/responsive.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     Flexible Development Process
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   By implementing the agile methodology, we ensure that our
                   development process remains client-centric and flexible to
                   meet changing business needs.
                 </div>
               </div>
 
-              <div class='services-item px-lg-15 no-img'>
+              <div className='services-item px-lg-15 no-img'>
                 <div
-                  class='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
                   style={{ width: '140px', height: '140px' }}
                 >
                   <img
                     src='image/about/encrypted.svg'
                     data-src='image/about/encrypted.svg'
                     alt=''
-                    class='lazyload img-fluid'
+                    className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
-                <h5 class='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    class='title-service text-primary'
+                <h5 className='lh-30 fw-6'>
+                  <Link
+                    href='/services-details'
+                    className='title-service text-primary'
                   >
                     Higher Security
-                  </a>
+                  </Link>
                 </h5>
 
-                <div class='desc lh-30'>
+                <div className='desc lh-30'>
                   Our employees and stakeholders are committed to preventing
                   your confidential company and project data from falling into
                   the wrong hands. We give the utmost importance to the safety
@@ -877,12 +849,12 @@ export default function AboutContent () {
                 cy='400'
                 r='325'
                 stroke='url(#a4)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a4' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -915,18 +887,15 @@ export default function AboutContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Overall, I was very satisfied with Inheritx. They are
-                          hard workers, very reliable, and very flexible.
-                          Overall, I would recommend INX team for any
-                          development work.
+                          Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='#' className='name-user body-2 '>
                             Edward
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='#' className='position text-medium'>
                             CEO
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -937,18 +906,15 @@ export default function AboutContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          InheritX is very professional and articulate in their
-                          approach to this project. The most impressive thing is
-                          the input and intelligent contributions they have made
-                          in the design of the app.
+                          InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='#' className='name-user body-2 '>
                             Badri
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='#' className='position text-medium'>
                             Manager
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -959,17 +925,15 @@ export default function AboutContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx have proven themselves to be dependable with
-                          solid problem solving and technical skills. They are
-                          persistent, reliable, flexible and responsive.
+                          InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='#' className='name-user body-2 '>
                             Saady
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='#' className='position text-medium'>
                             Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -980,18 +944,15 @@ export default function AboutContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx has done a fabulous job. We want to continue
-                          using them in the future and recommend them to all
-                          developers looking for professional, high quality
-                          work.
+                          InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='#' className='name-user body-2 '>
                             Simon
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='#' className='position text-medium'>
                             Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1002,18 +963,15 @@ export default function AboutContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          The team has been fantastic, I have been working with
-                          them for nearly 2 years now and have not been able to
-                          find a fault in their performance or attitude. They
-                          are extremely professional and polite w...
+                          The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='#' className='name-user body-2 '>
                             Dorain
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='#' className='position text-medium'>
                             Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

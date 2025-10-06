@@ -9,6 +9,7 @@ import './styles/globals.css'
 import Script from 'next/script'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import CounterInitializer from './components/CounterInitializer'
 
 export default function RootLayout ({ children }) {
   return (
@@ -41,6 +42,7 @@ export default function RootLayout ({ children }) {
           <Header />
           <div className='flex-grow-1'>{children}</div>
           <Footer />
+          <CounterInitializer />
         </div>
 
         <div className='cursor-dot'></div>
@@ -49,6 +51,7 @@ export default function RootLayout ({ children }) {
 
         {/* Vendor scripts (kept for parity; can be refactored to React later) */}
         <Script src='/js/jquery.min.js' strategy='beforeInteractive' />
+        <Script src='/js/jquery-init.js' strategy='afterInteractive' />
         <Script src='/js/bootstrap.min.js' strategy='afterInteractive' />
         <Script src='/js/gsap.min.js' strategy='afterInteractive' />
         <Script src='/js/ScrollToPlugin.min.js' strategy='afterInteractive' />
@@ -62,7 +65,7 @@ export default function RootLayout ({ children }) {
         <Script src='/js/odometer.min.js' strategy='afterInteractive' />
         <Script src='/js/wow.min.js' strategy='afterInteractive' />
         <Script src='/js/lazysize.min.js' strategy='afterInteractive' />
-        <Script src='/js/main.js' strategy='afterInteractive' />
+        <Script src='/js/main-wrapper.js' strategy='afterInteractive' />
         <Script src='js/bootstrap.min.js' strategy='afterInteractive' />
         <Script src='js/gsap-animation.js' strategy='afterInteractive' />
         <Script src='js/Splitetext.js' strategy='afterInteractive' />

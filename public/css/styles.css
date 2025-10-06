@@ -1624,7 +1624,7 @@ a:hover, a:focus {
   margin-bottom: 40px;
 }
 .footer .locations-contact {
-  max-width: 320px;
+  flex: 1;
   width: 100%;
 }
 .footer .list-bottom {
@@ -1810,6 +1810,7 @@ a:hover, a:focus {
   padding-right: 0;
   padding-bottom: 20px;
   position: relative;
+  padding-top: 2px;
 }
 .wg-tab.style-2 ul li a::before {
   height: 3px;
@@ -6081,7 +6082,7 @@ a.mapboxgl-ctrl-logo {
     display: none;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .section-blog .mask-s-blog-2 {
     display: none;
   }

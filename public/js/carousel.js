@@ -1,3 +1,16 @@
+// Lightweight debounce to avoid thrashing on rapid route changes
+window.__debounce = window.__debounce || function (fn, wait) {
+  var timeoutId;
+  return function () {
+    var context = this, args = arguments;
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(function(){ fn.apply(context, args); }, wait);
+  };
+};
+
+// Idempotent initializer
+window.initCarousels = window.__debounce(function () {
+if (typeof Swiper === "undefined") { return; }
 if ($(".tf-sw-slideshow").length > 0) {
     var tfSwSlideshow = $(".tf-sw-slideshow");
     var preview = tfSwSlideshow.data("preview");
@@ -61,10 +74,18 @@ if ($(".tf-sw-slideshow").length > 0) {
 
 if ($(".tf-swiper").length > 0) {
     $(".tf-swiper").each(function () {
-        const config = $(this).data("swiper");
-        if (this.swiper) {
-            this.swiper.destroy(true, true);
+        var config = $(this).data("swiper");
+        // Ensure config is an object (it could be a JSON string in data attr)
+        if (typeof config === 'string') {
+            try { config = JSON.parse(config); } catch(e) { config = {}; }
         }
+        if (this.swiper) {
+            try { this.swiper.destroy(true, true); } catch(e) {}
+        }
+        // Defensive defaults to reduce breakage
+        config = config || {};
+        if (typeof config.observeParents === 'undefined') config.observeParents = true;
+        if (typeof config.observer === 'undefined') config.observer = true;
         new Swiper(this, config);
     });
 }
@@ -108,4 +129,14 @@ if ($(".flat-thumbs-tes").length > 0) {
 
     swThumb.controller.control = swTesMain;
     swTesMain.controller.control = swThumb;
+}
+}, 50);
+
+// Auto-init on first load after scripts mount
+if (typeof window !== "undefined") {
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    setTimeout(function(){ window.initCarousels(); }, 0);
+  } else {
+    document.addEventListener("DOMContentLoaded", function(){ window.initCarousels(); });
+  }
 }

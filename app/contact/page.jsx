@@ -1,4 +1,5 @@
 import PageTitle from '../components/PageTitle'
+import Link from 'next/link'
 
 export const dynamic = 'force-static'
 
@@ -7,19 +8,19 @@ export default function Page () {
     <>
       {/* <!-- Page-title --> */}
 
-      <div class='page-title'>
-        <div class='tf-container'>
-          <div class='page-title-content text-center'>
-            <h1 class='title split-text effect-right'>Contact Us</h1>
-            <div class='breadkcum'>
-              <a
-                href='index.html'
-                class='link-breadkcum body-2 fw-7 split-text effect-right'
+      <div className='page-title'>
+        <div className='tf-container'>
+          <div className='page-title-content text-center'>
+            <h1 className='title split-text effect-right'>Contact Us</h1>
+            <div className='breadkcum'>
+              <Link
+                href='/'
+                className='link-breadkcum body-2 fw-7 split-text effect-right'
               >
                 Home
-              </a>
-              <span class='dot'></span>
-              <span class='page-breadkcum body-2 fw-7 split-text effect-right'>
+              </Link>
+              <span className='dot'></span>
+              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
                 {' '}
                 Contact Us
               </span>
@@ -32,75 +33,75 @@ export default function Page () {
 
       {/* <!-- Main-content --> */}
 
-      <div class='main-content'>
-        <section class='section-contact p-contact tf-spacing-2'>
-          <div class='tf-container'>
-            <div class='section-contact-inner flex justify-content-between flex-wrap pb-5 mb-5'>
-              <div class='left'>
-                <div class='heading-section mb-30'>
-                  <div class='sub-title body-2 fw-7 mb-17 title-animation'>
+      <div className='main-content'>
+        <section className='section-contact p-contact tf-spacing-2'>
+          <div className='tf-container'>
+            <div className='section-contact-inner flex justify-content-between flex-wrap pb-5 mb-5'>
+              <div className='left'>
+                <div className='heading-section mb-30'>
+                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     Get In Touch
                   </div>
-                  <h2 class='title fw-6 mb-10 title-animation'>
+                  <h2 className='title fw-6 mb-10 title-animation'>
                     Got a Project in
-                    <span class='fw-3'>Mind?</span>
+                    <span className='fw-3'>Mind?</span>
                   </h2>
-                  <div class='desc text-animation'>
-                    <p class='lh-30 fs-2'>
+                  <div className='desc text-animation'>
+                    <p className='lh-30 fs-2'>
                       We’re just a call or email away! We are happy to help you,
                       always.
                     </p>
                   </div>
                 </div>
 
-                <div class='contact-social'>
-                  <div class='title body-2 fw-7 title-animation'>Follow Me</div>
-                  <ul class='post-social style-radius-50 style-bg-white g-10 title-animation'>
+                <div className='contact-social'>
+                  <div className='title body-2 fw-7 title-animation'>Follow Me</div>
+                  <ul className='post-social style-radius-50 style-bg-white g-10 title-animation'>
                     <li>
                       <a
                         href='https://www.facebook.com/InheritxSolutions/'
-                        class='icon-social'
+                        className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <i class='icon-fb'></i>
+                        <i className='icon-fb'></i>
                       </a>
                     </li>
                     <li>
                       <a
                         href='https://x.com/inheritx'
-                        class='icon-social'
+                        className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <i class='icon-X'></i>
+                        <i className='icon-X'></i>
                       </a>
                     </li>
                     <li>
                       <a
                         href='https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/'
-                        class='icon-social'
+                        className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <i class='icon-linkedin'></i>
+                        <i className='icon-linkedin'></i>
                       </a>
                     </li>
                     <li>
                       <a
                         href='https://www.instagram.com/inheritxsolutions/'
-                        class='icon-social'
+                        className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <i class='icon-instagram'></i>
+                        <i className='icon-instagram'></i>
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div class='right'>
+              <div className='right'>
                 <form
                   id='contactform'
                   className='form-contact-us px-md-15 rounded-3 overflow-hidden'
@@ -227,7 +228,7 @@ export default function Page () {
 
             <div className='locations-contact pt-5'>
               <div className='locations-footer item mb-30'>
-                <h2 class='title fw-6 mb-5 title-animation'>We’re Here!</h2>
+                <h2 className='title fw-6 mb-5 title-animation'>We’re Here!</h2>
                 <p className='lh-30 mb-5 fs-2 mb-5 pb-5'>
                   Headquartered in India, we have a global presence to serve our
                   esteemed clients more effectively.
@@ -263,10 +264,10 @@ export default function Page () {
                             r='40'
                             fill='none'
                             stroke='#000080'
-                            stroke-width='4'
+                            strokeWidth='4'
                           />
 
-                          <g stroke='#000080' stroke-width='2'>
+                          <g stroke='#000080' strokeWidth='2'>
                             <g transform='translate(320,200)'>
                               <line x1='0' y1='0' x2='0' y2='-40' />
                               <line
@@ -464,9 +465,9 @@ export default function Page () {
 
                         <strong>United States</strong>
                       </h3>
-                      222 BROADWAY, New York, NY, 10038
+                     222 Broadway, New York, NY 10038
                       <br />
-                      United States
+                     United States
                     </div>
                   </div>
                   <div className='col-12 col-md-6'>
@@ -485,7 +486,7 @@ export default function Page () {
 
                         <strong>Germany</strong>
                       </h3>
-                      Kloster 3, 79713, Bad Säckingen
+                     Kloster 3, 79713 Bad Säckingen
                       <br />
                       Germany
                     </div>
@@ -505,7 +506,7 @@ export default function Page () {
 
                         <strong>Japan</strong>
                       </h3>
-                      1-36-13 hashiba, TAITO-KU Tokyo
+                     1-36-13 Hashiba, Taito-ku, Tokyo
                       <br />
                       Japan
                     </div>
@@ -524,8 +525,8 @@ export default function Page () {
                     </li>
                   </ul>
                   <ul className='lh-45 fw-6'>
-                    <li class='top-bar-item fs-2'>
-                      <i class='icon-phone'></i>
+                    <li className='top-bar-item fs-2'>
+                      <i className='icon-phone'></i>
                       <a href='tel:+13473940007' className='mb-0'>
                         +1(347) 394-0007
                       </a>

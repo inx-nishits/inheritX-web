@@ -1,4 +1,55 @@
-export default function HomeContent () {
+'use client';
+import { useEffect } from 'react';
+
+import Link from 'next/link'
+import Accordion from '../Accordion'
+
+export default function HomeContent() {
+
+  useEffect(() => {
+    const body = document.body;
+    if (!body.classList.contains("counter-scroll")) return;
+
+    const elements = Array.from(document.querySelectorAll(".counter .number"));
+    if (elements.length === 0) return;
+
+    const activateCounter = (el) => {
+      if (el.classList.contains("odometer-activated")) return;
+      const to = el.dataset.to;
+      el.classList.add("odometer-activated");
+      el.textContent = to;
+    };
+
+    // ✅ Single observer reused for all elements
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            activateCounter(entry.target);
+            observer.unobserve(entry.target); // cleanup per element
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    // ✅ Batch observe
+    elements.forEach((el) => observer.observe(el));
+
+    // ✅ Pre-check for visible elements on mount (without forcing reflow)
+    const viewportHeight = window.innerHeight * 0.5;
+    for (const el of elements) {
+      const rectTop = el.offsetTop - window.scrollY;
+      if (rectTop < viewportHeight) {
+        activateCounter(el);
+        observer.unobserve(el);
+      }
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  
   return (
     <>
       <div className='page-title-home'>
@@ -14,12 +65,12 @@ export default function HomeContent () {
               cy='400'
               r='325'
               stroke='url(#a)'
-              stroke-width='150'
+              strokeWidth='150'
             />
             <defs>
               <linearGradient id='a' x1='176' x2='569' y1='70.5' y2='674'>
-                <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                <stop offset='1' stopColor='#fff' stopOpacity='0' />
               </linearGradient>
             </defs>
           </svg>
@@ -36,12 +87,12 @@ export default function HomeContent () {
               cy='400'
               r='325'
               stroke='url(#a1)'
-              stroke-width='150'
+              strokeWidth='150'
             />
             <defs>
               <linearGradient id='a1' x1='176' x2='569' y1='70.5' y2='674'>
-                <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                <stop offset='1' stopColor='#fff' stopOpacity='0' />
               </linearGradient>
             </defs>
           </svg>
@@ -75,13 +126,7 @@ export default function HomeContent () {
               <div className='content-left'>
                 <div className='desc text-animation'>
                   <p className='fs-20 lh-30'>
-                    From building 500+ cutting-edge mobile & web application for
-                    startups, SMEs, and enterprises worldwide to delivering
-                    AI-powered solutions with Python, we help businesses
-                    transform, scale, and innovate. Our in-house experts craft
-                    next-gen mobility and AI solutions — tailored to your
-                    vision, optimized for performance, and built to lead in the
-                    digital era.
+                   From building 500+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
                   </p>
                 </div>
 
@@ -203,10 +248,10 @@ export default function HomeContent () {
                   </div>
                 </div>
 
-                <a href='services.html' className='tf-btn'>
+                <Link href='/services' className='tf-btn'>
                   <span>Click for Free Consultancy</span>
                   <i className='icon-arrow-right'></i>
-                </a>
+                </Link>
               </div>
             </div>
             <div className='col-lg-7'>
@@ -302,37 +347,29 @@ export default function HomeContent () {
                     <span className='text-primary'>Inheritx</span> Solutions
                   </div>
                   <h2 className='title fw-6 title-animation'>
-                    Because We Deliver
+                    Because we deliver
                     <span className='fw-3'>
                       {' '}
-                      The&nbsp;Best Solutions to Stay Ahead
+                      the&nbsp;best solutions to stay ahead
                     </span>
                   </h2>
                 </div>
                 <div className='section-content'>
                   <div className='desc mb-40 text-animation'>
                     <p className='lh-30'>
-                      At InheritX, customer service is more than just a promise
-                      — it’s our core value. Since our inception in 2011, we
-                      have consistently made quality a habit, delivering
-                      best-in-class web, mobile, and AI-powered solutions to our
-                      global clientele. Our strong team of experienced
-                      professionals can handle projects of any size or scale,
-                      offering innovative IT and AI-driven solutions within
-                      committed timelines. We thrive on helping businesses grow
-                      by providing futuristic, feature-rich, and intelligent
-                      solutions in web development, mobile app development, and
-                      AI integration.
+                     At InheritX, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
                     </p>
+                     <p className='lh-30 pt-4'>
+                     At InheritX Solutions, we follow a client-first approach, ensuring transparency and excellent results. Our 97% client retention ratio reflects our dedication to building and maintaining lasting relationships. From 24/7 technical assistance and agile methodology to cutting-edge AI adoption, we consistently ensure project safety and deliver solutions that keep your business ahead of the curve.</p>
                   </div>
                   <div className='title-animation'>
-                    <a
-                      href='about-us.html'
+                    <Link
+                      href='/about-us'
                       className='tf-btn no-bg text-underline'
                     >
                       <span>Learn More Us</span>
                       <i className='icon-arrow-right'></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -353,7 +390,7 @@ export default function HomeContent () {
                 cy='350'
                 r='285'
                 stroke='url(#a2)'
-                stroke-width='130'
+                strokeWidth='130'
               />
               <defs>
                 <linearGradient
@@ -363,8 +400,8 @@ export default function HomeContent () {
                   y1='61.688'
                   y2='589.75'
                 >
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -503,163 +540,7 @@ export default function HomeContent () {
                     <span className='fw-3'>Advancement Incentives</span>
                   </h2>
                 </div>
-                <div className='wg-according' id='According1'>
-                  <div className='according-item'>
-                    <h5 className='fw-5'>
-                      <a
-                        href='#according1'
-                        data-bs-toggle='collapse'
-                        className='title-according'
-                      >
-                        Learn Our Company Mission<span></span>
-                      </a>
-                    </h5>
-                    <div
-                      id='according1'
-                      className='collapse show'
-                      data-bs-parent='#According1'
-                    >
-                      <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-1.jpg'
-                            data-src='image/home/img-according-1.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
-                        <div className='right'>
-                          <div className='desc lh-30'>
-                            Since inception, InheritX Solutions has set many
-                            milestones by offering quality IT solutions and
-                            services that are capable of bringing disruptive
-                            changes in the corporate world.
-                          </div>
-                          <div className='desc lh-30 mb-0'>
-                            We are striving for offering superior quality
-                            solutions that CLIENTS prefer for their customers,
-                            EMPLOYEES feel pride of, CUSTOMERS appreciate, and
-                            INVESTORS choose to get long-term returns.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='according-item'>
-                    <h5 className='fw-5'>
-                      <a
-                        href='#according2'
-                        data-bs-toggle='collapse'
-                        className='title-according collapsed'
-                      >
-                        Our Company Vision<span></span>
-                      </a>
-                    </h5>
-                    <div
-                      id='according2'
-                      className='collapse'
-                      data-bs-parent='#According1'
-                    >
-                      <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-2.jpg'
-                            data-src='image/home/img-according-2.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
-                        <div className='right'>
-                          <div className='desc lh-30'>
-                            To be recognized as leaders in quality services and
-                            developing relationships that make a positive
-                            difference in our customer’s lives.
-                          </div>
-
-                          <div className='desc lh-30 mb-0'>
-                            We provide enterprise-grade design and development
-                            services to our clients to boost the productivity of
-                            their business across the world with a vision to
-                            become the most reliable offshore partner.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='according-item'>
-                    <h5 className='fw-5'>
-                      <a
-                        href='#according3'
-                        data-bs-toggle='collapse'
-                        className='title-according collapsed'
-                      >
-                        Why Choose Inheritx?<span></span>
-                      </a>
-                    </h5>
-                    <div
-                      id='according3'
-                      className='collapse'
-                      data-bs-parent='#According1'
-                    >
-                      <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-3.jpg'
-                            data-src='image/home/img-according-3.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
-                        <div className='right'>
-                          <div className='desc lh-30'>
-                            InheritX Solutions is a leading tablet app
-                            development company in India and the USA,
-                            specializing in iPad and Android tablet apps. We
-                            deliver customized, cost-effective solutions that
-                            enhance business value, boost ROI, and meet complex
-                            requirements. With on-time delivery and excellent
-                            performance, our expert iPad developers build
-                            scalable apps across diverse industries.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='according-item'>
-                    <h5 className='fw-5'>
-                      <a
-                        href='#according4'
-                        data-bs-toggle='collapse'
-                        className='title-according collapsed'
-                      >
-                        What We Offer?<span></span>
-                      </a>
-                    </h5>
-                    <div
-                      id='according4'
-                      className='collapse'
-                      data-bs-parent='#According1'
-                    >
-                      <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-4.jpg'
-                            data-src='image/home/img-according-4.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
-                        <div className='right'>
-                          <div className='desc lh-30'>
-                            InheritX Solutions has an in-house team of
-                            experienced developers who can handle any size
-                            project in the domains of web, mobile app, and IoT.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Accordion />
               </div>
               <div className='right-section'>
                 <div className='image image-section tf-animate-1 rounded-3 overflow-hidden'>
@@ -688,12 +569,12 @@ export default function HomeContent () {
                 cy='400'
                 r='325'
                 stroke='url(#a3)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a3' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -802,7 +683,7 @@ export default function HomeContent () {
               </div>
             </div>
           </div>
-          
+
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
@@ -811,13 +692,12 @@ export default function HomeContent () {
                     Our <span className='text-primary'>Popular</span> Services
                   </div>
                   <h2 className='title fw-6 title-animation mb-5'>
-                    We Run All kinds Of IT Services
+                     We Run All kinds Of IT Services
                     <br />
-                    <span className='fw-3'>that vow Your Success</span>
+                    <span className='fw-3'>that vow your success.</span>
                   </h2>
                   <p className='title-animation'>
-                    We offer end-to-end services in the IT domain, from mobile
-                    and web development to AI-driven business solutions.
+                    We offer end-to-end services in the IT domain, from mobile and web development to AI-driven business solutions.
                   </p>
                 </div>
               </div>
@@ -844,19 +724,19 @@ export default function HomeContent () {
                           <i className='icon-custom-software'></i>
                         </div>
                         <h6 className='lh-30 fw-6'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='title-service'
                           >
                             {' '}
                             Web Development
-                          </a>
+                          </Link>
                         </h6>
                         <div className='desc lh-30'>
                           Robust, reliable, and responsive corporate websites
                         </div>
-                        <a
-                          href='services-details.html'
+                        <Link
+                          href='/services-details'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -865,15 +745,15 @@ export default function HomeContent () {
                             alt=''
                             className='lazyload'
                           />
-                        </a>
+                        </Link>
                         <div className='bottom-item'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -883,19 +763,19 @@ export default function HomeContent () {
                           <i className='icon-software-product'></i>
                         </div>
                         <h6 className='lh-30 fw-6'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='title-service'
                           >
                             Artificial Intelligence
-                          </a>
+                          </Link>
                         </h6>
                         <div className='desc lh-30'>
                           Predictive analytics, chatbots, computer vision, and
                           custom LLM integrations.
                         </div>
-                        <a
-                          href='services-details.html'
+                        <Link
+                          href='/services-details'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -904,15 +784,15 @@ export default function HomeContent () {
                             alt=''
                             className='lazyload'
                           />
-                        </a>
+                        </Link>
                         <div className='bottom-item'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -933,19 +813,19 @@ export default function HomeContent () {
                           </i>
                         </div>
                         <h6 className='lh-30 fw-6'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='title-service'
                           >
                             Mobile App Development
-                          </a>
+                          </Link>
                         </h6>
                         <div className='desc lh-30'>
                           Feature-rich apps delivering seamless performance and
                           smooth, reliable functionality.
                         </div>
-                        <a
-                          href='services-details.html'
+                        <Link
+                          href='/services-details'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -954,15 +834,15 @@ export default function HomeContent () {
                             alt=''
                             className='lazyload'
                           />
-                        </a>
+                        </Link>
                         <div className='bottom-item'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -984,19 +864,19 @@ export default function HomeContent () {
                           </i>
                         </div>
                         <h6 className='lh-30 fw-6'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='title-service'
                           >
                             DevOps
-                          </a>
+                          </Link>
                         </h6>
                         <div className='desc lh-30'>
                           Customized solutions by integrating technological
                           advancements
                         </div>
-                        <a
-                          href='services-details.html'
+                        <Link
+                          href='/services-details'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -1005,15 +885,15 @@ export default function HomeContent () {
                             alt=''
                             className='lazyload'
                           />
-                        </a>
+                        </Link>
                         <div className='bottom-item'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1035,18 +915,18 @@ export default function HomeContent () {
                           </i>
                         </div>
                         <h6 className='lh-30 fw-6'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='title-service'
                           >
                             Cloud Computing
-                          </a>
+                          </Link>
                         </h6>
                         <div className='desc lh-30'>
                           Secure and Scalable Cloud-based Apps for Business
                         </div>
-                        <a
-                          href='services-details.html'
+                        <Link
+                          href='/services-details'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -1055,15 +935,15 @@ export default function HomeContent () {
                             alt=''
                             className='lazyload'
                           />
-                        </a>
+                        </Link>
                         <div className='bottom-item'>
-                          <a
-                            href='services-details.html'
+                          <Link
+                            href='/services-details'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1086,14 +966,13 @@ export default function HomeContent () {
                   <i className='icon-chat-2'></i>
                 </div>
                 <h5 className='fw-4 title'>
-                  Let’s discuss your app idea and implement the innovative
-                  mobility solution for your business needs.
+                Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
                   href='#'
                   className='tf-btn no-bg text-underline hover-color-main-dark'
                 >
-                  <span>Let’s Talk</span>
+                  <span>Let's Talk</span>
                   <i className='icon-arrow-right'></i>
                 </a>
               </div>
@@ -1114,7 +993,7 @@ export default function HomeContent () {
                 cy='350'
                 r='285'
                 stroke='url(#a8)'
-                stroke-width='130'
+                strokeWidth='130'
               />
               <defs>
                 <linearGradient
@@ -1124,8 +1003,8 @@ export default function HomeContent () {
                   y1='61.688'
                   y2='589.75'
                 >
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -1139,6 +1018,7 @@ export default function HomeContent () {
                   </div>
                   <h2 className='title fw-6 mb-4 title-animation'>
                     Meet Our Experience
+                    <br />
                     <span className='fw-3'>Members</span>
                   </h2>
                   <p className='lh-30 mb-5'>
@@ -1182,8 +1062,8 @@ export default function HomeContent () {
                     <div className='swiper-slide'>
                       <div className='team-item hover-image rounded-3 overflow-hidden'>
                         <div className='top-item'>
-                          <a
-                            href='team.html'
+                          <Link
+                            href='/team'
                             className='image  rounded-3 overflow-hidden'
                           >
                             <img
@@ -1192,11 +1072,11 @@ export default function HomeContent () {
                               alt=''
                               className='lazyload rounded-3 overflow-hidden'
                             />
-                          </a>
+                          </Link>
                         </div>
                         <div className='item-content'>
                           <h6 className='title'>
-                            <a href='team.html'>Sandip Modi</a>
+                            <Link href='/team'>Sandip Modi</Link>
                           </h6>
                           <p className='sub-title'>CEO</p>
                         </div>
@@ -1206,8 +1086,8 @@ export default function HomeContent () {
                     <div className='swiper-slide'>
                       <div className='team-item hover-image rounded-3 overflow-hidden'>
                         <div className='top-item'>
-                          <a
-                            href='team.html'
+                          <Link
+                            href='/team'
                             className='image  rounded-3 overflow-hidden'
                           >
                             <img
@@ -1216,11 +1096,11 @@ export default function HomeContent () {
                               alt=''
                               className='lazyload rounded-3 overflow-hidden'
                             />
-                          </a>
+                          </Link>
                         </div>
                         <div className='item-content'>
                           <h6 className='title'>
-                            <a href='team.html'>Aiyub Munshi</a>
+                            <Link href='/team'>Aiyub Munshi</Link>
                           </h6>
                           <p className='sub-title'>Project Manager</p>
                         </div>
@@ -1230,8 +1110,8 @@ export default function HomeContent () {
                     <div className='swiper-slide'>
                       <div className='team-item hover-image rounded-3 overflow-hidden'>
                         <div className='top-item'>
-                          <a
-                            href='team.html'
+                          <Link
+                            href='/team'
                             className='image  rounded-3 overflow-hidden'
                           >
                             <img
@@ -1240,11 +1120,11 @@ export default function HomeContent () {
                               alt=''
                               className='lazyload rounded-3 overflow-hidden'
                             />
-                          </a>
+                          </Link>
                         </div>
                         <div className='item-content'>
                           <h6 className='title'>
-                            <a href='team.html'>Meera Tank</a>
+                            <Link href='/team'>Meera Tank</Link>
                           </h6>
                           <p className='sub-title'>HR Manager</p>
                         </div>
@@ -1296,9 +1176,9 @@ export default function HomeContent () {
                         Software Development
                       </div>
                       <h3 className='title-project'>
-                        <a href='porfolio-details.html'>
+                        <Link href='/porfolio-details'>
                           Mobile Application Design
-                        </a>
+                        </Link>
                       </h3>
                       <div className='desc lh-30'>
                         Sed ut perspiciatis unde omnis iste natus error sit
@@ -1308,7 +1188,7 @@ export default function HomeContent () {
                     </div>
                     <div className='bottom-content'>
                       <a
-                        href='porfolio-details.html'
+                        href='/porfolio-details'
                         className='tf-btn-readmore'
                       >
                         <span className='plus'>+</span>
@@ -1316,14 +1196,14 @@ export default function HomeContent () {
                       </a>
                     </div>
                   </div>
-                  <a href='porfolio-details.html' className='image'>
+                  <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
                       data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='swiper-slide'>
@@ -1334,7 +1214,7 @@ export default function HomeContent () {
                         Software Development
                       </div>
                       <h3 className='title-project'>
-                        <a href='porfolio-details.html'>UI/UX Design</a>
+                        <Link href='/porfolio-details'>UI/UX Design</Link>
                       </h3>
                       <div className='desc lh-30'>
                         Sed ut perspiciatis unde omnis iste natus error sit
@@ -1344,7 +1224,7 @@ export default function HomeContent () {
                     </div>
                     <div className='bottom-content'>
                       <a
-                        href='porfolio-details.html'
+                        href='/porfolio-details'
                         className='tf-btn-readmore'
                       >
                         <span className='plus'>+</span>
@@ -1352,14 +1232,14 @@ export default function HomeContent () {
                       </a>
                     </div>
                   </div>
-                  <a href='porfolio-details.html' className='image'>
+                  <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
                       data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='swiper-slide'>
@@ -1370,9 +1250,9 @@ export default function HomeContent () {
                         Software Development
                       </div>
                       <h3 className='title-project'>
-                        <a href='porfolio-details.html'>
+                        <Link href='/porfolio-details'>
                           Mobile Application Design
-                        </a>
+                        </Link>
                       </h3>
                       <div className='desc lh-30'>
                         Sed ut perspiciatis unde omnis iste natus error sit
@@ -1382,7 +1262,7 @@ export default function HomeContent () {
                     </div>
                     <div className='bottom-content'>
                       <a
-                        href='porfolio-details.html'
+                        href='/porfolio-details'
                         className='tf-btn-readmore'
                       >
                         <span className='plus'>+</span>
@@ -1390,14 +1270,14 @@ export default function HomeContent () {
                       </a>
                     </div>
                   </div>
-                  <a href='porfolio-details.html' className='image'>
+                  <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
                       data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='swiper-slide'>
@@ -1408,7 +1288,7 @@ export default function HomeContent () {
                         Software Development
                       </div>
                       <h3 className='title-project'>
-                        <a href='porfolio-details.html'>UI/UX Design</a>
+                        <Link href='/porfolio-details'>UI/UX Design</Link>
                       </h3>
                       <div className='desc lh-30'>
                         Sed ut perspiciatis unde omnis iste natus error sit
@@ -1418,7 +1298,7 @@ export default function HomeContent () {
                     </div>
                     <div className='bottom-content'>
                       <a
-                        href='porfolio-details.html'
+                        href='/porfolio-details'
                         className='tf-btn-readmore'
                       >
                         <span className='plus'>+</span>
@@ -1426,14 +1306,14 @@ export default function HomeContent () {
                       </a>
                     </div>
                   </div>
-                  <a href='porfolio-details.html' className='image'>
+                  <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
                       data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1454,12 +1334,12 @@ export default function HomeContent () {
                 cy='400'
                 r='325'
                 stroke='url(#a4)'
-                stroke-width='150'
+                strokeWidth='150'
               />
               <defs>
                 <linearGradient id='a4' x1='176' x2='569' y1='70.5' y2='674'>
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -1492,18 +1372,15 @@ export default function HomeContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Overall, I was very satisfied with Inheritx. They are
-                          hard workers, very reliable, and very flexible.
-                          Overall, I would recommend INX team for any
-                          development work.
+                       Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='/#' className='name-user body-2 '>
                             Edward
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='/#' className='position text-medium'>
                             CEO
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1514,18 +1391,15 @@ export default function HomeContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          InheritX is very professional and articulate in their
-                          approach to this project. The most impressive thing is
-                          the input and intelligent contributions they have made
-                          in the design of the app.
+                         InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='/#' className='name-user body-2 '>
                             Badri
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='/#' className='position text-medium'>
                             Manager
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1536,17 +1410,15 @@ export default function HomeContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx have proven themselves to be dependable with
-                          solid problem solving and technical skills. They are
-                          persistent, reliable, flexible and responsive.
+                        InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='/#' className='name-user body-2 '>
                             Saady
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='/#' className='position text-medium'>
                             Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1557,18 +1429,15 @@ export default function HomeContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx has done a fabulous job. We want to continue
-                          using them in the future and recommend them to all
-                          developers looking for professional, high quality
-                          work.
+                        InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='/#' className='name-user body-2 '>
                             Simon
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='/#' className='position text-medium'>
                             Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1579,18 +1448,15 @@ export default function HomeContent () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          The team has been fantastic, I have been working with
-                          them for nearly 2 years now and have not been able to
-                          find a fault in their performance or attitude. They
-                          are extremely professional and polite w...
+                         The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <a href='#' className='name-user body-2 '>
+                          <Link href='/#' className='name-user body-2 '>
                             Dorain
-                          </a>
-                          <a href='#' className='position text-medium'>
+                          </Link>
+                          <Link href='/#' className='position text-medium'>
                             Developer
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1652,15 +1518,14 @@ export default function HomeContent () {
               <div className='section-content section-form-content tf-animate-2'>
                 <div className='sub-title body-2 fw-7 mb-17'>Work Inquiry</div>
                 <h2 className='title fw-6'>
-                  Let’s Work For your Next Projects ?
+                 Let’s work on your next projects.
                 </h2>
-                <a
-                  href='contact.html'
+                <Link href='/#'
                   className='tf-btn style-bg-white hover-bg-main-dark'
                 >
                   <span>Contact Us</span>
                   <i className='icon-arrow-right'></i>
-                </a>
+                </Link>
               </div>
             </div>
             <div className='right'>
@@ -1674,7 +1539,7 @@ export default function HomeContent () {
                   <h3 className='title'>Need Help For Project!</h3>
 
                   <div className='desc lh-30'>
-                    We are ready to help your next projects, let’s work together
+                    We are ready to help with your next projects. Let’s work together.
                   </div>
                 </div>
 
@@ -1794,8 +1659,7 @@ export default function HomeContent () {
               Our <span className='text-primary'>Partners</span>
             </h2>
             <p className='title-animation fs-2'>
-              We Feel Pride in Having Partnerships with Some of the Most Reputed
-              Companies in the World
+              We feel pride in having partnerships with some of the most reputed companies in the world.
             </p>
           </div>
 
@@ -1809,7 +1673,7 @@ export default function HomeContent () {
               >
                 <div className='initial-child-container'>
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/amazon.png'
                         alt=''
@@ -1825,7 +1689,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
@@ -1841,7 +1705,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/gesia.png'
                         alt=''
@@ -1857,7 +1721,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/guru.png'
                         alt=''
@@ -1873,7 +1737,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/partner.png'
                         alt=''
@@ -1889,7 +1753,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/upwork.png'
                         alt=''
@@ -1905,7 +1769,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/amazon.png'
                         alt=''
@@ -1921,7 +1785,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
@@ -1937,7 +1801,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/gesia.png'
                         alt=''
@@ -1953,7 +1817,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/guru.png'
                         alt=''
@@ -1969,7 +1833,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/partner.png'
                         alt=''
@@ -1985,7 +1849,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/upwork.png'
                         alt=''
@@ -2001,7 +1865,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/amazon.png'
                         alt=''
@@ -2017,7 +1881,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
@@ -2033,7 +1897,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/gesia.png'
                         alt=''
@@ -2049,7 +1913,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/guru.png'
                         alt=''
@@ -2065,7 +1929,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/partner.png'
                         alt=''
@@ -2081,7 +1945,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/upwork.png'
                         alt=''
@@ -2097,7 +1961,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/amazon.png'
                         alt=''
@@ -2113,7 +1977,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
@@ -2129,7 +1993,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/gesia.png'
                         alt=''
@@ -2145,7 +2009,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/guru.png'
                         alt=''
@@ -2161,7 +2025,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/partner.png'
                         alt=''
@@ -2177,7 +2041,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/upwork.png'
                         alt=''
@@ -2210,7 +2074,7 @@ export default function HomeContent () {
                 cy='350'
                 r='285'
                 stroke='url(#a5)'
-                stroke-width='130'
+                strokeWidth='130'
               />
               <defs>
                 <linearGradient
@@ -2220,8 +2084,8 @@ export default function HomeContent () {
                   y1='61.688'
                   y2='589.75'
                 >
-                  <stop offset='0' stop-color='#fff' stop-opacity='0.05' />
-                  <stop offset='1' stop-color='#fff' stop-opacity='0' />
+                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
                 </linearGradient>
               </defs>
             </svg>
@@ -2241,8 +2105,7 @@ export default function HomeContent () {
             <div className='row rg-30'>
               <div className='col-lg-6'>
                 <div className='tf-post-list style-2 hover-image h-100 overflow-hidden flex-column justify-content-start'>
-                  <a
-                    href='blog-details.html'
+                  <Link href='/#'
                     className='image  overflow-hidden'
                   >
                     <img
@@ -2251,33 +2114,31 @@ export default function HomeContent () {
                       alt=''
                       className='lazyload'
                     />
-                  </a>
+                  </Link>
                   <div className='post-content'>
                     <div className='top-post'>
                       <div className='post-meta'>
-                        <a href='blog-details.html' className='text-medium'>
+                        <Link href='/blog-details' className='text-medium'>
                           Sandip Modi,
                           <br />
                           <span className='text-primary'>
                             in Flutter Application Development
                           </span>
-                        </a>
+                        </Link>
                       </div>
                       <h5 className='title fw-5'>
-                        <a href='blog-details.html'>
+                        <Link href='/blog-details'>
                           Top 15 Flutter Widgets Are Best To Use for App
                           Development
-                        </a>
+                        </Link>
                       </h5>
                     </div>
                     <div className='bottom-post'>
                       <div className='desc lh-30'>
-                        Google’s Flutter framework has many features that
-                        facilitate developers to build robust and user-friendly
-                        apps with a native-like experience.
+                       Google’s Flutter framework has many features that enable developers to build robust and user-friendly apps with a native-like experience.
                       </div>
                       <a
-                        href='blog-details.html'
+                        href='/blog-details'
                         className='tf-btn-readmore style-open'
                       >
                         <span className='plus'>+</span>
@@ -2290,8 +2151,7 @@ export default function HomeContent () {
 
               <div className='col-lg-6'>
                 <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column'>
-                  <a
-                    href='blog-details.html'
+                  <Link href='/#'
                     className='image  overflow-hidden'
                   >
                     <img
@@ -2300,23 +2160,23 @@ export default function HomeContent () {
                       alt=''
                       className='lazyload'
                     />
-                  </a>
+                  </Link>
                   <div className='post-content'>
                     <div className='top-post'>
                       <div className='post-meta'>
-                        <a href='blog-details.html' className='text-medium'>
+                        <Link href='/blog-details' className='text-medium'>
                           Sandip Modi,
                           <br />
                           <span className='text-primary'>
                             in Flutter Application Development
                           </span>
-                        </a>
+                        </Link>
                       </div>
                       <h5 className='title fw-5'>
-                        <a href='blog-details.html'>
+                        <Link href='/blog-details'>
                           Why Modern Businesses Prefer Flutter Application
                           Development Services
-                        </a>
+                        </Link>
                       </h5>
                     </div>
                     <div className='bottom-post'>
@@ -2328,7 +2188,7 @@ export default function HomeContent () {
                         building such an app.
                       </div>
                       <a
-                        href='blog-details.html'
+                        href='/blog-details'
                         className='tf-btn-readmore style-open'
                       >
                         <span className='plus'>+</span>
@@ -2348,8 +2208,7 @@ export default function HomeContent () {
               Our Valuable <span className='text-primary'>Clients</span>
             </h2>
             <p className='title-animation fs-2'>
-              We are pleased to serve one of the most reputed and respected
-              brands across different sectors globally
+            We are pleased to serve one of the most reputed and respected brands across different sectors globally.
             </p>
           </div>
 
@@ -2363,7 +2222,7 @@ export default function HomeContent () {
               >
                 <div className='initial-child-container'>
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/stockteamup.png'
                         alt=''
@@ -2379,7 +2238,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/perfit-1-1.jpg'
                         alt=''
@@ -2395,7 +2254,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/dearcows.png'
                         alt=''
@@ -2411,7 +2270,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/bubble_logo.png'
                         alt=''
@@ -2427,7 +2286,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients1.png'
                         alt=''
@@ -2443,7 +2302,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients2.png'
                         alt=''
@@ -2459,7 +2318,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients.png'
                         alt=''
@@ -2475,7 +2334,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/stockteamup.png'
                         alt=''
@@ -2491,7 +2350,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/perfit-1-1.jpg'
                         alt=''
@@ -2507,7 +2366,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/dearcows.png'
                         alt=''
@@ -2523,7 +2382,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/bubble_logo.png'
                         alt=''
@@ -2539,7 +2398,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients1.png'
                         alt=''
@@ -2555,7 +2414,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients2.png'
                         alt=''
@@ -2571,7 +2430,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients.png'
                         alt=''
@@ -2587,7 +2446,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/stockteamup.png'
                         alt=''
@@ -2603,7 +2462,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/perfit-1-1.jpg'
                         alt=''
@@ -2619,7 +2478,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/dearcows.png'
                         alt=''
@@ -2635,7 +2494,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/bubble_logo.png'
                         alt=''
@@ -2651,7 +2510,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients1.png'
                         alt=''
@@ -2667,7 +2526,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients2.png'
                         alt=''
@@ -2683,7 +2542,7 @@ export default function HomeContent () {
                   </div>
 
                   <div className='big-text fs-initial'>
-                    <div className='image left'>
+                    <div className='image left d-block'>
                       <img
                         src='image/partners/OurClients.png'
                         alt=''
