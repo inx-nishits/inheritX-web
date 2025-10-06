@@ -1013,16 +1013,14 @@ export default function HomeContent() {
             <div className='row'>
               <div className='col-lg-3'>
                 <div className='heading-section'>
-                  <h1 className='sub-title fw-7 mb-4 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     Our <span className='text-primary'>Team</span>
-                  </h1>
-                  <h2 className='title fw-6 mb-4 title-animation d-none'>
-                    Meet Our Experience
-                    <br />
-                    <span className='fw-3'>Members</span>
-                  </h2>
-                  <p className='lh-30 mb-5 fs-2'>
-                    People who guide us and lead InheritX Solutions toward excellence with their unique vision
+                  </div>
+                  <h4 className='title fw-6 mb-4 title-animation'>
+                    People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
+                  </h4>
+                  <p className='lh-30 mb-5'>
+                    They don’t just lead—they empower, mentor, and transform ideas into impact.
                   </p>
                   <div className='list-btn flex align-items-center g-15 d-none'>
                     <div className='scrolling-effect effectBottom'>

@@ -5521,6 +5521,7 @@ a.mapboxgl-ctrl-logo {
   padding-top: 43px;
   padding-bottom: 47px;
   width: 100%;
+  min-width: 667px;
 }
 .section-company .image-section {
   height: 100%;
