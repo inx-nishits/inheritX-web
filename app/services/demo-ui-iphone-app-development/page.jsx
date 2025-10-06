@@ -1,3 +1,5 @@
+import Breadcrumbs from '../../components/Breadcrumbs';
+
 export default function IPhoneAppDevelopmentPage() {
     return (
       <>
@@ -7,14 +9,10 @@ export default function IPhoneAppDevelopmentPage() {
         <div className="page-title">
           <div className="tf-container">
             <div className="page-title-content text-center">
-              <h1 className="title split-text effect-right">
+            <h1 className="title split-text effect-right">
                 iPhone App Development
               </h1>
-              <div className="breadkcum">
-                <a href="index.html" className="link-breadkcum body-2 fw-7 split-text effect-right">Home</a>
-                <span className="dot"></span>
-                <span className="page-breadkcum body-2 fw-7 split-text effect-right">Service Details</span>
-              </div>
+              <Breadcrumbs />
             </div>
           </div>
         </div>

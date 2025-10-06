@@ -34,3 +34,10 @@
 
 /*-------------- Responsive ----------------- */
 @import "./responsive";
+
+/* Global: ensure phone icon points to the right everywhere */
+.icon-phone {
+  display: inline-block;
+  transform: scaleX(-1);
+  transform-origin: center;
+}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import { servicesData } from '../../components/services/servicesData';
 
 export default function ServiceDetailsPage({ params }) {
@@ -23,13 +24,7 @@ export default function ServiceDetailsPage({ params }) {
         <div className="tf-container">
           <div className="page-title-content text-center">
             <h1 className="title split-text effect-right">{service.heading}</h1>
-            <div className="breadkcum">
-              <Link href="/" className="link-breadkcum body-2 fw-7 split-text effect-right">Home</Link>
-              <span className="dot"></span>
-              {/* <Link href="/services" className="link-breadkcum body-2 fw-7 split-text effect-right">Our Services</Link> */}
-              {/* <span className="dot"></span> */}
-              <span className="page-breadkcum body-2 fw-7 split-text effect-right">{service.breadCrumdsTitle}</span>
-            </div>
+            <Breadcrumbs />
           </div>
         </div>
       </div>

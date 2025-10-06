@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Breadcrumbs from '../Breadcrumbs'
 
 export default function AboutContent() {
   return (
@@ -10,17 +11,8 @@ export default function AboutContent() {
         <div className='tf-container'>
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>About Us</h1>
-            <div className='breadkcum mb-5'>
-              <Link
-                href='/'
-                className='link-breadkcum body-2 fw-7 split-text effect-right'
-              >
-                Home
-              </Link>
-              <span className='dot'></span>
-              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
-                About Us
-              </span>
+            <div className='mb-5'>
+              <Breadcrumbs />
             </div>
 
             <p className='pt-4'>Our only aim — to make clients happy!</p>
@@ -614,7 +606,7 @@ export default function AboutContent() {
 
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/web-app-development'
                     className='title-service text-primary'
                   >
                     Certified Developers
@@ -642,7 +634,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/web-app-development'
                     className='title-service text-primary'
                   >
                     Quick Delivery
@@ -671,7 +663,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/google-cloud-services'
                     className='title-service text-primary'
                   >
                     State-of-the-art Infrastructure
@@ -701,7 +693,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/web-app-development'
                     className='title-service text-primary'
                   >
                     Competitive Pricing
@@ -730,7 +722,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/machine-learning-development'
                     className='title-service text-primary'
                   >
                     Domain Expertise
@@ -759,7 +751,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/web-app-development'
                     className='title-service text-primary'
                   >
                     IT Consultancy
@@ -789,7 +781,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/mobile-app-development'
                     className='title-service text-primary'
                   >
                     Flexible Development Process
@@ -818,7 +810,7 @@ export default function AboutContent() {
                 </div>
                 <h5 className='lh-30 fw-6'>
                   <Link
-                    href='/services-details'
+                    href='/services/google-cloud-services'
                     className='title-service text-primary'
                   >
                     Higher Security

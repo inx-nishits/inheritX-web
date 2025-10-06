@@ -1,9 +1,24 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState, useEffect } from 'react'
+import MobileNav from './MobileNav'
+import menuData from './navigation/menuData'
+import DesktopNav from './DesktopNav'
 
-export default function Header () {
+export default function Header() {
   const pathname = usePathname()
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
+
+  useEffect(() => {
+    if (isMobileOpen) {
+      const prevOverflow = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => {
+        document.body.style.overflow = prevOverflow
+      }
+    }
+  }, [isMobileOpen])
 
   // Helper to check if path is active
   const isActive = path => pathname === path
@@ -12,7 +27,7 @@ export default function Header () {
 
   return (
     <>
-      <div className='top-bar'>
+      <div className='top-bar d-none d-md-block'>
         <div className='top-bar-inner flex align-items-center justify-content-between'>
           <div className='tf-tb-left'>
             <ul className='list-topbar-item flex align-items-center'>
@@ -82,705 +97,7 @@ export default function Header () {
               </Link>
             </div>
 
-            <nav className='main-menu'>
-              <ul className='menu-primary-menu'>
-                <li
-                  className={`menu-item ${
-                    isActive('/') ? 'current-menu-item' : ''
-                  }`}
-                >
-                  <Link href='/' className='item-link body-2'>
-                    <span>Home</span>
-                  </Link>
-                </li>
-
-                <li
-                  className={`menu-item ${
-                    isActive('/about-us') ? 'current-menu-item' : ''
-                  }`}
-                >
-                  <Link href='/about-us' className='item-link body-2'>
-                    <span>About Us</span>
-                  </Link>
-                </li>
-
-                {/* Solutions Mega Menu */}
-                <li
-                  className={`menu-item menu-item-has-children position-static ${
-                    isParentActive(['/services']) || isActive('/services')
-                      ? 'current-menu-item'
-                      : ''
-                  }`}
-                >
-                  <Link href='/services' className='item-link body-2'>
-                    <span>Solutions</span>
-                  </Link>
-                  <div className='sub-menu mega-menu p-4 py-5'>
-                    <div className='container'>
-                      <div className='row'>
-                        {/* Mobile App Development */}
-                        <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
-                            Mobile App Development
-                          </h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/iphone-app-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/iphone-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                iPhone App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/android-app-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/android-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Android App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/kotlin-app-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/kotlin-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Kotlin App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/flutter-app-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/flutter-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Flutter App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive(
-                                  '/services/react-native-app-development'
-                                )
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/react-native-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                React Native App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive(
-                                  '/services/ipad-tablet-app-development'
-                                )
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/ipad-tablet-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                iPad/Tablet App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/xamarin-app-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/xamarin-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Xamarin App Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/ionic-app-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/ionic-app-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Ionic App Development
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* Web Development */}
-                        <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
-                            Web Development
-                          </h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/python-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/python-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Python Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/nextjs-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/nextjs-development'
-                                className='text-decoration-none text-white'
-                              >
-                                NextJS Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/laravel-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/laravel-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Laravel Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/reactjs-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/reactjs-development'
-                                className='text-decoration-none text-white'
-                              >
-                                ReactJS Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/nodejs-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/nodejs-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Node.js Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/php-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/php-development'
-                                className='text-decoration-none text-white'
-                              >
-                                PHP Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/java-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/java-development'
-                                className='text-decoration-none text-white'
-                              >
-                                JAVA Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/wordpress-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/wordpress-development'
-                                className='text-decoration-none text-white'
-                              >
-                                WordPress Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/magento-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/magento-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Magento Development
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* AI / ML */}
-                        <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>AI / ML</h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive(
-                                  '/services/machine-learning-development'
-                                )
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/machine-learning-development'
-                                className='text-decoration-none text-white'
-                              >
-                                Machine Learning Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/ai-agents')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/ai-agents'
-                                className='text-decoration-none text-white'
-                              >
-                                AI Agents
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/ai-ml-model-expertise')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/ai-ml-model-expertise'
-                                className='text-decoration-none text-white'
-                              >
-                                AI & ML Model Expertise
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* Other Services */}
-                        <div className='col-lg-3'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
-                            Other Services
-                          </h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/aws-services')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/aws-services'
-                                className='text-decoration-none text-white'
-                              >
-                                AWS Services
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/google-cloud-services')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/google-cloud-services'
-                                className='text-decoration-none text-white'
-                              >
-                                Google Cloud Services
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/pwa-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/pwa-development'
-                                className='text-decoration-none text-white'
-                              >
-                                PWA Development
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/seo-services')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/seo-services'
-                                className='text-decoration-none text-white'
-                              >
-                                SEO Services
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/services/iot-development')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/services/iot-development'
-                                className='text-decoration-none text-white'
-                              >
-                                IOT Development
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Hire Experts Mega Menu */}
-                <li
-                  className={`menu-item menu-item-has-children position-static ${
-                    isParentActive(['/hire-experts']) || isActive('/hire-experts')
-                      ? 'current-menu-item'
-                      : ''
-                  }`}
-                >
-                  <Link href='/hire-experts' className='item-link body-2'>
-                    <span>Hire Experts</span>
-                  </Link>
-                  <div className='sub-menu mega-menu p-4 py-5'>
-                    <div className='container'>
-                      <div className='row'>
-                        {/* Mobile App Dev */}
-                        <div className='col-lg-4'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
-                            Mobile App Development
-                          </h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/iphone-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/iphone-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire iPhone Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/android-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/android-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire Android Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/react-native-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/react-native-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire React Native Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/flutter-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/flutter-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire Flutter Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/phonegap-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/phonegap-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire Phonegap Developer
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* Web Dev */}
-                        <div className='col-lg-4'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
-                            Web Development
-                          </h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/angularjs-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/angularjs-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire AngularJS Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/reactjs-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/reactjs-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire ReactJS Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/nodejs-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/nodejs-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire Node.js Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/php-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/php-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire PHP Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/laravel-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/laravel-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire Laravel Developer
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* Other Tech */}
-                        <div className='col-lg-4'>
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>
-                            Other Technologies
-                          </h6>
-                          <ul className='list-unstyled'>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/python-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/python-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire Python Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/wordpress-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/wordpress-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire WordPress Developer
-                              </Link>
-                            </li>
-                            <li
-                              className={`mb-4 ${
-                                isActive('/hire/asp-developer')
-                                  ? 'current-menu-item'
-                                  : ''
-                              }`}
-                            >
-                              <Link
-                                href='/hire/asp-developer'
-                                className='text-decoration-none text-white'
-                              >
-                                Hire ASP Developer
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Other Menu Items */}
-                <li
-                  className={`menu-item ${
-                    isParentActive(['/portfolio', '/porfolio-details', '/porfolio']) ||
-                    isActive('/portfolio')
-                      ? 'current-menu-item'
-                      : ''
-                  }`}
-                >
-                  <Link href='/portfolio' className='item-link body-2'>
-                    <span>Portfolio</span>
-                  </Link>
-                </li>
-                <li
-                  className={`menu-item ${
-                    isActive('/blog') ? 'current-menu-item' : ''
-                  }`}
-                >
-                  <Link href='/blog' className='item-link body-2'>
-                    <span>Blog</span>
-                  </Link>
-                </li>
-                <li
-                  className={`menu-item ${
-                    isActive('/career') ? 'current-menu-item' : ''
-                  }`}
-                >
-                  <Link href='/join-our-team' className='item-link body-2'>
-                    <span>Join Our Team</span>
-                  </Link>
-                </li>
-                <li
-                  className={`menu-item ${
-                    isActive('/contact') ? 'current-menu-item' : ''
-                  }`}
-                >
-                  <Link href='/contact' className='item-link body-2'>
-                    <span>Get in Touch</span>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            <DesktopNav menuData={menuData} />
           </div>
 
           <div className='header-right'>
@@ -806,7 +123,7 @@ export default function Header () {
             </div>
 
             <div className='mobile-button nav-item d-xl-none'>
-              <a href='#canvasMobile' data-bs-toggle='offcanvas'>
+              <a href='#canvasMobile' aria-expanded={isMobileOpen} aria-controls='canvasMobile' onClick={(e) => { e.preventDefault(); setIsMobileOpen(true) }}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -818,8 +135,9 @@ export default function Header () {
 
       {/* Mobile Nav (offcanvas) */}
       <div
-        className='offcanvas offcanvas-start mobile-nav-wrap'
+        className={`offcanvas offcanvas-start mobile-nav-wrap ${isMobileOpen ? 'show' : ''}`}
         id='canvasMobile'
+        aria-hidden={!isMobileOpen}
       >
         <div className='inner-mobile-nav'>
           <div className='top-header-mobi'>
@@ -830,56 +148,47 @@ export default function Header () {
             </div>
             <button
               className='mobile-nav-close overflow-hidden'
-              data-bs-dismiss='offcanvas'
               aria-label='Close'
+              onClick={() => setIsMobileOpen(false)}
             >
-              ×
+              <span className='visually-hidden'>Close</span>
+              <svg className='mobile-nav-close-icon' width='20' height='20' viewBox='0 0 24 24' aria-hidden='true'>
+                <path d='M6 6L18 18M18 6L6 18' />
+              </svg>
             </button>
           </div>
-
-          <nav className='mobile-main-nav'>
-            <ul id='menu-mobile' className='menu'>
-              {/* You can replicate the same menu structure here if needed for mobile */}
-              <li className={isActive('/') ? 'current-menu-item' : ''}>
-                <Link href='/'>Home</Link>
-              </li>
-              <li className={isActive('/about-us') ? 'current-menu-item' : ''}>
-                <Link href='/about-us'>About Us</Link>
-              </li>
-              <li
-                className={
-                  isParentActive(['/services']) || isActive('/services') ? 'current-menu-item' : ''
-                }
-              >
-                <Link href='/services'>Solutions</Link>
-              </li>
-              <li
-                className={isParentActive(['/hire-experts']) || isActive('/hire-experts') ? 'current-menu-item' : ''}
-              >
-                <Link href='/hire-experts'>Hire Experts</Link>
-              </li>
-              <li
-                className={
-                  isParentActive(['/portfolio', '/porfolio-details', '/porfolio']) || isActive('/portfolio')
-                    ? 'current-menu-item'
-                    : ''
-                }
-              >
-                <Link href='/portfolio'>Portfolio</Link>
-              </li>
-              <li className={isActive('/blog') ? 'current-menu-item' : ''}>
-                <Link href='/blog'>Blog</Link>
-              </li>
-              <li className={isActive('/career') ? 'current-menu-item' : ''}>
-                <Link href='/career'>Join Our Team</Link>
-              </li>
-              <li className={isActive('/contact') ? 'current-menu-item' : ''}>
-                <Link href='/contact'>Get in Touch</Link>
-              </li>
-            </ul>
-          </nav>
+          <MobileNav menuData={menuData} onNavigate={() => setIsMobileOpen(false)} />
         </div>
       </div>
+      {isMobileOpen && (
+        <div className='offcanvas-backdrop fade show' onClick={() => setIsMobileOpen(false)}></div>
+      )}
+      <style jsx>{`
+        /* Ensure sidebar content has no outer spacing so header can touch edges */
+        .mobile-nav-wrap { padding: 0; }
+        .mobile-nav-wrap .inner-mobile-nav { padding: 0; margin: 0; }
+
+        .mobile-nav-close {
+          min-width: 40px;
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1; /* keep centered vertically */
+        }
+        .mobile-nav-close-icon { display: block; width: 20px; height: 20px; stroke: #fff; stroke-width: 2; fill: none; }
+        .inner-mobile-nav .top-header-mobi {
+          position: sticky;
+          padding: 5px 16px;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          width: 100%;
+          margin: 0; /* flush to edges */
+          background-color: var(--offcanvas-bg, #0b0f19);
+        }
+      `}</style>
     </>
   )
 }

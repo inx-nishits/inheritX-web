@@ -49,7 +49,7 @@ export default function HomeContent() {
     return () => observer.disconnect();
   }, []);
 
-  
+
   return (
     <>
       <div className='page-title-home'>
@@ -126,7 +126,7 @@ export default function HomeContent() {
               <div className='content-left'>
                 <div className='desc text-animation'>
                   <p className='fs-20 lh-30'>
-                   From building 500+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
+                    From building 500+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
                   </p>
                 </div>
 
@@ -357,10 +357,10 @@ export default function HomeContent() {
                 <div className='section-content'>
                   <div className='desc mb-40 text-animation'>
                     <p className='lh-30'>
-                     At InheritX, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
+                      At InheritX, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
                     </p>
-                     <p className='lh-30 pt-4'>
-                     At InheritX Solutions, we follow a client-first approach, ensuring transparency and excellent results. Our 97% client retention ratio reflects our dedication to building and maintaining lasting relationships. From 24/7 technical assistance and agile methodology to cutting-edge AI adoption, we consistently ensure project safety and deliver solutions that keep your business ahead of the curve.</p>
+                    <p className='lh-30 pt-4'>
+                      At InheritX Solutions, we follow a client-first approach, ensuring transparency and excellent results. Our 97% client retention ratio reflects our dedication to building and maintaining lasting relationships. From 24/7 technical assistance and agile methodology to cutting-edge AI adoption, we consistently ensure project safety and deliver solutions that keep your business ahead of the curve.</p>
                   </div>
                   <div className='title-animation'>
                     <Link
@@ -692,7 +692,7 @@ export default function HomeContent() {
                     Our <span className='text-primary'>Popular</span> Services
                   </div>
                   <h2 className='title fw-6 title-animation mb-5'>
-                     We Run All kinds Of IT Services
+                    We Run All kinds Of IT Services
                     <br />
                     <span className='fw-3'>that vow your success.</span>
                   </h2>
@@ -725,7 +725,7 @@ export default function HomeContent() {
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <Link
-                            href='/services-details'
+                            href='/services/web-app-development'
                             className='title-service'
                           >
                             {' '}
@@ -736,7 +736,7 @@ export default function HomeContent() {
                           Robust, reliable, and responsive corporate websites
                         </div>
                         <Link
-                          href='/services-details'
+                          href='/services/web-app-development'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -748,7 +748,7 @@ export default function HomeContent() {
                         </Link>
                         <div className='bottom-item'>
                           <Link
-                            href='/services-details'
+                            href='/services/web-app-development'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
@@ -764,7 +764,7 @@ export default function HomeContent() {
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <Link
-                            href='/services-details'
+                            href='/services/machine-learning-development'
                             className='title-service'
                           >
                             Artificial Intelligence
@@ -775,7 +775,7 @@ export default function HomeContent() {
                           custom LLM integrations.
                         </div>
                         <Link
-                          href='/services-details'
+                          href='/services/machine-learning-development'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -787,7 +787,7 @@ export default function HomeContent() {
                         </Link>
                         <div className='bottom-item'>
                           <Link
-                            href='/services-details'
+                            href='/services/machine-learning-development'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
@@ -814,7 +814,7 @@ export default function HomeContent() {
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <Link
-                            href='/services-details'
+                            href='/services/mobile-app-development'
                             className='title-service'
                           >
                             Mobile App Development
@@ -825,7 +825,7 @@ export default function HomeContent() {
                           smooth, reliable functionality.
                         </div>
                         <Link
-                          href='/services-details'
+                          href='/services/mobile-app-development'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -837,7 +837,7 @@ export default function HomeContent() {
                         </Link>
                         <div className='bottom-item'>
                           <Link
-                            href='/services-details'
+                            href='/services/mobile-app-development'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
@@ -865,7 +865,7 @@ export default function HomeContent() {
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <Link
-                            href='/services-details'
+                            href='/services'
                             className='title-service'
                           >
                             DevOps
@@ -876,7 +876,7 @@ export default function HomeContent() {
                           advancements
                         </div>
                         <Link
-                          href='/services-details'
+                          href='/services'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -888,7 +888,7 @@ export default function HomeContent() {
                         </Link>
                         <div className='bottom-item'>
                           <Link
-                            href='/services-details'
+                            href='/services'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
@@ -916,7 +916,7 @@ export default function HomeContent() {
                         </div>
                         <h6 className='lh-30 fw-6'>
                           <Link
-                            href='/services-details'
+                            href='/services/google-cloud-services'
                             className='title-service'
                           >
                             Cloud Computing
@@ -926,7 +926,7 @@ export default function HomeContent() {
                           Secure and Scalable Cloud-based Apps for Business
                         </div>
                         <Link
-                          href='/services-details'
+                          href='/services/google-cloud-services'
                           className='image rounded-3 overflow-hidden'
                         >
                           <img
@@ -938,7 +938,7 @@ export default function HomeContent() {
                         </Link>
                         <div className='bottom-item'>
                           <Link
-                            href='/services-details'
+                            href='/services/google-cloud-services'
                             className='tf-btn-readmore'
                           >
                             <span className='plus'>+</span>
@@ -966,7 +966,7 @@ export default function HomeContent() {
                   <i className='icon-chat-2'></i>
                 </div>
                 <h5 className='fw-4 title'>
-                Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
+                  Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
                   href='#'
@@ -1013,17 +1013,16 @@ export default function HomeContent() {
             <div className='row'>
               <div className='col-lg-3'>
                 <div className='heading-section'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    Our <span className='text-primary'>Professionals</span>
-                  </div>
-                  <h2 className='title fw-6 mb-4 title-animation'>
+                  <h1 className='sub-title fw-7 mb-4 title-animation'>
+                    Our <span className='text-primary'>Team</span>
+                  </h1>
+                  <h2 className='title fw-6 mb-4 title-animation d-none'>
                     Meet Our Experience
                     <br />
                     <span className='fw-3'>Members</span>
                   </h2>
-                  <p className='lh-30 mb-5'>
-                    People who guide us and lead InheritX Solutions toward
-                    excellence with their unique vision
+                  <p className='lh-30 mb-5 fs-2'>
+                    People who guide us and lead InheritX Solutions toward excellence with their unique vision
                   </p>
                   <div className='list-btn flex align-items-center g-15 d-none'>
                     <div className='scrolling-effect effectBottom'>
@@ -1372,7 +1371,7 @@ export default function HomeContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                       Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
+                          Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
                           <Link href='/#' className='name-user body-2 '>
@@ -1391,7 +1390,7 @@ export default function HomeContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                         InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
+                          InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
                           <Link href='/#' className='name-user body-2 '>
@@ -1410,7 +1409,7 @@ export default function HomeContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                        InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
+                          InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
                           <Link href='/#' className='name-user body-2 '>
@@ -1429,7 +1428,7 @@ export default function HomeContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                        InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
+                          InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
                           <Link href='/#' className='name-user body-2 '>
@@ -1448,7 +1447,7 @@ export default function HomeContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                         The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
+                          The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
                           <Link href='/#' className='name-user body-2 '>
@@ -1518,7 +1517,7 @@ export default function HomeContent() {
               <div className='section-content section-form-content tf-animate-2'>
                 <div className='sub-title body-2 fw-7 mb-17'>Work Inquiry</div>
                 <h2 className='title fw-6'>
-                 Let’s work on your next projects.
+                  Let’s work on your next projects.
                 </h2>
                 <Link href='/#'
                   className='tf-btn style-bg-white hover-bg-main-dark'
@@ -2135,7 +2134,7 @@ export default function HomeContent() {
                     </div>
                     <div className='bottom-post'>
                       <div className='desc lh-30'>
-                       Google’s Flutter framework has many features that enable developers to build robust and user-friendly apps with a native-like experience.
+                        Google’s Flutter framework has many features that enable developers to build robust and user-friendly apps with a native-like experience.
                       </div>
                       <a
                         href='/blog-details'
@@ -2208,7 +2207,7 @@ export default function HomeContent() {
               Our Valuable <span className='text-primary'>Clients</span>
             </h2>
             <p className='title-animation fs-2'>
-            We are pleased to serve one of the most reputed and respected brands across different sectors globally.
+              We are pleased to serve one of the most reputed and respected brands across different sectors globally.
             </p>
           </div>
 

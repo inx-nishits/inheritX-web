@@ -1,25 +1,15 @@
 import Link from 'next/link'
 import { servicesData } from './servicesData'
+import Breadcrumbs from '../Breadcrumbs'
 
-export default function ServicesContent () {
+export default function ServicesContent() {
   return (
     <>
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>Services</h1>
-            <div className='breadkcum'>
-              <Link
-                href='/'
-                className='link-breadkcum body-2 fw-7 split-text effect-right'
-              >
-                Home
-              </Link>
-              <span className='dot'></span>
-              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
-                Our Services
-              </span>
-            </div>
+            <Breadcrumbs />
           </div>
         </div>
       </div>
@@ -167,10 +157,152 @@ export default function ServicesContent () {
 
           <div className='tf-container'>
             <div className='list-services flex flex-wrap'>
+              <div className='services-item px-lg-15 col-md-4 no-img'>
+                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                  <img
+                    src='image/services-item/WebDevelopment.png'
+                    alt=''
+                    className='lazyload'
+                  />
+                </div>
+
+                <h5 className='lh-30 fw-6'>
+                  <Link href='/' className='title-service'>
+                    Web Development
+                  </Link>
+                </h5>
+
+                <div className='desc lh-30'>
+                  Since inception, InheritX Solutions has delivered
+                  seamlessly-performing websites that meet our clients’
+                  corporate needs efficiently. We craft excellent and elegant
+                  websites in all major frameworks. Delve in to know more.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img'>
+                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                  <img
+                    src='image/services-item/MobileApplicationDevelopment.png'
+                    alt=''
+                    className='lazyload'
+                  />
+                </div>
+
+                <h5 className='lh-30 fw-6'>
+                  <Link href='/' className='title-service'>
+                    Enterprise Mobility
+                  </Link>
+                </h5>
+
+                <div className='desc lh-30'>
+                  We offer a comprehensive range of enterprise mobility
+                  solutions that can enhance the productivity, security, and
+                  scalability of your business processes. We always meet
+                  deadlines while developing quality apps.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img'>
+                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                  <img
+                    src='image/services-item/Blockchain.png'
+                    alt=''
+                    className='lazyload'
+                  />
+                </div>
+
+                <h5 className='lh-30 fw-6'>
+                  <Link href='/' className='title-service'>
+                    Blockchain
+                  </Link>
+                </h5>
+
+                <div className='desc lh-30'>
+                  Our Blockchain-based app solutions ensure the safety of your
+                  online, high-volume transactions. You can build trust and
+                  bring flexibility by providing your customers with a highly
+                  secure way of online transactions.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img'>
+                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                  <img
+                    src='image/services-item/DevOps.png'
+                    alt=''
+                    className='lazyload'
+                  />
+                </div>
+
+                <h5 className='lh-30 fw-6'>
+                  <Link href='/' className='title-service'>
+                    DevOps
+                  </Link>
+                </h5>
+
+                <div className='desc lh-30'>
+                  We integrate advancements from contemporary and emerging
+                  technologies to build customized and high-end enterprise
+                  software solutions. We serve our global corporate clientele
+                  with the best-in-class IT solutions.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img'>
+                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                  <img
+                    src='image/services-item/CloudComputing.png'
+                    alt=''
+                    className='lazyload'
+                  />
+                </div>
+
+                <h5 className='lh-30 fw-6'>
+                  <Link href='/' className='title-service'>
+                    Cloud Management Services
+                  </Link>
+                </h5>
+
+                <div className='desc lh-30'>
+                  We offer reliable cloud management services at reasonable
+                  rates. You can meet data storage and access needs effectively
+                  with our cloud-based solutions. Welcome to new opportunities
+                  and scope for expansion.
+                </div>
+              </div>
+
+              <div className='services-item px-lg-15 col-md-4 no-img'>
+                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                  <img
+                    src='image/services-item/IOT.png'
+                    alt=''
+                    className='lazyload'
+                  />
+                </div>
+
+                <h5 className='lh-30 fw-6'>
+                  <Link href='/' className='title-service'>
+                    Internet of Things (IoT)
+                  </Link>
+                </h5>
+
+                <div className='desc lh-30'>
+                  From smart homes to smart offices, IoT takes it all! We
+                  provide IoT app development services for individuals,
+                  healthcare and manufacturing sectors, and our corporate
+                  clients across the world at competitive rates.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* <div className='tf-container'>
+            <div className='list-services flex flex-wrap'>
               {Object.values(servicesData).map((item) => (
                 <div key={item.category} className='services-item px-lg-15 col-md-4 no-img'>
                   <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                    {/* icon intentionally omitted per requirement */}
                   </div>
 
                   <h5 className='lh-30 fw-6'>
@@ -185,7 +317,7 @@ export default function ServicesContent () {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </section>
 
         <div
@@ -199,7 +331,7 @@ export default function ServicesContent () {
                   <i className='icon-chat-2'></i>
                 </div>
                 <h5 className='fw-4 title'>
-                 Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
+                  Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
                   href='#'
@@ -253,10 +385,10 @@ export default function ServicesContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                          Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
+                            Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc lh-30 mb-0'>
-                           We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
+                            We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
                           </div>
                         </div>
                       </div>
@@ -288,11 +420,11 @@ export default function ServicesContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                          To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
+                            To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
                           </div>
 
                           <div className='desc lh-30 mb-0'>
-                           We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
+                            We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
                           </div>
                         </div>
                       </div>
@@ -324,7 +456,7 @@ export default function ServicesContent () {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                          InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
+                            InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
                           </div>
                         </div>
                       </div>
@@ -451,7 +583,7 @@ export default function ServicesContent () {
                     src='image/services-icon/apple.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -474,7 +606,7 @@ export default function ServicesContent () {
                     src='image/services-icon/android.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -497,7 +629,7 @@ export default function ServicesContent () {
                     src='image/services-icon/flutter.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -520,7 +652,7 @@ export default function ServicesContent () {
                     src='image/services-icon/react.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -543,7 +675,7 @@ export default function ServicesContent () {
                     src='image/services-icon/angular.png'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -563,10 +695,10 @@ export default function ServicesContent () {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/angular.png'
+                    src='image/services-icon/python.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -586,10 +718,10 @@ export default function ServicesContent () {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/angular.png'
+                    src='image/services-icon/nextjs.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -609,10 +741,10 @@ export default function ServicesContent () {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/angular.png'
+                    src='image/services-icon/laravel.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -635,7 +767,7 @@ export default function ServicesContent () {
                     src='image/services-icon/react.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -655,10 +787,10 @@ export default function ServicesContent () {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/node.svg'
+                    src='image/services-icon/nodejs.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -681,7 +813,7 @@ export default function ServicesContent () {
                     src='image/services-icon/php.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -701,10 +833,10 @@ export default function ServicesContent () {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/pwa.png'
+                    src='image/services-icon/aws.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -727,7 +859,7 @@ export default function ServicesContent () {
                     src='image/services-icon/IOT.png'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -750,7 +882,7 @@ export default function ServicesContent () {
                     src='image/services-icon/pwa.png'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -773,7 +905,7 @@ export default function ServicesContent () {
                     src='image/services-icon/digitalmarketing.svg'
                     alt=''
                     className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
