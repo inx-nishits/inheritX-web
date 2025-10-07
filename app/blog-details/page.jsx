@@ -1,3 +1,4 @@
+"use client";
 import PageTitle from '../components/PageTitle';
 
 export const dynamic = 'force-static';
