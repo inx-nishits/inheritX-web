@@ -1,10 +1,15 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const dynamic = 'force-static';
 
 export default function Page() {
+    const [blogData, setBlogData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const showSkeleton = loading || !blogData;
+
     useEffect(() => {
         // Add loadmore class to body to enable fl-item display
         document.body.classList.add('loadmore');
@@ -12,6 +17,30 @@ export default function Page() {
         // Cleanup function to remove the class when component unmounts
         return () => {
             document.body.classList.remove('loadmore');
+        };
+    }, []);
+
+    useEffect(() => {
+        let isMounted = true;
+        async function loadData() {
+            try {
+                const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog');
+                if (!res.ok) throw new Error('Failed to fetch blog data');
+                const json = await res.json();
+                if (isMounted) {
+                    setBlogData(json);
+                    setLoading(false);
+                }
+            } catch (err) {
+                if (isMounted) {
+                    setError(err.message || 'Error loading blogs');
+                    setLoading(false);
+                }
+            }
+        }
+        loadData();
+        return () => {
+            isMounted = false;
         };
     }, []);
 
@@ -388,6 +417,58 @@ export default function Page() {
         .tf-sidebar.sidebar-filter .sidebar-item {
           overflow: hidden !important;
         }
+
+        /* Skeleton styles */
+        .skeleton {
+          position: relative;
+          overflow: hidden;
+          background: #2a2a2a;
+        }
+        .skeleton::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -150px;
+          height: 100%;
+          width: 150px;
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+          animation: shimmer 1.2s infinite;
+        }
+        @keyframes shimmer {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(300%); }
+        }
+        .skeleton-image {
+          display: block;
+          width: 100%;
+          height: 220px;
+          border-radius: 8px;
+        }
+        .skeleton-text {
+          height: 16px;
+          width: 80%;
+          border-radius: 4px;
+          background: #2a2a2a;
+        }
+        .skeleton-text.short { width: 40%; }
+        .skeleton-avatar {
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background: #2a2a2a;
+        }
+        .skeleton-cat {
+          height: 14px;
+          width: 60%;
+          border-radius: 4px;
+          background: #2a2a2a;
+        }
+          .skeleton-count {
+  width: 30px;     
+  height: 30px;     
+  border-radius: 9999px;  
+  background: #2a2a2a;
+}
       `}</style>
             {/* <!-- Page-title --> */}
 
@@ -419,241 +500,90 @@ export default function Page() {
                             <div className="col-xl-8">
 
                                 <div className="tf-grid-2 loadmore-item">
-                                    {/* Added from Home page: Flutter Widgets article */}
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="/blog/top-15-flutter-widgets-for-app-development" className="image">
-                                                    <img src="image/home/Flutter-App-Development.jpg" data-src="image/home/Flutter-App-Development.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="/blog/top-15-flutter-widgets-for-app-development" className="line-clamp-3">
-                                                            Top 15 Flutter Widgets Are Best To Use for App Development
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
+                                    {error && !showSkeleton && (
+                                        <div className="fl-item">
+                                            <div className="tf-post-grid hover-image ">
+                                                <div className="top">
+                                                    <div className="post-content px-md-15">
+                                                        <h6 className="title lh-32">{error}</h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    )}
 
-                                    {/* Added from Home page: Why businesses prefer Flutter */}
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="/blog/why-businesses-prefer-flutter-app-development" className="image">
-                                                    <img src="image/home/app-development-services.jpg" data-src="image/home/app-development-services.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="/blog/why-businesses-prefer-flutter-app-development" className="line-clamp-3">
-                                                            Why Modern Businesses Prefer Flutter Application Development Services
-                                                        </a>
-                                                    </h6>
+                                    {blogData?.singleBlog?.slice(0, 1).map((post) => (
+                                        <div className="fl-item" key={`single-${post.id}`}>
+                                            <div className="tf-post-grid hover-image ">
+                                                <div className="top">
+                                                    <a href={`/blog/${post.slug}`} className="image">
+                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className=" ls-is-cached lazyloaded" />
+                                                    </a>
+                                                    <div className="post-content px-md-15">
+                                                        <h6 className="title lh-32">
+                                                            <a href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</a>
+                                                        </h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
+                                                <div className="bottom-item px-md-15">
+                                                    <div className="author-info">
+                                                        <i className="icon-user user-icon"></i>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="fl-item">
+                                    ))}
 
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-1.jpg" data-src="image/blog/blog-grid-1.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
-                                                        </a>
-                                                    </h6>
+                                    {blogData?.recentBlog?.map((post) => (
+                                        <div className="fl-item" key={`recent-${post.id}`}>
+                                            <div className="tf-post-grid hover-image ">
+                                                <div className="top">
+                                                    <a href={`/blog/${post.slug}`} className="image">
+                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className=" ls-is-cached lazyloaded" />
+                                                    </a>
+                                                    <div className="post-content px-md-15">
+                                                        <h6 className="title lh-32">
+                                                            <a href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</a>
+                                                        </h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
+                                                <div className="bottom-item px-md-15">
+                                                    <div className="author-info">
+                                                        <i className="icon-user user-icon"></i>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="fl-item">
+                                    ))}
 
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-5.jpg" data-src="image/blog/blog-grid-5.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                                                        </a>
-                                                    </h6>
+                                    {showSkeleton && (
+                                        <>
+                                            {Array.from({ length: 8 }).map((_, idx) => (
+                                                <div className="fl-item" key={`skeleton-${idx}`}>
+                                                    <div className="tf-post-grid hover-image ">
+                                                        <div className="top">
+                                                            <a className="image skeleton">
+                                                                <div className="skeleton-image"></div>
+                                                            </a>
+                                                            <div className="post-content px-md-15">
+                                                                <h6 className="title lh-32">
+                                                                    <span className="skeleton skeleton-text"></span>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                        <div className="bottom-item px-md-15">
+                                                            <div className="author-info">
+                                                                <span className="skeleton-avatar skeleton"></span>
+                                                                <span className="skeleton skeleton-text short" style={{ marginLeft: 8 }}></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-2.jpg" data-src="image/blog/blog-grid-2.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-6.jpg" data-src="image/blog/blog-grid-6.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-3.jpg" data-src="image/blog/blog-grid-3.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-4.jpg" data-src="image/blog/blog-grid-4.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-7.jpg" data-src="image/blog/blog-grid-7.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="fl-item">
-
-                                        <div className="tf-post-grid hover-image ">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-8.jpg" data-src="image/blog/blog-grid-8.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                            ))}
+                                        </>
+                                    )}
                                 </div>
                             </div>
 
@@ -665,60 +595,28 @@ export default function Page() {
                                             Category
                                         </h5>
                                         <ul className="list">
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Amazon Web Technology</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Android Application Development</a>
-                                                <span className="category-count">6</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Angular Application Development</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Angular JS Development</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">App Store Optimization</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Database</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">DevOps</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Digital Marketing</a>
-                                                <span className="category-count">3</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Firebase Web Technology</a>
-                                                <span className="category-count">1</span>
-                                            </li>
-                                            <li className="item">
-                                                <i className="icon-arrow-right"></i>
-                                                <a href="#" className="body-2 fw-5">Flutter Application Development</a>
-                                                <span className="category-count">16</span>
-                                            </li>
+                                            {(blogData?.categories || []).map((cat) => (
+                                                <li className="item" key={cat.id}>
+                                                    <i className="icon-arrow-right"></i>
+                                                    <a href="#" className="body-2 fw-5">{cat.name}</a>
+                                                    <span className="category-count">{cat.count}</span>
+                                                </li>
+                                            ))}
+                                            {showSkeleton && (!blogData?.categories || blogData?.categories?.length === 0) && (
+                                                <>
+                                                    {Array.from({ length: 8 }).map((_, idx) => (
+                                                        <li className="item" key={`cat-skeleton-${idx}`}>
+                                                            <i className="icon-arrow-right"></i>
+                                                            <span className="skeleton skeleton-cat"></span>
+                                                            <span className="skeleton skeleton-count"></span>
+                                                        </li>
+                                                    ))}
+                                                </>
+                                            )}
                                         </ul>
                                     </div>
 
-                                    
+
 
                                 </div>
                             </div>
@@ -760,116 +658,52 @@ export default function Page() {
                             }'
                             >
                                 <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-1.jpg" data-src="image/blog/blog-grid-1.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
-                                                        </a>
-                                                    </h6>
+                                    {(blogData?.popularPost || []).map((post) => (
+                                        <div className="swiper-slide" key={`popular-${post.id}`}>
+                                            <div className="tf-post-grid hover-image">
+                                                <div className="top">
+                                                    <a href={`/blog/${post.slug}`} className="image">
+                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className="ls-is-cached lazyloaded" />
+                                                    </a>
+                                                    <div className="post-content px-md-15">
+                                                        <h6 className="title lh-32">
+                                                            <a href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</a>
+                                                        </h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-5.jpg" data-src="image/blog/blog-grid-5.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
+                                                <div className="bottom-item px-md-15">
+                                                    <div className="author-info">
+                                                        <i className="icon-user user-icon"></i>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-2.jpg" data-src="image/blog/blog-grid-2.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
+                                    ))}
+                                    {showSkeleton && (
+                                        Array.from({ length: 5 }).map((_, idx) => (
+                                            <div className="swiper-slide" key={`popular-skeleton-${idx}`}>
+                                                <div className="tf-post-grid hover-image">
+                                                    <div className="top">
+                                                        <a className="image skeleton">
+                                                            <div className="skeleton-image"></div>
                                                         </a>
-                                                    </h6>
+                                                        <div className="post-content px-md-15">
+                                                            <h6 className="title lh-32">
+                                                                <span className="skeleton skeleton-text"></span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div className="bottom-item px-md-15">
+                                                        <div className="author-info">
+                                                            <span className="skeleton-avatar skeleton"></span>
+                                                            <span className="skeleton skeleton-text short" style={{ marginLeft: 8 }}></span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-6.jpg" data-src="image/blog/blog-grid-6.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-3.jpg" data-src="image/blog/blog-grid-3.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Tips For Conducting to Usability Studies With Participants
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        ))
+                                    )}
                                 </div>
                                 <div className="swiper-pagination sw-pagination-popular"></div>
                             </div>
@@ -910,116 +744,52 @@ export default function Page() {
                             }'
                             >
                                 <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-1.jpg" data-src="image/blog/blog-grid-1.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            AI Revolution: How Machine Learning is Transforming Business
-                                                        </a>
-                                                    </h6>
+                                    {(blogData?.trendingPost || []).map((post) => (
+                                        <div className="swiper-slide" key={`trending-${post.id}`}>
+                                            <div className="tf-post-grid hover-image">
+                                                <div className="top">
+                                                    <a href={`/blog/${post.slug}`} className="image">
+                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className="ls-is-cached lazyloaded" />
+                                                    </a>
+                                                    <div className="post-content px-md-15">
+                                                        <h6 className="title lh-32">
+                                                            <a href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</a>
+                                                        </h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-5.jpg" data-src="image/blog/blog-grid-5.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Cloud Computing Trends: The Future of Scalable Infrastructure
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
+                                                <div className="bottom-item px-md-15">
+                                                    <div className="author-info">
+                                                        <i className="icon-user user-icon"></i>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-2.jpg" data-src="image/blog/blog-grid-2.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Mobile App Development: React Native vs Flutter in 2025
+                                    ))}
+                                    {showSkeleton && (
+                                        Array.from({ length: 5 }).map((_, idx) => (
+                                            <div className="swiper-slide" key={`trending-skeleton-${idx}`}>
+                                                <div className="tf-post-grid hover-image">
+                                                    <div className="top">
+                                                        <a className="image skeleton">
+                                                            <div className="skeleton-image"></div>
                                                         </a>
-                                                    </h6>
+                                                        <div className="post-content px-md-15">
+                                                            <h6 className="title lh-32">
+                                                                <span className="skeleton skeleton-text"></span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div className="bottom-item px-md-15">
+                                                        <div className="author-info">
+                                                            <span className="skeleton-avatar skeleton"></span>
+                                                            <span className="skeleton skeleton-text short" style={{ marginLeft: 8 }}></span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-6.jpg" data-src="image/blog/blog-grid-6.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Cybersecurity Best Practices for Modern Web Applications
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="tf-post-grid hover-image">
-                                            <div className="top">
-                                                <a href="blog-details.html" className="image">
-                                                    <img src="image/blog/blog-grid-3.jpg" data-src="image/blog/blog-grid-3.jpg" alt="" className="ls-is-cached lazyloaded" />
-                                                </a>
-                                                <div className="post-content px-md-15">
-                                                    <h6 className="title lh-32">
-                                                        <a href="blog-details.html" className="line-clamp-3">
-                                                            Blockchain Technology: Beyond Cryptocurrency Applications
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div className="bottom-item px-md-15">
-                                                <div className="author-info">
-                                                    <i className="icon-user user-icon"></i>
-                                                    <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        ))
+                                    )}
                                 </div>
                                 <div className="swiper-pagination sw-pagination-trending"></div>
                             </div>

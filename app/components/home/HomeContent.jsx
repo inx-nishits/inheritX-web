@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 import dynamic from 'next/dynamic'
 const ContactForm = dynamic(() => import('../../components/ContactForm'), { ssr: false })
 import { useEffect } from 'react';

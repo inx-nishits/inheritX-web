@@ -1,33 +1,43 @@
 'use client';
 
 import PageTitle from '../../components/PageTitle';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 export const dynamic = 'force-static';
 
-const POSTS = [
-  {
-    slug: 'top-15-flutter-widgets-for-app-development',
-    title: 'Top 15 Flutter Widgets Are Best To Use for App Development',
-    hero: '/image/home/Flutter-App-Development.jpg',
-    tags: ['Flutter', 'Widgets', 'App Development'],
-    author: 'InheritX',
-    publishedOn: 'December 12, 2024',
-  },
-  {
-    slug: 'why-businesses-prefer-flutter-app-development',
-    title: 'Why Modern Businesses Prefer Flutter Application Development Services',
-    hero: '/image/home/app-development-services.jpg',
-    tags: ['Flutter', 'Business', 'Mobile'],
-    author: 'InheritX',
-    publishedOn: 'December 18, 2024',
-  },
-];
-
 export default function Page({ params }) {
   const { slug } = params || {};
+  const [details, setDetails] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const showSkeleton = loading || !details;
 
-  const post = useMemo(() => POSTS.find(p => p.slug === slug), [slug]);
+  useEffect(() => {
+    let isMounted = true;
+    async function loadDetails() {
+      try {
+        if (!slug) return;
+        const res = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
+        if (!res.ok) throw new Error('Failed to fetch blog details');
+        const json = await res.json();
+        if (isMounted) {
+          setDetails(json || null);
+          setLoading(false);
+        }
+      } catch (e) {
+        if (isMounted) {
+          setError(e?.message || 'Error loading blog');
+          setLoading(false);
+        }
+      }
+    }
+    loadDetails();
+    return () => { isMounted = false; };
+  }, [slug]);
+
+  const bloginfo = details?.bloginfo || null;
+  const title = bloginfo?.title ;
+  const hero = bloginfo?.feature_image || '/image/blog/img-blog-details-1.jpg';
 
   return (
     <main>
@@ -63,8 +73,45 @@ export default function Page({ params }) {
             height: auto !important;
           }
         }
+
+        /* Skeleton styles (dark theme) */
+        .skeleton {
+          position: relative;
+          overflow: hidden;
+          background: #2a2a2a;
+        }
+        .skeleton::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -150px;
+          height: 100%;
+          width: 150px;
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+          animation: shimmer 1.2s infinite;
+        }
+        @keyframes shimmer {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(300%); }
+        }
+        .skeleton-image { width: 100%; height: 360px; border-radius: 12px; }
+        .skeleton-text { height: 18px; width: 80%; border-radius: 6px; background: #2a2a2a; display: inline-block; }
+        .skeleton-text.short { width: 35%; }
+        .skeleton-text.medium { width: 55%; }
+        .skeleton-line { height: 14px; width: 100%; border-radius: 6px; background: #2a2a2a; margin: 10px 0; }
+        .skeleton-title { height: 36px; width: 100%; border-radius: 8px; }
+        .skeleton-post-title { height: 28px; width: 100%; border-radius: 8px; }
+        .skeleton-meta { height: 16px; width: 30%; border-radius: 6px; }
       `}</style>
-      <PageTitle title={post?.title || 'Blog Details'} className="mb-0" />
+      {showSkeleton ? (
+        <div className="tf-container">
+          <div className="p-3">
+            <div className="skeleton skeleton-title"></div>
+          </div>
+        </div>
+      ) : (
+        <PageTitle title={title} className="mb-0" />
+      )}
       <div className="main-content tf-spacing-2">
         <div className="tf-container">
           <div className="row rg-30">
@@ -72,15 +119,44 @@ export default function Page({ params }) {
               <div className="wg-details wg-blog-details">
                 <div className="details-content p-3">
                   <div className="image img-details mb-15 radius-12 overflow-hidden shadow-soft p-0">
-                    <img src={post?.hero || '/image/blog/img-blog-details-1.jpg'} alt={post?.title || 'Blog cover'} />
+                    {showSkeleton ? (
+                      <div className="skeleton skeleton-image"></div>
+                    ) : (
+                      <img src={hero} alt={title || 'Blog cover'} />
+                    )}
                   </div>
                   <div className='p-4'>
-                    <h1 className="fs-32 fw-7 lh-42 mb-4">{post?.title || 'Blog Details'}</h1>
-                    <div className="flex align-items-center g-10 text-medium muted">
-                      <span className="badge-soft-primary">{post?.tags?.[0] || 'Blog'}</span>
-                      <span className="dot"></span>
-                      <span>{post?.publishedOn || ''}</span>
-                    </div>
+                    {showSkeleton ? (
+                      <>
+                        <div className="flex align-items-center g-10 text-medium muted mt-10">
+                          <span className="skeleton skeleton-meta"></span>
+                          <span className="skeleton skeleton-meta" style={{ marginLeft: 12 }}></span>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <h1 className="fs-32 fw-7 lh-42 mb-4">{title}</h1>
+                        <div className="flex align-items-center g-10 text-medium muted">
+                          <span className="badge-soft-primary">{bloginfo?.category?.[0]?.name || 'Blog'}</span>
+                          {bloginfo?.author && (<><span className="dot"></span><span>{bloginfo.author}</span></>)}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                  <div className='p-4 pt-0'>
+                    {!showSkeleton && !error && bloginfo?.content && (
+                      <div className="rich-content" dangerouslySetInnerHTML={{ __html: bloginfo.content }} />
+                    )}
+                    {showSkeleton && (
+                      <div>
+                        {Array.from({ length: 8 }).map((_, i) => (
+                          <div className="skeleton-line skeleton" key={`line-${i}`}></div>
+                        ))}
+                      </div>
+                    )}
+                    {error && !showSkeleton && (
+                      <div className="rich-content"><p>{error}</p></div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -93,56 +169,20 @@ export default function Page({ params }) {
                     Category
                   </h5>
                   <ul className="list">
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Amazon Web Technology</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Android Application Development</a>
-                      <span className="category-count">6</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Angular Application Development</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Angular JS Development</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">App Store Optimization</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Database</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">DevOps</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Digital Marketing</a>
-                      <span className="category-count">3</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Firebase Web Technology</a>
-                      <span className="category-count">1</span>
-                    </li>
-                    <li className="item">
-                      <i className="icon-arrow-right"></i>
-                      <a href="#" className="body-2 fw-5">Flutter Application Development</a>
-                      <span className="category-count">16</span>
-                    </li>
+                    {!showSkeleton && (details?.categories || []).map((cat) => (
+                      <li className="item" key={cat.id}>
+                        <i className="icon-arrow-right"></i>
+                        <a href="#" className="body-2 fw-5">{cat.name}</a>
+                        {/* <span className="category-count">{cat.count}</span> */}
+                      </li>
+                    ))}
+                    {showSkeleton && (
+                      Array.from({ length: 8 }).map((_, i) => (
+                        <li className="item" key={`cat-skel-${i}`}>
+                          <span className="skeleton skeleton-text medium" style={{ display: 'block' }}></span>
+                        </li>
+                      ))
+                    )}
                   </ul>
                 </div>
 
