@@ -2834,7 +2834,7 @@ fieldset {
   object-fit: cover;
 }
 .tf-post-grid .post-content {
-  padding: 38.5px 50px 31px;
+  padding: 24px;
 }
 .tf-post-grid .post-content .title {
   font-family: "DM Sans", sans-serif;
@@ -4047,7 +4047,7 @@ a.mapboxgl-ctrl-logo {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  height: 282px;
+  height: 184px;
 }
 .hover-image .image:after {
   content: "";
@@ -4690,7 +4690,7 @@ a.mapboxgl-ctrl-logo {
   background-color: transparent;
 }
 .project-item.project-gird-item .image {
-  margin: 0 0 38px !important;
+  margin: 0 0 24px !important;
   position: relative;
 }
 .project-item.project-gird-item .image::after {
@@ -6656,3 +6656,7 @@ color: var(--primary) !important;
 
 /* Global: ensure phone icon points to the right everywhere */
 .icon-phone{display:inline-block;transform:scaleX(-1);transform-origin:center}
+
+.swiper-pagination-bullet-active {
+  background: #00C5DE !important;
+}

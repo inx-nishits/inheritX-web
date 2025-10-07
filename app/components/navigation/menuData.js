@@ -72,29 +72,29 @@ const menuData = [
       {
         title: 'Mobile App Development',
         items: [
-          { label: 'Hire iPhone Developer', href: '/hire/iphone-developer' },
-          { label: 'Hire Android Developer', href: '/hire/android-developer' },
-          { label: 'Hire React Native Developer', href: '/hire/react-native-developer' },
-          { label: 'Hire Flutter Developer', href: '/hire/flutter-developer' },
-          { label: 'Hire Phonegap Developer', href: '/hire/phonegap-developer' }
+          { label: 'Hire iPhone Developer', href: '/hire-experts/iphone-developer' },
+          { label: 'Hire Android Developer', href: '/hire-experts/android-developer' },
+          { label: 'Hire React Native Developer', href: '/hire-experts/react-native-developer' },
+          { label: 'Hire Flutter Developer', href: '/hire-experts/flutter-developer' },
+          { label: 'Hire Phonegap Developer', href: '/hire-experts/phonegap-developer' }
         ]
       },
       {
         title: 'Web Development',
         items: [
-          { label: 'Hire AngularJS Developer', href: '/hire/angularjs-developer' },
-          { label: 'Hire ReactJS Developer', href: '/hire/reactjs-developer' },
-          { label: 'Hire Node.js Developer', href: '/hire/nodejs-developer' },
-          { label: 'Hire PHP Developer', href: '/hire/php-developer' },
-          { label: 'Hire Laravel Developer', href: '/hire/laravel-developer' }
+          { label: 'Hire AngularJS Developer', href: '/hire-experts/angularjs-developer' },
+          { label: 'Hire ReactJS Developer', href: '/hire-experts/reactjs-developer' },
+          { label: 'Hire Node.js Developer', href: '/hire-experts/nodejs-developer' },
+          { label: 'Hire PHP Developer', href: '/hire-experts/php-developer' },
+          { label: 'Hire Laravel Developer', href: '/hire-experts/laravel-developer' }
         ]
       },
       {
         title: 'Other Technologies',
         items: [
-          { label: 'Hire Python Developer', href: '/hire/python-developer' },
-          { label: 'Hire WordPress Developer', href: '/hire/wordpress-developer' },
-          { label: 'Hire ASP Developer', href: '/hire/asp-developer' }
+          { label: 'Hire Python Developer', href: '/hire-experts/python-developer' },
+          { label: 'Hire WordPress Developer', href: '/hire-experts/wordpress-developer' },
+          { label: 'Hire ASP Developer', href: '/hire-experts/asp-developer' }
         ]
       }
     ]

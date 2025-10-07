@@ -102,7 +102,7 @@ export default function Header() {
 
           <div className='header-right'>
             <div className='nav-btn'>
-              <Link href='/pricing' className='tf-btn px-4'>
+              <Link href='/contact' className='tf-btn px-4'>
                 <span>Get A Quote</span>
                 <i className='icon-arrow-right'></i>
               </Link>

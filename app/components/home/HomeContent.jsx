@@ -1,4 +1,6 @@
-'use client';
+ 'use client';
+import dynamic from 'next/dynamic'
+const ContactForm = dynamic(() => import('../../components/ContactForm'), { ssr: false })
 import { useEffect } from 'react';
 
 import Link from 'next/link'
@@ -248,7 +250,7 @@ export default function HomeContent() {
                   </div>
                 </div>
 
-                <Link href='/services' className='tf-btn'>
+                <Link href='/contact' className='tf-btn'>
                   <span>Click for Free Consultancy</span>
                   <i className='icon-arrow-right'></i>
                 </Link>
@@ -474,7 +476,7 @@ export default function HomeContent() {
                   </div>
                   <h2 className='title fw-6 title-animation'>
                     Premier Tech Innovations
-                    <span className='fw-3'>InheritX Software Agency</span>
+                    <span className='fw-3'>&nbsp;InheritX Software Agency</span>
                   </h2>
                 </div>
                 <div className='wg-counter flex g-30'>
@@ -969,7 +971,7 @@ export default function HomeContent() {
                   Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
-                  href='#'
+                  href='/contact'
                   className='tf-btn no-bg text-underline hover-color-main-dark'
                 >
                   <span>Let's Talk</span>
@@ -1039,10 +1041,13 @@ export default function HomeContent() {
               <div className='col-lg-9'>
                 <div
                   className='swiper tf-swiper sw-team sw-border'
+                  style={{ cursor: 'default' }}
                   data-swiper='{
                                 "slidesPerView": 1,
                                 "spaceBetween": 30,
                                 "speed": 800,
+                                "allowTouchMove": false,
+                                "grabCursor": false,
                                 "pagination": { "el": ".sw-pagination-team", "clickable": true },
                                 "navigation": {
                                     "clickable": true,
@@ -1059,21 +1064,18 @@ export default function HomeContent() {
                     <div className='swiper-slide'>
                       <div className='team-item hover-image rounded-3 overflow-hidden'>
                         <div className='top-item'>
-                          <Link
-                            href='/team'
-                            className='image  rounded-3 overflow-hidden'
-                          >
+                          <div className='image  rounded-3 overflow-hidden'>
                             <img
                               src='image/home/ceo-sandip-modi.png'
                               data-src='image/home/ceo-sandip-modi.png'
                               alt=''
                               className='lazyload rounded-3 overflow-hidden'
                             />
-                          </Link>
+                          </div>
                         </div>
                         <div className='item-content'>
                           <h6 className='title'>
-                            <Link href='/team'>Sandip Modi</Link>
+                            <span>Sandip Modi</span>
                           </h6>
                           <p className='sub-title'>CEO</p>
                         </div>
@@ -1083,21 +1085,18 @@ export default function HomeContent() {
                     <div className='swiper-slide'>
                       <div className='team-item hover-image rounded-3 overflow-hidden'>
                         <div className='top-item'>
-                          <Link
-                            href='/team'
-                            className='image  rounded-3 overflow-hidden'
-                          >
+                          <div className='image  rounded-3 overflow-hidden'>
                             <img
                               src='image/home/aiyub_munshi_profile.jpg'
                               data-src='image/home/aiyub_munshi_profile.jpg'
                               alt=''
                               className='lazyload rounded-3 overflow-hidden'
                             />
-                          </Link>
+                          </div>
                         </div>
                         <div className='item-content'>
                           <h6 className='title'>
-                            <Link href='/team'>Aiyub Munshi</Link>
+                            <span>Aiyub Munshi</span>
                           </h6>
                           <p className='sub-title'>Project Manager</p>
                         </div>
@@ -1107,21 +1106,18 @@ export default function HomeContent() {
                     <div className='swiper-slide'>
                       <div className='team-item hover-image rounded-3 overflow-hidden'>
                         <div className='top-item'>
-                          <Link
-                            href='/team'
-                            className='image  rounded-3 overflow-hidden'
-                          >
+                          <div className='image  rounded-3 overflow-hidden'>
                             <img
                               src='image/home/HrManager.jpg'
                               data-src='image/home/HrManager.jpg'
                               alt=''
                               className='lazyload rounded-3 overflow-hidden'
                             />
-                          </Link>
+                          </div>
                         </div>
                         <div className='item-content'>
                           <h6 className='title'>
-                            <Link href='/team'>Meera Tank</Link>
+                            <span>Meera Tank</span>
                           </h6>
                           <p className='sub-title'>HR Manager</p>
                         </div>
@@ -1372,12 +1368,12 @@ export default function HomeContent() {
                           Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='/#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Edward
-                          </Link>
-                          <Link href='/#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             CEO
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1391,12 +1387,12 @@ export default function HomeContent() {
                           InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='/#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Badri
-                          </Link>
-                          <Link href='/#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Manager
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1410,12 +1406,12 @@ export default function HomeContent() {
                           InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='/#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Saady
-                          </Link>
-                          <Link href='/#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Developer
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1429,12 +1425,12 @@ export default function HomeContent() {
                           InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='/#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Simon
-                          </Link>
-                          <Link href='/#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Developer
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1448,10 +1444,10 @@ export default function HomeContent() {
                           The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='/#' className='name-user body-2 '>
+                          <Link href='javascript:void(0)' className='name-user body-2 '>
                             Dorain
                           </Link>
-                          <Link href='/#' className='position text-medium'>
+                          <Link href='javascript:void(0)' className='position text-medium'>
                             Developer
                           </Link>
                         </div>
@@ -1517,7 +1513,7 @@ export default function HomeContent() {
                 <h2 className='title fw-6'>
                   Let’s work on your next projects.
                 </h2>
-                <Link href='/#'
+                <Link href='/contact'
                   className='tf-btn style-bg-white hover-bg-main-dark'
                 >
                   <span>Contact Us</span>
@@ -1526,126 +1522,7 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='right'>
-              <form
-                id='contactform'
-                className='form-contact-us px-md-15 rounded-3 overflow-hidden'
-                method='post'
-                action=''
-              >
-                <div className='heading-form text-center'>
-                  <h3 className='title'>Need Help For Project!</h3>
-
-                  <div className='desc lh-30'>
-                    We are ready to help with your next projects. Let’s work together.
-                  </div>
-                </div>
-
-                <div className='cols mb-20 g-20'>
-                  <fieldset className='item'>
-                    <input
-                      type='text'
-                      name='name'
-                      id='name'
-                      placeholder='Name'
-                      required
-                    />
-                    <i className='icon-user'></i>
-                  </fieldset>
-
-                  <fieldset className='item'>
-                    <input
-                      type='email'
-                      name='mail'
-                      id='mail'
-                      placeholder='Email'
-                      required
-                    />
-                    <i className='icon-email'></i>
-                  </fieldset>
-                </div>
-
-                <div className='cols mb-20 g-20'>
-                  <fieldset className='item'>
-                    <input
-                      type='text'
-                      name='name'
-                      id='country'
-                      placeholder='Country'
-                      required
-                    />
-                    <i className='icon'>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='18'
-                        height='18'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      >
-                        <circle cx='12' cy='12' r='10' />
-                        <line x1='2' y1='12' x2='22' y2='12' />
-                        <path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z' />
-                      </svg>
-                    </i>
-                  </fieldset>
-
-                  <fieldset className='item'>
-                    <input
-                      type='text'
-                      name='phone'
-                      id='phone'
-                      placeholder='Phone'
-                      required
-                    />
-                    <i className='icon-phone'></i>
-                  </fieldset>
-                </div>
-
-                <div className='cols mb-20 g-20'>
-                  <fieldset className='item'>
-                    <input
-                      type='text'
-                      name='Project Type'
-                      id='projectType'
-                      placeholder='Project Type'
-                      required
-                    />
-                  </fieldset>
-                </div>
-
-                <div className='cols mb-20 g-20'>
-                  <div className='nice-select mb-0'>
-                    <span className='current caption-1'>
-                      Select Your Budget
-                    </span>
-                    <ul className='list'>
-                      <li className='option option-all selected focus'>
-                        Choose Budget
-                      </li>
-                      <li className='option'>Below $5000</li>
-                      <li className='option'>$5000 - $25,000</li>
-                      <li className='option'>Augmented Reality</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <fieldset className='mb-20'>
-                  <textarea
-                    name='message'
-                    id='message'
-                    placeholder='Brief Your Details*'
-                    required
-                  />
-                </fieldset>
-
-                <button type='submit' className='tf-btn mx-auto'>
-                  <span>Schedule a free Consultation</span>
-                  <i className='icon-arrow-right'></i>
-                </button>
-              </form>
+              <ContactForm className='form-contact-us px-md-15 rounded-3 overflow-hidden' description={'We are ready to help with your next projects. Let\u2019s work together.'} />
             </div>
           </div>
         </section>
@@ -2058,146 +1935,7 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section className='section-blog tf-spacing-2'>
-          <div className='mask mask-1'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='700'
-              height='700'
-              fill='none'
-            >
-              <circle
-                cx='350'
-                cy='350'
-                r='285'
-                stroke='url(#a5)'
-                strokeWidth='130'
-              />
-              <defs>
-                <linearGradient
-                  id='a5'
-                  x1='154'
-                  x2='497.875'
-                  y1='61.688'
-                  y2='589.75'
-                >
-                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
-                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className='tf-container'>
-            <div className='heading-section mb-60 text-center'>
-              <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                Latest News & Blog
-              </div>
-              <h2 className='title fw-6 title-animation'>
-                Read Our Latest&nbsp;
-                <span className='fw-3'>News & Blog</span>
-              </h2>
-            </div>
-          </div>
-          <div className='tf-container'>
-            <div className='row rg-30'>
-              <div className='col-lg-6'>
-                <div className='tf-post-list style-2 hover-image h-100 overflow-hidden flex-column justify-content-start'>
-                  <Link href='/#'
-                    className='image  overflow-hidden'
-                  >
-                    <img
-                      src='image/home/Flutter-App-Development.jpg'
-                      data-src='image/home/Flutter-App-Development.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </Link>
-                  <div className='post-content'>
-                    <div className='top-post'>
-                      <div className='post-meta'>
-                        <Link href='/blog-details' className='text-medium'>
-                          Sandip Modi,
-                          <br />
-                          <span className='text-primary'>
-                            in Flutter Application Development
-                          </span>
-                        </Link>
-                      </div>
-                      <h5 className='title fw-5'>
-                        <Link href='/blog-details'>
-                          Top 15 Flutter Widgets Are Best To Use for App
-                          Development
-                        </Link>
-                      </h5>
-                    </div>
-                    <div className='bottom-post'>
-                      <div className='desc lh-30'>
-                        Google’s Flutter framework has many features that enable developers to build robust and user-friendly apps with a native-like experience.
-                      </div>
-                      <a
-                        href='/blog-details'
-                        className='tf-btn-readmore style-open'
-                      >
-                        <span className='plus'>+</span>
-                        <span className='text'>Read More</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className='col-lg-6'>
-                <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column'>
-                  <Link href='/#'
-                    className='image  overflow-hidden'
-                  >
-                    <img
-                      src='image/home/app-development-services.jpg'
-                      data-src='image/home/app-development-services.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </Link>
-                  <div className='post-content'>
-                    <div className='top-post'>
-                      <div className='post-meta'>
-                        <Link href='/blog-details' className='text-medium'>
-                          Sandip Modi,
-                          <br />
-                          <span className='text-primary'>
-                            in Flutter Application Development
-                          </span>
-                        </Link>
-                      </div>
-                      <h5 className='title fw-5'>
-                        <Link href='/blog-details'>
-                          Why Modern Businesses Prefer Flutter Application
-                          Development Services
-                        </Link>
-                      </h5>
-                    </div>
-                    <div className='bottom-post'>
-                      <div className='desc lh-30'>
-                        Every visionary entrepreneur like you accepts the
-                        importance of having a cross-platform business app.
-                        However, as technology evolves rapidly, you may find it
-                        difficult to choose the right development platform for
-                        building such an app.
-                      </div>
-                      <a
-                        href='/blog-details'
-                        className='tf-btn-readmore style-open'
-                      >
-                        <span className='plus'>+</span>
-                        <span className='text'>Read More</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Blog teaser section removed as requested */}
 
         <section className='section-about tf-spacing-2'>
           <div className='tf-container text-center mb-5'>

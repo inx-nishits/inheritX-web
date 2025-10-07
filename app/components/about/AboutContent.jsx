@@ -1,10 +1,64 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Breadcrumbs from '../Breadcrumbs'
 
 export default function AboutContent() {
+  const journeyRef = useRef(null)
+  const journeyHeadingRef = useRef(null)
+
+  useEffect(() => {
+    const container = journeyRef.current
+    if (!container || typeof window === 'undefined') return
+
+    const cardNodes = Array.from(
+      container.querySelectorAll('[data-journey-card]')
+    )
+    const yearNodes = Array.from(
+      container.querySelectorAll('[data-journey-year]')
+    )
+
+    const animate = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target
+          el.classList.add('is-visible')
+          observer.unobserve(el)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(animate, {
+      root: null,
+      threshold: 0.2
+    })
+
+    // Stagger cards
+    cardNodes.forEach((el, index) => {
+      el.style.setProperty('--stagger-index', String(index))
+      observer.observe(el)
+    })
+
+    // Observe year labels for pulse effect
+    yearNodes.forEach((el) => observer.observe(el))
+
+    // Heading underline animation
+    const headingEl = journeyHeadingRef.current
+    if (headingEl) {
+      const headingObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            headingEl.classList.add('in-view')
+            headingObserver.unobserve(headingEl)
+          }
+        })
+      }, { threshold: 0.1 })
+      headingObserver.observe(headingEl)
+    }
+
+    return () => observer.disconnect()
+  }, [])
   return (
     <>
       <div className='page-title'>
@@ -172,8 +226,8 @@ export default function AboutContent() {
                 </div>
               </div>
               <div className='right'>
-                <div className='heading-section mb-30'>
-                  <div className='sub-title fs-1 fw-7 mb-17 title-animation'>
+                <div className='heading-section mb-30' ref={journeyHeadingRef}>
+                  <div className='sub-title fs-1 fw-7 mb-30 title-animation'>
                     Our Exciting Journey So Far
                   </div>
                 </div>
@@ -188,12 +242,12 @@ export default function AboutContent() {
             </div>
           </div>
 
-          <div className='tf-container'>
+          <div className='container' ref={journeyRef}>
             <div className='row'>
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2011
                     </span>
                     Birth of InheritX
@@ -205,9 +259,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2012
                     </span>
                     Steady Growth
@@ -221,9 +275,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2013
                     </span>
                     Expansion Phase
@@ -235,9 +289,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2014
                     </span>
                     International Presence
@@ -250,9 +304,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2015
                     </span>
                     Gaining Recognition
@@ -266,9 +320,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2016
                     </span>
                     Milestone Achieved
@@ -281,9 +335,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2017
                     </span>
                     Diversifying Expertise
@@ -296,9 +350,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2018
                     </span>
                     Global Recognition
@@ -311,9 +365,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2019
                     </span>
                     Expanding Horizons
@@ -326,9 +380,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2020
                     </span>
                     Resilience and Innovation
@@ -342,9 +396,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2021
                     </span>
                     Technological Leadership
@@ -358,9 +412,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2022
                     </span>
                     Expanding Clientele
@@ -374,9 +428,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2023
                     </span>
                     Strengthening Ecosystem
@@ -390,9 +444,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2024
                     </span>
                     Future-Ready
@@ -406,9 +460,9 @@ export default function AboutContent() {
               </div>
 
               <div className='col-12 col-sm-6 col-lg-4 mb-5'>
-                <div className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100'>
+                <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
-                    <span className='text-primary d-block year-animate mb-2'>
+                    <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2025
                     </span>
                     Expanding Horizons
@@ -882,12 +936,12 @@ export default function AboutContent() {
                           Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Edward
-                          </Link>
-                          <Link href='#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             CEO
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -901,12 +955,12 @@ export default function AboutContent() {
                           InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Badri
-                          </Link>
-                          <Link href='#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Manager
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -920,12 +974,12 @@ export default function AboutContent() {
                           InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Saady
-                          </Link>
-                          <Link href='#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Developer
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -939,12 +993,12 @@ export default function AboutContent() {
                           InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='#' className='name-user body-2 '>
+                          <span className='name-user body-2 '>
                             Simon
-                          </Link>
-                          <Link href='#' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Developer
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -958,10 +1012,10 @@ export default function AboutContent() {
                           The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='#' className='name-user body-2 '>
+                          <Link href='javascript:void(0)' className='name-user body-2 '>
                             Dorain
                           </Link>
-                          <Link href='#' className='position text-medium'>
+                          <Link href='javascript:void(0)' className='position text-medium'>
                             Developer
                           </Link>
                         </div>

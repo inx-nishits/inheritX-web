@@ -79,7 +79,7 @@ export default function ServiceDetailsPage({ params }) {
                         <div key={index} className="features-item align-items-center">
                           <div className="number-features fw-7">{index + 1}</div>
                           <div className="item-content">
-                            <a href="javascript:void(0)" className="body-2 fw-7 mb-0">{item}</a>
+                            <span className="body-2 fw-7 mb-0">{item}</span>
                           </div>
                         </div>
                       ))}
@@ -555,7 +555,7 @@ export default function ServiceDetailsPage({ params }) {
                   <i className="icon-chat-2"></i>
                 </div>
                 <h5 className="fw-4 title">How about connecting with our experts to resolve your queries or doubts?</h5>
-                <a href="#" className="tf-btn no-bg text-underline hover-color-main-dark">
+                <a href="/contact" className="tf-btn no-bg text-underline hover-color-main-dark">
                   <span>Let’s Talk</span>
                   <i className="icon-arrow-right"></i>
                 </a>

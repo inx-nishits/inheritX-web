@@ -1,8 +1,284 @@
+"use client"
 import Link from 'next/link'
+import { useRef, useState } from 'react'
 
 export default function JoinOurTeam () {
+  const resumeInputRef = useRef(null)
+  const [resumeFile, setResumeFile] = useState(null)
+  const [resumeError, setResumeError] = useState('')
+  const [isDragOver, setIsDragOver] = useState(false)
+  const [uploadProgress, setUploadProgress] = useState(0)
+  const [uploadStatus, setUploadStatus] = useState('idle') // idle | uploading | success
+
+  const isAllowedFile = (file) => {
+    if (!file) return false
+    const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain', 'application/rtf']
+    const maxBytes = 5 * 1024 * 1024 // 5MB
+    const okType = allowed.includes(file.type) || /\.pdf$|\.docx?$|\.rtf$|\.txt$/i.test(file.name)
+    const okSize = file.size <= maxBytes
+    if (!okType) {
+      setResumeError('Unsupported file type. Please upload PDF/DOC/DOCX/RTF/TXT.')
+      return false
+    }
+    if (!okSize) {
+      setResumeError('File too large. Maximum size is 5MB.')
+      return false
+    }
+    setResumeError('')
+    return true
+  }
+
+  const handleFileChange = (e) => {
+    const file = e.target.files && e.target.files[0] ? e.target.files[0] : null
+    if (isAllowedFile(file)) {
+      setResumeFile(file)
+      simulateUpload()
+    } else {
+      setResumeFile(null)
+    }
+  }
+
+  const handleTriggerFile = (e) => {
+    e.preventDefault()
+    if (resumeInputRef.current) resumeInputRef.current.click()
+  }
+
+  const handleViewResume = (e) => {
+    e.preventDefault()
+    if (!resumeFile) return
+    const url = URL.createObjectURL(resumeFile)
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
+  const handleSubmit = (e) => {
+    // basic validation: require resume and captcha "3"
+    const form = e.target
+    const captcha = form.captcha?.value?.trim()
+    const hasResume = !!resumeFile
+    if (!hasResume || captcha !== '3' || resumeError) {
+      e.preventDefault()
+      // Optionally show a lightweight native validity UI
+      if (!hasResume) alert('Please upload your resume before submitting.')
+      else if (resumeError) alert(resumeError)
+      else if (captcha !== '3') alert('Please answer the anti-spam question correctly.')
+    }
+  }
+
+  const handleDragOver = (e) => {
+    e.preventDefault()
+    setIsDragOver(true)
+  }
+  const handleDragLeave = () => setIsDragOver(false)
+  const handleDrop = (e) => {
+    e.preventDefault()
+    setIsDragOver(false)
+    if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+      const file = e.dataTransfer.files[0]
+      if (isAllowedFile(file)) { setResumeFile(file); simulateUpload() }
+    }
+  }
+  const handleKeyUpload = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      handleTriggerFile(e)
+    }
+  }
+
+  const simulateUpload = () => {
+    // Simulated progress for UI feedback; replace with real API later
+    setUploadStatus('uploading')
+    setUploadProgress(0)
+    const start = Date.now()
+    const tick = () => {
+      const elapsed = Date.now() - start
+      const pct = Math.min(95, Math.round(elapsed / 12)) // ramp quickly to 95%
+      setUploadProgress(pct)
+      if (pct < 95) requestAnimationFrame(tick)
+      else {
+        setTimeout(() => {
+          setUploadProgress(100)
+          setUploadStatus('success')
+        }, 400)
+      }
+    }
+    requestAnimationFrame(tick)
+  }
+
+  const handleRemoveResume = (e) => {
+    e.preventDefault()
+    setResumeFile(null)
+    setUploadProgress(0)
+    setUploadStatus('idle')
+    setResumeError('')
+    if (resumeInputRef.current) resumeInputRef.current.value = ''
+  }
   return (
     <>
+      {/* Apply ReactJS Developer Modal */}
+      <div
+        className='modal fade'
+        id='applyReactModal'
+        tabIndex='-1'
+        aria-labelledby='applyReactModalLabel'
+        aria-hidden='true'
+      >
+        <div className='modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable'>
+          <div className='modal-content bg-dark text-white border-0 modal-career'>
+            <div className='modal-header border-0 modal-career-header'>
+              <div className='modal-career-title'>
+                <h3 className='mb-3'>ReactJS Developer</h3>
+                <div className='meta-line mb-0'>
+                  <span className='meta-label'>Position:</span>
+                  <span className='meta-value me-3 text-white'>2</span>
+                  <span className='meta-label'>Experience:</span>
+                  <span className='meta-value me-3 text-white'>2+ Years</span>
+                  <span className='meta-label'>Location:</span>
+                  <span className='meta-value text-white'>Bodakdev, Ahmedabad.</span>
+                </div>
+              </div>
+              <button
+                type='button'
+                className='btn-close btn-close-white'
+                data-bs-dismiss='modal'
+                aria-label='Close'
+              ></button>
+            </div>
+            <div className='modal-body'>
+              <div className='row g-4 align-items-start'>
+                {/* Left: Role Summary */}
+                <div className='col-12 col-lg-6'>
+                  <div className='mb-4'>
+                    <h5 className='mb-2'>Roles and Responsibilities</h5>
+                    <ul className='ps-3 lh-30'>
+                      <li>ReactJS</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className='mb-2'>Requirements</h5>
+                    <ul className='ps-3 lh-30'>
+                      <li>Thorough understanding of React.js and its core principles</li>
+                      <li>Experience with popular React.js workflows (such as Flux or Redux)</li>
+                      <li>Experience in styled component</li>
+                      <li>Experience hooks and functional components</li>
+                      <li>Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model</li>
+                      <li>Familiarity with newer specifications of EcmaScript</li>
+                      <li>Building reusable components and front-end libraries for future use</li>
+                      <li>Good Communication</li>
+                      <li>Must have excellent problem-solving skills and love technical challenges</li>
+                      <li>Understanding of object-oriented and functional programming</li>
+                      <li>Familiarity with RESTful APIs</li>
+                      <li>Experience with common front-end development tools such as Babel, Webpack, NPM, etc</li>
+                      <li>Ability to understand business requirements and translate them into technical requirements</li>
+                      <li>A knack for benchmarking and optimization</li>
+                      <li>Familiarity with code versioning tools</li>
+                      <li>Team management</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Right: Apply Form */}
+                <div className='col-12 col-lg-6'>
+                  <form id='jobApplyReact' className='form-contact-us rounded-3 overflow-hidden style-bg-dark-2 p-4 p-md-5' method='post' action='' onSubmit={handleSubmit}>
+                    <div className='heading-form text-center mb-5'>
+                      <h3 className='title text-white m-0' style={{ textTransform: 'none' }}>Apply for ReactJS Developer</h3>
+                    </div>
+
+                    <fieldset className='item mb-20'>
+                      <input type='text' name='name' placeholder='Name' required />
+                    </fieldset>
+                    <fieldset className='item mb-20'>
+                      <input type='email' name='email' placeholder='Email Address' required />
+                    </fieldset>
+                    <fieldset className='item mb-20'>
+                      <input type='tel' name='phone' placeholder='Contact No' required />
+                    </fieldset>
+
+                    {/* Custom Resume Upload */}
+                    <fieldset className='item mb-20'>
+                      <input
+                        ref={resumeInputRef}
+                        type='file'
+                        name='resume'
+                        accept='.pdf,.doc,.docx,.rtf,.txt'
+                        onChange={handleFileChange}
+                        style={{ display: 'none' }}
+                      />
+                      <div
+                        className={`resume-upload ${isDragOver ? 'is-drag-over' : ''}`}
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                        onDrop={handleDrop}
+                        onKeyDown={handleKeyUpload}
+                        role='button'
+                        tabIndex={0}
+                        aria-label='Upload resume. Press Enter to choose a file or drag and drop.'
+                        aria-describedby='resumeHelp'
+                      >
+                        <div className='resume-file'>
+                          <div className='resume-file-name'>
+                            {resumeFile ? resumeFile.name : 'Drag & drop your resume here, or click Upload'}
+                          </div>
+                          <div id='resumeHelp' className='resume-help'>PDF, DOC, DOCX. Max 5MB.</div>
+                          {resumeFile && (
+                            <div className={`resume-progress ${uploadStatus}`} aria-live='polite'>
+                              <div className='resume-progress-bar' style={{ width: `${uploadProgress}%` }} />
+                              {uploadStatus === 'success' && <span className='resume-success'>Uploaded</span>}
+                            </div>
+                          )}
+                          {resumeFile && uploadStatus === 'success' && (
+                            <div className='resume-meta'>
+                              <span className='resume-size'>{(resumeFile.size / 1024 / 1024).toFixed(2)} MB</span>
+                            </div>
+                          )}
+                        </div>
+                        <div className='resume-actions'>
+                          <button className='tf-btn style-border small' onClick={handleTriggerFile}>
+                            <span>{resumeFile ? 'Change' : 'Upload'}</span>
+                          </button>
+                          {resumeFile && (
+                            <>
+                              <button className='tf-btn no-bg small' onClick={handleViewResume}>
+                                <span>View</span>
+                              </button>
+                              <button className='tf-btn no-bg small' onClick={handleRemoveResume} aria-label='Remove file' title='Remove'>
+                                <span aria-hidden='true'>
+                                  <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                                    <polyline points='3 6 5 6 21 6' />
+                                    <path d='M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6' />
+                                    <path d='M10 11v6' />
+                                    <path d='M14 11v6' />
+                                    <path d='M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2' />
+                                  </svg>
+                                </span>
+                              </button>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                      {resumeError && <div className='resume-error'>{resumeError}</div>}
+                    </fieldset>
+
+                    <fieldset className='item mb-20'>
+                      <div className='d-flex align-items-center gap-2'>
+                        <span>2</span>
+                        <span>+</span>
+                        <span>1</span>
+                        <span>=</span>
+                        <input type='text' name='captcha' placeholder='3' required />
+                      </div>
+                    </fieldset>
+
+                    <button type='submit' className='tf-btn w-full justify-content-center'>
+                      <span>Submit</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>
@@ -443,8 +719,7 @@ export default function JoinOurTeam () {
                 <div className='heading-section mb-60 text-center'>
                   <h2 className='title fw-6 title-animation mb-5'>
                     Smart person who knows
-                    <span className='text-primary'>how to grab</span> the
-                    opportunities
+                    <span className='text-primary'>&nbsp;how to grab</span> the&nbsp;opportunities
                   </h2>
                 </div>
               </div>
@@ -463,15 +738,20 @@ export default function JoinOurTeam () {
                       </div>
 
                       <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4'>Key Technologies:</h6>
+                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
                         <div className='desc lh-30 fw-3'>
                           ReactJS • JavaScript • Redux • TypeScript • Next.js
                         </div>
 
-                        <Link href='/apply' className='tf-btn-readmore style-open'>
+                        <a
+                          href='#'
+                          className='tf-btn-readmore style-open'
+                          data-bs-toggle='modal'
+                          data-bs-target='#applyReactModal'
+                        >
                           <span className='plus'>+</span>
                           <span className='text'>Apply Now</span>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -488,7 +768,7 @@ export default function JoinOurTeam () {
                       </div>
 
                       <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4'>Key Technologies:</h6>
+                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
                         <div className='desc lh-30 fw-3'>
                           iOS • Swift • Objective-C
                         </div>
@@ -513,7 +793,7 @@ export default function JoinOurTeam () {
                       </div>
 
                       <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4'>Key Technologies:</h6>
+                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
                         <div className='desc lh-30 fw-3'>
                           NodeJS • MongoDB • AWS • Socket.io • Lambda • S3
                           Bucket
@@ -539,7 +819,7 @@ export default function JoinOurTeam () {
                       </div>
 
                       <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4'>Key Technologies:</h6>
+                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
                         <div className='desc lh-30 fw-3'>
                           Flutter • Android • iOS • OOP
                         </div>
@@ -679,18 +959,16 @@ export default function JoinOurTeam () {
                           company, InheritX is a right choice for you!
                         </div>
                         <div className='user-testimonial'>
-                          <Link
-                            href='javascript:void(0)'
+                          <span
                             className='name-user body-2 '
                           >
                             Krish Hinduja
-                          </Link>
-                          <Link
-                            href='javascript:void(0)'
+                          </span>
+                          <span
                             className='position text-medium'
                           >
                             - Business Development Manager
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -710,18 +988,16 @@ export default function JoinOurTeam () {
                           us to give our best.
                         </div>
                         <div className='user-testimonial'>
-                          <Link
-                            href='javascript:void(0)'
+                          <span
                             className='name-user body-2 '
                           >
                             Dhwanik Gandhi
-                          </Link>
-                          <Link
-                            href='javascript:void(0)'
+                          </span>
+                          <span
                             className='position text-medium'
                           >
                             - Senior Android Developer
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -740,18 +1016,16 @@ export default function JoinOurTeam () {
                           that strives by putting employees first.
                         </div>
                         <div className='user-testimonial'>
-                          <Link
-                            href='javascript:void(0)'
+                          <span
                             className='name-user body-2 '
                           >
                             Vishal Patel
-                          </Link>
-                          <Link
-                            href='javascript:void(0)'
+                          </span>
+                          <span
                             className='position text-medium'
                           >
                             - Admin Executive
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>

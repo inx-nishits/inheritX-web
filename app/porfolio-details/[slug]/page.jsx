@@ -42,26 +42,62 @@ export default function PortfolioDetailsPage ({ params }) {
 
       <div className='main-content tf-spacing-2'>
         <div className='tf-container'>
-          <div className='wg-details wg-project-details tf-spacing-2'>
-            <div className='image-blog img-1'>
-              <img src={item.cover} alt='' className='lazyload' />
+          <div className='project-modal-style mb-50 pb-5'>
+            <div className='project-modal-header'>
+              <Link href='/portfolio' className='project-modal-back'>
+                <i className='icon-arrow-left'></i>
+              </Link>
+              <h1 className='project-modal-title'>{item.title}</h1>
             </div>
-            <div className='details-content flex justify-content-between g-30 rg-50'>
-              <div className='left'>
-                <h3 className='title'>We Create digital Product For Business</h3>
-                <div className='desc'>
-                  <div className='desc-flex flex g-20'>
-                    <span className='frame-item fw-7 fs-27'>S</span>
-                    <span className='lh-30'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque seeney laudantium totam rem aperiam eaque ipsa quae abillo inventore veritatis</span>
-                  </div>
-                  <p className='lh-30'>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aufugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt...</p>
-                </div>
+            
+            <div className='project-modal-content'>
+              <div className='project-description-section'>
+                <p className='project-description-text'>
+                  {item.title === 'Smart TV' 
+                    ? 'TV app built for Hotels where they provide better TV experience for customers who stay in hotel rooms. TV apps provide features like hotel booking, in-room dining, nearby events, Movie to watch, etc... Feature and UI will be based on hotel config in the control panel. TV will operate this app only as TV devices are customized and only operate this app from boot to turn-off.'
+                    : item.description
+                  }
+                </p>
               </div>
-              <div className='right'>
-                <div className='box-info'>
-                  <div className='info-item'>
-                    <div className='sub-title fw-5'>Category</div>
-                    <h5 className='title-info fw-5'>{item.category}</h5>
+              
+              <div className='project-details-grid'>
+                <div className='project-detail-item'>
+                  <div className='detail-icon-wrapper'>
+                    <i className='icon-location-dot detail-icon'></i>
+                  </div>
+                  <div className='detail-content'>
+                    <span className='detail-label'>Country:</span>
+                    <span className='detail-value'>{item.country}</span>
+                  </div>
+                </div>
+                
+                <div className='project-detail-item'>
+                  <div className='detail-icon-wrapper'>
+                    <i className='icon-custom-software detail-icon'></i>
+                  </div>
+                  <div className='detail-content'>
+                    <span className='detail-label'>Platform:</span>
+                    <span className='detail-value'>Mobile & TV</span>
+                  </div>
+                </div>
+                
+                <div className='project-detail-item'>
+                  <div className='detail-icon-wrapper'>
+                    <i className='icon-outsourcing detail-icon'></i>
+                  </div>
+                  <div className='detail-content'>
+                    <span className='detail-label'>Industry:</span>
+                    <span className='detail-value'>{item.industry}</span>
+                  </div>
+                </div>
+                
+                <div className='project-detail-item'>
+                  <div className='detail-icon-wrapper'>
+                    <i className='icon-software-product detail-icon'></i>
+                  </div>
+                  <div className='detail-content'>
+                    <span className='detail-label'>Technology:</span>
+                    <span className='detail-value'>{item.technology}</span>
                   </div>
                 </div>
               </div>
@@ -69,8 +105,8 @@ export default function PortfolioDetailsPage ({ params }) {
           </div>
         </div>
 
-        <div className='next-prev-details tf-spacing-2'>
-          <div className='tf-container'>
+        <div className='next-prev-details tf-spacing-2 pt-5'>
+          <div className='tf-container pt-5'>
             <div className='row rg-50'>
               <div className='col-sm-6'>
                 {prev && (

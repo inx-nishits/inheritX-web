@@ -36,6 +36,7 @@ export default function RootLayout ({ children }) {
         <link rel='stylesheet' href='/css/nouislider.min.css' />
         <link rel='stylesheet' href='/icons/icomoon/style.css' />
         <link rel='stylesheet' href='/css/styles.css' />
+        <link rel='stylesheet' href='/css/overrides.css' />
       </head>
       <body className='counter-scroll'>
         <div className='d-flex flex-column min-vh-100'>

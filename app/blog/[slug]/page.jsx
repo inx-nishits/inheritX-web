@@ -1,8 +1,34 @@
-import PageTitle from '../components/PageTitle';
+'use client';
+
+import PageTitle from '../../components/PageTitle';
+import { useMemo } from 'react';
 
 export const dynamic = 'force-static';
 
-export default function Page() {
+const POSTS = [
+  {
+    slug: 'top-15-flutter-widgets-for-app-development',
+    title: 'Top 15 Flutter Widgets Are Best To Use for App Development',
+    hero: '/image/home/Flutter-App-Development.jpg',
+    tags: ['Flutter', 'Widgets', 'App Development'],
+    author: 'InheritX',
+    publishedOn: 'December 12, 2024',
+  },
+  {
+    slug: 'why-businesses-prefer-flutter-app-development',
+    title: 'Why Modern Businesses Prefer Flutter Application Development Services',
+    hero: '/image/home/app-development-services.jpg',
+    tags: ['Flutter', 'Business', 'Mobile'],
+    author: 'InheritX',
+    publishedOn: 'December 18, 2024',
+  },
+];
+
+export default function Page({ params }) {
+  const { slug } = params || {};
+
+  const post = useMemo(() => POSTS.find(p => p.slug === slug), [slug]);
+
   return (
     <main>
       <style jsx>{`
@@ -38,28 +64,27 @@ export default function Page() {
           }
         }
       `}</style>
-      <PageTitle title="Blog Details" className="mb-0" />
+      <PageTitle title={post?.title || 'Blog Details'} className="mb-0" />
       <div className="main-content tf-spacing-2">
         <div className="tf-container">
           <div className="row rg-30">
             <div className="col-xl-8">
               <div className="wg-details wg-blog-details">
-                <div className="details-content">
-                  <div className="image img-details mb-15 radius-12 overflow-hidden shadow-soft">
-                    <img src="/image/blog/img-blog-details-1.jpg" alt="Blog cover" />
+                <div className="details-content p-3">
+                  <div className="image img-details mb-15 radius-12 overflow-hidden shadow-soft p-0">
+                    <img src={post?.hero || '/image/blog/img-blog-details-1.jpg'} alt={post?.title || 'Blog cover'} />
                   </div>
-                  <div>
-                    <h1 className="fs-32 fw-7 lh-42 mb-8">Blog Details</h1>
+                  <div className='p-4'>
+                    <h1 className="fs-32 fw-7 lh-42 mb-4">{post?.title || 'Blog Details'}</h1>
                     <div className="flex align-items-center g-10 text-medium muted">
-                      <span className="badge-soft-primary">Blog</span>
+                      <span className="badge-soft-primary">{post?.tags?.[0] || 'Blog'}</span>
                       <span className="dot"></span>
-                      <span>—</span>
+                      <span>{post?.publishedOn || ''}</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="col-xl-4">
               <div className="tf-sidebar sidebar-filter right">
 
@@ -121,69 +146,7 @@ export default function Page() {
                   </ul>
                 </div>
 
-                <div className="sidebar-item sidebar-content sidebar-recent-posts">
-                  <h4 className="title-content fw-5">
-                    Latest News
-                  </h4>
-                  <div className="list">
-                    <div className="item">
-                      <div className="image">
-                        <a href="blog-details.html">
-                          <img src="image/blog/blog-sidebar-1.jpg" data-src="image/blog/blog-sidebar-1.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                        </a>
-                      </div>
-                      <div className="content">
-                        <h6 className="title lh-24">
-                          <a href="blog-details.html" className="line-clamp-2">
-                            Tips For Conducting to Usability Studies With Participants
-                          </a>
-                        </h6>
-                        <div className="bottom-item">
-                          <div className="author-info">
-                            <i className="icon-user user-icon"></i>
-                            <span>Sandip Modi, in <a href="#" className="category-link">Flutter Application Development</a></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="image">
-                        <a href="blog-details.html">
-                          <img src="image/blog/blog-sidebar-2.jpg" data-src="image/blog/blog-sidebar-2.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                        </a>
-                      </div>
-                      <div className="content">
-                        <h6 className="title lh-24">
-                          <a href="blog-details.html" className="line-clamp-2">
-                            Online Environment Work For Older Users systems ways Tips Usability Studies Pants
-                          </a>
-                        </h6>
-                        <div className="bottom-item">
-                          <i className="icon-email"></i>
-                          <span>December 24, 2025</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="item">
-                      <div className="image">
-                        <a href="blog-details.html">
-                          <img src="image/blog/blog-sidebar-3.jpg" data-src="image/blog/blog-sidebar-3.jpg" alt="" className=" ls-is-cached lazyloaded" />
-                        </a>
-                      </div>
-                      <div className="content">
-                        <h6 className="title lh-24">
-                          <a href="blog-details.html" className="line-clamp-2">
-                            Tips For Conducting to Usability Studies With Participants
-                          </a>
-                        </h6>
-                        <div className="bottom-item">
-                          <i className="icon-email"></i>
-                          <span>December 23, 2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
 
               </div>
             </div>
@@ -193,4 +156,5 @@ export default function Page() {
     </main>
   );
 }
+
 

@@ -5,11 +5,13 @@ import { usePathname } from 'next/navigation'
 export default function DesktopNav ({ menuData }) {
   const pathname = usePathname()
 
-  const isActive = path => pathname === path
+  const isActive = path => pathname === path || pathname.startsWith(`${path}/`)
   const isParentActive = (href, columns) => {
-    if (pathname.startsWith(href)) return true
+    if (pathname === href || pathname.startsWith(`${href}/`)) return true
     if (!columns) return false
-    return columns.some(col => col.items.some(i => pathname.startsWith(i.href)))
+    return columns.some(col =>
+      col.items.some(i => pathname === i.href || pathname.startsWith(`${i.href}/`))
+    )
   }
 
   return (

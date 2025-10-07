@@ -1,5 +1,8 @@
 import PageTitle from '../components/PageTitle'
 import Link from 'next/link'
+import dynamicImport from 'next/dynamic'
+
+const ContactForm = dynamicImport(() => import('../components/ContactForm'), { ssr: false })
 
 export const dynamic = 'force-static'
 
@@ -44,7 +47,7 @@ export default function Page () {
                   </div>
                   <h2 className='title fw-6 mb-10 title-animation'>
                     Got a Project in
-                    <span className='fw-3'>Mind?</span>
+                    <span className='fw-3'>&nbsp;Mind?</span>
                   </h2>
                   <div className='desc text-animation'>
                     <p className='lh-30 fs-2'>
@@ -102,133 +105,13 @@ export default function Page () {
               </div>
 
               <div className='right'>
-                <form
-                  id='contactform'
-                  className='form-contact-us px-md-15 rounded-3 overflow-hidden'
-                  method='post'
-                  action=''
-                >
-                  <div className='heading-form text-center'>
-                    <h3 className='title'>Need Help For Project!</h3>
-
-                    <div className='desc lh-30'>
-                      We are ready to help your next projects, let’s work
-                      together
-                    </div>
-                  </div>
-
-                  <div className='cols mb-20 g-20'>
-                    <fieldset className='item'>
-                      <input
-                        type='text'
-                        name='name'
-                        id='name'
-                        placeholder='Name'
-                        required
-                      />
-                      <i className='icon-user'></i>
-                    </fieldset>
-
-                    <fieldset className='item'>
-                      <input
-                        type='email'
-                        name='mail'
-                        id='mail'
-                        placeholder='Email'
-                        required
-                      />
-                      <i className='icon-email'></i>
-                    </fieldset>
-                  </div>
-
-                  <div className='cols mb-20 g-20'>
-                    <fieldset className='item'>
-                      <input
-                        type='text'
-                        name='name'
-                        id='country'
-                        placeholder='Country'
-                        required
-                      />
-                      <i className='icon'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='18'
-                          height='18'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                        >
-                          <circle cx='12' cy='12' r='10' />
-                          <line x1='2' y1='12' x2='22' y2='12' />
-                          <path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z' />
-                        </svg>
-                      </i>
-                    </fieldset>
-
-                    <fieldset className='item'>
-                      <input
-                        type='text'
-                        name='phone'
-                        id='phone'
-                        placeholder='Phone'
-                        required
-                      />
-                      <i className='icon-phone'></i>
-                    </fieldset>
-                  </div>
-
-                  <div className='cols mb-20 g-20'>
-                    <fieldset className='item'>
-                      <input
-                        type='text'
-                        name='Project Type'
-                        id='projectType'
-                        placeholder='Project Type'
-                        required
-                      />
-                    </fieldset>
-                  </div>
-
-                  <div className='cols mb-20 g-20'>
-                    <div className='nice-select mb-0'>
-                      <span className='current caption-1'>
-                        Select Your Budget
-                      </span>
-                      <ul className='list'>
-                        <li className='option option-all selected focus'>
-                          Choose Budget
-                        </li>
-                        <li className='option'>Below $5000</li>
-                        <li className='option'>$5000 - $25,000</li>
-                        <li className='option'>Augmented Reality</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <fieldset className='mb-20'>
-                    <textarea
-                      name='message'
-                      id='message'
-                      placeholder='Brief Your Details*'
-                      required
-                    />
-                  </fieldset>
-
-                  <button type='submit' className='tf-btn mx-auto'>
-                    <span>Schedule a free Consultation</span>
-                    <i className='icon-arrow-right'></i>
-                  </button>
-                </form>
+                <ContactForm className='form-contact-us px-md-15 rounded-3 overflow-hidden' />
               </div>
             </div>
 
             <div className='locations-contact pt-5'>
               <div className='locations-footer item mb-30'>
-                <h2 className='title fw-6 mb-5 title-animation'>We’re Here!</h2>
+                <h2 className='title fw-6 mb-3 title-animation'>We’re Here!</h2>
                 <p className='lh-30 mb-5 fs-2 mb-5 pb-5'>
                   Headquartered in India, we have a global presence to serve our
                   esteemed clients more effectively.

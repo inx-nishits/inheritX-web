@@ -562,7 +562,7 @@ export default function HireExpertContent() {
                 Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
-                  href='#'
+                  href='/contact'
                   className='tf-btn no-bg text-underline hover-color-main-dark'
                 >
                   <span>Let’s Talk</span>

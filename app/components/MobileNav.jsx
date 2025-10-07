@@ -29,11 +29,13 @@ export default function MobileNav ({ menuData, onNavigate }) {
     })
   }
 
-  const isActive = href => pathname === href
+  const isActive = href => pathname === href || pathname.startsWith(`${href}/`)
   const isParentActive = (href, columns) => {
-    if (pathname.startsWith(href)) return true
+    if (pathname === href || pathname.startsWith(`${href}/`)) return true
     if (!columns) return false
-    return columns.some(col => col.items.some(i => pathname.startsWith(i.href)))
+    return columns.some(col =>
+      col.items.some(i => pathname === i.href || pathname.startsWith(`${i.href}/`))
+    )
   }
 
   return (
@@ -68,7 +70,7 @@ export default function MobileNav ({ menuData, onNavigate }) {
               <div
                 id={`mega-${idx}`}
                 className={`mobile-mega ${expanded ? 'open' : 'collapsed'}`}
-                style={{ maxHeight: expanded ? '1200px' : '0px' }}
+                style={{ maxHeight: expanded ? '1000vh' : '0px' }}
                 aria-hidden={!expanded}
               >
                 {/* render columns stacked for mobile */}

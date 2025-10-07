@@ -77,8 +77,8 @@ export default function IPhoneAppDevelopmentPage() {
                           1
                         </div>
                         <div className="item-content">
-                          <a href="javascript:void(0)" className="body-2 fw-7 mb-0">Enterprise iPhone App Development
-                          </a>
+                          <span className="body-2 fw-7 mb-0">Enterprise iPhone App Development
+                          </span>
                         </div>
                       </div>
   
@@ -88,8 +88,8 @@ export default function IPhoneAppDevelopmentPage() {
                           2
                         </div>
                         <div className="item-content">
-                          <a href="javascript:void(0)" className="body-2 fw-7 mb-0">iPhone App Upgrade
-                          </a>
+                          <span className="body-2 fw-7 mb-0">iPhone App Upgrade
+                          </span>
                         </div>
                       </div>
   
@@ -98,8 +98,8 @@ export default function IPhoneAppDevelopmentPage() {
                           3
                         </div>
                         <div className="item-content">
-                          <a href="javascript:void(0)" className="body-2 fw-7 mb-0">iPhone App Migration and Marketing
-                          </a>
+                          <span className="body-2 fw-7 mb-0">iPhone App Migration and Marketing
+                          </span>
                         </div>
                       </div>
   
@@ -108,8 +108,8 @@ export default function IPhoneAppDevelopmentPage() {
                           4
                         </div>
                         <div className="item-content">
-                          <a href="javascript:void(0)" className="body-2 fw-7 mb-0">iPhone App UI/UX Design
-                          </a>
+                          <span className="body-2 fw-7 mb-0">iPhone App UI/UX Design
+                          </span>
                         </div>
                       </div>
   
@@ -118,8 +118,8 @@ export default function IPhoneAppDevelopmentPage() {
                           5
                         </div>
                         <div className="item-content">
-                          <a href="javascript:void(0)" className="body-2 fw-7 mb-0">iPhone App Consultancy and Support
-                          </a>
+                          <span className="body-2 fw-7 mb-0">iPhone App Consultancy and Support
+                          </span>
                         </div>
                       </div>
   
@@ -128,8 +128,8 @@ export default function IPhoneAppDevelopmentPage() {
                           6
                         </div>
                         <div className="item-content">
-                          <a href="javascript:void(0)" className="body-2 fw-7 mb-0">Hire iPhone App Developers
-                          </a>
+                          <span className="body-2 fw-7 mb-0">Hire iPhone App Developers
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -606,7 +606,7 @@ export default function IPhoneAppDevelopmentPage() {
                     your queries or doubts?
                   </h5>
                   <a
-                    href='#'
+                    href='/contact'
                     className='tf-btn no-bg text-underline hover-color-main-dark'
                   >
                     <span>Let’s Talk</span>
