@@ -1,6 +1,5 @@
 'use client';
-import dynamic from 'next/dynamic'
-const ContactForm = dynamic(() => import('../../components/ContactForm'), { ssr: false })
+import ContactForm from '../../components/ContactForm'
 import { useEffect } from 'react';
 
 import Link from 'next/link'
@@ -99,9 +98,16 @@ export default function HomeContent() {
             </defs>
           </svg>
         </div>
-        <div className='tf-container'>
-          <div className='row'>
+
+        <div className='tf-container herosectionContainer'>
+          {/* <div className='row'>
             <div className='col-12'>
+
+            </div>
+          </div> */}
+          <div className='row justify-content-between rg-70'>
+            <div className='col-lg-5'>
+
               <div className='top-page-title'>
                 <div className='sub-title body-2 fw-5 split-text effect-right'>
                   Welcome to InheritX Solutions
@@ -110,21 +116,18 @@ export default function HomeContent() {
                 <div className='sub-title body-2 fw-7 split-text effect-right text-primary'>
                   GO MOBILE, GO CLOUD, GO DIGITAL, GO SMART
                 </div>
-                <h1 className='title fw-6 lh-85 split-text effect-right'>
+                <h2 className='title fw-6 split-text effect-right' style={{ lineHeight: "141%" }}>
                   Innovating the Future
                   <br />
                   <span className='fw-3'>
                     of{' '}
                     <span className='highlight text-uppercase'>
-                      Mobility with AI
+                      Mobility&nbsp;with&nbsp;AI
                     </span>{' '}
                   </span>
-                </h1>
+                </h2>
               </div>
-            </div>
-          </div>
-          <div className='row justify-content-between rg-70'>
-            <div className='col-lg-5'>
+
               <div className='content-left'>
                 <div className='desc text-animation'>
                   <p className='fs-20 lh-30'>
@@ -133,7 +136,7 @@ export default function HomeContent() {
                 </div>
 
                 <div className='wg-counter flex gap-0 row mb-0'>
-                  <div className='counter-item col-12 col-lg-6 mb-5'>
+                  <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -152,7 +155,7 @@ export default function HomeContent() {
                     </div>
                   </div>
 
-                  <div className='counter-item col-12 col-lg-6 mb-5'>
+                  <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -173,7 +176,7 @@ export default function HomeContent() {
                 </div>
 
                 <div className='wg-counter flex gap-0 row mb-0'>
-                  <div className='counter-item col-12 col-lg-6 mb-5'>
+                  <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -192,7 +195,7 @@ export default function HomeContent() {
                     </div>
                   </div>
 
-                  <div className='counter-item col-12 col-lg-6 mb-5'>
+                  <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -213,7 +216,7 @@ export default function HomeContent() {
                 </div>
 
                 <div className='wg-counter flex gap-0 row mb-0'>
-                  <div className='counter-item col-12 col-lg-6 mb-5'>
+                  <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -232,7 +235,7 @@ export default function HomeContent() {
                     </div>
                   </div>
 
-                  <div className='counter-item col-12 col-lg-6 mb-5'>
+                  <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
                         <span
@@ -1013,15 +1016,15 @@ export default function HomeContent() {
           </div>
           <div className='tf-container'>
             <div className='row'>
-              <div className='col-lg-3'>
+              <div className='col-lg-5'>
                 <div className='heading-section'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fs-1 fw-7 mb-17 title-animation'>
                     Our <span className='text-primary'>Team</span>
                   </div>
-                  <h4 className='title fw-6 mb-4 title-animation'>
+                  <h2 className='title fw-6 mb-4 title-animation'>
                     People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
-                  </h4>
-                  <p className='lh-30 mb-5'>
+                  </h2>
+                  <p className='lh-30 fs-2 mb-5'>
                     They don’t just lead—they empower, mentor, and transform ideas into impact.
                   </p>
                   <div className='list-btn flex align-items-center g-15 d-none'>
@@ -1038,16 +1041,17 @@ export default function HomeContent() {
                   </div>
                 </div>
               </div>
-              <div className='col-lg-9'>
+              <div className='col-lg-7'>
                 <div
                   className='swiper tf-swiper sw-team sw-border'
-                  style={{ cursor: 'default' }}
+                  style={{ cursor: 'grab' }}
                   data-swiper='{
                                 "slidesPerView": 1,
                                 "spaceBetween": 30,
                                 "speed": 800,
-                                "allowTouchMove": false,
-                                "grabCursor": false,
+                                "allowTouchMove": true,
+                                "grabCursor": true,
+                                "simulateTouch": true,
                                 "pagination": { "el": ".sw-pagination-team", "clickable": true },
                                 "navigation": {
                                     "clickable": true,
@@ -1056,6 +1060,7 @@ export default function HomeContent() {
                                 },  
                                 "breakpoints": {
                                     "450": { "slidesPerView": 2, "slidesPerGroup": 2},
+                                    "575": { "slidesPerView": 3, "slidesPerGroup": 1},
                                     "1200": { "slidesPerView": 3, "slidesPerGroup": 1}
                                     }
                                 }'

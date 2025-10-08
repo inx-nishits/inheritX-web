@@ -624,10 +624,13 @@ a:hover, a:focus {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 1320px;
+  padding-right: 16px;
+  padding-left: 16px;
+  max-width: calc(100% - 120px) !important;
   width: 100%;
+}
+.herosectionContainer {
+  max-width: calc(100% - 120px) !important;
 }
 .tf-container .row {
   margin-left: -15px !important;
@@ -1062,8 +1065,8 @@ a:hover, a:focus {
 /*------------ Components ---------------- */
 /*------------ header ---------------- */
 .top-bar {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .top-bar .top-bar-inner {
   padding: 18px 0;
@@ -1297,15 +1300,15 @@ a:hover, a:focus {
   border-bottom: 1px solid var(--stroke-2);
 }
 .header .header-content {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .header .logo-header {
-  padding-right: 15px;
+  padding-right: 16px;
 }
 .header .main-menu {
   border-left: 1px solid var(--stroke-2);
-  padding-left: 15px;
+  padding-left: 16px;
 }
 
 .header-right {
@@ -3080,8 +3083,8 @@ fieldset {
 .tf-post-list.style-2 .post-content {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3258,12 +3261,12 @@ fieldset {
   object-fit: cover;
 }
 .wg-blog-details .img-details {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .wg-blog-details .list-img {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
   gap: 20px;
 }
 .wg-blog-details .desc {
@@ -3427,7 +3430,7 @@ fieldset {
 }
 .wg-quote .name-quote {
   position: relative;
-  padding-left: 70px;
+  padding-left: 60px;
 }
 .wg-quote .name-quote::before {
   content: "";
@@ -3553,7 +3556,7 @@ fieldset {
 }
 .testimonial-item .text {
   margin-bottom: 30px;
-  max-width: 699px;
+  /* max-width: 699px; */
   letter-spacing: -0.05px;
 }
 .testimonial-item .user-testimonial .name-user {
@@ -4428,6 +4431,7 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 40px;
   background-color: var(--main-dark);
   display: block;
+  height: 300px;
 }
 .services-item .image img {
   width: 100%;
@@ -4514,6 +4518,7 @@ a.mapboxgl-ctrl-logo {
 .team-item .image {
   margin: 10px 9.5px 0;
   display: block;
+  height: 260px;
 }
 .team-item .image img {
   width: 100%;
@@ -4867,7 +4872,7 @@ a.mapboxgl-ctrl-logo {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  gap: 35px;
+  gap: 24px;
 }
 .features-item .number-features {
   width: 45px;
@@ -4881,7 +4886,7 @@ a.mapboxgl-ctrl-logo {
   justify-content: center;
   border-radius: 50%;
   color: var(--white);
-  background-color: var(--dark-2);
+  background-color: var(--primary);
 }
 .features-item .item-content {
   max-width: calc(100% - 80px);
@@ -5518,14 +5523,14 @@ a.mapboxgl-ctrl-logo {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 .section-company .section-company-inner .left-section {
   padding-right: 30px;
   padding-top: 43px;
   padding-bottom: 47px;
   width: 100%;
-  min-width: 667px;
+  /* min-width: 667px; */
 }
 .section-company .image-section {
   height: 100%;
@@ -5667,7 +5672,7 @@ a.mapboxgl-ctrl-logo {
   padding-left: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 15px;
+  padding-right: 16px;
 }
 
 .section-pricing {
@@ -5795,7 +5800,7 @@ a.mapboxgl-ctrl-logo {
     padding-right: 146px;
   }
   .section-about .about-inner .right {
-    max-width: 593px;
+    max-width: 70%;
     width: 100%;
   }
   .section-about .section-content {
@@ -5808,8 +5813,8 @@ a.mapboxgl-ctrl-logo {
   }
   .page-title-home .top-page-title {
     padding-top: 32px;
-    margin-left: -4px;
-    margin-bottom: 140px;
+    /* margin-left: -4px; */
+    margin-bottom: 20px;
   }
   .page-title-home .desc {
     padding-bottom: 30px;
@@ -5875,8 +5880,8 @@ a.mapboxgl-ctrl-logo {
   .sw-project {
     margin-right: 0;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     max-width: 1865px;
   }
   .project-item .item-content {
@@ -5924,7 +5929,7 @@ a.mapboxgl-ctrl-logo {
   }
   .section-company .section-company-inner .left-section {
     padding-right: 140px;
-    max-width: 770px;
+    max-width: 991px;
   }
   .section-company .image-section {
     max-width: 765px;
@@ -5942,12 +5947,12 @@ a.mapboxgl-ctrl-logo {
     padding-bottom: 65px;
   }
   .top-bar {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .header .header-content {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .header .logo-header {
     padding-right: 30px;
@@ -6073,8 +6078,11 @@ a.mapboxgl-ctrl-logo {
   .header .header-content {
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-right: 15px;
+    padding-right: 16px;
   }
+  .herosectionContainer, .tf-container {
+    max-width: calc(100% - 48px) !important;
+}
   .header .logo-header {
     max-width: 300px;
   }
@@ -6143,7 +6151,7 @@ a.mapboxgl-ctrl-logo {
     margin-top: 30px !important;
   }
   .section-services .tf-marquee {
-    padding-bottom: 70px;
+    padding-bottom: 70px !important;
   }
   .testimonial-item .icon i {
     font-size: 35px;
@@ -6294,7 +6302,7 @@ a.mapboxgl-ctrl-logo {
     margin-right: 15px !important;
   }
   .footer .footer-top {
-    padding-left: 15px;
+    /* padding-left: 16px; */
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -6331,6 +6339,9 @@ a.mapboxgl-ctrl-logo {
   }
 }
 @media (max-width: 767px) {
+  .herosectionContainer, .tf-container {
+    max-width: calc(100% - 32px) !important;
+}
   .mask svg {
     width: 500px;
     height: 500px;
@@ -6439,7 +6450,7 @@ a.mapboxgl-ctrl-logo {
     margin-bottom: 20px;
   }
   .according-item .according-content .right {
-    padding-left: 15px;
+    padding-left: 16px;
   }
   .section-counting .mask {
     right: -40%;
@@ -6485,7 +6496,8 @@ a.mapboxgl-ctrl-logo {
     left: -300px;
   }
   .footer .footer-bottom .list-bottom {
-    justify-content: center;
+    text-align: center;
+    justify-content: center !important;
   }
 }
 @media (max-width: 550px) {
@@ -6493,9 +6505,15 @@ a.mapboxgl-ctrl-logo {
     height: 287px;
   }
   .section-services.p-services .services-item {
-    max-width: 100%;
+    max-width: 100% !important;
     border-right: 1px solid var(--stroke-2) !important;
     border-bottom: 0 !important;
+    width: 100% !important;
+    text-align: center;
+  }
+  .services-item .icon {
+    margin: 0px auto;
+    margin-bottom: 30px;
   }
   .section-services.p-services .services-item:last-child {
     border-bottom: 1px solid var(--stroke-2) !important;
@@ -6650,7 +6668,7 @@ color: var(--primary) !important;
 
 
 .custom-services-wrapper .services-item-force {
-  width: 50% !important;        /* Force 50% width */
+  /* width: 50% !important; */
   max-width: 50% !important;    /* Ensure it doesn’t exceed 50% */
   border: 0.5px solid var(--stroke-2) !important; /* Only this border applied */
   box-sizing: border-box;       /* Include padding in width */

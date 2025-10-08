@@ -1,28 +1,30 @@
 /* Final UI-priority overrides: loaded after theme styles */
 
+/* Spacing simplification per request: control only tf-container width */
+.tf-container {
+  max-width: calc(100% - 120px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Gutters and containers */
 .container,
 .tf-container {
-  padding-left: var(--container-gutter, 16px) !important;
-  padding-right: var(--container-gutter, 16px) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.tf-container .row {
-  margin-left: calc(var(--container-gutter, 16px) * -1) !important;
-  margin-right: calc(var(--container-gutter, 16px) * -1) !important;
-}
-.tf-container .row > * {
-  padding-left: var(--container-gutter, 16px) !important;
-  padding-right: var(--container-gutter, 16px) !important;
-}
+/* Neutralize row gutters since we're using width-based container */
+/* .tf-container .row { margin-left: 0 !important; margin-right: 0 !important; } */
+/* .tf-container .row > * { padding-left: 0 !important; padding-right: 0 !important; } */
 
 /* (width-related overrides removed by request) */
 
 /* Laptop heading balance */
 @media (min-width: 992px) and (max-width: 1399.98px) {
-  h1, .h1 { font-size: 48px !important; }
-  h2, .h2 { font-size: 36px !important; }
-  h3, .h3 { font-size: 28px !important; }
+  h1, .h1 { font-size: 44px !important; }
+  h2, .h2 { font-size: 32px !important; }
+  h3, .h3 { font-size: 26px !important; }
 }
 
 /* Section rhythm */
@@ -33,10 +35,14 @@
 @media (max-width: 767.98px) {
   .tf-spacing-1 { padding-top: 56px !important; padding-bottom: 56px !important; }
 }
+/* Slightly tighter spacing for larger laptops */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .tf-spacing-1 { padding-top: 84px !important; padding-bottom: 84px !important; }
+}
 
 /* Page titles */
 @media (min-width: 992px) and (max-width: 1399.98px) {
-  .page-title .page-title-content { padding-top: 88px !important; padding-bottom: 100px !important; }
+  .page-title .page-title-content { padding-top: 72px !important; padding-bottom: 88px !important; }
 }
 
 
@@ -292,5 +298,41 @@ a[href='javascript:;'] {
 .section-team .mask,
 .footer .mask {
   pointer-events: none !important;
+}
+
+/* Equalize description height in Popular Services slider for image alignment */
+.section-services .sw-services .services-item.style-1 .desc.lh-30 {
+  min-height: 60px; /* 2 lines at 30px line-height */
+}
+@media (max-width: 550px) {
+  .section-services .sw-services .services-item.style-1 .desc.lh-30 { min-height: 60px; }
+}
+
+/* Team images: maintain aspect ratio, avoid stretching, uniform crop */
+.section-team .team-item .image {
+  height: auto !important;
+  aspect-ratio: 1 / 1; /* square avatar cards */
+}
+.section-team .team-item .image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* fill without distortion */
+}
+
+/* Larger pagination dots (global) for better touch targets */
+.sw-pagination .swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 18px !important;
+}
+.sw-pagination .swiper-pagination-bullet::after {
+  border-width: 2px !important;
+  border-radius: 50% !important;
+}
+.sw-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0 !important;
+}
+@media (max-width: 767.98px) {
+  .sw-pagination .swiper-pagination-bullet { width: 18px !important; height: 18px !important; margin-right: 20px !important; }
 }
 

@@ -1,3 +1,5 @@
+'use client'
+
 export default function ContactForm ({
   id = 'contactform',
   className = 'form-contact-us px-md-15',
