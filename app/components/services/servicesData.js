@@ -8,11 +8,11 @@ export const servicesData = {
     heading: "iPhone App Development",
     heading_caption: "Elegant iPhone Apps with Flawless Functionality",
     content_heading: "iPhone Application",
-    content_caption: "Let's Build Amazing iPhone Application Together!",
+    content_caption: "Let's Build Amazing iPhone Apps Together!",
     content: [
-      "With the release of iOS 13, Apple has paved the way for the next-gen iPhones with more enterprise-friendly features and stunning performance.",
-      "As a reputed iPhone application development company, Inheritx Solutions can develop iPhone apps with excellent UI and pleasant UX for your business. With a vast experience of developing user-friendly iPhone apps and games, we offer custom iOS app development across different industry sectors ranging from healthcare to reality and manufacturing to hospitality.",
-      "The holistic approach of dedicated developers and usage of cutting-edge tools to deliver enterprise-grade iPhone app solutions have made us the best iPhone app development company. We strive to meet the diverse requirements of our corporate clientele and work on enhancing business value by offering high-quality iPhone app development services."
+      "With the release of iOS 13, Apple has paved the way for next-gen iPhones with more enterprise-friendly features and stunning performance.",
+      "As a reputed iPhone application development company, InheritX Solutions can develop iPhone apps with excellent UI and pleasant UX for your business. With vast experience in developing user-friendly iPhone apps and games, we offer custom iOS app development across different industry sectors, ranging from healthcare to real estate and manufacturing to hospitality.",
+      "The holistic approach of dedicated developers and the use of cutting-edge tools to deliver enterprise-grade iPhone app solutions has made us the best iPhone app development company. We strive to meet the diverse requirements of our corporate clientele and work on enhancing business value by offering high-quality iPhone app development services."
     ],
     key_services: [
       "Enterprise iPhone App Development",
@@ -23,15 +23,15 @@ export const servicesData = {
       "Hire iPhone App Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Since inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes in the corporate world." },
-      { title: "Our Company Vision", content: "To be recognized as leaders in quality services and developing relationships that make a positive difference in our customer’s lives." },
+      { title: "Learn Our Company’s Mission", content: "Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world." },
+      { title: "Our Company’s Vision", content: "To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers’ lives." },
       { title: "Why Choose InheritX?", content: "We deliver customized, cost-effective iPhone solutions with on-time delivery, excellent performance and a focus on ROI." },
       { title: "What We Offer?", content: "Discovery, UX/UI, development, QA, launch, and ongoing support for iOS apps." }
     ],
     faqs: [
-      { q: "What tools and technologies do you use?", a: "Swift, Objective-C for native iOS; Flutter/React Native for cross-platform; Angular/React/Node for web where needed." },
+      { q: "What tools and technologies do you use?", a: "Swift and Objective-C for native iOS; Flutter or React Native for cross-platform; Angular, React, and Node for web where needed." },
       { q: "Is it safe to share my app idea?", a: "Yes. We sign NDAs and follow strict security and confidentiality practices." },
-      { q: "Do you promote or launch apps?", a: "We support App Store submissions and can run ASO/digital marketing campaigns post-launch." },
+      { q: "Do you promote or launch apps?", a: "We support App Store submissions and can run ASO and digital marketing campaigns post-launch." },
       { q: "Do you follow Apple’s standards?", a: "Yes, our process aligns with Apple guidelines and recent iOS versions for compliance and quality." }
     ]
   },
@@ -46,8 +46,8 @@ export const servicesData = {
     content_heading: "Android Application",
     content_caption: "Let's Build Amazing Android Application Together!",
     content: [
-      "Android OS enjoys the dominance in the world with over 85% market share.",
-      "Our Android app development services are designed to make the most of the latest version of Android OS. Some of our Android app developers are in this domain since the launch of the first Android application. By integrating the latest technological advancements in the domain of IoT and Blockchain, we can come up with sophisticated, scalable, and secured Android app solutions.",
+      "Android OS enjoys dominance in the world with over 85% market share.",
+      "Our Android app development services are designed to make the most of the latest version of Android OS. Some of our Android app developers have been in this domain since the launch of the first Android application. By integrating the latest technological advancements in the domain of IoT and Blockchain, we can come up with sophisticated, scalable, and secure Android app solutions.",
       "As a leading Android mobile app development company, we have worked with many companies ranging from startups to Fortune Global 500 companies for developing high-end Android apps. While making Android apps for enterprises, we keep the end-users in mind. As a result, a few of our business mobile apps have achieved a higher ROI in the first six months of launch. We focus on creating innovative Android apps to keep your business ahead of the curve through improved customer services."
     ],
     key_services: [
@@ -59,8 +59,8 @@ export const servicesData = {
       "Enterprise Android App Development"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering high-quality Android solutions that create measurable business impact and user delight." },
-      { title: "Our Company Vision", content: "Build reliable, scalable apps that evolve with customer needs and market trends." },
+      { title: "Learn Our Company’s Mission", content: "Delivering high-quality Android solutions that create measurable business impact and user delight." },
+      { title: "Our Company’s Vision", content: "Build reliable, scalable apps that evolve with customer needs and market trends." },
       { title: "Why Choose InheritX?", content: "End-to-end Android expertise from discovery to growth, delivered on schedule." },
       { title: "What We Offer?", content: "Product strategy, UX/UI, development, testing, DevOps and long-term support." }
     ],
@@ -82,7 +82,7 @@ export const servicesData = {
     content_caption: "Let's Build Amazing Kotlin Application Together!",
     content: [
       "The search engine giant Google has recognized Kotlin as a second official language after Java to develop robust Android apps. This open-source language helps Android app developers provide a wide range of enterprise-grade app solutions to meet the diverse and ever-changing needs of startups, SMEs, and large enterprises alike. Kotlin Android app development has started gaining ground among app developers and entrepreneurs.",
-      "InheritX Solutions has a team of experienced Android app developers who are well-versed in using Android Studio and other cutting-edge tools to develop next-gen business apps. We strive to make the most of enterprise-friendly features and functionality of Kotlin to provide you user-friendly app solutions. We offer Kotlin app development services at cost-effective rates without compromising on the quality and performance of the app."
+      "InheritX Solutions has a team of experienced Android app developers who are well-versed in using Android Studio and other cutting-edge tools to develop next-gen business apps. We strive to make the most of enterprise-friendly features and functionality of Kotlin to provide you with user-friendly app solutions. We offer Kotlin app development services at cost-effective rates without compromising on the quality and performance of the app."
     ],
     key_services: [
       "Kotlin Native Android Application Development",
@@ -93,8 +93,8 @@ export const servicesData = {
       "Hire Kotlin Android App Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering high-quality Kotlin solutions that create measurable business impact and user delight." },
-      { title: "Our Company Vision", content: "Build reliable, scalable apps that evolve with customer needs and market trends." },
+      { title: "Learn Our Company’s Mission", content: "Delivering high-quality Kotlin solutions that create measurable business impact and user delight." },
+      { title: "Our Company’s Vision", content: "Build reliable, scalable apps that evolve with customer needs and market trends." },
       { title: "Why Choose InheritX?", content: "Expertise in Kotlin development with a focus on performance, scalability, and cost-effectiveness." },
       { title: "What We Offer?", content: "End-to-end Kotlin app development, from strategy to support, with a focus on enterprise-grade solutions." }
     ],
@@ -104,9 +104,9 @@ export const servicesData = {
       { q: "Do you support Kotlin Multiplatform?", a: "Yes, we can develop cross-platform apps using Kotlin Multiplatform for shared business logic." }
     ]
   },
-  "ipad-app-development": {
+  "ipad-tablet-app-development": {
     breadCrumdsTitle: "IPad/Tablet App Development",
-    category: "ipad-app-development",
+    category: "ipad-tablet-app-development",
     type: "Ipad",
     title: "Ipad",
     banner: "/image/page-title/ipad-developement.jpg",
@@ -129,8 +129,8 @@ export const servicesData = {
       "iPad App Marketing"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative iPad solutions that drive business efficiency and user engagement." },
-      { title: "Our Company Vision", content: "Create scalable, user-centric tablet apps that empower enterprises." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative iPad solutions that drive business efficiency and user engagement." },
+      { title: "Our Company’s Vision", content: "Create scalable, user-centric tablet apps that empower enterprises." },
       { title: "Why Choose InheritX?", content: "Proven expertise in iPad app development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "Custom iPad app development, integration of advanced technologies, and ongoing support." }
     ],
@@ -152,7 +152,7 @@ export const servicesData = {
     content_caption: "Let's Build Amazing Xamarin Application Together!",
     content: [
       "As a cross-platform framework enriched with the features of .NET and C#, Xamarin has gained fame for building apps for Android and iOS faster. As a leading Xamarin app development company, InheritX Solutions is ready to leverage the platform’s excellent features to build enterprise-grade apps. We follow all standards and best practices of Xamarin mobile app development while making apps ready to align with your business strategies.",
-      "At InheritX, we provide a range of Xamarin mobile app development services including Xamarin Android app development, Xamarin iOS app development, Xamarin forms app development, and Xamarin consulting. We provide end-to-end enterprise mobility solution using a robust Xamarin platform for your business. We assist startups and established enterprises by building result-oriented and user-friendly cross-platform apps."
+      "At InheritX, we provide a range of Xamarin mobile app development services including Xamarin Android app development, Xamarin iOS app development, Xamarin Forms app development, and Xamarin consulting. We provide end-to-end enterprise mobility solutions using a robust Xamarin platform for your business. We assist startups and established enterprises by building result-oriented and user-friendly cross-platform apps."
     ],
     key_services: [
       "Xamarin Native Android App Development",
@@ -163,8 +163,8 @@ export const servicesData = {
       "Hire Xamarin App Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering high-quality Xamarin solutions that create measurable business impact." },
-      { title: "Our Company Vision", content: "Build scalable, cross-platform apps that meet diverse business needs." },
+      { title: "Learn Our Company’s Mission", content: "Delivering high-quality Xamarin solutions that create measurable business impact." },
+      { title: "Our Company’s Vision", content: "Build scalable, cross-platform apps that meet diverse business needs." },
       { title: "Why Choose InheritX?", content: "Expertise in Xamarin development with a focus on performance and cost-effectiveness." },
       { title: "What We Offer?", content: "End-to-end Xamarin app development, from strategy to maintenance." }
     ],
@@ -185,8 +185,8 @@ export const servicesData = {
     content_heading: "Flutter Mobile App",
     content_caption: "Let's Build Amazing Flutter Application Together!",
     content: [
-      "Flutter is indeed a future of the cross-platform platform. Supported by Google and thousands of active developers, Flutter framework can reduce mobile app development time and cost for Android and iOS. You can rely on customized Flutter mobile app development services to address a huge audience consists of Android phones and iPhone users. With excellent pick and tweak functionality, Flutter can save valuable time of developers while building eye-appealing and expressive apps.",
-      "InheritX Solutions is an emerging Flutter app development company that is known for rapid and customizable Flutter app development process. We can utilize the features and flexibility of this robust framework to develop high-end enterprise apps for Android and iOS in a short time. Our experienced app developers have a knack for developing cross-platform apps that can simplify your complex business operations."
+      "Flutter is indeed the future of cross-platform development. Supported by Google and thousands of active developers, the Flutter framework can reduce mobile app development time and cost for Android and iOS. You can rely on customized Flutter mobile app development services to address a huge audience consisting of Android phones and iPhone users. With excellent pick and tweak functionality, Flutter can save valuable time for developers while building eye-appealing and expressive apps.",
+      "InheritX Solutions is an emerging Flutter app development company that is known for rapid and customizable Flutter app development processes. We can utilize the features and flexibility of this robust framework to develop high-end enterprise apps for Android and iOS in a short time. Our experienced app developers have a knack for developing cross-platform apps that can simplify your complex business operations."
     ],
     key_services: [
       "Cross-platform Application Development",
@@ -197,8 +197,8 @@ export const servicesData = {
       "Hire Flutter App Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Flutter solutions for business growth." },
-      { title: "Our Company Vision", content: "Build scalable, cross-platform apps with rich UI and fast development cycles." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Flutter solutions for business growth." },
+      { title: "Our Company’s Vision", content: "Build scalable, cross-platform apps with rich UI and fast development cycles." },
       { title: "Why Choose InheritX?", content: "Expertise in Flutter development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end Flutter app development with rapid prototyping and deployment." }
     ],
@@ -219,8 +219,8 @@ export const servicesData = {
     content_heading: "React Native",
     content_caption: "Let's Build Amazing React Native Application Together!",
     content: [
-      "React Native app development services aim at developing high-end business apps with desired features and amazing functionality. Facebook has developed a JavaScript-based framework to build feature-rich mobile app solutions for both Android and iOS platforms. React Native is known as one of the most popular programming languages across the world for delivering cross-platform apps for modern enterprises.",
-      "At InheritX, our in-house team of veteran app developers offers you excellent React Native development services for building user-friendly enterprise app. Our developers have hands-on experience in using the cutting-edge tools of React Native for making innovative and rich cross-platform apps. We also offer maintenance and migration services for React Native apps. React Native mobile app development enables you to get a feature-rich app rapidly so that you can stay ahead of the curve."
+      "React Native app development services aim at developing high-end business apps with desired features and amazing functionality. Facebook has developed a JavaScript-based framework to build feature-rich mobile app solutions for both Android and iOS platforms. React Native is known as one of the most popular programming frameworks across the world for delivering cross-platform apps for modern enterprises.",
+      "At InheritX, our in-house team of veteran app developers offers you excellent React Native development services for building user-friendly enterprise apps. Our developers have hands-on experience in using the cutting-edge tools of React Native for making innovative and rich cross-platform apps. We also offer maintenance and migration services for React Native apps. React Native mobile app development enables you to get a feature-rich app rapidly so that you can stay ahead of the curve."
     ],
     key_services: [
       "React Native iOS Application Development",
@@ -233,8 +233,8 @@ export const servicesData = {
       "Hire React Native App Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering high-quality React Native solutions for business success." },
-      { title: "Our Company Vision", content: "Build scalable, cross-platform apps with rich UI and fast development." },
+      { title: "Learn Our Company’s Mission", content: "Delivering high-quality React Native solutions for business success." },
+      { title: "Our Company’s Vision", content: "Build scalable, cross-platform apps with rich UI and fast development." },
       { title: "Why Choose InheritX?", content: "Expertise in React Native with a focus on performance and user experience." },
       { title: "What We Offer?", content: "End-to-end React Native app development with rapid delivery and support." }
     ],
@@ -255,7 +255,7 @@ export const servicesData = {
     content_heading: "Ionic Application",
     content_caption: "Let's Build Amazing Ionic Application Together!",
     content: [
-      "Ionic application development services are designed to provide a similar look and feel that of native apps in hybrid apps. Ionic platform-based apps have an eye-appealing design and responsive design to attract a huge audience worldwide. As a renowned Ionic app development company, InheritX has provided Ionic-powered hybrid app solutions across different industry sectors worldwide.",
+      "Ionic application development services are designed to provide a similar look and feel to that of native apps in hybrid apps. Ionic platform-based apps have an eye-appealing design and responsive design to attract a huge audience worldwide. As a renowned Ionic app development company, InheritX has provided Ionic-powered hybrid app solutions across different industry sectors worldwide.",
       "Ionic hybrid mobile app development works on offering native experiences from cross-platform apps. Our experienced Ionic app developers can work on developing app solutions for various industry sectors including health, eCommerce, travel, banking, media, etc. You can hire Ionic developers from InheritX Solutions to develop high-end hybrid apps in a cost-effective way.",
       "Do you want to convert your creative idea into a stunning app? We can help you with cutting-edge tools and dedicated app developers."
     ],
@@ -268,8 +268,8 @@ export const servicesData = {
       "Hire Ionic App Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Ionic solutions for business growth." },
-      { title: "Our Company Vision", content: "Build scalable, hybrid apps with native-like experiences." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Ionic solutions for business growth." },
+      { title: "Our Company’s Vision", content: "Build scalable, hybrid apps with native-like experiences." },
       { title: "Why Choose InheritX?", content: "Expertise in Ionic development with a focus on performance and cost-effectiveness." },
       { title: "What We Offer?", content: "End-to-end Ionic app development with rapid delivery and support." }
     ],
@@ -290,9 +290,9 @@ export const servicesData = {
     content_heading: "Angular Js",
     content_caption: "Creating Angular JS Development Solutions for all your Project Needs!",
     content: [
-      "If you are someone looking to develop your project with Angular development technology, then you have come to the right place! We at Inheritx produce durable and secure app solutions as one of the leading Angular JS development companies. Our Angular JS engineers employ the best development methods and patterns to create powerful single-page, cross-platform apps with user-friendly features and a responsive UI design. We are well-versed in the most recent features and add-ons that cater to all of your company’s requirements.",
-      "As a top Angular JS Development Company, Inheritx offers end-to-end application solutions and is well known for providing the finest development solutions to grow your business. We ensure that our clients have access to a framework that is extremely easy to understand, expandable, and allows for spontaneous application development by our developers. Also, this Google-maintained JavaScript MVW framework is highly scalable and safe.",
-      "Hire Angular JS developers from Inheritx to create unique web apps that combine interactive, user-friendly features with high speed."
+      "If you are someone looking to develop your project with Angular development technology, then you have come to the right place! We at InheritX produce durable and secure app solutions as one of the leading Angular JS development companies. Our Angular JS engineers employ the best development methods and patterns to create powerful single-page, cross-platform apps with user-friendly features and a responsive UI design. We are well-versed in the most recent features and add-ons that cater to all of your company's requirements.",
+      "As a top Angular JS Development Company, InheritX offers end-to-end application solutions and is well known for providing the finest development solutions to grow your business. We ensure that our clients have access to a framework that is extremely easy to understand, expandable, and allows for spontaneous application development by our developers. Also, this Google-maintained JavaScript MVW framework is highly scalable and secure.",
+      "Hire Angular JS developers from InheritX to create unique web apps that combine interactive, user-friendly features with high speed."
     ],
     key_services: [
       "AngularJS Design & Development",
@@ -304,8 +304,8 @@ export const servicesData = {
       "Cross-platform App Development"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering high-quality AngularJS solutions for business success." },
-      { title: "Our Company Vision", content: "Build scalable, user-centric web apps with rich functionality." },
+      { title: "Learn Our Company’s Mission", content: "Delivering high-quality AngularJS solutions for business success." },
+      { title: "Our Company’s Vision", content: "Build scalable, user-centric web apps with rich functionality." },
       { title: "Why Choose InheritX?", content: "Expertise in AngularJS with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end AngularJS development with rapid delivery and support." }
     ],
@@ -337,8 +337,8 @@ export const servicesData = {
       "Cross-platform App Development"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Python solutions for business growth." },
-      { title: "Our Company Vision", content: "Build scalable, high-performance apps using Python’s robust ecosystem." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Python solutions for business growth." },
+      { title: "Our Company’s Vision", content: "Build scalable, high-performance apps using Python’s robust ecosystem." },
       { title: "Why Choose InheritX?", content: "Expertise in Python development with a focus on versatility and scalability." },
       { title: "What We Offer?", content: "End-to-end Python development, from web apps to AI solutions." }
     ],
@@ -371,8 +371,8 @@ export const servicesData = {
       "Cross-platform App Development"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Laravel solutions for business success." },
-      { title: "Our Company Vision", content: "Build scalable, secure web apps with Laravel’s powerful features." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Laravel solutions for business success." },
+      { title: "Our Company’s Vision", content: "Build scalable, secure web apps with Laravel’s powerful features." },
       { title: "Why Choose InheritX?", content: "Expertise in Laravel development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end Laravel development with rapid delivery and support." }
     ],
@@ -406,8 +406,8 @@ export const servicesData = {
       "Cross-platform App Development"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Next.js solutions for business success." },
-      { title: "Our Company Vision", content: "Build scalable, SEO-friendly web apps with Next.js." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Next.js solutions for business success." },
+      { title: "Our Company’s Vision", content: "Build scalable, SEO-friendly web apps with Next.js." },
       { title: "Why Choose InheritX?", content: "Expertise in Next.js development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end Next.js development with rapid delivery and support." }
     ],
@@ -428,7 +428,7 @@ export const servicesData = {
     content_heading: "ReactJS",
     content_caption: "Let's Build Amazing ReactJS Application Together!",
     content: [
-      "ReactJS is a rich library supported by Facebook to build reliable web and app solutions. When it comes to building customized software solutions for modern enterprises, ReactJS has remained a choice of developers and entrepreneurs alike. At InheritX, our experienced ReactJS developers deeply understand your requirements and study market trends before initiating ReactJS application development process. We focus on resolving your business demands with the help of technological advancements in a custom web application."
+      "ReactJS is a rich library supported by Facebook to build reliable web and app solutions. When it comes to building customized software solutions for modern enterprises, ReactJS has remained a choice of developers and entrepreneurs alike. At InheritX, our experienced ReactJS developers deeply understand your requirements and study market trends before initiating the ReactJS application development process. We focus on resolving your business demands with the help of technological advancements in a custom web application."
     ],
     key_services: [
       "ReactJS Web Application",
@@ -439,8 +439,8 @@ export const servicesData = {
       "Hire ReactJS Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative ReactJS solutions for business growth." },
-      { title: "Our Company Vision", content: "Build scalable, user-centric web apps with ReactJS." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative ReactJS solutions for business growth." },
+      { title: "Our Company’s Vision", content: "Build scalable, user-centric web apps with ReactJS." },
       { title: "Why Choose InheritX?", content: "Expertise in ReactJS development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end ReactJS development with rapid delivery and support." }
     ],
@@ -461,8 +461,8 @@ export const servicesData = {
     content_heading: "PHP Web",
     content_caption: "Let's Build Amazing PHP Application Together!",
     content: [
-      "When it comes to developing high-performance apps, companies tend to rely on PHP language worldwide. As a robust server-side programming language, PHP powers some of the most popular websites including Wikipedia, WordPress, and Facebook. PHP web development services are capable of addressing complex business requirements through customized web solutions.",
-      "At InheritX, we have an in-house team of experienced PHP developers who provide you the best-in-class PHP web development services. Since inception, we have worked on various PHP projects for our global clientele. Meeting deadlines without compromising quality has remained our endeavor. Our PHP experts strive to offer high-end web solutions in a cost-effective way."
+      "When it comes to developing high-performance apps, companies tend to rely on the PHP language worldwide. As a robust server-side programming language, PHP powers some of the most popular websites including Wikipedia, WordPress, and Facebook. PHP web development services are capable of addressing complex business requirements through customized web solutions.",
+      "At InheritX, we have an in-house team of experienced PHP developers who provide you with the best-in-class PHP web development services. Since inception, we have worked on various PHP projects for our global clientele. Meeting deadlines without compromising quality has remained our endeavor. Our PHP experts strive to offer high-end web solutions in a cost-effective way."
     ],
     key_services: [
       "PHP Enterprise Web App Development",
@@ -475,8 +475,8 @@ export const servicesData = {
       "Hire PHP Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative PHP solutions for business success." },
-      { title: "Our Company Vision", content: "Build scalable, high-performance web apps with PHP." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative PHP solutions for business success." },
+      { title: "Our Company’s Vision", content: "Build scalable, high-performance web apps with PHP." },
       { title: "Why Choose InheritX?", content: "Expertise in PHP development with a focus on performance and cost-effectiveness." },
       { title: "What We Offer?", content: "End-to-end PHP development with rapid delivery and support." }
     ],
@@ -497,8 +497,8 @@ export const servicesData = {
     content_heading: "JAVA Software",
     content_caption: "Let's Build Amazing JAVA Application Together!",
     content: [
-      "Java programming language plays a vital role in bringing digital transformation in modern businesses by enabling developers to come up with outstanding product engineering. All you need to get excellent Java software development services from the most skillful developers. At InheritX, we offer first-rate JAVA (J2EE/J2ME) application development services for web and mobile domains.",
-      "As one of the most popular Java software development companies in India, InheritX Solutions has assisted many startups and SMEs to grow with cost-effective Java application development services. Our holistic approach in developing client-centric app solutions using J2EE platform has enabled us to gain fame as a reliable software development partner."
+      "The Java programming language plays a vital role in bringing digital transformation to modern businesses by enabling developers to come up with outstanding product engineering. All you need is to get excellent Java software development services from the most skillful developers. At InheritX, we offer first-rate JAVA (J2EE/J2ME) application development services for web and mobile domains.",
+      "As one of the most popular Java software development companies in India, InheritX Solutions has assisted many startups and SMEs to grow with cost-effective Java application development services. Our holistic approach in developing client-centric app solutions using the J2EE platform has enabled us to gain fame as a reliable software development partner."
     ],
     key_services: [
       "Java Web Application Development",
@@ -511,8 +511,8 @@ export const servicesData = {
       "Hire Java Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Java solutions for business transformation." },
-      { title: "Our Company Vision", content: "Build scalable, reliable Java apps for modern enterprises." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Java solutions for business transformation." },
+      { title: "Our Company’s Vision", content: "Build scalable, reliable Java apps for modern enterprises." },
       { title: "Why Choose InheritX?", content: "Expertise in Java development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end Java development with rapid delivery and support." }
     ],
@@ -533,7 +533,7 @@ export const servicesData = {
     content_heading: "Wordpress Application",
     content_caption: "Customized Websites. Competitive Pricing",
     content: [
-      "Powering more than 23% of the world’s websites, WordPress is indeed one of the best CMS platforms available to date. Almost all technical as well as non-technical persons have heard about WordPress, which is proof of its growing popularity. Excellent features, customizable themes, useful plugins, and seamless extensions have enabled a WordPress web development company to come up with customized web solutions.",
+      "Powering more than 23% of the world's websites, WordPress is indeed one of the best CMS platforms available to date. Almost all technical as well as non-technical persons have heard about WordPress, which is proof of its growing popularity. Excellent features, customizable themes, useful plugins, and seamless extensions have enabled WordPress web development companies to come up with customized web solutions.",
       "InheritX Solutions offers top-notch WordPress development services by combining technological advancements to meet your business needs in the best possible way. We strive to match market trends and business standards while developing a feature-rich WordPress website."
     ],
     key_services: [
@@ -545,8 +545,8 @@ export const servicesData = {
       "Hire WordPress Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative WordPress solutions for business growth." },
-      { title: "Our Company Vision", content: "Build scalable, SEO-friendly websites with WordPress." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative WordPress solutions for business growth." },
+      { title: "Our Company’s Vision", content: "Build scalable, SEO-friendly websites with WordPress." },
       { title: "Why Choose InheritX?", content: "Expertise in WordPress development with a focus on customization and performance." },
       { title: "What We Offer?", content: "End-to-end WordPress development with rapid delivery and support." }
     ],
@@ -556,9 +556,9 @@ export const servicesData = {
       { q: "Do you provide post-launch support?", a: "Yes, we offer maintenance and updates to ensure website reliability." }
     ]
   },
-  "node.js-development": {
+  "nodejs-development": {
     breadCrumdsTitle: "Node.js Development",
-    category: "node.js-development",
+    category: "nodejs-development",
     type: "Node.js",
     title: "Node JS",
     banner: "/image/page-title/python-developement.jpg",
@@ -567,10 +567,10 @@ export const servicesData = {
     content_heading: "Node.js Application",
     content_caption: "Developing Real-Time NodeJS Web Application Development Solutions For Global Clients!",
     content: [
-      "Inheritx specializes in developing high-performance and scalable Node.JS applications, making us the leading Node JS development company. Our Node JS service is the best as we are known to build some of the most potent applications easily with Node.JS.",
+      "InheritX specializes in developing high-performance and scalable Node.JS applications, making us the leading Node JS development company. Our Node JS service is the best as we are known to build some of the most potent applications easily with Node.JS.",
       "We provide our clients with the best NodeJS developers to assist in building scalable applications quickly and efficiently. And, our Node JS development company team of back-end and front-end developers work together efficiently to make your website design-friendly.",
-      "As a leading Node JS web developer Inheritx is committed to delivering skillful applications to various audiences. And our primary focus is delivering results-oriented solutions to our clients, which leads to their success.",
-      "Kick start your Node.JS website development process by hiring a dedicated and well-experienced Node.JS developers’ team from Inheritx."
+      "As a leading Node JS web developer, InheritX is committed to delivering skillful applications to various audiences. And our primary focus is delivering results-oriented solutions to our clients, which leads to their success.",
+      "Kick start your Node.JS website development process by hiring a dedicated and well-experienced Node.JS developers' team from InheritX."
     ],
     key_services: [
       "Node.js Server-side Development",
@@ -585,8 +585,8 @@ export const servicesData = {
       "Hire Node.js Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Node.js solutions for business success." },
-      { title: "Our Company Vision", content: "Build scalable, real-time web apps with Node.js." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Node.js solutions for business success." },
+      { title: "Our Company’s Vision", content: "Build scalable, real-time web apps with Node.js." },
       { title: "Why Choose InheritX?", content: "Expertise in Node.js development with a focus on performance and scalability." },
       { title: "What We Offer?", content: "End-to-end Node.js development with rapid delivery and support." }
     ],
@@ -608,7 +608,7 @@ export const servicesData = {
     content_caption: "Let's Build Amazing Magento Website Together!",
     content: [
       "Magento is one of the most popular eCommerce platforms in the world that serves over 250,000 online retailers globally. You can boost your retail business by reaching a huge audience with the help of Magento website development services. As a powerful framework, Magento can build a feature-rich and future-ready online shop.",
-      "As a reputed Magento eCommerce development company, InheritX houses certified Magento developers who are well-versed in the latest tools and techniques of Magento platform. We can come up with an online store that can give your customers secure and pleasant shopping experience."
+      "As a reputed Magento eCommerce development company, InheritX houses certified Magento developers who are well-versed in the latest tools and techniques of the Magento platform. We can come up with an online store that can give your customers a secure and pleasant shopping experience."
     ],
     key_services: [
       "Customized Magento E-Commerce Solutions",
@@ -621,8 +621,8 @@ export const servicesData = {
       "Hire Magento Developers"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Magento solutions for eCommerce success." },
-      { title: "Our Company Vision", content: "Build scalable, secure eCommerce platforms with Magento." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Magento solutions for eCommerce success." },
+      { title: "Our Company’s Vision", content: "Build scalable, secure eCommerce platforms with Magento." },
       { title: "Why Choose InheritX?", content: "Expertise in Magento development with a focus on performance and user experience." },
       { title: "What We Offer?", content: "End-to-end Magento development with rapid delivery and support." }
     ],
@@ -643,7 +643,7 @@ export const servicesData = {
     content_heading: "AWS Web",
     content_caption: "Let's Build Amazing AWS Services Together!",
     content: [
-      "AWS or Amazon Web Services are cloud-based services offered by the eCommerce giant Amazon. Your enterprise can get robust, flexible, and scalable storage solutions for valuable corporate data with the AWS cloud services. When it comes to large-scale, decentralized deployment of web services with high security, you can count on Amazon web services.",
+      "AWS or Amazon Web Services are cloud-based services offered by the eCommerce giant Amazon. Your enterprise can get robust, flexible, and scalable storage solutions for valuable corporate data with AWS cloud services. When it comes to large-scale, decentralized deployment of web services with high security, you can count on Amazon web services.",
       "At InheritX, we provide end-to-end backup solutions and customized web solutions using AWS. We utilize the potential of Amazon web services in offering Amazon data and server migration services. While following the best practices, we offer the best Amazon web services in India to enable your company to get the benefits of Amazon’s massive cloud platform."
     ],
     key_services: [
@@ -657,8 +657,8 @@ export const servicesData = {
       "Consultancy and Support"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative AWS solutions for business scalability." },
-      { title: "Our Company Vision", content: "Build reliable, cloud-based solutions with AWS." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative AWS solutions for business scalability." },
+      { title: "Our Company’s Vision", content: "Build reliable, cloud-based solutions with AWS." },
       { title: "Why Choose InheritX?", content: "Expertise in AWS development with a focus on security and scalability." },
       { title: "What We Offer?", content: "End-to-end AWS development with rapid deployment and support." }
     ],
@@ -679,7 +679,7 @@ export const servicesData = {
     content_heading: "PWA",
     content_caption: "Let's Build Amazing PWA Services Together!",
     content: [
-      "Top companies like Alibaba, Ola, Twitter, and Washington Post rely on progressive web apps to thrive. Many companies have also switched over to progressive web apps or PWAs for having a higher engagement and conversion rate than traditional web apps. Progressive web development gains popularity across the world because it enables web developers to deliver high-performance web apps that can provide an app-like experience to the users.",
+      "Top companies like Alibaba, Ola, Twitter, and Washington Post rely on progressive web apps to thrive. Many companies have also switched over to progressive web apps or PWAs for having higher engagement and conversion rates than traditional web apps. Progressive web development gains popularity across the world because it enables web developers to deliver high-performance web apps that can provide an app-like experience to users.",
       "InheritX Solutions is a renowned progressive web app development company that develops enterprise-grade web app solutions for contributing to the exponential growth of your business. Our PWA development services are aimed at offering the benefits of both mobile and web platforms to our clients in a cost-effective way."
     ],
     key_services: [
@@ -689,8 +689,8 @@ export const servicesData = {
       "Support and Maintenance"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative PWA solutions for business growth." },
-      { title: "Our Company Vision", content: "Build scalable, app-like web experiences with PWAs." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative PWA solutions for business growth." },
+      { title: "Our Company’s Vision", content: "Build scalable, app-like web experiences with PWAs." },
       { title: "Why Choose InheritX?", content: "Expertise in PWA development with a focus on performance and user engagement." },
       { title: "What We Offer?", content: "End-to-end PWA development with rapid delivery and support." }
     ],
@@ -711,7 +711,7 @@ export const servicesData = {
     content_heading: "SEO",
     content_caption: "Let's Build Amazing SEO Services Together!",
     content: [
-      "High ranking on Google’s search pages can serve many objectives for your business website. It can improve the visibility of your website and you can get more web traffic that eventually transforms into leads. At InheritX, we implement best SEO practices to get the desired outcome. Our eCommerce SEO services are designed to increase your online retail shop’s ranking and drive more traffic.",
+      "High ranking on Google's search pages can serve many objectives for your business website. It can improve the visibility of your website and you can get more web traffic that eventually transforms into leads. At InheritX, we implement the best SEO practices to get the desired outcome. Our eCommerce SEO services are designed to increase your online retail shop's ranking and drive more traffic.",
       "InheritX Solutions offers the best SEO services to meet your business objectives in the web world. We thoroughly research your company’s business model, market trends, and competitors’ activities before planning an SEO strategy. You can witness the gradual increase in web traffic from the first month as our SEO experts effectively promote your website. We also strive to address your target audience anywhere in the world so that you can grow your business."
     ],
     key_services: [
@@ -725,8 +725,8 @@ export const servicesData = {
       "Consultancy and Support"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative SEO solutions for business visibility." },
-      { title: "Our Company Vision", content: "Drive traffic and conversions with effective SEO strategies." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative SEO solutions for business visibility." },
+      { title: "Our Company’s Vision", content: "Drive traffic and conversions with effective SEO strategies." },
       { title: "Why Choose InheritX?", content: "Expertise in SEO with a focus on measurable results and transparency." },
       { title: "What We Offer?", content: "End-to-end SEO services with rapid results and ongoing support." }
     ],
@@ -747,8 +747,8 @@ export const servicesData = {
     content_heading: "Google Cloud",
     content_caption: "Let's Build Amazing Google Cloud Services Together!",
     content: [
-      "Google Cloud Platform (GCP) enables enterprises to run their apps on a pay-as-you-go model. This platform offers an array of services ranging from Machine Learning, Big Data, Virtual Machines, and networking along with standard storage and data sharing facilities. GCP has gained ground for its huge networking characteristics and robustness to manage intensive and complex corporate data. InheritX houses certified GCP professionals to assist your company to get Google Cloud advantage.",
-      "Our team can work in sync with your company’s various departments and help you make the most of Google Cloud. As a reliable Google Cloud Services provider in India, we help you deploy business mobile apps and websites on Google Cloud. Our consultants can explain all types of use-cases to enable you to find the best fit for your business model."
+      "Google Cloud Platform (GCP) enables enterprises to run their apps on a pay-as-you-go model. This platform offers an array of services ranging from Machine Learning, Big Data, Virtual Machines, and networking along with standard storage and data sharing facilities. GCP has gained ground for its huge networking characteristics and robustness to manage intensive and complex corporate data. InheritX houses certified GCP professionals to assist your company in getting Google Cloud advantage.",
+      "Our team can work in sync with your company's various departments and help you make the most of Google Cloud. As a reliable Google Cloud Services provider in India, we help you deploy business mobile apps and websites on Google Cloud. Our consultants can explain all types of use cases to enable you to find the best fit for your business model."
     ],
     key_services: [
       "Cloud app development",
@@ -757,8 +757,8 @@ export const servicesData = {
       "Cloud-based app maintenance and support"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative Google Cloud solutions for business scalability." },
-      { title: "Our Company Vision", content: "Build reliable, cloud-based solutions with GCP." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative Google Cloud solutions for business scalability." },
+      { title: "Our Company’s Vision", content: "Build reliable, cloud-based solutions with GCP." },
       { title: "Why Choose InheritX?", content: "Expertise in GCP development with a focus on scalability and cost-effectiveness." },
       { title: "What We Offer?", content: "End-to-end GCP development with rapid deployment and support." }
     ],
@@ -779,8 +779,8 @@ export const servicesData = {
     content_heading: "IOT",
     content_caption: "Let's Build Amazing IOT Apps Together!",
     content: [
-      "Internet of Things (IoT) is one of the fastest-growing futuristic technologies globally. As per an official survey, we have over 7 billion internet-connected devices to date. IoT app development services can unleash the potential of your IoT network while enabling you to communicate and control with connected devices through seamlessly-performing apps. Our team of expert IoT app developers can build robust and scalable apps that can be scaled up or down as per changing IoT needs.",
-      "As a leading IoT app development company, InheritX Solutions assists you to transform your business by providing real-time control over the IoT network at your workspace. Our IoT app solutions are customizable and efficient to meet the diverse needs of modern enterprises across various sectors like healthcare, automobile, energy, manufacturing, wearable, and retail. You can hire IoT developers from InheritX in a cost-effective way to avail the advantage of IoT technology."
+      "Internet of Things (IoT) is one of the fastest-growing futuristic technologies globally. As per an official survey, we have over 7 billion internet-connected devices to date. IoT app development services can unleash the potential of your IoT network while enabling you to communicate and control connected devices through seamlessly-performing apps. Our team of expert IoT app developers can build robust and scalable apps that can be scaled up or down as per changing IoT needs.",
+      "As a leading IoT app development company, InheritX Solutions assists you in transforming your business by providing real-time control over the IoT network at your workspace. Our IoT app solutions are customizable and efficient to meet the diverse needs of modern enterprises across various sectors like healthcare, automobile, energy, manufacturing, wearable, and retail. You can hire IoT developers from InheritX in a cost-effective way to avail the advantage of IoT technology."
     ],
     key_services: [
       "Customized IoT App Solutions",
@@ -791,8 +791,8 @@ export const servicesData = {
       "Enterprise IoT App Development"
     ],
     accordions: [
-      { title: "Learn Our Company Mission", content: "Delivering innovative IoT solutions for business transformation." },
-      { title: "Our Company Vision", content: "Build scalable, connected IoT apps for modern enterprises." },
+      { title: "Learn Our Company’s Mission", content: "Delivering innovative IoT solutions for business transformation." },
+      { title: "Our Company’s Vision", content: "Build scalable, connected IoT apps for modern enterprises." },
       { title: "Why Choose InheritX?", content: "Expertise in IoT development with a focus on scalability and performance." },
       { title: "What We Offer?", content: "End-to-end IoT development with rapid delivery and support." }
     ],
@@ -813,8 +813,8 @@ export const servicesData = {
     content_heading: "Mobile Application",
     content_caption: "Let’s build mobile apps that users love to use!",
     content: [
-      "We design and develop scalable, high-performance mobile apps for iOS and Android. From MVP to enterprise-grade solutions, we cover the full lifecycle: strategy, UX/UI, development, testing, deployment and ongoing support.",
-      "Our teams specialize in native (Swift, Kotlin) and cross-platform (Flutter, React Native) stacks, delivering seamless experiences, robust security and maintainable codebases that are built to last."
+      "We design and develop scalable, high-performance mobile apps for iOS and Android. From MVP to enterprise-grade solutions, we cover the full lifecycle: strategy, UX/UI, development, testing, deployment, and ongoing support.",
+      "Our teams specialize in native (Swift, Kotlin) and cross-platform (Flutter, React Native) stacks, delivering seamless experiences, robust security, and maintainable codebases that are built to last."
     ],
     key_services: [
       "iOS App Development",
@@ -878,7 +878,7 @@ export const servicesData = {
     "content_heading": "AI & Machine Learning",
     "content_caption": "From predictive models to AI-powered features.",
     "content": [
-      "We integrate AI/ML into products to unlock automation, personalization and insights. Our expertise includes classical ML, deep learning, NLP, vector search, and LLM integrations.",
+      "We integrate AI/ML into products to unlock automation, personalization, and insights. Our expertise includes classical ML, deep learning, NLP, vector search, and LLM integrations.",
       "We focus on practical models, responsible AI, and production-grade MLOps so your solutions are reliable, observable, and cost-efficient."
     ],
     "key_services": [
@@ -940,8 +940,8 @@ export const servicesData = {
     "content_heading": "AI Agent",
     "content_caption": "Empowering Businesses with Intelligent AI Agents",
     "content": [
-      "At Inhertix Solutions, we specialize in building AI-powered agents that act, learn, and adapt in real time—enabling businesses to automate complex workflows, enhance customer interactions, and make smarter decisions faster.",
-      "Unlike traditional automation, AI agents go beyond static rules. They combine machine learning, natural language processing, and reasoning capabilities to analyze context, take decisions, and perform tasks autonomously, unlocking new levels of efficiency and innovation."
+      "At InheritX Solutions, we specialize in building AI-powered agents that act, learn, and adapt in real time—enabling businesses to automate complex workflows, enhance customer interactions, and make smarter decisions faster.",
+      "Unlike traditional automation, AI agents go beyond static rules. They combine machine learning, natural language processing, and reasoning capabilities to analyze context, make decisions, and perform tasks autonomously, unlocking new levels of efficiency and innovation."
     ],
     "services": {
       "title": "Our AI Agent Development Process",
@@ -983,7 +983,7 @@ export const servicesData = {
     "content_heading": "AI & ML Model Expertise",
     "content_caption": "Delivering Intelligent Models that Drive Business Impact",
     "content": [
-      "At Inhertix Solutions, we bring deep expertise in building, training, and deploying AI and Machine Learning (ML) models that power smarter decision-making, automate processes, and unlock new revenue opportunities. From predictive analytics to advanced deep learning models, our solutions are tailored to meet the unique needs of your business.",
+      "At InheritX Solutions, we bring deep expertise in building, training, and deploying AI and Machine Learning (ML) models that power smarter decision-making, automate processes, and unlock new revenue opportunities. From predictive analytics to advanced deep learning models, our solutions are tailored to meet the unique needs of your business.",
       "Our team of data scientists and AI engineers leverage the latest algorithms, frameworks, and cloud technologies to deliver models that are accurate, scalable, and production-ready. Whether you’re looking to enhance customer experiences, optimize operations, or innovate products, we help you harness the full potential of AI and ML.",
       "We don’t just experiment—we build production-ready AI & ML models that deliver measurable ROI."
     ],

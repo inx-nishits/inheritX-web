@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { portfolioItems } from '../components/portfolio/portfolioData'
 import PortfolioItem from '../components/portfolio/PortfolioItem'
+import { fetchPortfolioItems } from '../utils/portfolioUtils'
 
-export const dynamic = 'force-static'
+export const dynamic = 'force-dynamic'
 
-export default function Page () {
-  // Filter items by category for tabs
+export default async function Page () {
+  const portfolioItems = await fetchPortfolioItems()
+
   const allItems = portfolioItems
   const webItems = portfolioItems.filter(item => item.category === 'UI/UX Design' || item.category === 'Web')
   const mobileItems = portfolioItems.filter(item => item.category === 'Mobile App Development' || item.category === 'Software Development')
@@ -21,7 +22,7 @@ export default function Page () {
               <span className='dot'></span>
               <span className='page-breadkcum body-2 fw-7 split-text effect-right'>Portfolio</span>
             </div>
-            <h3 className='text-center pt-5 mt-3 mb-5'>Portable Showcase of Our Creative Work.</h3>
+            <h3 className='text-center pt-5 mt-3 mb-5'>Portfolio Showcase of Our Creative Work.</h3>
             <p className='text-center lh-30'>Our work and happy clients speak for us. Here is a compilation of our work that we have created, managed and optimized with utmost love and dedication.<br />Take a look at our comprehensive portfolio.</p>
           </div>
         </div>

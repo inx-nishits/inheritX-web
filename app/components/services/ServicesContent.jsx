@@ -72,8 +72,8 @@ export default function ServicesContent() {
                       Solutions
                     </div>
                     <h2 className='title fw-6 title-animation'>
-                      From Web to Mobility and DevOps to Cloud Management
-                      <span className='fw-3'>&nbsp;- We Excel in All Services</span>
+                      From Web to Mobility, and DevOps to Cloud Management
+                      <span className='fw-3'>&nbsp;- we excel across the full spectrum of digital services.</span>
                     </h2>
                   </div>
                   <div className='section-content'>
@@ -173,10 +173,7 @@ export default function ServicesContent() {
                 </h5>
 
                 <div className='desc lh-30'>
-                  Since inception, InheritX Solutions has delivered
-                  seamlessly-performing websites that meet our clients’
-                  corporate needs efficiently. We craft excellent and elegant
-                  websites in all major frameworks. Delve in to know more.
+                  Since its inception, InheritX Solutions has delivered seamlessly performing websites that meet our clients’ corporate needs efficiently. We craft excellent and elegant websites in all major frameworks. Delve in to know more.
                 </div>
               </div>
 
@@ -196,10 +193,7 @@ export default function ServicesContent() {
                 </h5>
 
                 <div className='desc lh-30'>
-                  We offer a comprehensive range of enterprise mobility
-                  solutions that can enhance the productivity, security, and
-                  scalability of your business processes. We always meet
-                  deadlines while developing quality apps.
+                  We offer a comprehensive range of enterprise mobility solutions that can enhance the productivity, security, and scalability of your business processes. We always meet deadlines while developing high-quality apps.
                 </div>
               </div>
 
@@ -219,10 +213,7 @@ export default function ServicesContent() {
                 </h5>
 
                 <div className='desc lh-30'>
-                  Our Blockchain-based app solutions ensure the safety of your
-                  online, high-volume transactions. You can build trust and
-                  bring flexibility by providing your customers with a highly
-                  secure way of online transactions.
+                  Our blockchain-based app solutions ensure the safety of your online, high-volume transactions. You can build trust and bring flexibility by providing your customers with a highly secure way of conducting online transactions.
                 </div>
               </div>
 
@@ -242,10 +233,7 @@ export default function ServicesContent() {
                 </h5>
 
                 <div className='desc lh-30'>
-                  We integrate advancements from contemporary and emerging
-                  technologies to build customized and high-end enterprise
-                  software solutions. We serve our global corporate clientele
-                  with the best-in-class IT solutions.
+                  We integrate advancements from contemporary and emerging technologies to build customized, high-end enterprise software solutions. We serve our global corporate clientele with best-in-class IT solutions.
                 </div>
               </div>
 
@@ -265,10 +253,7 @@ export default function ServicesContent() {
                 </h5>
 
                 <div className='desc lh-30'>
-                  We offer reliable cloud management services at reasonable
-                  rates. You can meet data storage and access needs effectively
-                  with our cloud-based solutions. Welcome to new opportunities
-                  and scope for expansion.
+                  We offer reliable cloud management services at reasonable rates. You can meet data storage and access needs effectively with our cloud-based solutions. Welcome to new opportunities and the scope for expansion.
                 </div>
               </div>
 
@@ -288,36 +273,12 @@ export default function ServicesContent() {
                 </h5>
 
                 <div className='desc lh-30'>
-                  From smart homes to smart offices, IoT takes it all! We
-                  provide IoT app development services for individuals,
-                  healthcare and manufacturing sectors, and our corporate
-                  clients across the world at competitive rates.
+                  From smart homes to smart offices, IoT takes it all! We provide IoT app development services for individuals, the healthcare and manufacturing sectors, and our corporate clients across the world at competitive rates.
                 </div>
               </div>
             </div>
           </div>
 
-
-          {/* <div className='tf-container'>
-            <div className='list-services flex flex-wrap'>
-              {Object.values(servicesData).map((item) => (
-                <div key={item.category} className='services-item px-lg-15 col-md-4 no-img'>
-                  <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
-                  </div>
-
-                  <h5 className='lh-30 fw-6'>
-                    <Link href={`/services/${item.category}`} className='title-service'>
-                      {item.heading || item.title}
-                    </Link>
-                  </h5>
-
-                  <div className='desc lh-30'>
-                    {item.content_caption || item.heading_caption}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </section>
 
         <div
@@ -354,7 +315,7 @@ export default function ServicesContent() {
                     <span className='text-primary'>Grow</span> & Development
                   </div>
                   <h2 className='title fw-6 title-animation'>
-                    Modern Technology and
+                  Modern Technology and
                     <span className='fw-3'>&nbsp;Advancement Incentives</span>
                   </h2>
                 </div>
@@ -366,7 +327,7 @@ export default function ServicesContent() {
                         data-bs-toggle='collapse'
                         className='title-according'
                       >
-                        Learn Our Company Mission<span></span>
+                        Learn Our Company’s Mission<span></span>
                       </a>
                     </h5>
                     <div
@@ -388,7 +349,7 @@ export default function ServicesContent() {
                             Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc lh-30 mb-0'>
-                            We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
+                            We strive to offer superior-quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose for long-term returns.
                           </div>
                         </div>
                       </div>
@@ -401,7 +362,7 @@ export default function ServicesContent() {
                         data-bs-toggle='collapse'
                         className='title-according collapsed'
                       >
-                        Our Company Vision<span></span>
+                        Our Company’s Vision<span></span>
                       </a>
                     </h5>
                     <div
@@ -420,7 +381,7 @@ export default function ServicesContent() {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
+                            To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers’ lives.
                           </div>
 
                           <div className='desc lh-30 mb-0'>
@@ -437,7 +398,7 @@ export default function ServicesContent() {
                         data-bs-toggle='collapse'
                         className='title-according collapsed'
                       >
-                        Why Choose Inheritx?<span></span>
+                        Why Choose InheritX?<span></span>
                       </a>
                     </h5>
                     <div
@@ -488,9 +449,7 @@ export default function ServicesContent() {
                         </div>
                         <div className='right'>
                           <div className='desc lh-30'>
-                            InheritX Solutions has an in-house team of
-                            experienced developers who can handle any size
-                            project in the domains of web, mobile app, and IoT.
+                            InheritX Solutions has an in-house team of experienced developers who can handle projects of any size in the domains of web, mobile apps, and IoT.
                           </div>
                         </div>
                       </div>
@@ -566,8 +525,7 @@ export default function ServicesContent() {
                     Our <span className='text-primary'>Platforms</span>
                   </h2>
                   <p className='title-animation'>
-                    Inheritx provides Web App Development Services in PHP,
-                    Asp.Net, Angularjs, Nodejs and UI/UX Design.
+                    InheritX provides web app development services in PHP, ASP.NET, AngularJS, Node.js, and UI/UX design.
                   </p>
                 </div>
               </div>
@@ -588,12 +546,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     iOS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -611,12 +566,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Android Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -634,12 +586,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Flutter Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -657,12 +606,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     React Native Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -680,12 +626,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     AngularJS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -703,12 +646,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Python Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -726,12 +666,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     NextJS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -749,12 +686,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Laravel Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -772,12 +706,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     ReactJS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -795,12 +726,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Node.js Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -818,12 +746,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     PHP Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -841,12 +766,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     AWS Services
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -864,12 +786,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     IOT Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -887,12 +806,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     PWA Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -910,12 +826,9 @@ export default function ServicesContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Digital Marketing
-                  </a>
+                  </span>
                 </h5>
               </div>
             </div>

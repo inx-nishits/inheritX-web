@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import BlogImage from '../components/BlogImage';
+import ImagePreloader from '../components/ImagePreloader';
 
 export const dynamic = 'force-static';
 
@@ -24,9 +26,20 @@ export default function Page() {
         let isMounted = true;
         async function loadData() {
             try {
-                const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog');
+                // Show loading immediately
+                setLoading(true);
+                setError(null);
+                
+                const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
+                    cache: 'no-store', // Ensure fresh data
+                    headers: {
+                        'Accept': 'application/json',
+                    }
+                });
+                
                 if (!res.ok) throw new Error('Failed to fetch blog data');
                 const json = await res.json();
+                
                 if (isMounted) {
                     setBlogData(json);
                     setLoading(false);
@@ -38,14 +51,24 @@ export default function Page() {
                 }
             }
         }
+        
+        // Load data immediately
         loadData();
+        
         return () => {
             isMounted = false;
         };
     }, []);
 
+    // Get critical images for preloading
+    const criticalImages = blogData ? [
+        ...(blogData.singleBlog?.slice(0, 1).map(post => post.feature_image) || []),
+        ...(blogData.recentBlog?.slice(0, 3).map(post => post.feature_image) || [])
+    ].filter(Boolean) : [];
+
     return (
         <>
+            <ImagePreloader images={criticalImages} />
             <style jsx>{`
         /* Ensure blog listing card images are full width */
         .tf-grid-2 .tf-post-grid .top .image,
@@ -484,7 +507,7 @@ export default function Page() {
                             <span className="page-breadkcum body-2 fw-7 split-text effect-right"> Blog</span>
                         </div>
 
-                        <p className='pt-4'>Expert Speak on Trending Topics.</p>
+                        <p className='pt-4'>Expert Speak on Trending Topics</p>
                     </div>
                 </div>
             </div>
@@ -517,7 +540,14 @@ export default function Page() {
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
                                                     <a href={`/blog/${post.slug}`} className="image">
-                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className=" ls-is-cached lazyloaded" />
+                                                        <BlogImage 
+                                                            src={post.feature_image} 
+                                                            alt={post.title}
+                                                            className="ls-is-cached lazyloaded"
+                                                            width={400}
+                                                            height={300}
+                                                            priority={true}
+                                                        />
                                                     </a>
                                                     <div className="post-content px-md-15">
                                                         <h6 className="title lh-32">
@@ -528,19 +558,26 @@ export default function Page() {
                                                 <div className="bottom-item px-md-15">
                                                     <div className="author-info">
                                                         <i className="icon-user user-icon"></i>
-                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href={`/blog/category/${post.category[0].slug}`} className="category-link">{post.category[0].name}</a>)}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     ))}
 
-                                    {blogData?.recentBlog?.map((post) => (
+                                    {blogData?.recentBlog?.map((post, index) => (
                                         <div className="fl-item" key={`recent-${post.id}`}>
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
                                                     <a href={`/blog/${post.slug}`} className="image">
-                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className=" ls-is-cached lazyloaded" />
+                                                        <BlogImage 
+                                                            src={post.feature_image} 
+                                                            alt={post.title}
+                                                            className="ls-is-cached lazyloaded"
+                                                            width={400}
+                                                            height={300}
+                                                            priority={index < 2}
+                                                        />
                                                     </a>
                                                     <div className="post-content px-md-15">
                                                         <h6 className="title lh-32">
@@ -551,7 +588,7 @@ export default function Page() {
                                                 <div className="bottom-item px-md-15">
                                                     <div className="author-info">
                                                         <i className="icon-user user-icon"></i>
-                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href={`/blog/category/${post.category[0].slug}`} className="category-link">{post.category[0].name}</a>)}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -598,8 +635,8 @@ export default function Page() {
                                             {(blogData?.categories || []).map((cat) => (
                                                 <li className="item" key={cat.id}>
                                                     <i className="icon-arrow-right"></i>
-                                                    <a href="#" className="body-2 fw-5">{cat.name}</a>
-                                                    <span className="category-count">{cat.count}</span>
+                                                    <a href={`/blog/category/${cat.slug}`} className="body-2 fw-5">{cat.name}</a>
+                                                    <span className="category-count">{cat.count || 0}</span>
                                                 </li>
                                             ))}
                                             {showSkeleton && (!blogData?.categories || blogData?.categories?.length === 0) && (
@@ -674,7 +711,7 @@ export default function Page() {
                                                 <div className="bottom-item px-md-15">
                                                     <div className="author-info">
                                                         <i className="icon-user user-icon"></i>
-                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href={`/blog/category/${post.category[0].slug}`} className="category-link">{post.category[0].name}</a>)}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -760,7 +797,7 @@ export default function Page() {
                                                 <div className="bottom-item px-md-15">
                                                     <div className="author-info">
                                                         <i className="icon-user user-icon"></i>
-                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href="#" className="category-link">{post.category[0].name}</a>)}</span>
+                                                        <span>{post.author}{post.category?.[0]?.name ? `, in ` : ''}{post.category?.[0]?.name && (<a href={`/blog/category/${post.category[0].slug}`} className="category-link">{post.category[0].name}</a>)}</span>
                                                     </div>
                                                 </div>
                                             </div>

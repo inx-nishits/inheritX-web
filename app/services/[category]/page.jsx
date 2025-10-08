@@ -146,12 +146,12 @@ export default function ServiceDetailsPage({ params }) {
                       className="d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100 tf-animation fade-up"
                       data-animation-delay={`${index * 0.2}s`}
                     >
-                      <h3 className="title-animation text-primary lh-40">
+                      <h4 className="title-animation text-primary lh-40">
                         {/* <span className="text-primary d-block year-animate mb-2">
                           Step {index + 1}
                         </span> */}
                         {item.title}
-                      </h3>
+                      </h4>
                       <p className="lh-30">{item.content}</p>
                     </div>
                   </div>

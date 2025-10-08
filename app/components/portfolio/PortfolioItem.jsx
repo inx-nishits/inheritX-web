@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function PortfolioItem({ item }) {
   return (
-    <div className='col-sm-6'>
+    <div className='col-sm-6 col-md-4'>
       <div className='project-gird-item project-item'>
         <Link href={`/porfolio-details/${item.slug}`} className='image'>
           <img 

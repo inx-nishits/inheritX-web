@@ -141,11 +141,11 @@ export default function AboutContent() {
               </div>
               <div className='right'>
                 <div className='heading-section mb-60'>
-                  <div className='fs-1 fw-7 mb-5 title-animation'>
+                  <h2 className='fw-7 mb-5 title-animation'>
                     Who We Are
-                  </div>
+                  </h2>
                   <p className='lh-30 fs-3 title-animation mb-5'>
-                    Since 2011, excellent customer service has not just been a phrase, but a core value of InheritX Solutions. Developing high-quality solutions in the web and mobile app domains has been a way of life at InheritX for over eight years. Our client-centric approach and no compromise on performance have made us an undisputed leader in mobile app, web, game, and digital marketing.
+                    Since 2011, excellent customer service has not just been a phrase, but a core value of InheritX Solutions. Developing high-quality solutions in the web and mobile app domains has been a way of life at InheritX for over fourteen years. Our client-centric approach and no compromise on performance have made us an undisputed leader in mobile app, web, game, and digital marketing.
                   </p>
 
                   <p className='lh-30 fs-3 title-animation mb-5'>
@@ -268,7 +268,7 @@ export default function AboutContent() {
                   </h3>
                   <p className='lh-30'>
                     Our small setup evolved rapidly, and InheritX Solutions
-                    became a member of NASSCOM, IGDA, and other reputed industry
+                    became a member of NASSCOM, IGDA, and other reputable industry
                     organizations.
                   </p>
                 </div>
@@ -313,7 +313,7 @@ export default function AboutContent() {
                   </h3>
                   <p className='lh-30'>
                     Enhanced business policies, launched digital marketing
-                    services, and recognized as a top mobile app development
+                    services, and was recognized as a top mobile app development
                     company by GESIA.
                   </p>
                 </div>
@@ -489,7 +489,7 @@ export default function AboutContent() {
                     Solutions
                   </div>
                   <h2 className='title fw-6 title-animation'>
-                    Leaders in providing Mobile, Web, Game and Internet
+                    Leaders in providing Mobile, Web, Game, and Internet
                     Marketing solutions.
                   </h2>
                 </div>
@@ -910,7 +910,7 @@ export default function AboutContent() {
               <div className='col-lg-7'>
                 <div className='heading-section mb-60'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    Clients Feedback
+                    Client Feedback
                   </div>
                   <h2 className='title fw-6 title-animation'>
                     1250+ People Say&nbsp;
@@ -933,7 +933,7 @@ export default function AboutContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
+                          Overall, I was very satisfied with InheritX. They are hardworking, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
                           <span className='name-user body-2 '>

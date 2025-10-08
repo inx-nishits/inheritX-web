@@ -90,7 +90,7 @@ export default function HireExpertContent() {
                         to come up with innovative IT solutions that easily
                         connect them with employees and customers. But, at
                         times, startups and SMEs find it difficult to bring
-                        advanced solutions for their business due to budget
+                        advanced solutions to their business due to budget
                         constraints and other limitations. Hiring models are
                         designed to meet this issue effectively.
                       </p>
@@ -100,9 +100,9 @@ export default function HireExpertContent() {
                         partner. We have provided the best resources to our
                         global clientele to accomplish their web and app
                         projects on time. Our experienced web and app developers
-                        are capable of handling the projects of any size and
-                        scale while meeting the deadlines. Whatever hiring model
-                        you choose, you can remain ensured of the best IT
+                        are capable of handling projects of any size and
+                        scale while meeting deadlines. Whatever hiring model
+                        you choose, you can remain assured of the best IT
                         solutions at reasonable rates.
                       </p>
                     </div>
@@ -204,8 +204,8 @@ export default function HireExpertContent() {
                   <h3 className='title-service'>Collaboration</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
-                  We tend to collaborate with various teams of the client’s
-                  company to come up with the most suitable solution in the web
+                  We tend to collaborate with various teams of the client's
+                  company to come up with the most suitable solutions in the web
                   and mobility domains
                 </div>
               </div>
@@ -323,8 +323,8 @@ export default function HireExpertContent() {
                   <h3 className='title-service'>Transparency</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
-                  By implementing the best method for ensuring the safety of the
-                  client’s data and signing NDA, we provide the highest level of
+                  By implementing the best methods for ensuring the safety of the
+                  client's data and signing NDAs, we provide the highest level of
                   transparency
                 </div>
               </div>
@@ -386,7 +386,7 @@ export default function HireExpertContent() {
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Since inception, we have never compromised on the quality and
-                  performance of our solutions to gain trust of our global
+                  performance of our solutions to gain the trust of our global
                   corporate clientele
                 </div>
               </div>
@@ -541,7 +541,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service'>Migration Service</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
-                  Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize infrastructure and optimize performance seamlessly.
+                  Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize their infrastructure and optimize performance seamlessly.
                 </div>
               </div>
             </div>
@@ -628,8 +628,8 @@ export default function HireExpertContent() {
                     Our <span className='text-primary'>Platforms</span>
                   </h2>
                   <p className='title-animation'>
-                    Inheritx provides Web App Development Services in PHP,
-                    Asp.Net, Angularjs, Nodejs and UI/UX Design.
+                    InheritX provides Web App Development Services in PHP,
+                    ASP.NET, AngularJS, Node.js and UI/UX Design.
                   </p>
                 </div>
               </div>
@@ -650,12 +650,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     iOS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -673,12 +670,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Android Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -696,12 +690,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Flutter Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -719,12 +710,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     React Native Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -742,12 +730,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     AngularJS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -765,12 +750,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Python Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -788,12 +770,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     NextJS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -811,12 +790,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Laravel Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -834,12 +810,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     ReactJS Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -857,12 +830,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Node.js Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -880,12 +850,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     PHP Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -903,12 +870,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     AWS Services
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -926,12 +890,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     IOT Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -949,12 +910,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     PWA Development
-                  </a>
+                  </span>
                 </h5>
               </div>
 
@@ -972,12 +930,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <a
-                    href='services-details.html'
-                    className='title-service text-primary'
-                  >
+                  <span className='title-service text-primary'>
                     Digital Marketing
-                  </a>
+                  </span>
                 </h5>
               </div>
             </div>

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 
-export default function JoinOurTeam () {
+export default function JoinOurTeam() {
   const resumeInputRef = useRef(null)
   const [resumeFile, setResumeFile] = useState(null)
   const [resumeError, setResumeError] = useState('')
@@ -159,16 +159,16 @@ export default function JoinOurTeam () {
                     <ul className='ps-3 lh-30'>
                       <li>Thorough understanding of React.js and its core principles</li>
                       <li>Experience with popular React.js workflows (such as Flux or Redux)</li>
-                      <li>Experience in styled component</li>
-                      <li>Experience hooks and functional components</li>
+                      <li>Experience with styled components</li>
+                      <li>Experience with hooks and functional components</li>
                       <li>Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model</li>
-                      <li>Familiarity with newer specifications of EcmaScript</li>
+                      <li>Familiarity with newer specifications of ECMAScript</li>
                       <li>Building reusable components and front-end libraries for future use</li>
                       <li>Good Communication</li>
                       <li>Must have excellent problem-solving skills and love technical challenges</li>
                       <li>Understanding of object-oriented and functional programming</li>
                       <li>Familiarity with RESTful APIs</li>
-                      <li>Experience with common front-end development tools such as Babel, Webpack, NPM, etc</li>
+                      <li>Experience with common front-end development tools such as Babel, Webpack, NPM, etc.</li>
                       <li>Ability to understand business requirements and translate them into technical requirements</li>
                       <li>A knack for benchmarking and optimization</li>
                       <li>Familiarity with code versioning tools</li>
@@ -372,16 +372,16 @@ export default function JoinOurTeam () {
               </div>
               <div className='right'>
                 <div className='heading-section mb-60'>
-                  <div className='fs-1 fw-7 mb-5 title-animation'>
+                  <h2 className='fw-7 mb-5 title-animation'>
                     <span className='text-primary'>Career</span> & Culture
-                  </div>
+                  </h2>
                   <p className='lh-30 fs-2 title-animation mb-5'>
                     We have combined career with the work culture to give you a
                     robust platform to learn new things, use cutting-edge tools,
                     and implement creative insights while making advanced IT
                     solutions. Since inception, InheritX Solutions remains
                     client-centric and employee-oriented company. We make sure
-                    that you can go ahead in a healthily competitive environment
+                    that you can advance in a healthy competitive environment
                     without having much stress.
                   </p>
 
@@ -390,7 +390,7 @@ export default function JoinOurTeam () {
                     As a fresher, you will get support from experienced seniors,
                     and as an experienced professional, you will have a
                     collaborative and cooperative work culture. We never say
-                    that InheritX is the best company to work with, we have made
+                    that InheritX is the best company to work with; we have made
                     it!
                   </p>
 
@@ -718,7 +718,7 @@ export default function JoinOurTeam () {
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
                   <h2 className='title fw-6 title-animation mb-5'>
-                    Smart person who knows
+                    Smart people who know
                     <span className='text-primary'>&nbsp;how to grab</span> the&nbsp;opportunities
                   </h2>
                 </div>
@@ -866,7 +866,7 @@ export default function JoinOurTeam () {
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
                   <h2 className='title fw-6 title-animation mb-5'>
-                    If you’ve any question or want to send the resume, contact
+                    If you have any questions or want to send your resume, contact
                     our
                     <span className='text-primary'>&nbsp;HR department</span>.
                   </h2>
@@ -979,9 +979,9 @@ export default function JoinOurTeam () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          I am working at InheritX Solutions since three years.
+                          I have been working at InheritX Solutions for three years.
                           During this time, I've found that the company follows
-                          every standard proecedures with the utmost
+                          every standard procedure with the utmost
                           transparency and client-centric approach. What I like
                           the most about this company is employee-friendly
                           practices and healthy competition that motivate all of
@@ -1008,8 +1008,8 @@ export default function JoinOurTeam () {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          I am associated with InheritX Solutions since four
-                          years. From day 1, I was being told that apart from
+                          I have been associated with InheritX Solutions for four
+                          years. From day 1, I was told that apart from
                           hiring the right candidates for various positions, my
                           major role will be to maintain the work-life balance
                           of all employees. I am happy that I am in a company

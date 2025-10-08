@@ -1,6 +1,6 @@
 ﻿import Link from 'next/link'
 
-export default function Footer () {
+export default function Footer() {
   return (
     <footer className='footer' id='footer'>
       <div className='mask mask-1'></div>
@@ -38,7 +38,7 @@ export default function Footer () {
               </p>
 
               <div className='contact-footer item'>
-              <div className='title fs-1 fw-7 mb-4'>Contact</div>
+                <div className='title fs-1 fw-7 mb-4'>Contact</div>
                 <div>
                   <ul>
                     <li className='top-bar-item'>
@@ -354,9 +354,9 @@ export default function Footer () {
 
                         <strong>United States</strong>
                       </h3>
-                     222 Broadway, New York, NY 10038
+                      222 Broadway, New York, NY 10038
                       <br />
-                     United States
+                      United States
                     </div>
                   </div>
 
@@ -376,7 +376,7 @@ export default function Footer () {
 
                         <strong>Germany</strong>
                       </h3>
-                     Kloster 3, 79713 Bad Säckingen
+                      Kloster 3, 79713 Bad Säckingen
                       <br />
                       Germany
                     </div>
@@ -399,7 +399,7 @@ export default function Footer () {
                       </h3>
                       1-36-13 Hashiba, Taito-ku, Tokyo
                       <br />
-                     Japan
+                      Japan
                     </div>
                   </div>
                 </div>
@@ -427,9 +427,6 @@ export default function Footer () {
                 </li>
                 <li>
                   <Link href='/about-us'>About</Link>
-                </li>
-                <li>
-                  <a href='#'>Privacy Policy</a>
                 </li>
                 <li>
                   <Link href='/contact'>Contact</Link>

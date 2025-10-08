@@ -369,7 +369,7 @@ export default function HomeContent() {
                       href='/about-us'
                       className='tf-btn no-bg text-underline'
                     >
-                      <span>Learn More Us</span>
+                      <span>Learn More About Us</span>
                       <i className='icon-arrow-right'></i>
                     </Link>
                   </div>
@@ -694,7 +694,7 @@ export default function HomeContent() {
                     Our <span className='text-primary'>Popular</span> Services
                   </div>
                   <h2 className='title fw-6 title-animation mb-5'>
-                    We Run All kinds Of IT Services
+                    We Run All Kinds Of IT Services
                     <br />
                     <span className='fw-3'>that vow your success.</span>
                   </h2>

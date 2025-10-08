@@ -1,14 +1,11 @@
 import Link from 'next/link'
-import { portfolioItems } from '../../components/portfolio/portfolioData'
+import { fetchPortfolioItems } from '../../utils/portfolioUtils'
 
-export const dynamic = 'force-static'
+export const dynamic = 'force-dynamic'
 
-export async function generateStaticParams () {
-  return portfolioItems.map(item => ({ slug: item.slug }))
-}
-
-export default function PortfolioDetailsPage ({ params }) {
+export default async function PortfolioDetailsPage ({ params }) {
   const { slug } = params || {}
+  const portfolioItems = await fetchPortfolioItems()
   const idx = portfolioItems.findIndex(p => p.slug === slug)
   const item = idx >= 0 ? portfolioItems[idx] : null
   const prev = idx > 0 ? portfolioItems[idx - 1] : null
@@ -18,7 +15,7 @@ export default function PortfolioDetailsPage ({ params }) {
     return (
       <div className='tf-container tf-spacing-8'>
         <h2 className='title'>Portfolio not found</h2>
-        <Link href='/porfolio-grid' className='tf-btn'>
+        <Link href='/portfolio' className='tf-btn'>
           <span>Back to Portfolio</span>
         </Link>
       </div>
@@ -51,12 +48,20 @@ export default function PortfolioDetailsPage ({ params }) {
             </div>
             
             <div className='project-modal-content'>
+              {item.cover && (
+                <div className='project-image-section mb-4'>
+                  <img 
+                    src={item.cover} 
+                    alt={item.title} 
+                    className='img-fluid rounded'
+                    style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }}
+                  />
+                </div>
+              )}
+              
               <div className='project-description-section'>
                 <p className='project-description-text'>
-                  {item.title === 'Smart TV' 
-                    ? 'TV app built for Hotels where they provide better TV experience for customers who stay in hotel rooms. TV apps provide features like hotel booking, in-room dining, nearby events, Movie to watch, etc... Feature and UI will be based on hotel config in the control panel. TV will operate this app only as TV devices are customized and only operate this app from boot to turn-off.'
-                    : item.description
-                  }
+                  {item.description || 'No description available for this project.'}
                 </p>
               </div>
               
@@ -118,7 +123,11 @@ export default function PortfolioDetailsPage ({ params }) {
                       <Link href={`/porfolio-details/${prev.slug}`}>{prev.title}</Link>
                     </h4>
                     <Link href={`/porfolio-details/${prev.slug}`} className='image'>
-                      <img src='/image/section/service-details-prev.jpg' alt='' className='lazyload' />
+                      <img 
+                        src={prev.thumb || '/image/section/service-details-prev.jpg'} 
+                        alt={prev.title} 
+                        className='lazyload img-fluid w-100 h-auto rounded' 
+                      />
                     </Link>
                   </div>
                 )}
@@ -133,7 +142,11 @@ export default function PortfolioDetailsPage ({ params }) {
                       <Link href={`/porfolio-details/${next.slug}`}>{next.title}</Link>
                     </h4>
                     <Link href={`/porfolio-details/${next.slug}`} className='image'>
-                      <img src='/image/section/service-details-next.jpg' alt='' className='lazyload' />
+                      <img 
+                        src={next.thumb || '/image/section/service-details-next.jpg'} 
+                        alt={next.title} 
+                        className='lazyload img-fluid w-100 h-auto rounded' 
+                      />
                     </Link>
                   </div>
                 )}
