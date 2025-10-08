@@ -304,9 +304,6 @@ a[href='javascript:;'] {
 .section-services .sw-services .services-item.style-1 .desc.lh-30 {
   min-height: 60px; /* 2 lines at 30px line-height */
 }
-@media (max-width: 550px) {
-  .section-services .sw-services .services-item.style-1 .desc.lh-30 { min-height: 60px; }
-}
 
 /* Team images: maintain aspect ratio, avoid stretching, uniform crop */
 .section-team .team-item .image {
@@ -332,7 +329,23 @@ a[href='javascript:;'] {
 .sw-pagination .swiper-pagination-bullet:last-child {
   margin-right: 0 !important;
 }
+
+.offcanvas-backdrop.show {
+  opacity: 0.8 !important;
+}
+
+@media (max-width: 1366px) {
+  .header .logo-header >  a{max-width: 230px;}
+  .menu-primary-menu {
+    gap: 20px;
+}
+  }
+
 @media (max-width: 767.98px) {
   .sw-pagination .swiper-pagination-bullet { width: 18px !important; height: 18px !important; margin-right: 20px !important; }
 }
 
+
+@media (max-width: 550px) {
+  .section-services .sw-services .services-item.style-1 .desc.lh-30 { min-height: 60px; }
+}

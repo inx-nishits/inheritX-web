@@ -27,7 +27,7 @@ export default function Footer() {
           <div className='footer-middle flex justify-content-between '>
             <div className='left'>
               <div className='logo logo-header mb-5'>
-                <Link href='/'>
+                <Link href='/' className='d-flex align-items-center'>
                   <img src='/image/logo/inx-logo.svg' alt='logo' />
                 </Link>
               </div>

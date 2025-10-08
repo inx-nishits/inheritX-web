@@ -18,11 +18,11 @@ export async function generateStaticParams() {
 const findBestCandidate = (candidates) => {
   if (candidates.length === 0) return null
   if (candidates.length === 1) return candidates[0]
-  
+
   // Prefer candidates with more complete data
-  return candidates.find(d => 
-    d.our_services_icons && 
-    d.our_services_icons.length > 0 && 
+  return candidates.find(d =>
+    d.our_services_icons &&
+    d.our_services_icons.length > 0 &&
     d.our_services_icons.some(i => i.content)
   ) || candidates[0]
 }
@@ -154,7 +154,7 @@ export default function HireDynamicPage({ params }) {
                   <img src='/image/services-icon/business_modal_1.png' alt='Full‑Time Hiring icon' className='lazyload img-fluid' style={{ width: '60px', height: '60px', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'><h3 className='title-service'>Full‑Time Hiring</h3></h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-0'>
                   <div>Duration: 160 Hours/Month</div>
                   <div>Communication: Email, Skype, Phone</div>
                   <div>Billing: 50% Advance</div>
@@ -166,7 +166,7 @@ export default function HireDynamicPage({ params }) {
                   <img src='/image/services-icon/business_modal_2.png' alt='Part‑Time Hiring icon' className='lazyload img-fluid' style={{ width: '60px', height: '60px', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'><h3 className='title-service'>Part‑Time Hiring</h3></h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-0'>
                   <div>Duration: 80 Hours/Month</div>
                   <div>Communication: Email, Skype, Phone</div>
                   <div>Billing: 50% Advance</div>
@@ -178,7 +178,7 @@ export default function HireDynamicPage({ params }) {
                   <img src='/image/services-icon/business_modal_3.png' alt='Hourly Hiring icon' className='lazyload img-fluid' style={{ width: '60px', height: '60px', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'><h3 className='title-service'>Hourly Hiring</h3></h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-0'>
                   <div>Duration: Pay Per Use</div>
                   <div>Communication: Email, Skype, Phone</div>
                   <div>Billing: Weekly</div>

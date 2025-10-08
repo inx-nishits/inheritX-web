@@ -11,12 +11,36 @@ export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
 
   useEffect(() => {
-    if (isMobileOpen) {
-      const prevOverflow = document.body.style.overflow
-      document.body.style.overflow = 'hidden'
-      return () => {
-        document.body.style.overflow = prevOverflow
-      }
+    if (!isMobileOpen) return
+
+    // Save scroll position and previous inline styles
+    const scrollY = window.scrollY || window.pageYOffset
+    const prevBodyStyle = {
+      overflow: document.body.style.overflow,
+      position: document.body.style.position,
+      top: document.body.style.top,
+      width: document.body.style.width
+    }
+    const prevHtmlOverflow = document.documentElement.style.overflow
+
+    // Lock scroll: fixed body prevents background scroll on iOS/Android
+    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.width = '100%'
+
+    return () => {
+      // Restore styles
+      document.documentElement.style.overflow = prevHtmlOverflow
+      document.body.style.overflow = prevBodyStyle.overflow
+      document.body.style.position = prevBodyStyle.position
+      document.body.style.top = prevBodyStyle.top
+      document.body.style.width = prevBodyStyle.width
+
+      // Restore scroll position
+      const y = Math.abs(parseInt(prevBodyStyle.top || '0', 10)) || scrollY
+      window.scrollTo(0, y)
     }
   }, [isMobileOpen])
 
@@ -92,7 +116,7 @@ export default function Header() {
         <div className='header-content flex justify-content-between align-items-center'>
           <div className='header-left flex align-items-center'>
             <div className='logo logo-header'>
-              <Link href='/'>
+              <Link href='/' className='d-flex align-items-center'>
                 <img src='/image/logo/inx-logo.svg' alt='logo' />
               </Link>
             </div>

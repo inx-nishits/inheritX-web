@@ -941,7 +941,7 @@ a:hover, a:focus {
 }
 
 .font-family-2 {
-  font-family: "DM Sans", sans-serif;
+  
 }
 
 /* sib-form */
@@ -2840,7 +2840,7 @@ fieldset {
   padding: 24px;
 }
 .tf-post-grid .post-content .title {
-  font-family: "DM Sans", sans-serif;
+  
   letter-spacing: -0.4px;
 }
 .tf-post-grid .bottom-item {
@@ -2951,7 +2951,7 @@ fieldset {
 .sidebar-item h4 {
   letter-spacing: 0.1px !important;
   padding-bottom: 24px !important;
-  font-family: "DM Sans", sans-serif;
+  
 }
 .sidebar-item.sidebar-search .title-content {
   padding-bottom: 0 !important;
@@ -3054,7 +3054,7 @@ fieldset {
   font-size: 13px;
 }
 .tf-post-list a {
-  font-family: "DM Sans", sans-serif;
+  
   letter-spacing: -0.2px;
   line-height: 26px;
 }
@@ -3184,7 +3184,7 @@ fieldset {
   margin-bottom: 9px;
 }
 .sidebar-banner .title {
-  font-family: "DM Sans", sans-serif;
+  
   margin-bottom: 31px;
   letter-spacing: -0.2px;
 }
@@ -4848,12 +4848,12 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 0;
 }
 .wg-service-details .details-content-2 {
-  margin-bottom: 61px;
+  margin-bottom: 30px;
 }
 .wg-service-details .details-content-2 .title {
-  font-family: "DM Sans", sans-serif;
+  
   letter-spacing: -0.15px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 .wg-service-details .details-content-2 .desc {
   letter-spacing: 0.07px;
@@ -4983,7 +4983,7 @@ a.mapboxgl-ctrl-logo {
 .next-prev-item .title {
   letter-spacing: -0.1px;
   margin-bottom: 40px;
-  font-family: "DM Sans", sans-serif;
+  
 }
 .next-prev-item.next-details {
   text-align: end;
@@ -5048,7 +5048,7 @@ a.mapboxgl-ctrl-logo {
   border-bottom: 1px solid var(--stroke-2);
 }
 .wg-project-details .tag-social span {
-  font-family: "DM Sans", sans-serif;
+  
 }
 
 .box-info {
