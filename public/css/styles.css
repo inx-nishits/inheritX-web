@@ -2520,7 +2520,7 @@ fieldset {
   font-size: 13px;
 }
 .form-contact-us .error {
-  color: var(--main-dark);
+  color: red;
   margin-bottom: 10px;
 }
 .form-contact-us textarea {
@@ -6685,4 +6685,9 @@ color: var(--primary) !important;
 
 .swiper-pagination-bullet-active {
   background: #00C5DE !important;
+}
+
+.form-contact-us .error {
+  color: red;
+  margin-bottom: 10px;
 }

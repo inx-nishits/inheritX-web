@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import BlogImage from '../components/BlogImage';
 import ImagePreloader from '../components/ImagePreloader';
+import toast from 'react-hot-toast';
 
 export const dynamic = 'force-static';
 
@@ -11,6 +12,9 @@ export default function Page() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const showSkeleton = loading || !blogData;
+    const [subEmail, setSubEmail] = useState("");
+    const [submitting, setSubmitting] = useState(false);
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(subEmail);
 
     useEffect(() => {
         // Add loadmore class to body to enable fl-item display
@@ -852,18 +856,49 @@ export default function Page() {
                                     Delivered to you monthly, straight to your inbox
                                 </p>
 
-                                <form className="newsletter-form">
+                                <form className="newsletter-form" onSubmit={async (e) => {
+                                    e.preventDefault();
+                                    if (!isEmailValid || submitting) return;
+                                    try {
+                                        setSubmitting(true);
+                                        const formData = new FormData();
+                                        formData.append("email", subEmail);
+                                        const res = await fetch("https://admin.inheritx.com/wp-json/api/v1/subscription", {
+                                            method: "POST",
+                                            body: formData,
+                                        });
+                                        let data;
+                                        try {
+                                            data = await res.json();
+                                        } catch (_) {
+                                            data = {};
+                                        }
+                                        if (!res.ok || (typeof data.status !== "undefined" && Number(data.status) !== 1)) {
+                                            const errMsg = data?.message || "Subscription failed";
+                                            throw new Error(errMsg);
+                                        }
+                                        toast.success(data?.message || "You have subscribed successfully");
+                                        setSubEmail("");
+                                    } catch (err) {
+                                        const msg = err?.message || "Unable to subscribe. Please try again.";
+                                        toast.error(msg);
+                                    } finally {
+                                        setSubmitting(false);
+                                    }
+                                }}>
                                     <div className="form-group d-flex justify-content-center align-items-center">
                                         <div className="input-wrapper">
                                             <input
                                                 type="email"
                                                 className="form-control"
                                                 placeholder="Enter your email address"
+                                                value={subEmail}
+                                                onChange={(e) => setSubEmail(e.target.value)}
                                                 required
                                             />
                                         </div>
-                                        <button type="submit" className="tf-btn newsletter-btn">
-                                            <span>Join Now</span>
+                                        <button type="submit" className="tf-btn newsletter-btn" disabled={!isEmailValid || submitting} aria-disabled={!isEmailValid || submitting}>
+                                            <span>{submitting ? "Joining..." : "Join Now"}</span>
                                             <i className="icon-arrow-right"></i>
                                         </button>
                                     </div>

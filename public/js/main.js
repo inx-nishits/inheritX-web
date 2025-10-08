@@ -318,7 +318,7 @@
         video();
         infiniteScroll();
         counter();
-        ajaxContactForm();
+        // ajaxContactForm();
         handleSidebarFilter();
         parallaxImage();
         goTop();

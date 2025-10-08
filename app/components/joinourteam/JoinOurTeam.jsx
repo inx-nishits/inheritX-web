@@ -1,7 +1,8 @@
 "use client"
 import Link from 'next/link'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import LifeAtInheritX from '../LifeAtInheritX'
+import toast from 'react-hot-toast'
 
 export default function JoinOurTeam() {
   const resumeInputRef = useRef(null)
@@ -11,14 +12,117 @@ export default function JoinOurTeam() {
   const [uploadProgress, setUploadProgress] = useState(0)
   const [uploadStatus, setUploadStatus] = useState('idle') // idle | uploading | success
 
+  // Careers state
+  const [careers, setCareers] = useState([])
+  const [careersLoading, setCareersLoading] = useState(true)
+  const [careersError, setCareersError] = useState('')
+
+  // Selected career details (for Apply modal)
+  const [selectedJobId, setSelectedJobId] = useState(null)
+  const [jobDetails, setJobDetails] = useState(null)
+  const [jobLoading, setJobLoading] = useState(false)
+  const [jobError, setJobError] = useState('')
+
+  // Captcha + submit state
+  const [captchaA, setCaptchaA] = useState(0)
+  const [captchaB, setCaptchaB] = useState(0)
+  const [captchaInput, setCaptchaInput] = useState('')
+  const [captchaError, setCaptchaError] = useState('')
+  const [submitStatus, setSubmitStatus] = useState('idle') // idle | submitting | success | error
+
+  // Form fields + validation state
+  const [nameValue, setNameValue] = useState('')
+  const [nameError, setNameError] = useState('')
+  const [emailValue, setEmailValue] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [phoneValue, setPhoneValue] = useState('')
+  const [phoneError, setPhoneError] = useState('')
+
+  useEffect(() => {
+    let isMounted = true
+    const fetchCareers = async () => {
+      try {
+        setCareersLoading(true)
+        setCareersError('')
+        const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/career', { cache: 'no-store' })
+        if (!res.ok) throw new Error(`Failed to load careers (${res.status})`)
+        const data = await res.json()
+        const list = Array.isArray(data?.career) ? data.career : []
+        if (isMounted) setCareers(list)
+      } catch (err) {
+        if (isMounted) setCareersError('Unable to load current openings. Please try again later.')
+      } finally {
+        if (isMounted) setCareersLoading(false)
+      }
+    }
+    fetchCareers()
+    return () => { isMounted = false }
+  }, [])
+
+  const formatTechnologies = (technology) => {
+    if (!technology) return ''
+    // API sometimes returns a single comma-separated string inside the array
+    const flat = Array.isArray(technology) ? technology : [String(technology)]
+    const parts = flat.flatMap((t) => String(t).split(',')).map((s) => s.trim()).filter(Boolean)
+    return parts.join(' • ')
+  }
+
+  // Fetch job details when a job is selected
+  useEffect(() => {
+    const fetchDetails = async () => {
+      if (!selectedJobId) return
+      try {
+        setJobLoading(true)
+        setJobError('')
+        setJobDetails(null)
+        const res = await fetch(`https://admin.inheritx.com/wp-json/api/v1/careerdetails/${selectedJobId}`, { cache: 'no-store' })
+        if (!res.ok) throw new Error(`Failed to load job details (${res.status})`)
+        const data = await res.json()
+        setJobDetails(data?.career || null)
+      } catch (err) {
+        setJobError('Unable to load details. Please try again later.')
+      } finally {
+        setJobLoading(false)
+      }
+    }
+    fetchDetails()
+  }, [selectedJobId])
+
+  const regenerateCaptcha = () => {
+    const a = Math.floor(Math.random() * 8) + 1 // 1..9
+    const b = Math.floor(Math.random() * 8) + 1 // 1..9
+    setCaptchaA(a)
+    setCaptchaB(b)
+    setCaptchaInput('')
+    setCaptchaError('')
+    // reset form values when opening fresh
+    setNameValue('')
+    setEmailValue('')
+    setPhoneValue('')
+    setNameError('')
+    setEmailError('')
+    setPhoneError('')
+  }
+
+  const handleOpenApply = (jobId) => (e) => {
+    // set selected job and allow the modal to open
+    setSelectedJobId(jobId)
+    regenerateCaptcha()
+  }
+
   const isAllowedFile = (file) => {
     if (!file) return false
-    const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain', 'application/rtf']
+    const allowed = [
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'application/vnd.oasis.opendocument.formula'
+    ]
     const maxBytes = 5 * 1024 * 1024 // 5MB
-    const okType = allowed.includes(file.type) || /\.pdf$|\.docx?$|\.rtf$|\.txt$/i.test(file.name)
+    const okType = allowed.includes(file.type) || /\.pdf$|\.docx?$|\.odf$/i.test(file.name)
     const okSize = file.size <= maxBytes
     if (!okType) {
-      setResumeError('Unsupported file type. Please upload PDF/DOC/DOCX/RTF/TXT.')
+      setResumeError('Unsupported file type. Please upload PDF/DOC/DOCX/ODF.')
       return false
     }
     if (!okSize) {
@@ -59,7 +163,7 @@ export default function JoinOurTeam() {
     if (!hasResume || captcha !== '3' || resumeError) {
       e.preventDefault()
       // Optionally show a lightweight native validity UI
-      if (!hasResume) alert('Please upload your resume before submitting.')
+      if (!hasResume) toast.error('Please upload your resume before submitting.')
       else if (resumeError) alert(resumeError)
       else if (captcha !== '3') alert('Please answer the anti-spam question correctly.')
     }
@@ -113,9 +217,70 @@ export default function JoinOurTeam() {
     setResumeError('')
     if (resumeInputRef.current) resumeInputRef.current.value = ''
   }
+
+  const handleCaptchaChange = (e) => {
+    const value = e.target.value
+    setCaptchaInput(value)
+    const expected = captchaA + captchaB
+    if (String(value).trim() === '') {
+      setCaptchaError('')
+      return
+    }
+    if (Number(value) !== expected) {
+      setCaptchaError('Incorrect total. Please try again.')
+    } else {
+      setCaptchaError('')
+    }
+  }
+
+  // Validation helpers
+  const validateName = (val) => {
+    const v = String(val || '').trim()
+    if (!v) return 'Name is required.'
+    if (v.length < 2) return 'Name must be at least 2 characters.'
+    if (!/^[a-zA-Z][a-zA-Z .'’-]*$/.test(v)) return 'Use letters, spaces, apostrophes, or dots only.'
+    return ''
+  }
+  const validateEmail = (val) => {
+    const v = String(val || '').trim()
+    if (!v) return 'Email is required.'
+    // Simple and practical email pattern
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+    if (!re.test(v)) return 'Enter a valid email address.'
+    return ''
+  }
+  const validatePhone = (val) => {
+    const v = String(val || '').trim()
+    if (!v) return 'Phone is required.'
+    const digits = v.replace(/[^0-9]/g, '')
+    if (digits.length < 7 || digits.length > 15) return 'Enter a valid phone number.'
+    return ''
+  }
+
+  const handleNameChange = (e) => {
+    const v = e.target.value
+    setNameValue(v)
+    setNameError(validateName(v))
+  }
+  const handleEmailChange = (e) => {
+    const v = e.target.value
+    setEmailValue(v)
+    setEmailError(validateEmail(v))
+  }
+  const handlePhoneChange = (e) => {
+    const v = e.target.value
+    setPhoneValue(v)
+    setPhoneError(validatePhone(v))
+  }
+
+  const postCareerForm = async (payload) => {
+    const endpoint = 'https://admin.inheritx.com/wp-json/api/v1/careerform'
+    const res = await fetch(endpoint, { method: 'POST', body: payload })
+    return res
+  }
   return (
     <>
-      {/* Apply ReactJS Developer Modal */}
+      {/* Dynamic Apply Modal */}
       <div
         className='modal fade'
         id='applyReactModal'
@@ -127,14 +292,28 @@ export default function JoinOurTeam() {
           <div className='modal-content bg-dark text-white border-0 modal-career'>
             <div className='modal-header border-0 modal-career-header'>
               <div className='modal-career-title'>
-                <h3 className='mb-3'>ReactJS Developer</h3>
+                <h3 className='mb-3'>
+                  {jobLoading ? <span className='skeleton skeleton-line w-60' /> : (jobDetails?.title || 'Apply')}
+                </h3>
                 <div className='meta-line mb-0'>
                   <span className='meta-label'>Position:</span>
-                  <span className='meta-value me-3 text-white'>2</span>
+                  {jobLoading ? (
+                    <span className='meta-value me-3 text-white'><span className='skeleton skeleton-badge w-30' /></span>
+                  ) : (
+                    <span className='meta-value me-3 text-white'>{jobDetails?.openings || '-'}</span>
+                  )}
                   <span className='meta-label'>Experience:</span>
-                  <span className='meta-value me-3 text-white'>2+ Years</span>
+                  {jobLoading ? (
+                    <span className='meta-value me-3 text-white'><span className='skeleton skeleton-badge w-40' /></span>
+                  ) : (
+                    <span className='meta-value me-3 text-white'>{jobDetails?.experience || '-'}</span>
+                  )}
                   <span className='meta-label'>Location:</span>
-                  <span className='meta-value text-white'>Bodakdev, Ahmedabad.</span>
+                  {jobLoading ? (
+                    <span className='meta-value text-white'><span className='skeleton skeleton-badge w-50' /></span>
+                  ) : (
+                    <span className='meta-value text-white'>{jobDetails?.location || '-'}</span>
+                  )}
                 </div>
               </div>
               <button
@@ -148,51 +327,173 @@ export default function JoinOurTeam() {
               <div className='row g-4 align-items-start'>
                 {/* Left: Role Summary */}
                 <div className='col-12 col-lg-6'>
-                  <div className='mb-4'>
-                    <h5 className='mb-2'>Roles and Responsibilities</h5>
-                    <ul className='ps-3 lh-30'>
-                      <li>ReactJS</li>
-                    </ul>
-                  </div>
+                  {!jobLoading && jobError && (
+                    <div className='mb-4'>
+                      <h5 className='mb-2'>Error</h5>
+                      <div className='lh-30'>{jobError}</div>
+                    </div>
+                  )}
+                  {jobLoading && (
+                    <>
+                      <div className='mb-4'>
+                        <h5 className='mb-2'>Roles and Responsibilities</h5>
+                        <ul className='ps-3 lh-30'>
+                          {Array.from({ length: 6 }).map((_, i) => (
+                            <li key={i}><span className='skeleton skeleton-line w-90' /></li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className='mb-4'>
+                        <h5 className='mb-2'>Requirements</h5>
+                        <ul className='ps-3 lh-30'>
+                          {Array.from({ length: 3 }).map((_, i) => (
+                            <li key={i}><span className='skeleton skeleton-line w-70' /></li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
+                  {!jobLoading && jobDetails && (
+                    <>
+                      <div className='mb-4'>
+                        <h5 className='mb-2'>Roles and Responsibilities</h5>
+                        <ul className='ps-3 lh-30'>
+                          {(jobDetails.roles || []).map((r, idx) => (
+                            <li key={idx}>{r}</li>
+                          ))}
+                        </ul>
+                      </div>
 
-                  <div>
-                    <h5 className='mb-2'>Requirements</h5>
-                    <ul className='ps-3 lh-30'>
-                      <li>Thorough understanding of React.js and its core principles</li>
-                      <li>Experience with popular React.js workflows (such as Flux or Redux)</li>
-                      <li>Experience with styled components</li>
-                      <li>Experience with hooks and functional components</li>
-                      <li>Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model</li>
-                      <li>Familiarity with newer specifications of ECMAScript</li>
-                      <li>Building reusable components and front-end libraries for future use</li>
-                      <li>Good Communication</li>
-                      <li>Must have excellent problem-solving skills and love technical challenges</li>
-                      <li>Understanding of object-oriented and functional programming</li>
-                      <li>Familiarity with RESTful APIs</li>
-                      <li>Experience with common front-end development tools such as Babel, Webpack, NPM, etc.</li>
-                      <li>Ability to understand business requirements and translate them into technical requirements</li>
-                      <li>A knack for benchmarking and optimization</li>
-                      <li>Familiarity with code versioning tools</li>
-                      <li>Team management</li>
-                    </ul>
-                  </div>
+                      <div>
+                        <h5 className='mb-2'>Requirements</h5>
+                        <ul className='ps-3 lh-30'>
+                          {(jobDetails.requirements || []).map((req, idx) => (
+                            <li key={idx}>{req}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* Right: Apply Form */}
                 <div className='col-12 col-lg-6'>
-                  <form id='jobApplyReact' className='form-contact-us rounded-4 overflow-hidden style-bg-dark-2 p-4 p-md-5' method='post' action='' onSubmit={handleSubmit}>
+                  <form
+                    id='jobApplyReact'
+                    className='form-contact-us rounded-3 overflow-hidden style-bg-dark-2 p-4 p-md-5'
+                    method='post'
+                    action=''
+                    onSubmit={async (e) => {
+                      // Enhanced submit: live validations + API call
+                      e.preventDefault()
+                      if (submitStatus === 'submitting') return
+                      const form = e.target
+                      // Run validations before submit
+                      const newNameError = validateName(nameValue)
+                      const newEmailError = validateEmail(emailValue)
+                      const newPhoneError = validatePhone(phoneValue)
+                      setNameError(newNameError)
+                      setEmailError(newEmailError)
+                      setPhoneError(newPhoneError)
+
+                      const expected = captchaA + captchaB
+                      const hasResume = !!resumeFile
+                      const captchaOk = String(captchaInput).trim() !== '' && Number(captchaInput) === expected
+                      if (newNameError || newEmailError || newPhoneError || !hasResume || resumeError || !captchaOk) {
+                        if (!hasResume) setResumeError((prev) => prev || 'Please upload your resume before submitting.')
+                        if (!captchaOk && !captchaError) setCaptchaError('Incorrect total. Please try again.')
+                        return
+                      }
+
+                      const fd = new FormData()
+                      fd.append('name', nameValue.trim())
+                      fd.append('email', emailValue.trim())
+                      fd.append('phone', phoneValue.trim())
+                      fd.append('resume', resumeFile)
+
+                      try {
+                        setSubmitStatus('submitting')
+                        const res = await postCareerForm(fd)
+                        let data
+                        try {
+                          data = await res.json()
+                        } catch {
+                          data = {}
+                        }
+
+                        const isSuccess = res.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
+                        if (!isSuccess) {
+                          const msg = data?.message || `Request failed (${res.status})`
+                          setSubmitStatus('error')
+                          toast.error(msg)
+                          return
+                        }
+
+                        setSubmitStatus('success')
+                        toast.success(data?.message || 'Your application has been submitted successfully.')
+                        // reset minimal fields (state-managed)
+                        setNameValue('')
+                        setEmailValue('')
+                        setPhoneValue('')
+                        setCaptchaInput('')
+                        handleRemoveResume(new Event('submit'))
+                        regenerateCaptcha()
+                      } catch (err) {
+                        setSubmitStatus('error')
+                        const msg = err?.message || 'Unable to submit at the moment. Please try again later.'
+                        toast.error(msg)
+                      } finally {
+                        setTimeout(() => setSubmitStatus('idle'), 300)
+                      }
+                    }}
+                  >
                     <div className='heading-form text-center mb-5'>
-                      <h3 className='title text-white m-0' style={{ textTransform: 'none' }}>Apply for ReactJS Developer</h3>
+                      <h3 className='title text-white m-0' style={{ textTransform: 'none' }}>
+                        {jobLoading ? <span className='skeleton skeleton-line w-40' /> : <>Apply for {jobDetails?.title || 'Role'}</>}
+                      </h3>
                     </div>
 
                     <fieldset className='item mb-20'>
-                      <input type='text' name='name' placeholder='Name' required />
+                      <input
+                        type='text'
+                        name='name'
+                        placeholder='Name'
+                        value={nameValue}
+                        onChange={handleNameChange}
+                        aria-invalid={!!nameError}
+                        aria-describedby='nameHelp'
+                      />
+                      {nameError && (
+                        <div id='nameHelp' className='text-danger mt-2' aria-live='polite'>{nameError}</div>
+                      )}
                     </fieldset>
                     <fieldset className='item mb-20'>
-                      <input type='email' name='email' placeholder='Email Address' required />
+                      <input
+                        type='email'
+                        name='email'
+                        placeholder='Email Address'
+                        value={emailValue}
+                        onChange={handleEmailChange}
+                        aria-invalid={!!emailError}
+                        aria-describedby='emailHelp'
+                      />
+                      {emailError && (
+                        <div id='emailHelp' className='text-danger mt-2' aria-live='polite'>{emailError}</div>
+                      )}
                     </fieldset>
                     <fieldset className='item mb-20'>
-                      <input type='tel' name='phone' placeholder='Contact No' required />
+                      <input
+                        type='tel'
+                        name='phone'
+                        placeholder='Contact No'
+                        value={phoneValue}
+                        onChange={handlePhoneChange}
+                        aria-invalid={!!phoneError}
+                        aria-describedby='phoneHelp'
+                      />
+                      {phoneError && (
+                        <div id='phoneHelp' className='text-danger mt-2' aria-live='polite'>{phoneError}</div>
+                      )}
                     </fieldset>
 
                     {/* Custom Resume Upload */}
@@ -201,7 +502,7 @@ export default function JoinOurTeam() {
                         ref={resumeInputRef}
                         type='file'
                         name='resume'
-                        accept='.pdf,.doc,.docx,.rtf,.txt'
+                        accept='.pdf,.doc,.docx,.odf'
                         onChange={handleFileChange}
                         style={{ display: 'none' }}
                       />
@@ -220,7 +521,7 @@ export default function JoinOurTeam() {
                           <div className='resume-file-name'>
                             {resumeFile ? resumeFile.name : 'Drag & drop your resume here, or click Upload'}
                           </div>
-                          <div id='resumeHelp' className='resume-help'>PDF, DOC, DOCX. Max 5MB.</div>
+                          <div id='resumeHelp' className='resume-help'>PDF, DOC, DOCX, ODF. Max 5MB.</div>
                           {resumeFile && (
                             <div className={`resume-progress ${uploadStatus}`} aria-live='polite'>
                               <div className='resume-progress-bar' style={{ width: `${uploadProgress}%` }} />
@@ -257,21 +558,35 @@ export default function JoinOurTeam() {
                           )}
                         </div>
                       </div>
-                      {resumeError && <div className='resume-error'>{resumeError}</div>}
+                      {resumeError && <div className='text-danger mt-3' aria-live='polite'>{resumeError}</div>}
                     </fieldset>
 
                     <fieldset className='item mb-20'>
                       <div className='d-flex align-items-center gap-2'>
-                        <span>2</span>
+                        <span>{captchaA}</span>
                         <span>+</span>
-                        <span>1</span>
+                        <span>{captchaB}</span>
                         <span>=</span>
-                        <input type='text' name='captcha' placeholder='3' required />
+                        <input
+                          type='text'
+                          name='captcha'
+                          // placeholder={`${captchaA + captchaB}`}
+                          value={captchaInput}
+                          onChange={handleCaptchaChange}
+                          aria-invalid={!!captchaError}
+                          aria-describedby='captchaHelp'
+                        />
                       </div>
+                      {captchaError && (
+                        <div id='captchaHelp' className='text-danger mt-2' aria-live='polite'>{captchaError}</div>
+                      )}
+                      {!captchaError && captchaInput && (
+                        <div className='text-success mt-2' aria-live='polite'>Correct</div>
+                      )}
                     </fieldset>
 
-                    <button type='submit' className='tf-btn w-full justify-content-center'>
-                      <span>Submit</span>
+                    <button type='submit' className='tf-btn w-full justify-content-center' disabled={submitStatus === 'submitting'}>
+                      <span>{submitStatus === 'submitting' ? 'Submitting…' : 'Submit'}</span>
                     </button>
                   </form>
                 </div>
@@ -313,7 +628,7 @@ export default function JoinOurTeam() {
         <section className='section-counting tf-spacing-5'>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left rounded-4 overflow-hidden'>
+              <div className='left rounded-3 overflow-hidden'>
                 <div className='image tf-animate-1'>
                   <img
                     src='image/home/join-our-team.jpeg'
@@ -405,8 +720,6 @@ export default function JoinOurTeam() {
             </div>
           </div>
         </section>
-
-        <LifeAtInheritX />
 
         <section className='section-services tf-spacing-2'>
           <div className='mask mask-1'>
@@ -730,111 +1043,82 @@ export default function JoinOurTeam() {
 
             <div className='tf-container'>
               <div className='row rg-30'>
-                <div className='col-lg-6'>
-                  <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column rounded overflow-hidden'>
-                    <div className='post-content'>
-                      <div className='top-post'>
-                        <h5 className='title fw-6 text-primary mb-3'>
-                          ReactJS Developer
-                        </h5>
-                        <h6 className='fw-3 fs-4'>Experience: 2+ Years</h6>
-                      </div>
-
-                      <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
-                        <div className='desc lh-30 fw-3'>
-                          ReactJS • JavaScript • Redux • TypeScript • Next.js
+                {careersLoading && (
+                  <div className='col-12'>
+                    <div className='tf-post-list style-2 h-100 flex-column rounded overflow-hidden'>
+                      <div className='post-content'>
+                        <div className='top-post'>
+                          <h5 className='title fw-6 text-primary mb-3'>Loading current openings…</h5>
                         </div>
-
-                        <a
-                          href='#'
-                          className='tf-btn-readmore style-open'
-                          data-bs-toggle='modal'
-                          data-bs-target='#applyReactModal'
-                        >
-                          <span className='plus'>+</span>
-                          <span className='text'>Apply Now</span>
-                        </a>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
 
-                <div className='col-lg-6'>
-                  <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column rounded overflow-hidden'>
-                    <div className='post-content'>
-                      <div className='top-post'>
-                        <h5 className='title fw-6 text-primary mb-3'>
-                          Trainee iOS Developer
-                        </h5>
-                        <h6 className='fw-3 fs-4'>Experience: 0-2 Years</h6>
-                      </div>
-
-                      <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
-                        <div className='desc lh-30 fw-3'>
-                          iOS • Swift • Objective-C
+                {!careersLoading && careersError && (
+                  <div className='col-12'>
+                    <div className='tf-post-list style-2 h-100 flex-column rounded overflow-hidden'>
+                      <div className='post-content'>
+                        <div className='top-post'>
+                          <h5 className='title fw-6 text-primary mb-3'>{careersError}</h5>
                         </div>
-
-                        <Link href='/apply' className='tf-btn-readmore style-open'>
-                          <span className='plus'>+</span>
-                          <span className='text'>Apply Now</span>
-                        </Link>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
 
-                <div className='col-lg-6'>
-                  <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column rounded overflow-hidden'>
-                    <div className='post-content'>
-                      <div className='top-post'>
-                        <h5 className='title fw-6 text-primary mb-3'>
-                          NodeJS Developer
-                        </h5>
-                        <h6 className='fw-3 fs-4'>Experience: 2+ Years</h6>
-                      </div>
-
-                      <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
-                        <div className='desc lh-30 fw-3'>
-                          NodeJS • MongoDB • AWS • Socket.io • Lambda • S3
-                          Bucket
+                {!careersLoading && !careersError && careers.length === 0 && (
+                  <div className='col-12'>
+                    <div className='tf-post-list style-2 h-100 flex-column rounded overflow-hidden'>
+                      <div className='post-content'>
+                        <div className='top-post'>
+                          <h5 className='title fw-6 text-primary mb-3'>No current openings</h5>
                         </div>
-
-                        <Link href='/apply' className='tf-btn-readmore style-open'>
-                          <span className='plus'>+</span>
-                          <span className='text'>Apply Now</span>
-                        </Link>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
 
-                <div className='col-lg-6'>
-                  <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column rounded overflow-hidden'>
-                    <div className='post-content'>
-                      <div className='top-post'>
-                        <h5 className='title fw-6 text-primary mb-3'>
-                          Flutter iOS/Android Developer
-                        </h5>
-                        <h6 className='fw-3 fs-4'>Experience: 2-7 Years</h6>
-                      </div>
+                {careers.map((job) => {
+                  const tech = formatTechnologies(job?.technology)
+                  const isReactRole = /react/i.test(job?.title || '')
+                  return (
+                    <div className='col-lg-6' key={job?.id ?? job?.title}>
+                      <div className='tf-post-list style-2 h-100 hover-image overflow-hidden flex-column rounded overflow-hidden'>
+                        <div className='post-content'>
+                          <div className='top-post'>
+                            <h5 className='title fw-6 text-primary mb-3'>
+                              {job?.title || 'Open Position'}
+                            </h5>
+                            {job?.experience && (
+                              <h6 className='fw-3 fs-4'>Experience: {job.experience}</h6>
+                            )}
+                          </div>
 
-                      <div className='bottom-post'>
-                        <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>
-                        <div className='desc lh-30 fw-3'>
-                          Flutter • Android • iOS • OOP
+                          <div className='bottom-post'>
+                            {tech && <h6 className='fw-7 fs-4 mb-2'>Key Technologies:</h6>}
+                            {tech && (
+                              <div className='desc lh-30 fw-3'>
+                                {tech}
+                              </div>
+                            )}
+
+                            <a
+                              href='#'
+                              className='tf-btn-readmore style-open'
+                              data-bs-toggle='modal'
+                              data-bs-target='#applyReactModal'
+                              onClick={handleOpenApply(job?.id)}
+                            >
+                              <span className='plus'>+</span>
+                              <span className='text'>Apply Now</span>
+                            </a>
+                          </div>
                         </div>
-
-                        <Link href='/apply' className='tf-btn-readmore style-open'>
-                          <span className='plus'>+</span>
-                          <span className='text'>Apply Now</span>
-                        </Link>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -871,7 +1155,7 @@ export default function JoinOurTeam() {
                   <h2 className='title fw-6 title-animation mb-5'>
                     If you have any questions or want to send your resume, contact
                     our
-                    <span className='text-primary'>&nbsp;HR department</span>.
+                    <span className='text-primary'>&nbsp;HR&nbsp;department</span>.
                   </h2>
                 </div>
               </div>
@@ -1075,6 +1359,9 @@ export default function JoinOurTeam() {
             </div>
           </div>
         </section>
+
+
+        <LifeAtInheritX />
       </div>
     </>
   )

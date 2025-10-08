@@ -423,3 +423,63 @@ img { max-width: 100%; height: auto; }
     padding-bottom: 100px !important;
   }
 }
+
+/* -------------------------------------------------
+   Skeleton loading placeholders for job details
+-------------------------------------------------- */
+.skeleton {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(255,255,255,0.08);
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%);
+  animation: skeleton-shimmer 1.2s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+.skeleton-line {
+  height: 18px;
+  line-height: 18px;
+}
+
+.skeleton-badge {
+  height: 14px;
+  line-height: 14px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Simple width utilities used by skeletons */
+.w-30 { width: 30%; }
+.w-40 { width: 40%; }
+.w-50 { width: 50%; }
+.w-60 { width: 60%; }
+.w-70 { width: 70%; }
+.w-90 { width: 90%; }
+
+.form-contact-us .error {
+  color: red;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+.error-important {
+  color: red !important;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}

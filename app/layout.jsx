@@ -6,6 +6,7 @@ export const metadata = {
     'Mobile Application Development Company, Web Development Services, Mobile App Development Company, Web Design and Development Company'
 }
 import './styles/globals.css'
+import { Toaster } from 'react-hot-toast'
 import Script from 'next/script'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -45,6 +46,26 @@ export default function RootLayout ({ children }) {
           <Footer />
           <CounterInitializer />
         </div>
+
+        {/* Global toast container */}
+        <Toaster
+          position='top-right'
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: '#111827', // near to existing dark theme tones
+              color: '#fff',
+              borderRadius: '8px',
+              padding: '10px 12px'
+            },
+            success: {
+              iconTheme: { primary: '#22c55e', secondary: '#111827' }
+            },
+            error: {
+              iconTheme: { primary: '#ef4444', secondary: '#111827' }
+            }
+          }}
+        />
 
         <div className='cursor-dot'></div>
         <div className='cursor-dot'></div>
