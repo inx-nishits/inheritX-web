@@ -238,9 +238,9 @@ export default function AboutContent() {
             </div>
           </div>
 
-          <div className='container' ref={journeyRef}>
+          <div className='tf-container' ref={journeyRef}>
             <div className='row'>
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -254,7 +254,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -270,7 +270,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -284,7 +284,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -299,7 +299,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -315,7 +315,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -330,7 +330,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -345,7 +345,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -360,7 +360,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -375,7 +375,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -391,7 +391,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -407,7 +407,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -423,7 +423,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -439,7 +439,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -455,7 +455,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-lg-4 mb-5'>
+              <div className='col-12 col-sm-4 col-lg-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
