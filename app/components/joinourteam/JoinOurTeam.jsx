@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { useRef, useState } from 'react'
+import LifeAtInheritX from '../LifeAtInheritX'
 
 export default function JoinOurTeam() {
   const resumeInputRef = useRef(null)
@@ -179,7 +180,7 @@ export default function JoinOurTeam() {
 
                 {/* Right: Apply Form */}
                 <div className='col-12 col-lg-6'>
-                  <form id='jobApplyReact' className='form-contact-us rounded-3 overflow-hidden style-bg-dark-2 p-4 p-md-5' method='post' action='' onSubmit={handleSubmit}>
+                  <form id='jobApplyReact' className='form-contact-us rounded-4 overflow-hidden style-bg-dark-2 p-4 p-md-5' method='post' action='' onSubmit={handleSubmit}>
                     <div className='heading-form text-center mb-5'>
                       <h3 className='title text-white m-0' style={{ textTransform: 'none' }}>Apply for ReactJS Developer</h3>
                     </div>
@@ -312,11 +313,11 @@ export default function JoinOurTeam() {
         <section className='section-counting tf-spacing-5'>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left rounded-3 overflow-hidden'>
+              <div className='left rounded-4 overflow-hidden'>
                 <div className='image tf-animate-1'>
                   <img
-                    src='image/home/img-section-counting-1.png'
-                    data-src='image/home/img-section-counting-1.png'
+                    src='image/home/join-our-team.jpeg'
+                    data-src='image/home/join-our-team.jpeg'
                     alt=''
                     className='lazyload'
                   />
@@ -404,6 +405,8 @@ export default function JoinOurTeam() {
             </div>
           </div>
         </section>
+
+        <LifeAtInheritX />
 
         <section className='section-services tf-spacing-2'>
           <div className='mask mask-1'>

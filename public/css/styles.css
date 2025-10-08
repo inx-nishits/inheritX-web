@@ -6488,6 +6488,10 @@ a.mapboxgl-ctrl-logo {
     margin-left: 15px !important;
     margin-right: 15px !important;
   }
+
+  .page-title-home .top-page-title {
+    margin-bottom: 30px;
+  }
   .footer .mask.mask-1 {
     right: -300px;
   }

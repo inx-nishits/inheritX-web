@@ -260,7 +260,7 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-lg-7'>
-              <div className='image tf-animate-1 rounded-3 overflow-hidden'>
+              <div className='image tf-animate-1 rounded-4 overflow-hidden'>
                 <img
                   src='image/page-title/img-page-title.jpeg'
                   data-src='image/page-title/img-page-title.jpeg'
@@ -413,7 +413,7 @@ export default function HomeContent() {
           </div>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left rounded-3 overflow-hidden'>
+              <div className='left rounded-4 overflow-hidden'>
                 <div className='image tf-animate-1'>
                   <img
                     src='image/home/img-section-counting-1.png'
@@ -483,7 +483,7 @@ export default function HomeContent() {
                   </h2>
                 </div>
                 <div className='wg-counter flex g-30'>
-                  <div className='counter-item style-2 style-bg-primary px-md-15 rounded-3 overflow-hidden'>
+                  <div className='counter-item style-2 style-bg-primary px-md-15 rounded-4 overflow-hidden'>
                     <div className='icon'>
                       <i className='icon-check'></i>
                     </div>
@@ -505,7 +505,7 @@ export default function HomeContent() {
                     </div>
                   </div>
 
-                  <div className='counter-item style-2 style-bg-surface px-md-15 rounded-3 overflow-hidden'>
+                  <div className='counter-item style-2 style-bg-surface px-md-15 rounded-4 overflow-hidden'>
                     <div className='icon'>
                       <i className='icon-check'></i>
                     </div>
@@ -548,7 +548,7 @@ export default function HomeContent() {
                 <Accordion />
               </div>
               <div className='right-section'>
-                <div className='image image-section tf-animate-1 rounded-3 overflow-hidden'>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
                   <img
                     src='image/home/img-section-company.png'
                     data-src='image/home/img-section-company.png'
@@ -742,7 +742,7 @@ export default function HomeContent() {
                         </div>
                         <Link
                           href='/services/web-app-development'
-                          className='image rounded-3 overflow-hidden'
+                          className='image rounded-4 overflow-hidden'
                         >
                           <img
                             src='image/home/services-1.jpg'
@@ -781,7 +781,7 @@ export default function HomeContent() {
                         </div>
                         <Link
                           href='/services/machine-learning-development'
-                          className='image rounded-3 overflow-hidden'
+                          className='image rounded-4 overflow-hidden'
                         >
                           <img
                             src='image/home/services-4.jpg'
@@ -831,7 +831,7 @@ export default function HomeContent() {
                         </div>
                         <Link
                           href='/services/mobile-app-development'
-                          className='image rounded-3 overflow-hidden'
+                          className='image rounded-4 overflow-hidden'
                         >
                           <img
                             src='image/home/services-2.jpg'
@@ -882,7 +882,7 @@ export default function HomeContent() {
                         </div>
                         <Link
                           href='/services'
-                          className='image rounded-3 overflow-hidden'
+                          className='image rounded-4 overflow-hidden'
                         >
                           <img
                             src='image/home/services-3.jpg'
@@ -932,7 +932,7 @@ export default function HomeContent() {
                         </div>
                         <Link
                           href='/services/google-cloud-services'
-                          className='image rounded-3 overflow-hidden'
+                          className='image rounded-4 overflow-hidden'
                         >
                           <img
                             src='image/home/services-5.jpg'
@@ -1067,14 +1067,14 @@ export default function HomeContent() {
                 >
                   <div className='swiper-wrapper'>
                     <div className='swiper-slide'>
-                      <div className='team-item hover-image rounded-3 overflow-hidden'>
+                      <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
-                          <div className='image  rounded-3 overflow-hidden'>
+                          <div className='image  rounded-4 overflow-hidden'>
                             <img
                               src='image/home/ceo-sandip-modi.png'
                               data-src='image/home/ceo-sandip-modi.png'
                               alt=''
-                              className='lazyload rounded-3 overflow-hidden'
+                              className='lazyload rounded-4 overflow-hidden'
                             />
                           </div>
                         </div>
@@ -1088,14 +1088,14 @@ export default function HomeContent() {
                     </div>
 
                     <div className='swiper-slide'>
-                      <div className='team-item hover-image rounded-3 overflow-hidden'>
+                      <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
-                          <div className='image  rounded-3 overflow-hidden'>
+                          <div className='image  rounded-4 overflow-hidden'>
                             <img
                               src='image/home/aiyub_munshi_profile.jpg'
                               data-src='image/home/aiyub_munshi_profile.jpg'
                               alt=''
-                              className='lazyload rounded-3 overflow-hidden'
+                              className='lazyload rounded-4 overflow-hidden'
                             />
                           </div>
                         </div>
@@ -1109,14 +1109,14 @@ export default function HomeContent() {
                     </div>
 
                     <div className='swiper-slide'>
-                      <div className='team-item hover-image rounded-3 overflow-hidden'>
+                      <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
-                          <div className='image  rounded-3 overflow-hidden'>
+                          <div className='image  rounded-4 overflow-hidden'>
                             <img
                               src='image/home/HrManager.jpg'
                               data-src='image/home/HrManager.jpg'
                               alt=''
-                              className='lazyload rounded-3 overflow-hidden'
+                              className='lazyload rounded-4 overflow-hidden'
                             />
                           </div>
                         </div>
@@ -1504,7 +1504,7 @@ export default function HomeContent() {
 
         <section className='section-form tf-spacing-4'>
           <div className='section-inner flex'>
-            <div className='left rounded-3 overflow-hidden'>
+            <div className='left rounded-4 overflow-hidden'>
               <div className='image tf-animate-1'>
                 <img
                   src='image/home/img-section-form-1.jpg'
@@ -1527,7 +1527,7 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='right'>
-              <ContactForm className='form-contact-us px-md-15 rounded-3 overflow-hidden' description={'We are ready to help with your next projects. Let\u2019s work together.'} />
+              <ContactForm className='form-contact-us px-md-15 rounded-4 overflow-hidden' description={'We are ready to help with your next projects. Let\u2019s work together.'} />
             </div>
           </div>
         </section>
@@ -1556,7 +1556,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/amazon.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1572,7 +1572,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1588,7 +1588,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/gesia.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1604,7 +1604,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/guru.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1620,7 +1620,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/partner.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1636,7 +1636,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/upwork.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1652,7 +1652,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/amazon.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1668,7 +1668,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1684,7 +1684,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/gesia.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1700,7 +1700,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/guru.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1716,7 +1716,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/partner.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1732,7 +1732,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/upwork.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1748,7 +1748,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/amazon.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1764,7 +1764,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1780,7 +1780,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/gesia.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1796,7 +1796,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/guru.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1812,7 +1812,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/partner.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1828,7 +1828,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/upwork.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1844,7 +1844,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/amazon.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1860,7 +1860,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/clutouc.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1876,7 +1876,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/gesia.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1892,7 +1892,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/guru.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1908,7 +1908,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/partner.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1924,7 +1924,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/upwork.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1966,7 +1966,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/stockteamup.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1982,7 +1982,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/perfit-1-1.jpg'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1998,7 +1998,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/dearcows.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2014,7 +2014,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/bubble_logo.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2030,7 +2030,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients1.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2046,7 +2046,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients2.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2062,7 +2062,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2078,7 +2078,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/stockteamup.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2094,7 +2094,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/perfit-1-1.jpg'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2110,7 +2110,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/dearcows.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2126,7 +2126,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/bubble_logo.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2142,7 +2142,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients1.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2158,7 +2158,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients2.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2174,7 +2174,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2190,7 +2190,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/stockteamup.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2206,7 +2206,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/perfit-1-1.jpg'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2222,7 +2222,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/dearcows.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2238,7 +2238,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/bubble_logo.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2254,7 +2254,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients1.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2270,7 +2270,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients2.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2286,7 +2286,7 @@ export default function HomeContent() {
                       <img
                         src='image/partners/OurClients.png'
                         alt=''
-                        className='lazyload bg-white p-2 rounded-3 overflow-hidden'
+                        className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         style={{
                           width: '200px',
                           height: '100px',

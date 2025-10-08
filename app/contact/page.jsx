@@ -105,7 +105,7 @@ export default function Page () {
               </div>
 
               <div className='right'>
-                <ContactForm className='form-contact-us px-md-15 rounded-3 overflow-hidden' />
+                <ContactForm className='form-contact-us px-md-15 rounded-4 overflow-hidden' />
               </div>
             </div>
 

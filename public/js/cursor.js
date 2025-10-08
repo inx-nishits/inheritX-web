@@ -180,6 +180,17 @@
 (function() {
   'use strict';
 
+  // Skip entirely on touch/coarse pointer devices (mobile/tablet)
+  try {
+    var hasTouch = 'ontouchstart' in window || (navigator && (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0));
+    var isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (hasTouch || isCoarse) {
+      return;
+    }
+  } catch (e) {
+    // If environment detection fails, proceed safely
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

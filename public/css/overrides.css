@@ -334,6 +334,11 @@ a[href='javascript:;'] {
   opacity: 0.8 !important;
 }
 
+@media (min-width: 768px) {
+.section-company .section-company-inner .left-section {
+  min-width: 667px;
+}
+}
 @media (max-width: 1366px) {
   .header .logo-header >  a{max-width: 230px;}
   .menu-primary-menu {
@@ -348,4 +353,67 @@ a[href='javascript:;'] {
 
 @media (max-width: 550px) {
   .section-services .sw-services .services-item.style-1 .desc.lh-30 { min-height: 60px; }
+}
+
+/* Stop rotation on decorative circle masks globally */
+.mask,
+.mask.mask-1,
+.mask.mask-2,
+.section-services .mask,
+.section-testimonial .mask,
+.section-blog .mask,
+.section-counting .mask,
+.section-team .mask,
+.footer .mask,
+.page-title-home .mask {
+  animation: none !important;
+}
+
+/* Show full circle in hero without clipping */
+.page-title-home {
+  overflow: visible !important;
+}
+
+/* Gentle floating animation for hero masks (no rotation) */
+@keyframes maskFloatSoftY {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -12px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes maskFloatSoftXY {
+  0% { transform: translate3d(0, 0, 0); }
+  25% { transform: translate3d(10px, -10px, 0); }
+  50% { transform: translate3d(0, -16px, 0); }
+  75% { transform: translate3d(-10px, -10px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+/* Re-enable floating on hero circles with higher specificity */
+.page-title-home .mask.mask-home-1,
+.page-title-home .mask.mask-home-2 {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+.page-title-home .mask.mask-home-1 {
+  animation: maskFloatSoftXY 14s cubic-bezier(.22,.61,.36,1) infinite !important;
+  animation-delay: 0.3s;
+}
+.page-title-home .mask.mask-home-2 {
+  animation: maskFloatSoftY 12s cubic-bezier(.22,.61,.36,1) infinite alternate !important;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .page-title-home .mask.mask-home-1,
+  .page-title-home .mask.mask-home-2 {
+    animation: none !important;
+  }
+}
+
+/* Disable custom cursor dots and trails on touch/coarse pointer devices */
+@media (pointer: coarse), (hover: none) {
+  .cursor-dot,
+  .cursor-trail {
+    display: none !important;
+  }
 }

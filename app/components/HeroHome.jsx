@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 
 export default function HeroHome () {
+  const heroRef = useRef(null)
+
   return (
-    <div className='page-title-home'>
+    <div className='page-title-home' ref={heroRef}>
       <div className='mask mask-home-1'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

@@ -172,7 +172,7 @@ export default function ServicesContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-2'>
                   Since its inception, InheritX Solutions has delivered seamlessly performing websites that meet our clients’ corporate needs efficiently. We craft excellent and elegant websites in all major frameworks. Delve in to know more.
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function ServicesContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-2'>
                   We offer a comprehensive range of enterprise mobility solutions that can enhance the productivity, security, and scalability of your business processes. We always meet deadlines while developing high-quality apps.
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function ServicesContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-2'>
                   Our blockchain-based app solutions ensure the safety of your online, high-volume transactions. You can build trust and bring flexibility by providing your customers with a highly secure way of conducting online transactions.
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function ServicesContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-2'>
                   We integrate advancements from contemporary and emerging technologies to build customized, high-end enterprise software solutions. We serve our global corporate clientele with best-in-class IT solutions.
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function ServicesContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-2'>
                   We offer reliable cloud management services at reasonable rates. You can meet data storage and access needs effectively with our cloud-based solutions. Welcome to new opportunities and the scope for expansion.
                 </div>
               </div>
@@ -272,7 +272,7 @@ export default function ServicesContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-2'>
                   From smart homes to smart offices, IoT takes it all! We provide IoT app development services for individuals, the healthcare and manufacturing sectors, and our corporate clients across the world at competitive rates.
                 </div>
               </div>
@@ -345,7 +345,7 @@ export default function ServicesContent() {
                           />
                         </div>
                         <div className='right'>
-                          <div className='desc lh-30'>
+                          <div className='desc lh-30 mb-2'>
                             Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc lh-30 mb-0'>
@@ -380,7 +380,7 @@ export default function ServicesContent() {
                           />
                         </div>
                         <div className='right'>
-                          <div className='desc lh-30'>
+                          <div className='desc lh-30 mb-2'>
                             To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers’ lives.
                           </div>
 
@@ -416,7 +416,7 @@ export default function ServicesContent() {
                           />
                         </div>
                         <div className='right'>
-                          <div className='desc lh-30'>
+                          <div className='desc lh-30 mb-2'>
                             InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
                           </div>
                         </div>
@@ -448,7 +448,7 @@ export default function ServicesContent() {
                           />
                         </div>
                         <div className='right'>
-                          <div className='desc lh-30'>
+                          <div className='desc lh-30 mb-2'>
                             InheritX Solutions has an in-house team of experienced developers who can handle projects of any size in the domains of web, mobile apps, and IoT.
                           </div>
                         </div>
@@ -458,7 +458,7 @@ export default function ServicesContent() {
                 </div>
               </div>
               <div className='right-section'>
-                <div className='image image-section tf-animate-1 rounded-3 overflow-hidden'>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
                   <img
                     src='image/home/img-section-company.png'
                     data-src='image/home/img-section-company.png'

@@ -3,10 +3,33 @@ import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Breadcrumbs from '../Breadcrumbs'
+import LifeAtInheritX from '../LifeAtInheritX'
 
 export default function AboutContent() {
   const journeyRef = useRef(null)
   const journeyHeadingRef = useRef(null)
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const galleryVersion = '2'
+
+  const galleryImages = [
+    '/image/image-gallery/gallery-1.jpg',
+    '/image/image-gallery/gallery-2.jpg',
+    '/image/image-gallery/gallery-3.jpg',
+    '/image/image-gallery/gallery-4.jpg',
+    '/image/image-gallery/gallery-5.jpg',
+    '/image/image-gallery/gallery-6.jpg',
+    '/image/image-gallery/gallery-7.jpg',
+    '/image/image-gallery/gallery-8.jpg',
+    '/image/image-gallery/gallery-9.jpg',
+    '/image/image-gallery/gallery-10.jpg',
+    '/image/image-gallery/gallery-11.jpg',
+    '/image/image-gallery/gallery-12.jpg',
+    '/image/image-gallery/gallery-13.jpg',
+    '/image/image-gallery/gallery-14.jpg',
+    '/image/image-gallery/gallery-15.jpg'
+  ]
+  const gridImages = galleryImages.slice(0, 8)
 
   useEffect(() => {
     const container = journeyRef.current
@@ -59,6 +82,17 @@ export default function AboutContent() {
 
     return () => observer.disconnect()
   }, [])
+
+  useEffect(() => {
+    if (!isGalleryOpen) return
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setIsGalleryOpen(false)
+      if (e.key === 'ArrowRight') setActiveIndex((i) => (i + 1) % galleryImages.length)
+      if (e.key === 'ArrowLeft') setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length)
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [isGalleryOpen, galleryImages.length])
   return (
     <>
       <div className='page-title'>
@@ -82,67 +116,27 @@ export default function AboutContent() {
         <section className='section-counting tf-spacing-5'>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left rounded-3 overflow-hidden'>
+              <div className='left rounded-4 overflow-hidden'>
                 <div className='position-relative image tf-animate-1'>
                   <Image
-                    src='/image/home/img-section-counting-1.png'
+                    src='/image/home/join-our-team.jpeg'
                     alt='Counting section'
                     fill
                   />
                 </div>
-                <div className='box-logo tf-animate-2'>
+                <div className='box-logo tf-animate-2 d-none'>
                   <img src='/image/logo/logo-icon.svg' alt='' />
                   <h4 className='title'>InheritX</h4>
                 </div>
-                <div className='box-avatar tf-animate-3'>
-                  <div className='text'>
-                    <p className='fs-20 fw-6'>
-                      850+ Trusted
-                      <br />
-                      Global Clients
-                    </p>
-                    <img
-                      src='image/icon/icon-box-avatar.png'
-                      data-src='image/icon/icon-box-avatar.png'
-                      className='lazyload'
-                      alt=''
-                    />
-                  </div>
-                  <div className='list-agent'>
-                    <div className='agent agent-1'>
-                      <img
-                        src='image/avatar/agent-1.jpg'
-                        data-src='image/avatar/agent-1.jpg'
-                        alt=''
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-2'>
-                      <img
-                        src='image/avatar/agent-2.jpg'
-                        data-src='image/avatar/agent-2.jpg'
-                        alt=''
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-3'>
-                      <img
-                        src='image/avatar/agent-3.jpg'
-                        data-src='image/avatar/agent-3.jpg'
-                        alt=''
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-plus'>
-                      <span>+</span>
-                    </div>
-                  </div>
+                <div className='box-avatar tf-animate-3' style={{ backgroundColor: '#19272B' }}>
+                  <img src='/image/logo/logo-icon.svg' alt='' />
+                  <h4 className='title'>InheritX</h4>
                 </div>
               </div>
               <div className='right'>
                 <div className='heading-section mb-60'>
                   <h2 className='fw-7 mb-5 title-animation'>
-                    Who We Are
+                    Who <span className='text-primary'>&nbsp;We Are</span>
                   </h2>
                   <p className='lh-30 fs-3 title-animation mb-5'>
                     Since 2011, excellent customer service has not just been a phrase, but a core value of InheritX Solutions. Developing high-quality solutions in the web and mobile app domains has been a way of life at InheritX for over fourteen years. Our client-centric approach and no compromise on performance have made us an undisputed leader in mobile app, web, game, and digital marketing.
@@ -156,6 +150,8 @@ export default function AboutContent() {
             </div>
           </div>
         </section>
+
+
 
         <section className='section-about tf-spacing-6'>
           <div className='about-top'>
@@ -568,7 +564,7 @@ export default function AboutContent() {
                 </div>
               </div>
               <div className='right-section'>
-                <div className='image image-section tf-animate-1 rounded-3 overflow-hidden'>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
                   <img
                     src='image/home/img-section-company.png'
                     data-src='image/home/img-section-company.png'
@@ -1064,6 +1060,8 @@ export default function AboutContent() {
             </div>
           </div>
         </section>
+
+        <LifeAtInheritX />
       </div>
     </>
   )
