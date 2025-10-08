@@ -202,7 +202,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Collaboration</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   We tend to collaborate with various teams of the client’s
                   company to come up with the most suitable solution in the web
                   and mobility domains
@@ -233,7 +233,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>App Maintenance</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   We provide regular updates, performance optimization, and bug fixes to ensure your app runs smoothly, securely, and efficiently across all devices.
                 </div>
               </div>
@@ -263,7 +263,7 @@ export default function ServiceDetailsPage({ params }) {
                   <h3 className='title-service'>App Platform Migration Service
                   </h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Seamlessly migrate your app across platforms or technologies with zero data loss, ensuring enhanced performance, scalability, and compatibility.
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Mobile App Marketing</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Boost your app’s visibility and downloads with our targeted marketing strategies, including ASO, social campaigns, and user engagement optimization.
                 </div>
               </div>
@@ -321,7 +321,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Transparency</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   By implementing the best method for ensuring the safety of the
                   client’s data and signing NDA, we provide the highest level of
                   transparency
@@ -352,7 +352,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Communication</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Our dedicated and experienced developers can communicate
                   easily and effectively to understand all your requirements and
                   market trends
@@ -383,7 +383,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Trust</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Since inception, we have never compromised on the quality and
                   performance of our solutions to gain trust of our global
                   corporate clientele
@@ -414,7 +414,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>24/7 Technical Assistance</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Our expert team provides round-the-clock technical assistance,
                   ensuring your systems run smoothly, problems are resolved
                   promptly, and business operations remain uninterrupted at all
@@ -446,7 +446,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Maintenance and Upgrade</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   We offer comprehensive maintenance and upgrades, keeping your
                   software and systems updated, optimized, and fully secure,
                   ensuring peak performance and reliability for your business.
@@ -477,7 +477,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Migration</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Our seamless migration services safely transfer your data and
                   systems to new platforms, minimizing downtime, reducing risks,
                   and ensuring a smooth transition for your business.
@@ -508,7 +508,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Digital Marketing and SEO</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   We provide effective digital marketing and SEO strategies to
                   enhance your online presence, drive targeted traffic, and
                   maximize conversions for sustainable business growth
@@ -539,7 +539,7 @@ export default function ServiceDetailsPage({ params }) {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service'>Migration Service</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-1'>
                   Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize infrastructure and optimize performance seamlessly.
                 </div>
               </div>
