@@ -339,8 +339,8 @@ export default function CategoryDetailsPage() {
                                                             src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            width={400}
-                                                            height={300}
+                                                            aspectRatio="4/3"
+                                                            fit="contain"
                                                             priority={index < 3}
                                                         />
                                                     </Link>

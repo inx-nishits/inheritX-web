@@ -2,8 +2,8 @@
 
 /* Prevent horizontal scrolling globally */
 html, body {
-  overflow-x: clip !important;
-  max-width: 100vw !important;
+  /* overflow-x: clip !important; */
+  /* max-width: 100vw !important; */
 }
 
 /* Spacing simplification per request: control only tf-container width */
@@ -608,7 +608,7 @@ a[href='javascript:;'] {
 
 /* Show full circle in hero without clipping */
 .page-title-home {
-  overflow: visible !important;
+  overflow-x: hidden !important;
 }
 
 /* Fix horizontal scrolling issues with decorative circles */
@@ -741,6 +741,7 @@ a[href='javascript:;'] {
 
 /* Remove number input arrows (spinners) */
 .calculation-fields input[type="number"] {
+  appearance: textfield !important;
   -moz-appearance: textfield !important;
 }
 
@@ -748,6 +749,18 @@ a[href='javascript:;'] {
 .calculation-fields input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none !important;
   margin: 0 !important;
+}
+
+/* Align and space the math captcha row nicely */
+.calculation-fields {
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Make inline math symbols compact and vertically centered */
+.calculation-fields .check_label {
+  padding: 0 !important;
+  line-height: 1 !important;
 }
 
 /* Check label styling - proper spacing and black text */
@@ -758,6 +771,40 @@ a[href='javascript:;'] {
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
+}
+
+/* Mobile-friendly layout for the math captcha */
+@media (max-width: 576px) {
+  .calculation-fields {
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+  .calculation-fields .check_label {
+    margin: 0 4px !important;
+    font-size: 18px !important;
+  }
+  /* Neutralize grid paddings inside flex row */
+  .calculation-fields > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex: 0 0 auto !important;
+  }
+  /* Fixed, touch-friendly widths */
+  .calculation-fields > .col-3 {
+    width: 56px !important;
+  }
+  .calculation-fields > .col-5 {
+    width: 90px !important;
+  }
+  .calculation-fields input {
+    height: 44px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .calculation-fields > .col-3 { width: 52px !important; }
+  .calculation-fields > .col-5 { width: 82px !important; }
 }
 
 /* Traditional Checkbox styling */
@@ -819,12 +866,12 @@ a[href='javascript:;'] {
 @media (max-width: 768px) {
   /* Hide or resize decorative circles on mobile to prevent horizontal scroll */
   .wg-curve-text .text-rotate {
-    max-width: 200px;
+    /* max-width: 200px; */
   }
   
   .wg-curve-text .text-rotate svg {
-    width: 200px;
-    height: 200px;
+    /* width: 200px; */
+    /* height: 200px; */
   }
   
   /* Ensure testimonial mask doesn't overflow on mobile */
@@ -847,19 +894,19 @@ a[href='javascript:;'] {
   
   /* Increase marquee speed for mobile devices */
   .tf-marquee .marquee-wrapper {
-    animation-duration: 120s !important; /* Faster than default 420s */
+    animation-duration: 320s !important; /* Faster than default 420s */
   }
 }
 
 @media (max-width: 480px) {
   /* Further reduce sizes on very small screens */
   .wg-curve-text .text-rotate {
-    max-width: 150px;
+    /* max-width: 150px; */
   }
   
   .wg-curve-text .text-rotate svg {
-    width: 150px;
-    height: 150px;
+    /* width: 150px;
+    height: 150px; */
   }
   
   .section-services .services-item .icon {
@@ -939,3 +986,5 @@ a[href='javascript:;'] {
     align-items: flex-end;
   }
 }
+
+.mask, .mask svg circle { pointer-events: none !important; animation: none !important; transform: none !important; }

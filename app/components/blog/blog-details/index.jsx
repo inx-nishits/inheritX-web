@@ -1,6 +1,7 @@
 'use client';
 
 import PageTitle from '../../PageTitle';
+import BlogImage from '../../BlogImage';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -96,7 +97,7 @@ export default function BlogDetailsPage({ params }) {
           0% { transform: translateX(0); }
           100% { transform: translateX(300%); }
         }
-        .skeleton-image { width: 100%; height: 360px; border-radius: 12px; }
+        .skeleton-image { width: 100%; height: 260px; border-radius: 12px; }
         .skeleton-text { height: 18px; width: 80%; border-radius: 6px; background: #2a2a2a; display: inline-block; }
         .skeleton-text.short { width: 35%; }
         .skeleton-text.medium { width: 55%; }
@@ -124,7 +125,7 @@ export default function BlogDetailsPage({ params }) {
                     {showSkeleton ? (
                       <div className="skeleton skeleton-image"></div>
                     ) : (
-                      <img src={hero} alt={title || 'Blog cover'} />
+                      <BlogImage src={hero} alt={title || 'Blog cover'} aspectRatio="2/1" fit="contain" priority={true} />
                     )}
                   </div>
                   <div className='p-4'>

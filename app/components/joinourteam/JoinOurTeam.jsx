@@ -837,7 +837,7 @@ export default function JoinOurTeam() {
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
                   <h2 className='title fw-6 title-animation mb-5'>
-                    We <span className='text-primary'>Inspire You to Come</span>
+                    We <span className='text-primary'>&nbsp;Inspire You to Come</span>
                     Up with Your Best
                   </h2>
                 </div>
@@ -854,7 +854,8 @@ export default function JoinOurTeam() {
                                 "pagination": { "el": ".sw-pagination-services", "clickable": true },
                                 "breakpoints": {
                                     "550": { "slidesPerView": 2, "slidesPerGroup": 1},
-                                    "1200": { "slidesPerView": 3, "slidesPerGroup": 1}
+                                    "992": { "slidesPerView": 3, "slidesPerGroup": 1},
+                                    "1200": { "slidesPerView": 4, "slidesPerGroup": 1}
                                     }
                                 }'
                 >
@@ -926,7 +927,7 @@ export default function JoinOurTeam() {
                     </div>
                   </div>
                 </div>
-                <div className='sw-pagination-services sw-pagination d-xl-none mt-15 pt-5 justify-content-center'></div>
+                <div className='sw-pagination-services sw-pagination mt-15 pt-5 justify-content-center'></div>
               </div>
             </div>
           </div>

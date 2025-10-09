@@ -10,7 +10,10 @@ export default function BlogImage({
     fallbackSrc = '/image/blog/blog-fallback.jpg',
     width = 400,
     height = 300,
-    priority = false
+    priority = false,
+    aspectRatio = null,
+    shape = 'default', // 'default' | 'cut'
+    fit = 'cover' // 'cover' | 'contain'
 }) {
     const [imageState, setImageState] = useState('loading'); // 'loading', 'loaded', 'error'
     const [currentSrc, setCurrentSrc] = useState(src);
@@ -62,6 +65,25 @@ export default function BlogImage({
                     height: auto;
                     display: block;
                 }
+                .image-container.ratio {
+                    height: auto;
+                    aspect-ratio: ${aspectRatio || 'auto'};
+                }
+                /* Cut-corner shape (8px default) */
+                .image-container.cut {
+                    --cut: 12px;
+                    -webkit-clip-path: polygon(
+                        var(--cut) 0%, 100% 0%, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0% 100%, 0% var(--cut)
+                    );
+                    clip-path: polygon(
+                        var(--cut) 0%, 100% 0%, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0% 100%, 0% var(--cut)
+                    );
+                }
+                /* Make sure the image fully covers the clipped container */
+                .image-container.cut .blog-image.fill,
+                .image-container.cut .blog-image {
+                    object-fit: cover;
+                }
                 
                 .loading-placeholder {
                     position: absolute;
@@ -91,6 +113,13 @@ export default function BlogImage({
                     object-fit: cover;
                     transition: opacity 0.3s ease;
                 }
+                .blog-image.fill {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .blog-image.contain { object-fit: contain; background: transparent; }
                 
                 .blog-image.loaded {
                     opacity: 1;
@@ -111,7 +140,7 @@ export default function BlogImage({
                     font-size: 14px;
                 }
             `}</style>
-            <div className={`image-container ${className}`}>
+            <div className={`image-container ${aspectRatio ? 'ratio' : ''} ${shape === 'cut' ? 'cut' : ''} ${className}`}>
                 {imageState === 'loading' && (
                     <div className="loading-placeholder"></div>
                 )}
@@ -120,22 +149,38 @@ export default function BlogImage({
                         <span>Image not available</span>
                     </div>
                 ) : (
-                    <Image
-                        src={currentSrc}
-                        alt={alt}
-                        width={width}
-                        height={height}
-                        className={`blog-image ${className} ${imageState === 'loaded' ? 'loaded' : ''}`}
-                        onLoad={handleImageLoad}
-                        onError={handleImageError}
-                        priority={priority}
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        quality={80}
-                        loading={priority ? 'eager' : 'lazy'}
-                        // unoptimized={false}
-                    />
+                    aspectRatio ? (
+                        <Image
+                            src={currentSrc}
+                            alt={alt}
+                            fill
+                            className={`blog-image fill ${fit === 'contain' ? 'contain' : ''} ${className} ${imageState === 'loaded' ? 'loaded' : ''}`}
+                            onLoad={handleImageLoad}
+                            onError={handleImageError}
+                            priority={priority}
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            quality={80}
+                            loading={priority ? 'eager' : 'lazy'}
+                        />
+                    ) : (
+                        <Image
+                            src={currentSrc}
+                            alt={alt}
+                            width={width}
+                            height={height}
+                            className={`blog-image ${fit === 'contain' ? 'contain' : ''} ${className} ${imageState === 'loaded' ? 'loaded' : ''}`}
+                            onLoad={handleImageLoad}
+                            onError={handleImageError}
+                            priority={priority}
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            quality={80}
+                            loading={priority ? 'eager' : 'lazy'}
+                        />
+                    )
                 )}
             </div>
         </>

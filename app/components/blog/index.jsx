@@ -548,8 +548,8 @@ export default function BlogListPage() {
                                                             src={post.feature_image} 
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            width={400}
-                                                            height={300}
+                                                            aspectRatio="4/3"
+                                                            fit="contain"
                                                             priority={true}
                                                         />
                                                     </Link>
@@ -578,8 +578,8 @@ export default function BlogListPage() {
                                                             src={post.feature_image} 
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            width={400}
-                                                            height={300}
+                                                            aspectRatio="4/3"
+                                                            fit="contain"
                                                             priority={index < 2}
                                                         />
                                                     </Link>
@@ -704,7 +704,13 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image">
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image">
-                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className="ls-is-cached lazyloaded" />
+                                                        <BlogImage 
+                                                            src={post.feature_image}
+                                                            alt={post.title || ''}
+                                                            aspectRatio="4/3"
+                                                            fit="contain"
+                                                            priority={false}
+                                                        />
                                                     </Link>
                                                     <div className="post-content px-md-15">
                                                         <h6 className="title lh-32">
@@ -790,7 +796,13 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image">
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image">
-                                                        <img src={post.feature_image} data-src={post.feature_image} alt="" className="ls-is-cached lazyloaded" />
+                                                        <BlogImage 
+                                                            src={post.feature_image}
+                                                            alt={post.title || ''}
+                                                            aspectRatio="4/3"
+                                                            fit="contain"
+                                                            priority={false}
+                                                        />
                                                     </Link>
                                                     <div className="post-content px-md-15">
                                                         <h6 className="title lh-32">
