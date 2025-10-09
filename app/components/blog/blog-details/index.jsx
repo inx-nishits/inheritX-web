@@ -38,7 +38,7 @@ export default function BlogDetailsPage({ params }) {
 
   const bloginfo = details?.bloginfo || null;
   const title = bloginfo?.title ;
-  const hero = bloginfo?.feature_image || '/image/blog/img-blog-details-1.jpg';
+  const hero = bloginfo?.feature_image || '/image/blog/blog-fallback.jpg';
 
   return (
     <main>
@@ -61,9 +61,9 @@ export default function BlogDetailsPage({ params }) {
           line-height: 1;
           box-sizing: border-box;
         }
-        .sidebar-categories .item { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+        .sidebar-categories .item { display: flex; align-items: center; justify-content: flex-start; padding: 8px 0; }
         .sidebar-categories .item a { flex: 1; margin-right: 10px; }
-        .sidebar-categories .item .item-link { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+        .sidebar-categories .item .item-link { display: flex; align-items: center; justify-content: flex-start; width: 100%; }
 
         @media (max-width: 1199.98px) {
           .tf-sidebar.sidebar-filter {

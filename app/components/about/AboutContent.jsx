@@ -640,7 +640,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/certificate.svg'
@@ -669,7 +669,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/email.svg'
@@ -698,7 +698,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/office.svg'
@@ -728,7 +728,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/receipt.svg'
@@ -757,7 +757,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/innovation.svg'
@@ -786,7 +786,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/customer-service.svg'
@@ -816,7 +816,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/responsive.svg'
@@ -845,7 +845,7 @@ export default function AboutContent() {
               <div className='services-item px-lg-15 no-img'>
                 <div
                   className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '140px', height: '140px' }}
+                  style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
                     src='image/about/encrypted.svg'

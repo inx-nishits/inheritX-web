@@ -135,7 +135,7 @@ export default function BlogListPage() {
         .sidebar-categories .item {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
           padding: 8px 0;
         }
         

@@ -57,11 +57,11 @@ export default function Header() {
             <ul className='list-topbar-item flex align-items-center'>
               <li className='top-bar-item'>
                 <i className='icon-email'></i>
-                <a href='mailto:contact@inheritx.com'>contact@inheritx.com</a>
+                <Link href='mailto:contact@inheritx.com' target='_blank'>contact@inheritx.com</Link>
               </li>
               <li className='top-bar-item'>
                 <i className='icon-phone'></i>
-                <a href='tel:+13473940007'>+1(347) 394-0007</a>
+                <Link href='tel:+13473940007' target='_blank'>+1(347) 394-0007</Link>
               </li>
             </ul>
           </div>

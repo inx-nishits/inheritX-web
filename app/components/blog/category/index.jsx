@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import BlogImage from '../../../components/BlogImage';
+import Link from 'next/link';
 
 export const dynamic = 'force-static';
 
@@ -128,7 +129,7 @@ export default function CategoryDetailsPage() {
         .sidebar-categories .item {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
           padding: 8px 0;
         }
         
@@ -293,9 +294,9 @@ export default function CategoryDetailsPage() {
                                     {categoryData?.categoryName || 'Category'}
                                 </h1>
                                 <div className="breadkcum mb-5">
-                                    <a href="/" className="link-breadkcum body-2 fw-7 split-text effect-right">Home</a>
+                                    <Link href="/" className="link-breadkcum body-2 fw-7 split-text effect-right">Home</Link>
                                     <span className="dot"></span>
-                                    <a href="/blog" className="link-breadkcum body-2 fw-7 split-text effect-right">Blog</a>
+                                    <Link href="/blog" className="link-breadkcum body-2 fw-7 split-text effect-right">Blog</Link>
                                     <span className="dot"></span>
                                     <span className="page-breadkcum body-2 fw-7 split-text effect-right">{categoryData?.categoryName || 'Category'}</span>
                                 </div>
@@ -333,7 +334,7 @@ export default function CategoryDetailsPage() {
                                         <div className="fl-item" key={`category-${post.id}`}>
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
-                                                    <a href={`/blog/${post.slug}`} className="image">
+                                                    <Link href={`/blog/${post.slug}`} className="image">
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title}
@@ -342,17 +343,17 @@ export default function CategoryDetailsPage() {
                                                             height={300}
                                                             priority={index < 3}
                                                         />
-                                                    </a>
+                                                    </Link>
                                                     <div className="post-content px-md-15">
                                                         <h6 className="title lh-32">
-                                                            <a href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</a>
+                                                            <Link href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</Link>
                                                         </h6>
                                                     </div>
                                                 </div>
                                                 <div className="bottom-item px-md-15">
                                                     <div className="author-info">
                                                         <i className="icon-user user-icon"></i>
-                                                        <span>{post.author}, in <a href={`/blog/category/${categorySlug}`} className="category-link">{categoryData?.categoryName}</a></span>
+                                                        <span>{post.author}, in <Link href={`/blog/category/${categorySlug}`} className="category-link">{categoryData?.categoryName}</Link></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -398,7 +399,7 @@ export default function CategoryDetailsPage() {
                                             {(categoryData?.categories || []).map((cat) => (
                                                 <li className="item" key={cat.id}>
                                                     <i className="icon-arrow-right"></i>
-                                                    <a href={`/blog/category/${cat.slug}`} className="body-2 fw-5">{cat.name}</a>
+                                                    <Link href={`/blog/category/${cat.slug}`} className="body-2 fw-5">{cat.name}</Link>
                                                     {/* <span className="category-count">{cat.count || 0}</span> */}
                                                 </li>
                                             ))}

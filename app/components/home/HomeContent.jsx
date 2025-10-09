@@ -114,7 +114,7 @@ export default function HomeContent() {
                 </div>
 
                 <div className='sub-title body-2 fw-5'>
-                <span className='text-primary'>Go</span> Beyond Mobile. <span className='text-primary'>Go</span> Beyond Digital. <span className='text-primary'>Go</span> InheritX.
+                  <span className='text-primary'>Go</span> Beyond Mobile. <span className='text-primary'>Go</span> Beyond Digital. <span className='text-primary'>Go</span> InheritX.
                 </div>
                 <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
                   Innovating the Future
@@ -720,7 +720,7 @@ export default function HomeContent() {
                   <div className='swiper-wrapper cursor-grab'>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon'>
+                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon-custom-software'></i>
                         </div>
                         <h6 className='lh-30 fw-6'>
@@ -759,7 +759,7 @@ export default function HomeContent() {
                     </div>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon'>
+                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon-software-product'></i>
                         </div>
                         <h6 className='lh-30 fw-6'>
@@ -798,7 +798,7 @@ export default function HomeContent() {
                     </div>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon'>
+                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon icon-mobile-app'>
                             <svg
                               id='Layer_1'
@@ -849,7 +849,7 @@ export default function HomeContent() {
 
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon'>
+                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon icon-mobile-app'>
                             <svg
                               id='Layer_1'
@@ -900,7 +900,7 @@ export default function HomeContent() {
 
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon'>
+                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon icon-mobile-app'>
                             <svg
                               xmlns='http://www.w3.org/2000/svg'

@@ -158,7 +158,7 @@ export default function ServicesContent() {
           <div className='tf-container'>
             <div className='list-services flex flex-wrap'>
               <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
                     src='image/services-item/WebDevelopment.png'
                     alt=''
@@ -178,7 +178,7 @@ export default function ServicesContent() {
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
                     src='image/services-item/MobileApplicationDevelopment.png'
                     alt=''
@@ -198,7 +198,7 @@ export default function ServicesContent() {
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
                     src='image/services-item/Blockchain.png'
                     alt=''
@@ -218,7 +218,7 @@ export default function ServicesContent() {
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
                     src='image/services-item/DevOps.png'
                     alt=''
@@ -238,7 +238,7 @@ export default function ServicesContent() {
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
                     src='image/services-item/CloudComputing.png'
                     alt=''
@@ -258,7 +258,7 @@ export default function ServicesContent() {
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div className='icon bg-white p-3 rounded overflow-hidden d-flex align-items-center justify-content-center text-center'>
+                <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
                     src='image/services-item/IOT.png'
                     alt=''

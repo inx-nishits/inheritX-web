@@ -6,11 +6,11 @@ export const metadata = {
     'Mobile Application Development Company, Web Development Services, Mobile App Development Company, Web Design and Development Company'
 }
 import './styles/globals.css'
-import { Toaster } from 'react-hot-toast'
 import Script from 'next/script'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CounterInitializer from './components/CounterInitializer'
+import { Toaster } from 'react-hot-toast'
 
 export default function RootLayout ({ children }) {
   return (
@@ -37,7 +37,6 @@ export default function RootLayout ({ children }) {
         <link rel='stylesheet' href='/css/nouislider.min.css' />
         <link rel='stylesheet' href='/icons/icomoon/style.css' />
         <link rel='stylesheet' href='/css/styles.css' />
-        <link rel='stylesheet' href='/css/overrides.css' />
       </head>
       <body className='counter-scroll'>
         <div className='d-flex flex-column min-vh-100'>
@@ -47,8 +46,8 @@ export default function RootLayout ({ children }) {
           <CounterInitializer />
         </div>
 
-        {/* Global toast container */}
-        <Toaster
+         {/* Global toast container */}
+         <Toaster
           position='top-right'
           toastOptions={{
             duration: 4000,

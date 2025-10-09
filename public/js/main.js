@@ -59,6 +59,7 @@
         }, 250);
     };
 
+
     var footer = function () {
         function checkScreenSize() {
             if (window.matchMedia("(max-width: 550px)").matches) {

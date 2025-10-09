@@ -7,7 +7,7 @@ export default function BlogImage({
     src, 
     alt = '', 
     className = '', 
-    fallbackSrc = '/image/blog/img-blog-details-1.jpg',
+    fallbackSrc = '/image/blog/blog-fallback.jpg',
     width = 400,
     height = 300,
     priority = false

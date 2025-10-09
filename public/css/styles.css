@@ -2830,6 +2830,7 @@ fieldset {
 }
 .tf-post-grid .image {
   margin: 15px 15px 0;
+  min-height: 284px;
 }
 .tf-post-grid .image img {
   width: 100%;
@@ -4051,7 +4052,7 @@ a.mapboxgl-ctrl-logo {
   }
 }
 .hover-image .image {
-  display: inline-block;
+  display: block;
   position: relative;
   overflow: hidden;
   height: 184px;

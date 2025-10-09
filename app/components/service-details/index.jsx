@@ -556,10 +556,10 @@ export default function ServiceDetails({ params }) {
                   <i className="icon-chat-2"></i>
                 </div>
                 <h5 className="fw-4 title">How about connecting with our experts to resolve your queries or doubts?</h5>
-                <a href="/contact" className="tf-btn no-bg text-underline hover-color-main-dark">
+                <Link href="/contact" className="tf-btn no-bg text-underline hover-color-main-dark">
                   <span>Let’s Talk</span>
                   <i className="icon-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -43,17 +43,17 @@ export default function Footer() {
                   <ul>
                     <li className='top-bar-item'>
                       <i className='icon-email'></i>
-                      <a href='mailto:contact@inheritx.com' className='mb-0'>
+                      <Link href='mailto:contact@inheritx.com' target='_blank' className='mb-0'>
                         contact@inheritx.com
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <ul className='lh-45 fw-6'>
                     <li className='top-bar-item'>
                       <i className='icon-phone'></i>
-                      <a href='tel:+13473940007' className='mb-0'>
+                      <Link href='tel:+13473940007' className='mb-0' target='_blank'>
                         +1(347) 394-0007
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

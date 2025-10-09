@@ -1174,20 +1174,21 @@ export default function JoinOurTeam() {
                   <ul>
                     <li className='top-bar-item fs-2 justify-content-center  mb-4'>
                       <i className='icon-email'></i>
-                      <a
+                      <Link
                         href='mailto:contact@inheritx.com'
                         className='mb-0 fs-1'
+                        target='_blank'
                       >
                         contact@inheritx.com
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <ul className='lh-45 fw-6'>
                     <li className='top-bar-item fs-2 justify-content-center'>
                       <i className='icon-phone'></i>
-                      <a href='tel:+13473940007' className='mb-0 fs-1'>
+                      <Link href='tel:+13473940007' className='mb-0 fs-1' target='_blank'>
                         +1(347) 394-0007
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
