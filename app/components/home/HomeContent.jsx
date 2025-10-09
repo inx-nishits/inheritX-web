@@ -470,7 +470,7 @@ export default function HomeContent() {
                 <div className='heading-section mb-60'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     Explore Our
-                    <span className='text-primary'>Achievement</span>
+                    <span className='text-primary'>&nbsp;Achievement</span>
                   </div>
                   <h2 className='title fw-6 title-animation'>
                     Premier Tech Innovations
@@ -1072,7 +1072,7 @@ export default function HomeContent() {
               </div>
               <h2 className='title fw-6 title-animation'>
                 Explore Our
-                <span className='fw-3'>Recent Case Studies</span>
+                <span className='fw-3'>&nbsp;Recent Case Studies</span>
               </h2>
             </div>
           </div>
