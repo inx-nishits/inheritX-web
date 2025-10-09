@@ -106,17 +106,17 @@ export default function HomeContent() {
             </div>
           </div> */}
           <div className='row justify-content-between rg-70'>
-            <div className='col-lg-5'>
+            <div className='col-xl-5'>
 
               <div className='top-page-title'>
-                <div className='sub-title body-2 fw-5 split-text effect-right'>
-                  Welcome to InheritX Solutions
+                <div className='sub-title body-2 fw-5'>
+                  Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
                 </div>
 
-                <div className='sub-title body-2 fw-7 split-text effect-right text-primary'>
-                  GO MOBILE, GO CLOUD, GO DIGITAL, GO SMART
+                <div className='sub-title body-2 fw-5'>
+                <span className='text-primary'>Go</span> Beyond Mobile. <span className='text-primary'>Go</span> Beyond Digital. <span className='text-primary'>Go</span> InheritX.
                 </div>
-                <h2 className='title fw-6 split-text effect-right' style={{ lineHeight: "141%" }}>
+                <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
                   Innovating the Future
                   <br />
                   <span className='fw-3'>
@@ -131,7 +131,7 @@ export default function HomeContent() {
               <div className='content-left'>
                 <div className='desc text-animation'>
                   <p className='fs-20 lh-30'>
-                    From building 500+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
+                    From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
                   </p>
                 </div>
 
@@ -259,11 +259,10 @@ export default function HomeContent() {
                 </Link>
               </div>
             </div>
-            <div className='col-lg-7'>
+            <div className='col-xl-7'>
               <div className='image tf-animate-1 rounded-4 overflow-hidden'>
                 <img
-                  src='image/page-title/img-page-title.jpeg'
-                  data-src='image/page-title/img-page-title.jpeg'
+                  src='image/page-title/ai-banner.jpg'
                   alt=''
                   className='lazyload'
                 />
@@ -320,15 +319,15 @@ export default function HomeContent() {
                   </div>
                   <div className='text-rotate'>
                     <svg
-                      width='270 '
-                      height='270 '
-                      viewBox='0 0 270  270 '
+                      width='270'
+                      height='270'
+                      viewBox='0 0 270 270'
                       xmlns='http://www.w3.org/2000/svg'
                     >
                       <defs>
                         <path
                           id='textPathCircle'
-                          d='M 135,135 m -110,0 a 110,110 0 1,1 220,0 a 110,110 0 1,1 -220,0'
+                          d='M 25,135 A 110,110 0 1,1 245,135 A 110,110 0 1,1 25,135'
                           fill='none'
                         />
                       </defs>
@@ -336,10 +335,8 @@ export default function HomeContent() {
                         <textPath
                           href='#textPathCircle'
                           startOffset='0'
-                          textLength='690'
-                          lengthAdjust='spacing'
                         >
-                          - Digital - Software - Solutions - Agency&nbsp;
+                          Empowering Innovation at InheritX Solutions - Go Beyond Mobile. Go Beyond Digital. Go InheritX. - Innovating the Future of Mobility with AI - Empowering Innovation at InheritX Solutions - Go Beyond Mobile. Go Beyond Digital. Go InheritX. - Innovating the Future of Mobility with AI - Empowering Innovation at InheritX Solutions - Go Beyond Mobile. Go Beyond Digital. Go InheritX. - Innovating the Future of Mobility with AI -
                         </textPath>
                       </text>
                     </svg>
@@ -416,8 +413,7 @@ export default function HomeContent() {
               <div className='left rounded-4 overflow-hidden'>
                 <div className='image tf-animate-1'>
                   <img
-                    src='image/home/img-section-counting-1.png'
-                    data-src='image/home/img-section-counting-1.png'
+                    src='image/page-title/company-2.jpg'
                     alt=''
                     className='lazyload'
                   />
@@ -550,8 +546,7 @@ export default function HomeContent() {
               <div className='right-section'>
                 <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
                   <img
-                    src='image/home/img-section-company.png'
-                    data-src='image/home/img-section-company.png'
+                    src='image/page-title/presentationPm.png'
                     alt=''
                     className='lazyload'
                   />
@@ -954,7 +949,7 @@ export default function HomeContent() {
                     </div>
                   </div>
                 </div>
-                <div className='sw-pagination-services sw-pagination d-xl-none mt-15 justify-content-center'></div>
+                <div className='sw-pagination-services sw-pagination d-xl-none mt-15 pt-5 justify-content-center'></div>
               </div>
             </div>
           </div>
@@ -1021,7 +1016,7 @@ export default function HomeContent() {
                   <div className='sub-title body-2 fs-1 fw-7 mb-17 title-animation'>
                     Our <span className='text-primary'>Team</span>
                   </div>
-                  <h2 className='title fw-6 mb-4 title-animation'>
+                  <h2 className='title fw-6 mb-4'>
                     People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
                   </h2>
                   <p className='lh-30 fs-2 mb-5'>
@@ -1130,7 +1125,7 @@ export default function HomeContent() {
                     </div>
                   </div>
                 </div>
-                <div className='sw-pagination-team sw-pagination d-lg-none mt-15 justify-content-center'></div>
+                <div className='sw-pagination-team sw-pagination d-lg-none mt-15 pt-5 justify-content-center'></div>
               </div>
             </div>
           </div>
@@ -1507,8 +1502,7 @@ export default function HomeContent() {
             <div className='left rounded-4 overflow-hidden'>
               <div className='image tf-animate-1'>
                 <img
-                  src='image/home/img-section-form-1.jpg'
-                  data-src='image/home/img-section-form-1.jpg'
+                  src='image/page-title/team-vision.jpg'
                   alt=''
                   className='lazyload'
                 />

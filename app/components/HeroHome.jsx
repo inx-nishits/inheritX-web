@@ -71,7 +71,7 @@ export default function HeroHome () {
           </div>
         </div>
         <div className='row justify-content-between rg-70'>
-          <div className='col-lg-4'>
+          <div className='col-xl-4'>
             <div className='content-left'>
               <div className='desc'>
                 <p className='fs-20 lh-40'>
@@ -107,7 +107,7 @@ export default function HeroHome () {
               </Link>
             </div>
           </div>
-          <div className='col-lg-7'>
+          <div className='col-xl-7'>
             <div className='image tf-animate-1'>
               <img src='/image/page-title/img-page-title.jpg' alt='' />
             </div>

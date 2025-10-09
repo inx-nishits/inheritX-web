@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import LifeAtInheritX from '../LifeAtInheritX'
 import toast from 'react-hot-toast'
@@ -630,15 +631,17 @@ export default function JoinOurTeam() {
             <div className='section-counting-inner flex'>
               <div className='left rounded-3 overflow-hidden'>
                 <div className='image tf-animate-1'>
-                  <img
-                    src='image/home/join-our-team.jpeg'
-                    data-src='image/home/join-our-team.jpeg'
-                    alt=''
+                  <Image
+                    src='/image/home/join-our-team.jpeg'
+                    alt='Join Our Team'
+                    width={800}
+                    height={600}
                     className='lazyload'
+                    priority
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>
-                  <img src='/image/logo/logo-icon.svg' alt='' />
+                  <Image src='/image/logo/logo-icon.svg' alt='InheritX Logo' width={50} height={50} />
                   <h4 className='title'>InheritX</h4>
                 </div>
                 <div className='box-avatar tf-animate-3'>
@@ -648,35 +651,39 @@ export default function JoinOurTeam() {
                       <br />
                       Global Clients
                     </p>
-                    <img
-                      src='image/icon/icon-box-avatar.png'
-                      data-src='image/icon/icon-box-avatar.png'
+                    <Image
+                      src='/image/icon/icon-box-avatar.png'
+                      alt='Avatar Icon'
+                      width={40}
+                      height={40}
                       className='lazyload'
-                      alt=''
                     />
                   </div>
                   <div className='list-agent'>
                     <div className='agent agent-1'>
-                      <img
-                        src='image/avatar/agent-1.jpg'
-                        data-src='image/avatar/agent-1.jpg'
-                        alt=''
+                      <Image
+                        src='/image/avatar/agent-1.jpg'
+                        alt='Agent 1'
+                        width={60}
+                        height={60}
                         className='lazyload'
                       />
                     </div>
                     <div className='agent agent-2'>
-                      <img
-                        src='image/avatar/agent-2.jpg'
-                        data-src='image/avatar/agent-2.jpg'
-                        alt=''
+                      <Image
+                        src='/image/avatar/agent-2.jpg'
+                        alt='Agent 2'
+                        width={60}
+                        height={60}
                         className='lazyload'
                       />
                     </div>
                     <div className='agent agent-3'>
-                      <img
-                        src='image/avatar/agent-3.jpg'
-                        data-src='image/avatar/agent-3.jpg'
-                        alt=''
+                      <Image
+                        src='/image/avatar/agent-3.jpg'
+                        alt='Agent 3'
+                        width={60}
+                        height={60}
                         className='lazyload'
                       />
                     </div>
@@ -919,7 +926,7 @@ export default function JoinOurTeam() {
                     </div>
                   </div>
                 </div>
-                <div className='sw-pagination-services sw-pagination d-xl-none mt-15 justify-content-center'></div>
+                <div className='sw-pagination-services sw-pagination d-xl-none mt-15 pt-5 justify-content-center'></div>
               </div>
             </div>
           </div>
@@ -1323,34 +1330,38 @@ export default function JoinOurTeam() {
               <div className='col-lg-4'>
                 <div className='list-image'>
                   <div className='img-section img-1 img-elip tf-animate-1'>
-                    <img
-                      src='image/home/section-testimonial-1.png'
-                      data-src='image/home/section-testimonial-1.png'
-                      alt=''
+                    <Image
+                      src='/image/home/section-testimonial-1.png'
+                      alt='Testimonial Image 1'
+                      width={200}
+                      height={200}
                       className='lazyload'
                     />
                   </div>
                   <div className='img-section img-2 tf-animate-2'>
-                    <img
-                      src='image/home/section-testimonial-2.png'
-                      data-src='image/home/section-testimonial-2.png'
-                      alt=''
+                    <Image
+                      src='/image/home/section-testimonial-2.png'
+                      alt='Testimonial Image 2'
+                      width={200}
+                      height={200}
                       className='lazyload'
                     />
                   </div>
                   <div className='img-section img-3 tf-animate-3'>
-                    <img
-                      src='image/home/section-testimonial-3.png'
-                      data-src='image/home/section-testimonial-3.png'
-                      alt=''
+                    <Image
+                      src='/image/home/section-testimonial-3.png'
+                      alt='Testimonial Image 3'
+                      width={200}
+                      height={200}
                       className='lazyload'
                     />
                   </div>
                   <div className='img-section img-4 img-elip tf-animate-4'>
-                    <img
-                      src='image/home/section-testimonial-4.png'
-                      data-src='image/home/section-testimonial-4.png'
-                      alt=''
+                    <Image
+                      src='/image/home/section-testimonial-4.png'
+                      alt='Testimonial Image 4'
+                      width={200}
+                      height={200}
                       className='lazyload'
                     />
                   </div>

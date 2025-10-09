@@ -42,12 +42,12 @@ export default function Page () {
             <div className='section-contact-inner flex justify-content-between flex-wrap pb-5 mb-5'>
               <div className='left'>
                 <div className='heading-section mb-30'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 title-animation text-primary'>
                     Get In Touch
                   </div>
                   <h2 className='title fw-6 mb-10 title-animation'>
-                    Got a Project in
-                    <span className='fw-3'>&nbsp;Mind?</span>
+                  Let’s Build Something
+                    <span className='fw-3'>&nbsp;Great&nbsp;Together</span>
                   </h2>
                   <div className='desc text-animation'>
                     <p className='lh-30 fs-2'>

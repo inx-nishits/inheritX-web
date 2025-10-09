@@ -8,8 +8,8 @@ export default function ContactForm({
   className = 'form-contact-us px-md-15',
   method = 'post',
   action = '',
-  title = 'Need Help For Project!',
-  description = "We are ready to help your next projects, let’s work together",
+  title = 'Reliable Solutions for Your Project Needs',
+  description = "We’re Here to Support Your Next Big Project — Let’s Team Up!",
   showBudget = true,
   budgetLabel = 'Select Your Budget',
   budgetOptions = ['Choose Budget', 'Below $5000', '$5000 - $25,000', 'Augmented Reality'],
@@ -302,11 +302,11 @@ export default function ContactForm({
       </fieldset>
 
       {/* Math Captcha Row */}
-      <div className='d-flex flex-wrap ' data-aos='zoom-in'>
+      <div className='d-flex flex-wrap calculation-fields' data-aos='zoom-in'>
         <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' value={captcha.x} className='text-center p-1 h-full' disabled /></div>
-        <label className='check_label'>+</label>
+        <label className='check_label px-3'>+</label>
         <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' value={captcha.y} className='text-center p-1 h-full' disabled /></div>
-        <label className='check_label'>=</label>
+        <label className='check_label px-3'>=</label>
         <div className='col-xl-2 col-lg-4 col-md-4 col-sm-5 col-5'><input type='number' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} /></div>
       </div>
       {errors.userResult ? <div className='error-important' style={{ marginTop: '10px', fontSize: '17px' }}>{errors.userResult}</div> : null}

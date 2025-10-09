@@ -1,5 +1,11 @@
 /* Final UI-priority overrides: loaded after theme styles */
 
+/* Prevent horizontal scrolling globally */
+html, body {
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+}
+
 /* Spacing simplification per request: control only tf-container width */
 .tf-container {
   max-width: calc(100% - 120px);
@@ -338,6 +344,9 @@ a[href='javascript:;'] {
 .section-company .section-company-inner .left-section {
   min-width: 667px;
 }
+.big-text {
+  font-size: 140px;
+}
 }
 @media (max-width: 1366px) {
   .header .logo-header >  a{max-width: 230px;}
@@ -372,6 +381,70 @@ a[href='javascript:;'] {
 /* Show full circle in hero without clipping */
 .page-title-home {
   overflow: visible !important;
+}
+
+/* Fix horizontal scrolling issues with decorative circles */
+.section-about {
+  overflow-x: clip !important;
+}
+
+/* Fix wg-curve-text SVG circle positioning */
+.wg-curve-text {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wg-curve-text .text-rotate {
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wg-curve-text .text-rotate svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure testimonial section doesn't cause horizontal scroll */
+.section-testimonial {
+  overflow-x: clip !important;
+}
+
+.section-testimonial .mask {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.section-testimonial .mask svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix services section rounded circles */
+.section-services .services-item .icon {
+  max-width: 140px;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+/* Ensure all sections with decorative elements don't overflow */
+.section-counting,
+.section-services,
+.section-blog,
+.section-team,
+.section-pricing {
+  overflow-x: clip !important;
 }
 
 /* Gentle floating animation for hero masks (no rotation) */
@@ -415,5 +488,226 @@ a[href='javascript:;'] {
   .cursor-dot,
   .cursor-trail {
     display: none !important;
+  }
+}
+
+/* Contact Form Styling Improvements */
+
+/* Calculation fields - standardize input box height and padding */
+.calculation-fields input {
+  height: 48px !important;
+  padding: 5px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  text-align: center !important;
+  font-size: 16px !important;
+}
+
+.calculation-fields input:focus {
+  border-color: var(--primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 214, 143, 0.2) !important;
+}
+
+/* Remove number input arrows (spinners) */
+.calculation-fields input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+.calculation-fields input[type="number"]::-webkit-outer-spin-button,
+.calculation-fields input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Check label styling - proper spacing and black text */
+.check_label {
+  color: #000000 !important;
+  margin: 0 0px 0px 0px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Traditional Checkbox styling */
+.check_label input[type="checkbox"] {
+  width: 24px !important;
+  padding: 1px !important;
+  height: 24px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  background-color: #ffffff !important;
+  cursor: pointer !important;
+  position: relative !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  transition: all 0.3s ease !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.check_label input[type="checkbox"]:hover {
+  background-color: rgba(0, 214, 143, 0.1) !important;
+}
+
+.check_label input[type="checkbox"]:checked {
+  background-color: var(--primary) !important;
+}
+
+.check_label input[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 7px !important;
+  height: 12px !important;
+  border: solid #ffffff !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: translate(-50%, -60%) rotate(45deg) !important;
+}
+
+.check_label input[type="checkbox"]:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 214, 143, 0.3) !important;
+}
+
+.check_label input[type="checkbox"]:active {
+  transform: scale(0.95) !important;
+}
+
+/* Improved label text styling */
+.check_label span {
+  color: #000000 !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  margin-left: 8px !important;
+}
+
+/* Mobile responsive fixes for decorative circles */
+@media (max-width: 768px) {
+  /* Hide or resize decorative circles on mobile to prevent horizontal scroll */
+  .wg-curve-text .text-rotate {
+    max-width: 200px;
+  }
+  
+  .wg-curve-text .text-rotate svg {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Ensure testimonial mask doesn't overflow on mobile */
+  .section-testimonial .mask svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  /* Adjust services icons for mobile */
+  .section-services .services-item .icon {
+    max-width: 120px;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .section-services .services-item .icon img {
+    max-width: 80px;
+  }
+  
+  /* Increase marquee speed for mobile devices */
+  .tf-marquee .marquee-wrapper {
+    animation-duration: 120s !important; /* Faster than default 420s */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce sizes on very small screens */
+  .wg-curve-text .text-rotate {
+    max-width: 150px;
+  }
+  
+  .wg-curve-text .text-rotate svg {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .section-services .services-item .icon {
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .section-services .services-item .icon img {
+    max-width: 60px;
+  }
+}
+
+/* Portfolio Details Next/Previous Thumbnail Styling */
+.next-prev-item .image {
+  display: inline-block;
+  margin-top: 0px;
+}
+
+.next-prev-item.next-details .image {
+  text-align: right;
+}
+
+.next-prev-item.prev-details .image {
+  text-align: left;
+}
+
+.next-prev-item .image img {
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+.next-prev-item .image:hover img {
+  border-color: var(--primary, #007bff);
+}
+
+/* Horizontal Layout for Next/Previous Content */
+.prev-content-wrapper,
+.next-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.prev-text-content,
+.next-text-content {
+  flex: none;
+}
+
+.prev-image-content,
+.next-image-content {
+  flex-shrink: 0;
+}
+
+/* For Previous item: text on left, image on right */
+.prev-content-wrapper {
+  flex-direction: row;
+}
+
+/* For Next item: image on left, text on right */
+.next-content-wrapper {
+  flex-direction: row-reverse;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .prev-content-wrapper,
+  .next-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .next-content-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
   }
 }

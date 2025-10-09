@@ -4218,20 +4218,22 @@ a.mapboxgl-ctrl-logo {
   animation: rotate 10s linear infinite;
 }
 .text-rotate svg {
-  width: 180px;
-  height: 180px;
+  width: 270px;
+  height: 270px;
 }
 .text-rotate svg text {
-  font-size: 25px;
+  font-size: 24px;
   fill: var(--white);
   font-family: "Inter", sans-serif;
+  text-anchor: middle;
+  dominant-baseline: central;
+  letter-spacing: 0.5px;
 }
 
 .wg-curve-text {
   position: relative;
-  width: max-content;
-  width: 210px;
-  height: 210px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   display: -webkit-box;
   display: -moz-box;
@@ -4241,6 +4243,7 @@ a.mapboxgl-ctrl-logo {
   align-items: center;
   justify-content: center;
   border: 1px dashed var(--white);
+  margin: 0 auto;
 }
 .wg-curve-text .icon {
   position: absolute;
@@ -4248,10 +4251,10 @@ a.mapboxgl-ctrl-logo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--white);
   border: 1px solid var(--white);
   display: -webkit-box;
   display: -moz-box;
@@ -4262,8 +4265,8 @@ a.mapboxgl-ctrl-logo {
   justify-content: center;
 }
 .wg-curve-text .icon i {
-  color: var(--white);
-  font-size: 27px;
+  color: var(--main-dark);
+  font-size: 24px;
   transform: rotate(45deg);
   font-weight: 400;
 }
@@ -4982,7 +4985,7 @@ a.mapboxgl-ctrl-logo {
 }
 .next-prev-item .title {
   letter-spacing: -0.1px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   
 }
 .next-prev-item.next-details {
@@ -5487,6 +5490,7 @@ a.mapboxgl-ctrl-logo {
 .section-counting .image {
   width: 100%;
   height: 100%;
+  min-height: 400px;
 }
 .section-counting .image img {
   width: 100%;
@@ -5771,11 +5775,11 @@ a.mapboxgl-ctrl-logo {
     padding-left: 40px;
   }
   .section-contact .left {
-    max-width: 28.7%;
+    max-width: 40%;
     padding-top: 35px;
   }
   .section-contact .right {
-    max-width: 65.9%;
+    max-width: 55%;
   }
   .wg-project-details .details-content .left {
     max-width: 808px;
@@ -5796,8 +5800,8 @@ a.mapboxgl-ctrl-logo {
     margin-bottom: 101px;
   }
   .section-about .about-inner {
-    padding-left: 110px;
-    padding-right: 146px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   .section-about .about-inner .right {
     max-width: 70%;

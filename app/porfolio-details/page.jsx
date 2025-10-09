@@ -147,40 +147,32 @@ export default function Page () {
         <div className='next-prev-details tf-spacing-2'>
           <div className='tf-container'>
             <div className='row rg-50'>
-              <div className='col-sm-6'>
+              <div className='col-6'>
                 <div className='prev-details next-prev-item'>
                   <Link href='/porfolio-details' className='link'>
                     <i className='icon-arrow-left'></i> Previous
                   </Link>
-                  <h4 className='title'>
-                    <Link href='/porfolio-details'>Website Design &amp; Development </Link>
-                  </h4>
-                  <Link href='/porfolio-details' className='image'>
-                    <img
-                      src='/image/section/service-details-prev.jpg'
-                      data-src='/image/section/service-details-prev.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </Link>
+                  <div className='prev-content-wrapper'>
+                    <div className='prev-text-content'>
+                      <h5 className='title'>
+                        <Link href='/porfolio-details'>Website Design &amp; Development </Link>
+                      </h5>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className='col-sm-6'>
+              <div className='col-6'>
                 <div className='next-details next-prev-item'>
                   <Link href='/porfolio-details' className='link'>
                     {' '}Next <i className='icon-arrow-right'></i>
                   </Link>
-                  <h4 className='title'>
-                    <Link href='/porfolio-details'>Digital Product Management </Link>
-                  </h4>
-                  <Link href='/porfolio-details' className='image'>
-                    <img
-                      src='/image/section/service-details-next.jpg'
-                      data-src='/image/section/service-details-next.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </Link>
+                  <div className='next-content-wrapper'>
+                    <div className='next-text-content'>
+                      <h5 className='title'>
+                        <Link href='/porfolio-details'>Digital Product Management </Link>
+                      </h5>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

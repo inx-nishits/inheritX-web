@@ -52,8 +52,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='image left'>
             <img
-              src='image/home/img-according-1.jpg'
-              data-src='image/home/img-according-1.jpg'
+              src='image/page-title/client.webp'
               alt=''
               className='lazyload'
             />
@@ -78,8 +77,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='image left'>
             <img
-              src='image/home/img-according-2.jpg'
-              data-src='image/home/img-according-2.jpg'
+              src='image/page-title/vision.webp'
               alt=''
               className='lazyload'
             />
@@ -104,8 +102,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='image left'>
             <img
-              src='image/home/img-according-3.jpg'
-              data-src='image/home/img-according-3.jpg'
+              src='image/page-title/new-office.webp'
               alt=''
               className='lazyload'
             />
@@ -127,8 +124,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='image left'>
             <img
-              src='image/home/img-according-4.jpg'
-              data-src='image/home/img-according-4.jpg'
+              src='image/home/img-according-1.jpg'
               alt=''
               className='lazyload'
             />
