@@ -894,7 +894,7 @@ a[href='javascript:;'] {
   
   /* Increase marquee speed for mobile devices */
   .tf-marquee .marquee-wrapper {
-    animation-duration: 320s !important; /* Faster than default 420s */
+    animation-duration: 1000s !important; /* Faster than default 420s */
   }
 }
 

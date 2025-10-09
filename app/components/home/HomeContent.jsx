@@ -117,13 +117,12 @@ export default function HomeContent() {
                   <span className='text-primary'>Go</span> Beyond Mobile. <span className='text-primary'>Go</span> Beyond Digital. <span className='text-primary'>Go</span> InheritX.
                 </div>
                 <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
-                  Innovating the Future
+                  Innovating the Future of&nbsp;
                   <br />
                   <span className='fw-3'>
-                    of{' '}
                     <span className='highlight text-uppercase'>
                       Mobility&nbsp;with&nbsp;AI
-                    </span>{' '}
+                    </span>
                   </span>
                 </h2>
               </div>
@@ -144,8 +143,8 @@ export default function HomeContent() {
                           data-to='400'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='color-primary'>+</span>
                       </div>
@@ -163,8 +162,8 @@ export default function HomeContent() {
                           data-to='850'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='color-primary'>+</span>
                       </div>
@@ -184,8 +183,8 @@ export default function HomeContent() {
                           data-to='97'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='color-primary'>%</span>
                       </div>
@@ -203,8 +202,8 @@ export default function HomeContent() {
                           data-to='40'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='color-primary'>+</span>
                       </div>
@@ -224,8 +223,8 @@ export default function HomeContent() {
                           data-to='120'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='color-primary'>+</span>
                       </div>
@@ -238,13 +237,8 @@ export default function HomeContent() {
                   <div className='counter-item col-6 col-lg-6 mb-5'>
                     <div className='counter'>
                       <div className='number-counter flex fs-65 fw-6'>
-                        <span
-                          className='number odometer color-primary'
-                          data-to='24/7'
-                          data-inviewport='yes'
-                        >
-                          {' '}
-                          0{' '}
+                        <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
+                          24/7
                         </span>
                         {/* <span className='color-primary'>+</span> */}
                       </div>
@@ -282,30 +276,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
-                  <div className='big-text'>Software Development</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
                 </div>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function HomeContent() {
                           href='#textPathCircle'
                           startOffset='0'
                         >
-                          Empowering Innovation at InheritX Solutions - Go Beyond Mobile. Go Beyond Digital. Go InheritX. - Innovating the Future of Mobility with AI - Empowering Innovation at InheritX Solutions - Go Beyond Mobile. Go Beyond Digital. Go InheritX. - Innovating the Future of Mobility with AI - Empowering Innovation at InheritX Solutions - Go Beyond Mobile. Go Beyond Digital. Go InheritX. - Innovating the Future of Mobility with AI -
+                          Go Beyond Mobile•&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile •&nbsp; Go Beyond Mobile•&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile •&nbsp;
                         </textPath>
                       </text>
                     </svg>
@@ -351,8 +351,7 @@ export default function HomeContent() {
                   <h2 className='title fw-6 title-animation'>
                     Because we deliver
                     <span className='fw-3'>
-                      {' '}
-                      the&nbsp;best solutions to stay ahead
+                    &nbsp;the&nbsp;best solutions to stay&nbsp;ahead
                     </span>
                   </h2>
                 </div>
@@ -470,7 +469,7 @@ export default function HomeContent() {
               <div className='right'>
                 <div className='heading-section mb-60'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    Explore Our{' '}
+                    Explore Our
                     <span className='text-primary'>Achievement</span>
                   </div>
                   <h2 className='title fw-6 title-animation'>
@@ -487,11 +486,11 @@ export default function HomeContent() {
                       <div className='number-counter flex fs-65 fw-7'>
                         <span
                           className='number odometer'
-                          data-to='850'
+                          data-to='600'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='title-counter'>+</span>
                       </div>
@@ -512,8 +511,8 @@ export default function HomeContent() {
                           data-to='850'
                           data-inviewport='yes'
                         >
-                          {' '}
-                          0{' '}
+
+                          0
                         </span>
                         <span className='title-counter'>+</span>
                       </div>
@@ -583,102 +582,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span>{' '}
-                    Services
-                  </div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
                 </div>
               </div>
             </div>
@@ -728,7 +661,7 @@ export default function HomeContent() {
                             href='/services/web-app-development'
                             className='title-service'
                           >
-                            {' '}
+
                             Web Development
                           </Link>
                         </h6>

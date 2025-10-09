@@ -132,6 +132,33 @@ export default function HireIPhoneDeveloperPage() {
                   <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
                   <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
                   <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
                 </div>
               </div>
             </div>
@@ -146,8 +173,7 @@ export default function HireIPhoneDeveloperPage() {
                 <h5 className='lh-30 fw-6 mt-3'><h3 className='title-service'>Full‑Time Hiring</h3></h5>
                 <div className='desc lh-30 fs-3 mb-0'>
                   <div>Duration: 160 Hours/Month</div>
-                  <div>Communication: Email, Skype, Phone</div>
-                  <div>Billing: 50% Advance</div>
+                  <div>Communication: Email, Teams, Phone</div>
                 </div>
               </div>
 
@@ -158,8 +184,7 @@ export default function HireIPhoneDeveloperPage() {
                 <h5 className='lh-30 fw-6 mt-3'><h3 className='title-service'>Part‑Time Hiring</h3></h5>
                 <div className='desc lh-30 fs-3 mb-0'>
                   <div>Duration: 80 Hours/Month</div>
-                  <div>Communication: Email, Skype, Phone</div>
-                  <div>Billing: 50% Advance</div>
+                  <div>Communication: Email, Teams, Phone</div>
                 </div>
               </div>
 
@@ -170,8 +195,7 @@ export default function HireIPhoneDeveloperPage() {
                 <h5 className='lh-30 fw-6 mt-3'><h3 className='title-service'>Hourly Hiring</h3></h5>
                 <div className='desc lh-30 fs-3 mb-0'>
                   <div>Duration: Pay Per Use</div>
-                  <div>Communication: Email, Skype, Phone</div>
-                  <div>Billing: Weekly</div>
+                  <div>Communication: Email, Teams, Phone</div>
                 </div>
               </div>
             </div>

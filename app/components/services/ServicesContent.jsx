@@ -114,42 +114,36 @@ export default function ServicesContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Popular</span> Services
-                  </div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
                 </div>
               </div>
             </div>
@@ -315,7 +309,7 @@ export default function ServicesContent() {
                     <span className='text-primary'>Grow</span> & Development
                   </div>
                   <h2 className='title fw-6 title-animation'>
-                  Modern Technology and
+                    Modern Technology and
                     <span className='fw-3'>&nbsp;Advancement Incentives</span>
                   </h2>
                 </div>
@@ -336,14 +330,6 @@ export default function ServicesContent() {
                       data-bs-parent='#According1'
                     >
                       <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-1.jpg'
-                            data-src='image/home/img-according-1.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
                         <div className='right'>
                           <div className='desc lh-30 mb-2'>
                             Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
@@ -371,14 +357,6 @@ export default function ServicesContent() {
                       data-bs-parent='#According1'
                     >
                       <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-2.jpg'
-                            data-src='image/home/img-according-2.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
                         <div className='right'>
                           <div className='desc lh-30 mb-2'>
                             To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers’ lives.
@@ -407,14 +385,6 @@ export default function ServicesContent() {
                       data-bs-parent='#According1'
                     >
                       <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-3.jpg'
-                            data-src='image/home/img-according-3.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
                         <div className='right'>
                           <div className='desc lh-30 mb-2'>
                             InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
@@ -439,14 +409,6 @@ export default function ServicesContent() {
                       data-bs-parent='#According1'
                     >
                       <div className='according-content'>
-                        <div className='image left'>
-                          <img
-                            src='image/home/img-according-4.jpg'
-                            data-src='image/home/img-according-4.jpg'
-                            alt=''
-                            className='lazyload'
-                          />
-                        </div>
                         <div className='right'>
                           <div className='desc lh-30 mb-2'>
                             InheritX Solutions has an in-house team of experienced developers who can handle projects of any size in the domains of web, mobile apps, and IoT.
@@ -476,42 +438,36 @@ export default function ServicesContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
                 </div>
               </div>
             </div>

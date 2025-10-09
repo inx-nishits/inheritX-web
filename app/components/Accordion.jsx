@@ -50,13 +50,7 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-          <div className='image left'>
-            <img
-              src='image/page-title/client.webp'
-              alt=''
-              className='lazyload'
-            />
-          </div>
+          
           <div className='right'>
             <div className='desc lh-30'>
              Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
@@ -75,13 +69,7 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-          <div className='image left'>
-            <img
-              src='image/page-title/vision.webp'
-              alt=''
-              className='lazyload'
-            />
-          </div>
+        
           <div className='right'>
             <div className='desc lh-30'>
              To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
@@ -100,13 +88,6 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-          <div className='image left'>
-            <img
-              src='image/page-title/new-office.webp'
-              alt=''
-              className='lazyload'
-            />
-          </div>
           <div className='right'>
             <div className='desc lh-30'>
            InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
@@ -122,14 +103,7 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-          <div className='image left'>
-            <img
-              src='image/home/img-according-1.jpg'
-              alt=''
-              className='lazyload'
-            />
-          </div>
-          <div className='right'>
+              <div className='right'>
             <div className='desc lh-30'>
               InheritX Solutions has an in-house team of
               experienced developers who can handle any size

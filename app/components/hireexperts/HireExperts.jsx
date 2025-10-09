@@ -118,54 +118,36 @@ export default function HireExpertContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
-                  <div className='big-text'>
-                    Four <span className='text-stroke'>Pillars</span> of Our Hiring
-                    Model
-                  </div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model</div>
                 </div>
               </div>
             </div>
@@ -559,7 +541,7 @@ export default function HireExpertContent() {
                   <i className='icon-chat-2'></i>
                 </div>
                 <h5 className='fw-4 title'>
-                Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
+                  Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
                 </h5>
                 <a
                   href='/contact'
@@ -579,42 +561,36 @@ export default function HireExpertContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
-                  <div className='big-text'>
-                    Explore <span className='text-stroke'>Our</span> Platforms
-                  </div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
                 </div>
               </div>
             </div>
