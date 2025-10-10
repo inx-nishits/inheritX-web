@@ -629,8 +629,8 @@ export default function JoinOurTeam() {
         <section className='section-counting tf-spacing-5'>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left rounded-3 overflow-hidden'>
-                <div className='image tf-animate-1'>
+              <div className='left'>
+                <div className='image tf-animate-1 rounded-4 overflow-hidden'>
                   <Image
                     src='/image/home/join-our-team.jpeg'
                     alt='Join Our Team'
