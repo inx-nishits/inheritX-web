@@ -49,7 +49,6 @@ export default function ServicesContent() {
                   <div className='image tf-animate-2'>
                     <img
                       src='image/section/img-section-about-p-serveic-1.jpg'
-                      data-src='image/section/img-section-about-p-serveic-1.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -57,7 +56,6 @@ export default function ServicesContent() {
                   <div className='img-secion-item img-1 tf-animate-3'>
                     <img
                       src='image/section/img-section-about-p-serveic-2.jpg'
-                      data-src='image/section/img-section-about-p-serveic-2.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -423,7 +421,6 @@ export default function ServicesContent() {
                 <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
                   <img
                     src='image/home/img-section-company.png'
-                    data-src='image/home/img-section-company.png'
                     alt=''
                     className='lazyload'
                   />

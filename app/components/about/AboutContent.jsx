@@ -192,41 +192,9 @@ export default function AboutContent() {
               </div>
             </div>
           </div>
-          <div className='tf-container pb-5 mb-5'>
-            <div className='about-inner flex g-30'>
-              <div className='left'>
-                <div className='wg-curve-text'>
-                  <div className='icon'>
-                    <i className='icon-arrow-up'></i>
-                  </div>
-                  <div className='text-rotate'>
-                    <svg
-                      width='250'
-                      height='250'
-                      viewBox='0 0 250 250'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <defs>
-                        <path
-                          id='textPathCircle'
-                          d='M 125,125 m -110,0 a 110,110 0 1,1 220,0 a 110,110 0 1,1 -220,0'
-                          fill='none'
-                        />
-                      </defs>
-                      <text>
-                        <textPath
-                          href='#textPathCircle'
-                          startOffset='0'
-                          textLength='691'
-                          lengthAdjust='spacing'
-                        >
-                          Go Beyond Mobile • Go Beyond Digital • Go With InheritX • Go Beyond Mobile • Go Beyond Digital • Go With InheritX • Go Beyond Mobile • Go Beyond Digital • Go With InheritX • Go Beyond Mobile • Go Beyond Digital • Go With InheritX •&nbsp;
-                        </textPath>
-                      </text>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+          <div className='tf-container pb-0 mb-0'>
+            <div className='about-inner flex g-30 px-0'>
+
               <div className='right'>
                 <div className='heading-section mb-30' ref={journeyHeadingRef}>
                   <div className='sub-title fs-1 fw-7 mb-30 title-animation'>
@@ -487,8 +455,7 @@ export default function AboutContent() {
               <div className='left-section'>
                 <div className='heading-section mb-53'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    <span className='text-primary'>About</span> InheritX
-                    Solutions
+                    About <span className='text-primary'>InheritX Solutions</span>
                   </div>
                   <h2 className='title fw-6 title-animation'>
                     Leaders in providing Mobile, Web, Game, and Internet
@@ -630,7 +597,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/certificate.svg'
-                    data-src='image/about/certificate.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -659,7 +625,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/email.svg'
-                    data-src='image/about/email.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -688,7 +653,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/office.svg'
-                    data-src='image/about/office.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -718,7 +682,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/receipt.svg'
-                    data-src='image/about/receipt.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -747,7 +710,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/innovation.svg'
-                    data-src='image/about/innovation.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -776,7 +738,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/customer-service.svg'
-                    data-src='image/about/customer-service.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -806,7 +767,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/responsive.svg'
-                    data-src='image/about/responsive.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -835,7 +795,6 @@ export default function AboutContent() {
                 >
                   <img
                     src='image/about/encrypted.svg'
-                    data-src='image/about/encrypted.svg'
                     alt=''
                     className='lazyload img-fluid'
                     style={{ maxWidth: '100px' }}
@@ -1009,7 +968,6 @@ export default function AboutContent() {
                   <div className='img-section img-1 img-elip tf-animate-1'>
                     <img
                       src='image/home/section-testimonial-1.png'
-                      data-src='image/home/section-testimonial-1.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1017,7 +975,6 @@ export default function AboutContent() {
                   <div className='img-section img-2 tf-animate-2'>
                     <img
                       src='image/home/section-testimonial-2.png'
-                      data-src='image/home/section-testimonial-2.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1025,7 +982,6 @@ export default function AboutContent() {
                   <div className='img-section img-3 tf-animate-3'>
                     <img
                       src='image/home/section-testimonial-3.png'
-                      data-src='image/home/section-testimonial-3.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1033,7 +989,6 @@ export default function AboutContent() {
                   <div className='img-section img-4 img-elip tf-animate-4'>
                     <img
                       src='image/home/section-testimonial-4.jpg'
-                      data-src='image/home/section-testimonial-4.jpg'
                       alt=''
                       className='lazyload'
                     />

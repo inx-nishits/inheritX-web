@@ -1,25 +1,5 @@
-/* ---------------------------------------------------------
-    * Name: 
-    * Version: 1.0.0
-    * Author: Themesflat
-    * Author URI: http://themesflat.com 
 
-	* Abstracts variable
-
-    * Reset css styles
-
-    * Components
-
-    * section
-
-    * dashboard
-
-    * Responsive
- ------------------------------------------------------------------------------ */
-/*--------- Abstracts variable ---------- */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 :root {
@@ -210,11 +190,9 @@ button,
 input,
 select,
 textarea {
-  /* font-family: "Inter", sans-serif; */
-  font-family: "League Spartan", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  /* line-height: 100%; */
   color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -234,7 +212,6 @@ img {
 p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
 }
 
 strong,
@@ -544,7 +521,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--on-suface-container);
   margin: 0;
   text-rendering: optimizeLegibility;
@@ -555,7 +532,6 @@ h1,
   font-size: 65px;
   line-height: 75px;
   font-weight: 700;
-  letter-spacing: -0.4px;
 }
 
 h2,
@@ -1069,7 +1045,7 @@ a:hover, a:focus {
   padding-right: 16px;
 }
 .top-bar .top-bar-inner {
-  padding: 18px 0;
+  padding: 14px 0;
 }
 .top-bar .list-topbar-item {
   gap: 43px;
@@ -1210,11 +1186,12 @@ a:hover, a:focus {
 }
 .menu-primary-menu .item-link {
   color: var(--white);
-  line-height: 90px;
+  line-height: 80px;
   position: relative;
   font-weight: 500;
   padding: 0 5px;
   display: inline-block;
+  font-size: 16px;
 }
 .menu-primary-menu .item-link::before {
   content: "";
@@ -1894,6 +1871,9 @@ a:hover, a:focus {
   transition: all 0.5s ease;
   white-space: nowrap;
 }
+
+.nav-btn .tf-btn {padding-top: 10px; padding-bottom: 10px;}
+
 .tf-btn span {
   color: var(--white);
   position: relative;
@@ -2842,10 +2822,7 @@ fieldset {
 .tf-post-grid .post-content {
   padding: 24px;
 }
-.tf-post-grid .post-content .title {
-  
-  letter-spacing: -0.4px;
-}
+
 .tf-post-grid .bottom-item {
   padding: 25px 50px 22px;
   border-top: 1px solid var(--stroke-2);
@@ -3401,9 +3378,6 @@ fieldset {
 .user-details .user-content p {
   margin-bottom: 4px;
 }
-.user-details .user-content .name-user a {
-  letter-spacing: -0.4px;
-}
 
 .wg-quote {
   display: -webkit-box;
@@ -3474,9 +3448,7 @@ fieldset {
 .author .name {
   margin-bottom: 26px;
 }
-.author .name a {
-  letter-spacing: -0.4px;
-}
+
 .author .text {
   margin-bottom: 32px;
   line-height: 112%;
@@ -3565,7 +3537,6 @@ fieldset {
 .testimonial-item .user-testimonial .name-user {
   display: block;
   margin-bottom: 10px;
-  letter-spacing: -0.4px;
 }
 .testimonial-item .user-testimonial .position {
   display: block;
@@ -3634,14 +3605,12 @@ fieldset {
 
 /*------------ accordion ---------------- */
 .according-item {
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 .according-item:last-child {
   margin-bottom: 0;
 }
-.according-item h5 {
-  letter-spacing: -0.4px;
-}
+
 .according-item .title-according {
   display: -webkit-box;
   display: -moz-box;
@@ -3712,7 +3681,7 @@ fieldset {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin-top: 42px;
+  margin-top: 16px;
 }
 .according-item .according-content .image {
   max-width: 190px;
@@ -3730,7 +3699,7 @@ fieldset {
   padding-bottom: 8.5px;
 }
 .according-item .according-content .desc {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .according-item .according-content .benefit-item {
   margin-bottom: 22px;
@@ -4165,15 +4134,14 @@ a.mapboxgl-ctrl-logo {
 }
 
 .counter-item .number-counter.fs-65 {
-  font-size: 60px;
+  font-size: 48px;
   line-height: 100%;
 }
 .counter-item .number-counter span {
-  font-family: "Inter", sans-serif !important;
   line-height: 100% !important;
 }
 .counter-item .title-counter {
-  letter-spacing: -0.3px;
+  font-size: 16px;
 }
 .counter-item .odometer-formatting-mark {
   display: none !important;
@@ -4308,7 +4276,6 @@ a.mapboxgl-ctrl-logo {
 .box-avatar .text p {
   line-height: 23px;
   margin-bottom: 11px;
-  letter-spacing: -0.4px;
 }
 .box-avatar .text img {
   max-width: 132px;
@@ -4427,7 +4394,6 @@ a.mapboxgl-ctrl-logo {
 }
 .services-item h6 {
   margin-bottom: 9px;
-  letter-spacing: -0.4px;
 }
 .services-item .desc {
   margin-bottom: 30px;
@@ -4597,7 +4563,6 @@ a.mapboxgl-ctrl-logo {
 }
 .team-item .item-content .title {
   margin-bottom: 10px;
-  letter-spacing: -0.5px;
 }
 .team-item:hover .social-item {
   bottom: -27px;
@@ -5384,7 +5349,6 @@ a.mapboxgl-ctrl-logo {
 }
 .page-title-home .top-page-title .sub-title {
   margin-bottom: 17px;
-  letter-spacing: -0.4px;
   color: var(--surface);
 }
 .page-title-home .top-page-title .title {
@@ -5539,6 +5503,9 @@ a.mapboxgl-ctrl-logo {
   width: 100%;
   /* min-width: 667px; */
 }
+.section-company .section-company-inner .right-section {
+  flex: 1;
+}
 .section-company .image-section {
   height: 100%;
 }
@@ -5617,7 +5584,7 @@ a.mapboxgl-ctrl-logo {
 }
 .section-testimonial .img-section {
   flex: 1 1 auto;
-  max-width: calc(50% - 15px);
+  max-width: calc(50% - 100px);
   border-radius: 15%;
   width: 100%;
 }

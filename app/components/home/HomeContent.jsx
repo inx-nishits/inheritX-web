@@ -106,18 +106,18 @@ export default function HomeContent() {
             </div>
           </div> */}
           <div className='row justify-content-between rg-70'>
-            <div className='col-xl-5'>
+            <div className='col-xl-6'>
 
               <div className='top-page-title'>
-                <div className='sub-title body-2 fw-5'>
+                <div className='sub-title body-1 fw-5'>
                   Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
                 </div>
 
-                <div className='sub-title body-2 fw-5'>
-                  <span className='text-primary'>Go</span> Beyond Mobile. <span className='text-primary'>Go</span> Beyond Digital. <span className='text-primary'>Go</span> InheritX.
+                <div className='sub-title fs-1 fw-5'>
+                  <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;InheritX.
                 </div>
                 <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
-                  Innovating the Future of&nbsp;
+                  Innovating the Future&nbsp;of&nbsp;
                   <br />
                   <span className='fw-3'>
                     <span className='highlight text-uppercase'>
@@ -129,7 +129,7 @@ export default function HomeContent() {
 
               <div className='content-left'>
                 <div className='desc text-animation'>
-                  <p className='fs-20 lh-30'>
+                  <p className='fs-3 lh-30'>
                     From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
                   </p>
                 </div>
@@ -253,7 +253,7 @@ export default function HomeContent() {
                 </Link>
               </div>
             </div>
-            <div className='col-xl-7'>
+            <div className='col-xl-6'>
               <div className='image tf-animate-1 rounded-4 overflow-hidden'>
                 <img
                   src='image/page-title/ai-banner.jpg'
@@ -276,36 +276,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
                 </div>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function HomeContent() {
                           href='#textPathCircle'
                           startOffset='0'
                         >
-                          Go Beyond Mobile•&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile •&nbsp; Go Beyond Mobile•&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile •&nbsp;
+                          Go Beyond Mobile&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile&nbsp;•&nbsp;Go Beyond Mobile&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;
                         </textPath>
                       </text>
                     </svg>
@@ -348,12 +348,12 @@ export default function HomeContent() {
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     <span className='text-primary'>Inheritx</span> Solutions
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h1 className='title fw-6 title-animation'>
                     Because we deliver
                     <span className='fw-3'>
-                    &nbsp;the&nbsp;best solutions to stay&nbsp;ahead
+                      &nbsp;the&nbsp;best solutions to stay&nbsp;ahead
                     </span>
-                  </h2>
+                  </h1>
                 </div>
                 <div className='section-content'>
                   <div className='desc mb-40 text-animation'>
@@ -430,7 +430,6 @@ export default function HomeContent() {
                     </p>
                     <img
                       src='image/icon/icon-box-avatar.png'
-                      data-src='image/icon/icon-box-avatar.png'
                       className='lazyload'
                       alt=''
                     />
@@ -439,7 +438,6 @@ export default function HomeContent() {
                     <div className='agent agent-1'>
                       <img
                         src='image/avatar/agent-1.jpg'
-                        data-src='image/avatar/agent-1.jpg'
                         alt=''
                         className='lazyload'
                       />
@@ -447,7 +445,6 @@ export default function HomeContent() {
                     <div className='agent agent-2'>
                       <img
                         src='image/avatar/agent-2.jpg'
-                        data-src='image/avatar/agent-2.jpg'
                         alt=''
                         className='lazyload'
                       />
@@ -455,7 +452,6 @@ export default function HomeContent() {
                     <div className='agent agent-3'>
                       <img
                         src='image/avatar/agent-3.jpg'
-                        data-src='image/avatar/agent-3.jpg'
                         alt=''
                         className='lazyload'
                       />
@@ -545,7 +541,7 @@ export default function HomeContent() {
               <div className='right-section'>
                 <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
                   <img
-                    src='image/page-title/presentationPm.png'
+                    src='image/page-title/presentationPm.jpg'
                     alt=''
                     className='lazyload'
                   />
@@ -674,7 +670,6 @@ export default function HomeContent() {
                         >
                           <img
                             src='image/home/services-1.jpg'
-                            data-src='image/home/services-1.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -713,7 +708,6 @@ export default function HomeContent() {
                         >
                           <img
                             src='image/home/services-4.jpg'
-                            data-src='image/home/services-4.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -763,7 +757,6 @@ export default function HomeContent() {
                         >
                           <img
                             src='image/home/services-2.jpg'
-                            data-src='image/home/services-2.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -814,7 +807,6 @@ export default function HomeContent() {
                         >
                           <img
                             src='image/home/services-3.jpg'
-                            data-src='image/home/services-3.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -864,7 +856,6 @@ export default function HomeContent() {
                         >
                           <img
                             src='image/home/services-5.jpg'
-                            data-src='image/home/services-5.jpg'
                             alt=''
                             className='lazyload'
                           />
@@ -944,9 +935,9 @@ export default function HomeContent() {
           </div>
           <div className='tf-container'>
             <div className='row'>
-              <div className='col-lg-5'>
-                <div className='heading-section'>
-                  <div className='sub-title body-2 fs-1 fw-7 mb-17 title-animation'>
+              <div className='col-12 text-center'>
+                <div className='heading-section container'>
+                  <div className='sub-title body-2 fs-1 fw-7 mb-17 title-animation text-center mb-5'>
                     Our <span className='text-primary'>Team</span>
                   </div>
                   <h2 className='title fw-6 mb-4'>
@@ -969,7 +960,7 @@ export default function HomeContent() {
                   </div>
                 </div>
               </div>
-              <div className='col-lg-7'>
+              <div className='col-12 col-md-10 offset-md-1'>
                 <div
                   className='swiper tf-swiper sw-team sw-border'
                   style={{ cursor: 'grab' }}
@@ -980,18 +971,50 @@ export default function HomeContent() {
                                 "allowTouchMove": true,
                                 "grabCursor": true,
                                 "simulateTouch": true,
-                                "pagination": { "el": ".sw-pagination-team", "clickable": true },
+                                "pagination": { 
+                                    "el": ".sw-pagination-team", 
+                                    "clickable": true,
+                                    "dynamicBullets": true,
+                                    "dynamicMainBullets": 3
+                                },
                                 "navigation": {
                                     "clickable": true,
                                     "nextEl": ".team-next",
                                     "prevEl": ".team-prev"
                                 },  
                                 "breakpoints": {
-                                    "450": { "slidesPerView": 2, "slidesPerGroup": 2},
-                                    "575": { "slidesPerView": 3, "slidesPerGroup": 1},
-                                    "1200": { "slidesPerView": 3, "slidesPerGroup": 1}
+                                    "450": { 
+                                        "slidesPerView": 2, 
+                                        "slidesPerGroup": 2,
+                                        "pagination": { 
+                                            "el": ".sw-pagination-team", 
+                                            "clickable": true,
+                                            "dynamicBullets": true,
+                                            "dynamicMainBullets": 2
+                                        }
+                                    },
+                                    "575": { 
+                                        "slidesPerView": 3, 
+                                        "slidesPerGroup": 1,
+                                        "pagination": { 
+                                            "el": ".sw-pagination-team", 
+                                            "clickable": true,
+                                            "dynamicBullets": true,
+                                            "dynamicMainBullets": 2
+                                        }
+                                    },
+                                    "1200": { 
+                                        "slidesPerView": 4, 
+                                        "slidesPerGroup": 1,
+                                        "pagination": { 
+                                            "el": ".sw-pagination-team", 
+                                            "clickable": true,
+                                            "dynamicBullets": true,
+                                            "dynamicMainBullets": 1
+                                        }
                                     }
-                                }'
+                                }
+                            }'
                 >
                   <div className='swiper-wrapper'>
                     <div className='swiper-slide'>
@@ -1000,7 +1023,6 @@ export default function HomeContent() {
                           <div className='image  rounded-4 overflow-hidden'>
                             <img
                               src='image/home/ceo-sandip-modi.png'
-                              data-src='image/home/ceo-sandip-modi.png'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
                             />
@@ -1021,7 +1043,6 @@ export default function HomeContent() {
                           <div className='image  rounded-4 overflow-hidden'>
                             <img
                               src='image/home/aiyub_munshi_profile.jpg'
-                              data-src='image/home/aiyub_munshi_profile.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
                             />
@@ -1041,8 +1062,27 @@ export default function HomeContent() {
                         <div className='top-item'>
                           <div className='image  rounded-4 overflow-hidden'>
                             <img
+                              src='image/home/krishHinduja.jpg'
+                              alt=''
+                              className='lazyload rounded-4 overflow-hidden'
+                            />
+                          </div>
+                        </div>
+                        <div className='item-content'>
+                          <h6 className='title'>
+                            <span>Krish Hinduja</span>
+                          </h6>
+                          <p className='sub-title'>Head of Sales</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='swiper-slide'>
+                      <div className='team-item hover-image rounded-4 overflow-hidden'>
+                        <div className='top-item'>
+                          <div className='image  rounded-4 overflow-hidden'>
+                            <img
                               src='image/home/HrManager.jpg'
-                              data-src='image/home/HrManager.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
                             />
@@ -1052,13 +1092,13 @@ export default function HomeContent() {
                           <h6 className='title'>
                             <span>Meera Tank</span>
                           </h6>
-                          <p className='sub-title'>HR Manager</p>
+                          <p className='sub-title'>Head of HR</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className='sw-pagination-team sw-pagination d-lg-none mt-15 pt-5 justify-content-center'></div>
+                <div className='sw-pagination-team sw-pagination mt-15 pt-5 justify-content-center'></div>
               </div>
             </div>
           </div>
@@ -1125,7 +1165,6 @@ export default function HomeContent() {
                   <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
-                      data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -1161,7 +1200,6 @@ export default function HomeContent() {
                   <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
-                      data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -1199,7 +1237,6 @@ export default function HomeContent() {
                   <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
-                      data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -1235,7 +1272,6 @@ export default function HomeContent() {
                   <Link href='/porfolio-details' className='image'>
                     <img
                       src='image/home/project-item-1.jpg'
-                      data-src='image/home/project-item-1.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -1395,7 +1431,6 @@ export default function HomeContent() {
                   <div className='img-section img-1 img-elip tf-animate-1'>
                     <img
                       src='image/home/section-testimonial-1.png'
-                      data-src='image/home/section-testimonial-1.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1403,7 +1438,6 @@ export default function HomeContent() {
                   <div className='img-section img-2 tf-animate-2'>
                     <img
                       src='image/home/section-testimonial-2.png'
-                      data-src='image/home/section-testimonial-2.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1411,7 +1445,6 @@ export default function HomeContent() {
                   <div className='img-section img-3 tf-animate-3'>
                     <img
                       src='image/home/section-testimonial-3.png'
-                      data-src='image/home/section-testimonial-3.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1419,7 +1452,6 @@ export default function HomeContent() {
                   <div className='img-section img-4 img-elip tf-animate-4'>
                     <img
                       src='image/home/section-testimonial-4.png'
-                      data-src='image/home/section-testimonial-4.png'
                       alt=''
                       className='lazyload'
                     />
@@ -1472,10 +1504,7 @@ export default function HomeContent() {
           <div className='about-top'>
             <div className='tf-marquee'>
               <div
-                className='marquee-wrapper'
-                style={{
-                  animation: 'infiniteScroll 50s linear infinite'
-                }}
+                className='marquee-wrapper logos-marquee-wrapper'
               >
                 <div className='initial-child-container'>
                   <div className='big-text fs-initial'>
@@ -1882,10 +1911,7 @@ export default function HomeContent() {
           <div className='about-top'>
             <div className='tf-marquee'>
               <div
-                className='marquee-wrapper'
-                style={{
-                  animation: 'infiniteScroll 50s linear infinite'
-                }}
+                className='marquee-wrapper logos-marquee-wrapper'
               >
                 <div className='initial-child-container'>
                   <div className='big-text fs-initial'>

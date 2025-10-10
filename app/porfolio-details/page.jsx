@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const dynamic = 'force-static'
 
-export default function Page () {
+export default function Page() {
   return (
     <>
       {/* Page-title */}
@@ -28,7 +28,6 @@ export default function Page () {
             <div className='image-blog img-1'>
               <img
                 src='/image/section/project-details-1.jpg'
-                data-src='/image/section/project-details-1.jpg'
                 alt=''
                 className='lazyload'
               />
@@ -111,7 +110,6 @@ export default function Page () {
               <div className='image flex-grow-1'>
                 <img
                   src='/image/section/project-details-2.jpg'
-                  data-src='/image/section/project-details-2.jpg'
                   alt=''
                   className='lazyload'
                 />
@@ -119,7 +117,6 @@ export default function Page () {
               <div className='image flex-grow-1'>
                 <img
                   src='/image/section/project-details-3.jpg'
-                  data-src='/image/section/project-details-3.jpg'
                   alt=''
                   className='lazyload'
                 />
@@ -127,7 +124,6 @@ export default function Page () {
               <div className='image flex-grow-1'>
                 <img
                   src='/image/section/project-details-4.jpg'
-                  data-src='/image/section/project-details-4.jpg'
                   alt=''
                   className='lazyload'
                 />

@@ -56,7 +56,6 @@ export default function HireExpertContent() {
                   <div className='image tf-animate-2'>
                     <img
                       src='image/section/img-section-about-p-serveic-1.jpg'
-                      data-src='image/section/img-section-about-p-serveic-1.jpg'
                       alt=''
                       className='lazyload'
                     />
@@ -64,7 +63,6 @@ export default function HireExpertContent() {
                   <div className='img-secion-item img-1 tf-animate-3'>
                     <img
                       src='image/section/img-section-about-p-serveic-2.jpg'
-                      data-src='image/section/img-section-about-p-serveic-2.jpg'
                       alt=''
                       className='lazyload'
                     />
