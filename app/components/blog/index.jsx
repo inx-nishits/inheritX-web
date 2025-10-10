@@ -33,17 +33,17 @@ export default function BlogListPage() {
                 // Show loading immediately
                 setLoading(true);
                 setError(null);
-                
+
                 const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
                     cache: 'no-store', // Ensure fresh data
                     headers: {
                         'Accept': 'application/json',
                     }
                 });
-                
+
                 if (!res.ok) throw new Error('Failed to fetch blog data');
                 const json = await res.json();
-                
+
                 if (isMounted) {
                     setBlogData(json);
                     setLoading(false);
@@ -55,10 +55,10 @@ export default function BlogListPage() {
                 }
             }
         }
-        
+
         // Load data immediately
         loadData();
-        
+
         return () => {
             isMounted = false;
         };
@@ -450,6 +450,7 @@ export default function BlogListPage() {
           position: relative;
           overflow: hidden;
           background: #2a2a2a;
+          border-radius: 8px; /* match card/image rounding */
         }
         .skeleton::after {
           content: "";
@@ -468,7 +469,9 @@ export default function BlogListPage() {
         .skeleton-image {
           display: block;
           width: 100%;
-          height: 220px;
+          aspect-ratio: 4 / 3; /* match BlogImage aspectRatio */
+          height: auto;
+          min-height: 220px; /* preserve space similar to images */
           border-radius: 8px;
         }
         .skeleton-text {
@@ -476,25 +479,40 @@ export default function BlogListPage() {
           width: 80%;
           border-radius: 4px;
           background: #2a2a2a;
+          display: block;
+          margin-top: 8px; /* align with title spacing */
         }
         .skeleton-text.short { width: 40%; }
+        .skeleton-name {
+          height: 14px;
+          width: 120px; /* approximate author name width */
+          border-radius: 4px;
+          background: #2a2a2a;
+          display: inline-block;
+        }
         .skeleton-avatar {
           height: 16px;
           width: 16px;
           border-radius: 50%;
           background: #2a2a2a;
+          flex-shrink: 0; /* keep avatar size consistent */
         }
         .skeleton-cat {
           height: 14px;
           width: 60%;
           border-radius: 4px;
           background: #2a2a2a;
+          display: inline-block; /* align like category link */
         }
           .skeleton-count {
   width: 30px;     
   height: 30px;     
   border-radius: 9999px;  
   background: #2a2a2a;
+  margin-left: auto; /* mirror real count alignment */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
       `}</style>
             {/* <!-- Page-title --> */}
@@ -544,8 +562,8 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image">
-                                                        <BlogImage 
-                                                            src={post.feature_image} 
+                                                        <BlogImage
+                                                            src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
                                                             aspectRatio="4/3"
@@ -574,8 +592,8 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image">
-                                                        <BlogImage 
-                                                            src={post.feature_image} 
+                                                        <BlogImage
+                                                            src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
                                                             aspectRatio="4/3"
@@ -617,7 +635,7 @@ export default function BlogListPage() {
                                                         <div className="bottom-item px-md-15">
                                                             <div className="author-info">
                                                                 <span className="skeleton-avatar skeleton"></span>
-                                                                <span className="skeleton skeleton-text short" style={{ marginLeft: 8 }}></span>
+                                                                <span className="skeleton skeleton-name" style={{ marginLeft: 8 }}></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -704,7 +722,7 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image">
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image">
-                                                        <BlogImage 
+                                                        <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title || ''}
                                                             aspectRatio="4/3"
@@ -744,7 +762,7 @@ export default function BlogListPage() {
                                                     <div className="bottom-item px-md-15">
                                                         <div className="author-info">
                                                             <span className="skeleton-avatar skeleton"></span>
-                                                            <span className="skeleton skeleton-text short" style={{ marginLeft: 8 }}></span>
+                                                            <span className="skeleton skeleton-name" style={{ marginLeft: 8 }}></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -796,7 +814,7 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image">
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image">
-                                                        <BlogImage 
+                                                        <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title || ''}
                                                             aspectRatio="4/3"
@@ -836,7 +854,7 @@ export default function BlogListPage() {
                                                     <div className="bottom-item px-md-15">
                                                         <div className="author-info">
                                                             <span className="skeleton-avatar skeleton"></span>
-                                                            <span className="skeleton skeleton-text short" style={{ marginLeft: 8 }}></span>
+                                                            <span className="skeleton skeleton-name" style={{ marginLeft: 8 }}></span>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -1,3 +1,3 @@
-export { default, dynamic, generateStaticParams } from '../../porfolio-details/[slug]/page';
+export { default, dynamic, generateStaticParams, generateMetadata } from '../../porfolio-details/[slug]/page';
 
 

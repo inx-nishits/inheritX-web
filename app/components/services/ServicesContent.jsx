@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { servicesData } from './servicesData'
 import Breadcrumbs from '../Breadcrumbs'
+import Image from 'next/image'
 
 export default function ServicesContent() {
   return (
@@ -45,21 +46,14 @@ export default function ServicesContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-lg-6'>
-                <div className='left'>
-                  <div className='image tf-animate-2'>
-                    <img
-                      src='image/section/img-section-about-p-serveic-1.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-secion-item img-1 tf-animate-3'>
-                    <img
-                      src='image/section/img-section-about-p-serveic-2.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
+                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '250px' }}>
+                  <Image
+                    src='/image/page-title/image-12.jpg'
+                    alt=''
+                    fill
+                    className='lazyload'
+                    objectFit='cover'
+                  />
                 </div>
               </div>
               <div className='col-lg-6'>
@@ -417,11 +411,12 @@ export default function ServicesContent() {
                   </div>
                 </div>
               </div>
-              <div className='right-section'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
-                  <img
-                    src='image/home/img-section-company.png'
+              <div className='right-section w-100'>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative'>
+                  <Image
+                    src='/image/page-title/image-7.jpg'
                     alt=''
+                    fill
                     className='lazyload'
                   />
                 </div>

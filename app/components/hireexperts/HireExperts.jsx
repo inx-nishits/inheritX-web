@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HireExpertContent() {
   return (
     <>
@@ -52,21 +54,14 @@ export default function HireExpertContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-lg-6'>
-                <div className='left'>
-                  <div className='image tf-animate-2'>
-                    <img
-                      src='image/section/img-section-about-p-serveic-1.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-secion-item img-1 tf-animate-3'>
-                    <img
-                      src='image/section/img-section-about-p-serveic-2.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
+                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '250px' }}>
+                  <Image
+                    src='/image/page-title/image-6.jpg'
+                    alt=''
+                    fill
+                    className='lazyload'
+                    objectFit='cover'
+                  />
                 </div>
               </div>
               <div className='col-lg-6'>

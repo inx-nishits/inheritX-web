@@ -4,7 +4,7 @@ export default function PortfolioItem({ item }) {
   return (
     <div className='col-sm-6 col-md-4 col-lg-3'>
       <div className='project-gird-item project-item'>
-        <Link href={`/porfolio-details/${item.slug}`} className='image'>
+        <Link href={`/porfolio-details/${item.slug}`} className='image w-100 rounded-4 overflow-hidden'>
           <img 
             src={item.thumb} 
             data-src={item.thumb} 

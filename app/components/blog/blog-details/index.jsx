@@ -38,7 +38,7 @@ export default function BlogDetailsPage({ params }) {
   }, [slug]);
 
   const bloginfo = details?.bloginfo || null;
-  const title = bloginfo?.title ;
+  const title = bloginfo?.title;
   const hero = bloginfo?.feature_image || '/image/blog/blog-fallback.jpg';
 
   return (
@@ -102,16 +102,20 @@ export default function BlogDetailsPage({ params }) {
         .skeleton-text.short { width: 35%; }
         .skeleton-text.medium { width: 55%; }
         .skeleton-line { height: 14px; width: 100%; border-radius: 6px; background: #2a2a2a; margin: 10px 0; }
-        .skeleton-title { height: 36px; width: 100%; border-radius: 8px; }
+        .skeleton-title { height: 50px; width: 100%; border-radius: 8px; }
         .skeleton-post-title { height: 28px; width: 100%; border-radius: 8px; }
         .skeleton-meta { height: 16px; width: 30%; border-radius: 6px; }
       `}</style>
       {showSkeleton ? (
-        <div className="tf-container">
-          <div className="p-3">
-            <div className="skeleton skeleton-title"></div>
+        //  <div className="page-title-home">
+        <div className="tf-container my-5">
+          <div className="row">
+            <div className="col-12">
+              <div className="skeleton skeleton-title"></div>
+            </div>
           </div>
         </div>
+        // </div>
       ) : (
         <PageTitle title={title} className="mb-0" />
       )}
@@ -193,7 +197,7 @@ export default function BlogDetailsPage({ params }) {
                   </ul>
                 </div>
 
-                
+
 
               </div>
             </div>
