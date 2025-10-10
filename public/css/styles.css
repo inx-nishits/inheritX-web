@@ -3207,8 +3207,8 @@ fieldset {
 .big-text {
   font-weight: 600;
   font-size: 200px;
-  line-height: 100%;
-  letter-spacing: -3%;
+  /* line-height: 100%; */
+  /* letter-spacing: -3%; */
   white-space: nowrap;
 }
 .big-text .text-stroke {
