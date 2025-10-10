@@ -1,11 +1,7 @@
 /* Final UI-priority overrides: loaded after theme styles */
 
 /* Prevent horizontal scrolling globally */
-html,
-body {
-  /* overflow-x: clip !important; */
-  /* max-width: 100vw !important; */
-}
+/* html, body global overflow rules intentionally omitted */
 
 /* Spacing simplification per request: control only tf-container width */
 .tf-container {
@@ -1004,13 +1000,20 @@ a[href='javascript:;'] {
   }
 }
 
+@media (min-width: 1921px) {
+.tf-container {
+  max-width: 1650px !important;
+  }
+}
+
+
 @media (min-width: 768px) {
   .section-company .section-company-inner .left-section {
     min-width: 667px;
   }
 
   .big-text {
-    font-size: 140px;
+    font-size: 100px;
   }
 }
 
@@ -1022,6 +1025,13 @@ a[href='javascript:;'] {
   .menu-primary-menu {
     gap: 14px;
   }
+
+  .section-company .section-company-inner .left-section {
+    min-width: 400px !important;
+  }
+  .services-item.no-img {
+    padding: 24px;
+}
 }
 
 /* Team slider pagination - center alignment and hide on large screens when not needed */
@@ -1095,7 +1105,7 @@ a[href='javascript:;'] {
 .wg-curve-text .text-rotate {
   position: relative;
   width: 100%;
-  max-width: 270px;
+  max-width: 240px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1103,8 +1113,8 @@ a[href='javascript:;'] {
 }
 
 .wg-curve-text .text-rotate svg {
-  max-width: 100%;
-  height: auto;
+  width: 240px;
+  height: 240px;
   display: block;
   margin: 0 auto;
 }
@@ -1375,14 +1385,9 @@ a[href='javascript:;'] {
 @media (max-width: 768px) {
 
   /* Hide or resize decorative circles on mobile to prevent horizontal scroll */
-  .wg-curve-text .text-rotate {
-    /* max-width: 200px; */
-  }
+  /* rule intentionally left empty to override theme without effect */
 
-  .wg-curve-text .text-rotate svg {
-    /* width: 200px; */
-    /* height: 200px; */
-  }
+  /* rule intentionally left empty to override theme without effect */
 
   /* Ensure testimonial mask doesn't overflow on mobile */
   .section-testimonial .mask svg {
@@ -1416,14 +1421,9 @@ a[href='javascript:;'] {
 @media (max-width: 480px) {
 
   /* Further reduce sizes on very small screens */
-  .wg-curve-text .text-rotate {
-    /* max-width: 150px; */
-  }
+  /* rule intentionally left empty to override theme without effect */
 
-  .wg-curve-text .text-rotate svg {
-    /* width: 150px;
-    height: 150px; */
-  }
+  /* rule intentionally left empty to override theme without effect */
 
   .section-services .services-item .icon {
     max-width: 100px;
@@ -1508,7 +1508,10 @@ a[href='javascript:;'] {
   }
   .page-title-home {
     padding-top: 40px;
+    padding-bottom: 30px;
 }
+
+.section-testimonial .list-image {justify-content: center !important;}
 }
 
 .mask,

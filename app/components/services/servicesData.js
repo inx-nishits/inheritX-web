@@ -936,7 +936,7 @@ export const servicesData = {
     "title": "AI - ML",
     banner: "/image/page-title/ai-agents-developement.jpg",
     "heading": "Artificial Intelligence Solutions in India",
-    "heading_caption": "Powering innovation, efficiency, and growth with next-gen AI solutions.",
+    "heading_caption": "Powering innovation, efficiency, and growth with next-Gen AI solutions.",
     "content_heading": "AI Agent",
     "content_caption": "Empowering Businesses with Intelligent AI Agents",
     "content": [
@@ -979,7 +979,7 @@ export const servicesData = {
     "title": "AI - ML",
     banner: "/image/page-title/ai-ml--developement.jpg",
     "heading": "Artificial Intelligence Solutions in India",
-    "heading_caption": "Powering innovation, efficiency, and growth with next-gen AI solutions.",
+    "heading_caption": "Powering innovation, efficiency, and growth with next-Gen AI solutions.",
     "content_heading": "AI & ML Model Expertise",
     "content_caption": "Delivering Intelligent Models that Drive Business Impact",
     "content": [

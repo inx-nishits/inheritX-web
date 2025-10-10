@@ -119,9 +119,9 @@ export default function LifeAtInheritX() {
             <button
               type='button'
               aria-label='Previous image'
-              className='position-absolute start-0 ms-3 btn btn-light rounded-circle d-none d-md-inline-flex align-items-center justify-content-center'
+              className='position-absolute start-0 ms-3 btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center'
               onClick={() => setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length)}
-              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1 }}
+              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1, zIndex: 2 }}
             >
               ‹
             </button>
@@ -139,9 +139,9 @@ export default function LifeAtInheritX() {
             <button
               type='button'
               aria-label='Next image'
-              className='position-absolute end-0 me-3 btn btn-light rounded-circle d-none d-md-inline-flex align-items-center justify-content-center'
+              className='position-absolute end-0 me-3 btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center'
               onClick={() => setActiveIndex((i) => (i + 1) % galleryImages.length)}
-              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1 }}
+              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1, zIndex: 2 }}
             >
               ›
             </button>

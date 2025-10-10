@@ -158,36 +158,36 @@ export default function AboutContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function AboutContent() {
 
           <div className='tf-container' ref={journeyRef}>
             <div className='row'>
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -228,7 +228,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -244,7 +244,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -258,7 +258,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -273,7 +273,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -289,7 +289,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -304,7 +304,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -319,7 +319,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -334,7 +334,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -349,7 +349,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -365,7 +365,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -381,7 +381,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -397,7 +397,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -413,7 +413,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -429,7 +429,7 @@ export default function AboutContent() {
                 </div>
               </div>
 
-              <div className='col-12 col-sm-6 col-md-4 col-xl-3 mb-5'>
+              <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
                   <h3 className='title-animation'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
@@ -520,12 +520,15 @@ export default function AboutContent() {
                   </div>
                 </div>
               </div>
-              <div className='right-section'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
-                  <img
-                    src='image/page-title/company-1.jpg'
+              <div className='right-section' style={{ flex: 1 }}>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative' style={{ minHeight: '480px' }}>
+                  <Image
+                    src='/image/page-title/company-1.jpg'
                     alt=''
-                    className='lazyload'
+                    className='overflow-hidden h-100 w-100'
+                    style={{ objectFit: 'cover' }}
+                    fill
+                    priority
                   />
                 </div>
               </div>
@@ -848,7 +851,7 @@ export default function AboutContent() {
               <div className='col-lg-7'>
                 <div className='heading-section mb-60'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
-                    Client Feedback
+                    Clients Feedback
                   </div>
                   <h2 className='title fw-6 title-animation'>
                     1250+ People Say&nbsp;
@@ -871,7 +874,7 @@ export default function AboutContent() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Overall, I was very satisfied with InheritX. They are hardworking, very reliable, and very flexible. I would highly recommend the INX team for any development work.
+                          Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
                           <span className='name-user body-2 '>
@@ -963,37 +966,51 @@ export default function AboutContent() {
                 </div>
                 <div className='sw-pagination-testimonial sw-pagination mt-50'></div>
               </div>
-              <div className='col-lg-4'>
-                <div className='list-image'>
-                  <div className='img-section img-1 img-elip tf-animate-1'>
-                    <img
-                      src='image/home/section-testimonial-1.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-2 tf-animate-2'>
-                    <img
-                      src='image/home/section-testimonial-2.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-3 tf-animate-3'>
-                    <img
-                      src='image/home/section-testimonial-3.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-4 img-elip tf-animate-4'>
-                    <img
-                      src='image/home/section-testimonial-4.jpg'
-                      alt=''
-                      className='lazyload'
-                    />
+              <div className='col-lg-4 my-auto'>
+                <div className="container" style={{
+                  maxWidth: '300px',
+                  margin: '0 auto',
+                }}>
+                  <div className="row">
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-1.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-2.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-4.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-3.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

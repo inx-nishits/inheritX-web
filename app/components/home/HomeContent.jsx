@@ -255,7 +255,7 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-xl-6'>
-              <div className='relative image tf-animate-1 rounded-4 overflow-hidden'>
+              <div className='position-relative image tf-animate-1 rounded-4 overflow-hidden'>
                 <Image
                   src='/image/page-title/ai-banner.jpg'
                   alt=''
@@ -278,36 +278,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
-                  <div className='big-text'>AWS EXPERTS : <span className='text-stroke'>WIPE CODE</span> : AGENTIC AI MAKERS : <span className='text-stroke'>GEN AI</span> : DevOPs SPECIALIST</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
                 </div>
               </div>
             </div>
@@ -321,24 +321,23 @@ export default function HomeContent() {
                   </div>
                   <div className='text-rotate'>
                     <svg
-                      width='270'
-                      height='270'
-                      viewBox='0 0 270 270'
+                      width='240'
+                      height='240'
+                      viewBox='0 0 240 240'
                       xmlns='http://www.w3.org/2000/svg'
                     >
                       <defs>
                         <path
                           id='textPathCircle'
-                          d='M 25,135 A 110,110 0 1,1 245,135 A 110,110 0 1,1 25,135'
+                          d='M 20,120 A 100,100 0 1,1 220,120 A 100,100 0 1,1 20,120'
+                          pathLength='1000'
                           fill='none'
                         />
                       </defs>
+                      {/* Three evenly spaced phrases around the circle */}
                       <text>
-                        <textPath
-                          href='#textPathCircle'
-                          startOffset='0'
-                        >
-                          Go Beyond Mobile&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile&nbsp;•&nbsp;Go Beyond Mobile&nbsp;•&nbsp;Go Beyond Digital&nbsp;•&nbsp;Go With InheritX&nbsp;•&nbsp;Go Beyond Mobile&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;
+                        <textPath href='#textPathCircle' startOffset='0%'>
+                          {`\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•`}
                         </textPath>
                       </text>
                     </svg>
@@ -421,11 +420,11 @@ export default function HomeContent() {
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>
-                 <Image 
-                   src='/image/logo/logo-icon.svg' alt='' 
-                   width={50}
-                   height={50}
-                   />
+                  <Image
+                    src='/image/logo/logo-icon.svg' alt=''
+                    width={50}
+                    height={50}
+                  />
                   <h4 className='title'>InheritX</h4>
                 </div>
                 <div className='box-avatar tf-animate-3'>
@@ -445,7 +444,7 @@ export default function HomeContent() {
                   </div>
                   <div className='list-agent'>
                     <div className='agent agent-1'>
-                       <Image
+                      <Image
                         src='/image/avatar/agent-1.jpg'
                         alt=''
                         width={45}
@@ -454,7 +453,7 @@ export default function HomeContent() {
                       />
                     </div>
                     <div className='agent agent-2'>
-                       <Image
+                      <Image
                         src='/image/avatar/agent-2.jpg'
                         alt=''
                         width={45}
@@ -554,15 +553,13 @@ export default function HomeContent() {
                 <Accordion />
               </div>
               <div className='right-section w-100'>
-                <div className='relative image image-section tf-animate-1 rounded-4 overflow-hidden minwidth'>
-            
-                   <Image
-                        src='/image/page-title/presentationPm.jpg'
-                        alt=''
-                        width={500}
-                        height={300}
-                        className='lazyload'
-                      />
+                <div className='position-relative image image-section tf-animate-1 rounded-4 overflow-hidden minwidth'>
+                  <Image
+                    src='/image/page-title/presentationPm.jpg'
+                    alt=''
+                    fill
+                    className='lazyload'
+                  />
                 </div>
               </div>
             </div>
@@ -880,7 +877,7 @@ export default function HomeContent() {
                             src='/image/home/services-5.jpg'
                             alt=''
                             className='lazyload'
-                          fill
+                            fill
                           />
                         </Link>
                         <div className='bottom-item'>
@@ -1049,7 +1046,7 @@ export default function HomeContent() {
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
                               fill
-                              />
+                            />
                           </div>
                         </div>
                         <div className='item-content'>
@@ -1069,7 +1066,7 @@ export default function HomeContent() {
                               src='/image/home/aiyub_munshi_profile.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
-                            fill
+                              fill
                             />
                           </div>
                         </div>
@@ -1090,7 +1087,7 @@ export default function HomeContent() {
                               src='/image/home/krishHinduja.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
-                            fill
+                              fill
                             />
                           </div>
                         </div>
@@ -1111,7 +1108,7 @@ export default function HomeContent() {
                               src='/image/home/HrManager.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
-                            fill
+                              fill
                             />
                           </div>
                         </div>
@@ -1454,46 +1451,49 @@ export default function HomeContent() {
                 <div className='sw-pagination-testimonial sw-pagination mt-50'></div>
               </div>
               <div className='col-lg-4 my-auto'>
-               <div className="container">
-              <div className="row">
-                <div className="col-6 mb-3">
-                  <Image
-                    src='/image/home/section-testimonial-1.png'
-                    alt=''
-                    className='img-fluid lazyload'
-                    height={200}
-                    width={200}
-                  />
+                <div className="container" style={{
+                  maxWidth: '300px',
+                  margin: '0 auto',
+                }}>
+                  <div className="row">
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-1.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-2.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-4.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-3.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div className="col-6 mb-3">
-                  <Image
-                    src='/image/home/section-testimonial-2.png'
-                    alt=''
-                    className='img-fluid lazyload'
-                    height={200}
-                    width={200}
-                  />
-                </div>
-                <div className="col-6 mb-3">
-                  <Image
-                    src='/image/home/section-testimonial-3.png'
-                    alt=''
-                    className='img-fluid lazyload'
-                    height={200}
-                    width={200}
-                  />
-                </div>
-                <div className="col-6 mb-3">
-                  <Image
-                    src='/image/home/section-testimonial-4.png'
-                    alt=''
-                    className='img-fluid lazyload'
-                    height={200}
-                    width={200}
-                  />
-                </div>
-              </div>
-            </div>
 
               </div>
             </div>
@@ -1503,13 +1503,12 @@ export default function HomeContent() {
         <section className='section-form tf-spacing-4'>
           <div className='section-inner flex'>
             <div className='left rounded-4 overflow-hidden w-100'>
-              <div className='relative image tf-animate-1 px-3'>
+              <div className='position-relative image tf-animate-1 px-3' style={{ minHeight: '550px' }}>
                 <Image
-                  src='/image/page-title/image (9).jpg'
+                  src='/image/page-title/image-9.jpg'
                   alt=''
                   className='lazyload rounded-4'
-                  height={300}
-                  width={300}
+                  fill
                 />
               </div>
               <div className='section-content section-form-content tf-animate-2'>
@@ -1553,8 +1552,8 @@ export default function HomeContent() {
                         src='/image/partners/amazon.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
-                       height={100}
-                       width={200}
+                        height={100}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1572,7 +1571,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1590,7 +1589,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1608,7 +1607,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1626,7 +1625,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1644,7 +1643,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1662,7 +1661,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1680,7 +1679,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1698,7 +1697,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1716,7 +1715,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1734,7 +1733,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1752,7 +1751,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1770,7 +1769,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1788,7 +1787,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1806,7 +1805,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1824,7 +1823,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1842,7 +1841,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1860,7 +1859,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1878,7 +1877,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1896,7 +1895,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1914,7 +1913,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1932,7 +1931,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1950,7 +1949,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1968,7 +1967,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2009,7 +2008,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2027,7 +2026,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2045,7 +2044,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2063,7 +2062,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2081,7 +2080,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2099,7 +2098,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2117,7 +2116,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2135,7 +2134,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2153,7 +2152,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2171,7 +2170,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2189,7 +2188,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2207,7 +2206,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2225,7 +2224,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2243,7 +2242,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2261,7 +2260,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2279,7 +2278,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2297,7 +2296,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2315,7 +2314,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2333,7 +2332,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2351,7 +2350,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2369,7 +2368,7 @@ export default function HomeContent() {
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
                         height={100}
-                       width={200}
+                        width={200}
                         style={{
                           width: '200px',
                           height: '100px',

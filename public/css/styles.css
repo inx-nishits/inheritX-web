@@ -1273,6 +1273,7 @@ a:hover, a:focus {
 .sub-menu.mega-menu a:hover{
   color: var(--primary) !important;
 }
+.sub-menu.mega-menu a {font-size: 14px !important;}
 
 .header {
   border-top: 1px solid var(--stroke-2);
@@ -4125,6 +4126,7 @@ a.mapboxgl-ctrl-logo {
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  text-transform: capitalize;
 }
 .tf-marquee .marquee-wrapper .initial-child-container .marquee-child-item {
   display: inline-flex;
@@ -4193,12 +4195,12 @@ a.mapboxgl-ctrl-logo {
   height: 270px;
 }
 .text-rotate svg text {
-  font-size: 24px;
+  font-size: 34.5px;
   fill: var(--white);
   font-family: "Inter", sans-serif;
   text-anchor: middle;
   dominant-baseline: central;
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px; */
 }
 
 .wg-curve-text {
@@ -5906,7 +5908,7 @@ a.mapboxgl-ctrl-logo {
     max-width: 991px;
   }
   .section-company .image-section {
-    max-width: 765px;
+    max-width: 100%;
   }
   .section-counting .image {
     max-width: 985px;
@@ -6196,8 +6198,8 @@ a.mapboxgl-ctrl-logo {
     letter-spacing: -0.1px;
   }
   h2 {
-    font-size: 33px;
-    line-height: 42px;
+    font-size: 30px;
+    line-height: 40px;
     letter-spacing: -0.1px;
   }
   h3 {
@@ -6442,7 +6444,7 @@ a.mapboxgl-ctrl-logo {
   .section-about .left {
     /* display: none; */
   }
-  .section-about .about-inner {flex-direction: column;}
+  .section-about .about-inner {flex-direction: column;gap: 60px;}
   .wg-quote .title {
     font-size: 20px;
   }

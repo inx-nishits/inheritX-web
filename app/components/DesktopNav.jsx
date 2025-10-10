@@ -46,11 +46,11 @@ export default function DesktopNav ({ menuData }) {
                     {item.columns?.map((col, idx) => (
                       <div className='col-lg-3' key={`${item.href}-col-${idx}`}>
                         {col.title ? (
-                          <h6 className='text-primary fw-bold mb-5 cursor-default'>{col.title}</h6>
+                          <h6 className='text-primary fw-bold mb-4 cursor-default'>{col.title}</h6>
                         ) : null}
                         <ul className='list-unstyled'>
                           {col.items.map(link => (
-                            <li key={link.href} className={`mb-4 ${isActive(link.href) ? 'current-menu-item' : ''}`}>
+                            <li key={link.href} className={`mb-3 ${isActive(link.href) ? 'current-menu-item' : ''}`}>
                               <Link href={link.href} className='text-decoration-none text-white'>
                                 {link.label}
                               </Link>
