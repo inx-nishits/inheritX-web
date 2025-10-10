@@ -5503,9 +5503,9 @@ a.mapboxgl-ctrl-logo {
   width: 100%;
   /* min-width: 667px; */
 }
-.section-company .section-company-inner .right-section {
+/* .section-company .section-company-inner .right-section {
   flex: 1;
-}
+} */
 .section-company .image-section {
   height: 100%;
 }
@@ -5937,6 +5937,9 @@ a.mapboxgl-ctrl-logo {
   .header .header-right {
     gap: 51px;
   }
+  /* .section-company-inner .left-sectionnew{
+    min-width: 500px !important;
+  } */
 }
 @media (max-width: 1500px) {
   .menu-primary-menu {
@@ -6480,6 +6483,9 @@ a.mapboxgl-ctrl-logo {
     text-align: center;
     justify-content: center !important;
   }
+  .section-testimonial .list-image {
+  justify-content: center;
+}
 }
 @media (max-width: 550px) {
   .tf-post-grid.style-desc .image {
@@ -6667,4 +6673,15 @@ color: var(--primary) !important;
 .form-contact-us .error {
   color: red;
   margin-bottom: 10px;
+}
+.no-padding-important {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.minwidth {
+  min-width: 300px; /* change to whatever you need */
+}
+.image img {
+  width: 100%;       /* make the image take full width of the container */
+  height: auto;      /* maintain aspect ratio */
 }

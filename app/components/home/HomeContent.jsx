@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 import Link from 'next/link'
 import Accordion from '../Accordion'
+import Image from 'next/image';
 
 export default function HomeContent() {
 
@@ -254,11 +255,12 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-xl-6'>
-              <div className='image tf-animate-1 rounded-4 overflow-hidden'>
-                <img
-                  src='image/page-title/ai-banner.jpg'
+              <div className='relative image tf-animate-1 rounded-4 overflow-hidden'>
+                <Image
+                  src='/image/page-title/ai-banner.jpg'
                   alt=''
                   className='lazyload'
+                  fill
                 />
               </div>
             </div>
@@ -411,48 +413,61 @@ export default function HomeContent() {
             <div className='section-counting-inner flex'>
               <div className='left rounded-4 overflow-hidden'>
                 <div className='image tf-animate-1'>
-                  <img
-                    src='image/page-title/company-2.jpg'
+                  <Image
+                    src='/image/page-title/company-2.jpg'
                     alt=''
                     className='lazyload'
+                    fill
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>
-                  <img src='/image/logo/logo-icon.svg' alt='' />
+                 <Image 
+                   src='/image/logo/logo-icon.svg' alt='' 
+                   width={50}
+                   height={50}
+                   />
                   <h4 className='title'>InheritX</h4>
                 </div>
                 <div className='box-avatar tf-animate-3'>
-                  <div className='text'>
+                  <div className='text relative'>
                     <p className='fs-20 fw-6'>
                       850+ Trusted
                       <br />
                       Global Clients
                     </p>
-                    <img
-                      src='image/icon/icon-box-avatar.png'
+                    <Image
+                      src='/image/icon/icon-box-avatar.png'
                       className='lazyload'
                       alt=''
+                      width={40}
+                      height={10}
                     />
                   </div>
                   <div className='list-agent'>
                     <div className='agent agent-1'>
-                      <img
-                        src='image/avatar/agent-1.jpg'
+                       <Image
+                        src='/image/avatar/agent-1.jpg'
                         alt=''
+                        width={45}
+                        height={45}
                         className='lazyload'
                       />
                     </div>
                     <div className='agent agent-2'>
-                      <img
-                        src='image/avatar/agent-2.jpg'
+                       <Image
+                        src='/image/avatar/agent-2.jpg'
                         alt=''
+                        width={45}
+                        height={45}
                         className='lazyload'
                       />
                     </div>
                     <div className='agent agent-3'>
-                      <img
-                        src='image/avatar/agent-3.jpg'
+                      <Image
+                        src='/image/avatar/agent-3.jpg'
                         alt=''
+                        width={45}
+                        height={45}
                         className='lazyload'
                       />
                     </div>
@@ -526,7 +541,7 @@ export default function HomeContent() {
         <section className='section-company tf-spacing-3'>
           <div className='tf-container w-1810'>
             <div className='section-company-inner'>
-              <div className='left-section'>
+              <div className='left-section left-sectionnew'>
                 <div className='heading-section mb-53'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     <span className='text-primary'>Grow</span> & Development
@@ -538,13 +553,16 @@ export default function HomeContent() {
                 </div>
                 <Accordion />
               </div>
-              <div className='right-section'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden'>
-                  <img
-                    src='image/page-title/presentationPm.jpg'
-                    alt=''
-                    className='lazyload'
-                  />
+              <div className='right-section w-100'>
+                <div className='relative image image-section tf-animate-1 rounded-4 overflow-hidden minwidth'>
+            
+                   <Image
+                        src='/image/page-title/presentationPm.jpg'
+                        alt=''
+                        width={500}
+                        height={300}
+                        className='lazyload'
+                      />
                 </div>
               </div>
             </div>
@@ -668,10 +686,11 @@ export default function HomeContent() {
                           href='/services/web-app-development'
                           className='image rounded-4 overflow-hidden'
                         >
-                          <img
-                            src='image/home/services-1.jpg'
+                          <Image
+                            src='/image/home/services-1.jpg'
                             alt=''
                             className='lazyload'
+                            fill
                           />
                         </Link>
                         <div className='bottom-item'>
@@ -706,10 +725,11 @@ export default function HomeContent() {
                           href='/services/machine-learning-development'
                           className='image rounded-4 overflow-hidden'
                         >
-                          <img
-                            src='image/home/services-4.jpg'
+                          <Image
+                            src='/image/home/services-4.jpg'
                             alt=''
                             className='lazyload'
+                            fill
                           />
                         </Link>
                         <div className='bottom-item'>
@@ -755,10 +775,11 @@ export default function HomeContent() {
                           href='/services/mobile-app-development'
                           className='image rounded-4 overflow-hidden'
                         >
-                          <img
-                            src='image/home/services-2.jpg'
+                          <Image
+                            src='/image/home/services-2.jpg'
                             alt=''
                             className='lazyload'
+                            fill
                           />
                         </Link>
                         <div className='bottom-item'>
@@ -805,10 +826,11 @@ export default function HomeContent() {
                           href='/services'
                           className='image rounded-4 overflow-hidden'
                         >
-                          <img
-                            src='image/home/services-3.jpg'
+                          <Image
+                            src='/image/home/services-3.jpg'
                             alt=''
                             className='lazyload'
+                            fill
                           />
                         </Link>
                         <div className='bottom-item'>
@@ -854,10 +876,11 @@ export default function HomeContent() {
                           href='/services/google-cloud-services'
                           className='image rounded-4 overflow-hidden'
                         >
-                          <img
-                            src='image/home/services-5.jpg'
+                          <Image
+                            src='/image/home/services-5.jpg'
                             alt=''
                             className='lazyload'
+                          fill
                           />
                         </Link>
                         <div className='bottom-item'>
@@ -1021,11 +1044,12 @@ export default function HomeContent() {
                       <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
                           <div className='image  rounded-4 overflow-hidden'>
-                            <img
-                              src='image/home/ceo-sandip-modi.png'
+                            <Image
+                              src='/image/home/ceo-sandip-modi.png'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
-                            />
+                              fill
+                              />
                           </div>
                         </div>
                         <div className='item-content'>
@@ -1041,10 +1065,11 @@ export default function HomeContent() {
                       <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
                           <div className='image  rounded-4 overflow-hidden'>
-                            <img
-                              src='image/home/aiyub_munshi_profile.jpg'
+                            <Image
+                              src='/image/home/aiyub_munshi_profile.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
+                            fill
                             />
                           </div>
                         </div>
@@ -1061,10 +1086,11 @@ export default function HomeContent() {
                       <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
                           <div className='image  rounded-4 overflow-hidden'>
-                            <img
-                              src='image/home/krishHinduja.jpg'
+                            <Image
+                              src='/image/home/krishHinduja.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
+                            fill
                             />
                           </div>
                         </div>
@@ -1081,10 +1107,11 @@ export default function HomeContent() {
                       <div className='team-item hover-image rounded-4 overflow-hidden'>
                         <div className='top-item'>
                           <div className='image  rounded-4 overflow-hidden'>
-                            <img
-                              src='image/home/HrManager.jpg'
+                            <Image
+                              src='/image/home/HrManager.jpg'
                               alt=''
                               className='lazyload rounded-4 overflow-hidden'
+                            fill
                             />
                           </div>
                         </div>
@@ -1426,37 +1453,48 @@ export default function HomeContent() {
                 </div>
                 <div className='sw-pagination-testimonial sw-pagination mt-50'></div>
               </div>
-              <div className='col-lg-4'>
-                <div className='list-image'>
-                  <div className='img-section img-1 img-elip tf-animate-1'>
-                    <img
-                      src='image/home/section-testimonial-1.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-2 tf-animate-2'>
-                    <img
-                      src='image/home/section-testimonial-2.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-3 tf-animate-3'>
-                    <img
-                      src='image/home/section-testimonial-3.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-4 img-elip tf-animate-4'>
-                    <img
-                      src='image/home/section-testimonial-4.png'
-                      alt=''
-                      className='lazyload'
-                    />
-                  </div>
+              <div className='col-lg-4 my-auto'>
+               <div className="container">
+              <div className="row">
+                <div className="col-6 mb-3">
+                  <Image
+                    src='/image/home/section-testimonial-1.png'
+                    alt=''
+                    className='img-fluid lazyload'
+                    height={200}
+                    width={200}
+                  />
                 </div>
+                <div className="col-6 mb-3">
+                  <Image
+                    src='/image/home/section-testimonial-2.png'
+                    alt=''
+                    className='img-fluid lazyload'
+                    height={200}
+                    width={200}
+                  />
+                </div>
+                <div className="col-6 mb-3">
+                  <Image
+                    src='/image/home/section-testimonial-3.png'
+                    alt=''
+                    className='img-fluid lazyload'
+                    height={200}
+                    width={200}
+                  />
+                </div>
+                <div className="col-6 mb-3">
+                  <Image
+                    src='/image/home/section-testimonial-4.png'
+                    alt=''
+                    className='img-fluid lazyload'
+                    height={200}
+                    width={200}
+                  />
+                </div>
+              </div>
+            </div>
+
               </div>
             </div>
           </div>
@@ -1464,12 +1502,14 @@ export default function HomeContent() {
 
         <section className='section-form tf-spacing-4'>
           <div className='section-inner flex'>
-            <div className='left rounded-4 overflow-hidden'>
-              <div className='image tf-animate-1'>
-                <img
-                  src='image/page-title/team-vision.jpg'
+            <div className='left rounded-4 overflow-hidden w-100'>
+              <div className='relative image tf-animate-1 px-3'>
+                <Image
+                  src='/image/page-title/image (9).jpg'
                   alt=''
-                  className='lazyload'
+                  className='lazyload rounded-4'
+                  height={300}
+                  width={300}
                 />
               </div>
               <div className='section-content section-form-content tf-animate-2'>
@@ -1485,7 +1525,7 @@ export default function HomeContent() {
                 </Link>
               </div>
             </div>
-            <div className='right'>
+            <div className='right no-padding-important'>
               <ContactForm className='form-contact-us px-md-15 rounded-4 overflow-hidden' description={'We are ready to help with your next projects. Let\u2019s work together.'} />
             </div>
           </div>
@@ -1509,10 +1549,12 @@ export default function HomeContent() {
                 <div className='initial-child-container'>
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/amazon.png'
+                      <Image
+                        src='/image/partners/amazon.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                       height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1525,10 +1567,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/clutouc.png'
+                      <Image
+                        src='/image/partners/clutouc.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1541,10 +1585,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/gesia.png'
+                      <Image
+                        src='/image/partners/gesia.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1557,10 +1603,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/guru.png'
+                      <Image
+                        src='/image/partners/guru.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1573,10 +1621,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/partner.png'
+                      <Image
+                        src='/image/partners/partner.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1589,10 +1639,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/upwork.png'
+                      <Image
+                        src='/image/partners/upwork.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1605,10 +1657,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/amazon.png'
+                      <Image
+                        src='/image/partners/amazon.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1621,10 +1675,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/clutouc.png'
+                      <Image
+                        src='/image/partners/clutouc.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1637,10 +1693,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/gesia.png'
+                      <Image
+                        src='/image/partners/gesia.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1653,10 +1711,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/guru.png'
+                      <Image
+                        src='/image/partners/guru.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1669,10 +1729,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/partner.png'
+                      <Image
+                        src='/image/partners/partner.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1685,10 +1747,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/upwork.png'
+                      <Image
+                        src='/image/partners/upwork.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1701,10 +1765,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/amazon.png'
+                      <Image
+                        src='/image/partners/amazon.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1717,10 +1783,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/clutouc.png'
+                      <Image
+                        src='/image/partners/clutouc.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1733,10 +1801,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/gesia.png'
+                      <Image
+                        src='/image/partners/gesia.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1749,10 +1819,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/guru.png'
+                      <Image
+                        src='/image/partners/guru.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1765,10 +1837,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/partner.png'
+                      <Image
+                        src='/image/partners/partner.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1781,10 +1855,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/upwork.png'
+                      <Image
+                        src='/image/partners/upwork.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1797,10 +1873,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/amazon.png'
+                      <Image
+                        src='/image/partners/amazon.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1813,10 +1891,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/clutouc.png'
+                      <Image
+                        src='/image/partners/clutouc.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1829,10 +1909,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/gesia.png'
+                      <Image
+                        src='/image/partners/gesia.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1845,10 +1927,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/guru.png'
+                      <Image
+                        src='/image/partners/guru.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1861,10 +1945,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/partner.png'
+                      <Image
+                        src='/image/partners/partner.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1877,10 +1963,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/upwork.png'
+                      <Image
+                        src='/image/partners/upwork.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1916,10 +2004,12 @@ export default function HomeContent() {
                 <div className='initial-child-container'>
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/stockteamup.png'
+                      <Image
+                        src='/image/partners/stockteamup.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1932,10 +2022,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/perfit-1-1.jpg'
+                      <Image
+                        src='/image/partners/perfit-1-1.jpg'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1948,10 +2040,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/dearcows.png'
+                      <Image
+                        src='/image/partners/dearcows.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1964,10 +2058,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/bubble_logo.png'
+                      <Image
+                        src='/image/partners/bubble_logo.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1980,10 +2076,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients1.png'
+                      <Image
+                        src='/image/partners/OurClients1.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -1996,10 +2094,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients2.png'
+                      <Image
+                        src='/image/partners/OurClients2.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2012,10 +2112,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients.png'
+                      <Image
+                        src='/image/partners/OurClients.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2028,10 +2130,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/stockteamup.png'
+                      <Image
+                        src='/image/partners/stockteamup.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2044,10 +2148,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/perfit-1-1.jpg'
+                      <Image
+                        src='/image/partners/perfit-1-1.jpg'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2060,10 +2166,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/dearcows.png'
+                      <Image
+                        src='/image/partners/dearcows.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2076,10 +2184,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/bubble_logo.png'
+                      <Image
+                        src='/image/partners/bubble_logo.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2092,10 +2202,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients1.png'
+                      <Image
+                        src='/image/partners/OurClients1.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2108,10 +2220,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients2.png'
+                      <Image
+                        src='/image/partners/OurClients2.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2124,10 +2238,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients.png'
+                      <Image
+                        src='/image/partners/OurClients.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2140,10 +2256,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/stockteamup.png'
+                      <Image
+                        src='/image/partners/stockteamup.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2156,10 +2274,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/perfit-1-1.jpg'
+                      <Image
+                        src='/image/partners/perfit-1-1.jpg'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2172,10 +2292,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/dearcows.png'
+                      <Image
+                        src='/image/partners/dearcows.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2188,10 +2310,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/bubble_logo.png'
+                      <Image
+                        src='/image/partners/bubble_logo.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2204,10 +2328,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients1.png'
+                      <Image
+                        src='/image/partners/OurClients1.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2220,10 +2346,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients2.png'
+                      <Image
+                        src='/image/partners/OurClients2.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
@@ -2236,10 +2364,12 @@ export default function HomeContent() {
 
                   <div className='big-text fs-initial'>
                     <div className='image left d-block'>
-                      <img
-                        src='image/partners/OurClients.png'
+                      <Image
+                        src='/image/partners/OurClients.png'
                         alt=''
                         className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                        height={100}
+                       width={200}
                         style={{
                           width: '200px',
                           height: '100px',
