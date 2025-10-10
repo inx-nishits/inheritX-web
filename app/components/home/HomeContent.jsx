@@ -410,8 +410,8 @@ export default function HomeContent() {
           </div>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left rounded-4 overflow-hidden'>
-                <div className='image tf-animate-1'>
+              <div className='left'>
+                <div className='image tf-animate-1 rounded-4 overflow-hidden'>
                   <Image
                     src='/image/page-title/company-2.jpg'
                     alt=''
@@ -1502,8 +1502,8 @@ export default function HomeContent() {
 
         <section className='section-form tf-spacing-4'>
           <div className='section-inner flex'>
-            <div className='left rounded-4 overflow-hidden w-100'>
-              <div className='position-relative image tf-animate-1 px-3' style={{ minHeight: '550px' }}>
+            <div className='left w-100'>
+              <div className='position-relative rounded-4 overflow-hidden image tf-animate-1 px-3' style={{ minHeight: '550px' }}>
                 <Image
                   src='/image/page-title/image-9.jpg'
                   alt=''
