@@ -54,7 +54,77 @@ export default function HomeContent() {
 
   return (
     <>
-      <div className='page-title-home'>
+      <style jsx>{`
+        .page-title-home {
+          margin: 0 !important;
+        }
+        .herosectionContainer {
+          margin: 0 !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+        .herosectionContainer .row {
+          margin: 0 !important;
+        }
+        .herosectionContainer .col-xl-6 {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .herosectionContainer .col-xl-6:first-child {
+          padding-left: 60px !important;
+          padding-right: 15px !important;
+          padding-top: 40px !important;
+        }
+        @media (max-width: 1199px) {
+          .herosectionContainer .col-xl-6:first-child {
+            padding-left: 15px !important;
+            padding-top: 60px !important;
+          }
+        }
+        @media (max-width: 1240px) {
+          .herosectionContainer .col-xl-6 {
+            width: 100% !important;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            position: relative !important;
+          }
+          .herosectionContainer .col-xl-6:first-child {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+            padding-top: 40px !important;
+          }
+          .herosectionContainer .col-xl-6:last-child {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+        }
+        .hero-image-container {
+          position: absolute !important;
+          top: 0 !important;
+          right: 0 !important;
+          width: 50% !important;
+          height: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        
+        /* Mobile and tablet overrides - placed after main rules for higher specificity */
+        @media (max-width: 1240px) {
+          .herosectionContainer .col-xl-6 .hero-image-container {
+            position: relative !important;
+            width: 100% !important;
+            height: 400px !important;
+            top: auto !important;
+            right: auto !important;
+            left: auto !important;
+            bottom: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+        }
+      `}</style>
+      <div className='page-title-home' style={{ margin: 0, paddingTop: '0' }}>
         <div className='mask mask-home-1'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -100,13 +170,8 @@ export default function HomeContent() {
           </svg>
         </div>
 
-        <div className='tf-container herosectionContainer'>
-          {/* <div className='row'>
-            <div className='col-12'>
-
-            </div>
-          </div> */}
-          <div className='row justify-content-between rg-70'>
+        <div className='tf-container herosectionContainer' style={{ padding: 0, margin: 0, maxWidth: '100%', position: 'relative' }}>
+          <div className='row' style={{ margin: 0 }}>
             <div className='col-xl-6'>
 
               <div className='top-page-title'>
@@ -115,7 +180,7 @@ export default function HomeContent() {
                 </div>
 
                 <div className='sub-title fs-1 fw-5'>
-                  <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;InheritX.
+                  <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
                 <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
                   Innovating the Future&nbsp;of&nbsp;
@@ -128,7 +193,7 @@ export default function HomeContent() {
                 </h2>
               </div>
 
-              <div className='content-left'>
+              <div className='content-left mb-5 pb-5'>
                 <div className='desc text-animation'>
                   <p className='fs-3 lh-30'>
                     From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
@@ -254,13 +319,14 @@ export default function HomeContent() {
                 </Link>
               </div>
             </div>
-            <div className='col-xl-6'>
-              <div className='position-relative image tf-animate-1 rounded-4 overflow-hidden'>
+            <div className='col-xl-6 mb-5 pb-5'>
+              <div className='hero-image-container image tf-animate-1 overflow-hidden'>
                 <Image
                   src='/image/page-title/ai-banner.jpg'
                   alt=''
                   className='lazyload'
                   fill
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -410,7 +476,7 @@ export default function HomeContent() {
           </div>
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
-              <div className='left'>
+              <div className='left rounded-4 overflow-hidden'>
                 <div className='image tf-animate-1 rounded-4 overflow-hidden'>
                   <Image
                     src='/image/page-title/company-2.jpg'
@@ -1500,9 +1566,9 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section className='section-form tf-spacing-4'>
+        <section className='section-form tf-spacing-4 tf-container'>
           <div className='section-inner flex'>
-            <div className='left w-100'>
+            <div className='left w-100 rounded-4 overflow-hidden'>
               <div className='position-relative rounded-4 overflow-hidden image tf-animate-1 px-3' style={{ minHeight: '550px' }}>
                 <Image
                   src='/image/page-title/image-9.jpg'

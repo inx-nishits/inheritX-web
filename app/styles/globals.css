@@ -400,27 +400,74 @@ img { max-width: 100%; height: auto; }
 
 /* Sections: standardize vertical rhythm */
 .tf-spacing-1 {
-  padding-top: 96px !important;
-  padding-bottom: 96px !important;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
 }
+
+.tf-spacing-2,
+.tf-spacing-3,
+.tf-spacing-4,
+.tf-spacing-5,
+.tf-spacing-6,
+.tf-spacing-7,
+.tf-spacing-8,
+.tf-spacing-9,
+.tf-spacing-10,
+.tf-spacing-11,
+.tf-spacing-12 {
+  margin-top: 0 !important;
+  margin-bottom: 120px !important;
+}
+
 @media (max-width: 1199.98px) {
   .tf-spacing-1 {
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+  }
+  
+  .tf-spacing-2,
+  .tf-spacing-3,
+  .tf-spacing-4,
+  .tf-spacing-5,
+  .tf-spacing-6,
+  .tf-spacing-7,
+  .tf-spacing-8,
+  .tf-spacing-9,
+  .tf-spacing-10,
+  .tf-spacing-11,
+  .tf-spacing-12 {
+    margin-top: 0 !important;
+    margin-bottom: 120px !important;
   }
 }
+
 @media (max-width: 767.98px) {
   .tf-spacing-1 {
-    padding-top: 56px !important;
-    padding-bottom: 56px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  
+  .tf-spacing-2,
+  .tf-spacing-3,
+  .tf-spacing-4,
+  .tf-spacing-5,
+  .tf-spacing-6,
+  .tf-spacing-7,
+  .tf-spacing-8,
+  .tf-spacing-9,
+  .tf-spacing-10,
+  .tf-spacing-11,
+  .tf-spacing-12 {
+    margin-top: 0 !important;
+    margin-bottom: 60px !important;
   }
 }
 
 /* Page titles: slightly tighter on laptops */
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .page-title .page-title-content {
-    padding-top: 88px !important;
-    padding-bottom: 100px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 }
 

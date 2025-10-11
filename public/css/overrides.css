@@ -1,5 +1,10 @@
 /* Final UI-priority overrides: loaded after theme styles */
 
+/* Set border radius to 0px for wg-cta alert elements */
+.wg-cta.tf-spacing-2.alert.alert-dismissible.fade.show {
+  border-radius: 0px !important;
+}
+
 /* Prevent horizontal scrolling globally */
 /* html, body global overflow rules intentionally omitted */
 
@@ -30,8 +35,23 @@
 
 /* Section rhythm */
 .tf-spacing-1 {
-  padding-top: 96px !important;
-  padding-bottom: 96px !important;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+}
+
+.tf-spacing-2,
+.tf-spacing-3,
+.tf-spacing-4,
+.tf-spacing-5,
+.tf-spacing-6,
+.tf-spacing-7,
+.tf-spacing-8,
+.tf-spacing-9,
+.tf-spacing-10,
+.tf-spacing-11,
+.tf-spacing-12 {
+  margin-top: 0 !important;
+  margin-bottom: 120px !important;
 }
 
 /* Laptop heading balance */
@@ -55,15 +75,45 @@
 
 @media (max-width: 1199.98px) {
   .tf-spacing-1 {
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+  }
+  
+  .tf-spacing-2,
+  .tf-spacing-3,
+  .tf-spacing-4,
+  .tf-spacing-5,
+  .tf-spacing-6,
+  .tf-spacing-7,
+  .tf-spacing-8,
+  .tf-spacing-9,
+  .tf-spacing-10,
+  .tf-spacing-11,
+  .tf-spacing-12 {
+    margin-top: 0 !important;
+    margin-bottom: 120px !important;
   }
 }
 
 @media (max-width: 767.98px) {
   .tf-spacing-1 {
-    padding-top: 56px !important;
-    padding-bottom: 56px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  
+  .tf-spacing-2,
+  .tf-spacing-3,
+  .tf-spacing-4,
+  .tf-spacing-5,
+  .tf-spacing-6,
+  .tf-spacing-7,
+  .tf-spacing-8,
+  .tf-spacing-9,
+  .tf-spacing-10,
+  .tf-spacing-11,
+  .tf-spacing-12 {
+    margin-top: 0 !important;
+    margin-bottom: 60px !important;
   }
 
   .herosectionContainer .top-page-title .title{
@@ -74,16 +124,31 @@
 /* Slightly tighter spacing for larger laptops */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .tf-spacing-1 {
-    padding-top: 84px !important;
-    padding-bottom: 84px !important;
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+  }
+  
+  .tf-spacing-2,
+  .tf-spacing-3,
+  .tf-spacing-4,
+  .tf-spacing-5,
+  .tf-spacing-6,
+  .tf-spacing-7,
+  .tf-spacing-8,
+  .tf-spacing-9,
+  .tf-spacing-10,
+  .tf-spacing-11,
+  .tf-spacing-12 {
+    margin-top: 0 !important;
+    margin-bottom: 120px !important;
   }
 }
 
 /* Page titles */
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .page-title .page-title-content {
-    padding-top: 72px !important;
-    padding-bottom: 88px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 }
 
@@ -1035,6 +1100,13 @@ a[href='javascript:;'] {
 .custom-services-wrapper .services-item-force {
   width: 50% !important;
   max-width: 50% !important;
+}
+
+.counter-item .number-counter.fs-65 {
+  font-size: 36px;
+}
+.herosectionContainer .top-page-title .title {
+  font-size: 48px !important;
 }
 }
 
