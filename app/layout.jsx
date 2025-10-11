@@ -7,17 +7,17 @@ import { Toaster } from 'react-hot-toast'
 
 // SEO base configuration
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
-const defaultOgImage = `${siteUrl}/image/logo/logo-icon.svg` // Fallback: use an existing image in /public/image/logo
+const defaultOgImage = `${siteUrl}/image/logo/inx-logo.png` // Fallback: use an existing image in /public/image/logo
 const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'AI, ML, and Custom Software Development Company | InheritX',
+    default: 'Top AI, Web, and Mobile App Development Company | InheritX',
     template: '%s | InheritX'
   },
   description:
-    'InheritX builds AI solutions, machine learning systems, automation workflows, and custom software across mobile, web, and cloud. We deliver scalable apps, data platforms, and DevOps for high-growth teams.',
+    'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
   keywords: [
     'AI development',
     'Machine Learning',
@@ -42,9 +42,9 @@ export const metadata = {
     type: 'website',
     url: '/',
     siteName: 'InheritX',
-    title: 'AI, ML, and Custom Software Development Company | InheritX',
+    title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
-      'AI and ML solutions, automation, and custom software for mobile, web, and cloud. Reliable delivery with DevOps and MLOps best practices.',
+      'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
     images: [
       {
         url: defaultOgImage,
@@ -56,9 +56,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI, ML, and Custom Software Development Company | InheritX',
+    title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
-      'AI and ML solutions, automation, and custom software for mobile, web, and cloud. Reliable delivery with DevOps and MLOps best practices.',
+      'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
     images: [defaultOgImage]
   },
   robots: {
@@ -66,7 +66,7 @@ export const metadata = {
     follow: true
   },
   icons: {
-    icon: '/image/logo/favicon.ico' // Placeholder: switch to '/favicon.ico' if present at project root
+    icon: '/image/logo/inx-icon.png' // Placeholder: switch to '/favicon.ico' if present at project root
   },
   themeColor
 }
@@ -83,14 +83,14 @@ export const viewport = {
 // - To override metadata per page, use `export const metadata` or `export async function generateMetadata()` in page files.
 // - Titles will use the template "%s | InheritX" unless a page provides an absolute title.
 
-export default function RootLayout ({ children }) {
+export default function RootLayout({ children }) {
   // Structured Data (JSON-LD)
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'InheritX',
     url: siteUrl,
-    logo: `${siteUrl}/image/logo/logo-icon.svg`,
+    logo: `${siteUrl}/image/logo/inx-logo.png`,
     sameAs: [
       'https://www.linkedin.com/company/inheritx/',
       'https://twitter.com/inhx_tech',

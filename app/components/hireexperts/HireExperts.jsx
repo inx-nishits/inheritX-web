@@ -53,8 +53,8 @@ export default function HireExpertContent() {
         <section className='section-about p-services tf-spacing-3'>
           <div className='tf-container'>
             <div className='row'>
-              <div className='col-lg-6'>
-                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '250px' }}>
+              <div className='col-lg-6 mb-5'>
+                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '500px' }}>
                   <Image
                     src='/image/page-title/image-6.jpg'
                     alt=''

@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
   // TODO: Replace this mock with real post data fetch once available
   const postTitle = slug ? slug.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : 'Blog'
   const postDescription = `Read insights about ${postTitle} from InheritX.`
-  const ogImage = `${siteUrl}/image/logo/logo-icon.svg`
+  const ogImage = `${siteUrl}/image/logo/inx-logo.png`
 
   return {
     title: postTitle,

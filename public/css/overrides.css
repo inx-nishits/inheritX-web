@@ -1032,6 +1032,10 @@ a[href='javascript:;'] {
   .services-item.no-img {
     padding: 24px;
 }
+.custom-services-wrapper .services-item-force {
+  width: 50% !important;
+  max-width: 50% !important;
+}
 }
 
 /* Team slider pagination - center alignment and hide on large screens when not needed */

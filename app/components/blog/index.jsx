@@ -14,7 +14,26 @@ export default function BlogListPage() {
     const showSkeleton = loading || !blogData;
     const [subEmail, setSubEmail] = useState("");
     const [submitting, setSubmitting] = useState(false);
+    const [isCategorySidebarOpen, setIsCategorySidebarOpen] = useState(false);
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(subEmail);
+
+    // Category sidebar toggle functions
+    const openCategorySidebar = () => {
+        setIsCategorySidebarOpen(true);
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    };
+
+    const closeCategorySidebar = () => {
+        setIsCategorySidebarOpen(false);
+        document.body.style.overflow = 'unset'; // Restore scrolling
+    };
+
+    // Close sidebar when clicking overlay
+    const handleOverlayClick = (e) => {
+        if (e.target === e.currentTarget) {
+            closeCategorySidebar();
+        }
+    };
 
     useEffect(() => {
         // Add loadmore class to body to enable fl-item display
@@ -93,16 +112,128 @@ export default function BlogListPage() {
           margin: 0 !important;
         }
 
-        /* Sidebar should always be visible on mobile and positioned relatively */
+        /* Hide sidebar on mobile and tablet, show category toggle button */
         @media (max-width: 1199.98px) {
           .tf-sidebar.sidebar-filter {
-            position: relative !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            transform: none !important;
-            height: auto !important;
+            display: none !important;
           }
+          
+          
+          /* Category button at top of grid - using theme button style */
+          .category-toggle-btn {
+            margin-bottom: 30px !important;
+            max-width: 200px !important;
+            margin-left: auto !important;
+          }
+        }
+        
+        /* Hide category button on desktop */
+        @media (min-width: 1200px) {
+          .category-toggle-btn {
+            display: none !important;
+          }
+        }
+        
+        /* Category sidebar overlay and slide-in animation */
+        .category-sidebar-overlay {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          background: rgba(0, 0, 0, 0.5) !important;
+          z-index: 9998 !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
+          transition: all 0.3s ease !important;
+        }
+        
+        .category-sidebar-overlay.active {
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+        
+        .category-sidebar {
+          position: fixed !important;
+          top: 0 !important;
+          right: -400px !important;
+          width: 350px !important;
+          height: 100% !important;
+          background: #1a1a1a !important;
+          z-index: 9999 !important;
+          transition: right 0.3s ease !important;
+          display: flex !important;
+          flex-direction: column !important;
+          box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        .category-sidebar.active {
+          right: 0 !important;
+        }
+        
+        .category-sidebar-header {
+          position: sticky !important;
+          top: 0 !important;
+          z-index: 10 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          padding: 20px !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+          background: #2a2a2a !important;
+          flex-shrink: 0 !important;
+        }
+        
+        .category-sidebar-title {
+          color: white !important;
+          font-size: 18px !important;
+          font-weight: 600 !important;
+          margin: 0 !important;
+        }
+        
+        .category-sidebar-close {
+          background: none !important;
+          border: none !important;
+          color: white !important;
+          font-size: 20px !important;
+          cursor: pointer !important;
+          padding: 5px !important;
+          border-radius: 4px !important;
+          transition: background 0.3s ease !important;
+        }
+        
+        .category-sidebar-close:hover {
+          background: rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        .category-sidebar-content {
+          flex: 1 !important;
+          overflow-y: auto !important;
+          padding: 20px !important;
+        }
+        
+        .category-sidebar .sidebar-categories .item {
+          padding: 12px 0 !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+        
+        .category-sidebar .sidebar-categories .item:last-child {
+          border-bottom: none !important;
+        }
+        
+        .category-sidebar .sidebar-categories .item a {
+          color: #ffffff !important;
+          text-decoration: none !important;
+          transition: color 0.3s ease !important;
+        }
+        
+        .category-sidebar .sidebar-categories .item a:hover {
+          color: var(--primary) !important;
+        }
+        
+        .category-sidebar .sidebar-categories .item i {
+          color: var(--primary) !important;
+          margin-right: 10px !important;
         }
         .tf-grid-2 .tf-post-grid.hover-image .top .image img,
         .tf-grid-2 .tf-post-grid .top .image img {
@@ -542,6 +673,20 @@ export default function BlogListPage() {
                 <div className="list-post-gird tf-spacing-2">
                     <div className="tf-container">
                         <div className="row rg-30">
+                            {/* Category Toggle Button - Only visible on mobile/tablet */}
+                            <div className="col-12 d-xl-none mb-3">
+                                <div className="d-flex justify-content-end">
+                                    <button 
+                                        className="tf-btn category-toggle-btn"
+                                        onClick={openCategorySidebar}
+                                        aria-label="Open categories"
+                                    >
+                                        <span>Categories</span>
+                                        <i className="icon-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
                             <div className="col-xl-8">
 
                                 <div className="tf-grid-2 loadmore-item">
@@ -566,7 +711,7 @@ export default function BlogListPage() {
                                                             src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            aspectRatio="4/3"
+                                                            aspectRatio="4/2"
                                                             fit="contain"
                                                             priority={true}
                                                         />
@@ -596,7 +741,7 @@ export default function BlogListPage() {
                                                             src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            aspectRatio="4/3"
+                                                            aspectRatio="4/2"
                                                             fit="contain"
                                                             priority={index < 2}
                                                         />
@@ -725,7 +870,7 @@ export default function BlogListPage() {
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title || ''}
-                                                            aspectRatio="4/3"
+                                                            aspectRatio="4/2"
                                                             fit="contain"
                                                             priority={false}
                                                         />
@@ -817,7 +962,7 @@ export default function BlogListPage() {
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title || ''}
-                                                            aspectRatio="4/3"
+                                                            aspectRatio="4/2"
                                                             fit="contain"
                                                             priority={false}
                                                         />
@@ -938,6 +1083,58 @@ export default function BlogListPage() {
                     </div>
                 </div>
             </div>
+
+            {/* Category Sidebar Overlay and Sidebar */}
+            {isCategorySidebarOpen && (
+                <>
+                    <div 
+                        className={`category-sidebar-overlay ${isCategorySidebarOpen ? 'active' : ''}`}
+                        onClick={handleOverlayClick}
+                    />
+                    <div className={`category-sidebar ${isCategorySidebarOpen ? 'active' : ''}`}>
+                        <div className="category-sidebar-header">
+                            <h3 className="category-sidebar-title">Categories</h3>
+                            <button 
+                                className="category-sidebar-close"
+                                onClick={closeCategorySidebar}
+                                aria-label="Close categories"
+                            >
+                                <i className="icon-close"></i>
+                            </button>
+                        </div>
+                        <div className="category-sidebar-content">
+                            <div className="sidebar-item sidebar-content sidebar-categories">
+                                <ul className="list">
+                                    {(blogData?.categories || []).map((cat) => (
+                                        <li className="item" key={cat.id}>
+                                            <i className="icon-arrow-right"></i>
+                                            <Link 
+                                                href={`/blog/category/${cat.slug}`} 
+                                                className="body-2 fw-5"
+                                                onClick={closeCategorySidebar}
+                                            >
+                                                {cat.name}
+                                            </Link>
+                                            <span className="category-count">{cat.count || 0}</span>
+                                        </li>
+                                    ))}
+                                    {showSkeleton && (!blogData?.categories || blogData?.categories?.length === 0) && (
+                                        <>
+                                            {Array.from({ length: 8 }).map((_, idx) => (
+                                                <li className="item" key={`cat-skeleton-${idx}`}>
+                                                    <i className="icon-arrow-right"></i>
+                                                    <span className="skeleton skeleton-cat"></span>
+                                                    <span className="skeleton skeleton-count"></span>
+                                                </li>
+                                            ))}
+                                        </>
+                                    )}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
         </>
     );
 }

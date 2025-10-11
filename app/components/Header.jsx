@@ -38,11 +38,11 @@ export default function Header() {
       document.body.style.top = prevBodyStyle.top
       document.body.style.width = prevBodyStyle.width
 
-      // Restore scroll position
-      const y = Math.abs(parseInt(prevBodyStyle.top || '0', 10)) || scrollY
-      window.scrollTo(0, y)
+      // Don't restore scroll position when closing mobile menu after navigation
+      // The onNavigate handler will handle scrolling to top
     }
   }, [isMobileOpen])
+
 
   // Helper to check if path is active
   const isActive = path => pathname === path
@@ -185,11 +185,18 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <MobileNav menuData={menuData} onNavigate={() => setIsMobileOpen(false)} />
+          <MobileNav menuData={menuData} onNavigate={() => {
+            setIsMobileOpen(false)
+            // Scroll to top when navigating to a new page
+            window.scrollTo(0, 0)
+          }} />
         </div>
       </div>
       {isMobileOpen && (
-        <div className='offcanvas-backdrop fade show' onClick={() => setIsMobileOpen(false)}></div>
+        <div className='offcanvas-backdrop fade show' onClick={() => {
+          setIsMobileOpen(false)
+          window.scrollTo(0, 0)
+        }}></div>
       )}
       <style jsx>{`
         /* Ensure sidebar content has no outer spacing so header can touch edges */
@@ -216,6 +223,7 @@ export default function Header() {
           margin: 0; /* flush to edges */
           background-color: var(--offcanvas-bg, #0b0f19);
         }
+
       `}</style>
     </>
   )

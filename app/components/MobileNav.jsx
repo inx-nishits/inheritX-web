@@ -56,7 +56,7 @@ export default function MobileNav ({ menuData, onNavigate }) {
           return (
             <li key={item.href} className={active ? 'current-menu-item' : ''}>
               <div className='mobile-row flex justify-content-between align-items-center'>
-                <Link href={item.href} className='mobile-link'>{item.label}</Link>
+                <Link href={item.href} className='mobile-link' onClick={onNavigate}>{item.label}</Link>
                 <button
                   type='button'
                   aria-expanded={expanded}
