@@ -244,19 +244,51 @@
 
     // First, mark all elements as ready to animate (this hides them)
     elements.forEach(function (element) {
-      // Check if image is loaded
+      // Check if image is loaded - improved for Next.js Image components
       const img = element.querySelector('img')
-      if (img && img.complete) {
-        element.classList.add('ready-to-animate')
+      const nextImage = element.querySelector('img[data-nimg]') // Next.js Image component
+      
+      if (nextImage) {
+        // For Next.js Image components, check if already loaded
+        if (nextImage.complete && nextImage.naturalHeight !== 0) {
+          element.classList.add('ready-to-animate')
+        } else {
+          // Listen for load event
+          nextImage.addEventListener(
+            'load',
+            function () {
+              element.classList.add('ready-to-animate')
+            },
+            { once: true }
+          )
+          // Fallback timeout
+          setTimeout(() => {
+            if (!element.classList.contains('ready-to-animate')) {
+              element.classList.add('ready-to-animate')
+            }
+          }, 3000)
+        }
       } else if (img) {
-        img.addEventListener(
-          'load',
-          function () {
-            element.classList.add('ready-to-animate')
-          },
-          { once: true }
-        )
+        // Regular img tag
+        if (img.complete && img.naturalHeight !== 0) {
+          element.classList.add('ready-to-animate')
+        } else {
+          img.addEventListener(
+            'load',
+            function () {
+              element.classList.add('ready-to-animate')
+            },
+            { once: true }
+          )
+          // Fallback timeout
+          setTimeout(() => {
+            if (!element.classList.contains('ready-to-animate')) {
+              element.classList.add('ready-to-animate')
+            }
+          }, 3000)
+        }
       } else {
+        // No image, animate immediately
         element.classList.add('ready-to-animate')
       }
     })

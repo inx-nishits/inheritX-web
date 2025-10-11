@@ -3890,6 +3890,29 @@ a.mapboxgl-ctrl-logo {
   transition: 1.5s cubic-bezier(0.63, 0.25, 0.25, 1);
 }
 
+/* Improved animation states for better image loading */
+.tf-animate-1.ready-to-animate {
+  visibility: visible;
+}
+
+.tf-animate-1:not(.ready-to-animate) {
+  visibility: hidden;
+}
+
+/* Fallback for images that don't load */
+.tf-animate-1 img {
+  transition: opacity 0.3s ease;
+}
+
+.tf-animate-1 img:not([src]) {
+  opacity: 0;
+}
+
+/* Ensure smooth animation even with slow loading images */
+.tf-animate-1.active-animate img {
+  opacity: 1;
+}
+
 .tf-animate-2 {
   clip-path: inset(0 0 100% 0);
   opacity: 0;
