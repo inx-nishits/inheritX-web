@@ -439,7 +439,7 @@ export default function HomeContent() {
                 <div className='box-avatar tf-animate-3'>
                   <div className='text relative'>
                     <p className='fs-20 fw-6'>
-                      850+ Trusted
+                      600+ Trusted
                       <br />
                       Global Clients
                     </p>
@@ -1104,7 +1104,7 @@ export default function HomeContent() {
                           <h6 className='title'>
                             <span>Krish Hinduja</span>
                           </h6>
-                          <p className='sub-title'>Head of Sales</p>
+                          <p className='sub-title'>Sales Head</p>
                         </div>
                       </div>
                     </div>
@@ -1125,7 +1125,7 @@ export default function HomeContent() {
                           <h6 className='title'>
                             <span>Meera Tank</span>
                           </h6>
-                          <p className='sub-title'>Head of HR</p>
+                          <p className='sub-title'>HR Head</p>
                         </div>
                       </div>
                     </div>

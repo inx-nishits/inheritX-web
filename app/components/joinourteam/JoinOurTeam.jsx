@@ -647,7 +647,7 @@ export default function JoinOurTeam() {
                 <div className='box-avatar tf-animate-3'>
                   <div className='text'>
                     <p className='fs-20 fw-6'>
-                      850+ Trusted
+                      600+ Trusted
                       <br />
                       Global Clients
                     </p>
