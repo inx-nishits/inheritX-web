@@ -9,7 +9,7 @@ export default function ServicesContent() {
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>
-            <h1 className='title split-text effect-right'>Services</h1>
+            <h1 className='title'>Services</h1>
             <Breadcrumbs />
           </div>
         </div>

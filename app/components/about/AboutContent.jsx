@@ -98,7 +98,7 @@ export default function AboutContent() {
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>
-            <h1 className='title split-text effect-right'>About Us</h1>
+            <h1 className='title'>About Us</h1>
             <div className='mb-5'>
               <Breadcrumbs />
             </div>
@@ -123,15 +123,9 @@ export default function AboutContent() {
                     alt='Counting section'
                     fill
                   />
+                 
                 </div>
-                <div className='box-logo tf-animate-2 d-none'>
-                  <img src='/image/logo/logo-icon.svg' alt='' />
-                  <h4 className='title'>InheritX</h4>
-                </div>
-                <div className='box-avatar tf-animate-3' style={{ backgroundColor: '#19272B' }}>
-                  <img src='/image/logo/logo-icon.svg' alt='' />
-                  <h4 className='title'>InheritX</h4>
-                </div>
+
               </div>
               <div className='right'>
                 <div className='heading-section mb-60'>

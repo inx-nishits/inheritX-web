@@ -3869,12 +3869,16 @@ a.mapboxgl-ctrl-logo {
 .tf-animate-1 {
   clip-path: inset(0 100% 0 0);
   opacity: 0;
-  -webkit-transition: 1s cubic-bezier(0.63, 0.25, 0.25, 1);
-  -khtml-transition: 1s cubic-bezier(0.63, 0.25, 0.25, 1);
-  -moz-transition: 1s cubic-bezier(0.63, 0.25, 0.25, 1);
-  -ms-transition: 1s cubic-bezier(0.63, 0.25, 0.25, 1);
-  -o-transition: 1s cubic-bezier(0.63, 0.25, 0.25, 1);
-  transition: 1s cubic-bezier(0.63, 0.25, 0.25, 1);
+  transform: translateX(0);
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  -webkit-transition: clip-path 1s cubic-bezier(0.63, 0.25, 0.25, 1), opacity 0.8s cubic-bezier(0.63, 0.25, 0.25, 1);
+  -khtml-transition: clip-path 1s cubic-bezier(0.63, 0.25, 0.25, 1), opacity 0.8s cubic-bezier(0.63, 0.25, 0.25, 1);
+  -moz-transition: clip-path 1s cubic-bezier(0.63, 0.25, 0.25, 1), opacity 0.8s cubic-bezier(0.63, 0.25, 0.25, 1);
+  -ms-transition: clip-path 1s cubic-bezier(0.63, 0.25, 0.25, 1), opacity 0.8s cubic-bezier(0.63, 0.25, 0.25, 1);
+  -o-transition: clip-path 1s cubic-bezier(0.63, 0.25, 0.25, 1), opacity 0.8s cubic-bezier(0.63, 0.25, 0.25, 1);
+  transition: clip-path 1s cubic-bezier(0.63, 0.25, 0.25, 1), opacity 0.8s cubic-bezier(0.63, 0.25, 0.25, 1);
 }
 .tf-animate-1.active-animate {
   clip-path: inset(0 0 0 0);
@@ -4308,6 +4312,13 @@ a.mapboxgl-ctrl-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.box-avatar img {
+  max-width: 132px;
+  width: auto;
+  height: auto;
+  object-fit: cover;  
 }
 
 .list-agent {
@@ -5744,6 +5755,9 @@ a.mapboxgl-ctrl-logo {
   bottom: -122%;
   right: -23%;
 }
+.page-title-home .herosectionContainer .top-page-title {
+  padding-top: 100px !important;
+}
 
 /*-------------- Responsive ----------------- */
 @media (min-width: 551px) {
@@ -5816,12 +5830,17 @@ a.mapboxgl-ctrl-logo {
     /* margin-left: -4px; */
     margin-bottom: 20px;
   }
-  .page-title-home .desc {
+
+ .page-title-home .desc {
     padding-bottom: 30px;
     margin-bottom: 30px;
   }
   .page-title-home .content-left {
     padding-top: 35px;
+  }
+
+  .page-title-home .herosectionContainer .content-left {
+    padding-top: 14px;
   }
   .page-title-home .wg-counter {
     margin-bottom: 30px;
@@ -6189,7 +6208,7 @@ a.mapboxgl-ctrl-logo {
     font-size: 40px !important;
   }
   .heading-section {
-    margin-bottom: 40px !important;
+    margin-bottom: 20px !important;
   }
   .heading-section .sub-title {
     margin-bottom: 15px !important;

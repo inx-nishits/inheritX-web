@@ -7,6 +7,13 @@
     if ($('.split-text').length > 0) {
       var st = $('.split-text')
       if (st.length === 0) return
+      
+      // Check if SplitText is available
+      if (typeof SplitText === 'undefined') {
+        console.warn('SplitText plugin is not available. Skipping split-text animations.');
+        return;
+      }
+      
       gsap.registerPlugin(SplitText)
       st.each(function (index, el) {
         const $el = $(el)
@@ -110,6 +117,12 @@
     }
 
     if ($('.title-animation').length > 0) {
+      // Check if SplitText is available
+      if (typeof SplitText === 'undefined') {
+        console.warn('SplitText plugin is not available. Skipping title-animation.');
+        return;
+      }
+      
       $('.title-animation').each(function (index, splitTextLine) {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -139,6 +152,12 @@
     }
 
     if ($('.text-animation p').length > 0) {
+      // Check if SplitText is available
+      if (typeof SplitText === 'undefined') {
+        console.warn('SplitText plugin is not available. Skipping text-animation.');
+        return;
+      }
+      
       $('.text-animation p').each(function (index, splitTextLine) {
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -166,6 +185,12 @@
     }
 
     if ($('.text-animation-top').length > 0) {
+      // Check if SplitText is available
+      if (typeof SplitText === 'undefined') {
+        console.warn('SplitText plugin is not available. Skipping text-animation-top.');
+        return;
+      }
+      
       $('.text-animation-top').each(function (index, splitTextLine2) {
         const tl = gsap.timeline({
           scrollTrigger: {

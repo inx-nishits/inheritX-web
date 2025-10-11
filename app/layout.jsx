@@ -176,7 +176,6 @@ export default function RootLayout({ children }) {
         <link rel='stylesheet' href='/css/swiper-bundle.min.css' />
         <link rel='stylesheet' href='/css/nice-select.css' />
         <link rel='stylesheet' href='/css/odometer-theme-default.css' />
-        <link rel='stylesheet' href='/css/textanimation.css' />
         <link rel='stylesheet' href='/css/jquery-ui.min.css' />
         <link rel='stylesheet' href='/css/map.min.css' />
         <link rel='stylesheet' href='/css/nouislider.min.css' />
@@ -250,11 +249,9 @@ export default function RootLayout({ children }) {
         <Script src='/js/main-wrapper.js' strategy='afterInteractive' />
         <Script src='js/bootstrap.min.js' strategy='afterInteractive' />
         <Script src='js/gsap-animation.js' strategy='afterInteractive' />
-        <Script src='js/Splitetext.js' strategy='afterInteractive' />
         <Script src='js/ScrollSmooth.js' strategy='afterInteractive' />
         <Script src='js/carousel.js' strategy='afterInteractive' />
         <Script src='js/jquery-validate.js' strategy='afterInteractive' />
-        <Script src='js/textanimation.js' strategy='afterInteractive' />
         <Script src='js/cursor.js' strategy='afterInteractive' />
       </body>
     </html>

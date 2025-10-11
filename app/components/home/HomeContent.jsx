@@ -1,6 +1,6 @@
 'use client';
 import ContactForm from '../../components/ContactForm'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import Link from 'next/link'
 import Accordion from '../Accordion'
@@ -8,6 +8,7 @@ import Image from 'next/image';
 import TestimonialSection from '../TestimonialSection';
 import OurPartners from '../OurPartners';
 import OurValuableClients from '../OurValuableClients';
+import TypingAnimation from '../TypingAnimation';
 
 export default function HomeContent() {
 
@@ -57,8 +58,8 @@ export default function HomeContent() {
 
   return (
     <>
-      <div className='page-title-home hero-fullscreen' style={{ margin: 0, paddingTop: '0' }}>
-        
+      <div className='page-title-home hero-fullscreen' style={{ margin: 0, padding: 0, position: 'relative', top: 0 }}>
+
         <div className='mask mask-home-2'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -82,31 +83,36 @@ export default function HomeContent() {
           </svg>
         </div>
 
-        <div className='tf-container herosectionContainer' style={{ padding: 0, margin: 0, maxWidth: '100%', position: 'relative' }}>
-          <div className='row' style={{ margin: 0 }}>
+        <div className='herosectionContainer tf-container'>
+          <div className='row'>
             <div className='col-xl-6'>
 
-              <div className='top-page-title'>
-                <div className='sub-title body-1 fw-5 title-animation'>
+              <div className='top-page-title mb-0'>
+                <div className='sub-title body-1 fw-5'>
                   Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
                 </div>
 
-                <div className='sub-title fs-2 fw-5 title-animation'>
+                <div className='sub-title fs-2 fw-5'>
                   <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
-                <h2 className='title fw-6 title-animation' style={{ lineHeight: "141%" }}>
-                  Innovating the Future&nbsp;of&nbsp;
-                  <br />
-                  <span className='fw-3'>
-                    <span className='highlight text-uppercase'>
-                      Mobility&nbsp;with&nbsp;AI
-                    </span>
-                  </span>
+                <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
+                  <TypingAnimation
+                    text="Empowering the Future with Mobility & AI Innovation"
+                    speed={60}
+                    delay={800}
+                    className="hero-typing-text"
+                    showCursor={true}
+                    cursorBlinkSpeed={400}
+                    pauseOnSpaces={true}
+                    pauseDuration={200}
+                    variableSpeed={true}
+                    highlightWords={true}
+                  />
                 </h2>
               </div>
 
               <div className='content-left mb-5 pb-5'>
-                <div className='desc text-animation'>
+                <div className='desc'>
                   <p className='fs-3 lh-30'>
                     From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
                   </p>
@@ -118,14 +124,13 @@ export default function HomeContent() {
                 </Link>
               </div>
             </div>
-            <div className='col-xl-6 mb-5 pb-5'>
-              <div className='hero-image-container image tf-animate-1 overflow-hidden'>
+            <div className='col-xl-6'>
+               <div className='hero-image-container image tf-animate-1 rounded-4 overflow-hidden position-relative' style={{ minHeight: '450px' }}>
                 <Image
                   src='/image/page-title/banner-2.jpg'
                   alt=''
                   className='lazyload'
                   fill
-                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -139,14 +144,14 @@ export default function HomeContent() {
         <div className='row mb-60'>
           <div className='col-12 text-center'>
             <div className='heading-section'>
-              <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+              <div className='sub-title body-2 fw-7 mb-17'>
                 Our <span className='text-primary'>Achievements</span>
               </div>
-              <h2 className='title fw-6 title-animation mb-4'>
+              <h2 className='title fw-6 mb-4'>
                 Numbers That Speak
                 <span className='fw-3'>&nbsp;for Our Excellence</span>
               </h2>
-              <p className='title-animation fs-2 lh-30'>
+              <p className='fs-2 lh-30'>
                 Trusted by clients worldwide, we deliver exceptional results that drive business growth and innovation.
               </p>
             </div>
@@ -350,10 +355,10 @@ export default function HomeContent() {
               </div>
               <div className='right'>
                 <div className='heading-section mb-30'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     <span className='text-primary'>Inheritx</span> Solutions
                   </div>
-                  <h1 className='title fw-6 title-animation'>
+                  <h1 className='title fw-6'>
                     Because we deliver
                     <span className='fw-3'>
                       &nbsp;the&nbsp;best solutions to stay&nbsp;ahead
@@ -361,14 +366,14 @@ export default function HomeContent() {
                   </h1>
                 </div>
                 <div className='section-content'>
-                  <div className='desc mb-40 text-animation'>
+                  <div className='desc mb-40'>
                     <p className='lh-30'>
                       At InheritX, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
                     </p>
                     <p className='lh-30 pt-4'>
                       At InheritX Solutions, we follow a client-first approach, ensuring transparency and excellent results. Our 97% client retention ratio reflects our dedication to building and maintaining lasting relationships. From 24/7 technical assistance and agile methodology to cutting-edge AI adoption, we consistently ensure project safety and deliver solutions that keep your business ahead of the curve.</p>
                   </div>
-                  <div className='title-animation'>
+                  <div>
                     <Link
                       href='/about-us'
                       className='tf-btn no-bg text-underline'
@@ -636,15 +641,15 @@ export default function HomeContent() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     Our <span className='text-primary'>Popular</span> Services
                   </div>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6 mb-5'>
                     We Run All Kinds Of IT Services
                     <br />
                     <span className='fw-3'>that vow your success.</span>
                   </h2>
-                  <p className='title-animation'>
+                  <p>
                     We offer end-to-end services in the IT domain, from mobile and web development to AI-driven business solutions.
                   </p>
                 </div>
@@ -961,10 +966,10 @@ export default function HomeContent() {
             <div className='row'>
               <div className='col-12 text-center'>
                 <div className='heading-section container'>
-                  <div className='sub-title body-2 fs-1 fw-7 mb-17 title-animation text-center mb-5'>
+                  <div className='sub-title body-2 fs-1 fw-7 mb-17 text-center mb-5'>
                     Our <span className='text-primary'>Team</span>
                   </div>
-                  <h2 className='title fw-6 title-animation mb-4'>
+                  <h2 className='title fw-6 mb-4'>
                     People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
                   </h2>
                   <p className='lh-30 fs-2 mb-5'>
@@ -1135,10 +1140,10 @@ export default function HomeContent() {
         <section className='section-project tf-spacing-2 d-none'>
           <div className='tf-container'>
             <div className='heading-section mb-60 text-center'>
-              <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+              <div className='sub-title body-2 fw-7 mb-17'>
                 Our Case Studies
               </div>
-              <h2 className='title fw-6 title-animation'>
+              <h2 className='title fw-6'>
                 Explore Our
                 <span className='fw-3'>&nbsp;Recent Case Studies</span>
               </h2>
@@ -1328,8 +1333,8 @@ export default function HomeContent() {
                 </div>
 
                 <div className='section-content section-form-content tf-animate-2'>
-                  <div className='sub-title body-2 fw-7 mb-3 title-animation'>Work Inquiry</div>
-                  <h2 className='title fw-6 title-animation mb-3'>
+                  <div className='sub-title body-2 fw-7 mb-3'>Work Inquiry</div>
+                  <h2 className='title fw-6 mb-3'>
                     Let's work on your next projects.
                   </h2>
                 </div>
