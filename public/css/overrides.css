@@ -36,7 +36,7 @@
 /* Hero Section Full Screen Styles */
 .hero-fullscreen {
   margin: 0 !important;
-  height: 100vh !important; /* Full viewport height */
+  min-height: 100vh !important; /* Full viewport height */
   display: flex !important;
   align-items: center !important;
   position: relative !important;
@@ -1274,6 +1274,7 @@ a[href='javascript:;'] {
   }
 }
 
+
 @media (max-width: 1366px) {
   .header .logo-header>a {
     max-width: 230px;
@@ -1304,6 +1305,26 @@ a[href='javascript:;'] {
   padding: 24px;
 }
 }
+
+
+@media (max-width: 1281px) {
+  .herosectionContainer .top-page-title .title {
+    font-size: 36px !important;
+  }
+  .page-title-home .content-left {
+    padding-top: 12px !important;
+}
+.page-title-home .desc {
+  padding-bottom: 12px !important;
+  margin-bottom: 12px !important;
+}
+.accordion-section-image {
+  min-height: 790px;
+}
+.services-item {
+  padding: 24px;
+}
+  }
 
 /* Team slider pagination - center alignment and hide on large screens when not needed */
 .sw-pagination-team {

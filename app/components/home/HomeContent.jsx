@@ -58,28 +58,7 @@ export default function HomeContent() {
   return (
     <>
       <div className='page-title-home hero-fullscreen' style={{ margin: 0, paddingTop: '0' }}>
-        <div className='mask mask-home-1'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='800'
-            height='800'
-            fill='none'
-          >
-            <circle
-              cx='400'
-              cy='400'
-              r='325'
-              stroke='url(#a)'
-              strokeWidth='150'
-            />
-            <defs>
-              <linearGradient id='a' x1='176' x2='569' y1='70.5' y2='674'>
-                <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
-                <stop offset='1' stopColor='#fff' stopOpacity='0' />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+        
         <div className='mask mask-home-2'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -112,7 +91,7 @@ export default function HomeContent() {
                   Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
                 </div>
 
-                <div className='sub-title fs-1 fw-5 title-animation'>
+                <div className='sub-title fs-2 fw-5 title-animation'>
                   <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
                 <h2 className='title fw-6 title-animation' style={{ lineHeight: "141%" }}>
