@@ -1074,7 +1074,7 @@ export default function JoinOurTeam() {
 
           <div className='tf-container'>
             <div className='row'>
-              <div className='col-12'>
+              <div className='col-lg-8 offset-lg-2'>
                 <div className='heading-section mb-60 text-center'>
                   <h2 className='title fw-6 title-animation mb-5'>
                     If you have any questions or want to send your resume, contact
@@ -1145,8 +1145,11 @@ export default function JoinOurTeam() {
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
                 <div className='heading-section mb-60'>
+                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                    Clients Feedback
+                  </div>
                   <h2 className='title fw-6 title-animation'>
-                    Employee <span className='text-primary'>Speaks</span>&nbsp;
+                    1250+ People Say&nbsp;
                     <span className='fw-3'>About Us</span>
                   </h2>
                 </div>
@@ -1166,24 +1169,14 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          I am working in InheritX Solutions since 2013. From
-                          the very first day, I am amazed to see its healthy
-                          work culture, professional management, and
-                          client-centric approach. I have learned new things
-                          from my colleagues as well as seniors. I must say, if
-                          you’re ready to boost your career in a leading IT
-                          company, InheritX is a right choice for you!
+                          Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <span
-                            className='name-user body-2 '
-                          >
-                            Krish Hinduja
+                          <span className='name-user body-2 '>
+                            Edward
                           </span>
-                          <span
-                            className='position text-medium'
-                          >
-                            - Business Development Manager
+                          <span className='position text-medium'>
+                            CEO
                           </span>
                         </div>
                       </div>
@@ -1195,24 +1188,14 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          I have been working at InheritX Solutions for three years.
-                          During this time, I've found that the company follows
-                          every standard procedure with the utmost
-                          transparency and client-centric approach. What I like
-                          the most about this company is employee-friendly
-                          practices and healthy competition that motivate all of
-                          us to give our best.
+                          InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <span
-                            className='name-user body-2 '
-                          >
-                            Dhwanik Gandhi
+                          <span className='name-user body-2 '>
+                            Badri
                           </span>
-                          <span
-                            className='position text-medium'
-                          >
-                            - Senior Android Developer
+                          <span className='position text-medium'>
+                            Manager
                           </span>
                         </div>
                       </div>
@@ -1224,24 +1207,53 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          I have been associated with InheritX Solutions for four
-                          years. From day 1, I was told that apart from
-                          hiring the right candidates for various positions, my
-                          major role will be to maintain the work-life balance
-                          of all employees. I am happy that I am in a company
-                          that strives by putting employees first.
+                          InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <span
-                            className='name-user body-2 '
-                          >
-                            Vishal Patel
+                          <span className='name-user body-2 '>
+                            Saady
                           </span>
-                          <span
-                            className='position text-medium'
-                          >
-                            - Admin Executive
+                          <span className='position text-medium'>
+                            Developer
                           </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='swiper-slide'>
+                      <div className='testimonial-item'>
+                        <div className='icon'>
+                          <i className='icon-quote2'></i>
+                        </div>
+                        <div className='text fs-27 lh-35 fw-5'>
+                          InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
+                        </div>
+                        <div className='user-testimonial'>
+                          <span className='name-user body-2 '>
+                            Simon
+                          </span>
+                          <span className='position text-medium'>
+                            Developer
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='swiper-slide'>
+                      <div className='testimonial-item'>
+                        <div className='icon'>
+                          <i className='icon-quote2'></i>
+                        </div>
+                        <div className='text fs-27 lh-35 fw-5'>
+                          The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
+                        </div>
+                        <div className='user-testimonial'>
+                          <Link href='javascript:void(0)' className='name-user body-2 '>
+                            Dorain
+                          </Link>
+                          <Link href='javascript:void(0)' className='position text-medium'>
+                            Developer
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1249,45 +1261,51 @@ export default function JoinOurTeam() {
                 </div>
                 <div className='sw-pagination-testimonial sw-pagination mt-50'></div>
               </div>
-              <div className='col-lg-4'>
-                <div className='list-image'>
-                  <div className='img-section img-1 img-elip tf-animate-1'>
-                    <Image
-                      src='/image/home/section-testimonial-1.png'
-                      alt='Testimonial Image 1'
-                      width={200}
-                      height={200}
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-2 tf-animate-2'>
-                    <Image
-                      src='/image/home/section-testimonial-2.png'
-                      alt='Testimonial Image 2'
-                      width={200}
-                      height={200}
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-3 tf-animate-3'>
-                    <Image
-                      src='/image/home/section-testimonial-3.png'
-                      alt='Testimonial Image 3'
-                      width={200}
-                      height={200}
-                      className='lazyload'
-                    />
-                  </div>
-                  <div className='img-section img-4 img-elip tf-animate-4'>
-                    <Image
-                      src='/image/home/section-testimonial-4.png'
-                      alt='Testimonial Image 4'
-                      width={200}
-                      height={200}
-                      className='lazyload'
-                    />
+              <div className='col-lg-4 my-auto'>
+                <div className="container" style={{
+                  maxWidth: '300px',
+                  margin: '0 auto',
+                }}>
+                  <div className="row">
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-1.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-2.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-4.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
+                    <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
+                      <Image
+                        src='/image/home/section-testimonial-3.png'
+                        alt=''
+                        className='img-fluid lazyload'
+                        height={200}
+                        width={200}
+                      />
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

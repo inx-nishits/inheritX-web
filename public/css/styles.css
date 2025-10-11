@@ -1147,7 +1147,7 @@ a:hover, a:focus {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
 .menu-primary-menu .menu-item {
   cursor: pointer;
@@ -4177,7 +4177,7 @@ a.mapboxgl-ctrl-logo {
 }
 .counter-item.style-2 {
   padding: 40px 45px 31px;
-  max-width: 300px;
+  /* max-width: 300px; */
   width: 100%;
 }
 .counter-item.style-2 .icon {
@@ -5812,7 +5812,7 @@ a.mapboxgl-ctrl-logo {
     overflow: hidden;
   }
   .page-title-home .top-page-title {
-    padding-top: 32px;
+    padding-top: 10px;
     /* margin-left: -4px; */
     margin-bottom: 20px;
   }

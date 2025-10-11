@@ -1,8 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const AccordionItem = ({ id, title, children, isOpen, onToggle }) => {
+  const contentRef = useRef(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [children]);
+
   return (
     <div className='according-item'>
       <h5 className='fw-5'>
@@ -21,8 +30,14 @@ const AccordionItem = ({ id, title, children, isOpen, onToggle }) => {
         id={id}
         className={`collapse ${isOpen ? 'show' : ''}`}
         data-bs-parent='#According1'
+        style={{
+          maxHeight: isOpen ? `${contentHeight}px` : '0px',
+          transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out'
+        }}
       >
-        {children}
+        <div ref={contentRef}>
+          {children}
+        </div>
       </div>
     </div>
   );
