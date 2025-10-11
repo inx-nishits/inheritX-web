@@ -175,14 +175,14 @@ export default function HomeContent() {
             <div className='col-xl-6'>
 
               <div className='top-page-title'>
-                <div className='sub-title body-1 fw-5'>
+                <div className='sub-title body-1 fw-5 title-animation'>
                   Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
                 </div>
 
-                <div className='sub-title fs-1 fw-5'>
+                <div className='sub-title fs-1 fw-5 title-animation'>
                   <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
-                <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
+                <h2 className='title fw-6 title-animation' style={{ lineHeight: "141%" }}>
                   Innovating the Future&nbsp;of&nbsp;
                   <br />
                   <span className='fw-3'>
@@ -200,119 +200,6 @@ export default function HomeContent() {
                   </p>
                 </div>
 
-                <div className='wg-counter flex gap-0 row mb-0'>
-                  <div className='counter-item col-6 col-lg-6 mb-5'>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-6'>
-                        <span
-                          className='number odometer color-primary'
-                          data-to='400'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='color-primary'>+</span>
-                      </div>
-                      <p className='title-counter body-2 lh-30'>
-                        Verified 5* Client Reviews
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className='counter-item col-6 col-lg-6 mb-5'>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-6'>
-                        <span
-                          className='number odometer color-primary'
-                          data-to='850'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='color-primary'>+</span>
-                      </div>
-                      <p className='title-counter body-2 lh-30'>
-                        Projects Delivered Successfully
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className='wg-counter flex gap-0 row mb-0'>
-                  <div className='counter-item col-6 col-lg-6 mb-5'>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-6'>
-                        <span
-                          className='number odometer color-primary'
-                          data-to='97'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='color-primary'>%</span>
-                      </div>
-                      <p className='title-counter body-2 lh-30'>
-                        Client Retention Ratio
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className='counter-item col-6 col-lg-6 mb-5'>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-6'>
-                        <span
-                          className='number odometer color-primary'
-                          data-to='40'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='color-primary'>+</span>
-                      </div>
-                      <p className='title-counter body-2 lh-30'>
-                        Industries Served
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className='wg-counter flex gap-0 row mb-0'>
-                  <div className='counter-item col-6 col-lg-6 mb-5'>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-6'>
-                        <span
-                          className='number odometer color-primary'
-                          data-to='120'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='color-primary'>+</span>
-                      </div>
-                      <p className='title-counter body-2 lh-30'>
-                        Development Staff
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className='counter-item col-6 col-lg-6 mb-5'>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-6'>
-                        <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
-                          24/7
-                        </span>
-                        {/* <span className='color-primary'>+</span> */}
-                      </div>
-                      <p className='title-counter body-2 lh-30'>Support</p>
-                    </div>
-                  </div>
-                </div>
-
                 <Link href='/contact' className='tf-btn'>
                   <span>Click for Free Consultancy</span>
                   <i className='icon-arrow-right'></i>
@@ -328,6 +215,145 @@ export default function HomeContent() {
                   fill
                   style={{ objectFit: 'cover' }}
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className='tf-container tf-spacing-2'>
+        {/* Counter Section Title */}
+        <div className='row mb-60'>
+          <div className='col-12 text-center'>
+            <div className='heading-section'>
+              <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                Our <span className='text-primary'>Achievements</span>
+              </div>
+              <h2 className='title fw-6 title-animation mb-4'>
+                Numbers That Speak
+                <span className='fw-3'>&nbsp;for Our Excellence</span>
+              </h2>
+              <p className='title-animation fs-2 lh-30'>
+                Trusted by clients worldwide, we deliver exceptional results that drive business growth and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Enhanced Counter Grid */}
+        <div className='row g-4'>
+          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+            <div className='counter-item style-2 style-bg-primary px-3 py-4 rounded-4 overflow-hidden h-100'>
+              <div className='counter text-center'>
+                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-3'>
+                  <span
+                    className='number odometer text-white'
+                    data-to='400'
+                    data-inviewport='yes'
+                  >
+                    0
+                  </span>
+                  <span className='text-white ms-1'>+</span>
+                </div>
+                <h6 className='title-counter lh-30 fw-5 text-white text-center'>
+                  Verified 5* Client Reviews
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+            <div className='counter-item style-2 style-bg-surface px-3 py-4 rounded-4 overflow-hidden h-100'>
+              <div className='counter text-center'>
+                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-3'>
+                  <span
+                    className='number odometer color-primary'
+                    data-to='850'
+                    data-inviewport='yes'
+                  >
+                    0
+                  </span>
+                  <span className='color-primary ms-1'>+</span>
+                </div>
+                <h6 className='title-counter lh-30 fw-5 text-center'>
+                  Projects Delivered Successfully
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+            <div className='counter-item style-2 style-bg-primary px-3 py-4 rounded-4 overflow-hidden h-100'>
+              <div className='counter text-center'>
+                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-3'>
+                  <span
+                    className='number odometer text-white'
+                    data-to='97'
+                    data-inviewport='yes'
+                  >
+                    0
+                  </span>
+                  <span className='text-white ms-1'>%</span>
+                </div>
+                <h6 className='title-counter lh-30 fw-5 text-white text-center'>
+                  Client Retention Ratio
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+            <div className='counter-item style-2 style-bg-surface px-3 py-4 rounded-4 overflow-hidden h-100'>
+              <div className='counter text-center'>
+                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-3'>
+                  <span
+                    className='number odometer color-primary'
+                    data-to='40'
+                    data-inviewport='yes'
+                  >
+                    0
+                  </span>
+                  <span className='color-primary ms-1'>+</span>
+                </div>
+                <h6 className='title-counter lh-30 fw-5 text-center'>
+                  Industries Served
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+            <div className='counter-item style-2 style-bg-primary px-3 py-4 rounded-4 overflow-hidden h-100'>
+              <div className='counter text-center'>
+                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-3'>
+                  <span
+                    className='number odometer text-white'
+                    data-to='120'
+                    data-inviewport='yes'
+                  >
+                    0
+                  </span>
+                  <span className='text-white ms-1'>+</span>
+                </div>
+                <h6 className='title-counter lh-30 fw-5 text-white text-center'>
+                  Development Staff
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+            <div className='counter-item style-2 style-bg-surface px-3 py-4 rounded-4 overflow-hidden h-100'>
+              <div className='counter text-center'>
+                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-3'>
+                  <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
+                    24/7
+                  </span>
+                </div>
+                <h6 className='title-counter lh-30 fw-5 text-center'>
+                  Support
+                </h6>
               </div>
             </div>
           </div>
@@ -1026,7 +1052,7 @@ export default function HomeContent() {
                   <div className='sub-title body-2 fs-1 fw-7 mb-17 title-animation text-center mb-5'>
                     Our <span className='text-primary'>Team</span>
                   </div>
-                  <h2 className='title fw-6 mb-4'>
+                  <h2 className='title fw-6 title-animation mb-4'>
                     People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
                   </h2>
                   <p className='lh-30 fs-2 mb-5'>
@@ -1567,30 +1593,36 @@ export default function HomeContent() {
         </section>
 
         <section className='section-form tf-spacing-4 tf-container'>
-          <div className='section-inner flex'>
-            <div className='left w-100 rounded-4 overflow-hidden'>
-              <div className='position-relative rounded-4 overflow-hidden image tf-animate-1 px-3' style={{ minHeight: '550px' }}>
-                <Image
-                  src='/image/page-title/image-9.jpg'
-                  alt=''
-                  className='lazyload rounded-4'
-                  fill
-                />
+          <div className='section-inner row'>
+            <div className='col-lg-6 rounded-4 overflow-hidden position-relative'>
+              <div className='w-100 h-100 position-relative'>
+
+                <div className='position-relative rounded-4 overflow-hidden image tf-animate-1' style={{ minHeight: '550px' }}>
+                  <Image
+                    src='/image/page-title/image-9.jpg'
+                    alt=''
+                    className='lazyload rounded-4'
+                    fill
+                  />
+                </div>
+
+                <div className='section-content section-form-content tf-animate-2'>
+                  <div className='sub-title body-2 fw-7 mb-3 title-animation'>Work Inquiry</div>
+                  <h2 className='title fw-6 title-animation mb-3'>
+                    Let's work on your next projects.
+                  </h2>
+                  <Link href='/contact'
+                    className='tf-btn style-bg-white hover-bg-main-dark'
+                  >
+                    <span>Contact Us</span>
+                    <i className='icon-arrow-right'></i>
+                  </Link>
+                </div>
+
               </div>
-              <div className='section-content section-form-content tf-animate-2'>
-                <div className='sub-title body-2 fw-7 mb-17'>Work Inquiry</div>
-                <h2 className='title fw-6'>
-                  Let’s work on your next projects.
-                </h2>
-                <Link href='/contact'
-                  className='tf-btn style-bg-white hover-bg-main-dark'
-                >
-                  <span>Contact Us</span>
-                  <i className='icon-arrow-right'></i>
-                </Link>
-              </div>
+
             </div>
-            <div className='right no-padding-important'>
+            <div className='col-lg-6 no-padding-important'>
               <ContactForm className='form-contact-us px-md-15 rounded-4 overflow-hidden' description={'We are ready to help with your next projects. Let\u2019s work together.'} />
             </div>
           </div>
@@ -1598,10 +1630,10 @@ export default function HomeContent() {
 
         <section className='section-about tf-spacing-2'>
           <div className='tf-container text-center mb-5'>
-            <h2 className='title fw-6 title-animation mb-5'>
+            <h2 className='title fw-6 mb-5'>
               Our <span className='text-primary'>Partners</span>
             </h2>
-            <p className='title-animation fs-2'>
+            <p className='fs-2'>
               We feel pride in having partnerships with some of the most reputed companies in the world.
             </p>
           </div>
@@ -2053,10 +2085,10 @@ export default function HomeContent() {
 
         <section className='section-about tf-spacing-2'>
           <div className='tf-container text-center mb-5'>
-            <h2 className='title fw-6 title-animation mb-5'>
+            <h2 className='title fw-6 mb-5'>
               Our Valuable <span className='text-primary'>Clients</span>
             </h2>
-            <p className='title-animation fs-2'>
+            <p className='fs-2'>
               We are pleased to serve one of the most reputed and respected brands across different sectors globally.
             </p>
           </div>

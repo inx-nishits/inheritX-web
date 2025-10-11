@@ -68,7 +68,6 @@ export const metadata = {
   icons: {
     icon: '/image/logo/inx-icon.png' // Placeholder: switch to '/favicon.ico' if present at project root
   },
-  themeColor
 }
 
 export const viewport = {

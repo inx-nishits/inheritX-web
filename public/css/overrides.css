@@ -1108,6 +1108,9 @@ a[href='javascript:;'] {
 .herosectionContainer .top-page-title .title {
   font-size: 48px !important;
 }
+.section-form .section-form-content {
+  padding: 24px;
+}
 }
 
 /* Team slider pagination - center alignment and hide on large screens when not needed */
@@ -1271,13 +1274,70 @@ a[href='javascript:;'] {
   transform: translate3d(0, 0, 0);
 }
 
+/* Ensure the page-title-home container allows full circle visibility */
+.page-title-home {
+  overflow: visible !important; /* Allow circles to extend beyond container */
+  position: relative !important;
+}
+
 .page-title-home .mask.mask-home-1 {
   animation: maskFloatSoftXY 14s cubic-bezier(.22, .61, .36, 1) infinite !important;
   animation-delay: 0.3s;
+  /* Ensure circle is always fully visible - much more conservative positioning */
+  right: -50px !important; /* Much more conservative to ensure full circle visibility */
+  top: 20% !important; /* Position higher up in the hero section */
+  /* Reduce visibility to avoid content conflict */
+  opacity: 0.3 !important; /* Reduced opacity for subtle background effect */
 }
 
 .page-title-home .mask.mask-home-2 {
   animation: maskFloatSoftY 12s cubic-bezier(.22, .61, .36, 1) infinite alternate !important;
+  /* Ensure circle is always fully visible - much more conservative positioning */
+  left: -5% !important; /* Much more conservative to ensure full circle visibility */
+  bottom: 15% !important; /* Position lower in the hero section */
+  top: auto !important; /* Override any existing top positioning */
+  /* Reduce visibility to avoid content conflict */
+  opacity: 0.25 !important; /* Slightly lower opacity for subtle background effect */
+}
+
+/* Responsive adjustments to ensure circles are always fully visible */
+@media (max-width: 1200px) {
+  .page-title-home .mask.mask-home-1 {
+    right: -25px !important; /* Conservative adjustment for smaller screens */
+    top: 25% !important; /* Adjust vertical position for smaller screens */
+    opacity: 0.25 !important; /* Further reduce opacity on smaller screens */
+  }
+  .page-title-home .mask.mask-home-2 {
+    left: -3% !important; /* Conservative adjustment for smaller screens */
+    bottom: 20% !important; /* Adjust vertical position for smaller screens */
+    opacity: 0.2 !important; /* Further reduce opacity on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title-home .mask.mask-home-1 {
+    right: -10px !important; /* Very conservative mobile adjustment */
+    top: 30% !important; /* Adjust vertical position for mobile */
+    opacity: 0.2 !important; /* Even lower opacity on mobile */
+  }
+  .page-title-home .mask.mask-home-2 {
+    left: -2% !important; /* Very conservative mobile adjustment */
+    bottom: 25% !important; /* Adjust vertical position for mobile */
+    opacity: 0.15 !important; /* Even lower opacity on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title-home .mask.mask-home-1 {
+    right: 0px !important; /* No negative positioning on small screens */
+    top: 35% !important; /* Adjust vertical position for small mobile */
+    opacity: 0.15 !important; /* Very low opacity on small mobile */
+  }
+  .page-title-home .mask.mask-home-2 {
+    left: 0% !important; /* No negative positioning on small screens */
+    bottom: 30% !important; /* Adjust vertical position for small mobile */
+    opacity: 0.1 !important; /* Very low opacity on small mobile */
+  }
 }
 
 /* Respect reduced motion preferences */

@@ -609,12 +609,12 @@ a:hover, a:focus {
   max-width: calc(100% - 120px) !important;
 }
 .tf-container .row {
-  margin-left: -15px !important;
-  margin-right: -15px !important;
+  margin-left: -16px !important;
+  margin-right: -16px !important;
 }
 .tf-container .row > * {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 .tf-container.w-full {
   max-width: 100%;
@@ -2813,7 +2813,8 @@ fieldset {
 }
 .tf-post-grid .image {
   margin: 15px 15px 0;
-  min-height: 284px;
+  min-height: inherit;
+  height: initial !important;
 }
 .tf-post-grid .image img {
   width: 100%;
@@ -5358,7 +5359,7 @@ a.mapboxgl-ctrl-logo {
 }
 .page-title-home .desc {
   letter-spacing: 0.2px;
-  border-bottom: 1px solid var(--stroke-2);
+  /* border-bottom: 1px solid var(--stroke-2); */
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -5896,9 +5897,8 @@ a.mapboxgl-ctrl-logo {
     max-width: 54.88%;
   }
   .section-form .right {
-    padding-left: 100px;
-    padding-top: 75px;
-    padding-bottom: 74px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .section-form .right .form-contact-us {
     max-width: 630px;

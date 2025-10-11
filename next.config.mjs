@@ -4,6 +4,16 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  
+  // Optimize bundle size
+  swcMinify: true,
+  compiler: {
+    removeConsole: {
+    exclude: ['error', 'warn'], // Keep errors and warnings
+  },
+  },
+  
+  // Optimize images
   images: { 
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -20,6 +30,10 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  
+  // Optimize production builds
+  productionBrowserSourceMaps: false,
+  
   async redirects () {
     return [
       {
