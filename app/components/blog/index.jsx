@@ -121,7 +121,7 @@ export default function BlogListPage() {
           
           /* Category button at top of grid - using theme button style */
           .category-toggle-btn {
-            margin-bottom: 30px !important;
+            margin-bottom: 0px !important;
             max-width: 200px !important;
             margin-left: auto !important;
           }
@@ -674,10 +674,10 @@ export default function BlogListPage() {
                     <div className="tf-container">
                         <div className="row rg-30">
                             {/* Category Toggle Button - Only visible on mobile/tablet */}
-                            <div className="col-12 d-xl-none mb-3">
+                            <div className="col-12 d-xl-none mb-0">
                                 <div className="d-flex justify-content-end">
                                     <button 
-                                        className="tf-btn category-toggle-btn"
+                                        className="tf-btn category-toggle-btn px-3 py-4"
                                         onClick={openCategorySidebar}
                                         aria-label="Open categories"
                                     >

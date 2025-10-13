@@ -419,7 +419,7 @@ export default function HomeContent() {
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
               <div className='left rounded-4 overflow-hidden'>
-                <div className='image tf-animate-1 rounded-4 overflow-hidden'>
+                <div className='image tf-animate-1 rounded-4 overflow-hidden' style={{ minHeight: '550px' }}>
                   <Image
                     src='/image/page-title/company-2.jpg'
                     alt=''
