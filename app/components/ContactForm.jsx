@@ -297,7 +297,7 @@ export default function ContactForm({
       )}
 
       <fieldset className='mb-20'>
-        <textarea name='message' id='message' placeholder='Brief Your Details*' onBlur={handleBlur} onChange={handleChange} />
+        <textarea name='message' id='message' className='resize-none' placeholder='Brief Your Details*' onBlur={handleBlur} onChange={handleChange} />
         {errors.message ? <div className='error-important' style={errorStyle}>{errors.message}</div> : null}
       </fieldset>
 

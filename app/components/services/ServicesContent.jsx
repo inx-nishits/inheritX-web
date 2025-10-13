@@ -61,7 +61,7 @@ export default function ServicesContent() {
                 <div className='right'>
                   <div className='heading-section mb-45'>
                     <div className='sub-title body-2 fw-7 mb-17'>
-                      We Are <span className='text-primary'>InheritX</span>{' '}
+                      We Are <span className='text-primary'>InheritX</span>
                       Solutions
                     </div>
                     <h3 className='title fw-6'>
@@ -516,9 +516,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/iphone-app-development' className='title-service text-primary'>
                     iOS Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -539,9 +539,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/android-app-development' className='title-service text-primary'>
                     Android Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -562,9 +562,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/flutter-app-development' className='title-service text-primary'>
                     Flutter Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -585,9 +585,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/react-native-app-development' className='title-service text-primary'>
                     React Native Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -608,9 +608,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/angularjs-development' className='title-service text-primary'>
                     AngularJS Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -631,9 +631,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/python-development' className='title-service text-primary'>
                     Python Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -654,9 +654,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/nextjs-development' className='title-service text-primary'>
                     NextJS Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -677,9 +677,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/laravel-development' className='title-service text-primary'>
                     Laravel Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -700,9 +700,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/reactjs-development' className='title-service text-primary'>
                     ReactJS Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -723,9 +723,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/nodejs-development' className='title-service text-primary'>
                     Node.js Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -746,9 +746,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/php-development' className='title-service text-primary'>
                     PHP Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -769,9 +769,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/aws-services' className='title-service text-primary'>
                     AWS Services
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -792,9 +792,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/iot-development' className='title-service text-primary'>
                     IOT Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -815,9 +815,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/pwa-development' className='title-service text-primary'>
                     PWA Development
-                  </span>
+                  </Link>
                 </div>
               </div>
 
@@ -838,9 +838,9 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href='/services/seo-services' className='title-service text-primary'>
                     Digital Marketing
-                  </span>
+                  </Link>
                 </div>
               </div>
             </div>

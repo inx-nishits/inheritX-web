@@ -132,7 +132,7 @@ export default async function PortfolioDetailsPage({ params }) {
                                 {next && (
                                     <div className='next-details next-prev-item'>
                                         <Link href={`/porfolio-details/${next.slug}`} className='link'>
-                                            {' '}Next <i className='icon-arrow-right'></i>
+                                            Next <i className='icon-arrow-right'></i>
                                         </Link>
                                         <div className='next-content-wrapper'>
                                             <div className='next-text-content'>

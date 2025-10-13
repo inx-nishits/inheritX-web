@@ -455,6 +455,9 @@ body {
 .according-item:hover {
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
+.resize-none {
+  resize: none !important;
+}
 
 .mobile-mega .mobile-mega-col+.mobile-mega-col {
   margin-top: 10px;
@@ -597,6 +600,19 @@ body {
 .modal-career .form-contact-us textarea {
   min-height: 54px;
   /* taller inputs */
+}
+
+/* Ensure contact form textarea scrolls when content exceeds max height */
+.form-contact-us textarea {
+  height: auto !important; /* override fixed height from base styles */
+  min-height: 125px;       /* keep initial visual height */
+  max-height: 280px;       /* cap growth to avoid overly tall forms */
+  overflow-y: auto;        /* show vertical scrollbar when needed */
+}
+
+/* Utility: disable manual resizing when applied */
+.resize-none {
+  resize: none !important;
 }
 
 .modal-career .heading-form .title {

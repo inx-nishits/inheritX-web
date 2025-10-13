@@ -6,7 +6,7 @@ const ContactForm = dynamicImport(() => import('../components/ContactForm'), { s
 
 export const dynamic = 'force-static'
 
-export default function Page () {
+export default function Page() {
   return (
     <>
       {/* <!-- Page-title --> */}
@@ -24,7 +24,6 @@ export default function Page () {
               </Link>
               <span className='dot'></span>
               <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
-                {' '}
                 Contact Us
               </span>
             </div>
@@ -46,7 +45,7 @@ export default function Page () {
                     Get In Touch
                   </div>
                   <h2 className='title fw-6 mb-10 '>
-                  Let’s Build Something
+                    Let’s Build Something
                     <span className='fw-3'>&nbsp;Great&nbsp;Together</span>
                   </h2>
                   <div className='desc text-animation'>
@@ -109,7 +108,7 @@ export default function Page () {
               </div>
             </div>
 
-          
+
           </div>
         </section>
       </div>

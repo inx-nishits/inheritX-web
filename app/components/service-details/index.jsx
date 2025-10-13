@@ -58,8 +58,8 @@ export default function ServiceDetails({ params }) {
                       <img
                         src={service.banner}
                         alt={service.heading}
-                        className="lazyload"
-                        style={{ width: '100%', height: '450px', objectFit: 'cover' }}
+                        className="lazyload rounded-4"
+                        style={{ width: 'auto', height: '450px', objectFit: 'cover' }}
                       />
                     </div>
                   )}

@@ -40,36 +40,6 @@ export default function Footer() {
                 <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
                 <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
                 <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
               </div>
             </div>
           </div>
@@ -470,10 +440,10 @@ export default function Footer() {
             </a>
             <div className='list-bottom flex align-items-center justify-content-between flex-wrap rg-15 g-30'>
               <span className='text-center lh-30'>
-                © 2025{' '}
+                © 2025
                 <a href='#' className='fw-7'>
                   InheritX
-                </a>{' '}
+                </a>
                 - IT Services. All rights reserved.
               </span>
               <ul className='flex align-items-center justify-content-center flex-wrap rg-15'>
