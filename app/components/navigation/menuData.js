@@ -3,11 +3,6 @@
 
 const menuData = [
   {
-    label: 'Home',
-    href: '/',
-    type: 'link'
-  },
-  {
     label: 'About Us',
     href: '/about-us',
     type: 'link'

@@ -529,7 +529,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 65px;
+  font-size: 60px;
   line-height: 75px;
   font-weight: 700;
 }
@@ -539,7 +539,6 @@ h2,
   font-size: 48px;
   line-height: 55px;
   font-weight: 700;
-  letter-spacing: -1.44px;
 }
 
 h3,
@@ -547,7 +546,6 @@ h3,
   font-size: 30px;
   line-height: 100%;
   font-weight: 700;
-  letter-spacing: -0.6px;
 }
 
 h4,
@@ -569,7 +567,6 @@ h6,
   font-size: 20px;
   line-height: 100%;
   font-weight: 700;
-  letter-spacing: -0.2px;
 }
 
 /* link style
@@ -1065,7 +1062,6 @@ a:hover, a:focus {
 }
 .top-bar-item a {
   font-weight: 500;
-  letter-spacing: 0.05px;
   font-family: "Inter", sans-serif !important;
   font-size: 14px;
 }
@@ -1147,7 +1143,7 @@ a:hover, a:focus {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
 .menu-primary-menu .menu-item {
   cursor: pointer;
@@ -1695,21 +1691,14 @@ a:hover, a:focus {
 .locations-contact .item .title {
   margin-bottom: 30px;
 }
-.locations-contact .locations-footer .address {
-  letter-spacing: 0.3px;
-}
+
 .locations-contact .contact-footer .title {
   margin-bottom: 36px;
 }
 .locations-contact .contact-footer a {
-  letter-spacing: 0.3px;
   display: inline-block;
   margin-bottom: 9px;
 }
-.locations-contact .contact-footer h4 a {
-  letter-spacing: 0.75px;
-}
-
 .footer-bottom ul {
   gap: 46px;
 }
@@ -2341,7 +2330,6 @@ fieldset {
   margin-bottom: 26px;
 }
 .form-newsletter .title span {
-  letter-spacing: 1px;
   font-style: italic;
 }
 .form-newsletter input {
@@ -2364,7 +2352,6 @@ fieldset {
 }
 .form-newsletter .desc {
   margin-bottom: 61px;
-  letter-spacing: 0.08px;
   max-width: 91%;
 }
 .form-newsletter .text {
@@ -2483,11 +2470,9 @@ fieldset {
 .form-contact-us .title {
   margin-bottom: 11px;
   color: var(--main-dark);
-  letter-spacing: 0.1px;
 }
 .form-contact-us .desc {
   color: var(--main-dark);
-  letter-spacing: 0.05px;
 }
 .form-contact-us .item {
   position: relative;
@@ -2918,7 +2903,6 @@ fieldset {
 .sidebar-item .title-content {
   padding-bottom: 26px;
   margin-bottom: 40px;
-  letter-spacing: -0.3px;
   position: relative;
 }
 .sidebar-item .title-content::before {
@@ -2931,7 +2915,6 @@ fieldset {
   background-color: var(--stroke-2);
 }
 .sidebar-item h4 {
-  letter-spacing: 0.1px !important;
   padding-bottom: 24px !important;
   
 }
@@ -2962,7 +2945,6 @@ fieldset {
   transition: all 0.3s ease;
 }
 .sidebar-item.sidebar-categories .item a {
-  letter-spacing: 0.2px;
   color: var(--white);
 }
 .sidebar-item.sidebar-categories .item:hover a,
@@ -2982,7 +2964,6 @@ fieldset {
   padding: 50px 40px 48px !important;
 }
 .sidebar-contact .title-content {
-  letter-spacing: 0.3px;
   padding-bottom: 0;
 }
 .sidebar-contact .title-content::before {
@@ -3036,8 +3017,6 @@ fieldset {
   font-size: 13px;
 }
 .tf-post-list a {
-  
-  letter-spacing: -0.2px;
   line-height: 26px;
 }
 .tf-post-list .post-content {
@@ -3105,8 +3084,6 @@ fieldset {
   cursor: pointer;
 }
 .tf-post-list.style-2 .title a {
-  font-family: "Inter", sans-serif;
-  letter-spacing: -0.3px;
   text-decoration-line: underline;
   text-decoration-color: transparent;
   text-underline-offset: 1px;
@@ -3166,9 +3143,7 @@ fieldset {
   margin-bottom: 9px;
 }
 .sidebar-banner .title {
-  
   margin-bottom: 31px;
-  letter-spacing: -0.2px;
 }
 
 .list-post-gird .bottom-btn {
@@ -3208,8 +3183,6 @@ fieldset {
 .big-text {
   font-weight: 600;
   font-size: 200px;
-  /* line-height: 100%; */
-  /* letter-spacing: -3%; */
   white-space: nowrap;
 }
 .big-text .text-stroke {
@@ -3260,7 +3233,6 @@ fieldset {
 }
 .wg-blog-details .desc span {
   color: var(--surface);
-  letter-spacing: 0.06px;
 }
 .wg-blog-details .content {
   padding-left: 50px;
@@ -3289,9 +3261,6 @@ fieldset {
 
 .date-post p {
   padding-bottom: 6px;
-}
-.date-post h5 {
-  letter-spacing: -0.3px;
 }
 
 .date {
@@ -3508,7 +3477,6 @@ fieldset {
 .comment-item .text {
   color: var(--surface);
   margin-bottom: 15px;
-  letter-spacing: 0.05px;
   max-width: 95%;
 }
 .comment-item .comment-content {
@@ -3533,8 +3501,6 @@ fieldset {
 }
 .testimonial-item .text {
   margin-bottom: 30px;
-  /* max-width: 699px; */
-  letter-spacing: -0.05px;
 }
 .testimonial-item .user-testimonial .name-user {
   display: block;
@@ -3596,7 +3562,6 @@ fieldset {
   margin-left: auto;
   margin-right: auto;
   color: var(--surface);
-  letter-spacing: 0.1px;
 }
 .testimonial-item.style-2 .name-user {
   margin-bottom: 11px;
@@ -3717,7 +3682,6 @@ fieldset {
 .according-item.style-2 .title-according {
   padding-bottom: 0;
   border-bottom: 0;
-  letter-spacing: 0.1px;
   padding: 21.5px 0;
   gap: 20px;
 }
@@ -3741,12 +3705,6 @@ fieldset {
   padding-right: 20px;
   padding-bottom: 24px;
 }
-.according-item.style-2 .according-content p {
-  letter-spacing: 0.06px;
-}
-
-/*------------ shop ---------------- */
-/*------------ map ---------------- */
 .map {
   max-width: 100%;
   height: 600px;
@@ -4226,7 +4184,6 @@ a.mapboxgl-ctrl-logo {
   font-family: "Inter", sans-serif;
   text-anchor: middle;
   dominant-baseline: central;
-  /* letter-spacing: 0.5px; */
 }
 
 .wg-curve-text {
@@ -4386,9 +4343,7 @@ a.mapboxgl-ctrl-logo {
 .benefit-item.style-big i {
   font-size: 28px;
 }
-.benefit-item.style-big span {
-  letter-spacing: -0.2px;
-}
+
 .benefit-item.style-desc {
   flex-direction: column;
   align-items: start;
@@ -4396,12 +4351,6 @@ a.mapboxgl-ctrl-logo {
 }
 .benefit-item.style-desc i {
   font-size: 23px;
-}
-.benefit-item.style-desc .top-item span {
-  letter-spacing: -0.3px;
-}
-.benefit-item.style-desc .desc {
-  letter-spacing: 0.05px;
 }
 
 .services-item {
@@ -4450,7 +4399,6 @@ a.mapboxgl-ctrl-logo {
   padding: 50px 50px 50px 70px;
 }
 .services-item.no-img h5 {
-  letter-spacing: -0.6px;
   margin-bottom: 15px;
 }
 .services-item:hover .icon {
@@ -4500,7 +4448,6 @@ a.mapboxgl-ctrl-logo {
 }
 .wg-cta .cta-inner .title span {
   font-style: italic;
-  letter-spacing: -0.3px;
   text-decoration-line: underline;
 }
 .wg-cta .cta-inner .list-agent {
@@ -4632,7 +4579,6 @@ a.mapboxgl-ctrl-logo {
 }
 .project-item .item-content .title-project {
   margin-bottom: 26px;
-  letter-spacing: 0.2px;
 }
 .project-item .item-content .title-project a {
   position: relative;
@@ -4689,9 +4635,7 @@ a.mapboxgl-ctrl-logo {
   max-width: 50%;
   padding: 30px;
 }
-.project-item.style-2 .desc {
-  letter-spacing: 0.1px;
-}
+
 .project-item.style-2:hover .image::after {
   height: 100%;
 }
@@ -4769,7 +4713,6 @@ a.mapboxgl-ctrl-logo {
 }
 .pricing-item .title {
   margin-bottom: 24px;
-  letter-spacing: -0.7px;
 }
 .pricing-item .top-item {
   padding-bottom: 41px;
@@ -4781,7 +4724,6 @@ a.mapboxgl-ctrl-logo {
 }
 .pricing-item .price span {
   color: var(--primary);
-  letter-spacing: 2px;
 }
 .pricing-item .benefit-item {
   margin-bottom: 25px;
@@ -4842,11 +4784,9 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 53px;
 }
 .wg-service-details .details-content .title {
-  letter-spacing: 0.2px;
   margin-bottom: 34px;
 }
 .wg-service-details .details-content .desc p {
-  letter-spacing: 0.07px;
   margin-bottom: 21px;
   width: 95%;
 }
@@ -4857,12 +4797,9 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 30px;
 }
 .wg-service-details .details-content-2 .title {
-  
-  letter-spacing: -0.15px;
   margin-bottom: 20px;
 }
 .wg-service-details .details-content-2 .desc {
-  letter-spacing: 0.07px;
   margin-bottom: 28px;
 }
 .wg-service-details .details-content-2 .list-features .features-item {
@@ -4900,12 +4837,7 @@ a.mapboxgl-ctrl-logo {
 .features-item .item-content a {
   display: inline-block;
   margin-bottom: 13px;
-  letter-spacing: 0.13px;
 }
-.features-item .item-content p {
-  letter-spacing: 0.06px;
-}
-
 .counter-box {
   max-width: 270px;
   width: 100%;
@@ -4987,7 +4919,6 @@ a.mapboxgl-ctrl-logo {
   font-size: 13px;
 }
 .next-prev-item .title {
-  letter-spacing: -0.1px;
   margin-bottom: 10px;
   
 }
@@ -5002,18 +4933,12 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 47px;
 }
 .wg-project-details .details-content .title {
-  letter-spacing: 0.1px;
   margin-bottom: 28px;
 }
 .wg-project-details .details-content .desc-flex {
   margin-block: 6px;
 }
-.wg-project-details .details-content .desc-flex span {
-  letter-spacing: 0.07px;
-}
-.wg-project-details .details-content p {
-  letter-spacing: 0.07px;
-}
+
 .wg-project-details .details-content .desc {
   margin-bottom: 46px;
 }
@@ -5029,9 +4954,7 @@ a.mapboxgl-ctrl-logo {
 .wg-project-details .details-content .benefit-item i {
   font-size: 18px;
 }
-.wg-project-details .details-content .benefit-item span {
-  letter-spacing: 0.1px;
-}
+
 .wg-project-details .details-content .benefit-item:last-child {
   margin-bottom: 0;
 }
@@ -5071,9 +4994,7 @@ a.mapboxgl-ctrl-logo {
 .box-info .info-item .sub-title {
   margin-bottom: 6px;
 }
-.box-info .info-item .title-info {
-  letter-spacing: -0.2px;
-}
+
 .box-info .info-item:last-child {
   margin-bottom: 0;
 }
@@ -5386,12 +5307,8 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: 17px;
   color: var(--surface);
 }
-.page-title-home .top-page-title .title {
-  letter-spacing: 0.2px;
-}
+
 .page-title-home .desc {
-  letter-spacing: 0.2px;
-  /* border-bottom: 1px solid var(--stroke-2); */
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -5413,22 +5330,12 @@ a.mapboxgl-ctrl-logo {
   color: var(--main-dark);
   padding-left: 4px;
   padding-right: 4px;
-  letter-spacing: 0.4px;
 }
 
 .heading-section .sub-title {
-  letter-spacing: 0.1px;
   color: var(--surface);
 }
-.heading-section .title {
-  letter-spacing: 0.1px;
-}
-.heading-section .title span {
-  letter-spacing: 0.85px;
-}
-.heading-section .desc {
-  letter-spacing: 0.05px;
-}
+
 
 .section-about {
   position: relative;
@@ -5439,9 +5346,6 @@ a.mapboxgl-ctrl-logo {
 .section-about .about-inner {
   justify-content: space-between;
   align-items: center;
-}
-.section-about .section-content .desc {
-  letter-spacing: 0.04px;
 }
 .section-about .img-item {
   position: absolute;
@@ -5675,7 +5579,6 @@ a.mapboxgl-ctrl-logo {
 }
 .section-form .section-form-content .title {
   margin-bottom: 37px;
-  letter-spacing: 0.1px;
 }
 .section-form .right {
   padding-left: 30px;
@@ -5690,7 +5593,6 @@ a.mapboxgl-ctrl-logo {
 }
 .section-pricing .heading-section .right .desc {
   margin-bottom: 19px;
-  letter-spacing: 0.08px;
 }
 .section-pricing .mask {
   position: absolute;
@@ -5879,7 +5781,6 @@ a.mapboxgl-ctrl-logo {
   }
   .wg-cta .cta-inner .title span {
     font-style: italic;
-    letter-spacing: -0.3px;
     text-decoration-line: underline;
   }
   .wg-cta .cta-inner .list-agent {
@@ -6235,16 +6136,13 @@ a.mapboxgl-ctrl-logo {
   h1 {
     font-size: 40px;
     line-height: 47px;
-    letter-spacing: -0.1px;
   }
   h2 {
     font-size: 30px;
     line-height: 40px;
-    letter-spacing: -0.1px;
   }
   h3 {
     font-size: 25px;
-    letter-spacing: -0.1px;
   }
   h4 {
     font-size: 20px;

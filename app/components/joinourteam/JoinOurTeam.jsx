@@ -662,7 +662,7 @@ export default function JoinOurTeam() {
                   <div className='list-agent'>
                     <div className='agent agent-1'>
                       <Image
-                        src='/image/avatar/agent-1.jpg'
+                        src='/image/home/section-testimonial-1.png'
                         alt='Agent 1'
                         width={60}
                         height={60}
@@ -671,7 +671,7 @@ export default function JoinOurTeam() {
                     </div>
                     <div className='agent agent-2'>
                       <Image
-                        src='/image/avatar/agent-2.jpg'
+                        src='/image/home/section-testimonial-2.png'
                         alt='Agent 2'
                         width={60}
                         height={60}
@@ -680,7 +680,7 @@ export default function JoinOurTeam() {
                     </div>
                     <div className='agent agent-3'>
                       <Image
-                        src='/image/avatar/agent-3.jpg'
+                        src='/image/home/section-testimonial-3.png'
                         alt='Agent 3'
                         width={60}
                         height={60}

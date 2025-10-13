@@ -127,7 +127,7 @@ export default function HomeContent() {
             <div className='col-xl-6'>
                <div className='hero-image-container image tf-animate-1 rounded-4 overflow-hidden position-relative' style={{ minHeight: '450px' }}>
                 <Image
-                  src='/image/page-title/banner-2.jpg'
+                  src='/image/page-title/herobanner-ft.png'
                   alt=''
                   className='lazyload'
                   fill
@@ -454,7 +454,7 @@ export default function HomeContent() {
                   <div className='list-agent'>
                     <div className='agent agent-1'>
                       <Image
-                        src='/image/avatar/agent-1.jpg'
+                        src='/image/home/section-testimonial-1.png'
                         alt=''
                         width={45}
                         height={45}
@@ -463,7 +463,7 @@ export default function HomeContent() {
                     </div>
                     <div className='agent agent-2'>
                       <Image
-                        src='/image/avatar/agent-2.jpg'
+                        src='/image/home/section-testimonial-2.png'
                         alt=''
                         width={45}
                         height={45}
@@ -472,7 +472,7 @@ export default function HomeContent() {
                     </div>
                     <div className='agent agent-3'>
                       <Image
-                        src='/image/avatar/agent-3.jpg'
+                        src='/image/home/section-testimonial-3.png'
                         alt=''
                         width={45}
                         height={45}

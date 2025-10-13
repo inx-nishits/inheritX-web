@@ -171,7 +171,6 @@ img { max-width: 100%; height: auto; }
   color: #fff;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 1px;
   flex: 1;
 }
 
@@ -245,7 +244,6 @@ img { max-width: 100%; height: auto; }
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 /* Responsive Design */

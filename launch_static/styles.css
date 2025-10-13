@@ -19,13 +19,13 @@ body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-seri
 }
 
 .logo { width: clamp(300px, 38vw, 520px); height: auto; display: block; margin: 0 auto 24px; filter: drop-shadow(0 14px 28px rgba(0,0,0,0.48)); }
-.badge { display:inline-block; padding: 10px 16px; border-radius: 999px; background: linear-gradient(90deg, #00d68f, #00b3ff); box-shadow: 0 8px 22px rgba(0,214,143,0.38); text-transform: uppercase; font-weight: 700; letter-spacing:.8px; font-size:14px; }
+.badge { display:inline-block; padding: 10px 16px; border-radius: 999px; background: linear-gradient(90deg, #00d68f, #00b3ff); box-shadow: 0 8px 22px rgba(0,214,143,0.38); text-transform: uppercase; font-weight: 700;font-size:14px; }
 .title { font-size: clamp(36px, 6.6vw, 76px); line-height:1.05; margin: 12px 0 10px; }
 .gradient { background: linear-gradient(90deg, #e6f7ff 0%, #aee6ff 35%, #8af7d0 65%, #e6f7ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% 100%; animation: sheen 3.2s ease-in-out infinite; }
 .subtitle { font-size: clamp(16px, 2.6vw, 22px); color: rgba(255,255,255,0.86); margin: 0 0 20px; }
 
 .actions { display:flex; align-items:center; justify-content:center; gap: 12px; }
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding: 20px 36px; border-radius: 16px; border: none; cursor: pointer; font-weight: 700; letter-spacing: .2px; min-width: 220px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding: 20px 36px; border-radius: 16px; border: none; cursor: pointer; font-weight: 700;min-width: 220px; }
 .btn-primary { color:#fff; background: linear-gradient(90deg, #00b3ff, #00d68f); box-shadow: 0 14px 32px rgba(0,179,255,0.28), 0 6px 14px rgba(0,214,143,0.18); position:relative; overflow:hidden; transition: transform .18s ease, box-shadow .22s ease, filter .22s ease; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 24px 56px rgba(0,179,255,0.36), 0 12px 24px rgba(0,214,143,0.26); filter: brightness(1.05) saturate(1.05); }
 .btn-primary:active { transform: translateY(0) scale(.98); }

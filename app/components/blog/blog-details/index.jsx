@@ -249,7 +249,7 @@ export default function BlogDetailsPage({ params }) {
         </div>
         // </div>
       ) : (
-        <PageTitle title={title} className="mb-0" />
+        <PageTitle title={title} className="mb-5" />
       )}
       <div className="main-content tf-spacing-2">
         <div className="tf-container">
