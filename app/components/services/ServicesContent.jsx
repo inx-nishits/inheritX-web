@@ -342,10 +342,10 @@ export default function ServicesContent() {
                     >
                       <div className='according-content'>
                         <div className='right'>
-                          <div className='desc lh-30 mb-2'>
+                          <div className='desc mb-2'>
                             Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
-                          <div className='desc lh-30 mb-0'>
+                          <div className='desc mb-0'>
                             We strive to offer superior-quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose for long-term returns.
                           </div>
                         </div>
@@ -369,11 +369,11 @@ export default function ServicesContent() {
                     >
                       <div className='according-content'>
                         <div className='right'>
-                          <div className='desc lh-30 mb-2'>
+                          <div className='desc mb-2'>
                             To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers’ lives.
                           </div>
 
-                          <div className='desc lh-30 mb-0'>
+                          <div className='desc mb-0'>
                             We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
                           </div>
                         </div>

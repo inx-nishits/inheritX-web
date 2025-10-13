@@ -1963,8 +1963,8 @@ div .page-title-home.hero-fullscreen {
 }
 
 .right-section .accordion-section-image {
-  height: 760px !important; /* fixed height to stabilize image */
-  min-height: 760px !important;
+  height: 780px !important; /* fixed height to stabilize image */
+  min-height: 780px !important;
   flex: 0 0 auto !important; /* do not stretch with sibling */
 }
 
@@ -1979,36 +1979,36 @@ div .page-title-home.hero-fullscreen {
 
 @media (max-width: 1399.98px) {
   .right-section .accordion-section-image {
-    height: 640px !important;
-    min-height: 640px !important;
+    height: 680px !important;
+    min-height: 680px !important;
   }
 }
 
 @media (max-width: 1199.98px) {
   .right-section .accordion-section-image {
-    height: 560px !important;
-    min-height: 560px !important;
+    height: 600px !important;
+    min-height: 600px !important;
   }
 }
 
 @media (max-width: 991.98px) {
   .right-section .accordion-section-image {
-    height: 480px !important;
-    min-height: 480px !important;
+    height: 520px !important;
+    min-height: 520px !important;
   }
 }
 
 @media (max-width: 767.98px) {
   .right-section .accordion-section-image {
-    height: 380px !important;
-    min-height: 380px !important;
+    height: 420px !important;
+    min-height: 420px !important;
   }
 }
 
 @media (max-width: 575.98px) {
   .right-section .accordion-section-image {
-    height: 320px !important;
-    min-height: 320px !important;
+    height: 360px !important;
+    min-height: 360px !important;
   }
 }
 
