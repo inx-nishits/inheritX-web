@@ -3668,6 +3668,8 @@ fieldset {
 }
 .according-item .according-content .desc {
   margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .according-item .according-content .benefit-item {
   margin-bottom: 22px;
@@ -5857,7 +5859,7 @@ a.mapboxgl-ctrl-logo {
     max-width: 630px;
   }
   .section-company .section-company-inner .left-section {
-    padding-right: 140px;
+    padding-right: 80px;
     max-width: 991px;
   }
   .section-company .image-section {
