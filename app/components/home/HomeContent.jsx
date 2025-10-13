@@ -125,9 +125,9 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-xl-6'>
-               <div className='hero-image-container image tf-animate-1 rounded-4 overflow-hidden position-relative' style={{ minHeight: '450px' }}>
+               <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px' }}>
                 <Image
-                  src='/image/page-title/herobanner-ft.png'
+                  src='/image/page-title/herobanner-final.jpg'
                   alt=''
                   className='lazyload'
                   fill
@@ -330,10 +330,9 @@ export default function HomeContent() {
                   </div>
                   <div className='text-rotate'>
                     <svg
-                      width='240'
-                      height='240'
                       viewBox='0 0 240 240'
                       xmlns='http://www.w3.org/2000/svg'
+                      preserveAspectRatio='xMidYMid meet'
                     >
                       <defs>
                         <path
@@ -346,7 +345,7 @@ export default function HomeContent() {
                       {/* Three evenly spaced phrases around the circle */}
                       <text>
                         <textPath href='#textPathCircle' startOffset='0%'>
-                          {`\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•`}
+                          {`\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•`}
                         </textPath>
                       </text>
                     </svg>

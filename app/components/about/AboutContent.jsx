@@ -474,7 +474,7 @@ export default function AboutContent() {
                     >
                       <div className='according-content'>
                         <div className='right'>
-                          <div className='desc lh-30'>
+                          <div className='desc lh-30 mb-1'>
                             Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc lh-30 mb-0'>
@@ -501,7 +501,7 @@ export default function AboutContent() {
                     >
                       <div className='according-content'>
                         <div className='right'>
-                          <div className='desc lh-30'>
+                          <div className='desc lh-30 mb-1'>
                             To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
                           </div>
 
@@ -609,7 +609,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   Our skilled developers have a knack for developing futuristic
                   solutions in web and mobile app development.
                 </div>
@@ -636,7 +636,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   At InheritX, we ensure timely project completion through our
                   structured work approach. We also provide regular updates on
                   the progress of your project.
@@ -664,7 +664,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   Excellent digital infrastructure can be the key to success for
                   an IT company. At InheritX, we have advanced infrastructure
                   equipped with servers, cutting-edge tools, and the latest
@@ -693,7 +693,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   Our flexible pricing models can easily adapt to your
                   ever-changing business needs. We offer transparent pricing
                   with no hidden charges.
@@ -721,7 +721,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   When it comes to domain insight and hands-on experience with
                   the latest tools, our developers always stay updated with
                   modern trends and advancements.
@@ -749,7 +749,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   We provide top-notch IT consulting services along with
                   end-to-end IT solutions. From design to deployment, and
                   maintenance to marketing, we take care of every aspect of your
@@ -778,7 +778,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   By implementing the agile methodology, we ensure that our
                   development process remains client-centric and flexible to
                   meet changing business needs.
@@ -806,7 +806,7 @@ export default function AboutContent() {
                   </Link>
                 </h5>
 
-                <div className='desc lh-30'>
+                <div className='desc lh-30 mb-1'>
                   Our employees and stakeholders are committed to preventing
                   your confidential company and project data from falling into
                   the wrong hands. We give the utmost importance to the safety

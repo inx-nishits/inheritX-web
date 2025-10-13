@@ -73,14 +73,22 @@ export default function ServiceDetails({ params }) {
                 </div>
 
                 {Array.isArray(service.key_services) && service.key_services.length > 0 && (
-                  <div className="details-content-2">
-                    <h4 className="title">Our Key Services Include:</h4>
-                    <div className="list-features">
+                  <div className="details-content-2 key-services">
+                    <div className="ks-header d-flex align-items-center justify-content-between">
+                      <h4 className="title mb-0">Our Key Services Include:</h4>
+                      <span className="ks-accent" aria-hidden="true"></span>
+                    </div>
+                    <div className="list-features key-services-grid" role="list" aria-label="Key services list">
                       {service.key_services.map((item, index) => (
-                        <div key={index} className="features-item align-items-center">
-                          <div className="number-features fw-7">{index + 1}</div>
+                        <div
+                          key={index}
+                          className="features-item key-service-card d-flex align-items-start mb-0"
+                          data-animation-delay={`${index * 0.06}s`}
+                          role="listitem"
+                        >
+                          <div className="number-features fw-7 ks-badge" aria-hidden="true">{index + 1}</div>
                           <div className="item-content">
-                            <span className="body-2 fw-7 mb-0">{item}</span>
+                            <span className="body-2 fw-7 mb-0 ks-text" title={item}>{item}</span>
                           </div>
                         </div>
                       ))}
