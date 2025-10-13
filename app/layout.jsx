@@ -168,6 +168,9 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/image/logo/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        {/* Preload critical hero images */}
+        <link rel='preload' as='image' href='/image/page-title/company-1.jpg' />
+        <link rel='preload' as='image' href='/image/home/join-our-team.jpeg' />
         <link rel='stylesheet' href='/css/bootstrap.css' />
         {/* Template styles */}
         <link rel='stylesheet' href='/css/animate.min.css' />
@@ -209,6 +212,13 @@ export default function RootLayout({ children }) {
           <CounterInitializer />
         </div>
 
+        {/* Global Back-to-Top button (matches footer icon behavior) */}
+        <div className='progress-wrap'>
+          <svg className='progress-circle svg-content' width='100%' height='100%' viewBox='-1 -1 102 102'>
+            <path d='M50,1 a49,49 0 1,1 0,98 a49,49 0 1,1 0,-98' />
+          </svg>
+        </div>
+
         {/* Global toast container */}
         <Toaster
           position='top-right'
@@ -247,12 +257,11 @@ export default function RootLayout({ children }) {
         <Script src='/js/wow.min.js' strategy='afterInteractive' />
         <Script src='/js/lazysize.min.js' strategy='afterInteractive' />
         <Script src='/js/main-wrapper.js' strategy='afterInteractive' />
-        <Script src='js/bootstrap.min.js' strategy='afterInteractive' />
-        <Script src='js/gsap-animation.js' strategy='afterInteractive' />
-        <Script src='js/ScrollSmooth.js' strategy='afterInteractive' />
-        <Script src='js/carousel.js' strategy='afterInteractive' />
-        <Script src='js/jquery-validate.js' strategy='afterInteractive' />
-        <Script src='js/cursor.js' strategy='afterInteractive' />
+        <Script src='/js/gsap-animation.js' strategy='afterInteractive' />
+        <Script src='/js/ScrollSmooth.js' strategy='afterInteractive' />
+        <Script src='/js/carousel.js' strategy='afterInteractive' />
+        <Script src='/js/jquery-validate.js' strategy='afterInteractive' />
+        <Script src='/js/cursor.js' strategy='afterInteractive' />
       </body>
     </html>
   )

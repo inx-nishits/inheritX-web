@@ -537,21 +537,21 @@ h1,
 h2,
 .h2 {
   font-size: 48px;
-  line-height: 55px;
+  line-height: 54px;
   font-weight: 700;
 }
 
 h3,
 .h3 {
   font-size: 30px;
-  line-height: 100%;
+  line-height: 36px;
   font-weight: 700;
 }
 
 h4,
 .h4 {
   font-size: 24px;
-  line-height: 35px;
+  line-height: 34px;
   font-weight: 700;
 }
 
@@ -565,7 +565,7 @@ h5,
 h6,
 .h6 {
   font-size: 20px;
-  line-height: 100%;
+  line-height: 26px;
   font-weight: 700;
 }
 
@@ -4188,9 +4188,8 @@ a.mapboxgl-ctrl-logo {
   display: block;
 }
 .text-rotate svg text {
-  font-size: 28px;
+  font-size: 34px;
   fill: var(--white);
-  font-family: "Inter", sans-serif;
   text-anchor: middle;
   dominant-baseline: central;
   letter-spacing: 0.5px;
@@ -5672,7 +5671,7 @@ a.mapboxgl-ctrl-logo {
 }
 
 /*-------------- Responsive ----------------- */
-@media (min-width: 551px) {
+@media (min-width: 575px) {
   .sw-border .swiper-slide .services-item {
     border-left: 0;
   }
@@ -5911,10 +5910,7 @@ a.mapboxgl-ctrl-logo {
   .section-testimonial.p-services .sw-testimonials {
     max-width: 100% !important;
   }
-  .section-form .section-inner {
-    flex-direction: column;
-    row-gap: 50px;
-  }
+
   .section-form .left {
     max-width: 100%;
   }
@@ -6083,7 +6079,7 @@ a.mapboxgl-ctrl-logo {
     margin-top: 30px !important;
   }
   .section-services .tf-marquee {
-    padding-bottom: 80px !important;
+    padding-bottom: 50px !important;
   }
   .testimonial-item .icon i {
     font-size: 35px;
@@ -6146,18 +6142,18 @@ a.mapboxgl-ctrl-logo {
     display: none;
   }
   h1 {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 47px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 40px;
   }
   h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   h4 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px;
   }
   .page-title .page-title-content {
@@ -6266,6 +6262,8 @@ a.mapboxgl-ctrl-logo {
   .form-footer .input-form .input-icon-absolute {
     max-width: 100%;
   }
+
+
 }
 @media (max-width: 767px) {
   .herosectionContainer, .tf-container {

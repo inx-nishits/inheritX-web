@@ -14,7 +14,7 @@ const AccordionItem = ({ id, title, children, isOpen, onToggle }) => {
 
   return (
     <div className='according-item'>
-      <h5 className='fw-5'>
+      <div className='fw-5'>
         <a
           href={`#${id}`}
           className={`title-according ${isOpen ? 'active' : 'collapsed'}`}
@@ -25,7 +25,7 @@ const AccordionItem = ({ id, title, children, isOpen, onToggle }) => {
         >
           {title}<span></span>
         </a>
-      </h5>
+      </div>
       <div
         id={id}
         className={`collapse ${isOpen ? 'show' : ''}`}

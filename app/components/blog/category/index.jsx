@@ -491,7 +491,7 @@ export default function CategoryDetailsPage() {
                               src={post.feature_image}
                               alt={post.title}
                               className="ls-is-cached lazyloaded"
-                              aspectRatio="4/3"
+                              aspectRatio="4/2"
                               fit="contain"
                               priority={index < 3}
                             />
@@ -542,9 +542,9 @@ export default function CategoryDetailsPage() {
               <div className="col-xl-4">
                 <div className="tf-sidebar sidebar-filter right">
                   <div className="sidebar-item sidebar-content sidebar-categories mb-40">
-                    <h5 className="title-content fw-5">
+                    <div className="title-content fw-5">
                       All Categories
-                    </h5>
+                    </div>
                     <ul className="list">
                       {(categoryData?.categories || []).map((cat) => (
                         <li className="item" key={cat.id}>
@@ -582,7 +582,7 @@ export default function CategoryDetailsPage() {
           />
           <div className={`category-sidebar ${isCategorySidebarOpen ? 'active' : ''}`}>
             <div className="category-sidebar-header">
-              <h3 className="category-sidebar-title">Categories</h3>
+              <div className="category-sidebar-title">Categories</div>
               <button
                 className="category-sidebar-close"
                 onClick={closeCategorySidebar}

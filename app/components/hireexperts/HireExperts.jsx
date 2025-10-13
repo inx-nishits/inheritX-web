@@ -176,7 +176,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Collaboration</h3>
+                  <h3 className='title-service text-primary'>Collaboration</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   We tend to collaborate with various teams of the client's
@@ -207,7 +207,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>App Maintenance</h3>
+                  <h3 className='title-service text-primary'>App Maintenance</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   We provide regular updates, performance optimization, and bug fixes to ensure your app runs smoothly, securely, and efficiently across all devices.
@@ -236,7 +236,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>App Platform Migration Service
+                  <h3 className='title-service text-primary'>App Platform Migration Service
                   </h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
@@ -266,7 +266,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Mobile App Marketing</h3>
+                  <h3 className='title-service text-primary'>Mobile App Marketing</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Boost your app’s visibility and downloads with our targeted marketing strategies, including ASO, social campaigns, and user engagement optimization.
@@ -295,7 +295,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Transparency</h3>
+                  <h3 className='title-service text-primary'>Transparency</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   By implementing the best methods for ensuring the safety of the
@@ -326,7 +326,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Communication</h3>
+                  <h3 className='title-service text-primary'>Communication</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Our dedicated and experienced developers can communicate
@@ -357,7 +357,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Trust</h3>
+                  <h3 className='title-service text-primary'>Trust</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Since inception, we have never compromised on the quality and
@@ -388,7 +388,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>24/7 Technical Assistance</h3>
+                  <h3 className='title-service text-primary'>24/7 Technical Assistance</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Our expert team provides round-the-clock technical assistance,
@@ -420,7 +420,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Maintenance and Upgrade</h3>
+                  <h3 className='title-service text-primary'>Maintenance and Upgrade</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   We offer comprehensive maintenance and upgrades, keeping your
@@ -451,7 +451,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Migration</h3>
+                  <h3 className='title-service text-primary'>Migration</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Our seamless migration services safely transfer your data and
@@ -482,7 +482,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Digital Marketing and SEO</h3>
+                  <h3 className='title-service text-primary'>Digital Marketing and SEO</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   We provide effective digital marketing and SEO strategies to
@@ -513,7 +513,7 @@ export default function HireExpertContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6 mt-3'>
-                  <h3 className='title-service'>Migration Service</h3>
+                  <h3 className='title-service text-primary'>Migration Service</h3>
                 </h5>
                 <div className='desc lh-30 fs-3'>
                   Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize their infrastructure and optimize performance seamlessly.

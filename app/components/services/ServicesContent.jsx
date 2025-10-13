@@ -60,14 +60,14 @@ export default function ServicesContent() {
               <div className='col-lg-6'>
                 <div className='right'>
                   <div className='heading-section mb-45'>
-                    <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                    <div className='sub-title body-2 fw-7 mb-17'>
                       We Are <span className='text-primary'>InheritX</span>{' '}
                       Solutions
                     </div>
-                    <h2 className='title fw-6 title-animation'>
+                    <h3 className='title fw-6'>
                       From Web to Mobility, and DevOps to Cloud Management
                       <span className='fw-3'>&nbsp;- we excel across the full spectrum of digital services.</span>
-                    </h2>
+                    </h3>
                   </div>
                   <div className='section-content'>
                     <div className='desc mb-5 '>
@@ -77,20 +77,20 @@ export default function ServicesContent() {
                       </p>
                     </div>
                     <div className='list-benefit'>
-                      <div className='benefit-item style-big title-animation'>
+                      <div className='benefit-item style-big'>
                         <i className='icon-star-of-life'></i>
                         <span className='fs-20'>15+ Years Of Experience</span>
                       </div>
-                      <div className='benefit-item style-big title-animation'>
+                      <div className='benefit-item style-big'>
                         <i className='icon-star-of-life'></i>
                         <span className='fs-20'>Elite Developer Team</span>
                       </div>
-                      <div className='benefit-item style-big title-animation'>
+                      <div className='benefit-item style-big'>
                         <i className='icon-star-of-life'></i>
                         <span className='fs-20'>40+ Industries Served</span>
                       </div>
 
-                      <div className='benefit-item style-big title-animation'>
+                      <div className='benefit-item style-big'>
                         <i className='icon-star-of-life'></i>
                         <span className='fs-20'>24/7 Support</span>
                       </div>
@@ -147,17 +147,20 @@ export default function ServicesContent() {
               <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
-                    src='image/services-item/WebDevelopment.png'
-                    alt=''
+                    src='/image/services-item/WebDevelopment.png'
+                    alt='Web Development'
                     className='lazyload'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
-                  <Link href='/' className='title-service'>
+                <div className='lh-30 fw-6'>
+                  <h3 className='title-service text-primary mb-4'>
                     Web Development
-                  </Link>
-                </h5>
+                  </h3>
+                </div>
 
                 <div className='desc lh-30 mb-2'>
                   Since its inception, InheritX Solutions has delivered seamlessly performing websites that meet our clients’ corporate needs efficiently. We craft excellent and elegant websites in all major frameworks. Delve in to know more.
@@ -167,17 +170,20 @@ export default function ServicesContent() {
               <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
-                    src='image/services-item/MobileApplicationDevelopment.png'
-                    alt=''
+                    src='/image/services-item/MobileApplicationDevelopment.png'
+                    alt='Mobile Application Development'
                     className='lazyload'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
-                  <Link href='/' className='title-service'>
+                <div className='lh-30 fw-6'>
+                  <h3 className='title-service text-primary mb-4'>
                     Enterprise Mobility
-                  </Link>
-                </h5>
+                  </h3>
+                </div>
 
                 <div className='desc lh-30 mb-2'>
                   We offer a comprehensive range of enterprise mobility solutions that can enhance the productivity, security, and scalability of your business processes. We always meet deadlines while developing high-quality apps.
@@ -187,17 +193,20 @@ export default function ServicesContent() {
               <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
-                    src='image/services-item/Blockchain.png'
-                    alt=''
+                    src='/image/services-item/Blockchain.png'
+                    alt='Blockchain'
                     className='lazyload'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
-                  <Link href='/' className='title-service'>
+                <div className='lh-30 fw-6'>
+                  <h3 className='title-service text-primary mb-4'>
                     Blockchain
-                  </Link>
-                </h5>
+                  </h3>
+                </div>
 
                 <div className='desc lh-30 mb-2'>
                   Our blockchain-based app solutions ensure the safety of your online, high-volume transactions. You can build trust and bring flexibility by providing your customers with a highly secure way of conducting online transactions.
@@ -207,17 +216,20 @@ export default function ServicesContent() {
               <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
-                    src='image/services-item/DevOps.png'
-                    alt=''
+                    src='/image/services-item/DevOps.png'
+                    alt='DevOps'
                     className='lazyload'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
-                  <Link href='/' className='title-service'>
+                <div className='lh-30 fw-6'>
+                  <h3 className='title-service text-primary mb-4'>
                     DevOps
-                  </Link>
-                </h5>
+                  </h3>
+                </div>
 
                 <div className='desc lh-30 mb-2'>
                   We integrate advancements from contemporary and emerging technologies to build customized, high-end enterprise software solutions. We serve our global corporate clientele with best-in-class IT solutions.
@@ -227,17 +239,20 @@ export default function ServicesContent() {
               <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
-                    src='image/services-item/CloudComputing.png'
-                    alt=''
+                    src='/image/services-item/CloudComputing.png'
+                    alt='Cloud Computing'
                     className='lazyload'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
-                  <Link href='/' className='title-service'>
+                <div className='lh-30 fw-6'>
+                  <h3 className='title-service text-primary mb-4'>
                     Cloud Management Services
-                  </Link>
-                </h5>
+                  </h3>
+                </div>
 
                 <div className='desc lh-30 mb-2'>
                   We offer reliable cloud management services at reasonable rates. You can meet data storage and access needs effectively with our cloud-based solutions. Welcome to new opportunities and the scope for expansion.
@@ -247,17 +262,20 @@ export default function ServicesContent() {
               <div className='services-item px-lg-15 col-md-4 no-img'>
                 <div className='icon bg-white p-3 rounded-4 overflow-hidden d-flex align-items-center justify-content-center text-center'>
                   <img
-                    src='image/services-item/IOT.png'
-                    alt=''
+                    src='/image/services-item/IOT.png'
+                    alt='IoT'
                     className='lazyload'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
-                  <Link href='/' className='title-service'>
+                <div className='lh-30 fw-6'>
+                  <h3 className='title-service text-primary mb-4'>
                     Internet of Things (IoT)
-                  </Link>
-                </h5>
+                  </h3>
+                </div>
 
                 <div className='desc lh-30 mb-2'>
                   From smart homes to smart offices, IoT takes it all! We provide IoT app development services for individuals, the healthcare and manufacturing sectors, and our corporate clients across the world at competitive rates.
@@ -297,7 +315,7 @@ export default function ServicesContent() {
           <div className='tf-container w-1810'>
             <div className='section-company-inner'>
               <div className='left-section'>
-                <div className='heading-section mb-53'>
+                <div className='heading-section mb-5'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     <span className='text-primary'>Grow</span> & Development
                   </div>
@@ -487,18 +505,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/apple.svg'
-                    alt=''
+                    src='/image/services-icon/apple.svg'
+                    alt='Apple iOS'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     iOS Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -507,18 +528,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/android.svg'
-                    alt=''
+                    src='/image/services-icon/android.svg'
+                    alt='Android'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     Android Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -527,18 +551,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/flutter.svg'
-                    alt=''
+                    src='/image/services-icon/flutter.svg'
+                    alt='Flutter'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     Flutter Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -547,18 +574,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/react.svg'
-                    alt=''
+                    src='/image/services-icon/react.svg'
+                    alt='React'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     React Native Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -567,18 +597,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/angular.png'
-                    alt=''
+                    src='/image/services-icon/angular.png'
+                    alt='Angular'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     AngularJS Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -587,18 +620,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/python.svg'
-                    alt=''
+                    src='/image/services-icon/python.svg'
+                    alt='Python'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     Python Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -607,18 +643,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/nextjs.svg'
-                    alt=''
+                    src='/image/services-icon/nextjs.svg'
+                    alt='Next.js'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     NextJS Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -627,18 +666,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/laravel.svg'
-                    alt=''
+                    src='/image/services-icon/laravel.svg'
+                    alt='Laravel'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     Laravel Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -647,18 +689,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/react.svg'
-                    alt=''
+                    src='/image/services-icon/react.svg'
+                    alt='React'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     ReactJS Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -667,18 +712,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/nodejs.svg'
-                    alt=''
+                    src='/image/services-icon/nodejs.svg'
+                    alt='Node.js'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     Node.js Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -687,18 +735,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/php.svg'
-                    alt=''
+                    src='/image/services-icon/php.svg'
+                    alt='PHP'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     PHP Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -707,18 +758,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/aws.svg'
-                    alt=''
+                    src='/image/services-icon/aws.svg'
+                    alt='AWS'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     AWS Services
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -727,18 +781,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/IOT.png'
-                    alt=''
+                    src='/image/services-icon/IOT.png'
+                    alt='IoT'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     IOT Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -747,18 +804,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/pwa.png'
-                    alt=''
+                    src='/image/services-icon/pwa.png'
+                    alt='PWA'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     PWA Development
                   </span>
-                </h5>
+                </div>
               </div>
 
               <div className='services-item px-lg-15 col-md-4 no-img'>
@@ -767,18 +827,21 @@ export default function ServicesContent() {
                   style={{ width: '100px', height: '100px' }}
                 >
                   <img
-                    src='image/services-icon/digitalmarketing.svg'
-                    alt=''
+                    src='/image/services-icon/digitalmarketing.svg'
+                    alt='Digital Marketing'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
                     style={{ maxWidth: '60px' }}
                   />
                 </div>
 
-                <h5 className='lh-30 fw-6'>
+                <div className='lh-30 fw-6'>
                   <span className='title-service text-primary'>
                     Digital Marketing
                   </span>
-                </h5>
+                </div>
               </div>
             </div>
           </div>

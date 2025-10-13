@@ -1,9 +1,49 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useEffect, useCallback } from 'react'
 
 export default function DesktopNav ({ menuData }) {
   const pathname = usePathname()
+
+  // Ensure any hover-based mega menu is force-closed during navigation
+  useEffect(() => {
+    // On route change, suppress hover-open. Remove when the cursor leaves the header,
+    // or after a fallback timeout if the user doesn't move the mouse.
+    const remove = () => { document.body.classList.remove('menu-closing') }
+    const headerEl = document.getElementById('header')
+    document.body.classList.add('menu-closing')
+    const fallbackTimer = window.setTimeout(remove, 3000)
+
+    const onHeaderLeave = () => {
+      remove()
+      if (headerEl) headerEl.removeEventListener('mouseleave', onHeaderLeave)
+      window.removeEventListener('mousemove', onFirstMove)
+      window.clearTimeout(fallbackTimer)
+    }
+
+    const onFirstMove = () => {
+      // If user moves the mouse outside header quickly, header leave may not fire immediately
+      if (!headerEl) {
+        remove()
+        window.clearTimeout(fallbackTimer)
+        window.removeEventListener('mousemove', onFirstMove)
+      }
+    }
+
+    if (headerEl) headerEl.addEventListener('mouseleave', onHeaderLeave)
+    window.addEventListener('mousemove', onFirstMove, { once: true })
+    return () => {
+      window.clearTimeout(fallbackTimer)
+      if (headerEl) headerEl.removeEventListener('mouseleave', onHeaderLeave)
+      window.removeEventListener('mousemove', onFirstMove)
+    }
+  }, [pathname])
+
+  const handleLinkClick = useCallback(() => {
+    // Add a temporary class that disables hover-open so menu closes immediately
+    document.body.classList.add('menu-closing')
+  }, [])
 
   const isActive = path => pathname === path || pathname.startsWith(`${path}/`)
   const isParentActive = (href, columns) => {
@@ -24,7 +64,7 @@ export default function DesktopNav ({ menuData }) {
                 key={item.href}
                 className={`menu-item ${isActive(item.href) ? 'current-menu-item' : ''}`}
               >
-                <Link href={item.href} className='item-link body-2'>
+                <Link href={item.href} className='item-link body-2' onClick={handleLinkClick}>
                   <span>{item.label}</span>
                 </Link>
               </li>
@@ -37,7 +77,7 @@ export default function DesktopNav ({ menuData }) {
               key={item.href}
               className={`menu-item menu-item-has-children position-static ${active ? 'current-menu-item' : ''}`}
             >
-              <Link href={item.href} className='item-link body-2'>
+              <Link href={item.href} className='item-link body-2' onClick={handleLinkClick}>
                 <span>{item.label}</span>
               </Link>
               <div className='sub-menu mega-menu p-4 py-5'>
@@ -51,7 +91,7 @@ export default function DesktopNav ({ menuData }) {
                         <ul className='list-unstyled'>
                           {col.items.map(link => (
                             <li key={link.href} className={`mb-3 ${isActive(link.href) ? 'current-menu-item' : ''}`}>
-                              <Link href={link.href} className='text-decoration-none text-white'>
+                              <Link href={link.href} className='text-decoration-none text-white' onClick={handleLinkClick}>
                                 {link.label}
                               </Link>
                             </li>

@@ -111,7 +111,7 @@ export default function HomeContent() {
                 </h2>
               </div>
 
-              <div className='content-left mb-5 pb-5 pb-lg-0'>
+              <div className='content-left mb-md-5 pb-0 pb-lg-0'>
                 <div className='desc'>
                   <p className='fs-3 lh-30'>
                     From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
@@ -141,7 +141,7 @@ export default function HomeContent() {
 
       <div className='tf-container tf-spacing-2'>
         {/* Counter Section Title */}
-        <div className='row mb-60'>
+        <div className='row mb-5 mb-lg-5 pb-lg-5'>
           <div className='col-12 text-center'>
             <div className='heading-section'>
               <div className='sub-title body-2 fw-7 mb-17'>
@@ -549,7 +549,7 @@ export default function HomeContent() {
           <div className='tf-container w-1810'>
             <div className='section-company-inner'>
               <div className='left-section left-sectionnew'>
-                <div className='heading-section mb-53'>
+                <div className='heading-section mb-5'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     <span className='text-primary'>Grow</span> & Development
                   </div>
@@ -1140,7 +1140,7 @@ export default function HomeContent() {
 
         <section className='section-form tf-spacing-4 tf-container'>
           <div className='section-inner row'>
-            <div className='col-lg-6'>
+            <div className='col-lg-6 mb-5 mb-lg-0'>
               <div className='w-100 h-100 rounded-4 overflow-hidden position-relative'>
 
                 <div className='position-relative rounded-4 overflow-hidden image tf-animate-1' style={{ minHeight: '550px' }}>

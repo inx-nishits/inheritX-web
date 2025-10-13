@@ -447,7 +447,7 @@ export default function AboutContent() {
           <div className='tf-container w-1810'>
             <div className='section-company-inner'>
               <div className='left-section'>
-                <div className='heading-section mb-53'>
+                <div className='heading-section mb-5'>
                   <div className='sub-title body-2 fw-7 mb-17 title-animation'>
                     About <span className='text-primary'>InheritX Solutions</span>
                   </div>
@@ -593,9 +593,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/certificate.svg'
-                    alt=''
+                    src='/image/about/certificate.svg'
+                    alt='Certificate'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -621,9 +624,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/email.svg'
-                    alt=''
+                    src='/image/about/email.svg'
+                    alt='Email'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -649,9 +655,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/office.svg'
-                    alt=''
+                    src='/image/about/office.svg'
+                    alt='Office'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -678,9 +687,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/receipt.svg'
-                    alt=''
+                    src='/image/about/receipt.svg'
+                    alt='Receipt'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -706,9 +718,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/innovation.svg'
-                    alt=''
+                    src='/image/about/innovation.svg'
+                    alt='Innovation'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -734,9 +749,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/customer-service.svg'
-                    alt=''
+                    src='/image/about/customer-service.svg'
+                    alt='Customer service'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -763,9 +781,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/responsive.svg'
-                    alt=''
+                    src='/image/about/responsive.svg'
+                    alt='Responsive'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>
@@ -791,9 +812,12 @@ export default function AboutContent() {
                   style={{ width: '140px', height: '140px', maxWidth: '140px' }}
                 >
                   <img
-                    src='image/about/encrypted.svg'
-                    alt=''
+                    src='/image/about/encrypted.svg'
+                    alt='Encrypted'
                     className='lazyload img-fluid'
+                    loading='lazy'
+                    width='100'
+                    height='100'
                     style={{ maxWidth: '100px' }}
                   />
                 </div>

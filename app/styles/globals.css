@@ -2,6 +2,15 @@
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; }
 
+/* When navigating via desktop menu clicks, force-close hover dropdowns */
+body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu,
+body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  top: 110% !important;
+  pointer-events: none !important;
+}
+
 /* Opt-in utility: make container full-width from 1024px and up */
 .fullwidth-from-1024 {
   width: 100%;
@@ -391,9 +400,9 @@ img { max-width: 100%; height: auto; }
 
 /* Typography: reduce heading sizes on laptops for better balance */
 @media (min-width: 992px) and (max-width: 1399.98px) {
-  h1, .h1 { font-size: 48px !important; }
-  h2, .h2 { font-size: 36px !important; }
-  h3, .h3 { font-size: 28px !important; }
+  h1, .h1 { font-size: 48px !important;line-height: 58px !important;}
+  h2, .h2 { font-size: 36px !important;line-height: 44px !important; }
+  h3, .h3 { font-size: 28px !important;line-height: 36px !important; }
 }
 
 /* Sections: standardize vertical rhythm */

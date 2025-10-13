@@ -39,13 +39,13 @@ const OurPartners = ({
                     <Image
                       src={partner.src}
                       alt={partner.alt}
-                      className='lazyload bg-white p-2 rounded-4 overflow-hidden'
+                      className='lazyload bg-white p-3 rounded-4 overflow-hidden'
                       height={100}
-                      width={200}
+                      width={150}
                       style={{
-                        width: '200px',
+                        width: '150px',
                         height: '100px',
-                        objectFit: 'none',
+                        objectFit: 'contain',
                         objectPosition: 'center'
                       }}
                     />

@@ -795,9 +795,9 @@ export default function BlogListPage() {
                                 <div className="tf-sidebar sidebar-filter right">
 
                                     <div className="sidebar-item sidebar-content sidebar-categories mb-40">
-                                        <h5 className="title-content fw-5">
+                                        <div className="title-content fw-5">
                                             Category
-                                        </h5>
+                                        </div>
                                         <ul className="list">
                                             {(blogData?.categories || []).map((cat) => (
                                                 <li className="item" key={cat.id}>
@@ -1093,7 +1093,7 @@ export default function BlogListPage() {
                     />
                     <div className={`category-sidebar ${isCategorySidebarOpen ? 'active' : ''}`}>
                         <div className="category-sidebar-header">
-                            <h3 className="category-sidebar-title">Categories</h3>
+                            <div className="category-sidebar-title">Categories</div>
                             <button 
                                 className="category-sidebar-close"
                                 onClick={closeCategorySidebar}
