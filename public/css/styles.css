@@ -3194,6 +3194,7 @@ fieldset {
   background-color: var(--dark-2);
   border: 1px solid var(--stroke-2);
 }
+.wg-blog-details img {margin-bottom: 16px;}
 
 .wg-blog-details p, .wg-blog-details figure, .wg-blog-details h1, .wg-blog-details h2, .wg-blog-details h3, .wg-blog-details h4, .wg-blog-details h5, .wg-blog-details h6  {margin-bottom: 20px;color: #ffffff !important;}
 .wg-blog-details ol, .wg-blog-details ul {margin-bottom: 20px;}
