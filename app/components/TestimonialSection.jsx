@@ -71,10 +71,10 @@ export default function TestimonialSection() {
         <div className='row justify-content-between rg-50'>
           <div className='col-lg-7'>
             <div className='heading-section mb-60'>
-              <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+              <div className='sub-title body-2 fw-7 mb-17  '>
                 Clients Feedback
               </div>
-              <h2 className='title fw-6 title-animation'>
+              <h2 className='title fw-6  '>
                 1250+ People Say&nbsp;
                 <span className='fw-3'>About Us</span>
               </h2>

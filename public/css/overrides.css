@@ -1957,6 +1957,61 @@ div .page-title-home.hero-fullscreen {
   }
 }
 
+/* Keep right-side image height stable in accordion section to avoid jerk */
+.section-company .section-company-inner {
+  align-items: flex-start !important; /* prevent equal-height stretching */
+}
+
+.right-section .accordion-section-image {
+  height: 760px !important; /* fixed height to stabilize image */
+  min-height: 760px !important;
+  flex: 0 0 auto !important; /* do not stretch with sibling */
+}
+
+.right-section .accordion-section-image img,
+.right-section .accordion-section-image picture,
+.right-section .accordion-section-image > span, /* next/image wrapper */
+.right-section .accordion-section-image > span > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 1399.98px) {
+  .right-section .accordion-section-image {
+    height: 640px !important;
+    min-height: 640px !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .right-section .accordion-section-image {
+    height: 560px !important;
+    min-height: 560px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .right-section .accordion-section-image {
+    height: 480px !important;
+    min-height: 480px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .right-section .accordion-section-image {
+    height: 380px !important;
+    min-height: 380px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .right-section .accordion-section-image {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+}
+
 /* Typing Animation Styles */
 .typing-cursor {
   display: inline-block;
@@ -2187,6 +2242,8 @@ div .page-title-home.hero-fullscreen {
   contain: layout style;
   /* CSS containment for better performance */
 }
+
+ 
 
 /* Force two-line layout by controlling container width */
 .hero-typing-text {
@@ -2482,6 +2539,7 @@ div .page-title-home.hero-fullscreen {
     margin-bottom: 40px;
 }
 
+
 }
 
 @media (min-width: 1200px) {
@@ -2511,6 +2569,7 @@ div .page-title-home.hero-fullscreen {
     font-size: 18px;
     line-height: 24px;
   }
+
 }
 
 

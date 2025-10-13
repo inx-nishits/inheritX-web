@@ -128,15 +128,15 @@ export default function AboutContent() {
 
               </div>
               <div className='right'>
-                <div className='heading-section mb-60'>
-                  <h2 className='fw-7 mb-5 title-animation'>
+                <div className='heading-section mb-0'>
+                  <h2 className='fw-7 mb-5 '>
                     Who <span className='text-primary'>&nbsp;We Are</span>
                   </h2>
-                  <p className='lh-30 fs-3 title-animation mb-5'>
+                  <p className='lh-30 fs-3  mb-5'>
                     Since 2011, excellent customer service has not just been a phrase, but a core value of InheritX Solutions. Developing high-quality solutions in the web and mobile app domains has been a way of life at InheritX for over fourteen years. Our client-centric approach and no compromise on performance have made us an undisputed leader in mobile app, web, game, and digital marketing.
                   </p>
 
-                  <p className='lh-30 fs-3 title-animation mb-5'>
+                  <p className='lh-30 fs-3  mb-0'>
                     At InheritX, our aim has remained the same since inception – to make and keep our clients happy. This is the reason why we have a large clientele across different industry sectors worldwide. Our happy clients include startups, SMEs, and even a few Fortune 500 companies. Our in-house team of experienced developers makes it possible to transform your creative concepts into innovative IT solutions.
                   </p>
                 </div>
@@ -191,7 +191,7 @@ export default function AboutContent() {
 
               <div className='right'>
                 <div className='heading-section mb-30' ref={journeyHeadingRef}>
-                  <div className='sub-title fs-1 fw-7 mb-30 title-animation'>
+                  <div className='sub-title fs-1 fw-7 mb-30 '>
                     Our Exciting Journey So Far
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function AboutContent() {
             <div className='row'>
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2011
                     </span>
@@ -224,7 +224,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2012
                     </span>
@@ -240,7 +240,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2013
                     </span>
@@ -254,7 +254,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2014
                     </span>
@@ -269,7 +269,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2015
                     </span>
@@ -285,7 +285,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2016
                     </span>
@@ -300,7 +300,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2017
                     </span>
@@ -315,7 +315,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2018
                     </span>
@@ -330,7 +330,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2019
                     </span>
@@ -345,7 +345,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2020
                     </span>
@@ -361,7 +361,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2021
                     </span>
@@ -377,7 +377,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2022
                     </span>
@@ -393,7 +393,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2023
                     </span>
@@ -409,7 +409,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2024
                     </span>
@@ -425,7 +425,7 @@ export default function AboutContent() {
 
               <div className='col-12 col-sm-6 col-lg-4 col-xxl-3 mb-5'>
                 <div className='journey-card d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100' data-journey-card>
-                  <h3 className='title-animation'>
+                  <h3 className='clearfix'>
                     <span className='journey-year text-primary d-block mb-5 year-animate mb-2' data-journey-year>
                       2025
                     </span>
@@ -448,10 +448,10 @@ export default function AboutContent() {
             <div className='section-company-inner'>
               <div className='left-section'>
                 <div className='heading-section mb-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 '>
                     About <span className='text-primary'>InheritX Solutions</span>
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h2 className='title fw-6 '>
                     Leaders in providing Mobile, Web, Game, and Internet
                     Marketing solutions.
                   </h2>
@@ -514,8 +514,8 @@ export default function AboutContent() {
                   </div>
                 </div>
               </div>
-              <div className='right-section' style={{ flex: 1 }}>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative' style={{ minHeight: '480px' }}>
+              <div className='right-section w-100'>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image' style={{ minHeight: '640px' }}>
                   <Image
                     src='/image/page-title/company-1.jpg'
                     alt=''
@@ -574,10 +574,10 @@ export default function AboutContent() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6  mb-5'>
                     What We <span className='text-primary'>Offer?</span>
                   </h2>
-                  <p className='title-animation'>
+                  <p className='clearfix'>
                     InheritX Solutions has an in-house team of experienced
                     developers who can handle projects of any size in the
                     domains of web, mobile apps, and IoT.
@@ -868,10 +868,10 @@ export default function AboutContent() {
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
                 <div className='heading-section mb-60'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 '>
                     Clients Feedback
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h2 className='title fw-6 '>
                     1250+ People Say&nbsp;
                     <span className='fw-3'>About Us</span>
                   </h2>

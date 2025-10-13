@@ -77,7 +77,7 @@ export default function MobileNav ({ menuData, onNavigate }) {
                 {item.columns?.map((col, colIdx) => (
                   <div className='mobile-mega-col' key={`${item.href}-col-${colIdx}`}>
                     {col.title ? (
-                      <h6 className='text-primary fw-bold mb-3 cursor-default'>{col.title}</h6>
+                      <div className='text-primary fw-bold mb-3 cursor-default'>{col.title}</div>
                     ) : null}
                     <ul className='list-unstyled'>
                       {col.items.map(link => (

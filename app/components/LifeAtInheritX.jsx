@@ -42,10 +42,10 @@ export default function LifeAtInheritX() {
     <section className='tf-spacing-2'>
       <div className='tf-container'>
         <div className='heading-section mb-60 text-center'>
-          <h2 className='title fw-6 title-animation mb-5'>
+          <h2 className='title fw-6 mb-5'>
             Life <span className='text-primary'>@ InheritX</span>
           </h2>
-          <p className='title-animation'>
+          <p className='clearfix'>
             Every employee is a valuable asset to us. We nurture their skills and care for their growth.
           </p>
         </div>

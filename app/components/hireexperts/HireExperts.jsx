@@ -67,7 +67,7 @@ export default function HireExpertContent() {
               <div className='col-lg-6'>
                 <div className='right'>
                   <div className='heading-section mb-45'>
-                    <h2 className='title fw-6 title-animation'>
+                    <h2 className='title fw-6 '>
                       Hire Dedicated and Professional Developers
                     </h2>
                   </div>
@@ -593,10 +593,10 @@ export default function HireExpertContent() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6  mb-5'>
                     Our <span className='text-primary'>Platforms</span>
                   </h2>
-                  <p className='title-animation'>
+                  <p className='clearfix'>
                     InheritX provides Web App Development Services in PHP,
                     ASP.NET, AngularJS, Node.js and UI/UX Design.
                   </p>

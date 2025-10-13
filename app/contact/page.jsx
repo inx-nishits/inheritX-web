@@ -39,13 +39,13 @@ export default function Page () {
       <div className='main-content'>
         <section className='section-contact p-contact tf-spacing-2'>
           <div className='tf-container'>
-            <div className='section-contact-inner flex justify-content-between flex-wrap pb-5 mb-5'>
-              <div className='left'>
+            <div className='section-contact-inner flex justify-content-between row flex-wrap pb-5 mb-5 gap-0'>
+              <div className='col-12 col-lg-6 mb-5'>
                 <div className='heading-section mb-30'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation text-primary'>
+                  <div className='sub-title body-2 fw-7 mb-17  text-primary'>
                     Get In Touch
                   </div>
-                  <h2 className='title fw-6 mb-10 title-animation'>
+                  <h2 className='title fw-6 mb-10 '>
                   Let’s Build Something
                     <span className='fw-3'>&nbsp;Great&nbsp;Together</span>
                   </h2>
@@ -58,8 +58,8 @@ export default function Page () {
                 </div>
 
                 <div className='contact-social'>
-                  <div className='title body-2 fw-7 title-animation'>Follow Us</div>
-                  <ul className='post-social style-radius-50 style-bg-white g-10 title-animation'>
+                  <div className='title body-2 fw-7 '>Follow Us</div>
+                  <ul className='post-social style-radius-50 style-bg-white g-10 '>
                     <li>
                       <a
                         href='https://www.facebook.com/InheritxSolutions/'
@@ -104,7 +104,7 @@ export default function Page () {
                 </div>
               </div>
 
-              <div className='right'>
+              <div className='col-12 col-lg-6'>
                 <ContactForm className='form-contact-us px-md-15 rounded-4 overflow-hidden' />
               </div>
             </div>

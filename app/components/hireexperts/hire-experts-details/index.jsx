@@ -117,7 +117,7 @@ export default function HireDetailsPage({ params }) {
                               className='d-flex flex-column gap-4 mb-0 border border-light rounded-4 overflow-hidden p-4 h-100 tf-animation fade-up'
                               data-animation-delay={`${index * 0.2}s`}
                             >
-                              <h4 className='title-animation text-primary lh-40'>
+                              <h4 className=' text-primary lh-40'>
                                 {service.imageTitle || service.title}
                               </h4>
                               {(service.content || service.desc) && (

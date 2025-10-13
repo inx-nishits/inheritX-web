@@ -92,7 +92,7 @@ export default function HomeContent() {
                   Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
                 </div>
 
-                <div className='sub-title fs-2 fw-5'>
+                <div className='sub-title fs-2 fw-5 d-none'>
                   <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
                 <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
@@ -125,7 +125,7 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-xl-6'>
-               <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px' }}>
+              <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px' }}>
                 <Image
                   src='/image/page-title/herobanner-final.jpg'
                   alt=''
@@ -148,8 +148,8 @@ export default function HomeContent() {
                 Our <span className='text-primary'>Achievements</span>
               </div>
               <h2 className='title fw-6 mb-4'>
-                Numbers That Speak
-                <span className='fw-3'>&nbsp;for Our Excellence</span>
+                <span className='fw-3'>Numbers That Speak</span>
+                &nbsp;for Our Excellence
               </h2>
               <p className='fs-2 lh-30'>
                 Trusted by clients worldwide, we deliver exceptional results that drive business growth and innovation.
@@ -173,9 +173,9 @@ export default function HomeContent() {
                   </span>
                   <span className='text-white ms-1'>+</span>
                 </div>
-                <h6 className='title-counter lh-30 fw-5 text-white text-center'>
+                <p className='title-counter lh-30 fw-5 text-white text-center'>
                   Verified 5* Client Reviews
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -193,9 +193,9 @@ export default function HomeContent() {
                   </span>
                   <span className='color-primary ms-1'>+</span>
                 </div>
-                <h6 className='title-counter lh-30 fw-5 text-center'>
+                <p className='title-counter lh-30 fw-5 text-center'>
                   Projects Delivered Successfully
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -213,9 +213,9 @@ export default function HomeContent() {
                   </span>
                   <span className='text-white ms-1'>%</span>
                 </div>
-                <h6 className='title-counter lh-30 fw-5 text-white text-center'>
+                <p className='title-counter lh-30 fw-5 text-white text-center'>
                   Client Retention Ratio
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -233,9 +233,9 @@ export default function HomeContent() {
                   </span>
                   <span className='color-primary ms-1'>+</span>
                 </div>
-                <h6 className='title-counter lh-30 fw-5 text-center'>
+                <p className='title-counter lh-30 fw-5 text-center'>
                   Industries Served
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -253,9 +253,9 @@ export default function HomeContent() {
                   </span>
                   <span className='text-white ms-1'>+</span>
                 </div>
-                <h6 className='title-counter lh-30 fw-5 text-white text-center'>
+                <p className='title-counter lh-30 fw-5 text-white text-center'>
                   Development Staff
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -268,9 +268,9 @@ export default function HomeContent() {
                     24/7
                   </span>
                 </div>
-                <h6 className='title-counter lh-30 fw-5 text-center'>
+                <p className='title-counter lh-30 fw-5 text-center'>
                   Support
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -486,11 +486,11 @@ export default function HomeContent() {
               </div>
               <div className='right'>
                 <div className='heading-section mb-60'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 '>
                     Explore Our
                     <span className='text-primary'>&nbsp;Achievement</span>
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h2 className='title fw-6 '>
                     Premier Tech Innovations
                     <span className='fw-3'>&nbsp;InheritX Software Agency</span>
                   </h2>
@@ -512,9 +512,9 @@ export default function HomeContent() {
                         </span>
                         <span className='title-counter'>+</span>
                       </div>
-                      <h6 className='title-counter lh-30 fw-5'>
+                      <p className='title-counter lh-30 fw-5'>
                         Trusted Global Clients
-                      </h6>
+                      </p>
                     </div>
                   </div>
 
@@ -534,9 +534,9 @@ export default function HomeContent() {
                         </span>
                         <span className='title-counter'>+</span>
                       </div>
-                      <h6 className='title-counter lh-30 fw-5'>
+                      <p className='title-counter lh-30 fw-5'>
                         Best Project Complete
-                      </h6>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -550,10 +550,10 @@ export default function HomeContent() {
             <div className='section-company-inner'>
               <div className='left-section left-sectionnew'>
                 <div className='heading-section mb-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 '>
                     <span className='text-primary'>Grow</span> & Development
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h2 className='title fw-6 '>
                     Modern Technology and
                     <span className='fw-3'>Advancement Incentives</span>
                   </h2>
@@ -675,15 +675,14 @@ export default function HomeContent() {
                         <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon-custom-software'></i>
                         </div>
-                        <h6 className='lh-30 fw-6'>
+                        <p className='lh-30 fw-6'>
                           <Link
                             href='/services/web-app-development'
-                            className='title-service'
+                            className='title-service fs-2 text-primary'
                           >
-
                             Web Development
                           </Link>
-                        </h6>
+                        </p>
                         <div className='desc lh-30'>
                           Robust, reliable, and responsive corporate websites
                         </div>
@@ -714,14 +713,14 @@ export default function HomeContent() {
                         <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
                           <i className='icon-software-product'></i>
                         </div>
-                        <h6 className='lh-30 fw-6'>
+                        <p className='lh-30 fw-6'>
                           <Link
                             href='/services/machine-learning-development'
-                            className='title-service'
+                           className='title-service fs-2 text-primary'
                           >
                             Artificial Intelligence
                           </Link>
-                        </h6>
+                        </p>
                         <div className='desc lh-30'>
                           Predictive analytics, chatbots, computer vision, and
                           custom LLM integrations.
@@ -767,7 +766,7 @@ export default function HomeContent() {
                         <h6 className='lh-30 fw-6'>
                           <Link
                             href='/services/mobile-app-development'
-                            className='title-service'
+                           className='title-service fs-2 text-primary'
                           >
                             Mobile App Development
                           </Link>
@@ -815,14 +814,14 @@ export default function HomeContent() {
                             </svg>
                           </i>
                         </div>
-                        <h6 className='lh-30 fw-6'>
+                        <p className='lh-30 fw-6'>
                           <Link
                             href='/services'
-                            className='title-service'
+                           className='title-service fs-2 text-primary'
                           >
                             DevOps
                           </Link>
-                        </h6>
+                        </p>
                         <div className='desc lh-30'>
                           Customized solutions by integrating technological
                           advancements
@@ -866,14 +865,14 @@ export default function HomeContent() {
                             </svg>
                           </i>
                         </div>
-                        <h6 className='lh-30 fw-6'>
+                        <p className='lh-30 fw-6'>
                           <Link
                             href='/services/google-cloud-services'
-                            className='title-service'
+                           className='title-service fs-2 text-primary'
                           >
                             Cloud Computing
                           </Link>
-                        </h6>
+                        </p>
                         <div className='desc lh-30'>
                           Secure and Scalable Cloud-based Apps for Business
                         </div>
@@ -964,7 +963,7 @@ export default function HomeContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12 text-center'>
-                <div className='heading-section container'>
+                <div className='heading-section container pb-5'>
                   <div className='sub-title body-2 fs-1 fw-7 mb-17 text-center mb-5'>
                     Our <span className='text-primary'>Team</span>
                   </div>
@@ -1058,9 +1057,9 @@ export default function HomeContent() {
                           </div>
                         </div>
                         <div className='item-content'>
-                          <h6 className='title'>
-                            <span>Sandip Modi</span>
-                          </h6>
+                          <p className='title'>
+                            <span className='fw-6'>Sandip Modi</span>
+                          </p>
                           <p className='sub-title'>CEO</p>
                         </div>
                       </div>
@@ -1079,9 +1078,9 @@ export default function HomeContent() {
                           </div>
                         </div>
                         <div className='item-content'>
-                          <h6 className='title'>
-                            <span>Aiyub Munshi</span>
-                          </h6>
+                          <p className='title'>
+                            <span className='fw-6'>Aiyub Munshi</span>
+                          </p>
                           <p className='sub-title'>Project Manager</p>
                         </div>
                       </div>
@@ -1100,9 +1099,9 @@ export default function HomeContent() {
                           </div>
                         </div>
                         <div className='item-content'>
-                          <h6 className='title'>
-                            <span>Krish Hinduja</span>
-                          </h6>
+                          <p className='title'>
+                            <span className='fw-6'>Krish Hinduja</span>
+                          </p>
                           <p className='sub-title'>Sales Head</p>
                         </div>
                       </div>
@@ -1121,9 +1120,9 @@ export default function HomeContent() {
                           </div>
                         </div>
                         <div className='item-content'>
-                          <h6 className='title'>
-                            <span>Meera Tank</span>
-                          </h6>
+                          <p className='title'>
+                            <span className='fw-6'>Meera Tank</span>
+                          </p>
                           <p className='sub-title'>HR Head</p>
                         </div>
                       </div>

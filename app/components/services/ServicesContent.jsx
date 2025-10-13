@@ -316,10 +316,10 @@ export default function ServicesContent() {
             <div className='section-company-inner'>
               <div className='left-section'>
                 <div className='heading-section mb-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 '>
                     <span className='text-primary'>Grow</span> & Development
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h2 className='title fw-6 '>
                     Modern Technology and
                     <span className='fw-3'>&nbsp;Advancement Incentives</span>
                   </h2>
@@ -431,7 +431,7 @@ export default function ServicesContent() {
                 </div>
               </div>
               <div className='right-section w-100'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative'>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image'>
                   <Image
                     src='/image/page-title/image-7.jpg'
                     alt=''
@@ -488,10 +488,10 @@ export default function ServicesContent() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6  mb-5'>
                     Our <span className='text-primary'>Platforms</span>
                   </h2>
-                  <p className='title-animation'>
+                  <p className='clearfix'>
                     InheritX provides web app development services in PHP, ASP.NET, AngularJS, Node.js, and UI/UX design.
                   </p>
                 </div>

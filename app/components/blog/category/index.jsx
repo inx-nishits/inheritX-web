@@ -475,7 +475,7 @@ export default function CategoryDetailsPage() {
                       <div className="tf-post-grid hover-image ">
                         <div className="top">
                           <div className="post-content px-md-15">
-                            <h6 className="title lh-32">{error}</h6>
+                          <p className="title lh-32">{error}</p>
                           </div>
                         </div>
                       </div>
@@ -497,9 +497,9 @@ export default function CategoryDetailsPage() {
                             />
                           </Link>
                           <div className="post-content px-md-15">
-                            <h6 className="title lh-32">
+                            <p className="title lh-32">
                               <Link href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</Link>
-                            </h6>
+                            </p>
                           </div>
                         </div>
                         <div className="bottom-item px-md-15">
@@ -521,9 +521,9 @@ export default function CategoryDetailsPage() {
                               <div className="skeleton-image"></div>
                             </a>
                             <div className="post-content px-md-15">
-                              <h6 className="title lh-32">
+                              <p className="title lh-32">
                                 <span className="skeleton skeleton-text"></span>
-                              </h6>
+                              </p>
                             </div>
                           </div>
                           <div className="bottom-item px-md-15">

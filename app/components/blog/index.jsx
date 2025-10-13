@@ -695,7 +695,7 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
                                                     <div className="post-content px-md-15">
-                                                        <h6 className="title lh-32">{error}</h6>
+                                                    <p className="title lh-32">{error}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -717,9 +717,9 @@ export default function BlogListPage() {
                                                         />
                                                     </Link>
                                                     <div className="post-content px-md-15">
-                                                        <h6 className="title lh-32">
+                                                        <p className="title lh-32">
                                                             <Link href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</Link>
-                                                        </h6>
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 <div className="bottom-item px-md-15">
@@ -747,9 +747,9 @@ export default function BlogListPage() {
                                                         />
                                                     </Link>
                                                     <div className="post-content px-md-15">
-                                                        <h6 className="title lh-32">
+                                                        <p className="title lh-32">
                                                             <Link href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</Link>
-                                                        </h6>
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 <div className="bottom-item px-md-15">
@@ -772,9 +772,9 @@ export default function BlogListPage() {
                                                                 <div className="skeleton-image"></div>
                                                             </a>
                                                             <div className="post-content px-md-15">
-                                                                <h6 className="title lh-32">
+                                                                <p className="title lh-32">
                                                                     <span className="skeleton skeleton-text"></span>
-                                                                </h6>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                         <div className="bottom-item px-md-15">
@@ -836,10 +836,10 @@ export default function BlogListPage() {
                     <div className="row">
                         <div className="col-12">
                             <div className="heading-section mb-60 text-center">
-                                <div className="sub-title body-2 fw-7 mb-17 title-animation">
+                                <div className="sub-title body-2 fw-7 mb-17 ">
                                     Most Popular
                                 </div>
-                                <h2 className="title fw-6 title-animation">
+                                <h2 className="title fw-6 ">
                                     Discover Our Most Read&nbsp;
                                     <span className="fw-3">Blog Posts</span>
                                 </h2>
@@ -876,9 +876,9 @@ export default function BlogListPage() {
                                                         />
                                                     </Link>
                                                     <div className="post-content px-md-15">
-                                                        <h6 className="title lh-32">
+                                                        <p className="title lh-32">
                                                             <Link href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</Link>
-                                                        </h6>
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 <div className="bottom-item px-md-15">
@@ -899,9 +899,9 @@ export default function BlogListPage() {
                                                             <div className="skeleton-image"></div>
                                                         </a>
                                                         <div className="post-content px-md-15">
-                                                            <h6 className="title lh-32">
+                                                            <p className="title lh-32">
                                                                 <span className="skeleton skeleton-text"></span>
-                                                            </h6>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div className="bottom-item px-md-15">
@@ -928,10 +928,10 @@ export default function BlogListPage() {
                     <div className="row">
                         <div className="col-12">
                             <div className="heading-section mb-60 text-center">
-                                <div className="sub-title body-2 fw-7 mb-17 title-animation">
+                                <div className="sub-title body-2 fw-7 mb-17 ">
                                     Trending Now
                                 </div>
-                                <h2 className="title fw-6 title-animation">
+                                <h2 className="title fw-6 ">
                                     What's Hot in&nbsp;
                                     <span className="fw-3">Technology</span>
                                 </h2>

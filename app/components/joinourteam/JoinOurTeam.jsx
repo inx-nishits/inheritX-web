@@ -695,10 +695,10 @@ export default function JoinOurTeam() {
               </div>
               <div className='right'>
                 <div className='heading-section mb-60'>
-                  <h2 className='fw-7 mb-5 title-animation'>
+                  <h2 className='fw-7 mb-5 '>
                     <span className='text-primary'>Career</span> & Culture
                   </h2>
-                  <p className='lh-30 fs-2 title-animation mb-5'>
+                  <p className='lh-30 fs-2  mb-5'>
                     We have combined career with the work culture to give you a
                     robust platform to learn new things, use cutting-edge tools,
                     and implement creative insights while making advanced IT
@@ -708,7 +708,7 @@ export default function JoinOurTeam() {
                     without having much stress.
                   </p>
 
-                  <p className='lh-30 fs-2 title-animation mb-5'>
+                  <p className='lh-30 fs-2  mb-5'>
                     At InheritX, we believe in ‘Work Hard, Party Harder’ policy.
                     As a fresher, you will get support from experienced seniors,
                     and as an experienced professional, you will have a
@@ -717,7 +717,7 @@ export default function JoinOurTeam() {
                     it!
                   </p>
 
-                  <p className='lh-30 fs-2 title-animation mb-5'>
+                  <p className='lh-30 fs-2  mb-5'>
                     If you have dedication, creativity, and a lot of enthusiasm
                     to learn new things, we’re pleased to welcome you to our
                     growing family…
@@ -794,7 +794,7 @@ export default function JoinOurTeam() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6  mb-5'>
                     We <span className='text-primary'>&nbsp;Inspire You to Come</span>
                     Up with Your Best
                   </h2>
@@ -957,7 +957,7 @@ export default function JoinOurTeam() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-60 text-center'>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6  mb-5'>
                     Smart people who know
                     <span className='text-primary'>&nbsp;how to grab</span> the&nbsp;opportunities
                   </h2>
@@ -1074,9 +1074,9 @@ export default function JoinOurTeam() {
 
           <div className='tf-container'>
             <div className='row'>
-              <div className='col-lg-8 offset-lg-2'>
+              <div className='col-xl-8 offset-xl-2'>
                 <div className='heading-section mb-60 text-center'>
-                  <h2 className='title fw-6 title-animation mb-5'>
+                  <h2 className='title fw-6  mb-5'>
                     If you have any questions or want to send your resume, contact
                     our
                     <span className='text-primary'>&nbsp;HR&nbsp;department</span>.
@@ -1141,10 +1141,10 @@ export default function JoinOurTeam() {
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
                 <div className='heading-section mb-60'>
-                  <div className='sub-title body-2 fw-7 mb-17 title-animation'>
+                  <div className='sub-title body-2 fw-7 mb-17 '>
                     Clients Feedback
                   </div>
-                  <h2 className='title fw-6 title-animation'>
+                  <h2 className='title fw-6 '>
                     1250+ People Say&nbsp;
                     <span className='fw-3'>About Us</span>
                   </h2>

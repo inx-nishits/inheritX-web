@@ -86,7 +86,7 @@ export default function DesktopNav ({ menuData }) {
                     {item.columns?.map((col, idx) => (
                       <div className='col-lg-3' key={`${item.href}-col-${idx}`}>
                         {col.title ? (
-                          <h6 className='text-primary fw-bold mb-4 cursor-default'>{col.title}</h6>
+                          <div className='text-primary fw-bold mb-4 cursor-default'>{col.title}</div>
                         ) : null}
                         <ul className='list-unstyled'>
                           {col.items.map(link => (

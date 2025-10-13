@@ -168,9 +168,11 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/image/logo/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-        {/* Preload critical hero images */}
-        <link rel='preload' as='image' href='/image/page-title/company-1.jpg' />
-        <link rel='preload' as='image' href='/image/home/join-our-team.jpeg' />
+        {/* Preload critical hero image for LCP */}
+        <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' imagesrcset='/image/page-title/herobanner-final.jpg' />
+        {/* Safe CSS preloads to speed up first paint without changing behavior */}
+        <link rel='preload' as='style' href='/css/bootstrap.css' />
+        <link rel='preload' as='style' href='/css/styles.css' />
         <link rel='stylesheet' href='/css/bootstrap.css' />
         {/* Template styles */}
         <link rel='stylesheet' href='/css/animate.min.css' />
@@ -244,7 +246,8 @@ export default function RootLayout({ children }) {
         <div className='cursor-dot'></div>
 
         {/* Vendor scripts (kept for parity; can be refactored to React later) */}
-        <Script src='/js/jquery.min.js' strategy='beforeInteractive' />
+        {/* Defer jQuery to not block rendering */}
+        <Script src='/js/jquery.min.js' strategy='afterInteractive' />
         <Script src='/js/jquery-init.js' strategy='afterInteractive' />
         <Script src='/js/bootstrap.min.js' strategy='afterInteractive' />
         <Script src='/js/gsap.min.js' strategy='afterInteractive' />
