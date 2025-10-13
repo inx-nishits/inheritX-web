@@ -1,5 +1,10 @@
 /* Final UI-priority overrides: loaded after theme styles */
 
+body {
+  line-height: 1.4 !important;
+}
+
+
 /* Restore hero section to full height and right edge */
 .herosectionContainer {
   width: 100% !important;

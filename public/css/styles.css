@@ -199,8 +199,9 @@ textarea {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   overflow-y: auto;
-  line-height: initial;
+  line-height: 1.4;
 }
+
 
 img {
   height: auto;
