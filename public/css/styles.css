@@ -5477,10 +5477,10 @@ a.mapboxgl-ctrl-logo {
   right: auto;
 }
 .section-services .tf-marquee {
-  padding-bottom: 132px;
+  padding-bottom: 80px;
 }
 .section-services.p-services .tf-marquee {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 .section-services.p-services .services-item {
   flex: 1 1 auto;
@@ -5719,7 +5719,7 @@ a.mapboxgl-ctrl-logo {
     padding-right: 8px;
   }
   .section-about .about-top {
-    margin-bottom: 101px;
+    margin-bottom: 100px;
   }
   .section-about .about-inner {
     padding-left: 60px;
@@ -6083,7 +6083,7 @@ a.mapboxgl-ctrl-logo {
     margin-top: 30px !important;
   }
   .section-services .tf-marquee {
-    padding-bottom: 70px !important;
+    padding-bottom: 80px !important;
   }
   .testimonial-item .icon i {
     font-size: 35px;

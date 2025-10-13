@@ -50,6 +50,8 @@ const TypingAnimation = ({
     currentIndexRef.current = 0;
     setIsTyping(true);
 
+    // No pre-fit adjustments (reverted)
+
     const typeText = () => {
       if (currentIndexRef.current < text.length) {
         const newText = text.slice(0, currentIndexRef.current + 1);

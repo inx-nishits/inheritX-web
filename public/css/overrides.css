@@ -232,7 +232,7 @@
 .tf-spacing-11,
 .tf-spacing-12 {
   margin-top: 0 !important;
-  margin-bottom: 120px !important;
+  margin-bottom: 80px !important;
 }
 
 /* Laptop heading balance */
@@ -272,7 +272,7 @@
   .tf-spacing-11,
   .tf-spacing-12 {
     margin-top: 0 !important;
-    margin-bottom: 120px !important;
+    margin-bottom: 80px !important;
   }
 }
 
@@ -294,7 +294,7 @@
   .tf-spacing-11,
   .tf-spacing-12 {
     margin-top: 0 !important;
-    margin-bottom: 60px !important;
+    margin-bottom: 44px !important;
   }
 
   .herosectionContainer .top-page-title .title {
@@ -321,7 +321,7 @@
   .tf-spacing-11,
   .tf-spacing-12 {
     margin-top: 0 !important;
-    margin-bottom: 120px !important;
+    margin-bottom: 80px !important;
   }
 }
 
@@ -1528,9 +1528,9 @@ a[href='javascript:;'] {
 main .page-title-home.hero-fullscreen,
 div .page-title-home.hero-fullscreen {
   margin: 0 !important;
-  padding-bottom: 100px !important;
+  padding-bottom: 80px !important;
   margin-top: 0 !important;
-  padding-top: 60px !important;
+  padding-top: 40px !important;
 }
 
 .page-title-home .mask.mask-home-1 {
@@ -2008,6 +2008,13 @@ div .page-title-home.hero-fullscreen {
   text-align: left;
   font-size: clamp(2.2rem, 6vw, 5.5rem);
   font-weight: 600;
+  /* Force exactly two lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  max-height: 2.8em; /* 2 lines * 1.4em line-height */
+  overflow-wrap: anywhere;
 }
 
 .hero-typing-text .typing-cursor {
@@ -2049,7 +2056,7 @@ div .page-title-home.hero-fullscreen {
 /* Responsive font sizes and two-line layout for hero typing text */
 @media (min-width: 1920px) {
   .hero-typing-text {
-    font-size: 5.5rem;
+    font-size: 5rem;
     min-height: 2.8em;
     line-height: 1.4em;
     max-width: 78%;
@@ -2058,7 +2065,7 @@ div .page-title-home.hero-fullscreen {
 
 @media (min-width: 1440px) and (max-width: 1919px) {
   .hero-typing-text {
-    font-size: 5rem;
+    font-size: 4rem;
     min-height: 2.8em;
     line-height: 1.4em;
     max-width: 80%;
@@ -2067,7 +2074,7 @@ div .page-title-home.hero-fullscreen {
 
 @media (min-width: 1200px) and (max-width: 1439px) {
   .hero-typing-text {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     min-height: 2.8em;
     line-height: 1.4em;
     max-width: 82%;
@@ -2529,4 +2536,13 @@ div .page-title-home.hero-fullscreen {
     max-width: 100% !important;
     width: 100%;
 }
+}
+
+/* Enforce max 2-line clamp with ellipsis for hero typing text */
+.hero-typing-text {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
