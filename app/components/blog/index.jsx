@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import BlogImage from '../BlogImage';
 import ImagePreloader from '../ImagePreloader';
@@ -15,8 +15,10 @@ export default function BlogListPage() {
     const showSkeleton = loading || !blogData;
     const [subEmail, setSubEmail] = useState("");
     const [submitting, setSubmitting] = useState(false);
+    const [emailError, setEmailError] = useState("");
     const [isCategorySidebarOpen, setIsCategorySidebarOpen] = useState(false);
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(subEmail);
+    const emailInputRef = useRef(null);
 
     // Category sidebar toggle functions
     const openCategorySidebar = () => {
@@ -387,6 +389,10 @@ export default function BlogListPage() {
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
+        }
+        /* When error message is shown, align items to start to keep button aligned with input top */
+        .newsletter-form .form-group.align-items-start {
+          align-items: flex-start !important;
         }
         
         .newsletter-form .input-wrapper {
@@ -1032,7 +1038,20 @@ export default function BlogListPage() {
 
                                 <form className="newsletter-form" onSubmit={async (e) => {
                                     e.preventDefault();
-                                    if (!isEmailValid || submitting) return;
+                                    if (submitting) return;
+
+                                    // Validate email before submitting
+                                    const trimmed = (subEmail || '').trim();
+                                    if (!trimmed) {
+                                        setEmailError('Email is required');
+                                        emailInputRef.current?.focus();
+                                        return;
+                                    }
+                                    if (!isEmailValid) {
+                                        setEmailError('Please enter a valid email address');
+                                        emailInputRef.current?.focus();
+                                        return;
+                                    }
                                     try {
                                         setSubmitting(true);
                                         const formData = new FormData();
@@ -1053,6 +1072,7 @@ export default function BlogListPage() {
                                         }
                                         toast.success(data?.message || "You have subscribed successfully");
                                         setSubEmail("");
+                                        setEmailError("");
                                     } catch (err) {
                                         const msg = err?.message || "Unable to subscribe. Please try again.";
                                         toast.error(msg);
@@ -1060,18 +1080,28 @@ export default function BlogListPage() {
                                         setSubmitting(false);
                                     }
                                 }}>
-                                    <div className="form-group d-flex justify-content-center align-items-center">
+                                    <div className={`form-group d-flex justify-content-center ${emailError ? 'align-items-start' : 'align-items-center'}`}>
                                         <div className="input-wrapper">
                                             <input
                                                 type="email"
-                                                className="form-control"
+                                                className={`form-control ${emailError ? 'is-invalid' : ''}`}
                                                 placeholder="Enter your email address"
                                                 value={subEmail}
-                                                onChange={(e) => setSubEmail(e.target.value)}
-                                                required
+                                                onChange={(e) => {
+                                                    setSubEmail(e.target.value);
+                                                    if (emailError) setEmailError("");
+                                                }}
+                                                aria-invalid={!!emailError}
+                                                aria-describedby={emailError ? 'newsletter-email-error' : undefined}
+                                                ref={emailInputRef}
                                             />
+                                            {emailError && (
+                                                <div id="newsletter-email-error" className="invalid-feedback d-block" style={{ textAlign: 'left', marginTop: 8 }}>
+                                                    {emailError}
+                                                </div>
+                                            )}
                                         </div>
-                                        <button type="submit" className="tf-btn newsletter-btn" disabled={!isEmailValid || submitting} aria-disabled={!isEmailValid || submitting}>
+                                        <button type="submit" className="tf-btn newsletter-btn" disabled={submitting} aria-disabled={submitting}>
                                             <span>{submitting ? "Joining..." : "Join Now"}</span>
                                             <i className="icon-arrow-right"></i>
                                         </button>

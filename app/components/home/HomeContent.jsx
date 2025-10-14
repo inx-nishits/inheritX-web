@@ -332,6 +332,7 @@ export default function HomeContent() {
                     <svg
                       viewBox='0 0 240 240'
                       xmlns='http://www.w3.org/2000/svg'
+                      xmlnsXlink='http://www.w3.org/1999/xlink'
                       preserveAspectRatio='xMidYMid meet'
                     >
                       <defs>
@@ -344,7 +345,7 @@ export default function HomeContent() {
                       </defs>
                       {/* Three evenly spaced phrases around the circle */}
                       <text>
-                        <textPath href='#textPathCircle' startOffset='0%'>
+                        <textPath xlinkHref='#textPathCircle' href='#textPathCircle' startOffset='0%'>
                           {`\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•\u00A0Explore\u00A0•\u00A0Examine\u00A0•\u00A0Execute\u00A0•\u00A0Excel\u00A0•`}
                         </textPath>
                       </text>

@@ -47,7 +47,7 @@ export default function Page() {
                 </div>
 
                 <div className='contact-social'>
-                  <div className='title body-2 fw-7 '>Follow Us</div>
+                  <div className='title body-2 fw-7 text-primary'>Follow Us</div>
                   <ul className='post-social style-radius-50 style-bg-white g-10 '>
                     <li>
                       <a
