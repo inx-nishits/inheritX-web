@@ -15,7 +15,7 @@ const OurValuableClients = ({
   return (
     <section className={`section-about tf-spacing-2 ${className}`}>
       <div className='tf-container text-center mb-5'>
-        <h2 className='title fw-6 mb-5'>
+        <h2 className='title fw-6 mb-4'>
           {title.split(' ').map((word, index) => 
             word.toLowerCase() === 'clients' ? (
               <span key={index} className='text-primary'> {word}</span>
@@ -39,7 +39,7 @@ const OurValuableClients = ({
                     <Image
                       src={client.src}
                       alt={client.alt}
-                      className='lazyload bg-white p-3 rounded-4 overflow-hidden'
+                      className='lazyload bg-white p-2 overflow-hidden'
                       height={100}
                       width={150}
                       style={{

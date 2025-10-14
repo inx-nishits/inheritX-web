@@ -429,6 +429,7 @@ export default function HomeContent() {
                     alt=''
                     className='lazyload'
                     fill
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>
@@ -489,7 +490,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <div className='right'>
-                <div className='heading-section mb-60'>
+                <div className='heading-section mb-3 mb-xl-5'>
                   <div className='sub-title body-2 fw-7 mb-17 '>
                     Explore Our
                     <span className='text-primary'>&nbsp;Achievement</span>
@@ -552,7 +553,7 @@ export default function HomeContent() {
         <section className='section-company tf-spacing-3'>
           <div className='tf-container w-1810'>
             <div className='section-company-inner'>
-              <div className='left-section left-sectionnew'>
+              <div className='left-section left-sectionnew pb-1 pt-lg-5'>
                 <div className='heading-section mb-5'>
                   <div className='sub-title body-2 fw-7 mb-17 '>
                     <span className='text-primary'>Grow</span> & Development
@@ -569,8 +570,10 @@ export default function HomeContent() {
                   <Image
                     src='/image/page-title/presentationPm.jpg'
                     alt=''
-                    fill
                     className='lazyload'
+                    width={900}
+                    height={600}
+                    priority={false}
                   />
                 </div>
               </div>
@@ -643,7 +646,7 @@ export default function HomeContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <div className='sub-title body-2 fw-7 mb-17'>
                     Our <span className='text-primary'>Popular</span> Services
                   </div>
@@ -910,30 +913,7 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <div
-          className='wg-cta tf-spacing-2 alert alert-dismissible fade show'
-          role='alert'
-        >
-          <div className='tf-container'>
-            <div className='cta-inner flex align-items-center justify-content-center'>
-              <div className='left flex align-items-center'>
-                <div className='icon'>
-                  <i className='icon-chat-2'></i>
-                </div>
-                <h5 className='fw-4 title'>
-                  Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
-                </h5>
-                <a
-                  href='/contact'
-                  className='tf-btn no-bg text-underline hover-color-main-dark'
-                >
-                  <span>Let's Talk</span>
-                  <i className='icon-arrow-right'></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+       
 
         <section className='section-team tf-spacing-2'>
           <div className='mask mask-1'>
@@ -1176,6 +1156,31 @@ export default function HomeContent() {
         {/* Blog teaser section removed as requested */}
 
         <OurValuableClients />
+
+        <div
+          className='wg-cta tf-spacing-2 alert alert-dismissible fade show mb-0'
+          role='alert'
+        >
+          <div className='tf-container'>
+            <div className='cta-inner flex align-items-center justify-content-center'>
+              <div className='left flex align-items-center'>
+                <div className='icon'>
+                  <i className='icon-chat-2'></i>
+                </div>
+                <h5 className='fw-4 title'>
+                  Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
+                </h5>
+                <a
+                  href='/contact'
+                  className='tf-btn no-bg text-underline hover-color-main-dark'
+                >
+                  <span>Let's Talk</span>
+                  <i className='icon-arrow-right'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )

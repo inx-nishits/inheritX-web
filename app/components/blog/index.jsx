@@ -665,7 +665,7 @@ export default function BlogListPage() {
                         </h1>
                         <Breadcrumbs />
 
-                        <p className='pt-4'>Expert Speak on Trending Topics</p>
+                        <p className='pt-2'>Expert Speak on Trending Topics</p>
                     </div>
                 </div>
             </div>
@@ -840,7 +840,7 @@ export default function BlogListPage() {
                 <div className="tf-container">
                     <div className="row">
                         <div className="col-12">
-                            <div className="heading-section mb-60 text-center">
+                            <div className="heading-section mb-3 mb-xl-5 text-center">
                                 <div className="sub-title body-2 fw-7 mb-17 ">
                                     Most Popular
                                 </div>
@@ -932,7 +932,7 @@ export default function BlogListPage() {
                 <div className="tf-container">
                     <div className="row">
                         <div className="col-12">
-                            <div className="heading-section mb-60 text-center">
+                            <div className="heading-section mb-3 mb-xl-5 text-center">
                                 <div className="sub-title body-2 fw-7 mb-17 ">
                                     Trending Now
                                 </div>

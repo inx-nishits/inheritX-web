@@ -612,7 +612,7 @@ export default function HireExpertContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6  mb-5'>
                     Our <span className='text-primary'>Platforms</span>
                   </h2>

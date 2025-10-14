@@ -103,7 +103,7 @@ export default function AboutContent() {
               <Breadcrumbs />
             </div>
 
-            <p className='pt-4'>Our only aim — to make clients happy!</p>
+            <p className='pt-2'>Our only aim — to make clients happy!</p>
           </div>
         </div>
       </div>
@@ -469,7 +469,7 @@ export default function AboutContent() {
                     </h5>
                     <div
                       id='according1'
-                      className='collapse show'
+                      className='collapse'
                       data-bs-parent='#According1'
                     >
                       <div className='according-content'>
@@ -515,13 +515,13 @@ export default function AboutContent() {
                 </div>
               </div>
               <div className='right-section w-100'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image' style={{ minHeight: '640px' }}>
+                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image'>
                   <Image
                     src='/image/page-title/company-1.jpg'
                     alt=''
-                    className='overflow-hidden h-100 w-100'
-                    style={{ objectFit: 'cover' }}
-                    fill
+                    className='overflow-hidden'
+                    width={900}
+                    height={600}
                     priority
                   />
                 </div>
@@ -573,7 +573,7 @@ export default function AboutContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6  mb-5'>
                     What We <span className='text-primary'>Offer?</span>
                   </h2>
@@ -859,7 +859,7 @@ export default function AboutContent() {
           <div className='tf-container'>
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
-                <div className='heading-section mb-60'>
+                <div className='heading-section mb-3 mb-xl-5'>
                   <div className='sub-title body-2 fw-7 mb-17 '>
                     Clients Feedback
                   </div>

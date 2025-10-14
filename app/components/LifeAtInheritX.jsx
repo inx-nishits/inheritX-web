@@ -41,7 +41,7 @@ export default function LifeAtInheritX() {
   return (
     <section className='tf-spacing-2'>
       <div className='tf-container'>
-        <div className='heading-section mb-60 text-center'>
+        <div className='heading-section mb-3 mb-xl-5 text-center'>
           <h2 className='title fw-6 mb-5'>
             Life <span className='text-primary'>@ InheritX</span>
           </h2>

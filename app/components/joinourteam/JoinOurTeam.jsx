@@ -106,9 +106,31 @@ export default function JoinOurTeam() {
     setPhoneError('')
   }
 
+  const resetApplyForm = () => {
+    // Clear all form-related states and errors when modal opens/closes
+    setResumeFile(null)
+    setResumeError('')
+    setIsDragOver(false)
+    setUploadProgress(0)
+    setUploadStatus('idle')
+    if (resumeInputRef.current) resumeInputRef.current.value = ''
+
+    setNameValue('')
+    setEmailValue('')
+    setPhoneValue('')
+    setNameError('')
+    setEmailError('')
+    setPhoneError('')
+
+    setCaptchaInput('')
+    setCaptchaError('')
+    setSubmitStatus('idle')
+  }
+
   const handleOpenApply = (jobId) => (e) => {
     // set selected job and allow the modal to open
     setSelectedJobId(jobId)
+    resetApplyForm()
     regenerateCaptcha()
   }
 
@@ -280,6 +302,23 @@ export default function JoinOurTeam() {
     const res = await fetch(endpoint, { method: 'POST', body: payload })
     return res
   }
+  
+  // Reset form when modal is fully hidden (e.g., close button or backdrop)
+  useEffect(() => {
+    const modalEl = typeof document !== 'undefined' ? document.getElementById('applyReactModal') : null
+    if (!modalEl) return
+    const onHidden = () => {
+      resetApplyForm()
+      setSelectedJobId(null)
+      setJobDetails(null)
+      setJobError('')
+      setJobLoading(false)
+    }
+    modalEl.addEventListener('hidden.bs.modal', onHidden)
+    return () => {
+      modalEl.removeEventListener('hidden.bs.modal', onHidden)
+    }
+  }, [])
   return (
     <>
       {/* Dynamic Apply Modal */}
@@ -603,7 +642,7 @@ export default function JoinOurTeam() {
             <h1 className='title split-text effect-right'>Join Our Team</h1>
             <Breadcrumbs />
 
-            <p className='pt-4 fs-2'>
+            <p className='pt-2 fs-2'>
               Join Our Thriving Family - Boost Your Career with Leading IT
               Company
             </p>
@@ -684,7 +723,7 @@ export default function JoinOurTeam() {
                 </div>
               </div>
               <div className='right'>
-                <div className='heading-section mb-60'>
+                <div className='heading-section mb-3 mb-xl-5'>
                   <h2 className='fw-7 mb-5 '>
                     <span className='text-primary'>Career</span> & Culture
                   </h2>
@@ -783,7 +822,7 @@ export default function JoinOurTeam() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6  mb-5'>
                     We <span className='text-primary'>&nbsp;Inspire You to Come</span>
                     Up with Your Best
@@ -946,7 +985,7 @@ export default function JoinOurTeam() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6  mb-5'>
                     Smart people who know
                     <span className='text-primary'>&nbsp;how to grab</span> the&nbsp;opportunities
@@ -1065,7 +1104,7 @@ export default function JoinOurTeam() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-xl-8 offset-xl-2'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6  mb-5'>
                     If you have any questions or want to send your resume, contact
                     our
@@ -1130,7 +1169,7 @@ export default function JoinOurTeam() {
           <div className='tf-container'>
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
-                <div className='heading-section mb-60'>
+                <div className='heading-section mb-3 mb-xl-5'>
                   <div className='sub-title body-2 fw-7 mb-17 '>
                     Clients Feedback
                   </div>

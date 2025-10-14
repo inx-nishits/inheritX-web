@@ -44,7 +44,7 @@ const AccordionItem = ({ id, title, children, isOpen, onToggle }) => {
 };
 
 export default function Accordion() {
-  const [activeItem, setActiveItem] = useState('according1');
+  const [activeItem, setActiveItem] = useState(null);
 
   const handleToggle = (id) => {
     if (activeItem === id) {

@@ -337,7 +337,7 @@ export default function ServicesContent() {
                     </h5>
                     <div
                       id='according1'
-                      className='collapse show'
+                      className='collapse'
                       data-bs-parent='#According1'
                     >
                       <div className='according-content'>
@@ -435,8 +435,9 @@ export default function ServicesContent() {
                   <Image
                     src='/image/page-title/image-7.jpg'
                     alt=''
-                    fill
                     className='lazyload'
+                    width={900}
+                    height={600}
                   />
                 </div>
               </div>
@@ -487,7 +488,7 @@ export default function ServicesContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12'>
-                <div className='heading-section mb-60 text-center'>
+                <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6  mb-5'>
                     Our <span className='text-primary'>Platforms</span>
                   </h2>

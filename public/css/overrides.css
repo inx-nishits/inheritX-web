@@ -429,10 +429,6 @@ body {
   position: relative;
 }
 
-.according-item .title-according:hover {
-  /* transform: translateX(2px); */
-}
-
 .according-item .according-content {
   transition: opacity 0.5s ease-out 0.15s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
   /* transform: translateY(-10px); */
@@ -1806,6 +1802,63 @@ div .page-title-home.hero-fullscreen {
   animation: infiniteScroll 100s linear infinite !important;
 }
 
+/* Partners & Clients logos: consistent box and non-stretched images */
+.logos-marquee-wrapper .big-text {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.logos-marquee-wrapper .image {
+  /* Fixed parent box size */
+  width: 190px !important;
+  height: 110px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #ffffff !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+/* Next/Image wrapper span inside .image */
+.logos-marquee-wrapper .image > span {
+  position: static !important; /* avoid absolute fill spacing */
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Actual img element (covers both native <img> and Next/Image output) */
+.logos-marquee-wrapper .image img,
+.logos-marquee-wrapper .image > span > img {
+  width: auto !important;            /* ignore inline width */
+  height: auto !important;           /* ignore inline height */
+  max-width: 90% !important;         /* breathing room inside box */
+  max-height: 80% !important;        /* ensure max height constraint */
+  object-fit: contain !important;    /* never stretch */
+  object-position: center !important;/* always centered */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Slightly smaller boxes on small screens */
+@media (max-width: 576px) {
+  .logos-marquee-wrapper .image {
+    width: 150px !important;
+    height: 90px !important;
+    border-radius: 12px !important;
+  }
+
+  .logos-marquee-wrapper .image img,
+  .logos-marquee-wrapper .image > span > img {
+    max-width: 90% !important;
+    max-height: 80% !important;
+  }
+}
+
 /* Mobile responsive fixes for decorative circles */
 @media (max-width: 768px) {
 
@@ -1970,15 +2023,14 @@ div .page-title-home.hero-fullscreen {
   opacity: 0.8 !important;
 }
 
-/* Accordion section image min-height */
+/* Accordion section image: auto-size to intrinsic image (no forced height) */
 .accordion-section-image {
-  min-height: 762px;
-}
-
-@media (max-width: 1024px) and (min-width: 400px) {
-  .accordion-section-image {
-    min-height: auto;
-  }
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
 }
 
 /* Keep right-side image height stable in accordion section to avoid jerk */
@@ -1987,8 +2039,9 @@ div .page-title-home.hero-fullscreen {
 }
 
 .right-section .accordion-section-image {
-  height: 780px !important; /* fixed height to stabilize image */
-  min-height: 780px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
   flex: 0 0 auto !important; /* do not stretch with sibling */
 }
 
@@ -1997,43 +2050,16 @@ div .page-title-home.hero-fullscreen {
 .right-section .accordion-section-image > span, /* next/image wrapper */
 .right-section .accordion-section-image > span > img {
   width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+  height: auto !important;
+  max-width: 100% !important; /* prevent overflow on small screens */
+  object-fit: contain !important; /* maintain ratio, no cropping */
+  object-position: center center !important; /* center within box */
+  background-color: transparent !important; /* avoid visible background */
+  display: block !important;
 }
 
-@media (max-width: 1399.98px) {
-  .right-section .accordion-section-image {
-    height: 680px !important;
-    min-height: 680px !important;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .right-section .accordion-section-image {
-    height: 600px !important;
-    min-height: 600px !important;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .right-section .accordion-section-image {
-    height: 520px !important;
-    min-height: 520px !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .right-section .accordion-section-image {
-    height: 420px !important;
-    min-height: 420px !important;
-  }
-}
-
+/* Responsive: maintain aspect ratio without forcing height */
 @media (max-width: 575.98px) {
-  .right-section .accordion-section-image {
-    height: 360px !important;
-    min-height: 360px !important;
-  }
   .section-services .swiper-slide .services-item {text-align: center;}
 }
 
@@ -2530,6 +2556,13 @@ div .page-title-home.hero-fullscreen {
   .page-title-home .herosectionContainer .top-page-title {
     padding-top: 0px !important;
   }
+  .wg-according .according-item {margin-bottom: 16px;}
+  .according-item .title-according {font-size: 14px;padding-bottom: 10px;}
+  .according-item .according-content .desc {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 18px;
+}
 }
 
 
@@ -2547,8 +2580,9 @@ div .page-title-home.hero-fullscreen {
     margin-bottom: 12px !important;
   }
 
+  /* No min-height for accordion images on large tablets */
   .accordion-section-image {
-    min-height: 790px;
+    min-height: 0 !important;
   }
 
   .services-item {

@@ -70,7 +70,7 @@ export default function TestimonialSection() {
       <div className='tf-container'>
         <div className='row justify-content-between rg-50'>
           <div className='col-lg-7'>
-            <div className='heading-section mb-60'>
+            <div className='heading-section mb-3 mb-xl-5'>
               <div className='sub-title body-2 fw-7 mb-17  '>
                 Clients Feedback
               </div>

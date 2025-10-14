@@ -315,7 +315,7 @@ export default function BlogDetailsPage({ params }) {
             <div className="col-xl-8">
               <div className="wg-details wg-blog-details">
                 <div className="details-content p-3">
-                  <div className="image img-details mb-15 radius-12 overflow-hidden shadow-soft p-0">
+                  <div className="image img-details mb-15 radius-12 overflow-hidden shadow-soft p-0 d-none">
                     {showSkeleton ? (
                       <div className="skeleton skeleton-image"></div>
                     ) : (
