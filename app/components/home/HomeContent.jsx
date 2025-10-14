@@ -974,7 +974,7 @@ export default function HomeContent() {
                   <h2 className='title fw-6 mb-4'>
                     People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
                   </h2>
-                  <p className='lh-30 fs-2 mb-5'>
+                  <p className='lh-30 fs-2 mb-lg-5'>
                     They don’t just lead—they empower, mentor, and transform ideas into impact.
                   </p>
                   <div className='list-btn flex align-items-center g-15 d-none'>
@@ -997,7 +997,7 @@ export default function HomeContent() {
                   style={{ cursor: 'grab' }}
                   data-swiper='{
                                 "slidesPerView": 1,
-                                "spaceBetween": 30,
+                                "spaceBetween": 20,
                                 "speed": 800,
                                 "allowTouchMove": true,
                                 "grabCursor": true,

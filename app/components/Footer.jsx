@@ -446,7 +446,7 @@ export default function Footer() {
                 </Link>
                 - IT Services. All rights reserved.
               </span>
-              <ul className='flex align-items-center justify-content-center flex-wrap rg-15'>
+              <ul className='d-none d-lg-flex align-items-center justify-content-center flex-wrap rg-15'>
                 <li>
                   <Link href='/'>Home</Link>
                 </li>

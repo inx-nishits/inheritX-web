@@ -99,7 +99,7 @@ export default function AboutContent() {
         <div className='tf-container'>
           <div className='page-title-content text-center'>
             <h1 className='title'>About Us</h1>
-            <div className='mb-5'>
+            <div className='mb-2'>
               <Breadcrumbs />
             </div>
 

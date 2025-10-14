@@ -335,7 +335,7 @@ body {
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .page-title .page-title-content {
     padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-bottom: 30px !important;
   }
 }
 
@@ -1407,7 +1407,7 @@ a[href='javascript:;'] {
 
 @media (max-width: 480px) {
   .wg-curve-text {
-    max-width: 160px;
+    /* max-width: 200px; */
   }
 
 }
@@ -2034,6 +2034,7 @@ div .page-title-home.hero-fullscreen {
     height: 360px !important;
     min-height: 360px !important;
   }
+  .section-services .swiper-slide .services-item {text-align: center;}
 }
 
 /* Typing Animation Styles */
@@ -2160,6 +2161,12 @@ div .page-title-home.hero-fullscreen {
     line-height: 1.4em;
     max-width: 86%;
   }
+}
+
+@media (max-width: 1200px) {
+.flex-grow-1 .page-title-home.hero-fullscreen, main .page-title-home.hero-fullscreen, div .page-title-home.hero-fullscreen {
+  padding-bottom: 0px !important;
+}
 }
 
 @media (max-width: 767px) {
