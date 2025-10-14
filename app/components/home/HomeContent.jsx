@@ -1,14 +1,17 @@
 'use client';
-import ContactForm from '../../components/ContactForm'
+import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link'
-import Accordion from '../Accordion'
 import Image from 'next/image';
-import TestimonialSection from '../TestimonialSection';
-import OurPartners from '../OurPartners';
-import OurValuableClients from '../OurValuableClients';
 import TypingAnimation from '../TypingAnimation';
+
+// Below-the-fold heavy sections split into separate chunks (no UI change)
+const Accordion = dynamic(() => import('../Accordion'))
+const ContactForm = dynamic(() => import('../../components/ContactForm'))
+const TestimonialSection = dynamic(() => import('../TestimonialSection'))
+const OurPartners = dynamic(() => import('../OurPartners'))
+const OurValuableClients = dynamic(() => import('../OurValuableClients'))
 
 export default function HomeContent() {
 

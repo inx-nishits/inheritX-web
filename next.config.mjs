@@ -34,6 +34,18 @@ const nextConfig = {
   // Optimize production builds
   productionBrowserSourceMaps: false,
   
+  // Add cache headers for static assets under public/
+  async headers() {
+    return [
+      {
+        source: '/:all*.(svg|jpg|jpeg|png|gif|webp|avif|ico|css|js|woff|woff2)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      }
+    ]
+  },
+
   async redirects () {
     return [
       {

@@ -18,10 +18,17 @@ export default function Breadcrumbs () {
     );
   }
 
-  // Build cumulative hrefs for each segment with dynamic label resolution
-  const crumbs = segments.map((segment, index) => {
-    const href = '/' + segments.slice(0, index + 1).join('/');
+  // For blog module, hide the literal 'category' segment in breadcrumb
+  const filteredSegments = segments.filter((segment, index) => {
     const parent = segments[index - 1] || '';
+    if (parent === 'blog' && segment === 'category') return false;
+    return true;
+  });
+
+  // Build cumulative hrefs for each segment with dynamic label resolution
+  const crumbs = filteredSegments.map((segment, index) => {
+    const href = '/' + filteredSegments.slice(0, index + 1).join('/');
+    const parent = filteredSegments[index - 1] || '';
     return { href, label: resolveLabel(segment, parent) };
   });
 

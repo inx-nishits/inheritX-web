@@ -604,12 +604,11 @@ export default function AboutContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/web-app-development'
+                  <span
                     className='title-service text-primary'
                   >
                     Certified Developers
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -634,12 +633,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/web-app-development'
+                  <span
                     className='title-service text-primary'
                   >
                     Quick Delivery
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -665,12 +663,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/google-cloud-services'
+                  <span
                     className='title-service text-primary'
                   >
                     State-of-the-art Infrastructure
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -697,12 +694,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/web-app-development'
+                  <span
                     className='title-service text-primary'
                   >
                     Competitive Pricing
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -728,12 +724,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/machine-learning-development'
+                  <span
                     className='title-service text-primary'
                   >
                     Domain Expertise
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -759,12 +754,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/web-app-development'
+                  <span
                     className='title-service text-primary'
                   >
                     IT Consultancy
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -791,12 +785,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/mobile-app-development'
+                  <span
                     className='title-service text-primary'
                   >
                     Flexible Development Process
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>
@@ -822,12 +815,11 @@ export default function AboutContent() {
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
-                  <Link
-                    href='/services/google-cloud-services'
+                  <span
                     className='title-service text-primary'
                   >
                     Higher Security
-                  </Link>
+                  </span>
                 </h5>
 
                 <div className='desc lh-30 mb-1'>

@@ -29,6 +29,7 @@ body {
 .wg-cta.tf-spacing-2.alert.alert-dismissible.fade.show {
   border-radius: 0px !important;
 }
+.wg-cta.tf-spacing-2.alert.alert-dismissible.fade.show.mb-0 {margin-bottom: 0px !important;}
 
 /* Prevent horizontal scrolling globally */
 /* html, body global overflow rules intentionally omitted */

@@ -2037,7 +2037,6 @@ a:hover, a:focus {
 }
 
 .tf-btn-readmore {
-  font-family: "Manrope", sans-serif;
   font-size: 14px;
   line-height: 30px;
   font-weight: 500;
@@ -2356,7 +2355,6 @@ fieldset {
   max-width: 91%;
 }
 .form-newsletter .text {
-  font-family: "Manrope", sans-serif;
   color: var(--surface);
 }
 .form-newsletter .text a {
@@ -3510,7 +3508,6 @@ fieldset {
 }
 .testimonial-item .user-testimonial .position {
   display: block;
-  font-family: "Manrope", sans-serif;
 }
 .testimonial-item.style-2 {
   background-color: var(--main-dark);
@@ -4328,7 +4325,6 @@ a.mapboxgl-ctrl-logo {
   font-size: 22px;
   color: var(--primary);
   line-height: 22px;
-  font-family: "Manrope", sans-serif;
 }
 .list-agent .agent.style-border {
   border: 2px solid var(--white);
@@ -4928,7 +4924,7 @@ a.mapboxgl-ctrl-logo {
 .next-prev-item .link {
   color: var(--primary);
   display: inline-block;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 .next-prev-item .link i {
   font-size: 13px;
@@ -5289,6 +5285,7 @@ a.mapboxgl-ctrl-logo {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 .breadkcum .page-breadkcum {
   color: var(--primary);
