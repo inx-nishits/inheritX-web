@@ -2902,8 +2902,8 @@ fieldset {
   margin-bottom: 42px;
 }
 .sidebar-item .title-content {
-  padding-bottom: 26px;
-  margin-bottom: 40px;
+  padding-bottom: 16px;
+  margin-bottom: 30px;
   position: relative;
 }
 .sidebar-item .title-content::before {
@@ -2934,7 +2934,7 @@ fieldset {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .sidebar-item.sidebar-categories .item i {
   font-size: 10px;

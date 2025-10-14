@@ -54,18 +54,54 @@ export default function CategoryDetailsPage() {
         setLoading(true);
         setError(null);
 
-        const res = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblog/1/?category_slug=${categorySlug}`, {
+        // Fetch category-specific data
+        const categoryRes = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblog/1/?category_slug=${categorySlug}`, {
           cache: 'no-store', // Ensure fresh data
           headers: {
             'Accept': 'application/json',
           }
         });
 
-        if (!res.ok) throw new Error('Failed to fetch category data');
-        const json = await res.json();
+        if (!categoryRes.ok) throw new Error('Failed to fetch category data');
+        const categoryJson = await categoryRes.json();
+
+        // Fetch categories with counts from main blog API
+        const categoriesRes = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
+          cache: 'no-store',
+          headers: {
+            'Accept': 'application/json',
+          }
+        });
+        let categoriesWithCounts = [];
+        if (categoriesRes.ok) {
+          const categoriesJson = await categoriesRes.json();
+          categoriesWithCounts = categoriesJson?.categories || [];
+        }
+
+        // Merge the data
+        const mergedData = {
+          ...categoryJson,
+          categories: categoriesWithCounts
+        };
+
+        // Debug: Log the merged data
+        console.log('Category data:', mergedData);
+        console.log('Category data categories with counts:', mergedData?.categories);
+        if (mergedData?.categories?.length > 0) {
+            console.log('First category object:', mergedData.categories[0]);
+            console.log('Available properties:', Object.keys(mergedData.categories[0]));
+            console.log('Count values:', {
+                count: mergedData.categories[0].count,
+                post_count: mergedData.categories[0].post_count,
+                total_posts: mergedData.categories[0].total_posts,
+                posts_count: mergedData.categories[0].posts_count,
+                total: mergedData.categories[0].total,
+                postCount: mergedData.categories[0].postCount
+            });
+        }
 
         if (isMounted) {
-          setCategoryData(json);
+          setCategoryData(mergedData);
           setLoading(false);
         }
       } catch (err) {
@@ -260,13 +296,14 @@ export default function CategoryDetailsPage() {
         .sidebar-categories .item {
           display: flex;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: space-between;
           padding: 8px 0;
         }
         
         .sidebar-categories .item a {
-          flex: 1;
-          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
         }
 
         /* Blog item height and author styling */
@@ -355,8 +392,10 @@ export default function CategoryDetailsPage() {
         .skeleton-image {
           display: block;
           width: 100%;
-          height: 220px;
-          border-radius: 8px;
+          aspect-ratio: 4/2;
+          margin: 15px 15px 0;
+          min-height: inherit;
+          height: initial !important;
         }
         .skeleton-text {
           height: 16px;
@@ -376,12 +415,14 @@ export default function CategoryDetailsPage() {
           width: 60%;
           border-radius: 4px;
           background: #2a2a2a;
+          display: inline-block; /* align like category link */
         }
         .skeleton-count {
           width: 30px;     
           height: 30px;     
           border-radius: 9999px;  
           background: #2a2a2a;
+          margin-left: auto; /* mirror real count alignment */
         }
         .skeleton-title {
           height: 44px;
@@ -389,6 +430,12 @@ export default function CategoryDetailsPage() {
           border-radius: 6px;
           background: #2a2a2a;
           display: inline-block;
+          text-align: left;
+        }
+        
+        /* Override text-center for skeleton title */
+        .page-title-content.text-center .skeleton-title {
+          text-align: left !important;
         }
         .skeleton-breadcrumb {
           height: 14px;
@@ -404,6 +451,39 @@ export default function CategoryDetailsPage() {
           background: #2a2a2a;
           display: inline-block;
         }
+        
+        /* Ensure skeleton items have same styling as actual posts */
+        .fl-item .skeleton {
+          background: #2a2a2a;
+        }
+        
+        .fl-item .skeleton::after {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+        }
+        
+        /* Make sure skeleton images maintain aspect ratio properly */
+        .skeleton .skeleton-image {
+          background: #2a2a2a;
+          min-height: 150px;
+        }
+        
+        /* Ensure skeleton image container matches actual image container */
+        .skeleton.image {
+          margin: 15px 15px 0;
+          min-height: inherit;
+          height: initial !important;
+        }
+        
+        /* Ensure skeleton post grid matches actual styling */
+        .skeleton .tf-post-grid {
+          background-color: var(--dark-2);
+          border: 1px solid var(--stroke-2);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+        }
+        
       `}</style>
 
       {/* <!-- Page-title --> */}
@@ -412,15 +492,15 @@ export default function CategoryDetailsPage() {
           <div className="page-title-content text-center">
             {showSkeleton ? (
               <>
-                <h1 className="title ml-11 split-text effect-right">
+                <h1 className="title">
                   <span className="skeleton skeleton-title"></span>
                 </h1>
                 <div className="breadkcum mb-5">
-                  <span className="link-breadkcum body-2 fw-7 split-text effect-right skeleton-breadcrumb skeleton"></span>
+                  <span className="link-breadkcum body-2 fw-7 skeleton-breadcrumb skeleton"></span>
                   {/* <span className="dot"></span> */}
-                  <span className="link-breadkcum body-2 fw-7 split-text effect-right skeleton-breadcrumb skeleton" style={{ width: 80 }}></span>
+                  <span className="link-breadkcum body-2 fw-7 skeleton-breadcrumb skeleton" style={{ width: 80 }}></span>
                   {/* <span className="dot"></span> */}
-                  <span className="page-breadkcum body-2 fw-7 split-text effect-right skeleton-breadcrumb skeleton" style={{ width: 140 }}></span>
+                  <span className="page-breadkcum body-2 fw-7 skeleton-breadcrumb skeleton" style={{ width: 140 }}></span>
                 </div>
                 <p className='pt-4'>
                   <span className="skeleton skeleton-text" style={{ width: '70%' }}></span>
@@ -428,7 +508,7 @@ export default function CategoryDetailsPage() {
               </>
             ) : (
               <>
-                <h1 className="title ml-11 split-text effect-right">
+                <h1 className="title">
                   {categoryData?.categoryName || 'Category'}
                 </h1>
                 <div className="breadkcum mb-5">
@@ -514,22 +594,26 @@ export default function CategoryDetailsPage() {
 
                   {showSkeleton && (
                     Array.from({ length: 5 }).map((_, idx) => (
-                      <div className="swiper-slide" key={`popular-skeleton-${idx}`}>
+                      <div className="fl-item" key={`category-skeleton-${idx}`}>
                         <div className="tf-post-grid hover-image">
                           <div className="top">
                             <a className="image skeleton">
                               <div className="skeleton-image"></div>
                             </a>
-                            <div className="post-content px-md-15">
+                            <div className="post-content" style={{ padding: '24px' }}>
                               <p className="title lh-32">
-                                <span className="skeleton skeleton-text"></span>
+                                <span className="skeleton skeleton-text" style={{ width: '90%', marginBottom: '8px', display: 'block' }}></span>
+                                <span className="skeleton skeleton-text" style={{ width: '75%', marginBottom: '8px', display: 'block' }}></span>
+                                <span className="skeleton skeleton-text" style={{ width: '60%', display: 'block' }}></span>
                               </p>
                             </div>
                           </div>
-                          <div className="bottom-item px-md-15">
+                          <div className="bottom-item" style={{ padding: '25px 50px 22px', borderTop: '1px solid var(--stroke-2)', display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <div className="author-info">
                               <span className="skeleton-avatar skeleton"></span>
-                              <span className="skeleton skeleton-name" style={{ marginLeft: 8 }}></span>
+                              <span className="skeleton skeleton-name" style={{ marginLeft: 8, width: '80px' }}></span>
+                              <span className="skeleton skeleton-text" style={{ marginLeft: 8, width: '60px' }}></span>
+                              <span className="skeleton skeleton-text" style={{ marginLeft: 8, width: '100px' }}></span>
                             </div>
                           </div>
                         </div>
@@ -549,8 +633,8 @@ export default function CategoryDetailsPage() {
                       {(categoryData?.categories || []).map((cat) => (
                         <li className="item" key={cat.id}>
                           <i className="icon-arrow-right"></i>
-                          <Link href={`/blog/category/${cat.slug}`} className="body-2 fw-5">{cat.name}</Link>
-                          {/* <span className="category-count">{cat.count || 0}</span> */}
+                          <Link href={`/blog/category/${cat.slug}`} className="fs-4 fw-5">{cat.name}</Link>
+                          <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                         </li>
                       ))}
                       {showSkeleton && (!categoryData?.categories || categoryData?.categories?.length === 0) && (
@@ -559,7 +643,7 @@ export default function CategoryDetailsPage() {
                             <li className="item" key={`cat-skeleton-${idx}`}>
                               <i className="icon-arrow-right"></i>
                               <span className="skeleton skeleton-cat"></span>
-                              <span className=""></span>
+                              <span className="skeleton skeleton-count"></span>
                             </li>
                           ))}
                         </>
@@ -599,12 +683,12 @@ export default function CategoryDetailsPage() {
                       <i className="icon-arrow-right"></i>
                       <Link
                         href={`/blog/category/${cat.slug}`}
-                        className="body-2 fw-5"
+                        className="fs-4 fw-5"
                         onClick={closeCategorySidebar}
                       >
                         {cat.name}
                       </Link>
-                      <span className="category-count">{cat.count || 0}</span>
+                      <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                     </li>
                   ))}
                   {showSkeleton && (!categoryData?.categories || categoryData?.categories?.length === 0) && (

@@ -63,6 +63,7 @@ export default function BlogListPage() {
                 if (!res.ok) throw new Error('Failed to fetch blog data');
                 const json = await res.json();
 
+
                 if (isMounted) {
                     setBlogData(json);
                     setLoading(false);
@@ -266,13 +267,14 @@ export default function BlogListPage() {
         .sidebar-categories .item {
           display: flex;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: space-between;
           padding: 8px 0;
         }
         
         .sidebar-categories .item a {
-          flex: 1;
-          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
         }
         
         /* Custom pagination dots for Most Popular section */
@@ -600,7 +602,7 @@ export default function BlogListPage() {
         .skeleton-image {
           display: block;
           width: 100%;
-          aspect-ratio: 4 / 3; /* match BlogImage aspectRatio */
+          aspect-ratio: 4 / 2; /* match BlogImage aspectRatio */
           height: auto;
           min-height: 220px; /* preserve space similar to images */
           border-radius: 8px;
@@ -651,13 +653,13 @@ export default function BlogListPage() {
             <div className="page-title">
                 <div className="tf-container">
                     <div className="page-title-content text-center">
-                        <h1 className="title ml-11 split-text effect-right">
+                        <h1 className="title">
                             Blog
                         </h1>
                         <div className="breadkcum mb-5">
-                            <Link href="/" className="link-breadkcum body-2 fw-7 split-text effect-right">Home</Link>
+                            <Link href="/" className="link-breadkcum body-2 fw-7">Home</Link>
                             <span className="dot"></span>
-                            <span className="page-breadkcum body-2 fw-7 split-text effect-right"> Blog</span>
+                            <span className="page-breadkcum body-2 fw-7"> Blog</span>
                         </div>
 
                         <p className='pt-4'>Expert Speak on Trending Topics</p>
@@ -676,7 +678,7 @@ export default function BlogListPage() {
                             {/* Category Toggle Button - Only visible on mobile/tablet */}
                             <div className="col-12 d-xl-none mb-0">
                                 <div className="d-flex justify-content-end">
-                                    <button 
+                                    <button
                                         className="tf-btn category-toggle-btn px-3 py-4"
                                         onClick={openCategorySidebar}
                                         aria-label="Open categories"
@@ -686,7 +688,7 @@ export default function BlogListPage() {
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <div className="col-xl-8">
 
                                 <div className="tf-grid-2 loadmore-item">
@@ -695,7 +697,7 @@ export default function BlogListPage() {
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
                                                     <div className="post-content px-md-15">
-                                                    <p className="title lh-32">{error}</p>
+                                                        <p className="title lh-32">{error}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -802,8 +804,8 @@ export default function BlogListPage() {
                                             {(blogData?.categories || []).map((cat) => (
                                                 <li className="item" key={cat.id}>
                                                     <i className="icon-arrow-right"></i>
-                                                    <Link href={`/blog/category/${cat.slug}`} className="body-2 fw-5">{cat.name}</Link>
-                                                    <span className="category-count">{cat.count || 0}</span>
+                                                    <Link href={`/blog/category/${cat.slug}`} className="fs-4 fw-5">{cat.name}</Link>
+                                                    <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                                                 </li>
                                             ))}
                                             {showSkeleton && (!blogData?.categories || blogData?.categories?.length === 0) && (
@@ -1087,14 +1089,14 @@ export default function BlogListPage() {
             {/* Category Sidebar Overlay and Sidebar */}
             {isCategorySidebarOpen && (
                 <>
-                    <div 
+                    <div
                         className={`category-sidebar-overlay ${isCategorySidebarOpen ? 'active' : ''}`}
                         onClick={handleOverlayClick}
                     />
                     <div className={`category-sidebar ${isCategorySidebarOpen ? 'active' : ''}`}>
                         <div className="category-sidebar-header">
                             <div className="category-sidebar-title">Categories</div>
-                            <button 
+                            <button
                                 className="category-sidebar-close"
                                 onClick={closeCategorySidebar}
                                 aria-label="Close categories"
@@ -1108,14 +1110,14 @@ export default function BlogListPage() {
                                     {(blogData?.categories || []).map((cat) => (
                                         <li className="item" key={cat.id}>
                                             <i className="icon-arrow-right"></i>
-                                            <Link 
-                                                href={`/blog/category/${cat.slug}`} 
-                                                className="body-2 fw-5"
+                                            <Link
+                                                href={`/blog/category/${cat.slug}`}
+                                                className="fs-4 fw-5"
                                                 onClick={closeCategorySidebar}
                                             >
                                                 {cat.name}
                                             </Link>
-                                            <span className="category-count">{cat.count || 0}</span>
+                                            <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                                         </li>
                                     ))}
                                     {showSkeleton && (!blogData?.categories || blogData?.categories?.length === 0) && (

@@ -584,7 +584,7 @@ export default function ServiceDetails({ params }) {
                     <a
                       href={`#faq${index}`}
                       data-bs-toggle="collapse"
-                      className={`title-according ${index === 0 ? '' : 'collapsed'} body-2 fw-5`}
+                      className={`title-according ${index === 0 ? '' : 'collapsed'} fs-4 fw-5`}
                     >
                       {faq.q}<i className="icon-arrow-right"></i>
                     </a>

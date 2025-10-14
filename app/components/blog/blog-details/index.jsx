@@ -38,11 +38,41 @@ export default function BlogDetailsPage({ params }) {
     async function loadDetails() {
       try {
         if (!slug) return;
-        const res = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
-        if (!res.ok) throw new Error('Failed to fetch blog details');
-        const json = await res.json();
+        
+        // Fetch blog details
+        const detailsRes = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
+        if (!detailsRes.ok) throw new Error('Failed to fetch blog details');
+        const detailsJson = await detailsRes.json();
+        
+        // Fetch categories with counts from main blog API
+        const categoriesRes = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
+          cache: 'no-store',
+          headers: {
+            'Accept': 'application/json',
+          }
+        });
+        let categoriesWithCounts = [];
+        if (categoriesRes.ok) {
+          const categoriesJson = await categoriesRes.json();
+          categoriesWithCounts = categoriesJson?.categories || [];
+        }
+        
+        // Merge the data
+        const mergedData = {
+          ...detailsJson,
+          categories: categoriesWithCounts
+        };
+        
+        // Debug: Log the merged data
+        console.log('Blog details data:', mergedData);
+        console.log('Blog details categories with counts:', mergedData?.categories);
+        if (mergedData?.categories?.length > 0) {
+            console.log('First category object:', mergedData.categories[0]);
+            console.log('Available properties:', Object.keys(mergedData.categories[0]));
+        }
+        
         if (isMounted) {
-          setDetails(json || null);
+          setDetails(mergedData || null);
           setLoading(false);
         }
       } catch (e) {
@@ -81,9 +111,9 @@ export default function BlogDetailsPage({ params }) {
           line-height: 1;
           box-sizing: border-box;
         }
-        .sidebar-categories .item { display: flex; align-items: center; justify-content: flex-start; padding: 8px 0; }
-        .sidebar-categories .item a { flex: 1; margin-right: 10px; }
-        .sidebar-categories .item .item-link { display: flex; align-items: center; justify-content: flex-start; width: 100%; }
+        .sidebar-categories .item { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+        .sidebar-categories .item a { display: flex; align-items: center; gap: 8px; }
+        .sidebar-categories .item .item-link { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 
         /* Hide sidebar on mobile and tablet, show category toggle button */
         @media (max-width: 1199.98px) {
@@ -237,6 +267,20 @@ export default function BlogDetailsPage({ params }) {
         .skeleton-title { height: 50px; width: 100%; border-radius: 8px; }
         .skeleton-post-title { height: 28px; width: 100%; border-radius: 8px; }
         .skeleton-meta { height: 16px; width: 30%; border-radius: 6px; }
+        .skeleton-cat {
+          height: 14px;
+          width: 60%;
+          border-radius: 4px;
+          background: #2a2a2a;
+          display: inline-block; /* align like category link */
+        }
+        .skeleton-count {
+          width: 30px;     
+          height: 30px;     
+          border-radius: 9999px;  
+          background: #2a2a2a;
+          margin-left: auto; /* mirror real count alignment */
+        }
       `}</style>
       {showSkeleton ? (
         //  <div className="page-title-home">
@@ -319,24 +363,22 @@ export default function BlogDetailsPage({ params }) {
 
                 <div className="sidebar-item sidebar-content sidebar-categories mb-40">
                   <div className="title-content fw-5">
-                    Category
+                    All Categories
                   </div>
                   <ul className="list">
                     {!showSkeleton && (details?.categories || []).map((cat) => (
                       <li className="item" key={cat.id}>
-                        <Link href={`/blog/category/${cat.slug}`} className="item-link body-2 fw-5">
-                          <span className="flex align-items-center" style={{ gap: 8 }}>
-                            <i className="icon-arrow-right"></i>
-                            <span>{cat.name}</span>
-                          </span>
-                          {/* <span className="category-count">{cat.count}</span> */}
-                        </Link>
+                        <i className="icon-arrow-right"></i>
+                        <Link href={`/blog/category/${cat.slug}`} className="fs-4 fw-5">{cat.name}</Link>
+                        <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                       </li>
                     ))}
                     {showSkeleton && (
                       Array.from({ length: 8 }).map((_, i) => (
                         <li className="item" key={`cat-skel-${i}`}>
-                          <span className="skeleton skeleton-text medium" style={{ display: 'block' }}></span>
+                          <i className="icon-arrow-right"></i>
+                          <span className="skeleton skeleton-cat"></span>
+                          <span className="skeleton skeleton-count"></span>
                         </li>
                       ))
                     )}
@@ -377,12 +419,12 @@ export default function BlogDetailsPage({ params }) {
                       <i className="icon-arrow-right"></i>
                       <Link 
                         href={`/blog/category/${cat.slug}`} 
-                        className="body-2 fw-5"
+                        className="fs-4 fw-5"
                         onClick={closeCategorySidebar}
                       >
                         {cat.name}
                       </Link>
-                      <span className="category-count">{cat.count || 0}</span>
+                      <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                     </li>
                   ))}
                   {showSkeleton && (!details?.categories || details?.categories?.length === 0) && (
