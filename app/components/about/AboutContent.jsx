@@ -1,9 +1,12 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import Breadcrumbs from '../Breadcrumbs'
 import LifeAtInheritX from '../LifeAtInheritX'
+
+const Accordion = dynamic(() => import('../Accordion'))
 
 export default function AboutContent() {
   const journeyRef = useRef(null)
@@ -456,63 +459,7 @@ export default function AboutContent() {
                     Marketing solutions.
                   </h2>
                 </div>
-                <div className='wg-according' id='According1'>
-                  <div className='according-item'>
-                    <h5 className='fw-5'>
-                      <a
-                        href='#according1'
-                        data-bs-toggle='collapse'
-                        className='title-according'
-                      >
-                        Learn Our Company Mission<span></span>
-                      </a>
-                    </h5>
-                    <div
-                      id='according1'
-                      className='collapse'
-                      data-bs-parent='#According1'
-                    >
-                      <div className='according-content'>
-                        <div className='right'>
-                          <div className='desc mb-1'>
-                            Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
-                          </div>
-                          <div className='desc mb-2'>
-                            We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='according-item'>
-                    <h5 className='fw-5'>
-                      <a
-                        href='#according2'
-                        data-bs-toggle='collapse'
-                        className='title-according collapsed'
-                      >
-                        Our Company Vision<span></span>
-                      </a>
-                    </h5>
-                    <div
-                      id='according2'
-                      className='collapse'
-                      data-bs-parent='#According1'
-                    >
-                      <div className='according-content'>
-                        <div className='right'>
-                          <div className='desc mb-1'>
-                            To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
-                          </div>
-
-                          <div className='desc mb-2'>
-                            We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Accordion />
               </div>
               <div className='right-section w-100'>
                 <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image'>
