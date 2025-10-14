@@ -921,7 +921,7 @@ a:hover, a:focus {
 /* sib-form */
 .sib-form {
   padding: 0;
-  font-family: "Inter", sans-serif !important;
+  /* font-family: "Inter", sans-serif !important; */
   box-sizing: border-box !important;
 }
 
@@ -1063,11 +1063,11 @@ a:hover, a:focus {
 }
 .top-bar-item a {
   font-weight: 500;
-  font-family: "Inter", sans-serif !important;
+  /* font-family: "Inter", sans-serif !important; */
   font-size: 14px;
 }
 .top-bar-item .icon-email {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .list-support {
@@ -1803,6 +1803,8 @@ a:hover, a:focus {
 
 .flat-animate-tab {
   overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .tab-content {
@@ -6109,7 +6111,7 @@ a.mapboxgl-ctrl-logo {
   .section-company .section-company-inner .left-section {
     padding-top: 0;
     padding-right: 0;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
   .counter-item .fs-65 {
     font-size: 40px !important;
@@ -6158,7 +6160,7 @@ a.mapboxgl-ctrl-logo {
   }
   .page-title .page-title-content {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   .tf-spacing-1 {
     padding-top: 60px;
@@ -6521,6 +6523,7 @@ a.mapboxgl-ctrl-logo {
   }
   .section-counting .image {
     height: 316px;
+    min-height: 316px !important;
   }
   .section-counting .wg-counter {
     flex-direction: column;
@@ -6567,6 +6570,10 @@ a.mapboxgl-ctrl-logo {
     margin-left: 15px !important;
     margin-right: 15px !important;
   }
+
+  .breadkcum {
+    margin-bottom: 20px;
+}
 }
 /* Custom CSS */
 .text-primary {

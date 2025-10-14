@@ -8,7 +8,7 @@ const menuData = [
     type: 'link'
   },
   {
-    label: 'Solutions',
+    label: 'Services',
     href: '/services',
     type: 'mega',
     columns: [

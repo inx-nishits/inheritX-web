@@ -434,7 +434,7 @@ export default function HomeContent() {
                 </div>
                 <div className='box-logo tf-animate-2'>
                   <Image
-                    src='/image/logo/logo-icon.svg' alt=''
+                    src='/image/logo/logo-icon-white.svg' alt=''
                     width={50}
                     height={50}
                   />
@@ -490,7 +490,7 @@ export default function HomeContent() {
                 </div>
               </div>
               <div className='right'>
-                <div className='heading-section mb-3 mb-xl-5'>
+                <div className='heading-section mb-5 mb-xl-5'>
                   <div className='sub-title body-2 fw-7 mb-17 '>
                     Explore Our
                     <span className='text-primary'>&nbsp;Achievement</span>

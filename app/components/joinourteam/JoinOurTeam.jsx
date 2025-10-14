@@ -670,7 +670,7 @@ export default function JoinOurTeam() {
                   />
                 </div>
                 <div className='box-logo tf-animate-2'>
-                  <Image src='/image/logo/logo-icon.svg' alt='InheritX Logo' width={50} height={50} />
+                  <Image src='/image/logo/logo-icon-white.svg' alt='InheritX Logo' width={50} height={50} />
                   <h4 className='title'>InheritX</h4>
                 </div>
                 <div className='box-avatar tf-animate-3'>
@@ -994,7 +994,7 @@ export default function JoinOurTeam() {
               </div>
             </div>
 
-            <div className='tf-container'>
+            <div className='container'>
               <div className='row rg-30'>
                 {careersLoading && (
                   <div className='col-12'>

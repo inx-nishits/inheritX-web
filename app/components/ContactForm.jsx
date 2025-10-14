@@ -337,7 +337,7 @@ export default function ContactForm({
         </label>
       </div>
 
-      <button type='submit' className='tf-btn mx-auto' disabled={isSubmitting}>
+      <button type='submit' className='tf-btn mx-auto w-100 w-md-100' disabled={isSubmitting}>
         <span>{isSubmitting ? 'Sending...' : submitText}</span>
         <i className='icon-arrow-right'></i>
       </button>

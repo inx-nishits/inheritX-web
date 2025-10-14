@@ -2646,6 +2646,10 @@ div .page-title-home.hero-fullscreen {
     font-size: 24px;
     line-height: 30px;
 }
+
+.flex-grow-1 .page-title-home.hero-fullscreen, main .page-title-home.hero-fullscreen, div .page-title-home.hero-fullscreen {
+  padding-bottom: 5px !important;
+}
 }
 
 /* About section full width below 1024px */

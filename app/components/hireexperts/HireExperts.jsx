@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import OurPlatforms from "../OurPlatforms";
 
 // Mapping platform titles to service categories
 const platformServiceMapping = {
@@ -167,7 +168,7 @@ export default function HireExpertContent() {
           </div>
 
           <div className='tf-container'>
-            <h3 className='text-center p-2 lh-40 mb-5'>
+            <h3 className='text-center p-2 mb-5'>
               Whether it is a DRE (Dedicated Resource Engagement), T&M (Time and
               Material), or a Fixed Price model, our flexible engagement models
               come with these four key characteristics.
@@ -198,7 +199,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Collaboration</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   We tend to collaborate with various teams of the client's
                   company to come up with the most suitable solutions in the web
                   and mobility domains
@@ -229,7 +230,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>App Maintenance</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   We provide regular updates, performance optimization, and bug fixes to ensure your app runs smoothly, securely, and efficiently across all devices.
                 </div>
               </div>
@@ -259,7 +260,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>App Platform Migration Service
                   </h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Seamlessly migrate your app across platforms or technologies with zero data loss, ensuring enhanced performance, scalability, and compatibility.
                 </div>
               </div>
@@ -288,7 +289,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Mobile App Marketing</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Boost your app’s visibility and downloads with our targeted marketing strategies, including ASO, social campaigns, and user engagement optimization.
                 </div>
               </div>
@@ -317,7 +318,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Transparency</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   By implementing the best methods for ensuring the safety of the
                   client's data and signing NDAs, we provide the highest level of
                   transparency
@@ -348,7 +349,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Communication</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Our dedicated and experienced developers can communicate
                   easily and effectively to understand all your requirements and
                   market trends
@@ -379,7 +380,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Trust</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Since inception, we have never compromised on the quality and
                   performance of our solutions to gain the trust of our global
                   corporate clientele
@@ -410,7 +411,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>24/7 Technical Assistance</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Our expert team provides round-the-clock technical assistance,
                   ensuring your systems run smoothly, problems are resolved
                   promptly, and business operations remain uninterrupted at all
@@ -442,7 +443,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Maintenance and Upgrade</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   We offer comprehensive maintenance and upgrades, keeping your
                   software and systems updated, optimized, and fully secure,
                   ensuring peak performance and reliability for your business.
@@ -473,7 +474,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Migration</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Our seamless migration services safely transfer your data and
                   systems to new platforms, minimizing downtime, reducing risks,
                   and ensuring a smooth transition for your business.
@@ -504,7 +505,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Digital Marketing and SEO</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   We provide effective digital marketing and SEO strategies to
                   enhance your online presence, drive targeted traffic, and
                   maximize conversions for sustainable business growth
@@ -535,7 +536,7 @@ export default function HireExpertContent() {
                 <h5 className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Migration Service</h3>
                 </h5>
-                <div className='desc lh-30 fs-3'>
+                <div className='desc lh-30 fs-3 mb-2'>
                   Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize their infrastructure and optimize performance seamlessly.
                 </div>
               </div>
@@ -569,364 +570,7 @@ export default function HireExpertContent() {
         </div>
 
 
-        <section className='section-services p-services tf-spacing-2'>
-          <div className='top-section'>
-            <div className='tf-marquee'>
-              <div className='marquee-wrapper'>
-                <div className='initial-child-container'>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='tf-container'>
-            <div className='row'>
-              <div className='col-12'>
-                <div className='heading-section mb-3 mb-xl-5 text-center'>
-                  <h2 className='title fw-6  mb-5'>
-                    Our <span className='text-primary'>Platforms</span>
-                  </h2>
-                  <p className='clearfix'>
-                    InheritX provides Web App Development Services in PHP,
-                    ASP.NET, AngularJS, Node.js and UI/UX Design.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className='list-services flex flex-wrap'>
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/apple.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["iOS Development"]}`} className='title-service text-primary text-decoration-none'>
-                    iOS Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/android.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["Android Development"]}`} className='title-service text-primary text-decoration-none'>
-                    Android Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/flutter.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["Flutter Development"]}`} className='title-service text-primary text-decoration-none'>
-                    Flutter Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/react.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["React Native Development"]}`} className='title-service text-primary text-decoration-none'>
-                    React Native Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/angular.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["AngularJS Development"]}`} className='title-service text-primary text-decoration-none'>
-                    AngularJS Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/angular.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["Python Development"]}`} className='title-service text-primary text-decoration-none'>
-                    Python Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/angular.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["NextJS Development"]}`} className='title-service text-primary text-decoration-none'>
-                    NextJS Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/angular.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["Laravel Development"]}`} className='title-service text-primary text-decoration-none'>
-                    Laravel Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/react.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["ReactJS Development"]}`} className='title-service text-primary text-decoration-none'>
-                    ReactJS Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/node.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["Node.js Development"]}`} className='title-service text-primary text-decoration-none'>
-                    Node.js Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/php.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["PHP Development"]}`} className='title-service text-primary text-decoration-none'>
-                    PHP Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/pwa.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["AWS Services"]}`} className='title-service text-primary text-decoration-none'>
-                    AWS Services
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/IOT.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["IOT Development"]}`} className='title-service text-primary text-decoration-none'>
-                    IOT Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/pwa.png'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["PWA Development"]}`} className='title-service text-primary text-decoration-none'>
-                    PWA Development
-                  </Link>
-                </h5>
-              </div>
-
-              <div className='services-item px-lg-15 col-md-4 no-img'>
-                <div
-                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                  style={{ width: '100px', height: '100px' }}
-                >
-                  <img
-                    src='image/services-icon/digitalmarketing.svg'
-                    alt=''
-                    className='lazyload img-fluid'
-                    style={{ maxWidth: '80px' }}
-                  />
-                </div>
-
-                <h5 className='lh-30 fw-6'>
-                  <Link href={`/services/${platformServiceMapping["Digital Marketing"]}`} className='title-service text-primary text-decoration-none'>
-                    Digital Marketing
-                  </Link>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </section>
+        <OurPlatforms />
       </div>
     </>
   )
