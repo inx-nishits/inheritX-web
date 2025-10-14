@@ -74,6 +74,13 @@ export default function ContactForm({
     return digitsOnly.length >= 7 && digitsOnly.length <= 15
   }
 
+  // Allow only alphabetic characters and spaces
+  const isAlphaSpace = (raw) => {
+    const value = (raw || '').trim()
+    if (!value) return false
+    return /^[A-Za-z\s]+$/.test(value)
+  }
+
   // Field-level validation for real-time feedback on blur/change
   const validateField = (fieldId, rawValue) => {
     const value = (rawValue ?? '').trim()
@@ -82,7 +89,9 @@ export default function ContactForm({
       const set = (key, message) => { if (message) next[key] = message; else delete next[key] }
       switch (fieldId) {
         case 'name':
-          set('name', value ? '' : 'Name is required')
+          if (!value) set('name', 'Name is required')
+          else if (!isAlphaSpace(value)) set('name', 'Only letters and spaces allowed')
+          else set('name', '')
           break
         case 'mail':
           if (!value) set('mail', 'Email is required')
@@ -90,7 +99,9 @@ export default function ContactForm({
           else set('mail', '')
           break
         case 'country':
-          set('country', value ? '' : 'Country is required')
+          if (!value) set('country', 'Country is required')
+          else if (!isAlphaSpace(value)) set('country', 'Only letters and spaces allowed')
+          else set('country', '')
           break
         case 'phone':
           if (!value) set('phone', 'Phone is required')
@@ -117,7 +128,12 @@ export default function ContactForm({
   }
 
   const handleChange = (e) => {
-    const { id, value } = e.target
+    const { id } = e.target
+    // sanitize in-place for alpha-only fields
+    if (id === 'name' || id === 'country') {
+      e.target.value = (e.target.value || '').replace(/[^A-Za-z\s]/g, '')
+    }
+    const value = e.target.value
     if (!id) return
     validateField(id, value)
   }
@@ -132,9 +148,11 @@ export default function ContactForm({
     const details = form.querySelector('#message')?.value?.trim() || ''
 
     if (!name) newErrors.name = 'Name is required'
+    else if (!isAlphaSpace(name)) newErrors.name = 'Only letters and spaces allowed'
     if (!email) newErrors.mail = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(email)) newErrors.mail = 'Email is invalid'
     if (!country) newErrors.country = 'Country is required'
+    else if (!isAlphaSpace(country)) newErrors.country = 'Only letters and spaces allowed'
     if (!phone) newErrors.phone = 'Phone is required'
     else if (!isValidPhone(phone)) newErrors.phone = 'Phone must be 7-15 digits'
     if (!projectType) newErrors.projectType = 'Project type is required'
