@@ -1,10 +1,16 @@
 import Link from 'next/link'
 
-export default function PortfolioItem({ item }) {
+export default function PortfolioItem({ item, category }) {
+  const getCategoryParam = () => {
+    if (category === 'web') return '?category=web'
+    if (category === 'mobile') return '?category=mobile'
+    return ''
+  }
+
   return (
     <div className='col-sm-6 col-md-4 col-lg-3'>
       <div className='project-gird-item project-item'>
-        <Link href={`/porfolio-details/${item.slug}`} className='image w-100 rounded-4 overflow-hidden'>
+        <Link href={`/porfolio-details/${item.slug}${getCategoryParam()}`} className='image w-100 rounded-4 overflow-hidden'>
           <img 
             src={item.thumb} 
             data-src={item.thumb} 
@@ -13,9 +19,9 @@ export default function PortfolioItem({ item }) {
           />
         </Link>
         <div className='item-content'>
-          <h3 className='title-project'>
-            <Link href={`/porfolio-details/${item.slug}`}>{item.title}</Link>
-          </h3>
+          <h4 className='title-project'>
+            <Link href={`/porfolio-details/${item.slug}${getCategoryParam()}`}>{item.title}</Link>
+          </h4>
           <div className='project-meta-clean'>
             <div className='meta-line'>
               <i className='meta-icon icon-star'></i>

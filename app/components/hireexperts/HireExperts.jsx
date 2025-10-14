@@ -1,4 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
+
+// Mapping platform titles to service categories
+const platformServiceMapping = {
+  "iOS Development": "iphone-app-development",
+  "Android Development": "android-app-development", 
+  "Flutter Development": "flutter-app-development",
+  "React Native Development": "react-native-app-development",
+  "AngularJS Development": "angularjs-development",
+  "Python Development": "python-development",
+  "NextJS Development": "nextjs-development",
+  "Laravel Development": "laravel-development",
+  "ReactJS Development": "reactjs-development",
+  "Node.js Development": "nodejs-development",
+  "PHP Development": "php-development",
+  "AWS Services": "aws-services",
+  "IOT Development": "iot-development",
+  "PWA Development": "pwa-development",
+  "Digital Marketing": "seo-services"
+};
 
 export default function HireExpertContent() {
   return (
@@ -8,12 +28,12 @@ export default function HireExpertContent() {
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>Hire Experts</h1>
             <div className='breadkcum'>
-              <a
-                href='index.html'
+              <Link
+                href='/'
                 className='link-breadkcum body-2 fw-7 split-text effect-right'
               >
                 Home
-              </a>
+              </Link>
               <span className='dot'></span>
               <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
                 Hire Experts
@@ -619,9 +639,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["iOS Development"]}`} className='title-service text-primary text-decoration-none'>
                     iOS Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -639,9 +659,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["Android Development"]}`} className='title-service text-primary text-decoration-none'>
                     Android Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -659,9 +679,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["Flutter Development"]}`} className='title-service text-primary text-decoration-none'>
                     Flutter Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -679,9 +699,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["React Native Development"]}`} className='title-service text-primary text-decoration-none'>
                     React Native Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -699,9 +719,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["AngularJS Development"]}`} className='title-service text-primary text-decoration-none'>
                     AngularJS Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -719,9 +739,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["Python Development"]}`} className='title-service text-primary text-decoration-none'>
                     Python Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -739,9 +759,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["NextJS Development"]}`} className='title-service text-primary text-decoration-none'>
                     NextJS Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -759,9 +779,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["Laravel Development"]}`} className='title-service text-primary text-decoration-none'>
                     Laravel Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -779,9 +799,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["ReactJS Development"]}`} className='title-service text-primary text-decoration-none'>
                     ReactJS Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -799,9 +819,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["Node.js Development"]}`} className='title-service text-primary text-decoration-none'>
                     Node.js Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -819,9 +839,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["PHP Development"]}`} className='title-service text-primary text-decoration-none'>
                     PHP Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -839,9 +859,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["AWS Services"]}`} className='title-service text-primary text-decoration-none'>
                     AWS Services
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -859,9 +879,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["IOT Development"]}`} className='title-service text-primary text-decoration-none'>
                     IOT Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -879,9 +899,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["PWA Development"]}`} className='title-service text-primary text-decoration-none'>
                     PWA Development
-                  </span>
+                  </Link>
                 </h5>
               </div>
 
@@ -899,9 +919,9 @@ export default function HireExpertContent() {
                 </div>
 
                 <h5 className='lh-30 fw-6'>
-                  <span className='title-service text-primary'>
+                  <Link href={`/services/${platformServiceMapping["Digital Marketing"]}`} className='title-service text-primary text-decoration-none'>
                     Digital Marketing
-                  </span>
+                  </Link>
                 </h5>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import PageTitle from '../components/PageTitle'
 import Link from 'next/link'
 import dynamicImport from 'next/dynamic'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const ContactForm = dynamicImport(() => import('../components/ContactForm'), { ssr: false })
 
@@ -15,18 +16,7 @@ export default function Page() {
         <div className='tf-container'>
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>Contact Us</h1>
-            <div className='breadkcum'>
-              <Link
-                href='/'
-                className='link-breadkcum body-2 fw-7 split-text effect-right'
-              >
-                Home
-              </Link>
-              <span className='dot'></span>
-              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
-                Contact Us
-              </span>
-            </div>
+            <Breadcrumbs />
           </div>
         </div>
       </div>

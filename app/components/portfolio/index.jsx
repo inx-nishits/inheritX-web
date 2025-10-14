@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { fetchPortfolioItems } from '../../utils/portfolioUtils'
 import PortfolioItem from './PortfolioItem'
+import Breadcrumbs from '../Breadcrumbs'
 
 
 export const dynamic = 'force-dynamic'
@@ -18,11 +19,7 @@ export default async function PortfolioPage() {
                 <div className='tf-container'>
                     <div className='page-title-content text-center'>
                         <h1 className='title split-text effect-right'>Our Portfolio</h1>
-                        <div className='breadkcum'>
-                            <Link href='/' className='link-breadkcum body-2 fw-7 split-text effect-right'>Home</Link>
-                            <span className='dot'></span>
-                            <span className='page-breadkcum body-2 fw-7 split-text effect-right'>Portfolio</span>
-                        </div>
+                        <Breadcrumbs />
                         <h3 className='text-center pt-5 mt-3 mb-5'>Portfolio Showcase of Our Creative Work.</h3>
                         <p className='text-center lh-30'>Our work and happy clients speak for us. Here is a compilation of our work that we have created, managed and optimized with utmost love and dedication.<br />Take a look at our comprehensive portfolio.</p>
                     </div>
@@ -50,28 +47,28 @@ export default async function PortfolioPage() {
                 <div className='flat-animate-tab'>
                     <div className='tab-content'>
                         <div className='tab-pane active show' id='tab1' role='tabpanel'>
-                            <div className='tf-container'>
+                            <div className='container'>
                                 <div className='row rg-70'>
                                     {allItems.map((item) => (
-                                        <PortfolioItem key={item.slug} item={item} />
+                                        <PortfolioItem key={item.slug} item={item} category="all" />
                                     ))}
                                 </div>
                             </div>
                         </div>
                         <div className='tab-pane' id='tab2' role='tabpanel'>
-                            <div className='tf-container'>
+                            <div className='container'>
                                 <div className='row rg-70'>
                                     {webItems.map((item) => (
-                                        <PortfolioItem key={item.slug} item={item} />
+                                        <PortfolioItem key={item.slug} item={item} category="web" />
                                     ))}
                                 </div>
                             </div>
                         </div>
                         <div className='tab-pane' id='tab3' role='tabpanel'>
-                            <div className='tf-container'>
+                            <div className='container'>
                                 <div className='row rg-70'>
                                     {mobileItems.map((item) => (
-                                        <PortfolioItem key={item.slug} item={item} />
+                                        <PortfolioItem key={item.slug} item={item} category="mobile" />
                                     ))}
                                 </div>
                             </div>

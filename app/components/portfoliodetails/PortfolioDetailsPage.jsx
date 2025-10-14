@@ -3,13 +3,26 @@ import { fetchPortfolioItems } from '../../utils/portfolioUtils'
 
 export const dynamic = 'force-dynamic'
 
-export default async function PortfolioDetailsPage({ params }) {
+export default async function PortfolioDetailsPage({ params, searchParams }) {
     const { slug } = params || {}
+    const { category } = searchParams || {}
     const portfolioItems = await fetchPortfolioItems()
-    const idx = portfolioItems.findIndex(p => p.slug === slug)
-    const item = idx >= 0 ? portfolioItems[idx] : null
-    const prev = idx > 0 ? portfolioItems[idx - 1] : null
-    const next = idx >= 0 && idx < portfolioItems.length - 1 ? portfolioItems[idx + 1] : null
+    
+    // Filter items based on category if provided
+    let filteredItems = portfolioItems
+    if (category) {
+        if (category === 'web') {
+            filteredItems = portfolioItems.filter(item => item.category === 'UI/UX Design' || item.category === 'Web')
+        } else if (category === 'mobile') {
+            filteredItems = portfolioItems.filter(item => item.category === 'Mobile App Development' || item.category === 'Software Development')
+        }
+    }
+    
+    // Find the current item in the filtered list
+    const idx = filteredItems.findIndex(p => p.slug === slug)
+    const item = idx >= 0 ? filteredItems[idx] : null
+    const prev = idx > 0 ? filteredItems[idx - 1] : null
+    const next = idx >= 0 && idx < filteredItems.length - 1 ? filteredItems[idx + 1] : null
 
     if (!item) {
         return (
@@ -115,13 +128,13 @@ export default async function PortfolioDetailsPage({ params }) {
                             <div className='col-6'>
                                 {prev && (
                                     <div className='prev-details next-prev-item'>
-                                        <Link href={`/porfolio-details/${prev.slug}`} className='link'>
+                                        <Link href={`/porfolio-details/${prev.slug}${category ? `?category=${category}` : ''}`} className='link'>
                                             <i className='icon-arrow-left'></i> Previous
                                         </Link>
                                         <div className='prev-content-wrapper'>
                                             <div className='prev-text-content'>
                                                 <h5 className='title'>
-                                                    <Link href={`/porfolio-details/${prev.slug}`}>{prev.title}</Link>
+                                                    <Link href={`/porfolio-details/${prev.slug}${category ? `?category=${category}` : ''}`}>{prev.title}</Link>
                                                 </h5>
                                             </div>
                                         </div>
@@ -131,13 +144,13 @@ export default async function PortfolioDetailsPage({ params }) {
                             <div className='col-6'>
                                 {next && (
                                     <div className='next-details next-prev-item'>
-                                        <Link href={`/porfolio-details/${next.slug}`} className='link'>
+                                        <Link href={`/porfolio-details/${next.slug}${category ? `?category=${category}` : ''}`} className='link'>
                                             Next <i className='icon-arrow-right'></i>
                                         </Link>
                                         <div className='next-content-wrapper'>
                                             <div className='next-text-content'>
                                                 <h5 className='title'>
-                                                    <Link href={`/porfolio-details/${next.slug}`}>{next.title}</Link>
+                                                    <Link href={`/porfolio-details/${next.slug}${category ? `?category=${category}` : ''}`}>{next.title}</Link>
                                                 </h5>
                                             </div>
                                         </div>

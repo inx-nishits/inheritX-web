@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import BlogImage from '../../../components/BlogImage';
 import Link from 'next/link';
+import Breadcrumbs from '../../../components/Breadcrumbs';
 
 export const dynamic = 'force-static';
 
@@ -511,13 +512,7 @@ export default function CategoryDetailsPage() {
                 <h1 className="title">
                   {categoryData?.categoryName || 'Category'}
                 </h1>
-                <div className="breadkcum mb-5">
-                  <Link href="/" className="link-breadkcum body-2 fw-7 split-text effect-right">Home</Link>
-                  <span className="dot"></span>
-                  <Link href="/blog" className="link-breadkcum body-2 fw-7 split-text effect-right">Blog</Link>
-                  <span className="dot"></span>
-                  <span className="page-breadkcum body-2 fw-7 split-text effect-right">{categoryData?.categoryName || 'Category'}</span>
-                </div>
+                <Breadcrumbs />
                 <p className='pt-4'>
                   {categoryData?.total_post ? `${categoryData.total_post} articles` : 'Expert insights and articles'} in {categoryData?.categoryName || 'this category'}.
                 </p>

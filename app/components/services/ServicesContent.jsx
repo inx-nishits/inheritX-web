@@ -61,7 +61,7 @@ export default function ServicesContent() {
                 <div className='right'>
                   <div className='heading-section mb-45'>
                     <div className='sub-title body-2 fw-7 mb-17'>
-                      We Are <span className='text-primary'>InheritX</span>
+                      We Are<span className='text-primary'>&nbsp;InheritX&nbsp;</span>
                       Solutions
                     </div>
                     <h3 className='title fw-6'>

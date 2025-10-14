@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import LifeAtInheritX from '../LifeAtInheritX'
 import toast from 'react-hot-toast'
+import Breadcrumbs from '../Breadcrumbs'
 
 export default function JoinOurTeam() {
   const resumeInputRef = useRef(null)
@@ -600,18 +601,7 @@ export default function JoinOurTeam() {
         <div className='tf-container'>
           <div className='page-title-content text-center'>
             <h1 className='title split-text effect-right'>Join Our Team</h1>
-            <div className='breadkcum mb-5'>
-              <Link
-                href='/'
-                className='link-breadkcum body-2 fw-7 split-text effect-right'
-              >
-                Home
-              </Link>
-              <span className='dot'></span>
-              <span className='page-breadkcum body-2 fw-7 split-text effect-right'>
-                Join Our Team
-              </span>
-            </div>
+            <Breadcrumbs />
 
             <p className='pt-4 fs-2'>
               Join Our Thriving Family - Boost Your Career with Leading IT

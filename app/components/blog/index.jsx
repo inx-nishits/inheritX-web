@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import BlogImage from '../BlogImage';
 import ImagePreloader from '../ImagePreloader';
 import Link from 'next/link';
+import Breadcrumbs from '../Breadcrumbs';
 export const dynamic = 'force-static';
 
 export default function BlogListPage() {
@@ -656,11 +657,7 @@ export default function BlogListPage() {
                         <h1 className="title">
                             Blog
                         </h1>
-                        <div className="breadkcum mb-5">
-                            <Link href="/" className="link-breadkcum body-2 fw-7">Home</Link>
-                            <span className="dot"></span>
-                            <span className="page-breadkcum body-2 fw-7"> Blog</span>
-                        </div>
+                        <Breadcrumbs />
 
                         <p className='pt-4'>Expert Speak on Trending Topics</p>
                     </div>
