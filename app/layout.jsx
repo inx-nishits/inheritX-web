@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
     '@type': 'Organization',
     name: 'InheritX',
     url: siteUrl,
-    logo: `${siteUrl}/image/logo/inx-logo.png`,
+    logo: `${siteUrl}/image/logo/inx-logo-black.png`,
     sameAs: [
       'https://www.linkedin.com/company/inheritx/',
       'https://twitter.com/inhx_tech',
