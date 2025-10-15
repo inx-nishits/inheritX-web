@@ -867,6 +867,7 @@ a[href='javascript:;'] {
   width: 16px !important;
   height: 16px !important;
   margin-right: 18px !important;
+  left: 0px !important;
 }
 
 .sw-pagination .swiper-pagination-bullet::after {
@@ -1824,33 +1825,25 @@ div .page-title-home.hero-fullscreen {
 
 
 /* Partners section: 10 logos - 80s duration */
-.tf-marquee .marquee-wrapper.partners-marquee-wrapper {
-  animation: infiniteScroll 80s linear infinite !important;
-}
+.tf-marquee {position: relative !important; overflow: hidden !important;}
+.tf-marquee .marquee-wrapper {display: flex !important; width: max-content !important; will-change: transform !important; flex-wrap: nowrap !important;}
+.tf-marquee .marquee-wrapper .initial-child-container {display: flex !important; align-items: center !important; gap: 0 !important; flex-wrap: nowrap !important;}
+.tf-marquee .marquee-wrapper.partners-marquee-wrapper {animation: infiniteScroll 80s linear infinite !important;}
+.tf-marquee .marquee-wrapper.logos-marquee-wrapper {animation: infiniteScroll 100s linear infinite !important;}
 
 /* Clients section: 7 logos - 56s duration (80s * 7/10) */
-.tf-marquee .marquee-wrapper.clients-marquee-wrapper {
-  animation: infiniteScroll 56s linear infinite !important;
+.tf-marquee .marquee-wrapper.clients-marquee-wrapper {animation: infiniteScroll 56s linear infinite !important;}
+
+/* Seamless marquee keyframes: shift by half width when content duplicated twice */
+@keyframes infiniteScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Partners & Clients logos: consistent box and non-stretched images */
-.logos-marquee-wrapper .big-text {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
+.logos-marquee-wrapper .big-text {padding-left: 10px !important; padding-right: 10px !important;}
 
-.logos-marquee-wrapper .image {
-  /* Fixed parent box size */
-  width: 190px !important;
-  height: 110px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background-color: #ffffff !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  border: 1px solid rgba(0,0,0,0.06) !important;
-}
+.logos-marquee-wrapper .image {width: 190px !important; height: 110px !important; display: flex !important; align-items: center !important; justify-content: center !important; background-color: #ffffff !important; border-radius: 14px !important; overflow: hidden !important; border: 1px solid rgba(0,0,0,0.06) !important;}
 
 /* Next/Image wrapper span inside .image */
 .logos-marquee-wrapper .image > span {

@@ -9,8 +9,8 @@ const OurPartners = ({
   partners = partnersData,
   className = ""
 }) => {
-  // Duplicate partners array for seamless marquee effect
-  const duplicatedPartners = [...partners, ...partners, ...partners];
+  // Duplicate partners array 4x so first half equals second half (AA | AA)
+  const duplicatedPartners = [...partners, ...partners, ...partners, ...partners];
 
   return (
     <section className={`section-about tf-spacing-2 ${className}`}>

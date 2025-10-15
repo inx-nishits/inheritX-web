@@ -331,7 +331,7 @@ export default function ServicesContent() {
                       <a
                         href='#according1'
                         data-bs-toggle='collapse'
-                        className='title-according'
+                        className='title-according collapsed'
                       >
                         Learn Our Company’s Mission<span></span>
                       </a>
