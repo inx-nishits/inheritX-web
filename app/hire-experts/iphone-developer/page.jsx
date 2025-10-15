@@ -46,7 +46,7 @@ export default function HireIPhoneDeveloperPage() {
                   </div>
 
                   <div className='desc'>
-                    <p className='lh-30'>
+                    <p className='clearfix'>
                       Our dedicated iOS app developers can help you come up with feature‑rich and
                       futuristic enterprise apps that work seamlessly on the latest iPhones. Our
                       cost‑effective hiring process delivers a higher return on investment and gives

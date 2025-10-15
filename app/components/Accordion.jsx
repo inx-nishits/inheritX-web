@@ -65,13 +65,13 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-          
+
           <div className='right'>
             <div className='desc'>
-             Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
+              Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
             </div>
             <div className='desc mb-2'>
-             We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
+              We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
             </div>
           </div>
         </div>
@@ -84,13 +84,13 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-        
+
           <div className='right'>
             <div className='desc'>
-             To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
+              To be recognized as leaders in quality services and in developing relationships that make a positive difference in our customers' lives.
             </div>
             <div className='desc mb-2'>
-             We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
+              We provide enterprise-grade design and development services to our clients to boost the productivity of their businesses across the world, with a vision to become the most reliable offshore partner.
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='right'>
             <div className='desc lh-30'>
-           InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
+              InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function Accordion() {
         onToggle={handleToggle}
       >
         <div className='according-content'>
-              <div className='right'>
+          <div className='right'>
             <div className='desc lh-30'>
               InheritX Solutions has an in-house team of
               experienced developers who can handle any size

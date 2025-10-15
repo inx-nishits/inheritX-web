@@ -38,6 +38,29 @@ export default function LifeAtInheritX() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [isGalleryOpen, galleryImages.length])
 
+  // Prevent body scroll when gallery modal is open
+  useEffect(() => {
+    if (isGalleryOpen) {
+      // Store current scroll position
+      const scrollY = window.scrollY
+      // Prevent body scroll
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      document.body.style.overflow = 'hidden'
+      
+      return () => {
+        // Restore body scroll
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+        document.body.style.overflow = ''
+        // Restore scroll position
+        window.scrollTo(0, scrollY)
+      }
+    }
+  }, [isGalleryOpen])
+
   return (
     <section className='tf-spacing-2'>
       <div className='tf-container'>
@@ -73,7 +96,7 @@ export default function LifeAtInheritX() {
         </div>
 
         <div className='text-center mt-5 pt-2'>
-          <div className='mb-3 fw-6'>View More Photos Go to :</div>
+          <div className='mb-4 fw-6'>Follow us for more photos and updates</div>
           <ul className='post-social d-inline-flex align-items-center justify-content-center rg-15 g-20'>
             <li>
               <Link href='https://www.facebook.com/InheritxSolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
@@ -111,7 +134,7 @@ export default function LifeAtInheritX() {
               aria-label='Close gallery'
               className='position-absolute top-0 end-0 m-3 btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center'
               onClick={() => setIsGalleryOpen(false)}
-              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1 }}
+              style={{ width: 36, height: 36, fontSize: 26, lineHeight: 1,border: 0 }}
             >
               ×
             </button>
@@ -121,7 +144,7 @@ export default function LifeAtInheritX() {
               aria-label='Previous image'
               className='position-absolute start-0 ms-3 btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center'
               onClick={() => setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length)}
-              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1, zIndex: 2 }}
+              style={{ width: 36, height: 36, fontSize: 26, lineHeight: 1, zIndex: 2, border: 0 }}
             >
               ‹
             </button>
@@ -141,7 +164,7 @@ export default function LifeAtInheritX() {
               aria-label='Next image'
               className='position-absolute end-0 me-3 btn btn-light rounded-circle d-inline-flex align-items-center justify-content-center'
               onClick={() => setActiveIndex((i) => (i + 1) % galleryImages.length)}
-              style={{ width: 56, height: 56, fontSize: 28, lineHeight: 1, zIndex: 2 }}
+              style={{ width: 36, height: 36, fontSize: 26, lineHeight: 1, zIndex: 2, border: 0 }}
             >
               ›
             </button>

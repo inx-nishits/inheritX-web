@@ -34,7 +34,7 @@ export default function Page() {
                   <div className='sub-title body-2 fw-7 mb-17  text-primary'>
                     Get In Touch
                   </div>
-                  <h2 className='title fw-6 mb-10 '>
+                  <h2 className='title fw-6 mb-10'>
                     Let’s Build Something
                     <span className='fw-3'>&nbsp;Great&nbsp;Together</span>
                   </h2>
@@ -48,7 +48,7 @@ export default function Page() {
 
                 <div className='contact-social'>
                   <div className='title body-2 fw-7 text-primary'>Follow Us</div>
-                  <ul className='post-social style-radius-50 style-bg-white g-10 '>
+                  <ul className='post-social style-radius-50 style-bg-white g-10'>
                     <li>
                       <a
                         href='https://www.facebook.com/InheritxSolutions/'

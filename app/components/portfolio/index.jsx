@@ -21,14 +21,14 @@ export default async function PortfolioPage() {
                         <h1 className='title split-text effect-right'>Our Portfolio</h1>
                         <Breadcrumbs />
                         <h3 className='text-center pt-5 mt-3 mb-5'>Portfolio Showcase of Our Creative Work.</h3>
-                        <p className='text-center lh-30'>Our work and happy clients speak for us. Here is a compilation of our work that we have created, managed and optimized with utmost love and dedication.<br />Take a look at our comprehensive portfolio.</p>
+                        <p className='text-center'>Our work and happy clients speak for us. Here is a compilation of our work that we have created, managed and optimized with utmost love and dedication.<br />Take a look at our comprehensive portfolio.</p>
                     </div>
                 </div>
             </div>
 
             <div className='main-content tf-spacing-2'>
                 <div className='tf-container'>
-                    <div className='flat-animate-tab mb-70'>
+                    <div className='flat-animate-tab mb-5'>
                         <div className='wg-tab style-2'>
                             <ul className='tab-product' role='tablist'>
                                 <li className='nav-tab-item' role='presentation'>

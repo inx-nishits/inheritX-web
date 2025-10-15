@@ -31,7 +31,7 @@ const OurPartners = ({
 
       <div className='about-top'>
         <div className='tf-marquee'>
-          <div className='marquee-wrapper logos-marquee-wrapper'>
+          <div className='marquee-wrapper logos-marquee-wrapper partners-marquee-wrapper'>
             <div className='initial-child-container'>
               {duplicatedPartners.map((partner, index) => (
                 <div key={index} className='big-text fs-initial'>

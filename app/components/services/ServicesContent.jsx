@@ -71,7 +71,7 @@ export default function ServicesContent() {
                     </h3>
                   </div>
                   <div className='section-content'>
-                    <div className='desc mb-5 '>
+                    <div className='desc mb-5'>
                       <p className='lh-30 fs-2'>
                         Our range of IT services includes web development,
                         enterprise mobility, and cloud management.
@@ -317,10 +317,10 @@ export default function ServicesContent() {
             <div className='section-company-inner'>
               <div className='left-section'>
                 <div className='heading-section mb-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 '>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     <span className='text-primary'>Grow</span> & Development
                   </div>
-                  <h2 className='title fw-6 '>
+                  <h2 className='title fw-6'>
                     Modern Technology and
                     <span className='fw-3'>&nbsp;Advancement Incentives</span>
                   </h2>

@@ -121,7 +121,7 @@ export default function HireDetailsPage({ params }) {
                                 {service.imageTitle || service.title}
                               </h4>
                               {(service.content || service.desc) && (
-                                <p className='lh-30'>{service.content || service.desc}</p>
+                                <p className='clearfix'>{service.content || service.desc}</p>
                               )}
                             </div>
                           </div>

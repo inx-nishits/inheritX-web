@@ -132,14 +132,14 @@ export default function AboutContent() {
               </div>
               <div className='right'>
                 <div className='heading-section mb-0'>
-                  <h2 className='fw-7 mb-5 '>
+                  <h2 className='fw-7 mb-5'>
                     Who <span className='text-primary'>&nbsp;We Are</span>
                   </h2>
-                  <p className='lh-30 fs-3  mb-5'>
+                  <p className='fs-3 mb-5'>
                     Since 2011, excellent customer service has not just been a phrase, but a core value of InheritX Solutions. Developing high-quality solutions in the web and mobile app domains has been a way of life at InheritX for over fourteen years. Our client-centric approach and no compromise on performance have made us an undisputed leader in mobile app, web, game, and digital marketing.
                   </p>
 
-                  <p className='lh-30 fs-3  mb-0'>
+                  <p className='fs-3 mb-0'>
                     At InheritX, our aim has remained the same since inception – to make and keep our clients happy. This is the reason why we have a large clientele across different industry sectors worldwide. Our happy clients include startups, SMEs, and even a few Fortune 500 companies. Our in-house team of experienced developers makes it possible to transform your creative concepts into innovative IT solutions.
                   </p>
                 </div>
@@ -194,13 +194,13 @@ export default function AboutContent() {
 
               <div className='right'>
                 <div className='heading-section mb-30' ref={journeyHeadingRef}>
-                  <div className='sub-title fs-1 fw-7 mb-30 '>
+                  <div className='sub-title fs-1 fw-7 mb-30'>
                     Our Exciting Journey So Far
                   </div>
                 </div>
                 <div className='section-content'>
                   <div className='desc mb-40 text-animation'>
-                    <p className='lh-30'>
+                    <p className='clearfix'>
                       A small team of experienced and dedicated IT professionals founded InheritX Solutions back in 2011. Since then, we have never looked back in providing high-quality, result-driven, advanced technology solutions to our esteemed clients.
                     </p>
                   </div>
@@ -219,7 +219,7 @@ export default function AboutContent() {
                     </span>
                     Birth of InheritX
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Started with a small team of passionate IT professionals, aiming to deliver quality technology solutions.
                   </p>
                 </div>
@@ -233,7 +233,7 @@ export default function AboutContent() {
                     </span>
                     Steady Growth
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Our small setup evolved rapidly, and InheritX Solutions
                     became a member of NASSCOM, IGDA, and other reputable industry
                     organizations.
@@ -249,7 +249,7 @@ export default function AboutContent() {
                     </span>
                     Expansion Phase
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Moved to a larger office, with employee strength reaching 50, setting the stage for more ambitious projects.
                   </p>
                 </div>
@@ -263,7 +263,7 @@ export default function AboutContent() {
                     </span>
                     International Presence
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Established offices in the USA, Canada, and Australia,
                     extending our services to global clients.
                   </p>
@@ -278,7 +278,7 @@ export default function AboutContent() {
                     </span>
                     Gaining Recognition
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Enhanced business policies, launched digital marketing
                     services, and was recognized as a top mobile app development
                     company by GESIA.
@@ -294,7 +294,7 @@ export default function AboutContent() {
                     </span>
                     Milestone Achieved
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Reached 100+ employees and crossed $1 million in revenue on
                     Upwork, solidifying our industry reputation.
                   </p>
@@ -309,7 +309,7 @@ export default function AboutContent() {
                     </span>
                     Diversifying Expertise
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Started assisting startups as development partners and
                     ventured into IoT, BLE, and AR/VR solutions.
                   </p>
@@ -324,7 +324,7 @@ export default function AboutContent() {
                     </span>
                     Global Recognition
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Represented InheritX Solutions at MWCA LA, gaining
                     recognition as a leading global IT outsourcing agency.
                   </p>
@@ -339,7 +339,7 @@ export default function AboutContent() {
                     </span>
                     Expanding Horizons
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Celebrated 8 years of success, expanded into AI, blockchain,
                     indoor navigation, and sports data analytics solutions.
                   </p>
@@ -354,7 +354,7 @@ export default function AboutContent() {
                     </span>
                     Resilience and Innovation
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Adapted to global challenges with remote-first operations
                     and accelerated adoption of cloud-based solutions for
                     clients worldwide.
@@ -370,7 +370,7 @@ export default function AboutContent() {
                     </span>
                     Technological Leadership
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Launched advanced AI and machine learning solutions, helping
                     clients transform businesses digitally and gain a
                     competitive edge.
@@ -386,7 +386,7 @@ export default function AboutContent() {
                     </span>
                     Expanding Clientele
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Partnered with leading enterprises globally, delivering
                     scalable software, mobile, and AI solutions across multiple
                     sectors.
@@ -402,7 +402,7 @@ export default function AboutContent() {
                     </span>
                     Strengthening Ecosystem
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Focused on innovation, sustainability, and nurturing tech
                     talent, positioning InheritX as a trusted partner for
                     end-to-end digital transformation.
@@ -418,7 +418,7 @@ export default function AboutContent() {
                     </span>
                     Future-Ready
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Continuing our journey of excellence, delivering futuristic
                     solutions in AI, blockchain, and cloud, empowering
                     businesses to thrive in a digital-first world.
@@ -434,7 +434,7 @@ export default function AboutContent() {
                     </span>
                     Expanding Horizons
                   </h3>
-                  <p className='lh-30'>
+                  <p className='clearfix'>
                     Continuing our growth trajectory, InheritX Solutions
                     strengthens global partnerships, innovates with cutting-edge
                     technologies, and empowers businesses with AI-driven,
@@ -451,10 +451,10 @@ export default function AboutContent() {
             <div className='section-company-inner'>
               <div className='left-section'>
                 <div className='heading-section mb-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 '>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     About <span className='text-primary'>InheritX Solutions</span>
                   </div>
-                  <h2 className='title fw-6 '>
+                  <h2 className='title fw-6'>
                     Leaders in providing Mobile, Web, Game, and Internet
                     Marketing solutions.
                   </h2>
@@ -807,10 +807,10 @@ export default function AboutContent() {
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
                 <div className='heading-section mb-3 mb-xl-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 '>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     Clients Feedback
                   </div>
-                  <h2 className='title fw-6 '>
+                  <h2 className='title fw-6'>
                     1250+ People Say&nbsp;
                     <span className='fw-3'>About Us</span>
                   </h2>
@@ -834,7 +834,7 @@ export default function AboutContent() {
                           Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Edward
                           </span>
                           <span className='position text-medium'>
@@ -853,7 +853,7 @@ export default function AboutContent() {
                           InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Badri
                           </span>
                           <span className='position text-medium'>
@@ -872,7 +872,7 @@ export default function AboutContent() {
                           InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Saady
                           </span>
                           <span className='position text-medium'>
@@ -891,7 +891,7 @@ export default function AboutContent() {
                           InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Simon
                           </span>
                           <span className='position text-medium'>
@@ -910,7 +910,7 @@ export default function AboutContent() {
                           The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='javascript:void(0)' className='name-user body-2 '>
+                          <Link href='javascript:void(0)' className='name-user body-2'>
                             Dorain
                           </Link>
                           <Link href='javascript:void(0)' className='position text-medium'>

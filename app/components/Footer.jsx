@@ -45,14 +45,14 @@ export default function Footer() {
           </div>
         </div>
         <div className='tf-container'>
-          <div className='footer-middle flex justify-content-between '>
+          <div className='footer-middle flex justify-content-between'>
             <div className='left'>
               <div className='logo logo-header mb-5'>
                 <Link href='/' className='d-flex align-items-center'>
                   <img src='/image/logo/inx-logo.svg' alt='logo' />
                 </Link>
               </div>
-              <p className='lh-30 mb-5'>
+              <p className='mb-5'>
                 Since 2011, InheritX has delivered web, mobile, and AI solutions
                 worldwide — blending innovation, quality, and timely delivery to
                 help businesses grow.
@@ -350,9 +350,11 @@ export default function Footer() {
 
                         <strong>INDIA</strong>
                       </h3>
-                      8th Floor, Panchdhara Complex, S G Highway, Bodakdev,
-                      <br />
-                      Ahmedabad - 380054
+                      <p>
+                        8th Floor, Panchdhara Complex, S G Highway, Bodakdev,
+                        <br />
+                        Ahmedabad - 380054
+                      </p>
                     </div>
                   </div>
 
@@ -379,9 +381,9 @@ export default function Footer() {
 
                         <strong>United States</strong>
                       </h3>
-                      222 Broadway, New York, NY 10038
-                      <br />
-                      United States
+                      <p> 222 Broadway, New York, NY 10038
+                        <br />
+                        United States</p>
                     </div>
                   </div>
 
@@ -401,14 +403,14 @@ export default function Footer() {
 
                         <strong>Germany</strong>
                       </h3>
-                      Kloster 3, 79713 Bad Säckingen
-                      <br />
-                      Germany
+                      <p>Kloster 3, 79713 Bad Säckingen
+                        <br />
+                        Germany</p>
                     </div>
                   </div>
 
                   <div className='col-12 col-md-6'>
-                    <div className='address fs-4 lh-30 mb-5'>
+                    <div className='address fs-4 lh-30 mb-0 mb-md-5'>
                       <h3 className='fs-3 text-uppercase mb-1 d-flex gap-2 align-items-center'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
@@ -422,9 +424,9 @@ export default function Footer() {
 
                         <strong>Japan</strong>
                       </h3>
-                      1-36-13 Hashiba, Taito-ku, Tokyo
-                      <br />
-                      Japan
+                      <p>1-36-13 Hashiba, Taito-ku, Tokyo
+                        <br />
+                        Japan</p>
                     </div>
                   </div>
                 </div>

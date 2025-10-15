@@ -88,18 +88,18 @@ export default function HireExpertContent() {
               <div className='col-lg-6'>
                 <div className='right'>
                   <div className='heading-section mb-45'>
-                    <h2 className='title fw-6 '>
+                    <h2 className='title fw-6'>
                       Hire Dedicated and Professional Developers
                     </h2>
                   </div>
                   <div className='section-content'>
-                    <div className='desc mb-5 '>
-                      <p className='lh-30 fs-2 mb-5'>
+                    <div className='desc mb-5'>
+                      <p className='fs-2 mb-5'>
                         A Robust Website or an Engaging App- We Have Developers
                         for Every Need of Yours!
                       </p>
 
-                      <p className='lh-30 mb-4'>
+                      <p className='mb-4'>
                         A highly competitive environment compels entrepreneurs
                         to come up with innovative IT solutions that easily
                         connect them with employees and customers. But, at
@@ -108,7 +108,7 @@ export default function HireExpertContent() {
                         constraints and other limitations. Hiring models are
                         designed to meet this issue effectively.
                       </p>
-                      <p className='lh-30 mb-4'>
+                      <p className='mb-4'>
                         Since inception in 2011, InheritX Solutions has
                         supported many SMEs and startups as a technology
                         partner. We have provided the best resources to our

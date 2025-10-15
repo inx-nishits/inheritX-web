@@ -213,6 +213,7 @@ img {
 p {
   font-weight: 400;
   font-size: 16px;
+  line-height: 28px;
 }
 
 strong,
@@ -1771,7 +1772,7 @@ a:hover, a:focus {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
-  gap: 49px;
+  gap: 32px;
   border-bottom: 0;
 }
 .wg-tab.style-2 ul li a {
@@ -2052,10 +2053,10 @@ a:hover, a:focus {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-radius: 17.5px;
+  border-radius: 9999px;
   border: 1px solid var(--white);
   position: relative;
-  padding: 11.5px;
+  padding: 10px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -2067,7 +2068,7 @@ a:hover, a:focus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 11.5px;
+  left: 10px;
   color: var(--white);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -2108,7 +2109,7 @@ a:hover, a:focus {
 }
 .tf-btn-readmore.style-open .plus {
   transform: translateY(-50%);
-  left: 20px;
+  left: 16px;
 }
 .tf-btn-readmore.style-open .text {
   padding-left: 20px;
@@ -3043,8 +3044,8 @@ fieldset {
     object-position: top;
 }
 .tf-post-list.style-2 .post-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
   display: -webkit-box;
@@ -4554,10 +4555,10 @@ a.mapboxgl-ctrl-logo {
 }
 .team-item .item-content {
   text-align: center;
-  padding: 32px 15px 32px;
+  padding: 20px 16px 20px;
 }
 .team-item .item-content .title {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .team-item:hover .social-item {
   bottom: -27px;
@@ -6072,6 +6073,7 @@ a.mapboxgl-ctrl-logo {
   }
   .tf-post-list.style-2 .post-content {
     max-width: 100%;
+    gap: 16px;
   }
   .section-form .section-form-content {
     padding: 30px 15px;
@@ -6119,6 +6121,11 @@ a.mapboxgl-ctrl-logo {
   .heading-section {
     margin-bottom: 20px !important;
   }
+
+  .heading-section.mb-0 {
+    margin-bottom: 0px !important;
+  }
+
   .heading-section .sub-title {
     margin-bottom: 15px !important;
   }
@@ -6413,6 +6420,8 @@ a.mapboxgl-ctrl-logo {
   .px-md-15 {
     padding-left: 15px !important;
     padding-right: 15px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
   .mx-md-15 {
     margin-left: 15px !important;
@@ -6437,6 +6446,10 @@ a.mapboxgl-ctrl-logo {
   }
   .section-testimonial .list-image {
   justify-content: center;
+}
+.form-contact-us .tf-btn {
+  padding: 20px 16px;
+  font-size: 14px;
 }
 }
 @media (max-width: 550px) {

@@ -132,6 +132,11 @@ export default function JoinOurTeam() {
     setSelectedJobId(jobId)
     resetApplyForm()
     regenerateCaptcha()
+    
+    // Push state to browser history so back button/swipe can close modal
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ modalOpen: true }, '', window.location.href)
+    }
   }
 
   const isAllowedFile = (file) => {
@@ -313,10 +318,36 @@ export default function JoinOurTeam() {
       setJobDetails(null)
       setJobError('')
       setJobLoading(false)
+      
+      // Remove the history state we added when modal was opened
+      if (typeof window !== 'undefined' && window.history.state?.modalOpen) {
+        window.history.back()
+      }
     }
     modalEl.addEventListener('hidden.bs.modal', onHidden)
     return () => {
       modalEl.removeEventListener('hidden.bs.modal', onHidden)
+    }
+  }, [])
+
+  // Handle browser back button and mobile edge swipe gestures
+  useEffect(() => {
+    const handlePopState = () => {
+      const modalEl = typeof document !== 'undefined' ? document.getElementById('applyReactModal') : null
+      if (modalEl && modalEl.classList.contains('show')) {
+        // Close the modal when user navigates back (browser back button or mobile edge swipe)
+        const modal = window.bootstrap?.Modal?.getInstance(modalEl)
+        if (modal) {
+          modal.hide()
+        }
+      }
+    }
+
+    // Listen for browser back/forward navigation
+    window.addEventListener('popstate', handlePopState)
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
     }
   }, [])
   return (
@@ -332,36 +363,43 @@ export default function JoinOurTeam() {
         <div className='modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable'>
           <div className='modal-content bg-dark text-white border-0 modal-career'>
             <div className='modal-header border-0 modal-career-header'>
-              <div className='modal-career-title'>
+              <div className='modal-career-title flex-grow-1 pe-3'>
                 <h3 className='mb-3'>
                   {jobLoading ? <span className='skeleton skeleton-line w-60' /> : (jobDetails?.title || 'Apply')}
                 </h3>
-                <div className='meta-line mb-0'>
-                  <span className='meta-label'>Position:</span>
-                  {jobLoading ? (
-                    <span className='meta-value me-3 text-white'><span className='skeleton skeleton-badge w-30' /></span>
-                  ) : (
-                    <span className='meta-value me-3 text-white'>{jobDetails?.openings || '-'}</span>
-                  )}
-                  <span className='meta-label'>Experience:</span>
-                  {jobLoading ? (
-                    <span className='meta-value me-3 text-white'><span className='skeleton skeleton-badge w-40' /></span>
-                  ) : (
-                    <span className='meta-value me-3 text-white'>{jobDetails?.experience || '-'}</span>
-                  )}
-                  <span className='meta-label'>Location:</span>
-                  {jobLoading ? (
-                    <span className='meta-value text-white'><span className='skeleton skeleton-badge w-50' /></span>
-                  ) : (
-                    <span className='meta-value text-white'>{jobDetails?.location || '-'}</span>
-                  )}
+                <div className='meta-line mb-0 d-flex flex-wrap gap-3 gap-md-4'>
+                  <div className='meta-item d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-1 gap-sm-2'>
+                    <span className='meta-label text-nowrap'>Position:</span>
+                    {jobLoading ? (
+                      <span className='meta-value text-white'><span className='skeleton skeleton-badge w-30' /></span>
+                    ) : (
+                      <span className='meta-value text-white'>{jobDetails?.openings || '-'}</span>
+                    )}
+                  </div>
+                  <div className='meta-item d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-1 gap-sm-2'>
+                    <span className='meta-label text-nowrap'>Experience:</span>
+                    {jobLoading ? (
+                      <span className='meta-value text-white'><span className='skeleton skeleton-badge w-40' /></span>
+                    ) : (
+                      <span className='meta-value text-white'>{jobDetails?.experience || '-'}</span>
+                    )}
+                  </div>
+                  <div className='meta-item d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-1 gap-sm-2'>
+                    <span className='meta-label text-nowrap'>Location:</span>
+                    {jobLoading ? (
+                      <span className='meta-value text-white'><span className='skeleton skeleton-badge w-50' /></span>
+                    ) : (
+                      <span className='meta-value text-white'>{jobDetails?.location || '-'}</span>
+                    )}
+                  </div>
                 </div>
               </div>
               <button
                 type='button'
-                className='btn-close btn-close-white'
+                className='btn-close btn-close-white flex-shrink-0'
                 data-bs-dismiss='modal'
                 aria-label='Close'
+                style={{ minWidth: '24px', minHeight: '24px' }}
               ></button>
             </div>
             <div className='modal-body'>
@@ -488,7 +526,7 @@ export default function JoinOurTeam() {
                       }
                     }}
                   >
-                    <div className='heading-form text-center mb-5'>
+                    <div className='heading-form text-center mb-4 mb-md-5'>
                       <h3 className='title text-white m-0' style={{ textTransform: 'none' }}>
                         {jobLoading ? <span className='skeleton skeleton-line w-40' /> : <>Apply for {jobDetails?.title || 'Role'}</>}
                       </h3>
@@ -723,11 +761,11 @@ export default function JoinOurTeam() {
                 </div>
               </div>
               <div className='right'>
-                <div className='heading-section mb-3 mb-xl-5'>
-                  <h2 className='fw-7 mb-5 '>
+                <div className='heading-section mb-0 mb-xl-5'>
+                  <h2 className='fw-7 mb-2 mb-md-5'>
                     <span className='text-primary'>Career</span> & Culture
                   </h2>
-                  <p className='lh-30 fs-2  mb-5'>
+                  <p className='lh-30 fs-3 mb-4 mb-md-5'>
                     We have combined career with the work culture to give you a
                     robust platform to learn new things, use cutting-edge tools,
                     and implement creative insights while making advanced IT
@@ -737,7 +775,7 @@ export default function JoinOurTeam() {
                     without having much stress.
                   </p>
 
-                  <p className='lh-30 fs-2  mb-5'>
+                  <p className='lh-30 fs-3 mb-4 mb-md-5'>
                     At InheritX, we believe in ‘Work Hard, Party Harder’ policy.
                     As a fresher, you will get support from experienced seniors,
                     and as an experienced professional, you will have a
@@ -746,7 +784,7 @@ export default function JoinOurTeam() {
                     it!
                   </p>
 
-                  <p className='lh-30 fs-2  mb-5'>
+                  <p className='lh-30 fs-3 mb-0'>
                     If you have dedication, creativity, and a lot of enthusiasm
                     to learn new things, we’re pleased to welcome you to our
                     growing family…
@@ -823,7 +861,7 @@ export default function JoinOurTeam() {
             <div className='row'>
               <div className='col-12'>
                 <div className='heading-section mb-3 mb-xl-5 text-center'>
-                  <h2 className='title fw-6  mb-5'>
+                  <h2 className='title fw-6'>
                     We <span className='text-primary'>&nbsp;Inspire You to Come</span>
                     Up with Your Best
                   </h2>
@@ -1170,10 +1208,10 @@ export default function JoinOurTeam() {
             <div className='row justify-content-between rg-50'>
               <div className='col-lg-7'>
                 <div className='heading-section mb-3 mb-xl-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 '>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     Clients Feedback
                   </div>
-                  <h2 className='title fw-6 '>
+                  <h2 className='title fw-6'>
                     1250+ People Say&nbsp;
                     <span className='fw-3'>About Us</span>
                   </h2>
@@ -1197,7 +1235,7 @@ export default function JoinOurTeam() {
                           Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Edward
                           </span>
                           <span className='position text-medium'>
@@ -1216,7 +1254,7 @@ export default function JoinOurTeam() {
                           InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Badri
                           </span>
                           <span className='position text-medium'>
@@ -1235,7 +1273,7 @@ export default function JoinOurTeam() {
                           InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Saady
                           </span>
                           <span className='position text-medium'>
@@ -1254,7 +1292,7 @@ export default function JoinOurTeam() {
                           InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
-                          <span className='name-user body-2 '>
+                          <span className='name-user body-2'>
                             Simon
                           </span>
                           <span className='position text-medium'>
@@ -1273,7 +1311,7 @@ export default function JoinOurTeam() {
                           The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='javascript:void(0)' className='name-user body-2 '>
+                          <Link href='javascript:void(0)' className='name-user body-2'>
                             Dorain
                           </Link>
                           <Link href='javascript:void(0)' className='position text-medium'>

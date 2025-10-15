@@ -116,7 +116,7 @@ export default function HomeContent() {
 
               <div className='content-left mb-md-5 pb-0 pb-lg-0'>
                 <div className='desc'>
-                  <p className='fs-3 lh-30'>
+                  <p className='clearfix'>
                     From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
                   </p>
                 </div>
@@ -370,7 +370,7 @@ export default function HomeContent() {
                 </div>
                 <div className='section-content'>
                   <div className='desc mb-40'>
-                    <p className='lh-30'>
+                    <p className='clearfix'>
                       At InheritX, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
                     </p>
                     <p className='lh-30 pt-4'>
@@ -491,11 +491,11 @@ export default function HomeContent() {
               </div>
               <div className='right'>
                 <div className='heading-section mb-5 mb-xl-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 '>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     Explore Our
                     <span className='text-primary'>&nbsp;Achievement</span>
                   </div>
-                  <h2 className='title fw-6 '>
+                  <h2 className='title fw-6'>
                     Premier Tech Innovations
                     <span className='fw-3'>&nbsp;InheritX Software Agency</span>
                   </h2>
@@ -555,10 +555,10 @@ export default function HomeContent() {
             <div className='section-company-inner'>
               <div className='left-section left-sectionnew pb-1 pt-lg-5'>
                 <div className='heading-section mb-5'>
-                  <div className='sub-title body-2 fw-7 mb-17 '>
+                  <div className='sub-title body-2 fw-7 mb-17'>
                     <span className='text-primary'>Grow</span> & Development
                   </div>
-                  <h2 className='title fw-6 '>
+                  <h2 className='title fw-6'>
                     Modern Technology and
                     <span className='fw-3'>Advancement Incentives</span>
                   </h2>
@@ -685,7 +685,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services/web-app-development'
-                            className='title-service fs-2 text-primary'
+                            className='title-service fs-1 text-primary'
                           >
                             Web Development
                           </Link>
@@ -723,7 +723,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services/machine-learning-development'
-                           className='title-service fs-2 text-primary'
+                           className='title-service fs-1 text-primary'
                           >
                             Artificial Intelligence
                           </Link>
@@ -773,7 +773,7 @@ export default function HomeContent() {
                         <h6 className='lh-30 fw-6'>
                           <Link
                             href='/services/mobile-app-development'
-                           className='title-service fs-2 text-primary'
+                           className='title-service fs-1 text-primary'
                           >
                             Mobile App Development
                           </Link>
@@ -824,7 +824,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services'
-                           className='title-service fs-2 text-primary'
+                           className='title-service fs-1 text-primary'
                           >
                             DevOps
                           </Link>
@@ -875,7 +875,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services/google-cloud-services'
-                           className='title-service fs-2 text-primary'
+                           className='title-service fs-1 text-primary'
                           >
                             Cloud Computing
                           </Link>
@@ -947,7 +947,7 @@ export default function HomeContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-12 text-center'>
-                <div className='heading-section container pb-5'>
+                <div className='heading-section container pb-1 pb-lg-5'>
                   <div className='sub-title body-2 fs-1 fw-7 mb-17 text-center mb-5'>
                     Our <span className='text-primary'>Team</span>
                   </div>
@@ -971,7 +971,7 @@ export default function HomeContent() {
                   </div>
                 </div>
               </div>
-              <div className='col-12 col-md-10 offset-md-1'>
+              <div className='col-12 col-xl-10 offset-xl-1'>
                 <div
                   className='swiper tf-swiper sw-team sw-border'
                   style={{ cursor: 'grab' }}
@@ -1044,7 +1044,7 @@ export default function HomeContent() {
                           <p className='title'>
                             <span className='fw-6'>Sandip Modi</span>
                           </p>
-                          <p className='sub-title'>CEO</p>
+                          <p className='sub-title fs-4'>CEO</p>
                         </div>
                       </div>
                     </div>
@@ -1065,7 +1065,7 @@ export default function HomeContent() {
                           <p className='title'>
                             <span className='fw-6'>Aiyub Munshi</span>
                           </p>
-                          <p className='sub-title'>Project Manager</p>
+                          <p className='sub-title fs-4'>Project Manager</p>
                         </div>
                       </div>
                     </div>
@@ -1086,7 +1086,7 @@ export default function HomeContent() {
                           <p className='title'>
                             <span className='fw-6'>Krish Hinduja</span>
                           </p>
-                          <p className='sub-title'>Sales Head</p>
+                          <p className='sub-title fs-4'>Sales Head</p>
                         </div>
                       </div>
                     </div>
@@ -1107,7 +1107,7 @@ export default function HomeContent() {
                           <p className='title'>
                             <span className='fw-6'>Meera Tank</span>
                           </p>
-                          <p className='sub-title'>HR Head</p>
+                          <p className='sub-title fs-4'>HR Head</p>
                         </div>
                       </div>
                     </div>

@@ -71,10 +71,10 @@ export default function TestimonialSection() {
         <div className='row justify-content-between rg-50'>
           <div className='col-lg-7'>
             <div className='heading-section mb-3 mb-xl-5'>
-              <div className='sub-title body-2 fw-7 mb-17  '>
+              <div className='sub-title body-2 fw-7 mb-17'>
                 Clients Feedback
               </div>
-              <h2 className='title fw-6  '>
+              <h2 className='title fw-6'>
                 1250+ People Say&nbsp;
                 <span className='fw-3'>About Us</span>
               </h2>
@@ -95,13 +95,13 @@ export default function TestimonialSection() {
                       <div className='icon'>
                         <i className='icon-quote2'></i>
                       </div>
-                      <div className='text fs-27 lh-35 fw-5'>
+                      <div className='text fs-27 lh-35'>
                         {testimonial.text}
                       </div>
                       <div className='user-testimonial'>
                         {testimonial.id === 5 ? (
                           <>
-                            <Link href='javascript:void(0)' className='name-user body-2 '>
+                            <Link href='javascript:void(0)' className='name-user body-2'>
                               {testimonial.name}
                             </Link>
                             <Link href='javascript:void(0)' className='position text-medium'>
@@ -110,7 +110,7 @@ export default function TestimonialSection() {
                           </>
                         ) : (
                           <>
-                            <span className='name-user body-2 '>
+                            <span className='name-user body-2'>
                               {testimonial.name}
                             </span>
                             <span className='position text-medium'>

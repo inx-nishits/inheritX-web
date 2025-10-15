@@ -31,7 +31,7 @@ const OurValuableClients = ({
 
       <div className='about-top'>
         <div className='tf-marquee'>
-          <div className='marquee-wrapper logos-marquee-wrapper'>
+          <div className='marquee-wrapper logos-marquee-wrapper clients-marquee-wrapper'>
             <div className='initial-child-container'>
               {duplicatedClients.map((client, index) => (
                 <div key={index} className='big-text fs-initial'>

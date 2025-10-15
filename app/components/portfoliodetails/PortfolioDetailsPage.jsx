@@ -122,8 +122,8 @@ export default async function PortfolioDetailsPage({ params, searchParams }) {
                     </div>
                 </div>
 
-                <div className='next-prev-details tf-spacing-2 pt-5'>
-                    <div className='tf-container pt-5'>
+                <div className='next-prev-details tf-spacing-2 pt-0'>
+                    <div className='tf-container pt-1'>
                         <div className='row rg-50'>
                             <div className='col-6'>
                                 {prev && (
