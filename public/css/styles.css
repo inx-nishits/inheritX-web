@@ -5749,7 +5749,7 @@ a.mapboxgl-ctrl-logo {
     overflow: hidden;
   }
   .page-title-home .top-page-title {
-    padding-top: 60px;
+    /* padding-top: 60px; */
     /* margin-left: -4px; */
     margin-bottom: 20px;
   }

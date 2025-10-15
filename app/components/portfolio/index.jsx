@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { fetchPortfolioItems } from '../../utils/portfolioUtils'
 import PortfolioItem from './PortfolioItem'
 import Breadcrumbs from '../Breadcrumbs'
+ 
 
 
 export const dynamic = 'force-dynamic'
@@ -15,6 +16,7 @@ export default async function PortfolioPage() {
 
     return (
         <>
+            
             <div className='page-title'>
                 <div className='tf-container'>
                     <div className='page-title-content text-center'>

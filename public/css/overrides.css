@@ -1754,6 +1754,9 @@ div .page-title-home.hero-fullscreen {
     height: 44px !important;
     font-size: 16px !important;
   }
+  .page-title-home {
+    margin-top: 30px !important;
+}
 }
 
 @media (max-width: 380px) {
