@@ -65,26 +65,28 @@ export default function OurPlatforms({
         <div className='list-services flex flex-wrap'>
           {platforms.map(({ icon, alt, href, label }) => (
             <div className='services-item px-lg-15 col-md-4 no-img' key={label}>
-              <div
-                className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
-                style={{ width: '100px', height: '100px' }}
-              >
-                <img
-                  src={icon}
-                  alt={alt}
-                  className='lazyload img-fluid'
-                  loading='lazy'
-                  width='60'
-                  height='60'
-                  style={{ maxWidth: '60px' }}
-                />
-              </div>
+              <Link href={href} className='d-block h-100 text-decoration-none'>
+                <div
+                  className='icon bg-white rounded-circle p-4 overflow-hidden d-flex align-items-center justify-content-center'
+                  style={{ width: '100px', height: '100px' }}
+                >
+                  <img
+                    src={icon}
+                    alt={alt}
+                    className='lazyload img-fluid'
+                    loading='lazy'
+                    width='60'
+                    height='60'
+                    style={{ maxWidth: '60px' }}
+                  />
+                </div>
 
-              <div className='lh-30 fw-6'>
-                <Link href={href} className='title-service text-primary'>
-                  {label}
-                </Link>
-              </div>
+                <div className='lh-30 fw-6'>
+                  <span className='title-service text-primary'>
+                    {label}
+                  </span>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
