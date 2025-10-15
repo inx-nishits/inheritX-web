@@ -553,7 +553,7 @@ export default function HomeContent() {
         <section className='section-company tf-spacing-3'>
           <div className='tf-container w-1810'>
             <div className='section-company-inner'>
-              <div className='left-section left-sectionnew pb-1 pt-lg-5'>
+              <div className='left-section left-sectionnew pb-1 pt-lg-1'>
                 <div className='heading-section mb-5'>
                   <div className='sub-title body-2 fw-7 mb-17'>
                     <span className='text-primary'>Grow&nbsp;</span>&&nbsp;Development
