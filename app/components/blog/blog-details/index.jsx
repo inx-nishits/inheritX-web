@@ -322,25 +322,25 @@ export default function BlogDetailsPage({ params }) {
                       <BlogImage src={hero} alt={title || 'Blog cover'} aspectRatio="2/1" fit="contain" priority={true} />
                     )}
                   </div>
-                  <div className='p-4'>
+                  <div className='p-3 p-lg-4'>
                     {showSkeleton ? (
                       <>
-                        <div className="flex align-items-center g-10 text-medium muted mt-10">
+                        <div className="flex align-items-center g-10 muted mt-10">
                           <span className="skeleton skeleton-meta"></span>
                           <span className="skeleton skeleton-meta" style={{ marginLeft: 12 }}></span>
                         </div>
                       </>
                     ) : (
                       <>
-                        <h1 className="fs-32 fw-7 lh-42 mb-4">{title}</h1>
-                        <div className="flex align-items-center g-10 text-medium muted">
+                        <h1 className="fw-7 mb-4">{title}</h1>
+                        <div className="flex align-items-center g-10 muted flex-wrap">
                           <span className="badge-soft-primary">{bloginfo?.category?.[0]?.name || 'Blog'}</span>
-                          {bloginfo?.author && (<><span className="dot"></span><span>{bloginfo.author}</span></>)}
+                          <span className='d-inline-flex align-items-center gap-2 align-items-center'>{bloginfo?.author && (<><span className="dot"></span><span>{bloginfo.author}</span></>)}</span>
                         </div>
                       </>
                     )}
                   </div>
-                  <div className='p-4 pt-0'>
+                  <div className='p-3 p-lg-4 pt-0'>
                     {!showSkeleton && !error && bloginfo?.content && (
                       <div className="rich-content" dangerouslySetInnerHTML={{ __html: bloginfo.content }} />
                     )}

@@ -75,7 +75,7 @@ export default function HireExpertContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-lg-6 mb-5'>
-                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '500px' }}>
+                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '400px' }}>
                   <Image
                     src='/image/page-title/image-6.jpg'
                     alt=''

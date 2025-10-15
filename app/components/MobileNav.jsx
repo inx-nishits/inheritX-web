@@ -1,5 +1,5 @@
 'use client'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -18,6 +18,11 @@ export default function MobileNav ({ menuData, onNavigate }) {
   }, [menuData])
 
   const [open, setOpen] = useState(initialOpenMap)
+
+  // Close all mega sections on route change so menu is reset when reopened
+  useEffect(() => {
+    setOpen(initialOpenMap)
+  }, [pathname, initialOpenMap])
 
   const toggle = idx => {
     // Accordion behavior: only one open at a time

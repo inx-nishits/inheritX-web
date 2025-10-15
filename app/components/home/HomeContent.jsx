@@ -556,7 +556,7 @@ export default function HomeContent() {
               <div className='left-section left-sectionnew pb-1 pt-lg-5'>
                 <div className='heading-section mb-5'>
                   <div className='sub-title body-2 fw-7 mb-17'>
-                    <span className='text-primary'>Grow</span> & Development
+                    <span className='text-primary'>Grow&nbsp;</span>&&nbsp;Development
                   </div>
                   <h2 className='title fw-6'>
                     Modern Technology and

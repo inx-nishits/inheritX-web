@@ -583,7 +583,7 @@ a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-a:hover, a:focus {
+a:hover {
   color: var(--primary);
   outline: 0;
   -webkit-transition: all 0.3s ease;
@@ -1437,6 +1437,14 @@ a:hover, a:focus {
 }
 #menu-mobile > li a {
   padding: 15px 0;
+}
+#menu-mobile .mobile-mega li a{
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+#menu-mobile .mobile-mega {
+  padding-top: 0 !important;
 }
 #menu-mobile > li .sub-menu-mobile {
   border-radius: 8px;

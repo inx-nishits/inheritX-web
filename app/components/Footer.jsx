@@ -446,7 +446,7 @@ export default function Footer() {
                 <Link href='/' className='fw-7'>
                   &nbsp;InheritX&nbsp;
                 </Link>
-                - IT Services. All rights reserved.
+                - IT Services. All&nbsp;rights&nbsp;reserved.
               </span>
               <ul className='d-none d-lg-flex align-items-center justify-content-center flex-wrap rg-15'>
                 <li>

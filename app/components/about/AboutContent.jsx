@@ -546,7 +546,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
 
@@ -576,7 +576,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -606,7 +606,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -637,7 +637,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -667,7 +667,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -697,7 +697,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -728,7 +728,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -758,7 +758,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '100px' }}
+                    style={{ maxWidth: '60px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>

@@ -30,9 +30,18 @@ export default function LifeAtInheritX() {
   useEffect(() => {
     if (!isGalleryOpen) return
     const handleKey = (e) => {
-      if (e.key === 'Escape') setIsGalleryOpen(false)
-      if (e.key === 'ArrowRight') setActiveIndex((i) => (i + 1) % galleryImages.length)
-      if (e.key === 'ArrowLeft') setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length)
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        setIsGalleryOpen(false)
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        setActiveIndex((i) => (i + 1) % galleryImages.length)
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length)
+      }
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
@@ -41,22 +50,11 @@ export default function LifeAtInheritX() {
   // Prevent body scroll when gallery modal is open
   useEffect(() => {
     if (isGalleryOpen) {
-      // Store current scroll position
-      const scrollY = window.scrollY
-      // Prevent body scroll
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${scrollY}px`
-      document.body.style.width = '100%'
+      // Simple: only hide body overflow
       document.body.style.overflow = 'hidden'
-      
+
       return () => {
-        // Restore body scroll
-        document.body.style.position = ''
-        document.body.style.top = ''
-        document.body.style.width = ''
         document.body.style.overflow = ''
-        // Restore scroll position
-        window.scrollTo(0, scrollY)
       }
     }
   }, [isGalleryOpen])

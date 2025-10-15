@@ -334,7 +334,7 @@ body {
 /* Page titles */
 @media (min-width: 992px) and (max-width: 1399.98px) {
   .page-title .page-title-content {
-    padding-top: 60px !important;
+    padding-top: 40px !important;
     padding-bottom: 30px !important;
   }
 }
@@ -1531,7 +1531,7 @@ a[href='javascript:;'] {
 
 /* Force hero section to start exactly at header bottom */
 .page-title-home {
-  margin-top: 0 !important;
+  margin-top: 40px !important;
   padding-top: 0 !important;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
