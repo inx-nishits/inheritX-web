@@ -2766,6 +2766,30 @@ display: none !important;
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
   -webkit-line-clamp: 2 !important;
+  line-clamp: 2 !important;
   overflow: hidden !important;
   text-overflow: ellipsis;
+}
+
+/* Remove line/height limits for hero typing text below 1200px */
+@media (max-width: 1199px) {
+  .hero-typing-text,
+  .page-title-home .herosectionContainer .top-page-title h2.hero-typing-text,
+  .title.hero-typing-text {
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    display: block !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    white-space: normal !important;
+  }
+
+  .hero-typing-text::before,
+  .hero-typing-text::after {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
 }
