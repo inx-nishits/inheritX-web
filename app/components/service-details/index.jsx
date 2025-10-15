@@ -54,12 +54,12 @@ export default function ServiceDetails({ params }) {
                   </div>
 
                   {service.banner && (
-                    <div className="image rounded-3 mb-5 overflow-hidden">
+                    <div className="image rounded-3 mb-5 overflow-hidden" style={{ maxWidth: '800px', margin: '0' }}>
                       <img
                         src={service.banner}
                         alt={service.heading}
                         className="lazyload rounded-4"
-                        style={{ width: 'auto', height: '450px', objectFit: 'cover' }}
+                        style={{ width: '100%', aspectRatio: '16 / 9', objectFit: 'cover' }}
                       />
                     </div>
                   )}

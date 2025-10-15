@@ -16,6 +16,21 @@ const platforms = [
   { icon: '/image/services-icon/IOT.png', alt: 'IoT', href: '/services/iot-development', label: 'IOT Development' },
   { icon: '/image/services-icon/pwa.png', alt: 'PWA', href: '/services/pwa-development', label: 'PWA Development' },
   { icon: '/image/services-icon/digitalmarketing.svg', alt: 'Digital Marketing', href: '/services/seo-services', label: 'Digital Marketing' },
+  { icon: '/image/services-icon/apple.svg', alt: 'Apple iOS', href: '/services/iphone-app-development', label: 'iOS Development' },
+  { icon: '/image/services-icon/android.svg', alt: 'Android', href: '/services/android-app-development', label: 'Android Development' },
+  { icon: '/image/services-icon/flutter.svg', alt: 'Flutter', href: '/services/flutter-app-development', label: 'Flutter Development' },
+  { icon: '/image/services-icon/react.svg', alt: 'React', href: '/services/react-native-app-development', label: 'React Native Development' },
+  { icon: '/image/services-icon/angular.png', alt: 'Angular', href: '/services/angularjs-development', label: 'AngularJS Development' },
+  { icon: '/image/services-icon/python.svg', alt: 'Python', href: '/services/python-development', label: 'Python Development' },
+  { icon: '/image/services-icon/nextjs.svg', alt: 'Next.js', href: '/services/nextjs-development', label: 'NextJS Development' },
+  { icon: '/image/services-icon/laravel.svg', alt: 'Laravel', href: '/services/laravel-development', label: 'Laravel Development' },
+  { icon: '/image/services-icon/react.svg', alt: 'React', href: '/services/reactjs-development', label: 'ReactJS Development' },
+  { icon: '/image/services-icon/nodejs.svg', alt: 'Node.js', href: '/services/nodejs-development', label: 'Node.js Development' },
+  { icon: '/image/services-icon/php.svg', alt: 'PHP', href: '/services/php-development', label: 'PHP Development' },
+  { icon: '/image/services-icon/aws.svg', alt: 'AWS', href: '/services/aws-services', label: 'AWS Services' },
+  { icon: '/image/services-icon/IOT.png', alt: 'IoT', href: '/services/iot-development', label: 'IOT Development' },
+  { icon: '/image/services-icon/pwa.png', alt: 'PWA', href: '/services/pwa-development', label: 'PWA Development' },
+  { icon: '/image/services-icon/digitalmarketing.svg', alt: 'Digital Marketing', href: '/services/seo-services', label: 'Digital Marketing' },
 ]
 
 export default function OurPlatforms({
