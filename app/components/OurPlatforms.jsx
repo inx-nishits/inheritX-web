@@ -75,9 +75,9 @@ export default function OurPlatforms({
                     alt={alt}
                     className='lazyload img-fluid'
                     loading='lazy'
-                    width='60'
-                    height='60'
-                    style={{ maxWidth: '60px' }}
+                    width='45'
+                    height='45'
+                    style={{ maxWidth: '45px' }}
                   />
                 </div>
 

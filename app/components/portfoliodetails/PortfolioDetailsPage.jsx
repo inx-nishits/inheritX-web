@@ -66,7 +66,7 @@ export default async function PortfolioDetailsPage({ params, searchParams }) {
                                         src={item.cover}
                                         alt={item.title}
                                         className='rounded'
-                                        style={{ maxHeight: '400px', objectFit: 'contain' }}
+                                        style={{ width: '300px', maxWidth: '300px', maxHeight: '300px', objectFit: 'contain' }}
                                     />
                                 </div>
                             )}
