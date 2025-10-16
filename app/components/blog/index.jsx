@@ -836,7 +836,7 @@ export default function BlogListPage() {
             </div>
 
             {/* Most Popular Section */}
-            <div className="most-popular-section tf-spacing-1">
+            <div className="most-popular-section tf-spacing-2">
                 <div className="tf-container">
                     <div className="row">
                         <div className="col-12">
@@ -928,7 +928,7 @@ export default function BlogListPage() {
             </div>
 
             {/* Trending Section */}
-            <div className="trending-section tf-spacing-1">
+            <div className="trending-section tf-spacing-2">
                 <div className="tf-container">
                     <div className="row">
                         <div className="col-12">
