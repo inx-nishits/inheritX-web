@@ -350,6 +350,36 @@ export default function JoinOurTeam() {
       window.removeEventListener('popstate', handlePopState)
     }
   }, [])
+
+  // Handle viewport changes to prevent zoom on mobile when modal opens/closes
+  useEffect(() => {
+    const modalEl = typeof document !== 'undefined' ? document.getElementById('applyReactModal') : null
+    if (!modalEl) return
+
+    const handleModalShow = () => {
+      // Prevent zoom by ensuring viewport settings are maintained
+      const viewport = document.querySelector('meta[name="viewport"]')
+      if (viewport) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover')
+      }
+    }
+
+    const handleModalHide = () => {
+      // Restore original viewport settings when modal closes
+      const viewport = document.querySelector('meta[name="viewport"]')
+      if (viewport) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover')
+      }
+    }
+
+    modalEl.addEventListener('show.bs.modal', handleModalShow)
+    modalEl.addEventListener('hide.bs.modal', handleModalHide)
+    
+    return () => {
+      modalEl.removeEventListener('show.bs.modal', handleModalShow)
+      modalEl.removeEventListener('hide.bs.modal', handleModalHide)
+    }
+  }, [])
   return (
     <>
       {/* Dynamic Apply Modal */}

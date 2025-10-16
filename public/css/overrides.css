@@ -597,6 +597,8 @@ body {
 .modal-career .form-contact-us textarea {
   min-height: 54px;
   /* taller inputs */
+  font-size: 16px !important; /* Prevent zoom on iOS */
+  -webkit-text-size-adjust: 100% !important;
 }
 
 /* Ensure contact form textarea scrolls when content exceeds max height */
@@ -662,6 +664,32 @@ body {
   .modal-career-title {
     padding-right: 8px;
   }
+}
+
+/* Prevent zoom on mobile when focusing inputs in modal */
+.modal-career input,
+.modal-career textarea,
+.modal-career select {
+  font-size: 16px !important;
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border-radius: 8px !important;
+}
+
+/* Ensure all form controls in modal have consistent sizing */
+.modal-career .form-control,
+.modal-career .form-select {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  padding: 12px 16px !important;
+}
+
+/* Specific styling for file inputs */
+.modal-career input[type="file"] {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  padding: 8px 12px !important;
 }
 
 /* Dark scrollbar styling scoped to modal (covers dialog/content/body) */
@@ -2802,3 +2830,7 @@ display: none !important;
     width: 0 !important;
   }
 }
+
+.form-control.is-invalid {background-image: none !important;}
+
+.form-contact-us .text-danger {font-size: 12px !important;}

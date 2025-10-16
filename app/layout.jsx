@@ -73,7 +73,8 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1,
+  userScalable: false,
   viewportFit: 'cover',
   themeColor
 }
@@ -169,7 +170,7 @@ export default function RootLayout({ children }) {
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
         {/* Preload critical hero image for LCP */}
-        <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' imagesrcset='/image/page-title/herobanner-final.jpg' />
+        <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' imageSrcSet='/image/page-title/herobanner-final.jpg' />
         {/* Safe CSS preloads to speed up first paint without changing behavior */}
         <link rel='preload' as='style' href='/css/bootstrap.css' />
         <link rel='preload' as='style' href='/css/styles.css' />
