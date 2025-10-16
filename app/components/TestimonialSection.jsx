@@ -99,25 +99,12 @@ export default function TestimonialSection() {
                         {testimonial.text}
                       </div>
                       <div className='user-testimonial'>
-                        {testimonial.id === 5 ? (
-                          <>
-                            <Link href='javascript:void(0)' className='name-user body-2'>
-                              {testimonial.name}
-                            </Link>
-                            <Link href='javascript:void(0)' className='position text-medium'>
-                              {testimonial.position}
-                            </Link>
-                          </>
-                        ) : (
-                          <>
-                            <span className='name-user body-2'>
-                              {testimonial.name}
-                            </span>
-                            <span className='position text-medium'>
-                              {testimonial.position}
-                            </span>
-                          </>
-                        )}
+                        <span className='name-user body-2'>
+                          {testimonial.name}
+                        </span>
+                        <span className='position text-medium'>
+                          {testimonial.position}
+                        </span>
                       </div>
                     </div>
                   </div>

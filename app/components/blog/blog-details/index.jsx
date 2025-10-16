@@ -63,13 +63,7 @@ export default function BlogDetailsPage({ params }) {
           categories: categoriesWithCounts
         };
         
-        // Debug: Log the merged data
-        console.log('Blog details data:', mergedData);
-        console.log('Blog details categories with counts:', mergedData?.categories);
-        if (mergedData?.categories?.length > 0) {
-            console.log('First category object:', mergedData.categories[0]);
-            console.log('Available properties:', Object.keys(mergedData.categories[0]));
-        }
+        // Data merged successfully
         
         if (isMounted) {
           setDetails(mergedData || null);

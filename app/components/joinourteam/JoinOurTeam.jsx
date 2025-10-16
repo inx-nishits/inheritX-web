@@ -852,36 +852,36 @@ export default function JoinOurTeam() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
-                  <div className='big-text'>Work <span className='text-stroke'>Culture</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
+                  <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
                 </div>
               </div>
             </div>
@@ -1015,36 +1015,36 @@ export default function JoinOurTeam() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
-                  <div className='big-text'>Current <span className='text-stroke'>Openings</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
+                  <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
                 </div>
               </div>
             </div>
@@ -1341,12 +1341,12 @@ export default function JoinOurTeam() {
                           The team has been fantastic. I have been working with them for nearly two years now and have not been able to find a fault in their performance or attitude. They are extremely professional and polite.
                         </div>
                         <div className='user-testimonial'>
-                          <Link href='javascript:void(0)' className='name-user body-2'>
+                          <span className='name-user body-2'>
                             Dorain
-                          </Link>
-                          <Link href='javascript:void(0)' className='position text-medium'>
+                          </span>
+                          <span className='position text-medium'>
                             Developer
-                          </Link>
+                          </span>
                         </div>
                       </div>
                     </div>

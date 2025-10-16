@@ -290,36 +290,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
                 </div>
               </div>
             </div>
@@ -608,36 +608,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
                 </div>
               </div>
             </div>

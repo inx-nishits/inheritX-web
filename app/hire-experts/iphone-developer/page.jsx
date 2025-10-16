@@ -129,36 +129,36 @@ export default function HireIPhoneDeveloperPage() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
-                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
+                  <div className='big-text'>Flexible <span className='text-stroke'>Hiring</span> Models&nbsp;</div>
                 </div>
               </div>
             </div>

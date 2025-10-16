@@ -85,21 +85,7 @@ export default function CategoryDetailsPage() {
           categories: categoriesWithCounts
         };
 
-        // Debug: Log the merged data
-        console.log('Category data:', mergedData);
-        console.log('Category data categories with counts:', mergedData?.categories);
-        if (mergedData?.categories?.length > 0) {
-            console.log('First category object:', mergedData.categories[0]);
-            console.log('Available properties:', Object.keys(mergedData.categories[0]));
-            console.log('Count values:', {
-                count: mergedData.categories[0].count,
-                post_count: mergedData.categories[0].post_count,
-                total_posts: mergedData.categories[0].total_posts,
-                posts_count: mergedData.categories[0].posts_count,
-                total: mergedData.categories[0].total,
-                postCount: mergedData.categories[0].postCount
-            });
-        }
+        // Data merged successfully
 
         if (isMounted) {
           setCategoryData(mergedData);

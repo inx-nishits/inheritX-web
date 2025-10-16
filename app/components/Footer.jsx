@@ -10,36 +10,36 @@ export default function Footer() {
           <div className='tf-marquee'>
             <div className='marquee-wrapper'>
               <div className='initial-child-container'>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
-                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
+                <div className='big-text'>Get In Touch <span className='text-stroke'>Contact Us&nbsp;</span></div>
               </div>
             </div>
           </div>

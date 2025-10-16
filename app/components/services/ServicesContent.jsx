@@ -108,36 +108,36 @@ export default function ServicesContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
-                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
+                  <div className='big-text'>Explore <span className='text-stroke'>Popular</span> Services&nbsp;</div>
                 </div>
               </div>
             </div>

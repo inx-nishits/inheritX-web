@@ -4209,7 +4209,7 @@ a.mapboxgl-ctrl-logo {
 }
 
 /* Safari-specific font size */
-@supports (-webkit-appearance: none) {
+@supports (-webkit-appearance: none) and (not (color: -webkit-link)) {
   .text-rotate svg text {
     font-size: 27px;
   }
@@ -5146,6 +5146,11 @@ a.mapboxgl-ctrl-logo {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+}
+
+/* Hide progress-wrap when body has overflow hidden (e.g., when modals/sidebars are open) */
+body[style*="overflow: hidden"] .progress-wrap {
+  display: none !important;
 }
 .progress-wrap svg path {
   fill: none;
