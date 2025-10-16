@@ -197,8 +197,6 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-  overflow-y: auto;
   line-height: 1.4;
 }
 
