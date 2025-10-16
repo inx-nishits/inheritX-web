@@ -850,7 +850,7 @@ export default function JoinOurTeam() {
           </div>
           <div className='section-top'>
             <div className='tf-marquee'>
-              <div className='marquee-wrapper'>
+              <div className='marquee-wrapper work-culture-marquee'>
                 <div className='initial-child-container'>
                   <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
                   <div className='big-text'>Work <span className='text-stroke'>Culture&nbsp;</span></div>
@@ -1013,7 +1013,7 @@ export default function JoinOurTeam() {
           </div>
           <div className='section-top'>
             <div className='tf-marquee'>
-              <div className='marquee-wrapper'>
+              <div className='marquee-wrapper work-culture-marquee'>
                 <div className='initial-child-container'>
                   <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>
                   <div className='big-text'>Current <span className='text-stroke'>Openings&nbsp;</span></div>

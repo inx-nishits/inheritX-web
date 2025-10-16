@@ -1875,6 +1875,8 @@ div .page-title-home.hero-fullscreen {
 /* Clients section: 7 logos - 56s duration (80s * 7/10) */
 .tf-marquee .marquee-wrapper.clients-marquee-wrapper {animation: infiniteScroll 56s linear infinite !important;}
 
+.tf-marquee .marquee-wrapper.work-culture-marquee {animation: infiniteScroll 400s linear infinite !important;}
+
 /* Seamless marquee keyframes: shift by half width when content duplicated twice */
 @keyframes infiniteScroll {
   0% { transform: translateX(0); }
