@@ -4206,9 +4206,10 @@ a.mapboxgl-ctrl-logo {
   letter-spacing: 0.5px;
 }
 
-/* Safari-specific font size */
-@supports (-webkit-appearance: none) and (not (color: -webkit-link)) {
-  .text-rotate svg text {
+/* Safari-specific font size: iOS and macOS */
+@supports (font: -apple-system-body) {
+  .text-rotate svg text,
+  .text-rotate svg textPath {
     font-size: 27px;
   }
 }
