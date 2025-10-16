@@ -564,7 +564,7 @@ export default function HomeContent() {
                   </div>
                   <h2 className='title fw-6'>
                     Modern Technology and
-                    <span className='fw-3'>Advancement Incentives</span>
+                    <span className='fw-3'>&nbsp;Advancement Incentives</span>
                   </h2>
                 </div>
                 <Accordion />
