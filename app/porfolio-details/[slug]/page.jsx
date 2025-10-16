@@ -43,12 +43,12 @@ export async function generateMetadata ({ params }) {
   }
 }
 
-export default async function PortfolioListDetailsPage ({ params }) {
+export default async function PortfolioListDetailsPage ({ params, searchParams }) {
   const { slug } = params || {}
 
   return (
     <>
-     <PortfolioDetailsPage params={{ slug }} />
+     <PortfolioDetailsPage params={{ slug }} searchParams={searchParams} />
     </>
   )
 }

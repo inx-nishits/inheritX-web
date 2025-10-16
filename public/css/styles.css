@@ -4208,6 +4208,13 @@ a.mapboxgl-ctrl-logo {
   letter-spacing: 0.5px;
 }
 
+/* Safari-specific font size */
+@supports (-webkit-appearance: none) {
+  .text-rotate svg text {
+    font-size: 27px;
+  }
+}
+
 .wg-curve-text {
   position: relative;
   width: 270px;
