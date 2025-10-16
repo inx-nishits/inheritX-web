@@ -326,7 +326,7 @@ export default function BlogDetailsPage({ params }) {
                       </>
                     ) : (
                       <>
-                        <h1 className="fw-7 mb-4">{title}</h1>
+                        <h3 className="fw-7 mb-4">{title}</h3>
                         <div className="flex align-items-center g-10 muted flex-wrap">
                           <span className="badge-soft-primary">{bloginfo?.category?.[0]?.name || 'Blog'}</span>
                           <span className='d-inline-flex align-items-center gap-2 align-items-center'>{bloginfo?.author && (<><span className="dot"></span><span>{bloginfo.author}</span></>)}</span>

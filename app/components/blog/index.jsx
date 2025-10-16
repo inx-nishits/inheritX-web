@@ -590,7 +590,7 @@ export default function BlogListPage() {
           position: relative;
           overflow: hidden;
           background: #2a2a2a;
-          border-radius: 8px; /* match card/image rounding */
+          border-radius: 0px; /* match card/image rounding */
         }
         .skeleton::after {
           content: "";
