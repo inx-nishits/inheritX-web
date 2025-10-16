@@ -175,7 +175,7 @@ export default function Header() {
         <div className='inner-mobile-nav'>
           <div className='top-header-mobi'>
             <div className='logo-mobile'>
-              <Link href='/'>
+              <Link href='/' onClick={() => { setIsMobileOpen(false); window.scrollTo(0, 0) }}>
                 <Image src='/image/logo/inx-logo.svg' alt='InheritX logo' width={250} height={40} priority />
               </Link>
             </div>

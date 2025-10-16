@@ -92,7 +92,11 @@ export default function HomeContent() {
 
               <div className='top-page-title mb-0'>
                 <div className='sub-title body-1 fw-5'>
-                  Empowering Innovation at <span className='text-primary'>InheritX Solutions</span>
+                  Empowering Innovation at <span className='text-primary'>InheritX&nbsp;Solutions</span>
+                </div>
+
+                <div className='fw-5 fs-1 mb-4'>
+                  <span className='text-primary'>E</span>xperience <span className='text-primary'>T</span>he <span className='text-primary'>E</span>xcellence
                 </div>
 
                 <div className='sub-title fs-2 fw-5 d-none'>
@@ -163,7 +167,7 @@ export default function HomeContent() {
 
         {/* Enhanced Counter Grid */}
         <div className='row g-4'>
-          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
             <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
               <div className='counter text-center'>
                 <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
@@ -176,14 +180,14 @@ export default function HomeContent() {
                   </span>
                   <span className='text-white ms-1'>+</span>
                 </div>
-                <p className='title-counter lh-30 fw-5 text-white text-center'>
+                <p className='title-counter fw-5 text-white text-center'>
                   Verified 5* Client Reviews
                 </p>
               </div>
             </div>
           </div>
 
-          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
             <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
               <div className='counter text-center'>
                 <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
@@ -196,14 +200,14 @@ export default function HomeContent() {
                   </span>
                   <span className='color-primary ms-1'>+</span>
                 </div>
-                <p className='title-counter lh-30 fw-5 text-center'>
+                <p className='title-counter fw-5 text-center'>
                   Projects Delivered Successfully
                 </p>
               </div>
             </div>
           </div>
 
-          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
             <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
               <div className='counter text-center'>
                 <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
@@ -216,14 +220,14 @@ export default function HomeContent() {
                   </span>
                   <span className='text-white ms-1'>%</span>
                 </div>
-                <p className='title-counter lh-30 fw-5 text-white text-center'>
+                <p className='title-counter fw-5 text-white text-center'>
                   Client Retention Ratio
                 </p>
               </div>
             </div>
           </div>
 
-          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
             <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
               <div className='counter text-center'>
                 <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
@@ -236,14 +240,14 @@ export default function HomeContent() {
                   </span>
                   <span className='color-primary ms-1'>+</span>
                 </div>
-                <p className='title-counter lh-30 fw-5 text-center'>
+                <p className='title-counter fw-5 text-center'>
                   Industries Served
                 </p>
               </div>
             </div>
           </div>
 
-          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
             <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
               <div className='counter text-center'>
                 <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
@@ -256,14 +260,14 @@ export default function HomeContent() {
                   </span>
                   <span className='text-white ms-1'>+</span>
                 </div>
-                <p className='title-counter lh-30 fw-5 text-white text-center'>
+                <p className='title-counter fw-5 text-white text-center'>
                   Development Staff
                 </p>
               </div>
             </div>
           </div>
 
-          <div className='col-6 col-lg-4 col-xl-2 mb-4'>
+          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
             <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
               <div className='counter text-center'>
                 <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
@@ -271,7 +275,7 @@ export default function HomeContent() {
                     24/7
                   </span>
                 </div>
-                <p className='title-counter lh-30 fw-5 text-center'>
+                <p className='title-counter fw-5 text-black text-center'>
                   Support
                 </p>
               </div>
@@ -723,7 +727,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services/machine-learning-development'
-                           className='title-service fs-1 text-primary'
+                            className='title-service fs-1 text-primary'
                           >
                             Artificial Intelligence
                           </Link>
@@ -773,7 +777,7 @@ export default function HomeContent() {
                         <h6 className='lh-30 fw-6'>
                           <Link
                             href='/services/mobile-app-development'
-                           className='title-service fs-1 text-primary'
+                            className='title-service fs-1 text-primary'
                           >
                             Mobile App Development
                           </Link>
@@ -824,7 +828,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services'
-                           className='title-service fs-1 text-primary'
+                            className='title-service fs-1 text-primary'
                           >
                             DevOps
                           </Link>
@@ -875,7 +879,7 @@ export default function HomeContent() {
                         <p className='lh-30 fw-6'>
                           <Link
                             href='/services/google-cloud-services'
-                           className='title-service fs-1 text-primary'
+                            className='title-service fs-1 text-primary'
                           >
                             Cloud Computing
                           </Link>
@@ -913,7 +917,7 @@ export default function HomeContent() {
           </div>
         </section>
 
-       
+
 
         <section className='section-team tf-spacing-2'>
           <div className='mask mask-1'>

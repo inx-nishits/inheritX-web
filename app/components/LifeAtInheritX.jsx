@@ -122,7 +122,7 @@ export default function LifeAtInheritX() {
 
       {isGalleryOpen && (
         <div
-          className='position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center'
+          className='position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center galleryModal'
           style={{ background: 'rgba(0,0,0,0.85)', zIndex: 1050 }}
           onClick={() => setIsGalleryOpen(false)}
         >
