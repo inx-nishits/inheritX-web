@@ -177,7 +177,7 @@ export default function ServiceDetails({ params }) {
                 <div className="initial-child-container">
                   {Array(12).fill().map((_, index) => (
                     <div key={index} className="big-text">
-                      Value <span className="text-stroke">Added</span> Services
+                      Value <span className="text-stroke">Added</span> Services&nbsp;
                     </div>
                   ))}
                 </div>

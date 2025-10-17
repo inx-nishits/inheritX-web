@@ -6,8 +6,8 @@ import CounterInitializer from './components/CounterInitializer'
 import { Toaster } from 'react-hot-toast'
 
 // SEO base configuration
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
-const defaultOgImage = `${siteUrl}/image/logo/inx-icon.png` // Fallback: use an existing image in /public/image/logo
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
+const defaultOgImage = `${siteUrl}/image/logo/inx-icon-link.png` // Fallback: use an existing image in /public/image/logo
 const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 
 export const metadata = {
@@ -66,7 +66,7 @@ export const metadata = {
     follow: true
   },
   icons: {
-    icon: '/image/logo/inx-icon.png' // Placeholder: switch to '/favicon.ico' if present at project root
+    icon: '/image/logo/inx-icon-link.png' // Placeholder: switch to '/favicon.ico' if present at project root
   },
 }
 
@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
     '@type': 'Organization',
     name: 'InheritX',
     url: siteUrl,
-    logo: `${siteUrl}/image/logo/inx-icon.png`,
+    logo: `${siteUrl}/image/logo/inx-icon-link.png`,
     sameAs: [
       'https://www.linkedin.com/company/inheritx/',
       'https://twitter.com/inhx_tech',

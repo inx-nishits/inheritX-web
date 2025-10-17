@@ -1,5 +1,5 @@
 export default async function sitemap () {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
   // Static routes. Add more as needed.
   const staticRoutes = [

@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata ({ params }) {
   const { slug } = params || {}
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
   const items = await fetchPortfolioItems()
   const item = Array.isArray(items) ? items.find(p => p.slug === slug) : null

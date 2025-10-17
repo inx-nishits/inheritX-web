@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://inherit-x-web.vercel.app/sitemap.xml
+Sitemap: https://www.inheritx.com/sitemap.xml
 

@@ -2,7 +2,7 @@ import BlogDetailsPage from "../../components/blog/blog-details";
 
 export async function generateMetadata({ params }) {
   const { slug } = params || {}
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
   // TODO: Replace this mock with real post data fetch once available
   const postTitle = slug ? slug.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : 'Blog'
