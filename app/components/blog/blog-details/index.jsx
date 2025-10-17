@@ -84,6 +84,79 @@ export default function BlogDetailsPage({ params }) {
   const title = bloginfo?.title;
   const hero = bloginfo?.feature_image || '/image/blog/blog-fallback.jpg';
 
+  // Dynamic SEO updates when blog data loads
+  useEffect(() => {
+    if (bloginfo && title) {
+      // Update document title
+      document.title = `${title} | InheritX Blog`;
+      
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`);
+      }
+
+      // Update Open Graph title
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) {
+        ogTitle.setAttribute('content', title);
+      }
+
+      // Update Open Graph description
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute('content', bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`);
+      }
+
+      // Update Open Graph image if available
+      if (hero && hero !== '/image/blog/blog-fallback.jpg') {
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage) {
+          ogImage.setAttribute('content', hero);
+        }
+      }
+
+      // Add structured data for better SEO
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`,
+        "image": hero !== '/image/blog/blog-fallback.jpg' ? hero : undefined,
+        "author": {
+          "@type": "Person",
+          "name": bloginfo.author || "InheritX Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "InheritX",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'}/image/logo/inx-logo.png`
+          }
+        },
+        "datePublished": bloginfo.date,
+        "dateModified": bloginfo.modified_date || bloginfo.date,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'}/blog/${slug}`
+        }
+      };
+
+      // Remove existing structured data
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      // Add new structured data
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [bloginfo, title, hero, slug]);
+
   return (
     <main>
       <style jsx>{`
@@ -362,7 +435,7 @@ export default function BlogDetailsPage({ params }) {
                   <ul className="list">
                     {!showSkeleton && (details?.categories || []).map((cat) => (
                       <li className="item" key={cat.id}>
-                        <i className="icon-arrow-right"></i>
+                            <i className="icon-arrow-right"></i>
                         <Link href={`/blog/category/${cat.slug}`} className="fs-4 fw-5">{cat.name}</Link>
                         <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                       </li>
