@@ -1695,15 +1695,6 @@ div .page-title-home.hero-fullscreen {
   }
 }
 
-/* Disable custom cursor dots and trails on touch/coarse pointer devices */
-@media (pointer: coarse),
-(hover: none) {
-
-  .cursor-dot,
-  .cursor-trail {
-    display: none !important;
-  }
-}
 
 /* Contact Form Styling Improvements */
 

@@ -242,9 +242,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <div className='cursor-dot'></div>
-        <div className='cursor-dot'></div>
-        <div className='cursor-dot'></div>
 
         {/* Vendor scripts (kept for parity; can be refactored to React later) */}
         {/* Defer jQuery to not block rendering */}
@@ -265,7 +262,6 @@ export default function RootLayout({ children }) {
         <Script src='/js/ScrollSmooth.js' strategy='afterInteractive' />
         <Script src='/js/carousel.js' strategy='afterInteractive' />
         <Script src='/js/jquery-validate.js' strategy='afterInteractive' />
-        <Script src='/js/cursor.js' strategy='afterInteractive' />
       </body>
     </html>
   )

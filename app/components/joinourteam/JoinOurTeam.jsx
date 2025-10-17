@@ -892,7 +892,7 @@ export default function JoinOurTeam() {
               <div className='col-12'>
                 <div className='heading-section mb-3 mb-xl-5 text-center'>
                   <h2 className='title fw-6'>
-                    We <span className='text-primary'>&nbsp;Inspire You to Come</span>
+                    We <span className='text-primary'>&nbsp;Inspire You to Come&nbsp;</span>
                     Up with Your Best
                   </h2>
                 </div>
