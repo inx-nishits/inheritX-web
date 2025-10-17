@@ -14,7 +14,7 @@ export default function BlogDetailsPage({ params }) {
   const [error, setError] = useState(null);
   const [isCategorySidebarOpen, setIsCategorySidebarOpen] = useState(false);
   const showSkeleton = loading || !details;
-
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
   // Category sidebar toggle functions
   const openCategorySidebar = () => {
     setIsCategorySidebarOpen(true);
@@ -132,14 +132,14 @@ export default function BlogDetailsPage({ params }) {
           "name": "InheritX",
           "logo": {
             "@type": "ImageObject",
-            "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'}/image/logo/inx-logo.png`
+            "url": `${siteUrl}/image/logo/inx-icon-link.png`
           }
         },
         "datePublished": bloginfo.date,
         "dateModified": bloginfo.modified_date || bloginfo.date,
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://inherit-x-web.vercel.app'}/blog/${slug}`
+          "@id": `${siteUrl}/blog/${slug}`
         }
       };
 
