@@ -1,6 +1,8 @@
+"use client";
 import Link from 'next/link'
 import { HireUsData } from '../../../hire-experts/hireusJsonData'
 import Breadcrumbs from '../../Breadcrumbs'
+import { useEffect } from 'react'
 
 
 export const dynamic = 'force-static'
@@ -31,6 +33,83 @@ const findBestCandidate = (candidates) => {
 export default function HireDetailsPage({ params }) {
   const candidates = HireUsData.Data.filter(d => toSlug(d.category) === params.slug)
   const full = findBestCandidate(candidates)
+
+  // Dynamic SEO updates when hire expert data loads
+  useEffect(() => {
+    if (full) {
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com';
+      
+      // Update document title
+      document.title = `${full.heading} | InheritX Experts`;
+      
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`);
+      }
+
+      // Update Open Graph title
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) {
+        ogTitle.setAttribute('content', `${full.heading} | InheritX Experts`);
+      }
+
+      // Update Open Graph description
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`);
+      }
+
+      // Add structured data for better SEO
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": `${full.heading}`,
+        "description": full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`,
+        "provider": {
+          "@type": "Organization",
+          "name": "InheritX",
+          "url": siteUrl,
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${siteUrl}/image/logo/inx-icon-link.png`
+          }
+        },
+        "serviceType": `${full.heading}`,
+        "areaServed": "Worldwide",
+        "url": `${siteUrl}/hire-experts/${params.slug}`,
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Full-Time Hiring",
+            "description": "160 Hours/Month - Email, Teams, Phone communication"
+          },
+          {
+            "@type": "Offer", 
+            "name": "Part-Time Hiring",
+            "description": "80 Hours/Month - Email, Teams, Phone communication"
+          },
+          {
+            "@type": "Offer",
+            "name": "Hourly Hiring", 
+            "description": "Pay Per Use - Email, Teams, Phone communication"
+          }
+        ]
+      };
+
+      // Remove existing structured data
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      // Add new structured data
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [full, params.slug]);
 
   if (!full) {
     return (

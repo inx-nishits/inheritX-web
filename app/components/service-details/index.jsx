@@ -2,10 +2,109 @@
 import Link from 'next/link';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { servicesData } from '../../components/services/servicesData';
+import { useEffect } from 'react';
+
+// Utility function to handle image URLs
+const getAbsoluteImageUrl = (imagePath, siteUrl) => {
+
+  if (!imagePath) return `${siteUrl}/image/logo/inx-icon-link.png`;
+  
+  if (imagePath.startsWith('http')) {
+    return imagePath;
+  } else if (imagePath.startsWith('/')) {
+    // Local image path starting with / - prepend site URL
+    const result = `${siteUrl}${imagePath}`;
+    return result;
+  } else {
+    // Relative path - prepend site URL with slash
+    const result = `${siteUrl}/${imagePath}`;
+    return result;
+  }
+};
 
 export default function ServiceDetails({ params }) {
   const { category } = params || {};
   const service = servicesData[category];
+
+  // Dynamic SEO updates when service data loads
+  useEffect(() => {
+    if (service) {
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com';
+      
+      // Update document title
+      document.title = `${service.heading} | InheritX Services`;
+      
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', service.heading_caption || `Professional ${service.heading} services by InheritX. Expert development solutions for your business needs.`);
+      }
+
+      // Update Open Graph title
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) {
+        ogTitle.setAttribute('content', service.heading);
+      }
+
+      // Update Open Graph description
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute('content', service.heading_caption || `Professional ${service.heading} services by InheritX. Expert development solutions for your business needs.`);
+      }
+
+      // Update Open Graph image if available
+      if (service.banner) {
+        let ogImage = document.querySelector('meta[property="og:image"]');
+        if (!ogImage) {
+          // Create og:image meta tag if it doesn't exist
+          ogImage = document.createElement('meta');
+          ogImage.setAttribute('property', 'og:image');
+          document.head.appendChild(ogImage);
+        }
+        const imageUrl = getAbsoluteImageUrl(service.banner, siteUrl);
+        ogImage.setAttribute('content', imageUrl);
+        console.log('OG Image URL set to:', imageUrl); // Debug log
+      }
+
+      // Add structured data for better SEO
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": service.heading,
+        "description": service.heading_caption || `Professional ${service.heading} services by InheritX. Expert development solutions for your business needs.`,
+        "image": getAbsoluteImageUrl(service.banner, siteUrl),
+        "provider": {
+          "@type": "Organization",
+          "name": "InheritX",
+          "url": siteUrl,
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${siteUrl}/image/logo/inx-icon-link.png`
+          }
+        },
+        "serviceType": service.heading,
+        "areaServed": "Worldwide",
+        "url": `${siteUrl}/services/${category}`,
+        "offers": {
+          "@type": "Offer",
+          "description": `Professional ${service.heading} services`,
+          "category": "Technology Services"
+        }
+      };
+
+      // Remove existing structured data
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      // Add new structured data
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [service, category]);
 
   if (!service) {
     return (
