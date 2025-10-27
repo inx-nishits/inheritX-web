@@ -43,6 +43,36 @@ export default function OurPlatforms({
               <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
               <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
               <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
+              <div className='big-text'>Explore <span className='text-stroke'>Our</span> Platforms&nbsp;</div>
             </div>
           </div>
         </div>

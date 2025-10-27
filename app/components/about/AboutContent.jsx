@@ -126,7 +126,7 @@ export default function AboutContent() {
                     alt='Counting section'
                     fill
                   />
-                 
+
                 </div>
 
               </div>
@@ -155,36 +155,36 @@ export default function AboutContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOPs Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
                 </div>
               </div>
             </div>
@@ -546,7 +546,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
 
@@ -576,7 +576,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -606,7 +606,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -637,7 +637,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -667,7 +667,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -697,7 +697,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -728,7 +728,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>
@@ -758,7 +758,7 @@ export default function AboutContent() {
                     loading='lazy'
                     width='100'
                     height='100'
-                    style={{ maxWidth: '60px' }}
+                    style={{ maxWidth: '75px' }}
                   />
                 </div>
                 <h5 className='lh-30 fw-6'>

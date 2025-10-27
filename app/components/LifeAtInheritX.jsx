@@ -6,7 +6,6 @@ import Link from 'next/link'
 export default function LifeAtInheritX() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
-  const galleryVersion = '2'
 
   const galleryImages = [
     '/image/image-gallery/gallery-1.jpg',
@@ -86,7 +85,7 @@ export default function LifeAtInheritX() {
                 style={{ cursor: 'pointer' }}
               >
                 <div className='position-relative' style={{ paddingBottom: '75%' }}>
-                  <Image src={`${src}?v=${galleryVersion}`} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw' className='object-fit-cover' priority={idx < 4} quality={90} />
+                  <Image src={src} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw' className='object-fit-cover' priority={idx < 4} quality={90} unoptimized />
                 </div>
               </button>
             </div>
@@ -150,7 +149,7 @@ export default function LifeAtInheritX() {
             <div className='position-relative' style={{ maxWidth: '95vw', maxHeight: '90vh', width: 'auto', height: 'auto' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`${galleryImages[activeIndex]}?v=${galleryVersion}`}
+                src={galleryImages[activeIndex]}
                 alt='Gallery image'
                 className='img-fluid rounded-3 shadow'
                 style={{ maxWidth: '95vw', maxHeight: '90vh', objectFit: 'contain' }}

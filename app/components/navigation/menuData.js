@@ -99,11 +99,11 @@ const menuData = [
     href: '/portfolio',
     type: 'link'
   },
-  {
-    label: 'Projects',
-    href: '/projects',
-    type: 'link'
-  },
+  // {
+  //   label: 'Projects',
+  //   href: '/projects',
+  //   type: 'link'
+  // },
   {
     label: 'Blog',
     href: '/blog',

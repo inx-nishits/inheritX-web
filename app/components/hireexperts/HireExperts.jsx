@@ -162,6 +162,16 @@ export default function HireExpertContent() {
                   <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
                   <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
                   <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
                 </div>
               </div>
             </div>

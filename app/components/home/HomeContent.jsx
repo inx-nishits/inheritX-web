@@ -293,36 +293,36 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
-                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Wipe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
+                  <div className='big-text'>AWS Experts : <span className='text-stroke'>Vibe Code</span> : Agentic AI Makers : <span className='text-stroke'>Gen AI</span> : DevOPs Specialist&nbsp;</div>
                 </div>
               </div>
             </div>
@@ -330,7 +330,7 @@ export default function HomeContent() {
           <div className='tf-container'>
             <div className='about-inner flex g-30'>
               <div className='left'>
-               
+
                 <div className='wg-curve-img'>
                   <Image
                     src='/image/page-title/rotate-text.svg'
@@ -449,14 +449,7 @@ export default function HomeContent() {
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
-                <div className='box-logo tf-animate-2'>
-                  <Image
-                    src='/image/logo/logo-icon-white.svg' alt=''
-                    width={50}
-                    height={50}
-                  />
-                  <h4 className='title'>InheritX</h4>
-                </div>
+
                 <div className='box-avatar tf-animate-3'>
                   <div className='text relative'>
                     <p className='fs-20 fw-6'>
@@ -696,7 +689,7 @@ export default function HomeContent() {
                   <div className='swiper-wrapper cursor-grab'>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
+                        <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
                           <i className='icon-custom-software'></i>
                         </div>
                         <p className='lh-30 fw-6'>
@@ -707,7 +700,7 @@ export default function HomeContent() {
                             Web Development
                           </Link>
                         </p>
-                        <div className='desc lh-30'>
+                        <div className='desc fs-5' style={{ minHeight: '44px' }}>
                           Robust, reliable, and responsive corporate websites
                         </div>
                         <Link
@@ -715,7 +708,7 @@ export default function HomeContent() {
                           className='image rounded-4 overflow-hidden'
                         >
                           <Image
-                            src='/image/home/services-1.jpg'
+                            src='/image/home/website-dev.jpg'
                             alt=''
                             className='lazyload'
                             fill
@@ -734,7 +727,7 @@ export default function HomeContent() {
                     </div>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
+                        <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
                           <i className='icon-software-product'></i>
                         </div>
                         <p className='lh-30 fw-6'>
@@ -745,7 +738,7 @@ export default function HomeContent() {
                             Artificial Intelligence
                           </Link>
                         </p>
-                        <div className='desc lh-30'>
+                        <div className='desc fs-5' style={{ minHeight: '44px' }}>
                           Predictive analytics, chatbots, computer vision, and
                           custom LLM integrations.
                         </div>
@@ -754,7 +747,7 @@ export default function HomeContent() {
                           className='image rounded-4 overflow-hidden'
                         >
                           <Image
-                            src='/image/home/services-4.jpg'
+                            src='/image/home/artificial-int.jpg'
                             alt=''
                             className='lazyload'
                             fill
@@ -773,7 +766,7 @@ export default function HomeContent() {
                     </div>
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
+                        <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
                           <i className='icon icon-mobile-app'>
                             <svg
                               id='Layer_1'
@@ -787,15 +780,15 @@ export default function HomeContent() {
                             </svg>
                           </i>
                         </div>
-                        <h6 className='lh-30 fw-6'>
+                        <p className='lh-30 fw-6'>
                           <Link
                             href='/services/mobile-app-development'
                             className='title-service fs-1 text-primary'
                           >
                             Mobile App Development
                           </Link>
-                        </h6>
-                        <div className='desc lh-30'>
+                        </p>
+                        <div className='desc fs-5' style={{ minHeight: '44px' }}>
                           Feature-rich apps delivering seamless performance and
                           smooth, reliable functionality.
                         </div>
@@ -804,7 +797,7 @@ export default function HomeContent() {
                           className='image rounded-4 overflow-hidden'
                         >
                           <Image
-                            src='/image/home/services-2.jpg'
+                            src='/image/home/mobile-dev.jpg'
                             alt=''
                             className='lazyload'
                             fill
@@ -824,7 +817,7 @@ export default function HomeContent() {
 
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
+                        <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
                           <i className='icon icon-mobile-app'>
                             <svg
                               id='Layer_1'
@@ -846,7 +839,7 @@ export default function HomeContent() {
                             DevOps
                           </Link>
                         </p>
-                        <div className='desc lh-30'>
+                        <div className='desc fs-5' style={{ minHeight: '44px' }}>
                           Customized solutions by integrating technological
                           advancements
                         </div>
@@ -875,7 +868,7 @@ export default function HomeContent() {
 
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
-                        <div className='icon' style={{ width: '40px', height: '40px', maxWidth: '40px' }}>
+                        <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
                           <i className='icon icon-mobile-app'>
                             <svg
                               xmlns='http://www.w3.org/2000/svg'
@@ -897,7 +890,7 @@ export default function HomeContent() {
                             Cloud Computing
                           </Link>
                         </p>
-                        <div className='desc lh-30'>
+                        <div className='desc fs-5' style={{ minHeight: '44px' }}>
                           Secure and Scalable Cloud-based Apps for Business
                         </div>
                         <Link
