@@ -2,6 +2,16 @@
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; }
 
+/* Continuous rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* When navigating via desktop menu clicks, force-close hover dropdowns */
 body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu,
 body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
