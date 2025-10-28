@@ -52,7 +52,7 @@ export default function ProjectsPage() {
                                         onClick={() => setActiveCategory(category.id)}
                                     >
                                         <span className='tab-name'>{category.name}</span>
-                                        <span className='tab-count'>{category.count}</span>
+                                        <span className='tab-count d-none'>{category.count}</span>
                                     </button>
                                 ))}
                             </div>

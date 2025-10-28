@@ -606,7 +606,7 @@ export default function CategoryDetailsPage() {
 
               <div className="col-xl-4">
                 <div className="tf-sidebar sidebar-filter right">
-                  <div className="sidebar-item sidebar-content sidebar-categories mb-40">
+                  <div className="sidebar-item sidebar-content sidebar-categories mb-3">
                     <div className="title-content fw-5">
                       All Categories
                     </div>

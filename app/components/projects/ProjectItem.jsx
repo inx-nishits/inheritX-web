@@ -1,25 +1,13 @@
 import Link from 'next/link'
 
 export default function ProjectItem({ item }) {
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'Completed':
-        return '#00d68f'
-      case 'In Progress':
-        return '#00b3ff'
-      case 'Planning':
-        return '#ffa726'
-      default:
-        return '#666'
-    }
-  }
 
   return (
     <div className='project-card'>
       <div className='project-card-inner'>
         {/* Project Image */}
         <div className='project-image-wrapper'>
-          <Link href={`/project-details/${item.slug}`} className='project-image-link'>
+          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block'>
             <img 
               src={item.thumb} 
               alt={item.title} 
@@ -33,13 +21,6 @@ export default function ProjectItem({ item }) {
             </div>
           </Link>
           
-          {/* Status Badge */}
-          <div 
-            className='project-status-badge'
-            style={{ backgroundColor: getStatusColor(item.status) }}
-          >
-            {item.status}
-          </div>
         </div>
 
         {/* Project Content */}
@@ -53,11 +34,7 @@ export default function ProjectItem({ item }) {
 
           <p className='project-description'>{item.description}</p>
 
-          {/* Project Meta */}
-          <div className='project-meta'>
-            {/* Meta items removed */}
-          </div>
-
+          
           {/* Technology Tags */}
           <div className='project-technologies'>
             <div className='tech-label'>Technologies:</div>
@@ -72,7 +49,7 @@ export default function ProjectItem({ item }) {
           <div className='project-features'>
             <div className='features-label'>Key Features:</div>
             <div className='features-list'>
-              {item.features.slice(0, 3).map((feature, index) => (
+              {item.features.slice(0, 2).map((feature, index) => (
                 <div key={index} className='feature-item'>
                   <i className='icon-check'></i>
                   <span>{feature}</span>
@@ -119,8 +96,13 @@ export default function ProjectItem({ item }) {
 
         .project-image-wrapper {
           position: relative;
-          aspect-ratio: 16/10;
+          aspect-ratio: 16/13;
           overflow: hidden;
+          padding: 16px;
+              display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0 197 222 / 10%);
         }
 
         .project-image-link {
@@ -128,18 +110,17 @@ export default function ProjectItem({ item }) {
           width: 100%;
           height: 100%;
           position: relative;
+          display: block;
         }
 
         .project-image {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: 60%;
+          object-fit: contain;
           transition: transform 0.3s ease;
         }
 
-        .project-card:hover .project-image {
-          transform: scale(1.05);
-        }
+    
 
         .project-overlay {
           position: absolute;
@@ -165,18 +146,6 @@ export default function ProjectItem({ item }) {
           font-size: 16px;
         }
 
-        .project-status-badge {
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          padding: 6px 12px;
-          border-radius: 20px;
-          color: white;
-          font-size: 12px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-        }
 
         .project-content {
           padding: 25px;
@@ -186,7 +155,7 @@ export default function ProjectItem({ item }) {
         }
 
         .project-header {
-          margin-bottom: 15px;
+          margin-bottom: 5px;
         }
 
         .project-title {

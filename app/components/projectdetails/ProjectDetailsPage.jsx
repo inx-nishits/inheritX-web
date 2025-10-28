@@ -53,9 +53,6 @@ export default function ProjectDetailsPage({ params }) {
                             </div>
                             
                             <div className='project-header-content'>
-                                <div className='project-status-badge' style={{ backgroundColor: getStatusColor(item.status) }}>
-                                    {item.status}
-                                </div>
                                 <h1 className='project-main-title'>{item.title}</h1>
                                 <div className='project-category-badge'>{item.category}</div>
                             </div>
@@ -109,10 +106,6 @@ export default function ProjectDetailsPage({ params }) {
                                     <div className='info-row'>
                                         <span className='info-label'>Industry:</span>
                                         <span className='info-value'>{item.industry}</span>
-                                    </div>
-                                    <div className='info-row'>
-                                        <span className='info-label'>Year:</span>
-                                        <span className='info-value'>{item.year}</span>
                                     </div>
                                     <div className='info-row'>
                                         <span className='info-label'>Category:</span>
@@ -176,18 +169,7 @@ export default function ProjectDetailsPage({ params }) {
                     text-align: center;
                 }
 
-                .project-status-badge {
-                    display: inline-block;
-                    padding: 8px 16px;
-                    border-radius: 25px;
-                    color: white;
-                    font-size: 14px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
-                    margin-bottom: 20px;
-                }
-
+                
                 .project-main-title {
                     font-size: 48px;
                     font-weight: 700;
@@ -221,6 +203,7 @@ export default function ProjectDetailsPage({ params }) {
                     position: relative;
                     border-radius: 20px;
                     overflow: hidden;
+                    padding: 16px;
                     background: rgba(255, 255, 255, 0.02);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                 }
@@ -228,7 +211,7 @@ export default function ProjectDetailsPage({ params }) {
                 .project-main-image {
                     width: 100%;
                     height: 400px;
-                    object-fit: cover;
+                    object-fit: contain;
                     display: block;
                 }
 

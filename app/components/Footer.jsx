@@ -353,7 +353,7 @@ export default function Footer() {
                       <p>
                         8th Floor, Panchdhara Complex, S G Highway, Bodakdev,
                         <br />
-                        Ahmedabad - 380054
+                        Ahmedabad - 380054, India
                       </p>
                     </div>
                   </div>
