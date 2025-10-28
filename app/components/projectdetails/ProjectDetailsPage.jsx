@@ -323,6 +323,7 @@ export default function ProjectDetailsPage({ params }) {
                     align-items: center;
                     padding: 12px 0;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    gap: 4px;
                 }
 
                 .info-row:last-child {
@@ -337,6 +338,7 @@ export default function ProjectDetailsPage({ params }) {
                 .info-row .info-value {
                     color: white;
                     font-weight: 600;
+                    text-align: right;
                 }
 
                 .project-cta-section {
