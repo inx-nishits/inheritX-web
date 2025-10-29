@@ -96,41 +96,68 @@ export default function ProjectItem({ item }) {
 
         .project-image-wrapper {
           position: relative;
-          aspect-ratio: 16/13;
+          aspect-ratio: 16/10; /* more natural banner ratio for screenshots */
+          min-height: 240px; /* ensure balanced height for tall/narrow mockups */
           overflow: hidden;
-          padding: 16px;
-              display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(0 197 222 / 10%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgb(0 197 222 / 10%);
+          border-radius: 18px;
         }
 
         .project-image-link {
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
           height: 100%;
           position: relative;
-          display: block;
+          padding: 16px; /* ensure image never touches edges */
+          border-radius: 16px;
+          text-align: center;
+        }
+
+        /* subtle inner border so images feel framed without touching edges */
+        .project-image-link::after {
+          content: '';
+          position: absolute;
+          inset: 16px;
+          border-radius: 14px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          pointer-events: none;
         }
 
         .project-image {
-          width: 100%;
-          height: 60%;
+          width: auto;
+          height: auto;
+          max-width: 75%;
+          max-height: 75%;
           object-fit: contain;
+          object-position: center center;
+          display: block;
+          margin: 0 auto;
           transition: transform 0.3s ease;
+          border-radius: 12px;
+          filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
         }
 
     
 
         .project-overlay {
           position: absolute;
-          inset: 0;
+          inset: 0; /* full width & height over the image frame */
           background: rgba(0, 0, 0, 0.7);
           display: flex;
           align-items: center;
           justify-content: center;
           opacity: 0;
           transition: opacity 0.3s ease;
+          border-radius: 16px;
+        }
+
+        .project-card:hover .project-image {
+          // transform: scale(1.02);
         }
 
         .project-card:hover .project-overlay {
@@ -316,6 +343,10 @@ export default function ProjectItem({ item }) {
         }
 
         @media (max-width: 768px) {
+          .project-image-wrapper { min-height: 200px; }
+          .project-image-link { padding: 12px; }
+          .project-image-link::after { inset: 12px; }
+          .project-overlay { inset: 0; }
           .project-content {
             padding: 20px;
           }

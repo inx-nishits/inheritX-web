@@ -105,7 +105,7 @@ export const projectItems = [
   },
   {
     id: 6,
-    slug: "leez–digitising",
+    slug: "leez-digitising",
     title: "Leez–Digitising Rental Experience",
     category: "Mobile App Development",
     industry: "Real Estate Technology (PropTech)",
@@ -118,7 +118,7 @@ export const projectItems = [
       "Property Management",
       "Smart Lease Contracts",
       "Real-Time Chat",
-      "AService & Maintenance Requests",
+      "Service & Maintenance Requests",
       "Tenant Management",
       "Data-Driven Dashboard",
     ],
