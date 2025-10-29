@@ -209,10 +209,11 @@ export default function ProjectDetailsPage({ params }) {
                 }
 
                 .project-main-image {
-                    width: 100%;
-                    height: 400px;
+                    width: auto;
+                    height: auto;
                     object-fit: contain;
                     display: block;
+                    margin: 0 auto;
                 }
 
                 .project-overview-content {

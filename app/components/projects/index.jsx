@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { projectItems, projectCategories } from '../../data/projectsData'
 import ProjectItem from './ProjectItem'
@@ -7,6 +7,11 @@ import Breadcrumbs from '../Breadcrumbs'
 
 export default function ProjectsPage() {
     const [activeCategory, setActiveCategory] = useState('all')
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     const filteredItems = activeCategory === 'all'
         ? projectItems
@@ -52,7 +57,9 @@ export default function ProjectsPage() {
                                         onClick={() => setActiveCategory(category.id)}
                                     >
                                         <span className='tab-name'>{category.name}</span>
-                                        <span className='tab-count d-none'>{category.count}</span>
+                                        <span className='tab-count d-none' suppressHydrationWarning>
+                                            {mounted ? category.count : ''}
+                                        </span>
                                     </button>
                                 ))}
                             </div>
