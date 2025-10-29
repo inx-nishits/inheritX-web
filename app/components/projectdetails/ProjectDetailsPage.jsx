@@ -1,8 +1,30 @@
 'use client'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { projectItems, getProjectBySlug } from '../../data/projectsData'
 
 export default function ProjectDetailsPage({ params }) {
+    const router = useRouter()
+
+    const handleBackToProjects = (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault()
+        const categoryKey = (() => {
+            if (!item) return 'all'
+            const c = (item.category || '').toLowerCase()
+            if (c.includes('web')) return 'web'
+            if (c.includes('mobile')) return 'mobile'
+            return 'all'
+        })()
+        try {
+            const raw = sessionStorage.getItem('inx_prev_route')
+            const prev = raw ? JSON.parse(raw) : null
+            if (prev && typeof prev.href === 'string' && prev.href.startsWith('/projects')) {
+                router.back()
+                return
+            }
+        } catch { }
+        router.push(`/projects?tab=${categoryKey}`)
+    }
     const { slug } = params || {}
     const item = getProjectBySlug(slug)
 
@@ -15,7 +37,7 @@ export default function ProjectDetailsPage({ params }) {
                     </div>
                     <h2 className='not-found-title fw-6 mb-3'>Project Not Found</h2>
                     <p className='not-found-text body-2 mb-4'>The project you're looking for doesn't exist or has been moved.</p>
-                    <Link href='/projects' className='tf-btn'>
+                    <Link href='/projects?tab=all' className='tf-btn' onClick={handleBackToProjects}>
                         <span>Back to Projects</span>
                         <i className='icon-arrow-left'></i>
                     </Link>
@@ -25,10 +47,10 @@ export default function ProjectDetailsPage({ params }) {
     }
     return (
         <>
-            <div className='tf-container pt-5 mt-5'>
+            <div className='tf-container pt-5 mt-md-5'>
                 <div className='project-details-container'>
                     <div className='project-back-btn d-flex gap-2'>
-                        <Link href='/projects' className='back-link d-flex align-items-center gap-2'>
+                        <Link href={`/projects?tab=${(() => { const c=(item.category||'').toLowerCase(); return c.includes('web')?'web':c.includes('mobile')?'mobile':'all' })()}`} className='back-link d-flex align-items-center gap-2' onClick={handleBackToProjects}>
                             <i className='icon-arrow-left'></i>
                             <span>Back to Projects</span>
                         </Link>
@@ -38,14 +60,16 @@ export default function ProjectDetailsPage({ params }) {
 
             <div className='page-title'>
                 <div className='tf-container'>
-                    <div className='page-title-content text-center pt-5 pb-5'>
-                        <h1 className='title split-text effect-right'>{item.title}</h1>
-                        <div className='breadkcum'>
-                            <Link href='/' className='link-breadkcum body-2 fw-7 split-text effect-right'>Home</Link>
-                            <span className='dot'></span>
-                            <Link href='/projects' className='link-breadkcum body-2 fw-7 split-text effect-right'>Projects</Link>
-                            <span className='dot'></span>
-                            <span className='page-breadkcum body-2 fw-7 split-text effect-right'>Project Details</span>
+                    <div className='project-details-container'>
+                        <div className='page-title-content text-center pt-5 pb-5'>
+                            <h1 className='title split-text effect-right'>{item.title}</h1>
+                            <div className='breadkcum'>
+                                <Link href='/' className='link-breadkcum body-2 fw-7 split-text effect-right'>Home</Link>
+                                <span className='dot'></span>
+                                <Link href={`/projects?tab=${(() => { const c=(item.category||'').toLowerCase(); return c.includes('web')?'web':c.includes('mobile')?'mobile':'all' })()}`} className='link-breadkcum body-2 fw-7 split-text effect-right' onClick={handleBackToProjects}>Projects</Link>
+                                <span className='dot'></span>
+                                <span className='page-breadkcum body-2 fw-7 split-text effect-right'>Project Details</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,7 +155,7 @@ export default function ProjectDetailsPage({ params }) {
                                         <span>Start Your Project</span>
                                         <i className='icon-arrow-right'></i>
                                     </Link>
-                                    <Link href='/projects' className='tf-btn secondary'>
+                                    <Link href={`/projects?tab=${(() => { const c=(item.category||'').toLowerCase(); return c.includes('web')?'web':c.includes('mobile')?'mobile':'all' })()}`} className='tf-btn secondary' onClick={handleBackToProjects}>
                                         <span>View More Projects</span>
                                         <i className='icon-eye'></i>
                                     </Link>
@@ -238,7 +262,7 @@ export default function ProjectDetailsPage({ params }) {
                     color: rgba(255, 255, 255, 0.8);
                     font-size: 14px;
                     line-height: 26px;
-                    margin-bottom: 30px;
+                    margin-bottom: 5px;
                 }
 
                 .project-details-grid {
@@ -362,6 +386,7 @@ export default function ProjectDetailsPage({ params }) {
                     font-weight: 600;
                     color: white;
                     margin-bottom: 15px;
+                    line-height: initial;
                 }
 
                 .cta-text {
@@ -400,6 +425,7 @@ export default function ProjectDetailsPage({ params }) {
                     .project-overview-section {
                         grid-template-columns: 1fr;
                         gap: 30px;
+                        margin-bottom: 30px;
                     }
                     
                     .project-main-title {

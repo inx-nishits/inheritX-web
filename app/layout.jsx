@@ -1,6 +1,7 @@
 import Script from 'next/script'
 import './styles/globals.css'
 import Header from './components/Header'
+import RouteHistoryTracker from './components/RouteHistoryTracker'
 import Footer from './components/Footer'
 import CounterInitializer from './components/CounterInitializer'
 import { Toaster } from 'react-hot-toast'
@@ -210,6 +211,7 @@ export default function RootLayout({ children }) {
       <body className='counter-scroll'>
         <div className='d-flex flex-column min-vh-100'>
           <Header />
+          <RouteHistoryTracker />
           <div className='flex-grow-1'>{children}</div>
           <Footer />
           <CounterInitializer />

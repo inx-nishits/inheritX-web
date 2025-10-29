@@ -1,17 +1,75 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { projectItems, projectCategories } from '../../data/projectsData'
 import ProjectItem from './ProjectItem'
 import Breadcrumbs from '../Breadcrumbs'
 
 export default function ProjectsPage() {
-    const [activeCategory, setActiveCategory] = useState('all')
+    const searchParams = useSearchParams()
+    const router = useRouter()
+    const [activeCategory, setActiveCategory] = useState(() => {
+        // Avoid flicker to 'all' when returning: initialize from storage only if restore flag is set
+        try {
+            const shouldRestore = sessionStorage.getItem('inx_restore_projects') === '1'
+            if (shouldRestore) {
+                return sessionStorage.getItem('inx_projects_category') || 'all'
+            }
+        } catch {}
+        return 'all'
+    })
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
+        // On mount:
+        // - If returning from details (restore flag present): restore saved tab + scroll
+        // - Else (direct load/refresh): reset to defaults and clear saved values
+        try {
+            // Highest priority: explicit tab in URL
+            const tabParam = searchParams?.get('tab')
+            const allowed = ['all', 'web', 'mobile']
+            if (tabParam && allowed.includes(tabParam)) {
+                setActiveCategory(tabParam)
+                try { sessionStorage.setItem('inx_projects_category', tabParam) } catch {}
+            }
+
+            const restore = sessionStorage.getItem('inx_restore_projects')
+            if (restore === '1') {
+                const y = sessionStorage.getItem('inx_projects_scroll')
+                if (y) {
+                    requestAnimationFrame(() => {
+                        window.scrollTo(0, parseInt(y, 10) || 0)
+                    })
+                }
+                // Consume the flag so a refresh won't restore again
+                sessionStorage.removeItem('inx_restore_projects')
+            } else {
+                // Direct load/refresh: ensure defaults
+                if (!tabParam) {
+                    setActiveCategory('all')
+                    sessionStorage.removeItem('inx_projects_category')
+                }
+                sessionStorage.removeItem('inx_projects_scroll')
+                // Ensure we're at the normal position (do nothing; browser default is top)
+            }
+        } catch {}
         setMounted(true)
-    }, [])
+    }, [searchParams])
+
+    // Persist active category for future restores and reflect in URL (shallow)
+    useEffect(() => {
+        try {
+            sessionStorage.setItem('inx_projects_category', activeCategory)
+        } catch {}
+        // Update the URL to include ?tab= when not 'all' to preserve history state
+        const currentTabParam = searchParams?.get('tab') || null
+        const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
+        if (currentTabParam !== desiredTabParam) {
+            const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
+            router.replace(`/projects${query}`, { scroll: false })
+        }
+    }, [activeCategory])
 
     const filteredItems = activeCategory === 'all'
         ? (() => {
@@ -72,9 +130,9 @@ export default function ProjectsPage() {
 
                     {/* Projects Grid */}
                     <div className='projects-grid-section'>
-                        <div className='projects-grid'>
-                            {filteredItems.map((item) => (
-                                <ProjectItem key={item.id} item={item} />
+                        <div className='projects-grid' key={activeCategory}>
+                            {filteredItems.map((item, index) => (
+                                <ProjectItem key={item.id} item={item} index={index} currentCategory={activeCategory} />
                             ))}
                         </div>
 
@@ -206,6 +264,26 @@ export default function ProjectsPage() {
                     margin-bottom: 40px;
                 }
 
+                /* Enter animation for items when switching tabs */
+                .projects-grid :global(.project-card) {
+                    opacity: 0;
+                    transform: translateY(12px) scale(0.98);
+                    animation: fadeInUp 420ms ease forwards;
+                    animation-delay: calc(var(--stagger, 0) * 60ms);
+                    will-change: opacity, transform;
+                }
+
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(12px) scale(0.98);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0) scale(1);
+                    }
+                }
+
                 .no-projects-found {
                     padding: 60px 20px;
                 }
@@ -256,7 +334,7 @@ export default function ProjectsPage() {
                     }
                     
                     .filter-tab {
-                        width: 200px;
+                        // width: 200px;
                         justify-content: center;
                     }
                     

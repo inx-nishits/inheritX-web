@@ -1,4 +1,5 @@
 "use client";
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { servicesData } from './services/servicesData';
@@ -38,14 +39,14 @@ export default function Breadcrumbs () {
       {crumbs.map((crumb, index) => {
         const isLast = index === crumbs.length - 1;
         return (
-          <>
-            <span key={`dot-${crumb.href}`} className="dot"></span>
+          <React.Fragment key={crumb.href}>
+            <span className="dot"></span>
             {isLast ? (
-              <span key={crumb.href} className="page-breadkcum body-2 fw-7" aria-current="page">{crumb.label}</span>
+              <span className="page-breadkcum body-2 fw-7" aria-current="page">{crumb.label}</span>
             ) : (
-              <Link key={crumb.href} href={crumb.href} className="link-breadkcum body-2 fw-7">{crumb.label}</Link>
+              <Link href={crumb.href} className="link-breadkcum body-2 fw-7">{crumb.label}</Link>
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </div>

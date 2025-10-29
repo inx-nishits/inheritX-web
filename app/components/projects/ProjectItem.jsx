@@ -1,13 +1,19 @@
 import Link from 'next/link'
 
-export default function ProjectItem({ item }) {
+export default function ProjectItem({ item, index, currentCategory }) {
 
   return (
-    <div className='project-card'>
+    <div className='project-card' style={{ '--stagger': index }}>
       <div className='project-card-inner'>
         {/* Project Image */}
         <div className='project-image-wrapper'>
-          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block'>
+          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block' onClick={() => {
+            try {
+              sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
+              sessionStorage.setItem('inx_restore_projects', '1')
+              if (currentCategory) sessionStorage.setItem('inx_projects_category', currentCategory)
+            } catch {}
+          }}>
             <img 
               src={item.thumb} 
               alt={item.title} 
@@ -27,7 +33,13 @@ export default function ProjectItem({ item }) {
         <div className='project-content'>
           <div className='project-header'>
             <h3 className='project-title'>
-              <Link href={`/project-details/${item.slug}`}>{item.title}</Link>
+              <Link href={`/project-details/${item.slug}`} onClick={() => {
+                try {
+                  sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
+                  sessionStorage.setItem('inx_restore_projects', '1')
+                  if (currentCategory) sessionStorage.setItem('inx_projects_category', currentCategory)
+                } catch {}
+              }}>{item.title}</Link>
             </h3>
             <div className='project-category'>{item.category}</div>
           </div>
@@ -65,7 +77,13 @@ export default function ProjectItem({ item }) {
 
           {/* Project Footer */}
           <div className='project-footer'>
-            <Link href={`/project-details/${item.slug}`} className='project-link'>
+            <Link href={`/project-details/${item.slug}`} className='project-link' onClick={() => {
+              try {
+                sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
+                sessionStorage.setItem('inx_restore_projects', '1')
+                if (currentCategory) sessionStorage.setItem('inx_projects_category', currentCategory)
+              } catch {}
+            }}>
               <span>Explore Project</span>
             </Link>
           </div>
