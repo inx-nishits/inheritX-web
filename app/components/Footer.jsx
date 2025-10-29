@@ -1,4 +1,5 @@
-﻿import Link from 'next/link'
+﻿"use client"
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -437,7 +438,17 @@ export default function Footer() {
         <div className='tf-container'>
           <div className='footer-bottom'>
             <div className='line'></div>
-            <a href='#' className='footer-go-top'>
+            <a
+              href='#'
+              className='footer-go-top'
+              onClick={(e) => {
+                e.preventDefault()
+                if (typeof window !== 'undefined') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+              }}
+              aria-label='Go to top'
+            >
               <i className='icon-arrow-up'></i>
             </a>
             <div className='list-bottom flex align-items-center justify-content-between flex-wrap rg-15 g-30'>

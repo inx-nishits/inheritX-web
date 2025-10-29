@@ -8,7 +8,8 @@ import { Toaster } from 'react-hot-toast'
 
 // SEO base configuration
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
-const defaultOgImage = `${siteUrl}/image/logo/inx-icon-link.png` // Fallback: use an existing image in /public/image/logo
+// Use the requested icon asset for social previews
+const defaultOgImage = `${siteUrl}/image/logo/inx-icon-link.png`
 const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 
 export const metadata = {
@@ -51,12 +52,14 @@ export const metadata = {
         url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'InheritX — AI, ML, and Custom Software'
+        alt: 'InheritX — AI, ML, and Custom Software',
+        type: 'image/png'
       }
     ]
   },
   twitter: {
-    card: 'summary_large_image',
+    // Use the standard small summary card to avoid overly large logo previews
+    card: 'summary',
     title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
       'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
@@ -67,7 +70,7 @@ export const metadata = {
     follow: true
   },
   icons: {
-    icon: '/image/logo/inx-icon-link.png' // Placeholder: switch to '/favicon.ico' if present at project root
+    icon: '/image/logo/favicon.ico'
   },
 }
 
