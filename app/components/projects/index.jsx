@@ -14,7 +14,11 @@ export default function ProjectsPage() {
     }, [])
 
     const filteredItems = activeCategory === 'all'
-        ? projectItems
+        ? (() => {
+            const webItems = projectItems.filter(item => item.category === 'Web Development')
+            const mobileItems = projectItems.filter(item => item.category === 'Mobile App Development')
+            return [...webItems, ...mobileItems]
+        })()
         : projectItems.filter(item => {
             switch (activeCategory) {
                 case 'web':

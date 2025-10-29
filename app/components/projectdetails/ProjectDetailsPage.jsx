@@ -5,7 +5,7 @@ import { projectItems, getProjectBySlug } from '../../data/projectsData'
 export default function ProjectDetailsPage({ params }) {
     const { slug } = params || {}
     const item = getProjectBySlug(slug)
-    
+
     if (!item) {
         return (
             <div className='tf-container tf-spacing-8'>
@@ -25,9 +25,20 @@ export default function ProjectDetailsPage({ params }) {
     }
     return (
         <>
+            <div className='tf-container pt-5 mt-5'>
+                <div className='project-details-container'>
+                    <div className='project-back-btn d-flex gap-2'>
+                        <Link href='/projects' className='back-link d-flex align-items-center gap-2'>
+                            <i className='icon-arrow-left'></i>
+                            <span>Back to Projects</span>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
             <div className='page-title'>
                 <div className='tf-container'>
-                    <div className='page-title-content text-center'>
+                    <div className='page-title-content text-center pt-5 pb-5'>
                         <h1 className='title split-text effect-right'>{item.title}</h1>
                         <div className='breadkcum'>
                             <Link href='/' className='link-breadkcum body-2 fw-7 split-text effect-right'>Home</Link>
@@ -45,15 +56,10 @@ export default function ProjectDetailsPage({ params }) {
                     <div className='project-details-container'>
                         {/* Project Header */}
                         <div className='project-header-section'>
-                            <div className='project-back-btn d-flex gap-2'>
-                                <Link href='/projects' className='back-link d-flex align-items-center gap-2'>
-                                    <i className='icon-arrow-left'></i>
-                                    <span>Back to Projects</span>
-                                </Link>
-                            </div>
-                            
+
+
                             <div className='project-header-content'>
-                                <h1 className='project-main-title'>{item.title}</h1>
+                                <h1 className='project-main-title d-none'>{item.title}</h1>
                                 <div className='project-category-badge'>{item.category}</div>
                             </div>
                         </div>
@@ -67,7 +73,7 @@ export default function ProjectDetailsPage({ params }) {
                                     className='project-main-image'
                                 />
                             </div>
-                            
+
                             <div className='project-overview-content'>
                                 <h2 className='overview-title'>Project Overview</h2>
                                 <p className='overview-description'>{item.description}</p>
@@ -217,20 +223,21 @@ export default function ProjectDetailsPage({ params }) {
                 }
 
                 .project-overview-content {
-                    padding: 20px 0;
+                    padding: 20px 0 20px;
                 }
 
                 .overview-title {
-                    font-size: 28px;
+                    font-size: 24px;
                     font-weight: 600;
                     color: white;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
+                    line-height: initial;
                 }
 
                 .overview-description {
                     color: rgba(255, 255, 255, 0.8);
-                    font-size: 16px;
-                    line-height: 1.7;
+                    font-size: 14px;
+                    line-height: 26px;
                     margin-bottom: 30px;
                 }
 

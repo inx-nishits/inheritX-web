@@ -5,7 +5,7 @@ export const projectItems = [
     title: "Venuorama",
     category: "Web Development",
     industry: "Event Management",
-    technology: "React, Node.js, Mongodb",
+    technology: "React, Node.js, MongoDB",
     country: "India",
     description:
       "Venuorama is an online platform that helps users discover and explore event venues through 360° virtual tours, detailed listings, and smart city-based search.",
@@ -24,7 +24,7 @@ export const projectItems = [
     title: "Tourwit",
     category: "Web Development",
     industry: "TravelTech + E-Commerce",
-    technology: "Next.js, Node.js, TailwindCSS",
+    technology: "Next.js, Node.js, Tailwind CSS",
     description:
       "The platform offers a complete travel experience that goes beyond simple bookings. Users can estimate customized travel packages for families, solo travelers, or children, while also exploring unique handicraft shopping options. It includes engaging blogs and community forums that allow travelers to share stories, tips, and cultural insights. Artisan pages highlight local creators, giving visitors a deeper connection to traditional crafts and regional heritage. In addition to trip estimation and planning tools, the platform promotes cultural tourism by blending travel with authentic local experiences. It serves as an online craft marketplace where travelers can discover and purchase handmade items directly from artisans. This seamless combination of travel, culture, and craftsmanship makes it a one-stop destination for those seeking meaningful and immersive journeys.",
     cover: "/image/project-item/tourwit.png",
@@ -45,7 +45,7 @@ export const projectItems = [
     title: "E-Mobility",
     category: "Web Development",
     industry: "EV Infrastructure / EV Mobility",
-    technology: "Next.js, TailwindCSS",
+    technology: "Next.js, Tailwind CSS",
     country: "Australia",
     description:
       "The project is an EV Charging Management System that enables efficient management of charging sites, vehicles, users, and billing. It allows administrators to oversee multiple charging stations, monitor real-time usage, and manage RFID-based user access for secure authentication. Users can register their vehicles, start and stop charging sessions, and view their transaction history. The platform integrates automated billing and payment processing for a seamless experience. It also provides insightful reports and analytics to track site performance and revenue. With multi-language support, dark/light themes, and role-based access control, the system ensures a secure and user-friendly interface for both admins and users.",
@@ -57,7 +57,7 @@ export const projectItems = [
       "Stripe payments",
       "Multi-language",
       "Dark / Light theme",
-      "Role based access",
+      "Role-based access",
       "Analytics & reports",
     ],
   },
@@ -67,7 +67,7 @@ export const projectItems = [
     title: "Strum",
     category: "Web Development",
     industry: "EventTech / Entertainment",
-    technology: "Next.js, TailwindCSS",
+    technology: "Next.js, Tailwind CSS",
     country: "UK/USA",
     description:
       "The project is an Entertainment Booking Platform that connects users with entertainers and bands based on their preferred date and location. It allows users to easily browse, book, and manage event performances through an intuitive and responsive interface. Entertainers can create profiles, showcase their talent, manage availability, and accept bookings. The platform supports secure online payments and automated order confirmations to ensure a smooth booking experience. Users can track their bookings, leave reviews, and manage event details efficiently. Role-based access control ensures a tailored experience for both performers and customers, maintaining platform security and usability.",
@@ -150,7 +150,7 @@ export const projectItems = [
     title: "OLPH",
     category: "Web Development",
     industry: "EdTech / Parenting & Child Engagement Platform",
-    technology: "Next JS, Node JS, MongoDB, Tailwind CSS, Typescript",
+    technology: "Next.js, Node.js, MongoDB, Tailwind CSS, TypeScript",
     description:
       "Our LittlePlayHome is an interactive Progressive Web App (PWA) designed to engage children and parents through playful learning experiences. The platform offers a rich collection of educational resources, activities, and printable materials that encourage creativity and early development. Parents can easily explore learning content, manage activities, and contribute to the community through toy donations. A powerful web-based admin panel enables content management, user monitoring, and resource updates with ease. Combining fun and education, LittlePlayHome builds a safe and interactive digital environment for families to learn and grow together.",
     cover: "/image/project-item/olph.png",
@@ -170,7 +170,7 @@ export const projectItems = [
     title: "Culturafi",
     category: "Web Development",
     industry: "Cultural and Behavioral Job Matching Platform",
-    technology: "React.js, NodeJS, MongoDB",
+    technology: "React.js, Node.js, MongoDB",
     description:
       "Culturafi is a Progressive Web Application (PWA) that transforms recruitment by aligning cultural and behavioral traits between applicants and employers. Applicants complete trait-based assessments to receive personalized job recommendations tailored to their work style and values. Employers can post openings tagged with desired traits, enabling smarter, culture-driven hiring decisions. The platform includes a comprehensive Super Admin panel for managing users, job listings, assessments, subscriptions, and platform content. By emphasizing cultural fit alongside skills, Culturafi enhances workplace harmony, employee satisfaction, and long-term retention.",
     cover: "/image/project-item/culturafy.png",
@@ -203,7 +203,7 @@ export const projectItems = [
     slug: "black-box",
     title: "Blackbox",
     category: "Web Development",
-    industry: "Construction & engineering technology services ",
+    industry: "Construction & engineering technology services",
     technology: "Next, Sanity CMS, Tailwind CSS",
     description:
       "Blackbox is Australia’s leading provider of timelapse and technology services for the construction and engineering industries. The platform delivers innovative visual monitoring solutions that enable clients to track project progress, enhance site security, and improve operational transparency. Through advanced timelapse technology, cloud-based management tools, and real-time monitoring, Blackbox empowers organizations to make data-driven decisions and ensure safety compliance. Its solutions also help engage stakeholders by providing clear visual insights into project milestones and developments. With a focus on innovation and reliability, Blackbox continues to set the standard for construction technology excellence in Australia.",
@@ -224,7 +224,7 @@ export const projectItems = [
     title: "Triune",
     category: "Mobile App Development",
     industry: "Communication",
-    technology: "Kotlin, Swift, Node JS",
+    technology: "Kotlin, Swift, Node.js",
     description:
       "TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of important medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.",
     cover: "/image/project-item/triune.png",
@@ -234,10 +234,10 @@ export const projectItems = [
   {
     id: 13,
     slug: "dearcows",
-    title: "Dearcows",
+    title: "DearCows",
     category: "Web Development",
     industry: "Dairy & AgriTech",
-    technology: "React, Node JS",
+    technology: "React, Node.js",
     description:
       "DearCows is a Mumbai-based subscription platform that delivers fresh A2 milk and related dairy, ghee, and spice products directly to customers’ doorsteps. The brand promotes natural and ethical farming practices, including hand-milking, forest grazing, and natural mating for Gir-deshi cows. Through its integrated mobile app, users can easily schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, creating a sustainable and transparent farm-to-home ecosystem.",
     cover: "/image/project-item/dearcows.png",
@@ -255,7 +255,7 @@ export const projectItems = [
     title: "Regensis",
     category: "Mobile App Development",
     industry: "Medical Industry",
-    technology: "React Native, Python, NextJS",
+    technology: "React Native, Python, Next.js",
     description:
       "The platform is an Appointment Scheduling and E-commerce Application designed to simplify healthcare and wellness service management. It allows users to book appointments with professionals and purchase related medical products through a seamless, integrated interface. The app provides real-time booking availability, secure payment processing, and order tracking for a smooth user experience. With role-based access control, administrators and service providers can efficiently manage appointments, inventory, and customer interactions—all from a unified dashboard.",
     cover: "/image/project-item/regensis.png",
@@ -274,7 +274,7 @@ export const projectItems = [
     title: "Player-Coach Skill Development",
     category: "Mobile App Development",
     industry: "Sports Technology",
-    technology: "Flutter, Node, Next JS, Node.js, MongoDB, AWS S3",
+    technology: "Flutter, Node, Next.js, Node.js, MongoDB, AWS S3",
     description:
       "The Player-Coach Skill Development App is a dynamic mobile platform built to connect athletes and coaches within an interactive sports ecosystem. Players can track and enhance their skills, communicate directly with coaches, and stay inspired through motivational posts and community engagement. Coaches gain tools to monitor player progress, provide real-time feedback, and foster individual growth through consistent mentorship. The app encourages collaboration and continuous improvement by blending skill analytics, communication, and motivation. Together, it helps athletes and coaches build stronger connections and drive performance excellence.",
     cover: "/image/project-item/player-coach.png",
@@ -293,7 +293,7 @@ export const projectItems = [
     slug: "gomeal",
     title: "GoMeal",
     category: "Web Development",
-    industry: " Food & Beverage / Online Food Delivery",
+    industry: "Food & Beverage / Online Food Delivery",
     technology: "HTML5, CSS3, JavaScript, jQuery, Laravel, MySQL",
     description:
       "GoMeal is a comprehensive online food delivery platform designed to offer users a fast, intuitive, and enjoyable ordering experience. Customers can browse nearby restaurants, customize dishes, and place orders effortlessly with a real-time cart that works even without login. The integrated admin panel enables restaurant owners and staff to efficiently manage menus, categories, orders, and customer interactions. With secure Stripe payments, smart address auto-fetch, and real-time order tracking, GoMeal ensures both reliability and ease of use. Built with responsive design and a focus on performance, it delivers a seamless experience across web and mobile platforms.",
@@ -313,7 +313,7 @@ export const projectItems = [
     category: "Web Development",
     industry: "Sports & Fitness / Rugby Training & Management",
     technology:
-      "HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, Flowbite,Laravel,MySQL",
+      "HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, Flowbite, Laravel, MySQL",
     description:
       "Rugby Planner is a web-based platform designed to streamline rugby training and team management through a structured, subscription-based system. It enables coaches to create sessions, add drills, and upload instructional videos, while players can access assigned sessions and track their progress in real time. The platform features automated subscription and refund management, along with a robust admin panel for complete user and content control. Built for scalability and ease of use, Rugby Planner enhances collaboration between coaches and players, ensuring efficient training delivery and improved performance outcomes.",
     cover: "/image/project-item/rugby_planner.png",
@@ -331,7 +331,7 @@ export const projectItems = [
   {
     id: 18,
     slug: "dearcows-app",
-    title: "Dearcows",
+    title: "Dearcows App",
     category: "Mobile App Development",
     industry: "Dairy & AgriTech",
     technology: "Flutter",
@@ -391,7 +391,7 @@ export const projectItems = [
   {
     id: 21,
     slug: "koradream-app",
-    title: "Koradream – Football Talent Discovery Platform",
+    title: "Koradream – Football Talent Discovery App",
     category: "Mobile App Development",
     industry: "Sports Technology / Talent Discovery",
     technology: "Flutter, Provider / Riverpod, GitHub / GitLab",
@@ -424,6 +424,70 @@ export const projectItems = [
       "Online data synchronization",
       "Role-based user access",
       "Defect trend analytics",
+    ],
+  },
+  {
+    id: 23,
+    slug: "rfg-qc",
+    title: "Racing Force Group Quality Control",
+    category: "Mobile App Development",
+    industry: "Manufacturing Quality Control",
+    technology: "Flutter, Python, React.js",
+    description:
+      "The project is developed for the RFG QC team to manually inspect and report product quality as Pass or Fail using this app. It’s a cross-platform application designed for both Android and iOS, optimized for mobile and tablet devices. The app also supports offline QC, automatically syncing data to the server once an internet connection is available. Additionally, it includes a kiosk mode to ensure the QC team cannot close or exit the app during operation.",
+    cover: "/image/project-item/rfg-qc.png",
+    thumb: "/image/project-item/rfg-qc.png",
+    features: [
+      "kiosk mode",
+      "Offline Support",
+      "Auto Sync",
+      "Quality Reporting",
+    ],
+  },
+  {
+    id: 24,
+    slug: "oasis",
+    title: "Oasis",
+    category: "Mobile App Development",
+    industry: "Manufacturing Quality Control",
+    technology: "Flutter, Python, React.js",
+    description:
+      "The app is designed for creators to build and collaborate on portfolios, share project timelines and budgets, and engage with others through likes, comments, and feedback. It also includes creative exercises to enhance users’ creativity, in-app chat for communication, and a discussion forum for community interaction.",
+    cover: "/image/project-item/oasis.png",
+    thumb: "/image/project-item/oasis.png",
+    features: [
+      "Attractive and modern app design",
+      "Creative Collaboration",
+      "Likes & Comments",
+      "Creative Exercises",
+      "In-App Chat",
+      "Discussion Forum",
+      "Community Engagement",
+      "User Profiles",
+      "Content Sharing",
+      "Content Sharing",
+      "Notification System",
+      "Interactive UI",
+    ],
+  },
+  {
+    id: 25,
+    slug: "home-coming-app",
+    title: "Home coming app",
+    category: "Mobile App Development",
+    industry: "Real Estate / Property Rental Technology",
+    technology: "Flutter, Node.js, React.js",
+    description:
+      "The app is designed to help people find rooms or roommates based on their preferences. It features an in-app chat system for easy communication, a user-friendly interface for seamless room searching, and detailed room listings with all essential information. Additionally, the app includes notification management for requests and messages, along with report and block options to ensure a safe and secure platform for all users.",
+    cover: "/image/project-item/ho-co.png",
+    thumb: "/image/project-item/ho-co.png",
+    features: [
+      "Room & Roommate Matching",
+      "In-App Chat System",
+      "User-Friendly Interface",
+      "Detailed Room Listings",
+      "Notification Management",
+      "Report & Block Functionality",
     ],
   },
 ];
