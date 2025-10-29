@@ -133,8 +133,8 @@ export const projectItems = [
     country: "Australia",
     description:
       "The EV Charging Mobile App provides users with a seamless way to manage and monitor their electric vehicle charging experience. It allows users to locate and access charging stations, authenticate via RFID, and track real-time charging sessions directly from their mobile devices. Users can manage registered vehicles, view billing history, and make secure payments through integrated payment gateways. The app ensures convenience with live status updates, usage insights, and notifications for charging progress. Designed with a responsive and intuitive interface, it delivers a smooth and efficient experience for EV users on the go.",
-    cover: "/image/project-item/e-mobility-app.png",
-    thumb: "/image/project-item/e-mobility-app.png",
+    cover: "/image/project-item/emobility-app.jpg",
+    thumb: "/image/project-item/emobility-app.jpg",
     features: [
       "User Authentication",
       "Dashboard with Insights",

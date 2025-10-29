@@ -7,7 +7,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
       <div className='project-card-inner'>
         {/* Project Image */}
         <div className='project-image-wrapper'>
-          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block' onClick={() => {
+          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block w-100' onClick={() => {
             try {
               sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
               sessionStorage.setItem('inx_restore_projects', '1')
@@ -131,33 +131,26 @@ export default function ProjectItem({ item, index, currentCategory }) {
           width: 100%;
           height: 100%;
           position: relative;
-          padding: 16px; /* ensure image never touches edges */
-          border-radius: 16px;
+          padding: 0px; 
+          border-radius: 18px;
           text-align: center;
         }
 
-        /* subtle inner border so images feel framed without touching edges */
-        .project-image-link::after {
-          content: '';
-          position: absolute;
-          inset: 16px;
-          border-radius: 14px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          pointer-events: none;
-        }
+        /* remove inner frame so the image touches the container edges */
+        .project-image-link::after { display: none; }
 
         .project-image {
-          width: auto;
-          height: auto;
-          max-width: 75%;
-          max-height: 75%;
-          object-fit: contain;
+          width: 100%;
+          height: 100%;
+          max-width: none;
+          max-height: none;
+          object-fit: cover;
           object-position: center center;
           display: block;
-          margin: 0 auto;
+          margin: 0;
           transition: transform 0.3s ease;
-          border-radius: 12px;
-          filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+          border-radius: 18px; /* match wrapper */
+          filter: none;
         }
 
     
@@ -171,7 +164,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
           justify-content: center;
           opacity: 0;
           transition: opacity 0.3s ease;
-          border-radius: 16px;
+          border-radius: 18px;
         }
 
         .project-card:hover .project-image {
@@ -362,8 +355,8 @@ export default function ProjectItem({ item, index, currentCategory }) {
 
         @media (max-width: 768px) {
           .project-image-wrapper { min-height: 200px; }
-          .project-image-link { padding: 12px; }
-          .project-image-link::after { inset: 12px; }
+          .project-image-link { padding: 0; }
+          .project-image-link::after { display: none; }
           .project-overlay { inset: 0; }
           .project-content {
             padding: 20px;
