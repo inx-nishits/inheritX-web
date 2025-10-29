@@ -8,7 +8,7 @@ export const projectItems = [
     technology: "React, Node.js, MongoDB",
     country: "India",
     description:
-      "Venuorama is an online platform that helps users discover and explore event venues through 360° virtual tours, detailed listings, and smart city-based search.",
+      "Venuorama is an innovative online marketplace designed to simplify venue discovery and booking for any type of event. The platform allows users to explore a wide range of venues through immersive 360° virtual tours, offering a realistic experience before visiting in person. With advanced search filters based on city, area, budget, and event type, users can easily find venues that match their specific preferences. Each listing includes detailed information, images, amenities, and customer reviews to support informed decision-making. Venuorama also enables direct inquiries and booking requests, streamlining the entire event-planning process. The platform aims to bridge the gap between venue owners and customers, making venue selection more transparent, engaging, and efficient.Venuorama is an innovative online marketplace designed to simplify venue discovery and booking for any type of event. The platform allows users to explore a wide range of venues through immersive 360° virtual tours, offering a realistic experience before visiting in person. With advanced search filters based on city, area, budget, and event type, users can easily find venues that match their specific preferences. Each listing includes detailed information, images, amenities, and customer reviews to support informed decision-making. Venuorama also enables direct inquiries and booking requests, streamlining the entire event planning process. The platform aims to bridge the gap between venue owners and customers, making venue selection more transparent, engaging, and efficient.",
     cover: "/image/project-item/venuarama.png",
     thumb: "/image/project-item/venuarama.png",
     features: [
@@ -24,9 +24,9 @@ export const projectItems = [
     title: "Tourwit",
     category: "Web Development",
     industry: "TravelTech + E-Commerce",
-    technology: "Next.js, Node.js, Tailwind CSS",
+    technology: "Next.js, Node.js, Tailwind CSS, PWA",
     description:
-      "The platform offers a complete travel experience that goes beyond simple bookings. Users can estimate customized travel packages for families, solo travelers, or children, while also exploring unique handicraft shopping options. It includes engaging blogs and community forums that allow travelers to share stories, tips, and cultural insights. Artisan pages highlight local creators, giving visitors a deeper connection to traditional crafts and regional heritage. In addition to trip estimation and planning tools, the platform promotes cultural tourism by blending travel with authentic local experiences. It serves as an online craft marketplace where travelers can discover and purchase handmade items directly from artisans. This seamless combination of travel, culture, and craftsmanship makes it a one-stop destination for those seeking meaningful and immersive journeys.",
+      "The platform offers a complete travel experience that goes beyond simple bookings. Users can estimate customized travel packages for families, solo travelers, or children, while also exploring unique handicraft shopping options. It includes engaging blogs and community forums that allow travelers to share stories, tips, and cultural insights. Artisan pages highlight local creators, giving visitors a deeper connection to traditional crafts and regional heritage. In addition to trip estimation and planning tools, the platform promotes cultural tourism by blending travel with authentic local experiences. It also serves as an online craft marketplace where travelers can discover and purchase handmade items directly from artisans. This seamless combination of travel, culture, and craftsmanship makes it a one-stop destination for those seeking meaningful and immersive journeys.",
     cover: "/image/project-item/tourwit.png",
     thumb: "/image/project-item/tourwit.png",
     features: [
@@ -48,7 +48,7 @@ export const projectItems = [
     technology: "Next.js, Tailwind CSS",
     country: "Australia",
     description:
-      "The project is an EV Charging Management System that enables efficient management of charging sites, vehicles, users, and billing. It allows administrators to oversee multiple charging stations, monitor real-time usage, and manage RFID-based user access for secure authentication. Users can register their vehicles, start and stop charging sessions, and view their transaction history. The platform integrates automated billing and payment processing for a seamless experience. It also provides insightful reports and analytics to track site performance and revenue. With multi-language support, dark/light themes, and role-based access control, the system ensures a secure and user-friendly interface for both admins and users.",
+      "The project is an EV Charging Management System that enables efficient management of charging sites, vehicles, users, and billing. It allows administrators to oversee multiple charging stations, monitor real-time usage, and manage RFID-based user access for secure authentication. Users can register their vehicles, start and stop charging sessions, and view their transaction history. The platform integrates automated billing and payment processing for a seamless experience. It also provides insightful reports and analytics to track site performance and revenue. With multi-language support, dark/light themes, and role-based access control, the system ensures a secure and user-friendly interface for both administrators and users.",
     cover: "/image/project-item/e-mobility-web.png",
     thumb: "/image/project-item/e-mobility-web.png",
     features: [
@@ -67,10 +67,10 @@ export const projectItems = [
     title: "Strum",
     category: "Web Development",
     industry: "EventTech / Entertainment",
-    technology: "Next.js, Tailwind CSS",
+    technology: "Next.js, Tailwind CSS, PWA",
     country: "UK/USA",
     description:
-      "The project is an Entertainment Booking Platform that connects users with entertainers and bands based on their preferred date and location. It allows users to easily browse, book, and manage event performances through an intuitive and responsive interface. Entertainers can create profiles, showcase their talent, manage availability, and accept bookings. The platform supports secure online payments and automated order confirmations to ensure a smooth booking experience. Users can track their bookings, leave reviews, and manage event details efficiently. Role-based access control ensures a tailored experience for both performers and customers, maintaining platform security and usability.",
+      "The project is an Entertainment Booking Platform that connects users with entertainers and bands based on their preferred date and location. It allows users to easily browse, book, and manage event performances through an intuitive and responsive interface. Entertainers can create profiles, showcase their talent, manage availability, and accept bookings. The platform supports secure online payments and automated order confirmations to ensure a smooth booking experience. Users can track their bookings, leave reviews, and manage event details efficiently. Role-based access control ensures a tailored experience for both performers and customers while maintaining platform security and usability.",
     cover: "/image/project-item/strum.png",
     thumb: "/image/project-item/strum.png",
     features: [
@@ -89,7 +89,7 @@ export const projectItems = [
     technology: "React.js, Material UI, Node.js, PostgreSQL",
     country: "Australia",
     description:
-      "QDIS Facility Management is a comprehensive web-based ecosystem designed to streamline and automate facility management operations. The platform connects administrators, tenants, and vendors within a unified system for seamless collaboration. It enables efficient service request handling, work order management, and maintenance tracking through an intuitive interface. Real-time updates, analytics, and reporting tools provide full operational visibility. With secure authentication, role-based access control, and cross-platform support, QDIS ensures reliability, scalability, and an enhanced user experience across all devices.",
+      "QDIS Facility Management is a comprehensive web-based ecosystem designed to streamline and automate facility management operations. The platform connects administrators, tenants, and vendors within a unified system for seamless collaboration. It enables efficient service request handling, work order management, and maintenance tracking through an intuitive interface. Real-time updates, analytics, and reporting tools provide complete operational visibility. With secure authentication, role-based access control, and cross-platform support, QDIS ensures reliability, scalability, and an enhanced user experience across all devices.",
     cover: "/image/project-item/qdis.png",
     thumb: "/image/project-item/qdis.png",
     features: [
@@ -111,7 +111,7 @@ export const projectItems = [
     industry: "Real Estate Technology (PropTech)",
     technology: "Flutter, Provider, Firebase, Socket.IO, Hive, REST APIs",
     description:
-      "Leez is a modern, end-to-end digital platform built to simplify and streamline the rental ecosystem. It connects landlords, tenants, and service professionals through a unified mobile and web-based solution. The platform replaces manual, paper-based processes with automated workflows for property listings, digital agreements, rent payments, and maintenance tracking. Tenants can easily manage leases and requests, while landlords gain full visibility and control through an intuitive admin dashboard. With its secure, scalable, and user-friendly design, Leez delivers a seamless experience for all stakeholders in the rental lifecycle.",
+      "Leez is a modern, end-to-end digital platform built to simplify and streamline the rental ecosystem. It connects landlords, tenants, and service professionals through a unified mobile and web-based solution. The platform replaces manual, paper-based processes with automated workflows for property listings, digital agreements, rent payments, and maintenance tracking. Tenants can easily manage leases and requests, while landlords gain complete visibility and control through an intuitive admin dashboard. With its secure, scalable, and user-friendly design, Leez delivers a seamless experience for all stakeholders in the rental lifecycle.",
     cover: "/image/project-item/leez.png",
     thumb: "/image/project-item/leez.png",
     features: [
@@ -132,7 +132,7 @@ export const projectItems = [
     technology: "Flutter",
     country: "Australia",
     description:
-      "The EV Charging Mobile App provides users with a seamless way to manage and monitor their electric vehicle charging experience. It allows users to locate and access charging stations, authenticate via RFID, and track real-time charging sessions directly from their mobile device. Users can manage registered vehicles, view billing history, and make secure payments through integrated payment gateways. The app ensures convenience with live status updates, usage insights, and notifications for charging progress. Designed with a responsive and intuitive interface, it delivers a smooth and efficient experience for EV users on the go.",
+      "The EV Charging Mobile App provides users with a seamless way to manage and monitor their electric vehicle charging experience. It allows users to locate and access charging stations, authenticate via RFID, and track real-time charging sessions directly from their mobile devices. Users can manage registered vehicles, view billing history, and make secure payments through integrated payment gateways. The app ensures convenience with live status updates, usage insights, and notifications for charging progress. Designed with a responsive and intuitive interface, it delivers a smooth and efficient experience for EV users on the go.",
     cover: "/image/project-item/e-mobility-app.png",
     thumb: "/image/project-item/e-mobility-app.png",
     features: [
@@ -146,13 +146,13 @@ export const projectItems = [
   },
   {
     id: 8,
-    slug: "olph",
-    title: "OLPH",
+    slug: "our-little-play-home",
+    title: "Our little play home",
     category: "Web Development",
     industry: "EdTech / Parenting & Child Engagement Platform",
-    technology: "Next.js, Node.js, MongoDB, Tailwind CSS, TypeScript",
+    technology: "Next.js, Node.js, MongoDB, Tailwind CSS, TypeScript, PWA",
     description:
-      "Our LittlePlayHome is an interactive Progressive Web App (PWA) designed to engage children and parents through playful learning experiences. The platform offers a rich collection of educational resources, activities, and printable materials that encourage creativity and early development. Parents can easily explore learning content, manage activities, and contribute to the community through toy donations. A powerful web-based admin panel enables content management, user monitoring, and resource updates with ease. Combining fun and education, LittlePlayHome builds a safe and interactive digital environment for families to learn and grow together.",
+      "Our Little Play Home is an interactive Progressive Web App (PWA) designed to engage children and parents through playful learning experiences. The platform offers a rich collection of educational resources, activities, and printable materials that encourage creativity and early development. Parents can easily explore learning content, manage activities, and contribute to the community through toy donations. A powerful web-based admin panel enables content management, user monitoring, and resource updates with ease. Combining fun and education, Our Little Play Home builds a safe and interactive digital environment for families to learn and grow together.",
     cover: "/image/project-item/olph.png",
     thumb: "/image/project-item/olph.png",
     features: [
@@ -172,7 +172,7 @@ export const projectItems = [
     industry: "Cultural and Behavioral Job Matching Platform",
     technology: "React.js, Node.js, MongoDB",
     description:
-      "Culturafi is a Progressive Web Application (PWA) that transforms recruitment by aligning cultural and behavioral traits between applicants and employers. Applicants complete trait-based assessments to receive personalized job recommendations tailored to their work style and values. Employers can post openings tagged with desired traits, enabling smarter, culture-driven hiring decisions. The platform includes a comprehensive Super Admin panel for managing users, job listings, assessments, subscriptions, and platform content. By emphasizing cultural fit alongside skills, Culturafi enhances workplace harmony, employee satisfaction, and long-term retention.",
+      "Culturafi is a Progressive Web Application (PWA) that transforms recruitment by aligning cultural and behavioral traits between applicants and employers. Applicants complete trait-based assessments to receive personalized job recommendations tailored to their work styles and values. Employers can post openings tagged with desired traits, enabling smarter, culture-driven hiring decisions. The platform includes a comprehensive Super Admin panel for managing users, job listings, assessments, subscriptions, and platform content. By emphasizing cultural fit alongside skills, Culturafi enhances workplace harmony, employee satisfaction, and long-term retention.",
     cover: "/image/project-item/culturafy.png",
     thumb: "/image/project-item/culturafy.png",
     features: [
@@ -189,7 +189,7 @@ export const projectItems = [
     industry: "Wearable Technology / IoT (Internet of Things)",
     technology: "Flutter, BLE, Sqflite, Provider",
     description:
-      "Owl Ring is an innovative wearable companion app designed for the Owl Smart Ring, enabling users to manage alarms and reminders through silent, vibration-based alerts. Developed using Flutter, the app leverages Bluetooth Low Energy (BLE) for seamless communication between the ring and mobile devices. Users can view ring details such as battery level, connection status, and firmware version, while managing locally stored alarms via Sqflite. These alarms sync directly with the ring’s firmware, functioning even without internet or app interaction. Built for Android and iOS, Owl Ring delivers a minimalistic, distraction-free experience for modern, mindful time management.",
+      "Owl Ring is an innovative wearable companion app designed for the Owl Smart Ring, enabling users to manage alarms and reminders through silent, vibration-based alerts. Developed using Flutter, the app leverages Bluetooth Low Energy (BLE) for seamless communication between the ring and mobile devices. Users can view ring details such as battery level, connection status, and firmware version, while managing locally stored alarms via Sqflite. These alarms sync directly with the ring’s firmware, functioning even without internet connectivity or app interaction. Built for Android and iOS, Owl Ring delivers a minimalistic, distraction-free experience for modern, mindful time management.",
     cover: "/image/project-item/owl-ring.png",
     thumb: "/image/project-item/owl-ring.png",
     features: [
@@ -206,7 +206,7 @@ export const projectItems = [
     industry: "Construction & engineering technology services",
     technology: "Next, Sanity CMS, Tailwind CSS",
     description:
-      "Blackbox is Australia’s leading provider of timelapse and technology services for the construction and engineering industries. The platform delivers innovative visual monitoring solutions that enable clients to track project progress, enhance site security, and improve operational transparency. Through advanced timelapse technology, cloud-based management tools, and real-time monitoring, Blackbox empowers organizations to make data-driven decisions and ensure safety compliance. Its solutions also help engage stakeholders by providing clear visual insights into project milestones and developments. With a focus on innovation and reliability, Blackbox continues to set the standard for construction technology excellence in Australia.",
+      "Blackbox is Australia’s leading provider of timelapse and technology services for the construction and engineering industries. The platform delivers innovative visual monitoring solutions that enable clients to track project progress, enhance site security, and improve operational transparency. Through advanced timelapse technology, cloud-based management tools, and real-time monitoring, Blackbox empowers organizations to make data-driven decisions and ensure safety compliance. Its solutions also help engage stakeholders by providing clear visual insights into project milestones and developments. With a focus on innovation and reliability, Blackbox continues to set the standard for technological excellence in Australia’s construction industry.",
     cover: "/image/project-item/blackbox.png",
     thumb: "/image/project-item/blackbox.png",
     features: [
@@ -226,7 +226,7 @@ export const projectItems = [
     industry: "Communication",
     technology: "Kotlin, Swift, Node.js",
     description:
-      "TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of important medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.",
+      "TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of essential medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of essential medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.",
     cover: "/image/project-item/triune.png",
     thumb: "/image/project-item/triune.png",
     features: ["Emergency Alerts", "Medical Alerts", "Ask a Lawyer feature"],
@@ -239,7 +239,7 @@ export const projectItems = [
     industry: "Dairy & AgriTech",
     technology: "React, Node.js",
     description:
-      "DearCows is a Mumbai-based subscription platform that delivers fresh A2 milk and related dairy, ghee, and spice products directly to customers’ doorsteps. The brand promotes natural and ethical farming practices, including hand-milking, forest grazing, and natural mating for Gir-deshi cows. Through its integrated mobile app, users can easily schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, creating a sustainable and transparent farm-to-home ecosystem.",
+      "DearCows is a Mumbai-based subscription platform that delivers fresh A2 milk along with dairy, ghee, and spice products directly to customers’ doorsteps. The brand promotes natural and ethical farming practices, including hand-milking, forest grazing, and natural mating for Gir-deshi cows. Through its integrated mobile app, users can easily schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, creating a sustainable and transparent farm-to-home ecosystem.",
     cover: "/image/project-item/dearcows.png",
     thumb: "/image/project-item/dearcows.png",
     features: [
@@ -257,7 +257,7 @@ export const projectItems = [
     industry: "Medical Industry",
     technology: "React Native, Python, Next.js",
     description:
-      "The platform is an Appointment Scheduling and E-commerce Application designed to simplify healthcare and wellness service management. It allows users to book appointments with professionals and purchase related medical products through a seamless, integrated interface. The app provides real-time booking availability, secure payment processing, and order tracking for a smooth user experience. With role-based access control, administrators and service providers can efficiently manage appointments, inventory, and customer interactions—all from a unified dashboard.",
+      "The platform is an Appointment Scheduling and E-commerce Application designed to simplify healthcare and wellness service management. It allows users to book appointments with professionals and purchase related medical products through a seamless, integrated interface. The app provides real-time booking availability, secure payment processing, and order tracking for a smooth user experience. With role-based access control, administrators and service providers can efficiently manage appointments, inventory, and customer interactions—all from a single unified dashboard.",
     cover: "/image/project-item/regensis.png",
     thumb: "/image/project-item/regensis.png",
     features: [
@@ -276,7 +276,7 @@ export const projectItems = [
     industry: "Sports Technology",
     technology: "Flutter, Node, Next.js, Node.js, MongoDB, AWS S3",
     description:
-      "The Player-Coach Skill Development App is a dynamic mobile platform built to connect athletes and coaches within an interactive sports ecosystem. Players can track and enhance their skills, communicate directly with coaches, and stay inspired through motivational posts and community engagement. Coaches gain tools to monitor player progress, provide real-time feedback, and foster individual growth through consistent mentorship. The app encourages collaboration and continuous improvement by blending skill analytics, communication, and motivation. Together, it helps athletes and coaches build stronger connections and drive performance excellence.",
+      "The Player-Coach Skill Development App is a dynamic mobile platform built to connect athletes and coaches within an interactive sports ecosystem. Players can track and enhance their skills, communicate directly with coaches, and stay inspired through motivational posts and community engagement. Coaches gain tools to monitor player progress, provide real-time feedback, and foster individual growth through consistent mentorship. The app encourages collaboration and continuous improvement by blending skill analytics, communication, and motivation. Together, it helps athletes and coaches build stronger connections and achieve performance excellence.",
     cover: "/image/project-item/player-coach.png",
     thumb: "/image/project-item/player-coach.png",
     features: [
@@ -296,7 +296,7 @@ export const projectItems = [
     industry: "Food & Beverage / Online Food Delivery",
     technology: "HTML5, CSS3, JavaScript, jQuery, Laravel, MySQL",
     description:
-      "GoMeal is a comprehensive online food delivery platform designed to offer users a fast, intuitive, and enjoyable ordering experience. Customers can browse nearby restaurants, customize dishes, and place orders effortlessly with a real-time cart that works even without login. The integrated admin panel enables restaurant owners and staff to efficiently manage menus, categories, orders, and customer interactions. With secure Stripe payments, smart address auto-fetch, and real-time order tracking, GoMeal ensures both reliability and ease of use. Built with responsive design and a focus on performance, it delivers a seamless experience across web and mobile platforms.",
+      "GoMeal is a comprehensive online food delivery platform designed to offer users a fast, intuitive, and enjoyable ordering experience. Customers can browse nearby restaurants, customize dishes, and place orders effortlessly with a real-time cart that works even without logging in. The integrated admin panel enables restaurant owners and staff to efficiently manage menus, categories, orders, and customer interactions. With secure Stripe payments, smart address auto-fetch, and real-time order tracking, GoMeal ensures both reliability and ease of use. Built with responsive design and a focus on performance, it delivers a seamless experience across web and mobile platforms.",
     cover: "/image/project-item/gomeal.png",
     thumb: "/image/project-item/gomeal.png",
     features: [
@@ -315,7 +315,7 @@ export const projectItems = [
     technology:
       "HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, Flowbite, Laravel, MySQL",
     description:
-      "Rugby Planner is a web-based platform designed to streamline rugby training and team management through a structured, subscription-based system. It enables coaches to create sessions, add drills, and upload instructional videos, while players can access assigned sessions and track their progress in real time. The platform features automated subscription and refund management, along with a robust admin panel for complete user and content control. Built for scalability and ease of use, Rugby Planner enhances collaboration between coaches and players, ensuring efficient training delivery and improved performance outcomes.",
+      "Rugby Planner is a web-based platform designed to streamline rugby training and team management through a structured, subscription-based system. It enables coaches to create sessions, add drills, and upload instructional videos, while players can access assigned sessions and track their progress in real time. The platform features automated subscription and refund management, along with a robust admin panel for complete user and content control. Built for scalability and ease of use, Rugby Planner enhances collaboration between coaches and players, ensuring efficient training delivery and better performance outcomes.",
     cover: "/image/project-item/rugby_planner.png",
     thumb: "/image/project-item/rugby_planner.png",
     features: [
@@ -336,7 +336,7 @@ export const projectItems = [
     industry: "Dairy & AgriTech",
     technology: "Flutter",
     description:
-      "DearCows is a Mumbai-based subscription platform that delivers fresh A2 milk and related dairy, ghee, and spice products directly to customers’ doorsteps. The brand promotes natural and ethical farming practices, including hand-milking, forest grazing, and natural mating for Gir-deshi cows. Through its integrated mobile app, users can easily schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, creating a sustainable and transparent farm-to-home ecosystem.",
+      "DearCows is a Mumbai-based subscription platform that delivers fresh A2 milk along with related dairy, ghee, and spice products directly to customers’ doorsteps. The brand promotes natural and ethical farming practices, including hand-milking, forest grazing, and natural mating for Gir-deshi cows. Through its integrated mobile app, users can easily schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, creating a sustainable and transparent farm-to-home ecosystem.",
     cover: "/image/project-item/dearcows-app.png",
     thumb: "/image/project-item/dearcows-app.png",
     features: [
@@ -354,7 +354,7 @@ export const projectItems = [
     industry: "Media Metadata Management Platform",
     technology: "Python",
     description:
-      "This project involves building a secure and scalable mobile application that allows users to upload, manage, and authenticate media files with embedded metadata. It integrates social logins via Google, Apple, and Amazon for a seamless onboarding experience. The app leverages C2PA Python integration to embed and verify metadata, ensuring transparency and authenticity of digital content. Users can view, play, and organize their media through an interactive gallery, with subscription-based access to premium features like metadata management and media uploads. Additional functionalities include a global image hub for content discovery, a profile management section, static informational pages, and automated email notifications. The platform is designed for real-time online interaction and synchronization, providing a complete end-to-end digital media management solution.",
+      "This project involves building a secure and scalable mobile application that allows users to upload, manage, and authenticate media files with embedded metadata. It integrates social logins via Google, Apple, and Amazon for a seamless onboarding experience. The app leverages C2PA Python integration to embed and verify metadata, ensuring the transparency and authenticity of digital content. Users can view, play, and organize their media through an interactive gallery, with subscription-based access to premium features like metadata management and media uploads. Additional functionalities include a global image hub for content discovery, a profile management section, static informational pages, and automated email notifications. The platform is designed for real-time online interaction and synchronization, providing a complete end-to-end digital media management solution.",
     cover: "/image/project-item/ltlprotect.png",
     thumb: "/image/project-item/ltlprotect.png",
     features: [
@@ -377,7 +377,7 @@ export const projectItems = [
     industry: "Sports Technology / Talent Discovery",
     technology: "React.js, Node.js, Tailwind CSS",
     description:
-      "Koradream is a digital platform that bridges the gap between football players, scouts, and clubs. The landing page showcases the app’s ecosystem that helps players build profiles, upload highlights, and connect with scouts worldwide. With a focus on talent discovery and AI-powered insights, the UI is designed to be inspiring, professional, and easy to navigate.",
+      "Koradream is a digital platform that bridges the gap between football players, scouts, and clubs. The landing page showcases the app’s ecosystem, which helps players build profiles, upload highlights, and connect with scouts worldwide. With a focus on talent discovery and AI-powered insights, the UI is designed to be inspiring, professional, and easy to navigate.",
     cover: "/image/project-item/koradream.png",
     thumb: "/image/project-item/koradream.png",
     features: [
@@ -414,7 +414,7 @@ export const projectItems = [
     industry: "Construction / Infrastructure / Facility Management",
     technology: "Flutter, Dart, Webpanel: PHP",
     description:
-      "The Defect Detection and Tracking System aims to streamline on-site defect management by enabling users to detect, record, and monitor defects through a mobile application. The web panel allows supervisors and administrators to review, assign, and track issues in real-time. The system enhances transparency, reduces manual paperwork, and ensures that all defects are documented, prioritized, and resolved efficiently. The project also introduces automation in notifications and report generation, improving workflow and accountability within construction, manufacturing, or infrastructure projects.",
+      "The Defect Detection and Tracking System aims to streamline on-site defect management by enabling users to detect, record, and monitor defects through a mobile application. The web panel allows supervisors and administrators to review, assign, and track issues in real time. The system enhances transparency, reduces manual paperwork, and ensures that all defects are documented, prioritized, and resolved efficiently. The project also introduces automation in notifications and report generation, improving workflow and accountability across construction, manufacturing, and infrastructure projects.",
     cover: "/image/project-item/crack-detection.png",
     thumb: "/image/project-item/crack-detection.png",
     features: [
@@ -434,7 +434,7 @@ export const projectItems = [
     industry: "Manufacturing Quality Control",
     technology: "Flutter, Python, React.js",
     description:
-      "The project is developed for the RFG QC team to manually inspect and report product quality as Pass or Fail using this app. It’s a cross-platform application designed for both Android and iOS, optimized for mobile and tablet devices. The app also supports offline QC, automatically syncing data to the server once an internet connection is available. Additionally, it includes a kiosk mode to ensure the QC team cannot close or exit the app during operation.",
+      "The RFG QC app is a cross-platform solution developed for the Quality Control team to perform manual product inspections and record results as Pass or Fail. Designed for both Android and iOS devices, it is optimized for mobile and tablet use. The app supports offline functionality, allowing QC operations to continue without internet connectivity and automatically syncing data once online. It also features a kiosk mode to prevent users from exiting or closing the app during inspections, ensuring consistent and uninterrupted quality assessment.",
     cover: "/image/project-item/rfg-qc.png",
     thumb: "/image/project-item/rfg-qc.png",
     features: [
@@ -452,7 +452,7 @@ export const projectItems = [
     industry: "Manufacturing Quality Control",
     technology: "Flutter, Python, React.js",
     description:
-      "The app is designed for creators to build and collaborate on portfolios, share project timelines and budgets, and engage with others through likes, comments, and feedback. It also includes creative exercises to enhance users’ creativity, in-app chat for communication, and a discussion forum for community interaction.",
+      "The app provides a creative platform for users to build and collaborate on portfolios, manage project timelines and budgets, and engage with the community through likes, comments, and feedback. It fosters creativity through interactive exercises and enables seamless communication via in-app chat and a dedicated discussion forum, creating a collaborative and inspiring space for creators.",
     cover: "/image/project-item/oasis.png",
     thumb: "/image/project-item/oasis.png",
     features: [
@@ -478,7 +478,7 @@ export const projectItems = [
     industry: "Real Estate / Property Rental Technology",
     technology: "Flutter, Node.js, React.js",
     description:
-      "The app is designed to help people find rooms or roommates based on their preferences. It features an in-app chat system for easy communication, a user-friendly interface for seamless room searching, and detailed room listings with all essential information. Additionally, the app includes notification management for requests and messages, along with report and block options to ensure a safe and secure platform for all users.",
+      "The app is designed to simplify the process of finding rooms and roommates by matching users based on their preferences. It features a built-in chat system for effortless communication, an intuitive interface for smooth navigation, and comprehensive room listings with all essential details. With notification management for real-time updates and safety features like report and block options, the platform ensures a secure and user-friendly experience for everyone.",
     cover: "/image/project-item/ho-co.png",
     thumb: "/image/project-item/ho-co.png",
     features: [
