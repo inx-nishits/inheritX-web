@@ -7,7 +7,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
       <div className='project-card-inner'>
         {/* Project Image */}
         <div className='project-image-wrapper'>
-          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block w-100' onClick={() => {
+          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block w-100 h-100' onClick={() => {
             try {
               sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
               sessionStorage.setItem('inx_restore_projects', '1')
