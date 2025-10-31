@@ -115,7 +115,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
         .project-image-wrapper {
           position: relative;
           aspect-ratio: 16/10; /* more natural banner ratio for screenshots */
-          min-height: 240px; /* ensure balanced height for tall/narrow mockups */
+          min-height: 320px; /* ensure balanced height for tall/narrow mockups */
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -371,6 +371,10 @@ export default function ProjectItem({ item, index, currentCategory }) {
             gap: 15px;
             align-items: flex-start;
           }
+
+           .project-image-wrapper {
+          min-height: 240px;
+        }
         }
       `}</style>
     </div>
