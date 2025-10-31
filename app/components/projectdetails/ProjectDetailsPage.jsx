@@ -241,7 +241,7 @@ export default function ProjectDetailsPage({ params }) {
                 .project-main-image {
                     width: 100%;
                     height: 400px;
-                    object-fit: contain;
+                    object-fit: cover;
                     display: block;
                     margin: 0 auto;
                 }
