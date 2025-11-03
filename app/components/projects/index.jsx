@@ -16,7 +16,7 @@ export default function ProjectsPage() {
             if (shouldRestore) {
                 return sessionStorage.getItem('inx_projects_category') || 'all'
             }
-        } catch {}
+        } catch { }
         return 'all'
     })
     const [mounted, setMounted] = useState(false)
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
             const allowed = ['all', 'web', 'mobile']
             if (tabParam && allowed.includes(tabParam)) {
                 setActiveCategory(tabParam)
-                try { sessionStorage.setItem('inx_projects_category', tabParam) } catch {}
+                try { sessionStorage.setItem('inx_projects_category', tabParam) } catch { }
             }
 
             const restore = sessionStorage.getItem('inx_restore_projects')
@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                 sessionStorage.removeItem('inx_projects_scroll')
                 // Ensure we're at the normal position (do nothing; browser default is top)
             }
-        } catch {}
+        } catch { }
         setMounted(true)
     }, [searchParams])
 
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
     useEffect(() => {
         try {
             sessionStorage.setItem('inx_projects_category', activeCategory)
-        } catch {}
+        } catch { }
         // Update the URL to include ?tab= when not 'all' to preserve history state
         const currentTabParam = searchParams?.get('tab') || null
         const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
@@ -92,10 +92,10 @@ export default function ProjectsPage() {
         <>
             <div className='page-title'>
                 <div className='tf-container'>
-                    <div className='page-title-content text-center'>
+                    <div className='page-title-content text-center pb-5'>
                         <h1 className='title split-text effect-right'>Our Projects</h1>
                         <Breadcrumbs />
-                        <h3 className='text-center pt-5 mt-3 mb-5'>Innovative Solutions That Drive Success</h3>
+                        <h3 className='text-center pt-3 mt-3 mb-3'>Innovative Solutions That Drive Success</h3>
                         <p className='text-center'>Explore our comprehensive portfolio of cutting-edge projects that showcase our expertise in web development, mobile applications, IoT solutions, and AI-powered innovations.<br />Each project represents our commitment to delivering excellence and driving digital transformation.</p>
                     </div>
                 </div>
@@ -104,9 +104,9 @@ export default function ProjectsPage() {
             <div className='main-content tf-spacing-2'>
                 <div className='tf-container'>
                     {/* Modern Category Filter */}
-                    <div className='projects-filter-section mb-50'>
+                    <div className='projects-filter-section mb-50 p-5'>
                         <div className='filter-header text-center mb-30'>
-                            <h2 className='filter-title fw-6 mb-3'>Browse by Category</h2>
+                            <h2 className='filter-title fw-7 mb-3'>Browse by Category</h2>
                             <p className='filter-subtitle body-2'>Discover projects tailored to your industry needs</p>
                         </div>
 
@@ -172,7 +172,7 @@ export default function ProjectsPage() {
                 }
 
                 .filter-title {
-                    font-size: 32px;
+                    font-size: 26px;
                     background: linear-gradient(90deg, #e6f7ff 0%, #aee6ff 35%, #8af7d0 65%, #e6f7ff 100%);
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -259,7 +259,7 @@ export default function ProjectsPage() {
 
                 .projects-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                    grid-template-columns: repeat(2, 1fr);
                     gap: 30px;
                     margin-bottom: 40px;
                 }
@@ -322,7 +322,7 @@ export default function ProjectsPage() {
                     margin: 0 auto;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: 575px) {
                     .projects-grid {
                         grid-template-columns: 1fr;
                         gap: 20px;

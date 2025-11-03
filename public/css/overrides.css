@@ -1900,6 +1900,8 @@ div .page-title-home.hero-fullscreen {
   object-position: center !important;/* always centered */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+   min-width: 90px !important;            /* ignore inline width */
+  min-height: 50px !important;
 }
 
 /* Slightly smaller boxes on small screens */

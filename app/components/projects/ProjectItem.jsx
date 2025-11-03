@@ -1,13 +1,174 @@
+'use client'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 
 export default function ProjectItem({ item, index, currentCategory }) {
+  const imageWrapperRef = useRef(null)
+  const imageRef = useRef(null)
+  const frameRef = useRef(null)
+  const animationRunningRef = useRef(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [scrollOffset, setScrollOffset] = useState({ y: 0, progress: 0 })
+  const [isHovering, setIsHovering] = useState(false)
+
+  useEffect(() => {
+    // Calculate scroll offset function
+    const calculateScrollOffset = () => {
+      if (!imageWrapperRef.current) return
+
+      const rect = imageWrapperRef.current.getBoundingClientRect()
+      const windowHeight = window.innerHeight
+      
+      // Only animate if element is near viewport (within 2x viewport height)
+      const isNearViewport = rect.bottom > -windowHeight * 2 && rect.top < windowHeight * 3
+      
+      if (isNearViewport) {
+        const elementTop = rect.top
+        const elementHeight = rect.height
+        const elementCenter = elementTop + elementHeight / 2
+        const viewportCenter = windowHeight / 2
+        
+        // Calculate scroll progress (-1 to 1 based on viewport position)
+        const scrollProgress = (viewportCenter - elementCenter) / (windowHeight / 2)
+        const clampedProgress = Math.max(-1, Math.min(1, scrollProgress))
+        
+        setScrollOffset({
+          y: clampedProgress * 50, // Max 50px parallax movement
+          progress: clampedProgress
+        })
+      } else {
+        // Element is far from viewport, reset offset
+        setScrollOffset({ y: 0, progress: 0 })
+      }
+    }
+
+    // Animation function
+    const animate = () => {
+      if (!imageWrapperRef.current || !imageRef.current) {
+        animationRunningRef.current = false
+        return
+      }
+
+      calculateScrollOffset()
+      
+      if (animationRunningRef.current) {
+        frameRef.current = requestAnimationFrame(animate)
+      }
+    }
+    
+    // Scroll handler for immediate response
+    const handleScroll = () => {
+      calculateScrollOffset()
+    }
+
+    // Mouse handlers
+    const handleMouseMove = (e) => {
+      if (!imageWrapperRef.current) return
+      
+      const rect = imageWrapperRef.current.getBoundingClientRect()
+      const centerX = rect.left + rect.width / 2
+      const centerY = rect.top + rect.height / 2
+      
+      // Normalize mouse position (-1 to 1)
+      const x = (e.clientX - centerX) / (rect.width / 2)
+      const y = (e.clientY - centerY) / (rect.height / 2)
+      
+      // Apply easing for smoother movement
+      setMousePosition(prev => ({
+        x: prev.x + (x - prev.x) * 0.3,
+        y: prev.y + (y - prev.y) * 0.3
+      }))
+    }
+
+    const handleMouseEnter = () => {
+      setIsHovering(true)
+    }
+
+    const handleMouseLeave = () => {
+      setIsHovering(false)
+      setMousePosition({ x: 0, y: 0 })
+    }
+
+    const wrapper = imageWrapperRef.current
+    
+    // Initialize immediately and wait for refs to be ready
+    const initParallax = () => {
+      if (wrapper && imageRef.current && !animationRunningRef.current) {
+        // Add event listeners
+        wrapper.addEventListener('mousemove', handleMouseMove, { passive: true })
+        wrapper.addEventListener('mouseenter', handleMouseEnter)
+        wrapper.addEventListener('mouseleave', handleMouseLeave)
+        
+        // Add scroll listener
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        
+        // Initial calculation
+        calculateScrollOffset()
+        
+        // Start animation loop
+        animationRunningRef.current = true
+        frameRef.current = requestAnimationFrame(animate)
+        return true
+      }
+      return false
+    }
+    
+    // Try immediately, then with timeout as fallback
+    let timeoutId
+    if (!initParallax()) {
+      timeoutId = setTimeout(() => {
+        initParallax()
+      }, 100)
+    }
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+      animationRunningRef.current = false
+      
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current)
+      }
+      
+      window.removeEventListener('scroll', handleScroll)
+      
+      if (wrapper) {
+        wrapper.removeEventListener('mousemove', handleMouseMove)
+        wrapper.removeEventListener('mouseenter', handleMouseEnter)
+        wrapper.removeEventListener('mouseleave', handleMouseLeave)
+      }
+    }
+  }, [])
+
+  // Enhanced 3D transforms with better depth
+  const rotateX = mousePosition.y * 8 // Max 8 degrees tilt (more pronounced)
+  const rotateY = mousePosition.x * 8 // Max 8 degrees tilt
+  const translateX = mousePosition.x * 15 // Horizontal parallax
+  const translateY = scrollOffset.y + (mousePosition.y * 15) // Scroll + mouse parallax
+  const translateZ = isHovering ? 20 : 0 // Depth on hover
+  const scale = isHovering ? 1.03 : 1 // Scale on hover (reduced from 1.08)
+  
+  // Glow effect based on mouse position
+  const glowX = (mousePosition.x * 50) + 50 // 0-100%
+  const glowY = (mousePosition.y * 50) + 50 // 0-100%
 
   return (
     <div className='project-card' style={{ '--stagger': index }}>
       <div className='project-card-inner'>
         {/* Project Image */}
-        <div className='project-image-wrapper'>
-          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block w-100' onClick={() => {
+        <div className='project-image-wrapper' ref={imageWrapperRef}>
+          {/* Glow effect layer */}
+          <div 
+            className='project-image-glow'
+            style={{
+              background: `radial-gradient(circle at ${glowX}% ${glowY}%, rgba(0, 179, 255, ${isHovering ? 0.4 : 0.2}), transparent 70%)`,
+              opacity: isHovering ? 1 : 0.6,
+              transition: 'opacity 0.4s ease'
+            }}
+          />
+          
+          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block w-100 h-100' onClick={() => {
             try {
               sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
               sessionStorage.setItem('inx_restore_projects', '1')
@@ -15,9 +176,15 @@ export default function ProjectItem({ item, index, currentCategory }) {
             } catch {}
           }}>
             <img 
+              ref={imageRef}
               src={item.thumb} 
               alt={item.title} 
               className='project-image'
+              style={{
+                transform: `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) scale(${scale})`,
+                transition: isHovering ? 'none' : 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
+                filter: isHovering ? `brightness(1.1) contrast(1.05)` : 'brightness(1) contrast(1)'
+              }}
             />
             <div className='project-overlay'>
               <div className='project-overlay-content'>
@@ -102,8 +269,9 @@ export default function ProjectItem({ item, index, currentCategory }) {
         }
 
         .project-card:hover {
-          border-color: rgba(0, 179, 255, 0.3);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          border-color: rgba(0, 179, 255, 0.5);
+          box-shadow: 0 25px 50px rgba(0, 179, 255, 0.2), 0 10px 20px rgba(0, 0, 0, 0.4);
+          transform: translateY(-2px);
         }
 
         .project-card-inner {
@@ -115,13 +283,25 @@ export default function ProjectItem({ item, index, currentCategory }) {
         .project-image-wrapper {
           position: relative;
           aspect-ratio: 16/10; /* more natural banner ratio for screenshots */
-          min-height: 240px; /* ensure balanced height for tall/narrow mockups */
+          min-height: 320px; /* ensure balanced height for tall/narrow mockups */
           overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;
           background: rgb(0 197 222 / 10%);
           border-radius: 18px;
+          transform-style: preserve-3d;
+          perspective: 1200px;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-image-glow {
+          position: absolute;
+          inset: -50%;
+          pointer-events: none;
+          z-index: 1;
+          border-radius: 18px;
+          transition: all 0.5s ease;
         }
 
         .project-image-link {
@@ -134,6 +314,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
           padding: 0px; 
           border-radius: 18px;
           text-align: center;
+          z-index: 2;
         }
 
         /* remove inner frame so the image touches the container edges */
@@ -145,12 +326,16 @@ export default function ProjectItem({ item, index, currentCategory }) {
           max-width: none;
           max-height: none;
           object-fit: cover;
-          object-position: center center;
+          object-position: top center;
           display: block;
           margin: 0;
-          transition: transform 0.3s ease;
           border-radius: 18px; /* match wrapper */
-          filter: none;
+          will-change: transform, filter;
+          backface-visibility: hidden;
+          transform-origin: center center;
+          transform-style: preserve-3d;
+          position: relative;
+          z-index: 2;
         }
 
     
@@ -158,17 +343,23 @@ export default function ProjectItem({ item, index, currentCategory }) {
         .project-overlay {
           position: absolute;
           inset: 0; /* full width & height over the image frame */
-          background: rgba(0, 0, 0, 0.7);
+          background: linear-gradient(135deg, rgba(0, 179, 255, 0.3), rgba(0, 0, 0, 0.7));
           display: flex;
           align-items: center;
           justify-content: center;
           opacity: 0;
-          transition: opacity 0.3s ease;
+          transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           border-radius: 18px;
+          z-index: 3;
+          backdrop-filter: blur(0.5px);
         }
 
-        .project-card:hover .project-image {
-          // transform: scale(1.02);
+        .project-card:hover .project-image-wrapper {
+          transform: translateY(-4px);
+        }
+        
+        .project-card:hover .project-image-glow {
+          opacity: 1 !important;
         }
 
         .project-card:hover .project-overlay {
@@ -371,6 +562,10 @@ export default function ProjectItem({ item, index, currentCategory }) {
             gap: 15px;
             align-items: flex-start;
           }
+
+           .project-image-wrapper {
+          min-height: 240px;
+        }
         }
       `}</style>
     </div>

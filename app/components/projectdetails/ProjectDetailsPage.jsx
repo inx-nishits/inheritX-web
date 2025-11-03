@@ -233,17 +233,18 @@ export default function ProjectDetailsPage({ params }) {
                     position: relative;
                     border-radius: 20px;
                     overflow: hidden;
-                    padding: 16px;
+                    padding: 0px;
                     background: rgba(255, 255, 255, 0.02);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                 }
 
                 .project-main-image {
-                    width: auto;
-                    height: auto;
-                    object-fit: contain;
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
                     display: block;
                     margin: 0 auto;
+                    object-position: top center;
                 }
 
                 .project-overview-content {

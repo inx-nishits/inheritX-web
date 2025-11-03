@@ -22,7 +22,7 @@ export default async function PortfolioPage() {
                     <div className='page-title-content text-center'>
                         <h1 className='title split-text effect-right'>Our Portfolio</h1>
                         <Breadcrumbs />
-                        <h3 className='text-center pt-5 mt-3 mb-5'>Portfolio Showcase of Our Creative Work.</h3>
+                        <h3 className='text-center pt-5 mt-3 mb-3'>Portfolio Showcase of Our Creative Work.</h3>
                         <p className='text-center'>Our work and happy clients speak for us. Here is a compilation of our work that we have created, managed and optimized with utmost love and dedication.<br />Take a look at our comprehensive portfolio.</p>
                     </div>
                 </div>
