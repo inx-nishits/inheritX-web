@@ -7,86 +7,89 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
   const imageRef = useRef(null)
   const frameRef = useRef(null)
   const animationRunningRef = useRef(false)
+  const cachedRectRef = useRef(null)
+  const needsRectUpdateRef = useRef(true)
+  const lastMouseEventRef = useRef(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollOffset, setScrollOffset] = useState({ y: 0, progress: 0 })
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
-    // Calculate scroll offset function
-    const calculateScrollOffset = () => {
-      if (!imageWrapperRef.current) return
-
-      const rect = imageWrapperRef.current.getBoundingClientRect()
-      const windowHeight = window.innerHeight
-      
-      // Only animate if element is near viewport (within 2x viewport height)
-      const isNearViewport = rect.bottom > -windowHeight * 2 && rect.top < windowHeight * 3
-      
-      if (isNearViewport) {
-        const elementTop = rect.top
-        const elementHeight = rect.height
-        const elementCenter = elementTop + elementHeight / 2
-        const viewportCenter = windowHeight / 2
-        
-        // Calculate scroll progress (-1 to 1 based on viewport position)
-        const scrollProgress = (viewportCenter - elementCenter) / (windowHeight / 2)
-        const clampedProgress = Math.max(-1, Math.min(1, scrollProgress))
-        
-        setScrollOffset({
-          y: clampedProgress * 50, // Max 50px parallax movement
-          progress: clampedProgress
-        })
-      } else {
-        // Element is far from viewport, reset offset
-        setScrollOffset({ y: 0, progress: 0 })
-      }
-    }
-
-    // Animation function
+    // Read DOM and update state within a single rAF loop to avoid layout thrash
     const animate = () => {
       if (!imageWrapperRef.current || !imageRef.current) {
         animationRunningRef.current = false
         return
       }
+      // Refresh cached rect at most once per frame if flagged
+      if (needsRectUpdateRef.current) {
+        cachedRectRef.current = imageWrapperRef.current.getBoundingClientRect()
+        needsRectUpdateRef.current = false
+      }
 
-      calculateScrollOffset()
+      const rect = cachedRectRef.current
+      if (rect) {
+        const windowHeight = window.innerHeight
+        const isNearViewport = rect.bottom > -windowHeight * 2 && rect.top < windowHeight * 3
+        if (isNearViewport) {
+          const elementCenter = rect.top + rect.height / 2
+          const viewportCenter = windowHeight / 2
+          const scrollProgress = (viewportCenter - elementCenter) / (windowHeight / 2)
+          const clampedProgress = Math.max(-1, Math.min(1, scrollProgress))
+          // Only set state if values changed meaningfully to reduce reflows
+          setScrollOffset(prev => {
+            const next = { y: clampedProgress * 50, progress: clampedProgress }
+            return (prev.y !== next.y || prev.progress !== next.progress) ? next : prev
+          })
+        } else {
+          setScrollOffset(prev => (prev.y !== 0 || prev.progress !== 0 ? { y: 0, progress: 0 } : prev))
+        }
+      }
+
+      // Mouse movement easing using last event and cached rect (no reads here)
+      if (lastMouseEventRef.current && rect) {
+        const e = lastMouseEventRef.current
+        const centerX = rect.left + rect.width / 2
+        const centerY = rect.top + rect.height / 2
+        const x = (e.clientX - centerX) / (rect.width / 2)
+        const y = (e.clientY - centerY) / (rect.height / 2)
+        setMousePosition(prev => {
+          const next = {
+            x: prev.x + (x - prev.x) * 0.3,
+            y: prev.y + (y - prev.y) * 0.3
+          }
+          return (next.x !== prev.x || next.y !== prev.y) ? next : prev
+        })
+      }
       
       if (animationRunningRef.current) {
         frameRef.current = requestAnimationFrame(animate)
       }
     }
     
-    // Scroll handler for immediate response
+    // Scroll/resize handlers flag a rect update; actual read happens in rAF
     const handleScroll = () => {
-      calculateScrollOffset()
+      needsRectUpdateRef.current = true
+    }
+    const handleResize = () => {
+      needsRectUpdateRef.current = true
     }
 
     // Mouse handlers
     const handleMouseMove = (e) => {
       if (!imageWrapperRef.current) return
-      
-      const rect = imageWrapperRef.current.getBoundingClientRect()
-      const centerX = rect.left + rect.width / 2
-      const centerY = rect.top + rect.height / 2
-      
-      // Normalize mouse position (-1 to 1)
-      const x = (e.clientX - centerX) / (rect.width / 2)
-      const y = (e.clientY - centerY) / (rect.height / 2)
-      
-      // Apply easing for smoother movement
-      setMousePosition(prev => ({
-        x: prev.x + (x - prev.x) * 0.3,
-        y: prev.y + (y - prev.y) * 0.3
-      }))
+      lastMouseEventRef.current = e
     }
 
     const handleMouseEnter = () => {
       setIsHovering(true)
+      needsRectUpdateRef.current = true
     }
 
     const handleMouseLeave = () => {
       setIsHovering(false)
       setMousePosition({ x: 0, y: 0 })
+      lastMouseEventRef.current = null
     }
 
     const wrapper = imageWrapperRef.current
@@ -101,9 +104,10 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         
         // Add scroll listener
         window.addEventListener('scroll', handleScroll, { passive: true })
+        window.addEventListener('resize', handleResize, { passive: true })
         
-        // Initial calculation
-        calculateScrollOffset()
+        // Prime rect cache once before starting loop
+        needsRectUpdateRef.current = true
         
         // Start animation loop
         animationRunningRef.current = true
@@ -132,6 +136,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
       }
       
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
       
       if (wrapper) {
         wrapper.removeEventListener('mousemove', handleMouseMove)

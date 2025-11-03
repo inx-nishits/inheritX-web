@@ -173,25 +173,53 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/image/logo/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        {/* Google Fonts: load non-blocking instead of @import in CSS */}
+        <link
+          rel='preload'
+          as='style'
+          href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+        />
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+          media='print'
+          onLoad="this.media='all'"
+        />
+        <noscript>
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+          />
+        </noscript>
         {/* Preload critical hero image for LCP */}
         <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' imageSrcSet='/image/page-title/herobanner-final.jpg' />
         {/* Safe CSS preloads to speed up first paint without changing behavior */}
         <link rel='preload' as='style' href='/css/bootstrap.css' />
         <link rel='preload' as='style' href='/css/styles.css' />
+        {/* Keep core CSS render-path-critical */}
         <link rel='stylesheet' href='/css/bootstrap.css' />
-        {/* Template styles */}
-        <link rel='stylesheet' href='/css/animate.min.css' />
-        <link rel='stylesheet' href='/css/animate2.min.css' />
-        <link rel='stylesheet' href='/css/magnific-popup.min.css' />
-        <link rel='stylesheet' href='/css/swiper-bundle.min.css' />
-        <link rel='stylesheet' href='/css/nice-select.css' />
-        <link rel='stylesheet' href='/css/odometer-theme-default.css' />
-        <link rel='stylesheet' href='/css/jquery-ui.min.css' />
-        <link rel='stylesheet' href='/css/map.min.css' />
-        <link rel='stylesheet' href='/css/nouislider.min.css' />
-        <link rel='stylesheet' href='/icons/icomoon/style.css' />
         <link rel='stylesheet' href='/css/styles.css' />
         <link rel='stylesheet' href='/css/overrides.css' />
+        {/* Defer non-critical CSS to avoid render-blocking */}
+        {/* Defer lower-priority CSS */}
+        <link rel='preload' as='style' href='/css/animate.min.css' />
+        <link rel='stylesheet' href='/css/animate.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='preload' as='style' href='/css/animate2.min.css' />
+        <link rel='stylesheet' href='/css/animate2.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='preload' as='style' href='/css/magnific-popup.min.css' />
+        <link rel='stylesheet' href='/css/magnific-popup.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='preload' as='style' href='/css/nice-select.css' />
+        <link rel='stylesheet' href='/css/nice-select.css' media='print' onLoad="this.media='all'" />
+        <link rel='preload' as='style' href='/css/jquery-ui.min.css' />
+        <link rel='stylesheet' href='/css/jquery-ui.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='preload' as='style' href='/css/map.min.css' />
+        <link rel='stylesheet' href='/css/map.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='preload' as='style' href='/css/nouislider.min.css' />
+        <link rel='stylesheet' href='/css/nouislider.min.css' media='print' onLoad="this.media='all'" />
+        {/* Keep essential interactive CSS render-ready to avoid feature regressions */}
+        <link rel='stylesheet' href='/css/swiper-bundle.min.css' />
+        <link rel='stylesheet' href='/css/odometer-theme-default.css' />
+        <link rel='stylesheet' href='/icons/icomoon/style.css' />
 
         {/* Canonical and alternate */}
         <link rel='canonical' href={siteUrl} />
