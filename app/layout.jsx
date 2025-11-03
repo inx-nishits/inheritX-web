@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast'
 // SEO base configuration
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
 // Use the requested icon asset for social previews
-const defaultOgImage = `${siteUrl}/image/logo/inx-icon-link.png`
+const defaultOgImage = `${siteUrl}/image/logo/og-banner.png`
 const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 
 export const metadata = {
@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
     '@type': 'Organization',
     name: 'InheritX',
     url: siteUrl,
-    logo: `${siteUrl}/image/logo/inx-icon-link.png`,
+    logo: `${siteUrl}/image/logo/og-banner.png`,
     sameAs: [
       'https://www.linkedin.com/company/inheritx/',
       'https://twitter.com/inhx_tech',
