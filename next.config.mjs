@@ -52,6 +52,21 @@ const nextConfig = {
         source: '/hire/:path*',
         destination: '/hire-experts/:path*',
         permanent: true
+      },
+      {
+        source: '/projects',
+        destination: '/portfolio',
+        permanent: true
+      },
+      {
+        source: '/projects/:path*',
+        destination: '/portfolio/:path*',
+        permanent: true
+      },
+      {
+        source: '/project-details/:slug',
+        destination: '/portfolio/:slug',
+        permanent: true
       }
     ]
   }

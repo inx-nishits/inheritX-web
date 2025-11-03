@@ -6,7 +6,7 @@ import { projectItems, projectCategories } from '../../data/projectsData'
 import ProjectItem from './ProjectItem'
 import Breadcrumbs from '../Breadcrumbs'
 
-export default function ProjectsPage() {
+export default function ProjectsPage({ basePath = '/projects', detailsBasePath = '/project-details', pageTitle = 'Our Projects' }) {
     const searchParams = useSearchParams()
     const router = useRouter()
     const [activeCategory, setActiveCategory] = useState(() => {
@@ -67,7 +67,7 @@ export default function ProjectsPage() {
         const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
         if (currentTabParam !== desiredTabParam) {
             const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
-            router.replace(`/projects${query}`, { scroll: false })
+            router.replace(`${basePath}${query}`, { scroll: false })
         }
     }, [activeCategory])
 
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
             <div className='page-title'>
                 <div className='tf-container'>
                     <div className='page-title-content text-center pb-5'>
-                        <h1 className='title split-text effect-right'>Our Projects</h1>
+                        <h1 className='title split-text effect-right'>{pageTitle}</h1>
                         <Breadcrumbs />
                         <h3 className='text-center pt-3 mt-3 mb-3'>Innovative Solutions That Drive Success</h3>
                         <p className='text-center'>Explore our comprehensive portfolio of cutting-edge projects that showcase our expertise in web development, mobile applications, IoT solutions, and AI-powered innovations.<br />Each project represents our commitment to delivering excellence and driving digital transformation.</p>
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
                     <div className='projects-grid-section'>
                         <div className='projects-grid' key={activeCategory}>
                             {filteredItems.map((item, index) => (
-                                <ProjectItem key={item.id} item={item} index={index} currentCategory={activeCategory} />
+                                <ProjectItem key={item.id} item={item} index={index} currentCategory={activeCategory} detailsBasePath={detailsBasePath} />
                             ))}
                         </div>
 

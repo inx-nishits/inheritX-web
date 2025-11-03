@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
-export default function ProjectItem({ item, index, currentCategory }) {
+export default function ProjectItem({ item, index, currentCategory, detailsBasePath = '/project-details' }) {
   const imageWrapperRef = useRef(null)
   const imageRef = useRef(null)
   const frameRef = useRef(null)
@@ -168,7 +168,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
             }}
           />
           
-          <Link href={`/project-details/${item.slug}`} className='project-image-link d-block w-100 h-100' onClick={() => {
+          <Link href={`${detailsBasePath}/${item.slug}`} className='project-image-link d-block w-100 h-100' onClick={() => {
             try {
               sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
               sessionStorage.setItem('inx_restore_projects', '1')
@@ -200,7 +200,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
         <div className='project-content'>
           <div className='project-header'>
             <h3 className='project-title'>
-              <Link href={`/project-details/${item.slug}`} onClick={() => {
+              <Link href={`${detailsBasePath}/${item.slug}`} onClick={() => {
                 try {
                   sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
                   sessionStorage.setItem('inx_restore_projects', '1')
@@ -244,7 +244,7 @@ export default function ProjectItem({ item, index, currentCategory }) {
 
           {/* Project Footer */}
           <div className='project-footer'>
-            <Link href={`/project-details/${item.slug}`} className='project-link' onClick={() => {
+            <Link href={`${detailsBasePath}/${item.slug}`} className='project-link' onClick={() => {
               try {
                 sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
                 sessionStorage.setItem('inx_restore_projects', '1')
