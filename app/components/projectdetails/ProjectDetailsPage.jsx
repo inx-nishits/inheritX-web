@@ -223,9 +223,9 @@ export default function ProjectDetailsPage({ params }) {
 
                 .project-overview-section {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 50px;
-                    margin-bottom: 60px;
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                    margin-bottom: 30px;
                     align-items: start;
                 }
 
@@ -240,7 +240,7 @@ export default function ProjectDetailsPage({ params }) {
 
                 .project-main-image {
                     width: 100%;
-                    height: 400px;
+                    height: auto;
                     object-fit: cover;
                     display: block;
                     margin: 0 auto;
@@ -248,7 +248,7 @@ export default function ProjectDetailsPage({ params }) {
                 }
 
                 .project-overview-content {
-                    padding: 20px 0 20px;
+                    padding: 0px 0 20px;
                 }
 
                 .overview-title {
@@ -394,7 +394,6 @@ export default function ProjectDetailsPage({ params }) {
                     color: rgba(255, 255, 255, 0.7);
                     font-size: 16px;
                     margin-bottom: 30px;
-                    max-width: 600px;
                     margin-left: auto;
                     margin-right: auto;
                 }
