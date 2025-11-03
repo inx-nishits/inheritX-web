@@ -104,8 +104,8 @@ export default function ProjectsPage() {
             <div className='main-content tf-spacing-2'>
                 <div className='tf-container'>
                     {/* Modern Category Filter */}
-                    <div className='projects-filter-section mb-50 p-5'>
-                        <div className='filter-header text-center mb-30'>
+                    <div className='projects-filter-section mb-30 p-5 pt-4'>
+                        <div className='filter-header text-center mb-4'>
                             <h2 className='filter-title fw-7 mb-3'>Browse by Category</h2>
                             <p className='filter-subtitle body-2'>Discover projects tailored to your industry needs</p>
                         </div>
@@ -165,10 +165,10 @@ export default function ProjectsPage() {
 
             <style jsx>{`
                 .projects-filter-section {
-                    background: rgba(255, 255, 255, 0.02);
+                    // background: rgba(255, 255, 255, 0.02);
                     border-radius: 20px;
                     padding: 40px 30px;
-                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    // border: 1px solid rgba(255, 255, 255, 0.08);
                 }
 
                 .filter-title {
@@ -177,6 +177,7 @@ export default function ProjectsPage() {
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
+                    line-height: initial;
                 }
 
                 .filter-subtitle {
