@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "minify:css": "cleancss -o public/css/bootstrap.min.css public/css/bootstrap.css && cleancss -o public/css/overrides.min.css public/css/overrides.css && cleancss -o public/css/styles.min.css public/css/styles.css",
     "minify:public": "terser public/js/gsap.min.js -c -m -o public/js/gsap.min.js && terser public/js/bootstrap.min.js -c -m -o public/js/bootstrap.min.js && terser public/js/ScrollTrigger.min.js -c -m -o public/js/ScrollTrigger.min.js && terser public/js/lazysize.min.js -c -m -o public/js/lazysize.min.js && terser public/js/ScrollSmooth.js -c -m -o public/js/ScrollSmooth.js",
-    "build": "npm run minify:public && next build",
+    "build": "npm run minify:css && npm run minify:public && next build",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
@@ -26,7 +27,8 @@
   "devDependencies": {
     "@types/node": "24.7.0",
     "@types/react": "19.2.2",
-    "typescript": "5.9.3",
-    "terser": "^5.36.0"
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.36.0",
+    "typescript": "5.9.3"
   }
 }

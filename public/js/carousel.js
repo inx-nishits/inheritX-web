@@ -134,9 +134,33 @@ if ($(".flat-thumbs-tes").length > 0) {
 
 // Auto-init on first load after scripts mount
 if (typeof window !== "undefined") {
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(function(){ window.initCarousels(); }, 0);
-  } else {
-    document.addEventListener("DOMContentLoaded", function(){ window.initCarousels(); });
+  // Function to check and initialize carousels
+  function checkAndInit() {
+    if (typeof Swiper !== "undefined") {
+      window.initCarousels();
+    } else {
+      // If Swiper is not loaded yet (lazy loading), wait and retry
+      setTimeout(checkAndInit, 100);
+    }
   }
+  
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    checkAndInit();
+  } else {
+    document.addEventListener("DOMContentLoaded", checkAndInit);
+  }
+  
+  // Also listen for when Swiper loads (for lazy loading scenarios)
+  // This ensures carousels initialize even if Swiper loads after DOM is ready
+  var swiperCheckInterval = setInterval(function() {
+    if (typeof Swiper !== "undefined") {
+      window.initCarousels();
+      clearInterval(swiperCheckInterval);
+    }
+  }, 200);
+  
+  // Stop checking after 10 seconds to avoid infinite polling
+  setTimeout(function() {
+    clearInterval(swiperCheckInterval);
+  }, 10000);
 }

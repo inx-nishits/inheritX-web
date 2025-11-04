@@ -4,6 +4,7 @@ import Header from './components/Header'
 import RouteHistoryTracker from './components/RouteHistoryTracker'
 import Footer from './components/Footer'
 import CounterInitializer from './components/CounterInitializer'
+import LazyScripts from './components/LazyScripts'
 import { Toaster } from 'react-hot-toast'
 
 // SEO base configuration
@@ -194,12 +195,12 @@ export default function RootLayout({ children }) {
         {/* Preload critical hero image for LCP */}
         <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' imageSrcSet='/image/page-title/herobanner-final.jpg' />
         {/* Safe CSS preloads to speed up first paint without changing behavior */}
-        <link rel='preload' as='style' href='/css/bootstrap.css' />
-        <link rel='preload' as='style' href='/css/styles.css' />
+        <link rel='preload' as='style' href='/css/bootstrap.min.css' />
+        <link rel='preload' as='style' href='/css/styles.min.css' />
         {/* Keep core CSS render-path-critical */}
-        <link rel='stylesheet' href='/css/bootstrap.css' />
-        <link rel='stylesheet' href='/css/styles.css' />
-        <link rel='stylesheet' href='/css/overrides.css' />
+        <link rel='stylesheet' href='/css/bootstrap.min.css' />
+        <link rel='stylesheet' href='/css/styles.min.css' />
+        <link rel='stylesheet' href='/css/overrides.min.css' />
         {/* Defer non-critical CSS to avoid render-blocking */}
         {/* Defer lower-priority CSS */}
         <link rel='preload' as='style' href='/css/animate.min.css' />
@@ -280,11 +281,11 @@ export default function RootLayout({ children }) {
         {/* Defer jQuery to not block rendering */}
         <Script src='/js/jquery.min.js' strategy='afterInteractive' />
         <Script src='/js/jquery-init.js' strategy='afterInteractive' />
-        <Script src='/js/bootstrap.min.js' strategy='afterInteractive' />
+        <Script src='/js/bootstrap.min.js' strategy='lazyOnload' />
         <Script src='/js/gsap.min.js' strategy='afterInteractive' />
         <Script src='/js/ScrollToPlugin.min.js' strategy='afterInteractive' />
         <Script src='/js/ScrollTrigger.min.js' strategy='afterInteractive' />
-        <Script src='/js/swiper-bundle.min.js' strategy='afterInteractive' />
+        <LazyScripts />
         <Script src='/js/magnific-popup.min.js' strategy='afterInteractive' />
         <Script src='/js/jquery.nice-select.min.js' strategy='afterInteractive' />
         <Script src='/js/odometer.min.js' strategy='afterInteractive' />
