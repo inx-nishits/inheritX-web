@@ -5,6 +5,7 @@ import RouteHistoryTracker from './components/RouteHistoryTracker'
 import Footer from './components/Footer'
 import CounterInitializer from './components/CounterInitializer'
 import LazyScripts from './components/LazyScripts'
+import ChatBot from './components/chatbot/ChatBot'
 import { Toaster } from 'react-hot-toast'
 
 // SEO base configuration
@@ -274,6 +275,9 @@ export default function RootLayout({ children }) {
             }
           }}
         />
+
+        {/* AI Chatbot Widget */}
+        <ChatBot />
 
 
         {/* Vendor scripts (kept for parity; can be refactored to React later) */}
