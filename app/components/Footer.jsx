@@ -1,5 +1,6 @@
 ﻿"use client"
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -50,7 +51,7 @@ export default function Footer() {
             <div className='left'>
               <div className='logo logo-header mb-5'>
                 <Link href='/' className='d-flex align-items-center'>
-                  <img src='/image/logo/inx-logo.svg' alt='logo' />
+                  <Image src='/image/logo/inx-logo.svg' alt='logo' width={250} height={40} />
                 </Link>
               </div>
               <p className='mb-5'>

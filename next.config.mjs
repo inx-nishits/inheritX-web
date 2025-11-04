@@ -35,10 +35,40 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   
   // Add cache headers for static assets under public/
+  // This sets 1 year cache for all static assets (immutable means they won't change)
   async headers() {
     return [
+      // JavaScript files in /js directory (matches all .js files)
       {
-        source: '/:all*.(svg|jpg|jpeg|png|gif|webp|avif|ico|css|js|woff|woff2)',
+        source: '/js/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // CSS files in /css directory (matches all .css files)
+      {
+        source: '/css/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Image files in /image directory (matches all image files)
+      {
+        source: '/image/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Icon files and fonts in /icons directory (matches all files including fonts)
+      {
+        source: '/icons/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Font files in /fonts directory (if exists)
+      {
+        source: '/fonts/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
         ]

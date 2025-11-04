@@ -8,7 +8,7 @@ import TypingAnimation from '../TypingAnimation';
 
 // Below-the-fold heavy sections split into separate chunks (no UI change)
 const Accordion = dynamic(() => import('../Accordion'))
-const ContactForm = dynamic(() => import('../../components/ContactForm'))
+const ContactForm = dynamic(() => import('../../components/ContactForm'), { ssr: false })
 const TestimonialSection = dynamic(() => import('../TestimonialSection'), { ssr: false, loading: () => null })
 const OurPartners = dynamic(() => import('../OurPartners'))
 const OurValuableClients = dynamic(() => import('../OurValuableClients'))
@@ -101,7 +101,7 @@ export default function HomeContent() {
                 <div className='sub-title fs-2 fw-5 d-none'>
                   <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
-                <h2 className='title fw-6' style={{ lineHeight: "141%" }}>
+                <h2 className='title fw-6' style={{ lineHeight: "141%", minHeight: "2.5em" }}>
                   <TypingAnimation
                     text="Empowering the Future with Mobility & AI Innovation"
                     speed={60}
@@ -117,7 +117,7 @@ export default function HomeContent() {
                 </h2>
               </div>
 
-              <div className='content-left mb-md-5 pb-0 pb-lg-0'>
+              <div className='content-left mb-md-5 pb-0 pb-lg-0' style={{ minHeight: '140px' }}>
                 <div className='desc'>
                   <p className='clearfix'>
                     From building 850+ cutting-edge mobile and web applications for startups, SMEs, and enterprises worldwide to delivering AI-powered solutions with Python, we help businesses transform, scale, and innovate. Our in-house experts craft next-gen mobility and AI solutions — tailored to your vision, optimized for performance, and built to lead in the digital era.
@@ -131,7 +131,7 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-xl-6'>
-              <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px' }}>
+              <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px', aspectRatio: '16 / 9', width: '100%' }}>
                 <Image
                   src='/image/page-title/herobanner-final.jpg'
                   alt='Hero banner showcasing InheritX Solutions'
