@@ -22,7 +22,7 @@ export default function ContactForm({
   const [ndaChecked, setNdaChecked] = useState(false)
   const [userResult, setUserResult] = useState('')
   const [projectBudget, setProjectBudget] = useState('')
-  const budgetListRef = useRef(null)
+  const budgetSelectRef = useRef(null)
 
   // generate random math values on mount and when successfully sent
   const regenerateCaptcha = () => {
@@ -35,31 +35,87 @@ export default function ContactForm({
     regenerateCaptcha()
   }, [])
 
-  // Wire the existing budget list UI to update selected value without changing markup
+  // Initialize nice-select and wire up event handlers
   useEffect(() => {
-    if (!budgetListRef.current) return
-    const listEl = budgetListRef.current
-    const onClick = (e) => {
-      const li = e.target.closest('li')
-      if (!li || !listEl.contains(li)) return
-      // update selected classes to mimic existing UI behavior
-      Array.from(listEl.querySelectorAll('li')).forEach((n) => n.classList.remove('selected', 'focus'))
-      li.classList.add('selected', 'focus')
-      const selected = li.textContent.trim()
-      setProjectBudget(selected)
-      // update visible caption text
-      const caption = listEl.parentElement?.querySelector('span.current')
-      if (caption) caption.textContent = selected
-      setErrors((prev) => {
-        const next = { ...prev }
-        if (selected && selected !== 'Choose Budget') delete next.projectBudget
-        else next.projectBudget = 'Project budget is required'
-        return next
-      })
+    if (!budgetSelectRef.current) return
+
+    let cleanupFn = null
+    let checkInterval = null
+
+    const initializeNiceSelect = () => {
+      const $ = window.jQuery
+      if (!$ || !$.fn.niceSelect) return false
+
+      const $select = $(budgetSelectRef.current)
+      if (!$select.length) return false
+
+      // Initialize nice-select if not already initialized
+      if (!$select.next().hasClass('nice-select')) {
+        $select.niceSelect()
+      }
+
+      // Sync nice-select changes with React state
+      const handleChange = () => {
+        const selectedValue = $select.val()
+        const selectedText = $select.find('option:selected').text()
+        setProjectBudget(selectedValue === '' ? '' : selectedText)
+        setErrors((prev) => {
+          const next = { ...prev }
+          if (selectedValue && selectedValue !== '' && selectedText !== 'Choose Budget') {
+            delete next.projectBudget
+          } else {
+            next.projectBudget = 'Project budget is required'
+          }
+          return next
+        })
+      }
+
+      // Listen for changes on the select element
+      $select.on('change.contactform', handleChange)
+
+      // Listen for clicks on nice-select options (for this specific select)
+      const niceSelectEl = $select.next('.nice-select')
+      if (niceSelectEl.length) {
+        niceSelectEl.on('click.contactform', '.option:not(.disabled)', function() {
+          setTimeout(() => {
+            handleChange()
+          }, 0)
+        })
+      }
+
+      // Return cleanup function
+      return () => {
+        $select.off('change.contactform')
+        if (niceSelectEl.length) {
+          niceSelectEl.off('click.contactform')
+        }
+      }
     }
-    listEl.addEventListener('click', onClick)
-    return () => listEl.removeEventListener('click', onClick)
-  }, [])
+
+    // Try to initialize immediately
+    cleanupFn = initializeNiceSelect()
+    if (cleanupFn) {
+      return cleanupFn
+    }
+
+    // Wait for jQuery and nice-select to load
+    checkInterval = setInterval(() => {
+      cleanupFn = initializeNiceSelect()
+      if (cleanupFn) {
+        clearInterval(checkInterval)
+        checkInterval = null
+      }
+    }, 100)
+
+    return () => {
+      if (checkInterval) {
+        clearInterval(checkInterval)
+      }
+      if (cleanupFn) {
+        cleanupFn()
+      }
+    }
+  }, [budgetOptions])
 
   // Use CSS class .error-important for the red color with !important
   const errorStyle = useMemo(() => ({ fontSize: '16px', marginTop: '5px', display: 'block' }), [])
@@ -223,15 +279,13 @@ export default function ContactForm({
 
         setUserResult('')
         setProjectBudget('')
-        // Reset budget UI selection classes to default
-        if (budgetListRef.current) {
-          const listEl = budgetListRef.current
-          const items = listEl.querySelectorAll('li')
-          items.forEach((n) => n.classList.remove('selected', 'focus'))
-          if (items[0]) items[0].classList.add('selected', 'focus')
-          // also reset visible caption text
-          const caption = listEl.parentElement?.querySelector('span.current')
-          if (caption) caption.textContent = budgetLabel
+        // Reset budget select to default
+        if (budgetSelectRef.current) {
+          budgetSelectRef.current.value = ''
+          const $ = window.jQuery
+          if ($ && $.fn.niceSelect) {
+            $(budgetSelectRef.current).niceSelect('update')
+          }
         }
         regenerateCaptcha()
         setErrors({})
@@ -299,16 +353,19 @@ export default function ContactForm({
 
       {showBudget && (
         <>
-
           <div className={`cols  g-20 ${errors.projectBudget ? '' : 'mb-20'}`}>
-            <div className='nice-select mb-0'>
-              <span className='current caption-1'>{budgetLabel}*</span>
-              <ul className='list' ref={budgetListRef}>
-                {budgetOptions.map((label, idx) => (
-                  <li key={idx} className={`option${idx === 0 ? ' option-all selected focus' : ''}`}>{label}</li>
-                ))}
-              </ul>
-            </div>
+            <select
+              ref={budgetSelectRef}
+              className='select_js'
+              defaultValue=''
+              style={{ display: 'none' }}
+            >
+              {budgetOptions.map((label, idx) => (
+                <option key={idx} value={idx === 0 && label === 'Choose Budget' ? '' : label}>
+                  {label}
+                </option>
+              ))}
+            </select>
           </div>
           {errors.projectBudget ? <div className='error-important mb-20' style={errorStyle}>{errors.projectBudget}</div> : null}
         </>

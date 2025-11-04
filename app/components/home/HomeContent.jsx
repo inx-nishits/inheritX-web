@@ -134,9 +134,12 @@ export default function HomeContent() {
               <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px' }}>
                 <Image
                   src='/image/page-title/herobanner-final.jpg'
-                  alt=''
-                  className='lazyload'
+                  alt='Hero banner showcasing InheritX Solutions'
                   fill
+                  priority
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
+                  quality={90}
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>

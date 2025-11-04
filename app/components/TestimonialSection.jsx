@@ -95,7 +95,7 @@ export default function TestimonialSection() {
                       <div className='icon'>
                         <i className='icon-quote2'></i>
                       </div>
-                      <div className='text fs-27 lh-35'>
+                      <div className='text fs-20 lh-35'>
                         {testimonial.text}
                       </div>
                       <div className='user-testimonial'>

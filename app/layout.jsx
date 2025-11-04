@@ -174,7 +174,7 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/image/logo/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-        {/* Google Fonts: load non-blocking instead of @import in CSS */}
+        {/* Google Fonts: optimized loading with font-display swap */}
         <link
           rel='preload'
           as='style'
@@ -192,8 +192,8 @@ export default function RootLayout({ children }) {
             href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
           />
         </noscript>
-        {/* Preload critical hero image for LCP */}
-        <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' imageSrcSet='/image/page-title/herobanner-final.jpg' />
+        {/* Preload critical hero image for LCP with high priority */}
+        <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' fetchPriority='high' />
         {/* Safe CSS preloads to speed up first paint without changing behavior */}
         <link rel='preload' as='style' href='/css/bootstrap.min.css' />
         <link rel='preload' as='style' href='/css/styles.min.css' />
@@ -209,8 +209,7 @@ export default function RootLayout({ children }) {
         <link rel='stylesheet' href='/css/animate2.min.css' media='print' onLoad="this.media='all'" />
         <link rel='preload' as='style' href='/css/magnific-popup.min.css' />
         <link rel='stylesheet' href='/css/magnific-popup.min.css' media='print' onLoad="this.media='all'" />
-        <link rel='preload' as='style' href='/css/nice-select.css' />
-        <link rel='stylesheet' href='/css/nice-select.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/nice-select.css' />
         <link rel='preload' as='style' href='/css/jquery-ui.min.css' />
         <link rel='stylesheet' href='/css/jquery-ui.min.css' media='print' onLoad="this.media='all'" />
         <link rel='preload' as='style' href='/css/map.min.css' />
