@@ -118,7 +118,7 @@ export default function ContactForm({
   }, [budgetOptions])
 
   // Use CSS class .error-important for the red color with !important
-  const errorStyle = useMemo(() => ({ fontSize: '16px', marginTop: '5px', display: 'block' }), [])
+  const errorStyle = useMemo(() => ({ fontSize: '12px', marginTop: '3px', display: 'block' }), [])
 
   // Phone validation helper: allow optional + and formatting chars, require 7-15 digits total
   const isValidPhone = (raw) => {
