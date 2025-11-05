@@ -5,28 +5,42 @@ import { projectItems, getProjectBySlug } from '../../data/projectsData'
 
 export default function ProjectDetailsPage({ params }) {
     const router = useRouter()
+    const { slug } = params || {}
+    const item = getProjectBySlug(slug)
+
+    // Determine base path (portfolio or projects) based on current URL
+    const getBasePath = () => {
+        if (typeof window !== 'undefined') {
+            return window.location.pathname.includes('/portfolio') ? '/portfolio' : '/projects'
+        }
+        return '/projects' // Default for SSR
+    }
+    const basePath = getBasePath()
+    
+    // Helper to get category tab key
+    const getCategoryKey = () => {
+        if (!item) return 'all'
+        const c = (item.category || '').toLowerCase()
+        if (c.includes('web')) return 'web'
+        if (c.includes('mobile')) return 'mobile'
+        if (c.includes('ai/ml') || c.includes('aiml')) return 'aiml'
+        return 'all'
+    }
 
     const handleBackToProjects = (e) => {
         if (e && typeof e.preventDefault === 'function') e.preventDefault()
-        const categoryKey = (() => {
-            if (!item) return 'all'
-            const c = (item.category || '').toLowerCase()
-            if (c.includes('web')) return 'web'
-            if (c.includes('mobile')) return 'mobile'
-            return 'all'
-        })()
+        const categoryKey = getCategoryKey()
         try {
             const raw = sessionStorage.getItem('inx_prev_route')
             const prev = raw ? JSON.parse(raw) : null
-            if (prev && typeof prev.href === 'string' && prev.href.startsWith('/projects')) {
+            if (prev && typeof prev.href === 'string' && 
+                (prev.href.startsWith('/projects') || prev.href.startsWith('/portfolio'))) {
                 router.back()
                 return
             }
         } catch { }
-        router.push(`/projects?tab=${categoryKey}`)
+        router.push(`${basePath}?tab=${categoryKey}`)
     }
-    const { slug } = params || {}
-    const item = getProjectBySlug(slug)
 
     if (!item) {
         return (
@@ -37,8 +51,8 @@ export default function ProjectDetailsPage({ params }) {
                     </div>
                     <h2 className='not-found-title fw-6 mb-3'>Project Not Found</h2>
                     <p className='not-found-text body-2 mb-4'>The project you're looking for doesn't exist or has been moved.</p>
-                    <Link href='/projects?tab=all' className='tf-btn' onClick={handleBackToProjects}>
-                        <span>Back to Projects</span>
+                    <Link href={`${basePath}?tab=all`} className='tf-btn' onClick={handleBackToProjects}>
+                        <span>Back to {basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</span>
                         <i className='icon-arrow-left'></i>
                     </Link>
                 </div>
@@ -50,9 +64,9 @@ export default function ProjectDetailsPage({ params }) {
             <div className='tf-container pt-5 mt-md-5'>
                 <div className='project-details-container'>
                     <div className='project-back-btn d-flex gap-2'>
-                        <Link href={`/projects?tab=${(() => { const c=(item.category||'').toLowerCase(); return c.includes('web')?'web':c.includes('mobile')?'mobile':'all' })()}`} className='back-link d-flex align-items-center gap-2' onClick={handleBackToProjects}>
+                        <Link href={`${basePath}?tab=${getCategoryKey()}`} className='back-link d-flex align-items-center gap-2' onClick={handleBackToProjects}>
                             <i className='icon-arrow-left'></i>
-                            <span>Back to Projects</span>
+                            <span>Back to {basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</span>
                         </Link>
                     </div>
                 </div>
@@ -66,7 +80,7 @@ export default function ProjectDetailsPage({ params }) {
                             <div className='breadkcum'>
                                 <Link href='/' className='link-breadkcum body-2 fw-7 split-text effect-right'>Home</Link>
                                 <span className='dot'></span>
-                                <Link href={`/projects?tab=${(() => { const c=(item.category||'').toLowerCase(); return c.includes('web')?'web':c.includes('mobile')?'mobile':'all' })()}`} className='link-breadkcum body-2 fw-7 split-text effect-right' onClick={handleBackToProjects}>Projects</Link>
+                                <Link href={`${basePath}?tab=${getCategoryKey()}`} className='link-breadkcum body-2 fw-7 split-text effect-right' onClick={handleBackToProjects}>{basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</Link>
                                 <span className='dot'></span>
                                 <span className='page-breadkcum body-2 fw-7 split-text effect-right'>Project Details</span>
                             </div>
@@ -155,8 +169,8 @@ export default function ProjectDetailsPage({ params }) {
                                         <span>Start Your Project</span>
                                         <i className='icon-arrow-right'></i>
                                     </Link>
-                                    <Link href={`/projects?tab=${(() => { const c=(item.category||'').toLowerCase(); return c.includes('web')?'web':c.includes('mobile')?'mobile':'all' })()}`} className='tf-btn secondary' onClick={handleBackToProjects}>
-                                        <span>View More Projects</span>
+                                    <Link href={`${basePath}?tab=${getCategoryKey()}`} className='tf-btn secondary' onClick={handleBackToProjects}>
+                                        <span>View More {basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</span>
                                         <i className='icon-eye'></i>
                                     </Link>
                                 </div>

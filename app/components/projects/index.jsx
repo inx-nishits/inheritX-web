@@ -28,7 +28,7 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
         try {
             // Highest priority: explicit tab in URL
             const tabParam = searchParams?.get('tab')
-            const allowed = ['all', 'web', 'mobile']
+            const allowed = ['all', 'web', 'mobile', 'aiml']
             if (tabParam && allowed.includes(tabParam)) {
                 setActiveCategory(tabParam)
                 try { sessionStorage.setItem('inx_projects_category', tabParam) } catch { }
@@ -75,7 +75,8 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
         ? (() => {
             const webItems = projectItems.filter(item => item.category === 'Web Development')
             const mobileItems = projectItems.filter(item => item.category === 'Mobile App Development')
-            return [...webItems, ...mobileItems]
+            const aimlItems = projectItems.filter(item => item.category === 'AI/ML')
+            return [...webItems, ...mobileItems, ...aimlItems]
         })()
         : projectItems.filter(item => {
             switch (activeCategory) {
@@ -83,6 +84,8 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
                     return item.category === 'Web Development'
                 case 'mobile':
                     return item.category === 'Mobile App Development'
+                case 'aiml':
+                    return item.category === 'AI/ML'
                 default:
                     return true
             }

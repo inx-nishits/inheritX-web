@@ -94,48 +94,73 @@ const followUpQuestions = {
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false)
-  const [chatStage, setChatStage] = useState('greeting') // 'greeting', 'main-menu', 'contact-form', 'success'
+  const [isMinimized, setIsMinimized] = useState(false)
+  const [chatStage, setChatStage] = useState('greeting') // 'greeting', 'basic-info', 'main-menu', 'details-form', 'success'
   const [selectedOption, setSelectedOption] = useState(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    countryCode: '+91',
+    selectedService: '',
     phone: '',
-    company: '',
-    message: '',
-    selectedService: ''
+    requirements: '',
+    // Job application specific fields
+    position: '',
+    experience: '',
+    skills: '',
+    portfolioUrl: '',
+    resume: null,
+    resumeName: ''
   })
   const [formErrors, setFormErrors] = useState({})
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
+  const fileInputRef = useRef(null)
 
   // Reset chat to main menu
   const handleReset = () => {
-    setChatStage('main-menu')
+    setChatStage('basic-info')
     setSelectedOption(null)
     setFormData({
       name: '',
       email: '',
-      countryCode: '+91',
+      selectedService: '',
       phone: '',
-      company: '',
-      message: '',
-      selectedService: ''
+      requirements: '',
+      position: '',
+      experience: '',
+      skills: '',
+      portfolioUrl: '',
+      resume: null,
+      resumeName: ''
     })
     setFormErrors({})
   }
 
-  // Navigate back to main menu
+  // Navigate back to previous stage
   const handleBack = () => {
-    setChatStage('main-menu')
-    setSelectedOption(null)
+    if (chatStage === 'main-menu') {
+      setChatStage('basic-info')
+    } else if (chatStage === 'details-form') {
+      setChatStage('main-menu')
+    }
     setFormErrors({})
+  }
+
+  // Minimize chat - keep state intact
+  const handleMinimize = () => {
+    setIsMinimized(true)
+  }
+
+  // Maximize chat - restore to current state
+  const handleMaximize = () => {
+    setIsMinimized(false)
   }
 
   // Reset chat to greeting when closing
   const handleClose = () => {
     setIsOpen(false)
+    setIsMinimized(false)
     // Reset after animation completes
     setTimeout(() => {
       setChatStage('greeting')
@@ -143,11 +168,15 @@ export default function ChatBot() {
       setFormData({
         name: '',
         email: '',
-        countryCode: '+91',
+        selectedService: '',
         phone: '',
-        company: '',
-        message: '',
-        selectedService: ''
+        requirements: '',
+        position: '',
+        experience: '',
+        skills: '',
+        portfolioUrl: '',
+        resume: null,
+        resumeName: ''
       })
       setFormErrors({})
     }, 300)
@@ -155,14 +184,14 @@ export default function ChatBot() {
 
   // Handle Start Chat button
   const handleStartChat = () => {
-    setChatStage('main-menu')
+    setChatStage('basic-info')
   }
 
-  // Handle main menu option selection
+  // Handle main menu option selection - go to details form
   const handleMainMenuSelect = (option) => {
-    setChatStage('contact-form')
     setSelectedOption(option.category)
     setFormData(prev => ({ ...prev, selectedService: option.text }))
+    setChatStage('details-form')
   }
 
   // Handle form input change
@@ -178,6 +207,9 @@ export default function ChatBot() {
     } else if (name === 'phone') {
       // Only allow digits for phone
       sanitizedValue = value.replace(/\D/g, '').slice(0, 15)
+    } else if (name === 'experience') {
+      // Only allow numbers for experience
+      sanitizedValue = value.replace(/\D/g, '').slice(0, 2)
     }
     
     setFormData(prev => ({ ...prev, [name]: sanitizedValue }))
@@ -188,8 +220,47 @@ export default function ChatBot() {
     }
   }
 
-  // Validate form
-  const validateForm = () => {
+  // Handle file upload
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0]
+    
+    if (file) {
+      // Validate file type
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
+      if (!allowedTypes.includes(file.type)) {
+        setFormErrors(prev => ({ ...prev, resume: 'Please upload a PDF or Word document' }))
+        return
+      }
+      
+      // Validate file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        setFormErrors(prev => ({ ...prev, resume: 'File size must be less than 5MB' }))
+        return
+      }
+      
+      setFormData(prev => ({ 
+        ...prev, 
+        resume: file,
+        resumeName: file.name
+      }))
+      setFormErrors(prev => ({ ...prev, resume: '' }))
+    }
+  }
+
+  // Remove uploaded file
+  const handleRemoveFile = () => {
+    setFormData(prev => ({ 
+      ...prev, 
+      resume: null,
+      resumeName: ''
+    }))
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ''
+    }
+  }
+
+  // Validate basic info form (name and email only)
+  const validateBasicInfo = () => {
     const errors = {}
     
     // Name validation
@@ -207,31 +278,81 @@ export default function ChatBot() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errors.email = 'Please enter a valid email address'
     }
+
+    return errors
+  }
+
+  // Handle basic info form submission
+  const handleBasicInfoSubmit = async (e) => {
+    e.preventDefault()
     
-    // Phone validation
-    if (!formData.phone.trim()) {
-      errors.phone = 'Phone number is required'
-    } else if (!/^\d+$/.test(formData.phone)) {
-      errors.phone = 'Phone number can only contain digits'
-    } else if (formData.phone.length < 7 || formData.phone.length > 15) {
-      errors.phone = 'Phone number must be 7-15 digits'
+    const errors = validateBasicInfo()
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors)
+      return
     }
+
+    // Move to main menu after basic info is collected
+    setChatStage('main-menu')
+  }
+
+  // Validate details form
+  const validateDetailsForm = () => {
+    const errors = {}
     
-    // Message validation
-    if (!formData.message.trim()) {
-      errors.message = 'This field is required'
-    } else if (formData.message.trim().length < 10) {
-      errors.message = 'Please provide at least 10 characters'
+    if (selectedOption === 'apply-job') {
+      // Job application validation
+      if (!formData.position.trim()) {
+        errors.position = 'Position is required'
+      } else if (formData.position.trim().length < 2) {
+        errors.position = 'Position must be at least 2 characters'
+      }
+      
+      if (!formData.experience.trim()) {
+        errors.experience = 'Years of experience is required'
+      } else if (parseInt(formData.experience) > 50) {
+        errors.experience = 'Please enter valid years of experience'
+      }
+      
+      if (!formData.skills.trim()) {
+        errors.skills = 'Skills are required'
+      } else if (formData.skills.trim().length < 5) {
+        errors.skills = 'Please provide at least 5 characters'
+      }
+      
+      if (formData.portfolioUrl && formData.portfolioUrl.trim()) {
+        const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+        if (!urlPattern.test(formData.portfolioUrl)) {
+          errors.portfolioUrl = 'Please enter a valid URL'
+        }
+      }
+      
+      if (!formData.resume) {
+        errors.resume = 'Resume/CV is required'
+      }
+      
+      if (!formData.requirements.trim()) {
+        errors.requirements = 'Cover letter is required'
+      } else if (formData.requirements.trim().length < 20) {
+        errors.requirements = 'Cover letter must be at least 20 characters'
+      }
+    } else {
+      // Requirements validation for other options
+      if (!formData.requirements.trim()) {
+        errors.requirements = 'Please provide your requirements'
+      } else if (formData.requirements.trim().length < 10) {
+        errors.requirements = 'Please provide at least 10 characters'
+      }
     }
 
     return errors
   }
 
-  // Handle form submission
-  const handleFormSubmit = async (e) => {
+  // Handle details form submission
+  const handleDetailsFormSubmit = async (e) => {
     e.preventDefault()
     
-    const errors = validateForm()
+    const errors = validateDetailsForm()
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors)
       return
@@ -239,17 +360,32 @@ export default function ChatBot() {
 
     setIsSubmitting(true)
 
-    const submissionData = {
-      ...formData,
-      phone: `${formData.countryCode}${formData.phone}`,
-      submittedAt: new Date().toISOString()
+    // Prepare form data for submission
+    const submissionData = new FormData()
+    submissionData.append('name', formData.name)
+    submissionData.append('email', formData.email)
+    submissionData.append('selectedService', formData.selectedService)
+    submissionData.append('category', selectedOption)
+    submissionData.append('requirements', formData.requirements)
+    submissionData.append('submittedAt', new Date().toISOString())
+    
+    // Add job-specific fields if applying for job
+    if (selectedOption === 'apply-job') {
+      submissionData.append('position', formData.position)
+      submissionData.append('experience', formData.experience)
+      submissionData.append('skills', formData.skills)
+      if (formData.portfolioUrl) {
+        submissionData.append('portfolioUrl', formData.portfolioUrl)
+      }
+      if (formData.resume) {
+        submissionData.append('resume', formData.resume)
+      }
     }
 
     try {
       const response = await fetch('/api/chatbot/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submissionData)
+        body: submissionData
       })
 
       if (response.ok) {
@@ -265,12 +401,50 @@ export default function ChatBot() {
     }
   }
 
+  // Get stage title for minimized bar
+  const getStageTitle = () => {
+    if (chatStage === 'greeting') return 'Welcome!'
+    if (chatStage === 'basic-info') return 'Getting Started'
+    if (chatStage === 'main-menu') return `Hi ${formData.name}!`
+    if (chatStage === 'details-form') return 'Tell us more'
+    if (chatStage === 'success') return 'Thank You!'
+    return 'InheritX Chat'
+  }
+
   return (
     <>
       {/* Chat Widget */}
-      <div className={`chat-widget ${isOpen ? 'open' : ''}`}>
+      <div className={`chat-widget ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
+        {/* Minimized Bar */}
+        {isOpen && isMinimized && (
+          <div className='chat-minimized-bar' onClick={handleMaximize}>
+            <div className='minimized-bar-content'>
+              <div className='minimized-bar-icon'>
+                <MessageCircle size={20} />
+              </div>
+              <div className='minimized-bar-text'>
+                <h4>{getStageTitle()}</h4>
+                <span>Click to expand</span>
+              </div>
+            </div>
+            <div className='minimized-bar-actions'>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  handleClose()
+                }}
+                className='minimized-close-btn'
+                aria-label='Close chat'
+                title='Close'
+              >
+                <X size={16} />
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Chat Window */}
-        {isOpen && (
+        {isOpen && !isMinimized && (
           <div className='chat-window'>
             {/* Header */}
             <div className='chat-header'>
@@ -287,20 +461,21 @@ export default function ChatBot() {
                 </div>
               </div>
               <div className='chat-header-actions'>
-                {(chatStage === 'main-menu' || chatStage === 'contact-form' || chatStage === 'success') && (
+                {(chatStage === 'main-menu' || chatStage === 'details-form' || chatStage === 'success') && (
                   <button
                     onClick={handleReset}
                     className='chat-action-btn'
                     aria-label='Reset chat'
-                    title='Back to options'
+                    title='Start over'
                   >
                     <RotateCcw size={18} />
                   </button>
                 )}
                 <button
-                  onClick={handleClose}
+                  onClick={handleMinimize}
                   className='chat-action-btn'
                   aria-label='Minimize chat'
+                  title='Minimize'
                 >
                   <Minimize2 size={18} />
                 </button>
@@ -344,41 +519,42 @@ export default function ChatBot() {
 
             {/* Main Menu Stage */}
             {chatStage === 'main-menu' && (
-              <div className='chat-main-menu'>
-                <div className='main-menu-header'>
-                  <h3>How can we help you today?</h3>
-                  <p>Choose an option to get started</p>
+              <>
+                <button onClick={handleBack} className='back-button' aria-label='Back to details'>
+                  <ArrowLeft size={16} />
+                  <span>Edit Details</span>
+                </button>
+                <div className='chat-main-menu'>
+                  <div className='main-menu-header'>
+                    <h3>Hi {formData.name}! 👋</h3>
+                    <p>How can we help you today?</p>
+                  </div>
+                  <div className='main-menu-options'>
+                    {mainMenuOptions.map((option) => (
+                      <button
+                        key={option.id}
+                        onClick={() => handleMainMenuSelect(option)}
+                        className='main-menu-btn'
+                      >
+                        <span className='menu-icon'>{option.icon}</span>
+                        <span className='menu-text'>{option.text}</span>
+                        <span className='menu-arrow'>→</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <div className='main-menu-options'>
-                  {mainMenuOptions.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => handleMainMenuSelect(option)}
-                      className='main-menu-btn'
-                    >
-                      <span className='menu-icon'>{option.icon}</span>
-                      <span className='menu-text'>{option.text}</span>
-                      <span className='menu-arrow'>→</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
+              </>
             )}
 
-            {/* Contact Form Stage */}
-            {chatStage === 'contact-form' && (
-              <>
-                <button onClick={handleBack} className='back-button' aria-label='Back to menu'>
-                  <ArrowLeft size={16} />
-                  <span>Back to Options</span>
-                </button>
-                <div className='chat-contact-form'>
-                  <div className='form-header'>
-                    <h3>Share Your Details</h3>
-                    <p>We'll get back to you within 24 hours</p>
-                  </div>
-                  
-                  <form onSubmit={handleFormSubmit} className='contact-form'>
+            {/* Basic Info Form Stage */}
+            {chatStage === 'basic-info' && (
+              <div className='chat-contact-form'>
+                <div className='form-header'>
+                  <h3>Let's Get Started! 👋</h3>
+                  <p>Please share your basic details</p>
+                </div>
+                
+                <form onSubmit={handleBasicInfoSubmit} className='contact-form'>
                   {/* Name */}
                   <div className='form-group'>
                     <label htmlFor='name'>Your Name *</label>
@@ -390,6 +566,7 @@ export default function ChatBot() {
                       onChange={handleInputChange}
                       placeholder='John Doe'
                       className={`form-input ${formErrors.name ? 'error' : ''}`}
+                      autoFocus
                     />
                     {formErrors.name && <span className='error-text'>{formErrors.name}</span>}
                   </div>
@@ -409,92 +586,219 @@ export default function ChatBot() {
                     {formErrors.email && <span className='error-text'>{formErrors.email}</span>}
                   </div>
 
-                  {/* Phone with Country Code */}
-                  <div className='form-group'>
-                    <label htmlFor='phone'>Phone Number *</label>
-                    <div className='phone-input-group'>
-                      <select
-                        name='countryCode'
-                        value={formData.countryCode}
-                        onChange={handleInputChange}
-                        className='country-code-select'
-                      >
-                        <option value='+1'>🇺🇸 +1</option>
-                        <option value='+44'>🇬🇧 +44</option>
-                        <option value='+91'>🇮🇳 +91</option>
-                        <option value='+61'>🇦🇺 +61</option>
-                        <option value='+81'>🇯🇵 +81</option>
-                        <option value='+49'>🇩🇪 +49</option>
-                        <option value='+33'>🇫🇷 +33</option>
-                        <option value='+86'>🇨🇳 +86</option>
-                        <option value='+971'>🇦🇪 +971</option>
-                        <option value='+65'>🇸🇬 +65</option>
-                      </select>
-                      <input
-                        type='tel'
-                        id='phone'
-                        name='phone'
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder='9876543210'
-                        className={`form-input phone-number ${formErrors.phone ? 'error' : ''}`}
-                      />
-                    </div>
-                    {formErrors.phone && <span className='error-text'>{formErrors.phone}</span>}
-                  </div>
-
-                  {/* Company (Optional) */}
-                  <div className='form-group'>
-                    <label htmlFor='company'>Company Name <span className='optional'>(optional)</span></label>
-                    <input
-                      type='text'
-                      id='company'
-                      name='company'
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder='Your Company'
-                      className='form-input'
-                    />
-                  </div>
-
-                  {/* Message */}
-                  <div className='form-group'>
-                    <label htmlFor='message'>
-                      {selectedOption === 'hire-team' && 'What developers do you need? *'}
-                      {selectedOption === 'new-project' && 'Tell us about your project *'}
-                      {selectedOption === 'apply-job' && 'Why are you interested? *'}
-                    </label>
-                    <textarea
-                      id='message'
-                      name='message'
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder='Describe your requirements...'
-                      rows='3'
-                      className={`form-input ${formErrors.message ? 'error' : ''}`}
-                    />
-                    {formErrors.message && <span className='error-text'>{formErrors.message}</span>}
-                  </div>
-
-                  {/* Submit Button */}
+                  {/* Continue Button */}
                   <button
                     type='submit'
                     className='form-submit-btn'
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      <>
-                        <div className='spinner'></div>
-                        Submitting...
-                      </>
-                    ) : (
-                      <>
-                        <Send size={18} />
-                        Submit
-                      </>
-                    )}
+                    <Send size={18} />
+                    Continue
                   </button>
                 </form>
+              </div>
+            )}
+
+            {/* Details Form Stage */}
+            {chatStage === 'details-form' && (
+              <>
+                <button onClick={handleBack} className='back-button' aria-label='Back to menu'>
+                  <ArrowLeft size={16} />
+                  <span>Back to Options</span>
+                </button>
+                <div className='chat-contact-form'>
+                  <form onSubmit={handleDetailsFormSubmit} className='contact-form'>
+                    {/* Job Application Specific Fields */}
+                    {selectedOption === 'apply-job' && (
+                      <>
+                        {/* Position */}
+                        <div className='form-group'>
+                          <label htmlFor='position'>Position/Role *</label>
+                          <input
+                            type='text'
+                            id='position'
+                            name='position'
+                            value={formData.position}
+                            onChange={handleInputChange}
+                            placeholder='e.g., React Native Developer'
+                            className={`form-input ${formErrors.position ? 'error' : ''}`}
+                          />
+                          {formErrors.position && <span className='error-text'>{formErrors.position}</span>}
+                        </div>
+
+                        {/* Years of Experience */}
+                        <div className='form-group'>
+                          <label htmlFor='experience'>Years of Experience *</label>
+                          <input
+                            type='text'
+                            id='experience'
+                            name='experience'
+                            value={formData.experience}
+                            onChange={handleInputChange}
+                            placeholder='e.g., 3'
+                            className={`form-input ${formErrors.experience ? 'error' : ''}`}
+                          />
+                          {formErrors.experience && <span className='error-text'>{formErrors.experience}</span>}
+                        </div>
+
+                        {/* Skills */}
+                        <div className='form-group'>
+                          <label htmlFor='skills'>Key Skills *</label>
+                          <input
+                            type='text'
+                            id='skills'
+                            name='skills'
+                            value={formData.skills}
+                            onChange={handleInputChange}
+                            placeholder='e.g., React, Node.js, MongoDB, AWS'
+                            className={`form-input ${formErrors.skills ? 'error' : ''}`}
+                          />
+                          {formErrors.skills && <span className='error-text'>{formErrors.skills}</span>}
+                        </div>
+
+                        {/* Portfolio URL */}
+                        <div className='form-group'>
+                          <label htmlFor='portfolioUrl'>
+                            Portfolio/LinkedIn URL 
+                            <span className='optional'>(Optional)</span>
+                          </label>
+                          <input
+                            type='url'
+                            id='portfolioUrl'
+                            name='portfolioUrl'
+                            value={formData.portfolioUrl}
+                            onChange={handleInputChange}
+                            placeholder='https://linkedin.com/in/yourprofile'
+                            className={`form-input ${formErrors.portfolioUrl ? 'error' : ''}`}
+                          />
+                          {formErrors.portfolioUrl && <span className='error-text'>{formErrors.portfolioUrl}</span>}
+                        </div>
+
+                        {/* Resume Upload */}
+                        <div className='form-group'>
+                          <label htmlFor='resume'>
+                            Upload Resume/CV *
+                            <span className='label-hint'>PDF, DOC, DOCX up to 5MB</span>
+                          </label>
+                          <div className='file-upload-wrapper'>
+                            {!formData.resume ? (
+                              <label htmlFor='resume' className='file-upload-area'>
+                                <input
+                                  type='file'
+                                  id='resume'
+                                  name='resume'
+                                  ref={fileInputRef}
+                                  onChange={handleFileUpload}
+                                  accept='.pdf,.doc,.docx'
+                                  className='file-input-hidden'
+                                />
+                                <div className='file-upload-content'>
+                                  <p className='upload-text'>
+                                    <strong>Click to upload</strong> or drag and drop
+                                  </p>
+                                  <p className='upload-hint'>PDF, DOC or DOCX (max. 5MB)</p>
+                                </div>
+                              </label>
+                            ) : (
+                              <div className='file-uploaded-card'>
+                                <div className='file-success-icon'>
+                                  <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                                    <polyline points='20 6 9 17 4 12'></polyline>
+                                  </svg>
+                                </div>
+                                <div className='file-details'>
+                                  <div className='file-header'>
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                                      <path d='M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'></path>
+                                      <polyline points='13 2 13 9 20 9'></polyline>
+                                    </svg>
+                                    <span className='file-name'>{formData.resumeName}</span>
+                                  </div>
+                                  <p className='file-status'>✓ Resume uploaded successfully</p>
+                                  <div className='file-actions'>
+                                    <button
+                                      type='button'
+                                      onClick={() => fileInputRef.current?.click()}
+                                      className='file-change-btn'
+                                    >
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                                        <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path>
+                                        <polyline points='17 8 12 3 7 8'></polyline>
+                                        <line x1='12' y1='3' x2='12' y2='15'></line>
+                                      </svg>
+                                      Upload New
+                                    </button>
+                                    <button
+                                      type='button'
+                                      onClick={handleRemoveFile}
+                                      className='file-delete-btn'
+                                    >
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                                        <polyline points='3 6 5 6 21 6'></polyline>
+                                        <path d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'></path>
+                                      </svg>
+                                      Remove
+                                    </button>
+                                  </div>
+                                  <input
+                                    type='file'
+                                    ref={fileInputRef}
+                                    onChange={handleFileUpload}
+                                    accept='.pdf,.doc,.docx'
+                                    className='file-input-hidden'
+                                  />
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                          {formErrors.resume && <span className='error-text'>{formErrors.resume}</span>}
+                        </div>
+                      </>
+                    )}
+
+                    {/* Requirements - Dynamic based on selection */}
+                    <div className='form-group'>
+                      <label htmlFor='requirements'>
+                        {selectedOption === 'hire-team' && 'Team Requirements *'}
+                        {selectedOption === 'new-project' && 'Project Requirements *'}
+                        {selectedOption === 'apply-job' && 'Cover Letter / Why You? *'}
+                      </label>
+                      <textarea
+                        id='requirements'
+                        name='requirements'
+                        value={formData.requirements}
+                        onChange={handleInputChange}
+                        placeholder={
+                          selectedOption === 'hire-team' 
+                            ? 'e.g., Need 2 Flutter developers for 6 months, experience with Firebase and REST APIs...'
+                            : selectedOption === 'new-project'
+                            ? 'e.g., I need a mobile app for e-commerce with payment gateway integration...'
+                            : 'Tell us why you would be a great fit for this role...'
+                        }
+                        rows='4'
+                        className={`form-input ${formErrors.requirements ? 'error' : ''}`}
+                      />
+                      {formErrors.requirements && <span className='error-text'>{formErrors.requirements}</span>}
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      type='submit'
+                      className='form-submit-btn'
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className='spinner'></div>
+                          {selectedOption === 'apply-job' ? 'Applying...' : 'Submitting...'}
+                        </>
+                      ) : (
+                        <>
+                          <Send size={18} />
+                          {selectedOption === 'apply-job' ? 'Apply Now' : 'Submit'}
+                        </>
+                      )}
+                    </button>
+                  </form>
                 </div>
               </>
             )}
@@ -503,15 +807,12 @@ export default function ChatBot() {
             {chatStage === 'success' && (
               <div className='chat-success'>
                 <div className='success-content'>
-                  <div className='success-icon'>✅</div>
-                  <h3>Thank You!</h3>
-                  <p>We've received your information and will contact you within 24 hours.</p>
-                  <div className='contact-info'>
-                    <p><strong>📧 Email:</strong> contact@inheritx.com</p>
-                    <p><strong>📱 WhatsApp:</strong> +91 84870 06480</p>
-                  </div>
+                  <div className='success-icon'>🎉</div>
+                  <h3>Thank You, {formData.name}!</h3>
+                  <p>We've received your request for <strong>{formData.selectedService}</strong>.</p>
+                  <p>Our team will contact you soon.</p>
                   <button onClick={handleReset} className='back-to-menu-btn'>
-                    Back to Options
+                    Start Over
                   </button>
                 </div>
               </div>

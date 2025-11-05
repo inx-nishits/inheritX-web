@@ -5100,7 +5100,7 @@ a.mapboxgl-ctrl-logo {
 
 .progress-wrap {
   position: fixed;
-  bottom: 40px;
+  bottom: 110px;
   right: 20px;
   height: 40px;
   width: 40px;
@@ -5150,6 +5150,39 @@ a.mapboxgl-ctrl-logo {
 /* Hide progress-wrap when body has overflow hidden (e.g., when modals/sidebars are open) */
 body[style*="overflow: hidden"] .progress-wrap {
   display: none !important;
+}
+
+/* Responsive positioning for back-to-top button */
+@media (max-width: 768px) and (min-width: 481px) {
+  .progress-wrap {
+    bottom: 120px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-wrap {
+    bottom: 100px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .progress-wrap::after {
+    line-height: 36px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .progress-wrap {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .progress-wrap::after {
+    line-height: 34px;
+  }
 }
 .progress-wrap svg path {
   fill: none;

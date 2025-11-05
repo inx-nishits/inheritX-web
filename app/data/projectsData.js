@@ -490,6 +490,87 @@ export const projectItems = [
       "Report & Block Functionality",
     ],
   },
+  {
+    id: 26,
+    slug: "heva",
+    title: "Heva",
+    category: "AI/ML",
+    industry: "Health & Wellness / Artificial Intelligence",
+    technology: "React.js, Node.js, Python (AI/ML), Tailwind CSS",
+    description:
+      "Heva is an AI/ML-powered wellness intelligence platform designed to promote healthier lifestyles through data-driven insights. The system leverages machine learning models built with Python to analyze user data such as activity patterns, preferences, and wellness goals. Based on these insights, it provides personalized recommendations, tracks user progress, and dynamically adjusts goals using predictive analytics. The platform includes an AI chatbot for user interaction, real-time updates, and progress monitoring. Developed using React.js and Node.js, Heva ensures seamless integration, robust security, and a modern user experience through a clean, responsive interface styled with Tailwind CSS.",
+    cover: "/image/project-item/heva.png",
+    thumb: "/image/project-item/heva.png",
+    features: [
+      "AI-Powered Recommendation Engine",
+      "Health Data Analysis",
+      "Smart Goal Tracking",
+      "Intelligent Chat Assistant",
+      "Data Security & Privacy",
+      "Interactive & Modern UI",
+    ],
+  },
+  {
+    id: 27,
+    slug: "kavia-ai",
+    title: "Kavia AI",
+    category: "AI/ML",
+    industry: "Artificial Intelligence / Software Development Automation Industry",
+    technology: "Next.js, FastAPI, Neo4j & MongoDB databases, LLMs",
+    description:
+      "Kavia AI accelerates software product development with an intelligent, AI-powered Workflow Manager that automates and optimizes every stage of the lifecycle. It transforms project definitions into actionable, trackable workflows while enhancing collaboration and code intelligence. With predictive insights and adaptive dashboards, Kavia AI empowers teams to deliver faster, smarter, and with greater precision.",
+    cover: "/image/project-item/kavia-ai.png",
+    thumb: "/image/project-item/kavia-ai.png",
+    features: [
+      "AI-Powered Workflow Orchestration",
+      "Context-Aware Task Management",
+      "Smart Collaboration Hub",
+      "Predictive Bottleneck Detection",
+      "Knowledge-Driven Code Intelligence",
+      "Adaptive Progress Dashboard",
+    ],
+  },
+  {
+    id: 28,
+    slug: "guardrail-technologies",
+    title: "Guardrail Technologies (AI Trust Layer Platform)",
+    category: "AI/ML",
+    industry: "Enterprise AI Security, Data Governance, Compliance Automation",
+    technology: "Python, Node.js, React.js, OpenAI API, Anthropic Claude, Google Gemini, Microsoft Azure OpenAI",
+    description:
+      "Guardrail Technologies is an enterprise-grade AI security and governance platform designed to act as a protective trust layer around large language model (LLM) workflows. It enables companies to safely integrate AI into their operations while maintaining strict control over data, compliance, and user interactions. The system provides real-time visibility, risk alerts, and detailed audit logs, ensuring organizations can leverage AI responsibly and securely.",
+    cover: "/image/project-item/guardrail.png",
+    thumb: "/image/project-item/guardrail.png",
+    features: [
+      "AI Trust Layer™",
+      "Data Protection & Masking",
+      "Policy Enforcement Engine",
+      "Real-Time Monitoring & Alerts",
+      "Prompt Injection Defense",
+      "Audit Logging & Compliance",
+      "Seamless Integration",
+    ],
+  },
+  {
+    id: 29,
+    slug: "underwriter-learn-stocks-ai",
+    title: "Underwriter: Learn Stocks",
+    category: "AI/ML",
+    industry: "Stock market",
+    technology: " Flutter, node.js, react.js, Python",
+    description:
+      "Underwriter is a smart stock research platform that makes investing easier and more informed. It combines an intuitive interface with advanced tools to turn complex financial data into clear insights.Users can explore detailed company profiles, visualize key financial metrics, and stay updated with a curated news feed enhanced by sentiment analysis. The AI-powered chatbot acts as a personal financial assistant, simplifying reports and answering investment-related questions instantly. Underwriter also enables side-by-side company comparisons and provides a daily market outlook, helping investors start each trading day informed and confident.",
+    cover: "/image/project-item/underwriter.png",
+    thumb: "/image/project-item/underwriter.png",
+    features: [
+      "Easy & Smart Investing",
+      "Advanced Company Data Visualization",
+      "Curated News Feed with Sentiment Analysis",
+      "AI Chatbot – Your Personal Financial Analyst",
+      "Side-by-Side Company Comparison",
+      "Daily Market Outlook",
+    ],
+  },
 ];
 
 export const projectCategories = [
@@ -506,6 +587,11 @@ export const projectCategories = [
     count: projectItems.filter(
       (item) => item.category === "Mobile App Development"
     ).length,
+  },
+  {
+    id: "aiml",
+    name: "AI/ML Projects",
+    count: projectItems.filter((item) => item.category === "AI/ML").length,
   },
 ];
 
