@@ -7,17 +7,17 @@ import { Send, X, MessageCircle, Minimize2, RotateCcw, ArrowLeft } from 'lucide-
 const mainMenuOptions = [
   {
     id: 1,
-    category: 'hire-team',
-    text: 'Hire Dedicated Team',
-    message: 'I want to hire a dedicated development team',
-    icon: '👥'
-  },
-  {
-    id: 2,
     category: 'new-project',
     text: 'Start a New Project',
     message: 'I want to start a new project',
     icon: '🚀'
+  },
+  {
+    id: 2,
+    category: 'hire-team',
+    text: 'Hire Dedicated Team',
+    message: 'I want to hire a dedicated development team',
+    icon: '👥'
   },
   {
     id: 3,
@@ -92,10 +92,33 @@ const followUpQuestions = {
   ]
 }
 
+// Developer types for hire-team selection
+const developerTypes = {
+  'Mobile App Development': [
+    { id: 'iphone', name: 'Hire iPhone Developer' },
+    { id: 'android', name: 'Hire Android Developer' },
+    { id: 'react-native', name: 'Hire React Native Developer' },
+    { id: 'flutter', name: 'Hire Flutter Developer' },
+    { id: 'phonegap', name: 'Hire Phonegap Developer' }
+  ],
+  'Web Development': [
+    { id: 'angularjs', name: 'Hire AngularJS Developer' },
+    { id: 'reactjs', name: 'Hire ReactJS Developer' },
+    { id: 'nodejs', name: 'Hire Node.js Developer' },
+    { id: 'php', name: 'Hire PHP Developer' },
+    { id: 'laravel', name: 'Hire Laravel Developer' }
+  ],
+  'Other Technologies': [
+    { id: 'python', name: 'Hire Python Developer' },
+    { id: 'wordpress', name: 'Hire WordPress Developer' },
+    { id: 'asp', name: 'Hire ASP Developer' }
+  ]
+}
+
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false)
-  const [chatStage, setChatStage] = useState('greeting') // 'greeting', 'basic-info', 'main-menu', 'details-form', 'success'
+  const [chatStage, setChatStage] = useState('greeting') // 'greeting', 'basic-info', 'main-menu', 'hire-team-selection', 'details-form', 'success'
   const [selectedOption, setSelectedOption] = useState(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
@@ -104,6 +127,10 @@ export default function ChatBot() {
     selectedService: '',
     phone: '',
     requirements: '',
+    // Hire team specific fields
+    selectedDevelopers: [],
+    otherDeveloper: '',
+    selectionNotes: '',
     // Job application specific fields
     position: '',
     experience: '',
@@ -127,6 +154,9 @@ export default function ChatBot() {
       selectedService: '',
       phone: '',
       requirements: '',
+      selectedDevelopers: [],
+      otherDeveloper: '',
+      selectionNotes: '',
       position: '',
       experience: '',
       skills: '',
@@ -141,8 +171,15 @@ export default function ChatBot() {
   const handleBack = () => {
     if (chatStage === 'main-menu') {
       setChatStage('basic-info')
-    } else if (chatStage === 'details-form') {
+    } else if (chatStage === 'hire-team-selection') {
       setChatStage('main-menu')
+    } else if (chatStage === 'details-form') {
+      // If hire-team, go back to selection, otherwise to main menu
+      if (selectedOption === 'hire-team') {
+        setChatStage('hire-team-selection')
+      } else {
+        setChatStage('main-menu')
+      }
     }
     setFormErrors({})
   }
@@ -171,6 +208,9 @@ export default function ChatBot() {
         selectedService: '',
         phone: '',
         requirements: '',
+        selectedDevelopers: [],
+        otherDeveloper: '',
+        selectionNotes: '',
         position: '',
         experience: '',
         skills: '',
@@ -187,11 +227,86 @@ export default function ChatBot() {
     setChatStage('basic-info')
   }
 
-  // Handle main menu option selection - go to details form
+  // Handle main menu option selection
   const handleMainMenuSelect = (option) => {
     setSelectedOption(option.category)
     setFormData(prev => ({ ...prev, selectedService: option.text }))
-    setChatStage('details-form')
+    
+    // If hiring team, go to developer selection first
+    if (option.category === 'hire-team') {
+      setChatStage('hire-team-selection')
+    } else {
+      setChatStage('details-form')
+    }
+  }
+
+  // Handle developer selection toggle
+  const handleDeveloperToggle = (developerId, developerName) => {
+    setFormData(prev => {
+      const isSelected = prev.selectedDevelopers.some(dev => dev.id === developerId)
+      if (isSelected) {
+        return {
+          ...prev,
+          selectedDevelopers: prev.selectedDevelopers.filter(dev => dev.id !== developerId)
+        }
+      } else {
+        return {
+          ...prev,
+          selectedDevelopers: [...prev.selectedDevelopers, { id: developerId, name: developerName }]
+        }
+      }
+    })
+    // Clear error when user selects
+    if (formErrors.selectedDevelopers) {
+      setFormErrors(prev => ({ ...prev, selectedDevelopers: '' }))
+    }
+  }
+
+  // Handle hire team selection submission - submit directly
+  const handleHireTeamSelectionSubmit = async () => {
+    // Validate at least one selection
+    if (formData.selectedDevelopers.length === 0 && !formData.otherDeveloper.trim()) {
+      setFormErrors({ selectedDevelopers: 'Please select at least one developer type or specify other' })
+      return
+    }
+
+    setIsSubmitting(true)
+
+    // Prepare form data for submission
+    const submissionData = new FormData()
+    submissionData.append('name', formData.name)
+    submissionData.append('email', formData.email)
+    submissionData.append('selectedService', formData.selectedService)
+    submissionData.append('category', selectedOption)
+    submissionData.append('submittedAt', new Date().toISOString())
+    
+    // Add hire-team specific fields
+    const selectedDevelopersNames = formData.selectedDevelopers.map(dev => dev.name).join(', ')
+    submissionData.append('selectedDevelopers', selectedDevelopersNames)
+    if (formData.otherDeveloper) {
+      submissionData.append('otherDeveloper', formData.otherDeveloper)
+    }
+    if (formData.selectionNotes) {
+      submissionData.append('selectionNotes', formData.selectionNotes)
+    }
+
+    try {
+      const response = await fetch('/api/chatbot/submit', {
+        method: 'POST',
+        body: submissionData
+      })
+
+      if (response.ok) {
+        setChatStage('success')
+      } else {
+        alert('There was an issue submitting your information. Please try again or contact us directly.')
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      alert('There was an issue submitting your information. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   // Handle form input change
@@ -217,6 +332,11 @@ export default function ChatBot() {
     // Clear error when user starts typing
     if (formErrors[name]) {
       setFormErrors(prev => ({ ...prev, [name]: '' }))
+    }
+    
+    // Also clear selectedDevelopers error when typing in otherDeveloper
+    if (name === 'otherDeveloper' && formErrors.selectedDevelopers) {
+      setFormErrors(prev => ({ ...prev, selectedDevelopers: '' }))
     }
   }
 
@@ -369,6 +489,18 @@ export default function ChatBot() {
     submissionData.append('requirements', formData.requirements)
     submissionData.append('submittedAt', new Date().toISOString())
     
+    // Add hire-team specific fields
+    if (selectedOption === 'hire-team') {
+      const selectedDevelopersNames = formData.selectedDevelopers.map(dev => dev.name).join(', ')
+      submissionData.append('selectedDevelopers', selectedDevelopersNames)
+      if (formData.otherDeveloper) {
+        submissionData.append('otherDeveloper', formData.otherDeveloper)
+      }
+      if (formData.selectionNotes) {
+        submissionData.append('selectionNotes', formData.selectionNotes)
+      }
+    }
+    
     // Add job-specific fields if applying for job
     if (selectedOption === 'apply-job') {
       submissionData.append('position', formData.position)
@@ -401,11 +533,26 @@ export default function ChatBot() {
     }
   }
 
+  // Hide/show progress-wrap (back to top button) on mobile when chatbot opens/closes
+  useEffect(() => {
+    const progressWrap = document.querySelector('.progress-wrap')
+    const isMobile = window.innerWidth <= 480
+    
+    if (progressWrap && isMobile) {
+      if (isOpen) {
+        progressWrap.style.display = 'none'
+      } else {
+        progressWrap.style.display = ''
+      }
+    }
+  }, [isOpen])
+
   // Get stage title for minimized bar
   const getStageTitle = () => {
     if (chatStage === 'greeting') return 'Welcome!'
     if (chatStage === 'basic-info') return 'Getting Started'
     if (chatStage === 'main-menu') return `Hi ${formData.name}!`
+    if (chatStage === 'hire-team-selection') return 'Select Developers'
     if (chatStage === 'details-form') return 'Tell us more'
     if (chatStage === 'success') return 'Thank You!'
     return 'InheritX Chat'
@@ -414,7 +561,7 @@ export default function ChatBot() {
   return (
     <>
       {/* Chat Widget */}
-      <div className={`chat-widget d-none ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
+      <div className={`chat-widget ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
         {/* Minimized Bar */}
         {isOpen && isMinimized && (
           <div className='chat-minimized-bar' onClick={handleMaximize}>
@@ -461,7 +608,7 @@ export default function ChatBot() {
                 </div>
               </div>
               <div className='chat-header-actions'>
-                {(chatStage === 'main-menu' || chatStage === 'details-form' || chatStage === 'success') && (
+                {(chatStage === 'main-menu' || chatStage === 'hire-team-selection' || chatStage === 'details-form' || chatStage === 'success') && (
                   <button
                     onClick={handleReset}
                     className='chat-action-btn'
@@ -500,14 +647,14 @@ export default function ChatBot() {
                       className='logo-image'
                     />
                   </div>
-                  <h2 className='greeting-title'>👋 Hi there!</h2>
+                  <h2 className='greeting-title'>Welcome to InheritX!</h2>
                   <p className='greeting-message'>
-                    Welcome to <strong>InheritX Solutions</strong>!
+                    <strong>850+ Apps Built.</strong> Trusted by Global Brands.
                     <br />
-                    We've built <strong>850+ mobile and web apps</strong> with AI expertise.
+                    AI-Powered Solutions. Expert Developers. Proven Results.
                   </p>
                   <p className='greeting-tagline'>
-                    Experience the Excellence in Digital Innovation
+                    🚀 Let's Build Something Amazing Together
                   </p>
                   <button onClick={handleStartChat} className='start-chat-btn'>
                     <MessageCircle size={20} />
@@ -542,6 +689,104 @@ export default function ChatBot() {
                       </button>
                     ))}
                   </div>
+                </div>
+              </>
+            )}
+
+            {/* Hire Team Selection Stage */}
+            {chatStage === 'hire-team-selection' && (
+              <>
+                <button onClick={handleBack} className='back-button' aria-label='Back to menu'>
+                  <ArrowLeft size={16} />
+                  <span>Back to Options</span>
+                </button>
+                <div className='chat-hire-team-selection'>
+                  <div className='hire-team-header'>
+                    <h3>Select Developer Types 👨‍💻</h3>
+                    <p>Choose one or more developer types you want to hire</p>
+                  </div>
+                  
+                  <div className='developer-categories'>
+                    {Object.entries(developerTypes).map(([category, developers]) => (
+                      <div key={category} className='developer-category'>
+                        <h4 className='category-title'>{category}</h4>
+                        <div className='developer-options'>
+                          {developers.map((developer) => {
+                            const isSelected = formData.selectedDevelopers.some(dev => dev.id === developer.id)
+                            return (
+                              <button
+                                key={developer.id}
+                                onClick={() => handleDeveloperToggle(developer.id, developer.name)}
+                                className={`developer-option-btn ${isSelected ? 'selected' : ''}`}
+                              >
+                                <span className='checkbox'>
+                                  {isSelected && (
+                                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='3' strokeLinecap='round' strokeLinejoin='round'>
+                                      <polyline points='20 6 9 17 4 12'></polyline>
+                                    </svg>
+                                  )}
+                                </span>
+                                <span className='developer-name'>{developer.name}</span>
+                              </button>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    ))}
+
+                    {/* Other Option */}
+                    <div className='developer-category other-input'>
+                      <h4 className='category-title'>Other</h4>
+                      <div className='developer-options'>
+                        <input
+                          type='text'
+                          name='otherDeveloper'
+                          value={formData.otherDeveloper}
+                          onChange={handleInputChange}
+                          placeholder='Specify other developer type...'
+                          className='form-input'
+                        />
+                      </div>
+                    </div>
+
+                    {/* Additional Notes/Description */}
+                    <div className='developer-category notes-input'>
+                      <h4 className='category-title'>Additional Notes (Optional)</h4>
+                      <div className='developer-options'>
+                        <textarea
+                          name='selectionNotes'
+                          value={formData.selectionNotes || ''}
+                          onChange={handleInputChange}
+                          placeholder='e.g., 5+ years experience, full-time for 6 months...'
+                          rows='6'
+                          className='form-input'
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {formErrors.selectedDevelopers && (
+                    <div className='error-text-centered'>{formErrors.selectedDevelopers}</div>
+                  )}
+
+                  <button
+                    onClick={handleHireTeamSelectionSubmit}
+                    className='form-submit-btn'
+                    style={{ marginTop: '8px', padding: '10px 20px', fontSize: '13px' }}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className='spinner'></div>
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={15} />
+                        Submit
+                      </>
+                    )}
+                  </button>
                 </div>
               </>
             )}
@@ -809,8 +1054,20 @@ export default function ChatBot() {
                 <div className='success-content'>
                   <div className='success-icon'>🎉</div>
                   <h3>Thank You, {formData.name}!</h3>
-                  <p>We've received your request for <strong>{formData.selectedService}</strong>.</p>
-                  <p>Our team will contact you soon.</p>
+                  <p>
+                    {selectedOption === 'apply-job' 
+                      ? "We've received your application."
+                      : `We've received your request for ${formData.selectedService}.`
+                    }
+                  </p>
+                  <p>
+                    {selectedOption === 'apply-job' 
+                      ? 'Our HR department will contact you soon.'
+                      : selectedOption === 'hire-team'
+                      ? 'Our recruitment team will contact you soon.'
+                      : 'Our team will contact you soon.'
+                    }
+                  </p>
                   <button onClick={handleReset} className='back-to-menu-btn'>
                     Start Over
                   </button>

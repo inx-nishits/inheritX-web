@@ -23,6 +23,10 @@ export async function POST(request) {
       category: formData.get('category'),
       requirements: formData.get('requirements'),
       submittedAt: formData.get('submittedAt'),
+      // Hire team specific fields
+      selectedDevelopers: formData.get('selectedDevelopers'),
+      otherDeveloper: formData.get('otherDeveloper'),
+      selectionNotes: formData.get('selectionNotes'),
       // Job application specific fields
       position: formData.get('position'),
       experience: formData.get('experience'),
@@ -48,8 +52,24 @@ export async function POST(request) {
     console.log('Name:', leadData.name)
     console.log('Email:', leadData.email)
     
+    // Log hire-team specific fields
+    if (leadData.category === 'hire-team') {
+      console.log('\n👨‍💻 HIRE TEAM DETAILS:')
+      if (leadData.selectedDevelopers) {
+        console.log('Selected Developers:', leadData.selectedDevelopers)
+      }
+      if (leadData.otherDeveloper) {
+        console.log('Other Developer Type:', leadData.otherDeveloper)
+      }
+      if (leadData.selectionNotes) {
+        console.log('Selection Notes:', leadData.selectionNotes)
+      }
+      if (leadData.requirements) {
+        console.log('Team Requirements:', leadData.requirements)
+      }
+    }
     // Log job application specific fields
-    if (leadData.category === 'apply-job') {
+    else if (leadData.category === 'apply-job') {
       console.log('\n📝 JOB APPLICATION DETAILS:')
       console.log('Position:', leadData.position)
       console.log('Experience:', leadData.experience, 'years')
@@ -162,7 +182,32 @@ function generateEmailHTML(leadData) {
             <div class="label">📧 Email:</div>
             <div class="value">${leadData.email}</div>
           </div>
-          ${isJobApplication ? `
+          ${leadData.category === 'hire-team' ? `
+            ${leadData.selectedDevelopers ? `
+              <div class="field">
+                <div class="label">👨‍💻 Selected Developers:</div>
+                <div class="value">${leadData.selectedDevelopers}</div>
+              </div>
+            ` : ''}
+            ${leadData.otherDeveloper ? `
+              <div class="field">
+                <div class="label">🔧 Other Developer Type:</div>
+                <div class="value">${leadData.otherDeveloper}</div>
+              </div>
+            ` : ''}
+            ${leadData.selectionNotes ? `
+              <div class="field">
+                <div class="label">📝 Selection Notes:</div>
+                <div class="value">${leadData.selectionNotes}</div>
+              </div>
+            ` : ''}
+            ${leadData.requirements ? `
+              <div class="field">
+                <div class="label">💬 Team Requirements:</div>
+                <div class="value">${leadData.requirements}</div>
+              </div>
+            ` : ''}
+          ` : isJobApplication ? `
             <div class="field">
               <div class="label">💼 Position Applied For:</div>
               <div class="value">${leadData.position}</div>

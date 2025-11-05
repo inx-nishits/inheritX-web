@@ -5100,7 +5100,7 @@ a.mapboxgl-ctrl-logo {
 
 .progress-wrap {
   position: fixed;
-  bottom: 110px;
+  bottom: 40px;
   right: 20px;
   height: 40px;
   width: 40px;
@@ -5162,7 +5162,7 @@ body[style*="overflow: hidden"] .progress-wrap {
 
 @media (max-width: 480px) {
   .progress-wrap {
-    bottom: 100px;
+    bottom: 30px;
     right: 16px;
     width: 36px;
     height: 36px;
