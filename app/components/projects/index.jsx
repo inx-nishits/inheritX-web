@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { projectItems, projectCategories } from '../../data/projectsData'
@@ -9,67 +9,73 @@ import Breadcrumbs from '../Breadcrumbs'
 export default function ProjectsPage({ basePath = '/projects', detailsBasePath = '/project-details', pageTitle = 'Our Projects' }) {
     const searchParams = useSearchParams()
     const router = useRouter()
-    const [activeCategory, setActiveCategory] = useState(() => {
-        // Avoid flicker to 'all' when returning: initialize from storage only if restore flag is set
-        try {
-            const shouldRestore = sessionStorage.getItem('inx_restore_projects') === '1'
-            if (shouldRestore) {
-                return sessionStorage.getItem('inx_projects_category') || 'all'
-            }
-        } catch { }
-        return 'all'
-    })
+    
+    // Initialize state - always start with 'all' to avoid hydration mismatch
+    const [activeCategory, setActiveCategory] = useState('all')
+    
     const [mounted, setMounted] = useState(false)
+    const initializedRef = useRef(false)
 
     useEffect(() => {
-        // On mount:
-        // - If returning from details (restore flag present): restore saved tab + scroll
-        // - Else (direct load/refresh): reset to defaults and clear saved values
+        if (initializedRef.current) return
+        initializedRef.current = true
+        
         try {
-            // Highest priority: explicit tab in URL
-            const tabParam = searchParams?.get('tab')
             const allowed = ['all', 'web', 'mobile', 'aiml']
+            
+            // Priority 1: URL parameter (most reliable)
+            const tabParam = searchParams?.get('tab')
             if (tabParam && allowed.includes(tabParam)) {
                 setActiveCategory(tabParam)
-                try { sessionStorage.setItem('inx_projects_category', tabParam) } catch { }
+            } else {
+                // Priority 2: Restore from session storage if flag is set
+                const shouldRestore = sessionStorage.getItem('inx_restore_projects') === '1'
+                if (shouldRestore) {
+                    const saved = sessionStorage.getItem('inx_projects_category')
+                    if (saved && allowed.includes(saved)) {
+                        setActiveCategory(saved)
+                    }
+                }
             }
-
+            
+            // Check if we're restoring from a detail page
             const restore = sessionStorage.getItem('inx_restore_projects')
+            
             if (restore === '1') {
+                // Restore scroll position
                 const y = sessionStorage.getItem('inx_projects_scroll')
                 if (y) {
-                    requestAnimationFrame(() => {
+                    // Use setTimeout to ensure DOM is ready
+                    setTimeout(() => {
                         window.scrollTo(0, parseInt(y, 10) || 0)
-                    })
+                    }, 50)
                 }
-                // Consume the flag so a refresh won't restore again
+                // Clear the restore flag
                 sessionStorage.removeItem('inx_restore_projects')
-            } else {
-                // Direct load/refresh: ensure defaults
-                if (!tabParam) {
-                    setActiveCategory('all')
-                    sessionStorage.removeItem('inx_projects_category')
-                }
                 sessionStorage.removeItem('inx_projects_scroll')
-                // Ensure we're at the normal position (do nothing; browser default is top)
             }
         } catch { }
+        
         setMounted(true)
     }, [searchParams])
 
-    // Persist active category for future restores and reflect in URL (shallow)
+    // Keep URL in sync with active category
     useEffect(() => {
+        if (!mounted) return
+        
         try {
             sessionStorage.setItem('inx_projects_category', activeCategory)
         } catch { }
-        // Update the URL to include ?tab= when not 'all' to preserve history state
+        
         const currentTabParam = searchParams?.get('tab') || null
         const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
+        
+        // Only update URL if it's different to avoid unnecessary navigation
         if (currentTabParam !== desiredTabParam) {
             const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
             router.replace(`${basePath}${query}`, { scroll: false })
         }
-    }, [activeCategory])
+    }, [activeCategory, mounted])
 
     const filteredItems = activeCategory === 'all'
         ? (() => {
@@ -123,7 +129,7 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
                                     >
                                         <span className='tab-name'>{category.name}</span>
                                         <span className='tab-count d-none' suppressHydrationWarning>
-                                            {mounted ? category.count : ''}
+                                            {category.count}
                                         </span>
                                     </button>
                                 ))}
@@ -132,7 +138,7 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
                     </div>
 
                     {/* Projects Grid */}
-                    <div className='projects-grid-section'>
+                    <div className={`projects-grid-section ${mounted ? 'mounted' : ''}`}>
                         <div className='projects-grid' key={activeCategory}>
                             {filteredItems.map((item, index) => (
                                 <ProjectItem key={item.id} item={item} index={index} currentCategory={activeCategory} detailsBasePath={detailsBasePath} />
@@ -259,6 +265,15 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
 
                 .filter-tab.active .tab-count {
                     background: rgba(255, 255, 255, 0.2);
+                }
+
+                .projects-grid-section {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                .projects-grid-section.mounted {
+                    opacity: 1;
                 }
 
                 .projects-grid {

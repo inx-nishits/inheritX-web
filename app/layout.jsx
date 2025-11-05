@@ -184,8 +184,6 @@ export default function RootLayout({ children }) {
         <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-          media='print'
-          onLoad="this.media='all'"
         />
         <noscript>
           <link
@@ -205,18 +203,18 @@ export default function RootLayout({ children }) {
         {/* Defer non-critical CSS to avoid render-blocking */}
         {/* Defer lower-priority CSS */}
         <link rel='preload' as='style' href='/css/animate.min.css' />
-        <link rel='stylesheet' href='/css/animate.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/animate.min.css' />
         <link rel='preload' as='style' href='/css/animate2.min.css' />
-        <link rel='stylesheet' href='/css/animate2.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/animate2.min.css' />
         <link rel='preload' as='style' href='/css/magnific-popup.min.css' />
-        <link rel='stylesheet' href='/css/magnific-popup.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/magnific-popup.min.css' />
         <link rel='stylesheet' href='/css/nice-select.css' />
         <link rel='preload' as='style' href='/css/jquery-ui.min.css' />
-        <link rel='stylesheet' href='/css/jquery-ui.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/jquery-ui.min.css' />
         <link rel='preload' as='style' href='/css/map.min.css' />
-        <link rel='stylesheet' href='/css/map.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/map.min.css' />
         <link rel='preload' as='style' href='/css/nouislider.min.css' />
-        <link rel='stylesheet' href='/css/nouislider.min.css' media='print' onLoad="this.media='all'" />
+        <link rel='stylesheet' href='/css/nouislider.min.css' />
         {/* Keep essential interactive CSS render-ready to avoid feature regressions */}
         <link rel='stylesheet' href='/css/swiper-bundle.min.css' />
         <link rel='stylesheet' href='/css/odometer-theme-default.css' />
