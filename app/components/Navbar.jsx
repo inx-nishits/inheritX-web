@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link className="navbar-brand" href="/">InheritX</Link>
+        <Link className="navbar-brand" href="/">Inheritx</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

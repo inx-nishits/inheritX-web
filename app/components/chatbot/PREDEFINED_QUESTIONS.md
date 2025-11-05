@@ -2,7 +2,7 @@
 
 ## Overview
 
-The InheritX chatbot now features **intelligent predefined questions** (quick replies) that guide users to relevant information quickly, reducing typing effort and improving user experience.
+The Inheritx chatbot now features **intelligent predefined questions** (quick replies) that guide users to relevant information quickly, reducing typing effort and improving user experience.
 
 ## 🎯 Key Features
 
@@ -58,7 +58,7 @@ After the user clicks a quick reply or types a message, the chatbot shows **rele
 ## 🧠 Intelligence Features
 
 ### 1. **Context-Aware Responses**
-The chatbot provides **detailed, data-driven responses** based on actual InheritX:
+The chatbot provides **detailed, data-driven responses** based on actual Inheritx:
 - **850+ apps delivered** - Real metrics
 - **25 featured projects** - Actual portfolio items
 - **Specific technologies** - Python, Flutter, Next.js, etc.
@@ -102,7 +102,7 @@ User: [Clicks "📱 Mobile App Development"]
 
 Bot: 📱 Mobile App Development Excellence!
 
-InheritX has built 850+ successful mobile apps. We specialize in:
+Inheritx has built 850+ successful mobile apps. We specialize in:
 
 ✅ Native Development
 • iOS (Swift, SwiftUI, Objective-C)
@@ -123,7 +123,7 @@ User: [Clicks "🤖 AI & ML Solutions"]
 
 Bot: 🤖 AI & Machine Learning Expertise!
 
-InheritX transforms businesses with cutting-edge AI solutions:
+Inheritx transforms businesses with cutting-edge AI solutions:
 
 ✅ AI Solutions
 • Custom AI Models (TensorFlow, PyTorch)
@@ -305,7 +305,7 @@ Track these metrics to optimize quick replies:
 ## 📞 Support
 
 For questions or improvements:
-- **Email:** contact@inheritx.com
+- **Email:** contact@Inheritx.com
 - **WhatsApp:** +91 84870 06480
 - **Documentation:** `/app/components/chatbot/`
 

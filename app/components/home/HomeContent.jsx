@@ -91,7 +91,7 @@ export default function HomeContent() {
 
               <div className='top-page-title mb-0'>
                 <div className='sub-title body-1 fw-5'>
-                  Empowering Innovation at <span className='text-primary'>InheritX&nbsp;Solutions</span>
+                  Empowering Innovation at <span className='text-primary'>Inheritx&nbsp;Solutions</span>
                 </div>
 
                 <div className='fw-5 fs-1 mb-4'>
@@ -134,7 +134,7 @@ export default function HomeContent() {
               <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px', aspectRatio: '16 / 9', width: '100%' }}>
                 <Image
                   src='/image/page-title/herobanner-final.jpg'
-                  alt='Hero banner showcasing InheritX Solutions'
+                  alt='Hero banner showcasing Inheritx Solutions'
                   fill
                   priority
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
@@ -391,10 +391,10 @@ export default function HomeContent() {
                 <div className='section-content'>
                   <div className='desc mb-40'>
                     <p className='clearfix'>
-                      At InheritX, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
+                      At Inheritx, customer service is more than just a promise — it’s our core value. Since our inception in 2011, we have consistently made quality a habit, delivering best-in-class web, mobile, and AI-powered solutions to our global clientele. Our strong team of experienced professionals can handle projects of any size or scale, offering innovative IT and AI-driven solutions within committed timelines. We thrive on helping businesses grow by providing futuristic, feature-rich, and intelligent solutions in web development, mobile app development, and AI integration.
                     </p>
                     <p className='lh-30 pt-4'>
-                      At InheritX Solutions, we follow a client-first approach, ensuring transparency and excellent results. Our 97% client retention ratio reflects our dedication to building and maintaining lasting relationships. From 24/7 technical assistance and agile methodology to cutting-edge AI adoption, we consistently ensure project safety and deliver solutions that keep your business ahead of the curve.</p>
+                      At Inheritx Solutions, we follow a client-first approach, ensuring transparency and excellent results. Our 97% client retention ratio reflects our dedication to building and maintaining lasting relationships. From 24/7 technical assistance and agile methodology to cutting-edge AI adoption, we consistently ensure project safety and deliver solutions that keep your business ahead of the curve.</p>
                   </div>
                   <div>
                     <Link
@@ -510,7 +510,7 @@ export default function HomeContent() {
                   </div>
                   <h2 className='title fw-6'>
                     Premier Tech Innovations
-                    <span className='fw-3'>&nbsp;InheritX Software Agency</span>
+                    <span className='fw-3'>&nbsp;Inheritx Software Agency</span>
                   </h2>
                 </div>
                 <div className='wg-counter flex g-30'>
@@ -965,7 +965,7 @@ export default function HomeContent() {
                     Our <span className='text-primary'>Team</span>
                   </div>
                   <h2 className='title fw-6 mb-4'>
-                    People who guide us and lead InheritX Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
+                    People who guide us and lead Inheritx Solutions toward <span className='fw-3 text-primary'>excellence</span> with their <span className='fw-3 text-primary'>unique</span> vision
                   </h2>
                   <p className='lh-30 fs-2 mb-lg-5'>
                     They don’t just lead—they empower, mentor, and transform ideas into impact.

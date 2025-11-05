@@ -68,7 +68,7 @@ export default function Accordion() {
 
           <div className='right'>
             <div className='desc'>
-              Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
+              Since its inception, Inheritx Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
             </div>
             <div className='desc mb-2'>
               We are striving to offer superior quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose to get long-term returns.
@@ -105,7 +105,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='right'>
             <div className='desc lh-30'>
-              InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
+              Inheritx Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Accordion() {
         <div className='according-content'>
           <div className='right'>
             <div className='desc lh-30'>
-              InheritX Solutions has an in-house team of
+              Inheritx Solutions has an in-house team of
               experienced developers who can handle any size
               project in the domains of web, mobile app, and IoT.
             </div>

@@ -19,7 +19,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'admin.inheritx.com',
+        hostname: 'admin.Inheritx.com',
         port: '',
         pathname: '/wp-content/uploads/**',
       },

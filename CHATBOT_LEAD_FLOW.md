@@ -2,7 +2,7 @@
 
 ## Overview
 
-The InheritX chatbot now has a **smart conversational flow** that collects user information and sends it directly to the sales team!
+The Inheritx chatbot now has a **smart conversational flow** that collects user information and sends it directly to the sales team!
 
 ## 🎯 Conversation Flow
 
@@ -136,9 +136,9 @@ Add to your `.env.local`:
 ```env
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your-email@inheritx.com
+SMTP_USER=your-email@Inheritx.com
 SMTP_PASS=your-app-password
-SALES_EMAIL=sales@inheritx.com
+SALES_EMAIL=sales@Inheritx.com
 ```
 
 ### **Step 3: Update Submit API**
@@ -182,7 +182,7 @@ Bot: Thank you so much! ✅
      I've sent your details to our team.
      Our sales representative will contact you within 24 hours.
      
-     📧 Email: contact@inheritx.com
+     📧 Email: contact@Inheritx.com
      📱 WhatsApp: +91 84870 06480
 ```
 
@@ -262,7 +262,7 @@ Add new main menu items in `mainMenuOptions` array
 
 ## 🚀 Next Steps (Optional Enhancements)
 
-1. **Email Integration** - Send automated emails to sales@inheritx.com
+1. **Email Integration** - Send automated emails to sales@Inheritx.com
 2. **CRM Integration** - Auto-create leads in Zoho/Salesforce
 3. **Analytics** - Track conversion rates and popular services
 4. **Follow-up Automation** - Auto-send thank you emails
@@ -275,7 +275,7 @@ Add new main menu items in `mainMenuOptions` array
 ## 📞 Support
 
 For chatbot customization or integration help:
-- **Email:** contact@inheritx.com
+- **Email:** contact@Inheritx.com
 - **WhatsApp:** +91 84870 06480
 
 ---

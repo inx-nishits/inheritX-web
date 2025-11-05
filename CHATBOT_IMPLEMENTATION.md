@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully implemented an AI-powered chatbot widget similar to the **IndiaNIC website** (https://www.indianic.com/) for the InheritX website.
+Successfully implemented an AI-powered chatbot widget similar to the **IndiaNIC website** (https://www.indianic.com/) for the Inheritx website.
 
 ## What Was Implemented
 
@@ -14,7 +14,7 @@ Successfully implemented an AI-powered chatbot widget similar to the **IndiaNIC 
 
 ### 2. **Chat Interface** ✅
 - Modern, responsive chat window (380x600px)
-- Professional gradient design matching InheritX brand (#546EA4)
+- Professional gradient design matching Inheritx brand (#546EA4)
 - Message history display
 - User and bot message bubbles with timestamps
 - Typing indicator animation
@@ -34,11 +34,11 @@ Successfully implemented an AI-powered chatbot widget similar to the **IndiaNIC 
 - **Mobile-Optimized** pill-shaped buttons
 
 ### 4. **Welcome Message** ✅
-Enhanced with real InheritX metrics:
+Enhanced with real Inheritx metrics:
 ```
 "Hi there! 👋
 
-Welcome to InheritX Solutions! We've built 850+ mobile and web apps 
+Welcome to Inheritx Solutions! We've built 850+ mobile and web apps 
 with AI expertise.
 
 How can we help you today?"
@@ -53,7 +53,7 @@ All bot responses now include:
 - **Real Office Locations** (India, USA, Germany, Japan)
 
 ### 6. **Intelligent Responses** ✅ ENHANCED!
-Context-aware chatbot with **InheritX-specific data**:
+Context-aware chatbot with **Inheritx-specific data**:
 
 **Service Responses:**
 - **Mobile Development:** Native (iOS/Android) + Cross-platform (Flutter/React Native)
@@ -105,7 +105,7 @@ app/
 │       └── PREDEFINED_QUESTIONS.md        # Quick replies & contextual responses guide
 ├── api/
 │   └── chatbot/
-│       └── route.js                       # API endpoint with InheritX-specific responses
+│       └── route.js                       # API endpoint with Inheritx-specific responses
 └── styles/
     └── globals.css                        # Updated with chatbot + quick reply styles
 
@@ -115,11 +115,11 @@ CHATBOT_IMPLEMENTATION.md                  # This summary file (updated)
 **New Files:**
 - `PREDEFINED_QUESTIONS.md` - Complete guide to smart quick replies
 - Updated chatbot with contextual follow-up questions
-- Enhanced API responses with real InheritX data
+- Enhanced API responses with real Inheritx data
 
 ## Key Features Comparison with IndiaNIC
 
-| Feature | IndiaNIC | InheritX | Status |
+| Feature | IndiaNIC | Inheritx | Status |
 |---------|----------|----------|--------|
 | Floating Chat Button | ✅ | ✅ | **Implemented** |
 | AI-Powered Responses | ✅ | ✅ | **Implemented** |
@@ -259,7 +259,7 @@ Edit `app/styles/globals.css` (lines 551-954) to change colors, sizes, animation
 - Mobile-responsive
 - Typing indicators
 
-### Enhancements in InheritX Version ⭐
+### Enhancements in Inheritx Version ⭐
 - **Better Animation**: More polished entrance/exit animations
 - **Improved Styling**: Custom gradient matching brand colors
 - **Comprehensive API**: Well-structured, documented backend
@@ -302,7 +302,7 @@ if (window.gtag) {
 ## Support
 
 For questions or issues:
-- **Email**: contact@inheritx.com
+- **Email**: contact@Inheritx.com
 - **Documentation**: `app/components/chatbot/README.md`
 - **API Docs**: `app/api/chatbot/route.js` (see comments)
 
@@ -318,7 +318,7 @@ The chatbot implementation successfully replicates and enhances the IndiaNIC web
 ✅ Production-ready code
 ✅ Comprehensive documentation
 
-The chatbot is now live and ready to engage visitors on the InheritX website!
+The chatbot is now live and ready to engage visitors on the Inheritx website!
 
 ---
 

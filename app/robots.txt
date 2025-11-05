@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.inheritx.com/sitemap.xml
+Sitemap: https://www.Inheritx.com/sitemap.xml
 

@@ -131,7 +131,7 @@ export default function LaunchExperience ({ onDone }) {
       <canvas ref={canvasRef} className='launch-canvas' aria-hidden='true' />
       <div className='launch-content'>
         <div className='launch-badge'>New</div>
-        <h1 className='launch-title'>Welcome to the new InheritX</h1>
+        <h1 className='launch-title'>Welcome to the new Inheritx</h1>
         <p className='launch-sub'>A faster, smarter, more delightful experience.</p>
         <button className='tf-btn style-2 launch-cta' onClick={handleClose}>
           <span>Enter Site</span>

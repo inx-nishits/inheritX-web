@@ -3,7 +3,7 @@ export async function fetchPortfolioItems() {
     const controller = new AbortController()
     const timeout = setTimeout(() => controller.abort(), 15000) // 15s timeout
 
-    const res = await fetch('https://admin.inheritx.com/wp-json/api/portfolio', {
+    const res = await fetch('https://admin.Inheritx.com/wp-json/api/portfolio', {
       cache: 'no-store',
       signal: controller.signal,
     })

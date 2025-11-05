@@ -29,15 +29,15 @@ export default function ServiceDetails({ params }) {
   // Dynamic SEO updates when service data loads
   useEffect(() => {
     if (service) {
-      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com';
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com';
       
       // Update document title
-      document.title = `${service.heading} | InheritX Services`;
+      document.title = `${service.heading} | Inheritx Services`;
       
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', service.heading_caption || `Professional ${service.heading} services by InheritX. Expert development solutions for your business needs.`);
+        metaDescription.setAttribute('content', service.heading_caption || `Professional ${service.heading} services by Inheritx. Expert development solutions for your business needs.`);
       }
 
       // Update Open Graph title
@@ -49,7 +49,7 @@ export default function ServiceDetails({ params }) {
       // Update Open Graph description
       const ogDescription = document.querySelector('meta[property="og:description"]');
       if (ogDescription) {
-        ogDescription.setAttribute('content', service.heading_caption || `Professional ${service.heading} services by InheritX. Expert development solutions for your business needs.`);
+        ogDescription.setAttribute('content', service.heading_caption || `Professional ${service.heading} services by Inheritx. Expert development solutions for your business needs.`);
       }
 
       // Update Open Graph image if available
@@ -71,11 +71,11 @@ export default function ServiceDetails({ params }) {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": service.heading,
-        "description": service.heading_caption || `Professional ${service.heading} services by InheritX. Expert development solutions for your business needs.`,
+        "description": service.heading_caption || `Professional ${service.heading} services by Inheritx. Expert development solutions for your business needs.`,
         "image": getAbsoluteImageUrl(service.banner, siteUrl),
         "provider": {
           "@type": "Organization",
-          "name": "InheritX",
+          "name": "Inheritx",
           "url": siteUrl,
           "logo": {
             "@type": "ImageObject",

@@ -14,7 +14,7 @@ export default function BlogDetailsPage({ params }) {
   const [error, setError] = useState(null);
   const [isCategorySidebarOpen, setIsCategorySidebarOpen] = useState(false);
   const showSkeleton = loading || !details;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com'
   // Category sidebar toggle functions
   const openCategorySidebar = () => {
     setIsCategorySidebarOpen(true);
@@ -40,12 +40,12 @@ export default function BlogDetailsPage({ params }) {
         if (!slug) return;
         
         // Fetch blog details
-        const detailsRes = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
+        const detailsRes = await fetch(`https://admin.Inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
         if (!detailsRes.ok) throw new Error('Failed to fetch blog details');
         const detailsJson = await detailsRes.json();
         
         // Fetch categories with counts from main blog API
-        const categoriesRes = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
+        const categoriesRes = await fetch('https://admin.Inheritx.com/wp-json/api/v1/inxblog', {
           cache: 'no-store',
           headers: {
             'Accept': 'application/json',
@@ -88,12 +88,12 @@ export default function BlogDetailsPage({ params }) {
   useEffect(() => {
     if (bloginfo && title) {
       // Update document title
-      document.title = `${title} | InheritX Blog`;
+      document.title = `${title} | Inheritx Blog`;
       
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`);
+        metaDescription.setAttribute('content', bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from Inheritx.`);
       }
 
       // Update Open Graph title
@@ -105,7 +105,7 @@ export default function BlogDetailsPage({ params }) {
       // Update Open Graph description
       const ogDescription = document.querySelector('meta[property="og:description"]');
       if (ogDescription) {
-        ogDescription.setAttribute('content', bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`);
+        ogDescription.setAttribute('content', bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from Inheritx.`);
       }
 
       // Update Open Graph image if available
@@ -121,15 +121,15 @@ export default function BlogDetailsPage({ params }) {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": title,
-        "description": bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`,
+        "description": bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from Inheritx.`,
         "image": hero !== '/image/blog/blog-fallback.jpg' ? hero : undefined,
         "author": {
           "@type": "Person",
-          "name": bloginfo.author || "InheritX Team"
+          "name": bloginfo.author || "Inheritx Team"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "InheritX",
+          "name": "Inheritx",
           "logo": {
             "@type": "ImageObject",
             "url": `${siteUrl}/image/logo/inx-icon-link.png`

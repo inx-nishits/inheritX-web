@@ -1,4 +1,4 @@
-# InheritX AI Chatbot
+# Inheritx AI Chatbot
 
 An intelligent, AI-powered chatbot widget similar to the [IndiaNIC website](https://www.indianic.com/) chatbot functionality.
 
@@ -7,7 +7,7 @@ An intelligent, AI-powered chatbot widget similar to the [IndiaNIC website](http
 - 🤖 **AI-Powered Responses**: Intelligent keyword-based responses with easy integration for AI APIs
 - 💬 **Real-time Chat Interface**: Smooth, animated chat experience
 - 📱 **Fully Responsive**: Works seamlessly on desktop, tablet, and mobile
-- 🎨 **Modern Design**: Beautiful gradient UI matching InheritX brand colors
+- 🎨 **Modern Design**: Beautiful gradient UI matching Inheritx brand colors
 - ⚡ **Fast & Lightweight**: Optimized performance with minimal dependencies
 - 🔔 **Notification Badge**: Shows unread message count
 - ⌨️ **Typing Indicator**: Visual feedback when bot is responding
@@ -92,7 +92,7 @@ export async function POST(request) {
     messages: [
       {
         role: "system",
-        content: "You are InheritX's AI assistant. Help users learn about our services in AI, web development, and mobile apps."
+        content: "You are Inheritx's AI assistant. Help users learn about our services in AI, web development, and mobile apps."
       },
       { role: "user", content: message }
     ],
@@ -260,5 +260,5 @@ Built with:
 
 ---
 
-For questions or support, contact: contact@inheritx.com
+For questions or support, contact: contact@Inheritx.com
 

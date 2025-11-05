@@ -80,7 +80,7 @@ export async function POST(request) {
     // Example using Nodemailer or SendGrid:
     /*
     await sendEmail({
-      to: 'hr@inheritx.com', // or 'sales@inheritx.com' for other inquiries
+      to: 'hr@Inheritx.com', // or 'sales@Inheritx.com' for other inquiries
       subject: `New ${leadData.category === 'apply-job' ? 'Job Application' : leadData.selectedService + ' Inquiry'}`,
       html: generateEmailHTML(leadData),
       attachments: leadData.resume ? [{
@@ -150,7 +150,7 @@ function generateEmailHTML(leadData) {
     <body>
       <div class="container">
         <div class="header">
-          <h2>${isJobApplication ? '💼 New Job Application' : '🎯 New Lead from InheritX Chatbot'}</h2>
+          <h2>${isJobApplication ? '💼 New Job Application' : '🎯 New Lead from Inheritx Chatbot'}</h2>
           <p style="margin: 0; opacity: 0.9;">${isJobApplication ? leadData.position : leadData.selectedService}</p>
         </div>
         <div class="content">
@@ -203,7 +203,7 @@ function generateEmailHTML(leadData) {
           </div>
         </div>
         <div class="footer">
-          <p>This ${isJobApplication ? 'application' : 'lead'} was submitted through the InheritX website chatbot.</p>
+          <p>This ${isJobApplication ? 'application' : 'lead'} was submitted through the Inheritx website chatbot.</p>
           <p><a href="mailto:${leadData.email}">Reply to ${leadData.name}</a></p>
         </div>
       </div>

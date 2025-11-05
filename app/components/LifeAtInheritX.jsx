@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function LifeAtInheritX() {
+export default function LifeAtInheritx() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -63,7 +63,7 @@ export default function LifeAtInheritX() {
       <div className='tf-container'>
         <div className='heading-section mb-3 mb-xl-5 text-center'>
           <h2 className='title fw-6 mb-5'>
-            Life <span className='text-primary'>@ InheritX</span>
+            Life <span className='text-primary'>@ Inheritx</span>
           </h2>
           <p className='clearfix'>
             Every employee is a valuable asset to us. We nurture their skills and care for their growth.
@@ -101,17 +101,17 @@ export default function LifeAtInheritX() {
               </Link>
             </li>
             <li>
-              <Link href='https://x.com/inheritx' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://x.com/Inheritx' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
                 <i className='icon-X'></i>
               </Link>
             </li>
             <li>
-              <Link href='https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://www.linkedin.com/company/Inheritx-solutions-pvt-ltd/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
                 <i className='icon-linkedin'></i>
               </Link>
             </li>
             <li>
-              <Link href='https://www.instagram.com/inheritxsolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://www.instagram.com/Inheritxsolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
                 <i className='icon-instagram'></i>
               </Link>
             </li>
