@@ -37,27 +37,27 @@ export default function HireDetailsPage({ params }) {
   // Dynamic SEO updates when hire expert data loads
   useEffect(() => {
     if (full) {
-      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com';
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com';
       
       // Update document title
-      document.title = `${full.heading} | Inheritx Experts`;
+      document.title = `${full.heading} | InheritX Experts`;
       
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from Inheritx. Professional development services with flexible hiring models.`);
+        metaDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`);
       }
 
       // Update Open Graph title
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) {
-        ogTitle.setAttribute('content', `${full.heading} | Inheritx Experts`);
+        ogTitle.setAttribute('content', `${full.heading} | InheritX Experts`);
       }
 
       // Update Open Graph description
       const ogDescription = document.querySelector('meta[property="og:description"]');
       if (ogDescription) {
-        ogDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from Inheritx. Professional development services with flexible hiring models.`);
+        ogDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`);
       }
 
       // Add structured data for better SEO
@@ -65,10 +65,10 @@ export default function HireDetailsPage({ params }) {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": `${full.heading}`,
-        "description": full.heading_caption || `Hire expert ${full.heading} developers from Inheritx. Professional development services with flexible hiring models.`,
+        "description": full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`,
         "provider": {
           "@type": "Organization",
-          "name": "Inheritx",
+          "name": "InheritX",
           "url": siteUrl,
           "logo": {
             "@type": "ImageObject",

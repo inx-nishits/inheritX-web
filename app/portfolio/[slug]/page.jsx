@@ -3,12 +3,12 @@ import { getProjectBySlug } from '../../data/projectsData'
 
 export async function generateMetadata ({ params }) {
   const { slug } = params || {}
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
   const item = getProjectBySlug(slug)
 
   const title = item?.title || 'Project'
-  const description = item?.description || `Project highlights from Inheritx: ${title}`
+  const description = item?.description || `Project highlights from InheritX: ${title}`
   const ogImage = item?.cover || `${siteUrl}/image/logo/logo-icon.svg`
   const url = `${siteUrl}/portfolio/${slug}`
 

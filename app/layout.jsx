@@ -10,7 +10,7 @@ import ChatBot from './components/chatbot/ChatBot'
 import { Toaster } from 'react-hot-toast'
 
 // SEO base configuration
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
 // Use the requested icon asset for social previews
 const defaultOgImage = `${siteUrl}/image/logo/og-banner.png`
 const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
@@ -18,8 +18,8 @@ const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Top AI, Web, and Mobile App Development Company | Inheritx',
-    template: '%s | Inheritx'
+    default: 'Top AI, Web, and Mobile App Development Company | InheritX',
+    template: '%s | InheritX'
   },
   description:
     'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
@@ -35,10 +35,10 @@ export const metadata = {
     'data engineering',
     'MLOps'
   ],
-  applicationName: 'Inheritx',
-  authors: [{ name: 'Inheritx' }],
-  creator: 'Inheritx',
-  publisher: 'Inheritx',
+  applicationName: 'InheritX',
+  authors: [{ name: 'InheritX' }],
+  creator: 'InheritX',
+  publisher: 'InheritX',
   alternates: {
     canonical: '/',
     languages: { en: '/' }
@@ -46,8 +46,8 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    siteName: 'Inheritx',
-    title: 'Top AI, Web, and Mobile App Development Company | Inheritx',
+    siteName: 'InheritX',
+    title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
       'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
     images: [
@@ -55,7 +55,7 @@ export const metadata = {
         url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'Inheritx — AI, ML, and Custom Software',
+        alt: 'InheritX — AI, ML, and Custom Software',
         type: 'image/png'
       }
     ]
@@ -63,7 +63,7 @@ export const metadata = {
   twitter: {
     // Use the standard small summary card to avoid overly large logo previews
     card: 'summary',
-    title: 'Top AI, Web, and Mobile App Development Company | Inheritx',
+    title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
       'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
     images: [defaultOgImage]
@@ -88,21 +88,21 @@ export const viewport = {
 
 // Note: Page-level SEO overrides
 // - To override metadata per page, use `export const metadata` or `export async function generateMetadata()` in page files.
-// - Titles will use the template "%s | Inheritx" unless a page provides an absolute title.
+// - Titles will use the template "%s | InheritX" unless a page provides an absolute title.
 
 export default function RootLayout({ children }) {
   // Structured Data (JSON-LD)
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Inheritx',
+    name: 'InheritX',
     url: siteUrl,
     logo: `${siteUrl}/image/logo/og-banner.png`,
     sameAs: [
-      'https://www.linkedin.com/company/Inheritx/',
+      'https://www.linkedin.com/company/inheritx/',
       'https://twitter.com/inhx_tech',
-      'https://www.facebook.com/Inheritx',
-      'https://clutch.co/profile/Inheritx' // Placeholder profiles
+      'https://www.facebook.com/InheritX',
+      'https://clutch.co/profile/inheritx' // Placeholder profiles
     ],
     contactPoint: [
       {
@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Inheritx',
+    name: 'InheritX',
     url: siteUrl,
     potentialAction: {
       '@type': 'SearchAction',
@@ -130,42 +130,42 @@ export default function RootLayout({ children }) {
   const servicesJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Inheritx Services',
+    name: 'InheritX Services',
     itemListElement: [
       {
         '@type': 'Service',
         name: 'AI Development',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       },
       {
         '@type': 'Service',
         name: 'Machine Learning Consulting',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       },
       {
         '@type': 'Service',
         name: 'Process Automation',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       },
       {
         '@type': 'Service',
         name: 'Custom Software Development',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       },
       {
         '@type': 'Service',
         name: 'Mobile App Development',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       },
       {
         '@type': 'Service',
         name: 'Web App Development',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       },
       {
         '@type': 'Service',
         name: 'Cloud & DevOps',
-        provider: { '@type': 'Organization', name: 'Inheritx', url: siteUrl }
+        provider: { '@type': 'Organization', name: 'InheritX', url: siteUrl }
       }
     ]
   }

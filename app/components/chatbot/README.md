@@ -1,7 +1,5 @@
 # Inheritx AI Chatbot
 
-An intelligent, AI-powered chatbot widget similar to the [IndiaNIC website](https://www.indianic.com/) chatbot functionality.
-
 ## Features
 
 - 🤖 **AI-Powered Responses**: Intelligent keyword-based responses with easy integration for AI APIs

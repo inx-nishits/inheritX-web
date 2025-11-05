@@ -61,7 +61,7 @@ export default function Page() {
                     </li>
                     <li>
                       <a
-                        href='https://x.com/Inheritx'
+                        href='https://x.com/inheritx'
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
@@ -71,7 +71,7 @@ export default function Page() {
                     </li>
                     <li>
                       <a
-                        href='https://www.linkedin.com/company/Inheritx-solutions-pvt-ltd/'
+                        href='https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/'
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
@@ -81,7 +81,7 @@ export default function Page() {
                     </li>
                     <li>
                       <a
-                        href='https://www.instagram.com/Inheritxsolutions/'
+                        href='https://www.instagram.com/inheritxsolutions/'
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'

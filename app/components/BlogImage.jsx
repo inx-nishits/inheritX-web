@@ -23,7 +23,7 @@ export default function BlogImage({
         if (!src || src.startsWith('/')) return src;
         
         // Add optimization parameters for WordPress images
-        if (src.includes('admin.Inheritx.com')) {
+        if (src.includes('admin.inheritx.com')) {
             const url = new URL(src);
             // Add quality and format optimization
             url.searchParams.set('q', '80'); // 80% quality for faster loading

@@ -56,7 +56,7 @@ export default function CategoryDetailsPage() {
         setError(null);
 
         // Fetch category-specific data
-        const categoryRes = await fetch(`https://admin.Inheritx.com/wp-json/api/v1/inxblog/1/?category_slug=${categorySlug}`, {
+        const categoryRes = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblog/1/?category_slug=${categorySlug}`, {
           cache: 'no-store', // Ensure fresh data
           headers: {
             'Accept': 'application/json',
@@ -67,7 +67,7 @@ export default function CategoryDetailsPage() {
         const categoryJson = await categoryRes.json();
 
         // Fetch categories with counts from main blog API
-        const categoriesRes = await fetch('https://admin.Inheritx.com/wp-json/api/v1/inxblog', {
+        const categoriesRes = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
           cache: 'no-store',
           headers: {
             'Accept': 'application/json',

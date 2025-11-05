@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import LifeAtInheritx from '../LifeAtInheritx'
+import LifeAtInheritX from '../LifeAtInheritX'
 import toast from 'react-hot-toast'
 import Breadcrumbs from '../Breadcrumbs'
 
@@ -46,7 +46,7 @@ export default function JoinOurTeam() {
       try {
         setCareersLoading(true)
         setCareersError('')
-        const res = await fetch('https://admin.Inheritx.com/wp-json/api/v1/career', { cache: 'no-store' })
+        const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/career', { cache: 'no-store' })
         if (!res.ok) throw new Error(`Failed to load careers (${res.status})`)
         const data = await res.json()
         const list = Array.isArray(data?.career) ? data.career : []
@@ -77,7 +77,7 @@ export default function JoinOurTeam() {
         setJobLoading(true)
         setJobError('')
         setJobDetails(null)
-        const res = await fetch(`https://admin.Inheritx.com/wp-json/api/v1/careerdetails/${selectedJobId}`, { cache: 'no-store' })
+        const res = await fetch(`https://admin.inheritx.com/wp-json/api/v1/careerdetails/${selectedJobId}`, { cache: 'no-store' })
         if (!res.ok) throw new Error(`Failed to load job details (${res.status})`)
         const data = await res.json()
         setJobDetails(data?.career || null)
@@ -303,7 +303,7 @@ export default function JoinOurTeam() {
   }
 
   const postCareerForm = async (payload) => {
-    const endpoint = 'https://admin.Inheritx.com/wp-json/api/v1/careerform'
+    const endpoint = 'https://admin.inheritx.com/wp-json/api/v1/careerform'
     const res = await fetch(endpoint, { method: 'POST', body: payload })
     return res
   }
@@ -796,18 +796,18 @@ export default function JoinOurTeam() {
                     We have combined career with the work culture to give you a
                     robust platform to learn new things, use cutting-edge tools,
                     and implement creative insights while making advanced IT
-                    solutions. Since inception, Inheritx Solutions remains
+                    solutions. Since inception, InheritX Solutions remains
                     client-centric and employee-oriented company. We make sure
                     that you can advance in a healthy competitive environment
                     without having much stress.
                   </p>
 
                   <p className='lh-30 fs-3 mb-4 mb-md-5'>
-                    At Inheritx, we believe in ‘Work Hard, Party Harder’ policy.
+                    At InheritX, we believe in ‘Work Hard, Party Harder’ policy.
                     As a fresher, you will get support from experienced seniors,
                     and as an experienced professional, you will have a
                     collaborative and cooperative work culture. We never say
-                    that Inheritx is the best company to work with; we have made
+                    that InheritX is the best company to work with; we have made
                     it!
                   </p>
 
@@ -932,7 +932,7 @@ export default function JoinOurTeam() {
                         </h1>
                         <div className='lh-30 fs-2'>
                           Cultural and fun activities are an integral part of
-                          Inheritx Solutions. We work, play, and celebrate
+                          InheritX Solutions. We work, play, and celebrate
                           together like a happy family
                         </div>
                       </div>
@@ -945,7 +945,7 @@ export default function JoinOurTeam() {
                         </h1>
                         <div className='lh-30 fs-2'>
                           Seniors are supporting and colleagues are cordial-
-                          this is the real identity of Inheritx Solutions. We’re
+                          this is the real identity of InheritX Solutions. We’re
                           different by the department but we’re one as a team
                         </div>
                       </div>
@@ -957,7 +957,7 @@ export default function JoinOurTeam() {
                           Growth Opportunity
                         </h1>
                         <div className='lh-30 fs-2'>
-                          Whether it is monetary or personal growth, Inheritx
+                          Whether it is monetary or personal growth, InheritX
                           Solutions remains the best place to offer equal
                           opportunities to all its employees. We believe in
                           ‘Grow Together’ mantra.
@@ -1184,15 +1184,15 @@ export default function JoinOurTeam() {
                 <div>
                   <ul>
                     <li className='top-bar-item fs-2 justify-content-center  mb-4'>
-                      <Link href='mailto:contact@Inheritx.com' className='mb-0 fs-1 d-inline-flex align-items-center gap-3' target='_blank'>
+                      <Link href='mailto:contact@inheritx.com' className='mb-0 fs-1 d-inline-flex align-items-center gap-3' target='_blank'>
                         <i className='icon-email fs-3'></i>
-                        <span>contact@Inheritx.com</span>
+                        <span>contact@inheritx.com</span>
                       </Link>
                     </li>
                   </ul>
                   <ul className='lh-45 fw-6'>
                     <li className='top-bar-item fs-2 justify-content-center'>
-                      <Link href='https://wa.me/918487006480?text=Hello%20Inheritx%2C%20I%27d%20like%20to%20get%20in%20touch.' className='mb-0 fs-1 d-inline-flex align-items-center gap-3' target='_blank' rel='noopener noreferrer'>
+                      <Link href='https://wa.me/918487006480?text=Hello%20InheritX%2C%20I%27d%20like%20to%20get%20in%20touch.' className='mb-0 fs-1 d-inline-flex align-items-center gap-3' target='_blank' rel='noopener noreferrer'>
                         <span aria-hidden='true' className='whatsapp-icon' style={{ display: 'inline-flex', alignItems: 'center' }}>
                           <svg width='24' height='24' viewBox='0 0 24 24' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
                             <path d='M20.463,3.488C18.217,1.24,15.231,0.001,12.05,0    C5.495,0,0.16,5.334,0.157,11.892c-0.001,2.096,0.547,4.142,1.588,5.946L0.057,24l6.304-1.654    c1.737,0.948,3.693,1.447,5.683,1.448h0.005c6.554,0,11.89-5.335,11.893-11.893C23.944,8.724,22.708,5.735,20.463,3.488z     M12.05,21.785h-0.004c-1.774,0-3.513-0.477-5.031-1.378l-0.361-0.214l-3.741,0.981l0.999-3.648l-0.235-0.374    c-0.99-1.574-1.512-3.393-1.511-5.26c0.002-5.45,4.437-9.884,9.889-9.884c2.64,0,5.122,1.03,6.988,2.898    c1.866,1.869,2.893,4.352,2.892,6.993C21.932,17.351,17.498,21.785,12.05,21.785z M17.472,14.382    c-0.297-0.149-1.758-0.868-2.031-0.967c-0.272-0.099-0.47-0.149-0.669,0.148s-0.767,0.967-0.941,1.166    c-0.173,0.198-0.347,0.223-0.644,0.074c-0.297-0.149-1.255-0.462-2.39-1.475c-0.883-0.788-1.48-1.761-1.653-2.059    s-0.018-0.458,0.13-0.606c0.134-0.133,0.297-0.347,0.446-0.521C9.87,9.97,9.919,9.846,10.019,9.647    c0.099-0.198,0.05-0.372-0.025-0.521C9.919,8.978,9.325,7.515,9.078,6.92c-0.241-0.58-0.486-0.501-0.669-0.51    C8.236,6.401,8.038,6.4,7.839,6.4c-0.198,0-0.52,0.074-0.792,0.372c-0.272,0.298-1.04,1.017-1.04,2.479    c0,1.463,1.065,2.876,1.213,3.074c0.148,0.198,2.095,3.2,5.076,4.487c0.709,0.306,1.263,0.489,1.694,0.626    c0.712,0.226,1.36,0.194,1.872,0.118c0.571-0.085,1.758-0.719,2.006-1.413c0.248-0.694,0.248-1.29,0.173-1.413    C17.967,14.605,17.769,14.531,17.472,14.382z' />
@@ -1259,7 +1259,7 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Overall, I was very satisfied with Inheritx. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
+                          Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.
                         </div>
                         <div className='user-testimonial'>
                           <span className='name-user body-2'>
@@ -1278,7 +1278,7 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
+                          InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.
                         </div>
                         <div className='user-testimonial'>
                           <span className='name-user body-2'>
@@ -1297,7 +1297,7 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
+                          InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.
                         </div>
                         <div className='user-testimonial'>
                           <span className='name-user body-2'>
@@ -1316,7 +1316,7 @@ export default function JoinOurTeam() {
                           <i className='icon-quote2'></i>
                         </div>
                         <div className='text fs-27 lh-35 fw-5'>
-                          Inheritx has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
+                          InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.
                         </div>
                         <div className='user-testimonial'>
                           <span className='name-user body-2'>
@@ -1402,7 +1402,7 @@ export default function JoinOurTeam() {
         </section>
 
 
-        <LifeAtInheritx />
+        <LifeAtInheritX />
       </div>
     </>
   )

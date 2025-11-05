@@ -2,11 +2,11 @@ import BlogDetailsPage from "../../components/blog/blog-details";
 
 export async function generateMetadata({ params }) {
   const { slug } = params || {}
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
   // TODO: Replace this mock with real post data fetch once available
   const postTitle = slug ? slug.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : 'Blog'
-  const postDescription = `Read insights about ${postTitle} from Inheritx.`
+  const postDescription = `Read insights about ${postTitle} from InheritX.`
   const ogImage = `${siteUrl}/image/logo/inx-logo.png`
 
   return {

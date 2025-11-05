@@ -6,13 +6,13 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata ({ params }) {
   const { slug } = params || {}
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.Inheritx.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
   const items = await fetchPortfolioItems()
   const item = Array.isArray(items) ? items.find(p => p.slug === slug) : null
 
   const title = item?.title || 'Portfolio'
-  const description = item?.description || `Project highlights from Inheritx: ${title}`
+  const description = item?.description || `Project highlights from InheritX: ${title}`
   const ogImage = item?.cover || `${siteUrl}/image/logo/logo-icon.svg`
   const url = `${siteUrl}/porfolio-details/${slug}`
 

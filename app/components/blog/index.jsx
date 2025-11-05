@@ -56,7 +56,7 @@ export default function BlogListPage() {
                 setLoading(true);
                 setError(null);
 
-                const res = await fetch('https://admin.Inheritx.com/wp-json/api/v1/inxblog', {
+                const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
                     cache: 'no-store', // Ensure fresh data
                     headers: {
                         'Accept': 'application/json',
@@ -1056,7 +1056,7 @@ export default function BlogListPage() {
                                         setSubmitting(true);
                                         const formData = new FormData();
                                         formData.append("email", subEmail);
-                                        const res = await fetch("https://admin.Inheritx.com/wp-json/api/v1/subscription", {
+                                        const res = await fetch("https://admin.inheritx.com/wp-json/api/v1/subscription", {
                                             method: "POST",
                                             body: formData,
                                         });
