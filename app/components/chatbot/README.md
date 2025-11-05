@@ -258,5 +258,5 @@ Built with:
 
 ---
 
-For questions or support, contact: contact@Inheritx.com
+For questions or support, contact: contact@inheritx.com
 

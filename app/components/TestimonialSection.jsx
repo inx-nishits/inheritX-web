@@ -5,25 +5,25 @@ import Image from 'next/image';
 const testimonialsData = [
   {
     id: 1,
-    text: "Overall, I was very satisfied with Inheritx. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.",
+    text: "Overall, I was very satisfied with InheritX. They are hard-working, very reliable, and very flexible. I would highly recommend the INX team for any development work.",
     name: "Edward",
     position: "CEO"
   },
   {
     id: 2,
-    text: "Inheritx is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.",
+    text: "InheritX is very professional and articulate in their approach to this project. The most impressive thing is the input and intelligent contributions they have made to the design of the app.",
     name: "Badri",
     position: "Manager"
   },
   {
     id: 3,
-    text: "Inheritx has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.",
+    text: "InheritX has proven themselves to be dependable, with solid problem-solving and technical skills. They are persistent, reliable, flexible, and responsive.",
     name: "Saady",
     position: "Developer"
   },
   {
     id: 4,
-    text: "Inheritx has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.",
+    text: "InheritX has done a fabulous job. We want to continue using them in the future and recommend them to all developers looking for professional, high-quality work.",
     name: "Simon",
     position: "Developer"
   },

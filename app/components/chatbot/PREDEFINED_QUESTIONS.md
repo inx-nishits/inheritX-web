@@ -305,7 +305,7 @@ Track these metrics to optimize quick replies:
 ## 📞 Support
 
 For questions or improvements:
-- **Email:** contact@Inheritx.com
+- **Email:** contact@inheritx.com
 - **WhatsApp:** +91 84870 06480
 - **Documentation:** `/app/components/chatbot/`
 

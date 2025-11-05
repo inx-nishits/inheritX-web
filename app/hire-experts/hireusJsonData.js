@@ -12,17 +12,17 @@ export class HireUsData {
         "Our dedicated iOS app developers can help you come up with feature-rich and futuristic enterprise apps that can work well in the latest iPhones. Our cost-effective hiring process provides you a higher return on your investment and gives your business an edge over peers."
       ],
       "we_offer": [
-        "Hire iPhone application developer from Inheritx solutions to meet your diverse and ever-changing business needs. We offer end-to-end iPhone app development services."
+        "Hire iPhone application developer from InheritX Solutions to meet your diverse and ever-changing business needs. We offer end-to-end iPhone app development services."
       ],
       "hire_developers_model": [
         "Our hire iPhone application developer model is a much sought-after one because it is designed to keep the competition and modern business requirements in mind. It combines both quality and cost-effectiveness for any size of project.",
-        "You can hire dedicated iPhone app developers from Inheritx solutions with the utmost flexibility. Our various hiring models can enable you to scale up or scale down resources as per changing project needs. Our model can assist you to cut down app development costs by 50% and reduce completion time significantly. It means that you can get the benefit of reduced TTM (Time to Market) with a seamlessly performing application."
+        "You can hire dedicated iPhone app developers from InheritX Solutions with the utmost flexibility. Our various hiring models can enable you to scale up or scale down resources as per changing project needs. Our model can assist you to cut down app development costs by 50% and reduce completion time significantly. It means that you can get the benefit of reduced TTM (Time to Market) with a seamlessly performing application."
       ],
       "hire_fullstack_developers": [
         "Excellent iPhone Application Development Company"
       ],
       "our_hiring_models": [
-        "Inheritx Solutions offers enterprise-grade flexible engagement models to hire iPhone app developers from the USA and India. Various industry sectors including healthcare, entertainment, education, banking, and manufacturing can leverage our hiring models. Here is a brief overview of our engagement models."
+        "InheritX Solutions offers enterprise-grade flexible engagement models to hire iPhone app developers from the USA and India. Various industry sectors including healthcare, entertainment, education, banking, and manufacturing can leverage our hiring models. Here is a brief overview of our engagement models."
       ],
       "tools_we_use": [
         "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
@@ -46,7 +46,7 @@ export class HireUsData {
       "heading_caption": "Let the Green Robot Drive Your Business",
       "content_heading": "Hire Android App",
       "content": [
-        "Android enjoys the lion's share in the smartphone market worldwide. With over 2.7 million apps on Google Play, Android OS rules the mobile app development domain as well. Since inception, we, at Inheritx, develop enterprise-grade and feature-rich Android apps for our corporate clients. We have an in-house team of talented and experienced Android app developers who can handle app projects of any size.",
+        "Android enjoys the lion's share in the smartphone market worldwide. With over 2.7 million apps on Google Play, Android OS rules the mobile app development domain as well. Since inception, we, at InheritX, develop enterprise-grade and feature-rich Android apps for our corporate clients. We have an in-house team of talented and experienced Android app developers who can handle app projects of any size.",
         "We offer flexible and scalable engagement models to hire Android app developers from India. With global footprints and a knack for developing innovative app solutions, we can assist you to address a huge audience consisting of Android smartphone and tablet users globally. You can hire dedicated Android app developers to transform your awesome app concept into reality."
       ],
       "we_offer": [
@@ -63,7 +63,7 @@ export class HireUsData {
         "You can leverage the benefits of a thriving Android platform and mobility by hiring our developers. Our hiring models are made to meet the requirements of various industry sectors including healthcare, entertainment, education, banking, and manufacturing. Here are our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -84,14 +84,14 @@ export class HireUsData {
       "heading_caption": "All Website Needs. One Reliable Solution. Hire PHP Programmers. ",
       "content_heading": "Hire PHP Web",
       "content": [
-        "As one of the most popular open-source scripting languages, PHP is highly suitable for web development projects. Since inception, we have successfully accomplished many web projects including web development, CMS development, portal development, e-commerce web development, and web app development using PHP. You can hire PHP programmers from Inheritx to get a superior quality business website in a cost-effective way.",
+        "As one of the most popular open-source scripting languages, PHP is highly suitable for web development projects. Since inception, we have successfully accomplished many web projects including web development, CMS development, portal development, e-commerce web development, and web app development using PHP. You can hire PHP programmers from InheritX to get a superior quality business website in a cost-effective way.",
         "As a renowned IT solutions provider in India, we have deployed various web projects across the world and assisted enterprises to thrive amid growing competition. Our dedicated PHP developers have extensive knowledge about every technical aspect of the most recent PHP version."
       ],
       "we_offer": [
-        "You can hire PHP web developers from Inheritx Solutions to meet any web development requirements ranging from business web development, web app development, e-commerce development, and maintenance of your existing corporate website."
+        "You can hire PHP web developers from InheritX Solutions to meet any web development requirements ranging from business web development, web app development, e-commerce development, and maintenance of your existing corporate website."
       ],
       "hire_developers_model": [
-        "Our experienced PHP programmers understand the project requirements and research market trends thoroughly before initiating any web project. When you hire PHP web developers from Inheritx Solutions, you can remain assured of quality, security, confidentiality, and performance of your website. Our PHP programmers follow all aspects of W3C to build a dynamic website for your company.",
+        "Our experienced PHP programmers understand the project requirements and research market trends thoroughly before initiating any web project. When you hire PHP web developers from InheritX Solutions, you can remain assured of quality, security, confidentiality, and performance of your website. Our PHP programmers follow all aspects of W3C to build a dynamic website for your company.",
         "Our dedicated PHP programmers have wide experience in developing e-commerce websites, which means that you can boost your retail business by having a strong online presence in the form of a seamlessly running e-commerce website."
       ],
       "hire_fullstack_developers": [
@@ -101,7 +101,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire dedicated PHP developers to meet your project requirements effectively. Here is a brief introduction to our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
@@ -122,7 +122,7 @@ export class HireUsData {
       "heading_caption": "To Get Scalable Web and App Solutions,  Cost-effectively.",
       "content_heading": "Hire AngularJS",
       "content": [
-        "AngularJS, supported by Google, is a single platform to build powerful and robust business applications. We utilize the latest tools and techniques to make Angular-based applications rapidly. At Inheritx, we know the value of your business—be it a startup or an established one. You can hire dedicated AngularJS developers from Inheritx to get 360-degree solutions for your web and app requirements.",
+        "AngularJS, supported by Google, is a single platform to build powerful and robust business applications. We utilize the latest tools and techniques to make Angular-based applications rapidly. At InheritX, we know the value of your business—be it a startup or an established one. You can hire dedicated AngularJS developers from Inheritx to get 360-degree solutions for your web and app requirements.",
         "Our engagement models are highly flexible and you can readily hire AngularJS developers as per your business requirements. Our experienced and certified Angular developers can also come up with seamlessly running, feature-rich mobile apps using the AngularJS platform."
       ],
       "we_offer": [
@@ -130,7 +130,7 @@ export class HireUsData {
       ],
       "hire_developers_model": [
         "We have a team of top AngularJS developers to keep your company ahead of growing competition with the help of advanced AngularJS solutions. We enable you to hire the best AngularJS developers to develop top-notch websites and mobile apps.",
-        "Our hiring models assist you to save time and money. You can get the best front-end single-page applications using the Angular platform. At Inheritx, our engagement model is designed to reduce the development cost by 50%. Businesses based in the USA or Europe can take advantage of differences in time-zone and currency by outsourcing web and mobile app projects."
+        "Our hiring models assist you to save time and money. You can get the best front-end single-page applications using the Angular platform. At InheritX, our engagement model is designed to reduce the development cost by 50%. Businesses based in the USA or Europe can take advantage of differences in time-zone and currency by outsourcing web and mobile app projects."
       ],
       "hire_fullstack_developers": [
         "Leading AngularJS Development Company"
@@ -139,7 +139,7 @@ export class HireUsData {
         "With sound technical knowledge and insight into the latest AngularJS version, our Angular full-stack developers can create unique and innovative web and app solutions for various industry sectors like real estate, manufacturing, banking, healthcare, and media. Here are our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
@@ -167,7 +167,7 @@ export class HireUsData {
       ],
       "hire_developers_model": [
         "We have a team of top Python developers ready to help your company stay ahead of the competition with advanced Python solutions. We enable you to hire the best Python developers to build top-notch websites and mobile apps.",
-        "Our hiring models are designed to save you time and money. You can benefit from our Python expertise to develop high-performance single-page applications and other solutions. At Inheritx, our engagement model is tailored to reduce development costs by up to 50%. Businesses in the USA or Europe can leverage time-zone and currency differences by outsourcing their web and mobile app projects."
+        "Our hiring models are designed to save you time and money. You can benefit from our Python expertise to develop high-performance single-page applications and other solutions. At InheritX, our engagement model is tailored to reduce development costs by up to 50%. Businesses in the USA or Europe can leverage time-zone and currency differences by outsourcing their web and mobile app projects."
       ],
       "hire_fullstack_developers": [
         "Leading Python Development Company"
@@ -176,7 +176,7 @@ export class HireUsData {
         "With deep technical knowledge and expertise in the latest Python technologies, our full-stack developers can create innovative and effective web and app solutions for various industry sectors such as real estate, manufacturing, banking, healthcare, and media. Here are our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use advanced tools. You can easily collaborate with your team of Python developers at Inheritx. Whether it's discussing requirements or daily project updates, you can stay in touch with your developers anytime."
+        "For effective and real-time communication, we use advanced tools. You can easily collaborate with your team of Python developers at InheritX. Whether it's discussing requirements or daily project updates, you can stay in touch with your developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
@@ -197,7 +197,7 @@ export class HireUsData {
       "heading_caption": "For High-Performance and Scalable Web Solutions, Cost-effectively.",
       "content_heading": "Hire Next.js Developers",
       "content": [
-        "Next.js, a popular React framework, is an excellent choice for developing high-performance and scalable web applications. At Inheritx, we utilize the latest tools and techniques in Next.js to build modern and efficient applications. Whether you're a startup or an established enterprise, you can hire dedicated Next.js developers from Inheritx to get comprehensive solutions for your web and app requirements.",
+        "Next.js, a popular React framework, is an excellent choice for developing high-performance and scalable web applications. At InheritX, we utilize the latest tools and techniques in Next.js to build modern and efficient applications. Whether you're a startup or an established enterprise, you can hire dedicated Next.js developers from Inheritx to get comprehensive solutions for your web and app requirements.",
         "Our engagement models are highly flexible, allowing you to hire Next.js developers according to your specific business needs. Our experienced and certified Next.js developers can create seamless, feature-rich applications with optimized performance and SEO capabilities."
       ],
       "we_offer": [
@@ -205,7 +205,7 @@ export class HireUsData {
       ],
       "hire_developers_model": [
         "We have a team of top Next.js developers ready to help your company stay ahead of the competition with advanced Next.js solutions. We enable you to hire the best Next.js developers to build cutting-edge websites and applications.",
-        "Our hiring models are designed to save you time and money. You can benefit from our Next.js expertise to develop high-performance single-page applications and other solutions. At Inheritx, our engagement model is tailored to reduce development costs by up to 50%. Businesses in the USA or Europe can leverage time-zone and currency differences by outsourcing their web projects."
+        "Our hiring models are designed to save you time and money. You can benefit from our Next.js expertise to develop high-performance single-page applications and other solutions. At InheritX, our engagement model is tailored to reduce development costs by up to 50%. Businesses in the USA or Europe can leverage time-zone and currency differences by outsourcing their web projects."
       ],
       "hire_fullstack_developers": [
         "Leading Next.js Development Company"
@@ -214,7 +214,7 @@ export class HireUsData {
         "With deep technical knowledge and expertise in the latest Next.js technologies, our full-stack developers can create innovative and effective web solutions for various industry sectors such as e-commerce, finance, healthcare, and media. Here are our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use advanced tools. You can easily collaborate with your team of Next.js developers at Inheritx. Whether it's discussing requirements or daily project updates, you can stay in touch with your developers anytime."
+        "For effective and real-time communication, we use advanced tools. You can easily collaborate with your team of Next.js developers at InheritX. Whether it's discussing requirements or daily project updates, you can stay in touch with your developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
@@ -235,15 +235,15 @@ export class HireUsData {
       "heading_caption": "Stable, Secure, and Scalable Web App Solutions",
       "content_heading": "Hire Node.js",
       "content": [
-        "Node.js is the choice of many web developers to make data-intensive and real-time web applications. You can hire Node.js developers from Inheritx to give your business an edge over competitors with highly scalable web applications. Our skilled Node.js backend developers can build customized app solutions to meet specific business needs.",
-        "With a robust backend data management and content management system, Node.js can enable you to get reliable and data-driven web apps. At Inheritx, our senior Node.js developers strive to meet all the project requirements while building customized app solutions rapidly."
+        "Node.js is the choice of many web developers to make data-intensive and real-time web applications. You can hire Node.js developers from InheritX to give your business an edge over competitors with highly scalable web applications. Our skilled Node.js backend developers can build customized app solutions to meet specific business needs.",
+        "With a robust backend data management and content management system, Node.js can enable you to get reliable and data-driven web apps. At InheritX, our senior Node.js developers strive to meet all the project requirements while building customized app solutions rapidly."
       ],
       "we_offer": [
         "We offer end-to-end services under the hood of Node.js development. You can hire Node.js developers to have the benefits of this excellent platform."
       ],
       "hire_developers_model": [
         "Beginning with offering a free quote for your project needs, our hiring models are designed in a budget-friendly way. You can choose any member from our in-house team of experienced Node.js backend developers and build your team away from your office. We have delivered many web app solutions with utmost integrity and transparency.",
-        "At Inheritx, our focus remains on making our esteemed clients happy by providing them flexible engagement models. When you hire senior Node.js developers from Inheritx, you can remain assured of getting customized solutions with a seamless performance within the deadline."
+        "At InheritX, our focus remains on making our esteemed clients happy by providing them flexible engagement models. When you hire senior Node.js developers from InheritX, you can remain assured of getting customized solutions with a seamless performance within the deadline."
       ],
       "hire_fullstack_developers": [
         "Top-class Node.js Development Company"
@@ -252,7 +252,7 @@ export class HireUsData {
         "Since inception, we have deployed many web and app solutions globally for enterprises ranging from startups to Fortune 500 companies. We offer cost-efficient and scalable hiring models to meet the client's needs in the best possible way. Here are our different engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -274,7 +274,7 @@ export class HireUsData {
       "content_heading": "Hire WordPress",
       "content": [
         "WordPress is one of the most popular CMS and web development platforms across the world. From managing blogs to an e-commerce store, this highly flexible and customizable platform can serve your business objectives efficiently. A huge collection of plugins, unlimited themes, and a thriving community of WordPress web developers are additional benefits of this robust web platform.",
-        "You can hire WordPress experts from Inheritx to get a feature-rich WordPress website that runs smoothly across various devices. Our engagement models can be scaled up or down as per your project requirements. You can hire WordPress developers from our in-house team of certified professionals. We have made outsourcing easy for you by introducing a simple and transparent hiring process."
+        "You can hire WordPress experts from InheritX to get a feature-rich WordPress website that runs smoothly across various devices. Our engagement models can be scaled up or down as per your project requirements. You can hire WordPress developers from our in-house team of certified professionals. We have made outsourcing easy for you by introducing a simple and transparent hiring process."
       ],
       "we_offer": [
         "WordPress web developers can assist you to come up with a reliable business website as well as a feature-rich e-commerce shop. When it comes to developing customized web solutions using WordPress, Inheritx always focuses on the end-users or target audience. Have a glimpse of our services."
@@ -290,7 +290,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire WordPress website developers to meet your project requirements effectively. Here is a brief introduction to our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -312,14 +312,14 @@ export class HireUsData {
       "content_heading": "Hire Python Programmers",
       "content": [
         "Python is one of the most popular, general-purpose programming languages for developing robust and reliable backend systems. We provide end-to-end Python web development services for your project. Cutting-edge technologies and tools enable our experienced Python web developers to offer seamlessly performing solutions. We provide remote Python developers in a cost-effective way.",
-        "Inheritx Solutions is known for accomplishing any size web project within a given deadline. You can hire Python programmers to work exclusively on your web project and leverage many business benefits. Our expertise in developing customized web solutions for various industry sectors can be availed in the best possible way when you hire Python developers."
+        "InheritX Solutions is known for accomplishing any size web project within a given deadline. You can hire Python programmers to work exclusively on your web project and leverage many business benefits. Our expertise in developing customized web solutions for various industry sectors can be availed in the best possible way when you hire Python developers."
       ],
       "we_offer": [
         "We provide Python software developers on an hourly and monthly basis. Our flexible and scalable engagement models can enable you to unleash the value of your business through seamless web solutions in a cost-effective way."
       ],
       "hire_developers_model": [
-        "You can hire remote Python programmers from Inheritx Solutions, a leading web development company. We provide you with an efficient team of dedicated web developers who are well-versed in using the latest tools and advancements of advanced Python versions. We ensure that you hire Python programmers who have vast experience in developing web applications for medium and large-scale enterprises.",
-        "We, at Inheritx, value your trust and therefore, provide you with the utmost transparency and security while assisting you to build a team of Python backend developers. Timely completion of the project and focus on performance remain our mainstays since inception."
+        "You can hire remote Python programmers from InheritX Solutions, a leading web development company. We provide you with an efficient team of dedicated web developers who are well-versed in using the latest tools and advancements of advanced Python versions. We ensure that you hire Python programmers who have vast experience in developing web applications for medium and large-scale enterprises.",
+        "We, at InheritX, value your trust and therefore, provide you with the utmost transparency and security while assisting you to build a team of Python backend developers. Timely completion of the project and focus on performance remain our mainstays since inception."
       ],
       "hire_fullstack_developers": [
         "Renowned Python Web Development Company"
@@ -328,7 +328,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire dedicated Python web developers to meet your project requirements effectively. Here is a brief introduction to our engagement models. "
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -349,15 +349,15 @@ export class HireUsData {
       "heading_caption": "Get Dynamic Websites, Apps, and Portals for Your Business",
       "content_heading": "Hire ASP",
       "content": [
-        "As an open-source server-side web app framework, ASP.NET has gained ground among developers and entrepreneurs. Powered by Microsoft, this platform is capable of building dynamic web pages that can run flawlessly across different platforms like mobile and desktops. You can hire ASP developers from Inheritx for custom web design and development.",
-        "Dot Net developers at Inheritx are well-versed in using the latest tools and features of PHP, ASP.NET, VB.NET, etc. to make engaging and feature-rich web applications for your business. You can hire DOT NET programmers in a cost-effective way to get customized web solutions with attractive and user-oriented design."
+        "As an open-source server-side web app framework, ASP.NET has gained ground among developers and entrepreneurs. Powered by Microsoft, this platform is capable of building dynamic web pages that can run flawlessly across different platforms like mobile and desktops. You can hire ASP developers from InheritX for custom web design and development.",
+        "Dot Net developers at InheritX are well-versed in using the latest tools and features of PHP, ASP.NET, VB.NET, etc. to make engaging and feature-rich web applications for your business. You can hire DOT NET programmers in a cost-effective way to get customized web solutions with attractive and user-oriented design."
       ],
       "we_offer": [
-        "Inheritx Solutions offers flexible engagement models to hire ASP.NET developers with a minimum of 5 years of experience. Strong domain expertise in MVP, MVC, and MVVM architecture can help us build robust web solutions. Here are key services we offer under the hood of ASP.NET development. "
+        "InheritX Solutions offers flexible engagement models to hire ASP.NET developers with a minimum of 5 years of experience. Strong domain expertise in MVP, MVC, and MVVM architecture can help us build robust web solutions. Here are key services we offer under the hood of ASP.NET development. "
       ],
       "hire_developers_model": [
         "We are a Certified Microsoft partner and follow the best practices in web design and development while using cutting-edge tools. We offer 360-degree ASP.NET application development services as you hire ASP.NET developers. Our ASP.NET development services are designed to meet the complex requirements of your business and web projects. We offer complete assistance to our clients for implementing the ASP.NET framework in the web project.",
-        "Our DOT NET developers have a knack for building high-end web applications and business websites with desired features. At Inheritx, we strive to achieve the client’s objectives by utilizing technological advancements in customized web and app solutions."
+        "Our DOT NET developers have a knack for building high-end web applications and business websites with desired features. At InheritX, we strive to achieve the client’s objectives by utilizing technological advancements in customized web and app solutions."
       ],
       "hire_fullstack_developers": [
         "Leading ASP.NET Web Development Company"
@@ -366,7 +366,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire dedicated DOT NET developers to meet your project requirements effectively. Here is a brief introduction to our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -391,7 +391,7 @@ export class HireUsData {
         "Our ReactJS developers can make interactive and innovative UI for various web projects including e-commerce shops, SaaS software, games, mobile apps, and dashboards. You can hire ReactJS developers as per the duration and complexity of your web project. We have delivered top-class ReactJS web solutions across different industry verticals to meet various business needs."
       ],
       "we_offer": [
-        "When you hire React developers from Inheritx, you can give your web project an edge. Our certified React developers have vast experience in delivering small, medium, and large-size projects globally. Here is a glimpse of our ReactJS development services."
+        "When you hire React developers from InheritX, you can give your web project an edge. Our certified React developers have vast experience in delivering small, medium, and large-size projects globally. Here is a glimpse of our ReactJS development services."
       ],
       "hire_developers_model": [
         "You can hire ReactJS developers from India on an hourly or monthly basis. When you want to build engaging web apps with attractive interfaces, our skilled ReactJS developers can assist you. Since inception, we have put all our efforts to meet the business requirements of a global clientele by developing feature-rich web app solutions.",
@@ -404,7 +404,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire React developers to meet your project requirements effectively. Here is a brief introduction to our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -425,11 +425,11 @@ export class HireUsData {
       "heading_caption": "Get Cross-platform Mobile Apps with Native-like Experience",
       "content_heading": "Hire PhoneGap",
       "content": [
-        "PhoneGap, earlier known as Apache Cordova, is a popular mobile application development framework to build cross-platform apps that can run across various OS and devices with a native-like experience. Inheritx Solutions has an in-house team of dedicated PhoneGap developers for hire. We assist you to get top-notch hybrid business apps that can flawlessly run across web and mobile domains.",
+        "PhoneGap, earlier known as Apache Cordova, is a popular mobile application development framework to build cross-platform apps that can run across various OS and devices with a native-like experience. InheritX Solutions has an in-house team of dedicated PhoneGap developers for hire. We assist you to get top-notch hybrid business apps that can flawlessly run across web and mobile domains.",
         "When you hire PhoneGap developers, they will build customized and dynamic mobile apps using HTML5 stack and UI frameworks like jQuery Mobile, Ionic, and AngularJS. Our PhoneGap app supports platforms like iOS, Android, and Windows. We have PhoneGap developers for hire on contract to meet maintenance and support requirements."
       ],
       "we_offer": [
-        "At Inheritx, we are committed to providing user-friendly and native-like hybrid apps to various industry sectors. Our PhoneGap experts can leverage JavaScript programming to get access to various features of different OS and build customized app solutions. Our PhoneGap app development services are comprehensive."
+        "At InheritX, we are committed to providing user-friendly and native-like hybrid apps to various industry sectors. Our PhoneGap experts can leverage JavaScript programming to get access to various features of different OS and build customized app solutions. Our PhoneGap app development services are comprehensive."
       ],
       "hire_developers_model": [
         "Our engagement model to hire PhoneGap developers has many benefits like no hidden costs, higher flexibility, more scalability, and cost-effectiveness apart from exclusivity in developing your business app. We assist you to make your own team of any size to create out-of-the-box cross-platform applications using the PhoneGap platform. You can also hire PhoneGap programmers to modify your existing applications.",
@@ -442,7 +442,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire dedicated PhoneGap programmers to meet your project requirements effectively. Here is a brief introduction to our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": false,
       "our_services_icons": [
@@ -463,14 +463,14 @@ export class HireUsData {
       "heading_caption": "From Websites to Web Apps to E-Commerce-Laravel Has It All!",
       "content_heading": "Hire Dedicated Laravel",
       "content": [
-        "Laravel is recognized as one of the most expressive frameworks with excellent code foundation and robustness to build large, enterprise-grade web applications. You can hire Laravel programmers from Inheritx to leverage the benefits of this platform by having user-friendly and seamlessly performing web applications.",
-        "At Inheritx, we offer flexible engagement models to hire dedicated Laravel developers to get cost-effective web solutions. Our certified Laravel experts can develop an out-of-the-box solution to meet your diverse business needs effectively. We integrate its wonderful features into your web application and come up with engaging web applications in a short time."
+        "Laravel is recognized as one of the most expressive frameworks with excellent code foundation and robustness to build large, enterprise-grade web applications. You can hire Laravel programmers from InheritX to leverage the benefits of this platform by having user-friendly and seamlessly performing web applications.",
+        "At InheritX, we offer flexible engagement models to hire dedicated Laravel developers to get cost-effective web solutions. Our certified Laravel experts can develop an out-of-the-box solution to meet your diverse business needs effectively. We integrate its wonderful features into your web application and come up with engaging web applications in a short time."
       ],
       "we_offer": [
-        "We have developed some of the finest and highly useful web app solutions using Laravel. You can hire expert Laravel programmers from Inheritx and get the following services."
+        "We have developed some of the finest and highly useful web app solutions using Laravel. You can hire expert Laravel programmers from InheritX and get the following services."
       ],
       "hire_developers_model": [
-        "Our Laravel development services include all the aspects of technological advancements and the latest version of the Laravel platform to address complex requirements of modern business across various industry verticals. When you hire Laravel experts from Inheritx, you can remain assured of getting ideal web solutions.",
+        "Our Laravel development services include all the aspects of technological advancements and the latest version of the Laravel platform to address complex requirements of modern business across various industry verticals. When you hire Laravel experts from InheritX, you can remain assured of getting ideal web solutions.",
         "Our in-house team of Laravel programmers has vast experience in developing component modules and expertise in Laravel as well as PHP programming. We can easily handle web projects irrespective of their complexities. Our Laravel solutions are designed to save big on maintenance costs and we make it certain that you get customized solutions rapidly."
       ],
       "hire_fullstack_developers": [
@@ -480,7 +480,7 @@ export class HireUsData {
         "Flexibility and cost-effectiveness make our hiring models the most lucrative for modern businesses. As a reliable outsourcing partner, we enable you to hire dedicated Laravel developers to meet your project requirements effectively. Here is a brief introduction to our engagement models."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
@@ -502,14 +502,14 @@ export class HireUsData {
       "content_heading": "Hire React Native",
       "content": [
         "As an open-source mobile app development framework, React Native is developed and supported by Facebook. It is one of the most popular cross-platform app platforms across the world for developing native-like applications for Android, web, and iOS. Since the release in 2015, React Native has contributed to building many complex apps that are almost identical to native apps. We provide the best-in-class React Native app development services in India.",
-        "At Inheritx Solutions, we are early adopters of React Native development. We have delivered many app projects using this framework. You can hire React Native developers from our in-house team of skilled and certified professionals. As a leading React Native app development company, we can build React Native apps for Android, iOS, and web platforms by keeping your business objectives in mind."
+        "At InheritX Solutions, we are early adopters of React Native development. We have delivered many app projects using this framework. You can hire React Native developers from our in-house team of skilled and certified professionals. As a leading React Native app development company, we can build React Native apps for Android, iOS, and web platforms by keeping your business objectives in mind."
       ],
       "we_offer": [
-        "Be it a startup, SME, or a large-scale company, we can handle any size of app projects. You can hire React Native developers from Inheritx for any of these services in a cost-efficient way."
+        "Be it a startup, SME, or a large-scale company, we can handle any size of app projects. You can hire React Native developers from InheritX for any of these services in a cost-efficient way."
       ],
       "hire_developers_model": [
         "We have experienced mobile app developers who remain updated with the advancements of the React Native platform to make feature-rich business apps. Our dedicated React Native developers assist you to come up with an enterprise-grade app with a reduced TTM (Time to Market).",
-        "When you hire React Native app developers from Inheritx Solutions, you can remain assured of the performance of your app and the confidentiality of the project. It is like your own team of developers out of your office."
+        "When you hire React Native app developers from InheritX Solutions, you can remain assured of the performance of your app and the confidentiality of the project. It is like your own team of developers out of your office."
       ],
       "hire_fullstack_developers": [
         "Reputed React Native Development Company"
@@ -518,7 +518,7 @@ export class HireUsData {
         "Our hiring models can save you time and money while offering you cutting-edge app solutions. You can get dedicated developers who can work closely with different departments of your organization to build custom React Native mobile apps. Our tailored apps can easily meet diverse requirements of different industry sectors including BFSI, retail, healthcare, and manufacturing."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
@@ -542,14 +542,14 @@ export class HireUsData {
       "content_heading": "Hire Dedicated Flutter",
       "content": [
         "Flutter has one of the fastest-growing communities of active developers. Google Fuchsia-friendly app development is a major advantage of this open-source UI SDK (Software Development Kit). Elegant and natively compiled apps for various mobile and web-based platforms are created through Flutter using a single code base. You can hire Flutter developers to get a cross-platform business app that can seamlessly run across any online platform.",
-        "Inheritx Solutions provides end-to-end Flutter app development services in India and the USA. We have flexible engagement models to let you hire dedicated Flutter developers. We have delivered Flutter app solutions to small, mid-size, and large enterprises across different industry verticals including manufacturing, retail, and utility. We have an in-house team of enthusiastic, certified Flutter developers who are willing to help businesses of different sizes to grow through user-friendly native-like apps."
+        "InheritX Solutions provides end-to-end Flutter app development services in India and the USA. We have flexible engagement models to let you hire dedicated Flutter developers. We have delivered Flutter app solutions to small, mid-size, and large enterprises across different industry verticals including manufacturing, retail, and utility. We have an in-house team of enthusiastic, certified Flutter developers who are willing to help businesses of different sizes to grow through user-friendly native-like apps."
       ],
       "we_offer": [
         "You can hire Flutter application developers on an hourly or monthly basis. We also provide a facility to hire Flutter developers for a part-time basis. You can easily increase or reduce the size of the team of developers in line with your project needs. Here are the key services we offer."
       ],
       "hire_developers_model": [
-        "Since inception, Inheritx Solutions has gained fame for delivering high-quality mobile app and web solutions on time. We have a dedicated team of app developers who can focus on developing customized Flutter apps to address the complex needs of your business. You can hire Flutter app developers in a flexible and cost-effective manner for your app project.",
-        "As an emerging Flutter app development services provider in India, Inheritx takes pride in offering 360-degree solutions for all your cross-platform app development requirements. We provide consultancy and technical assistance to switch your existing app to Flutter and enable your company to come up with a flawless app that can run across different platforms with ease."
+        "Since inception, InheritX Solutions has gained fame for delivering high-quality mobile app and web solutions on time. We have a dedicated team of app developers who can focus on developing customized Flutter apps to address the complex needs of your business. You can hire Flutter app developers in a flexible and cost-effective manner for your app project.",
+        "As an emerging Flutter app development services provider in India, InheritX takes pride in offering 360-degree solutions for all your cross-platform app development requirements. We provide consultancy and technical assistance to switch your existing app to Flutter and enable your company to come up with a flawless app that can run across different platforms with ease."
       ],
       "hire_fullstack_developers": [
         "Leading Flutter App Development Company"
@@ -558,18 +558,18 @@ export class HireUsData {
         "Our engagement models to hire Flutter app developers are designed to maintain a subtle balance between business needs and budgetary constraints. From healthcare to manufacturing and retail to BFSI—our hiring models are capable of accomplishing any size projects across all the sectors."
       ],
       "tools_we_use": [
-        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at Inheritx. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
+        "For effective and real-time communication, we use reliable and advanced tools. You can readily communicate and collaborate with your team of developers here at InheritX. Be it requirement-related discussions or daily reporting of your project, you can stay in touch with developers anytime."
       ],
       "hireResourceServiceContent": true,
       "our_services_icons": [
-        { imageTitle: "Cross-platform App Development using Flutter", content: "Inheritx offers the best cross-platform app development services in town by using the latest Flutter technology with powerful features. Our dedicated team of developers build robust and scalable apps which can be used on various platforms smoothly and seamlessly." },
-        { imageTitle: "Widget Customization and Development", content: "We, at Inheritx, provide widget customization and development services for your existing apps to keep them up-to-date and to add new interesting features. Use our excellent widget customization services to make your applications engaging and customer-based with our top developers." },
-        { imageTitle: "Mobile APIs Development using Flutter", content: "Inheritx leverages the easy-to-use and reliable Flutter framework to build fast and secure mobile apps implemented with RESTful Web services. Our developers are experts in building high-quality Android and iOS-based apps with the open-source Flutter framework." },
-        { imageTitle: "Flutter Consulting and Support", content: "Along with our excellent web application development services, Inheritx also provides consulting and support services to help you plan for your business. Our Flutter consulting and support services make your application development process hassle-free and unique and help you gain that competitive edge." },
+        { imageTitle: "Cross-platform App Development using Flutter", content: "InheritX offers the best cross-platform app development services in town by using the latest Flutter technology with powerful features. Our dedicated team of developers build robust and scalable apps which can be used on various platforms smoothly and seamlessly." },
+        { imageTitle: "Widget Customization and Development", content: "We, at InheritX, provide widget customization and development services for your existing apps to keep them up-to-date and to add new interesting features. Use our excellent widget customization services to make your applications engaging and customer-based with our top developers." },
+        { imageTitle: "Mobile APIs Development using Flutter", content: "InheritX leverages the easy-to-use and reliable Flutter framework to build fast and secure mobile apps implemented with RESTful Web services. Our developers are experts in building high-quality Android and iOS-based apps with the open-source Flutter framework." },
+        { imageTitle: "Flutter Consulting and Support", content: "Along with our excellent web application development services, InheritX also provides consulting and support services to help you plan for your business. Our Flutter consulting and support services make your application development process hassle-free and unique and help you gain that competitive edge." },
         { imageTitle: "Android App Development", content: "Our top-rated team of developers have experience with using the open-source Flutter framework to build high-performance and robust Android applications. Widen your customer reach with our interactive and scalable solutions for the Android platform and take your business to the next level.  " },
         { imageTitle: "Fuchsia-supported App Development", content: "InheirtX offers Fuchsia-supported app development services to help you gain access to the latest technologies and keep your business up-to-date. Our developers leverage Googles latest Fuchsia operating system and build apps that work seamlessly with it." },
-        { imageTitle: "iOS App Development", content: "We, at Inheritx, also offer iOS app development services to help you reach all possible customers across diverse platforms. Our developers are well versed in building engaging and customer-based applications for iOS-based devices using the latest Flutter technology." },
-        { imageTitle: "Flutter App Maintenance ", content: "In addition to developing exceptional cross-platform applications, Inheritx also provides maintenance services for all our apps to keep your applications working smoothly and seamlessly. We offer regular updates and maintenance to ensure bug-free and up-to-date applications." }
+        { imageTitle: "iOS App Development", content: "We, at InheritX, also offer iOS app development services to help you reach all possible customers across diverse platforms. Our developers are well versed in building engaging and customer-based applications for iOS-based devices using the latest Flutter technology." },
+        { imageTitle: "Flutter App Maintenance ", content: "In addition to developing exceptional cross-platform applications, InheritX also provides maintenance services for all our apps to keep your applications working smoothly and seamlessly. We offer regular updates and maintenance to ensure bug-free and up-to-date applications." }
       ]
     }
   ]
@@ -585,7 +585,7 @@ export class HireUsData {
         "In a market saturated with iPhones, iPads, and other iOS wearable devices, now is the correct time to hire iPhone developers. The iOS technology is on a rapid rise. Why would we be left behind!"
       ],
       "we_offer": [
-        "Hire iPhone application developer from Inheritx solutions to meet your diverse and ever-changing business needs. We offer end-to-end iPhone app development services."
+        "Hire iPhone application developer from InheritX Solutions to meet your diverse and ever-changing business needs. We offer end-to-end iPhone app development services."
       ],
       "hire_developers_model": [
         "Our hire iPhone Developer business model is a much sought-after one because it serves a selected group of businesses efficiently and more cost-effectively than some of our larger business models. Here's how it works...",

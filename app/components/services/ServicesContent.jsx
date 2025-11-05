@@ -62,7 +62,7 @@ export default function ServicesContent() {
                 <div className='right'>
                   <div className='heading-section mb-45'>
                     <div className='sub-title body-2 fw-7 mb-17'>
-                      We Are<span className='text-primary'>&nbsp;Inheritx&nbsp;</span>
+                      We Are<span className='text-primary'>&nbsp;InheritX&nbsp;</span>
                       Solutions
                     </div>
                     <h3 className='title fw-6'>
@@ -164,7 +164,7 @@ export default function ServicesContent() {
                 </div>
 
                 <div className='desc lh-30 mb-2'>
-                  Since its inception, Inheritx Solutions has delivered seamlessly performing websites that meet our clients’ corporate needs efficiently. We craft excellent and elegant websites in all major frameworks. Delve in to know more.
+                  Since its inception, InheritX Solutions has delivered seamlessly performing websites that meet our clients’ corporate needs efficiently. We craft excellent and elegant websites in all major frameworks. Delve in to know more.
                 </div>
               </div>
 
@@ -344,7 +344,7 @@ export default function ServicesContent() {
                       <div className='according-content'>
                         <div className='right'>
                           <div className='desc mb-2'>
-                            Since its inception, Inheritx Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
+                            Since its inception, InheritX Solutions has set many milestones by offering quality IT solutions and services that are capable of bringing disruptive changes to the corporate world.
                           </div>
                           <div className='desc mb-2'>
                             We strive to offer superior-quality solutions that clients prefer for their customers, employees feel pride in, customers appreciate, and investors choose for long-term returns.
@@ -388,7 +388,7 @@ export default function ServicesContent() {
                         data-bs-toggle='collapse'
                         className='title-according collapsed'
                       >
-                        Why Choose Inheritx?<span></span>
+                        Why Choose InheritX?<span></span>
                       </a>
                     </h5>
                     <div
@@ -399,7 +399,7 @@ export default function ServicesContent() {
                       <div className='according-content'>
                         <div className='right'>
                           <div className='desc lh-30 mb-2'>
-                            Inheritx Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
+                          InheritX Solutions is a leading tablet app development company in India and the USA, specializing in iPad and Android tablet apps. We deliver customized, cost-effective solutions that enhance business value, boost ROI, and meet complex requirements. With on-time delivery and excellent performance, our expert iPad developers build scalable apps for diverse industries.
                           </div>
                         </div>
                       </div>
@@ -423,7 +423,7 @@ export default function ServicesContent() {
                       <div className='according-content'>
                         <div className='right'>
                           <div className='desc lh-30 mb-2'>
-                            Inheritx Solutions has an in-house team of experienced developers who can handle projects of any size in the domains of web, mobile apps, and IoT.
+                            InheritX Solutions has an in-house team of experienced developers who can handle projects of any size in the domains of web, mobile apps, and IoT.
                           </div>
                         </div>
                       </div>

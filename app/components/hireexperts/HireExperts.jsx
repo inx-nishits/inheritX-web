@@ -109,7 +109,7 @@ export default function HireExpertContent() {
                         designed to meet this issue effectively.
                       </p>
                       <p className='mb-4'>
-                        Since inception in 2011, Inheritx Solutions has
+                        Since inception in 2011, InheritX Solutions has
                         supported many SMEs and startups as a technology
                         partner. We have provided the best resources to our
                         global clientele to accomplish their web and app

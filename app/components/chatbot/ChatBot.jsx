@@ -23,7 +23,7 @@ const mainMenuOptions = [
     id: 3,
     category: 'apply-job',
     text: 'Apply for Job',
-    message: 'I want to apply for a job at Inheritx',
+    message: 'I want to apply for a job at InheritX',
     icon: '💼'
   }
 ]
@@ -408,7 +408,7 @@ export default function ChatBot() {
     if (chatStage === 'main-menu') return `Hi ${formData.name}!`
     if (chatStage === 'details-form') return 'Tell us more'
     if (chatStage === 'success') return 'Thank You!'
-    return 'Inheritx Chat'
+    return 'InheritX Chat'
   }
 
   return (
@@ -453,7 +453,7 @@ export default function ChatBot() {
                   <MessageCircle size={24} />
                 </div>
                 <div className='chat-header-text'>
-                  <h3>Inheritx AI Assistant</h3>
+                  <h3>InheritX AI Assistant</h3>
                   <span className='chat-status'>
                     <span className='status-dot'></span>
                     Online
@@ -496,13 +496,13 @@ export default function ChatBot() {
                   <div className='greeting-icon'>
                     <img 
                       src='/image/logo/inx-icon.png' 
-                      alt='Inheritx Logo' 
+                      alt='InheritX Logo' 
                       className='logo-image'
                     />
                   </div>
                   <h2 className='greeting-title'>👋 Hi there!</h2>
                   <p className='greeting-message'>
-                    Welcome to <strong>Inheritx Solutions</strong>!
+                    Welcome to <strong>InheritX Solutions</strong>!
                     <br />
                     We've built <strong>850+ mobile and web apps</strong> with AI expertise.
                   </p>
