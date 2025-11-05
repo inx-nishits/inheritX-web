@@ -1080,7 +1080,7 @@ export default function BlogListPage() {
                                         setSubmitting(false);
                                     }
                                 }}>
-                                    <div className={`form-group d-flex justify-content-center ${emailError ? 'align-items-start' : 'align-items-center'}`}>
+                                    <div className={`form-group d-flex justify-content-center ${emailError ? 'align-items-center' : 'align-items-center'}`}>
                                         <div className="input-wrapper">
                                             <input
                                                 type="email"
