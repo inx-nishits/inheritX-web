@@ -302,14 +302,21 @@ async function sendEmail(transporter, data) {
     return false
   }
 
+  // Determine recipient based on category
+  // - apply-job -> careers@inheritx.com
+  // - hire-team/new project/others -> contact@inheritx.com
+  const toAddress = data.category === 'apply-job'
+    ? 'careers@inheritx.com'
+    : 'contact@inheritx.com'
+
   const mailOptions = {
     from: `"InheritX Chatbot" <${process.env.MAIL_USER}>`,
-    to: process.env.MAIL_TO || 'nishit.s@inheritx.com',
+    to: toAddress,
     subject: `New Chat Submission — ${data.selectedService || data.category}`,
     html: generateEmailHTML(data),
     replyTo: data.email
   }
-
+console.log(mailOptions,'mailOptions')
   // Add resume attachment if present
   if (data.resume) {
     try {
