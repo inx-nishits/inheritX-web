@@ -472,7 +472,7 @@ export default function HomeContent() {
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
               <div className='left rounded-4 overflow-hidden'>
-                <div className='image tf-animate-1 rounded-4 overflow-hidden' style={{ minHeight: '550px' }}>
+                <div className={`image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
                   <Image
                     src='/image/page-title/company-2.jpg'
                     alt=''
@@ -482,7 +482,7 @@ export default function HomeContent() {
                   />
                 </div>
 
-                <div className='box-avatar tf-animate-3'>
+                <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
                   <div className='text relative'>
                     <p className='fs-20 fw-6'>
                       600+ Trusted
@@ -609,7 +609,7 @@ export default function HomeContent() {
                 <Accordion />
               </div>
               <div className='right-section w-100'>
-                <div className='position-relative image image-section tf-animate-1 rounded-4 overflow-hidden minwidth accordion-section-image'>
+                <div className={`position-relative image image-section rounded-4 overflow-hidden minwidth accordion-section-image ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/page-title/presentationPm.jpg'
                     alt=''
@@ -1169,7 +1169,7 @@ export default function HomeContent() {
             <div className='col-lg-6 mb-5 mb-lg-0'>
               <div className='w-100 h-100 rounded-4 overflow-hidden position-relative'>
 
-                <div className='position-relative rounded-4 overflow-hidden image tf-animate-1' style={{ minHeight: '550px' }}>
+                <div className={`position-relative rounded-4 overflow-hidden image ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
                   <Image
                     src='/image/page-title/image-9.jpg'
                     alt=''
@@ -1178,7 +1178,7 @@ export default function HomeContent() {
                   />
                 </div>
 
-                <div className='section-content section-form-content tf-animate-2'>
+                <div className={`section-content section-form-content ${!isMobile ? 'tf-animate-2' : ''}`}>
                   <div className='sub-title body-2 fw-7 mb-3'>Work Inquiry</div>
                   <h2 className='title fw-6 mb-3'>
                     Let's work on your next projects.

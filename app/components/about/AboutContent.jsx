@@ -13,6 +13,7 @@ export default function AboutContent() {
   const journeyHeadingRef = useRef(null)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const galleryVersion = '2'
 
   const galleryImages = [
@@ -33,6 +34,15 @@ export default function AboutContent() {
     '/image/image-gallery/gallery-15.jpg'
   ]
   const gridImages = galleryImages.slice(0, 8)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mql = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener?.('change', update);
+    return () => mql.removeEventListener?.('change', update);
+  }, []);
 
   useEffect(() => {
     const container = journeyRef.current
@@ -120,7 +130,7 @@ export default function AboutContent() {
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
               <div className='left'>
-                <div className='position-relative image tf-animate-1 rounded-4 overflow-hidden'>
+                <div className={`position-relative image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/home/join-our-team.jpeg'
                     alt='Counting section'
@@ -462,7 +472,7 @@ export default function AboutContent() {
                 <Accordion />
               </div>
               <div className='right-section w-100'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image'>
+                <div className={`image image-section rounded-4 overflow-hidden position-relative accordion-section-image ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/page-title/company-1.jpg'
                     alt=''

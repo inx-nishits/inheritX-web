@@ -1,10 +1,23 @@
+'use client'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 import { servicesData } from './servicesData'
 import Breadcrumbs from '../Breadcrumbs'
 import Image from 'next/image'
 import OurPlatforms from '../OurPlatforms'
 
 export default function ServicesContent() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mql = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener?.('change', update);
+    return () => mql.removeEventListener?.('change', update);
+  }, []);
+
   return (
     <>
       <div className='page-title'>
@@ -47,7 +60,7 @@ export default function ServicesContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-lg-6 mb-5'>
-                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '300px' }}>
+                <div className={`h-100 position-relative rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-2' : ''}`} style={{ minHeight: '300px' }}>
                   <Image
                     src='/image/page-title/image-12.jpg'
                     alt=''
@@ -432,7 +445,7 @@ export default function ServicesContent() {
                 </div>
               </div>
               <div className='right-section w-100'>
-                <div className='image image-section tf-animate-1 rounded-4 overflow-hidden position-relative accordion-section-image'>
+                <div className={`image image-section rounded-4 overflow-hidden position-relative accordion-section-image ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/page-title/image-7.jpg'
                     alt=''

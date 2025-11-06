@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import OurPlatforms from "../OurPlatforms";
 
 // Mapping platform titles to service categories
@@ -22,6 +24,17 @@ const platformServiceMapping = {
 };
 
 export default function HireExpertContent() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mql = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener?.('change', update);
+    return () => mql.removeEventListener?.('change', update);
+  }, []);
+
   return (
     <>
       <div className='page-title'>
@@ -75,7 +88,7 @@ export default function HireExpertContent() {
           <div className='tf-container'>
             <div className='row'>
               <div className='col-lg-6 mb-5'>
-                <div className='h-100 tf-animate-2 position-relative rounded-4 overflow-hidden' style={{ minHeight: '400px' }}>
+                <div className={`h-100 position-relative rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-2' : ''}`} style={{ minHeight: '400px' }}>
                   <Image
                     src='/image/page-title/image-6.jpg'
                     alt=''

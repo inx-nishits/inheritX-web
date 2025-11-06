@@ -39,6 +39,7 @@ export default function JoinOurTeam() {
   const [emailError, setEmailError] = useState('')
   const [phoneValue, setPhoneValue] = useState('')
   const [phoneError, setPhoneError] = useState('')
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     let isMounted = true
@@ -350,6 +351,15 @@ export default function JoinOurTeam() {
       window.removeEventListener('popstate', handlePopState)
     }
   }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mql = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener?.('change', update);
+    return () => mql.removeEventListener?.('change', update);
+  }, []);
 
   // Handle viewport changes to prevent zoom on mobile when modal opens/closes
   useEffect(() => {
@@ -727,7 +737,7 @@ export default function JoinOurTeam() {
           <div className='tf-container w-1810'>
             <div className='section-counting-inner flex'>
               <div className='left'>
-                <div className='image tf-animate-1 rounded-4 overflow-hidden'>
+                <div className={`image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/home/join-our-team.jpeg'
                     alt='Join Our Team'
@@ -738,7 +748,7 @@ export default function JoinOurTeam() {
                   />
                 </div>
                 
-                <div className='box-avatar tf-animate-3'>
+                <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
                   <div className='text'>
                     <p className='fs-20 fw-6'>
                       600+ Trusted
