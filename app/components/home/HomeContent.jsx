@@ -1,10 +1,9 @@
 'use client';
 import dynamic from 'next/dynamic'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import Link from 'next/link'
 import Image from 'next/image';
-import TypingAnimation from '../TypingAnimation';
 
 // Below-the-fold heavy sections split into separate chunks (no UI change)
 const Accordion = dynamic(() => import('../Accordion'))
@@ -12,12 +11,32 @@ const ContactForm = dynamic(() => import('../../components/ContactForm'), { ssr:
 const TestimonialSection = dynamic(() => import('../TestimonialSection'), { ssr: false, loading: () => null })
 const OurPartners = dynamic(() => import('../OurPartners'))
 const OurValuableClients = dynamic(() => import('../OurValuableClients'))
+// TypingAnimation only loads on desktop for better mobile performance
+const TypingAnimation = dynamic(() => import('../TypingAnimation'), { 
+  ssr: false,
+  loading: () => <span>Empowering the Future with Mobility & AI Innovation</span>
+})
 
 export default function HomeContent() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mql = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener?.('change', update);
+    return () => mql.removeEventListener?.('change', update);
+  }, []);
 
   useEffect(() => {
     const body = document.body;
     if (!body.classList.contains("counter-scroll")) return;
+    // Skip activating counters on mobile
+    if (typeof window !== 'undefined') {
+      const isMobileViewport = window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+      if (isMobileViewport) return;
+    }
 
     const elements = Array.from(document.querySelectorAll(".counter .number"));
     if (elements.length === 0) return;
@@ -102,18 +121,22 @@ export default function HomeContent() {
                   <span className='text-primary'>Go</span>&nbsp;Beyond Mobile. <span className='text-primary'>Go</span>&nbsp;Beyond Digital. <span className='text-primary'>Go</span>&nbsp;Smart.
                 </div>
                 <h2 className='title fw-6' style={{ lineHeight: "141%", minHeight: "2.5em" }}>
-                  <TypingAnimation
-                    text="Empowering the Future with Mobility & AI Innovation"
-                    speed={60}
-                    delay={800}
-                    className="hero-typing-text"
-                    showCursor={true}
-                    cursorBlinkSpeed={400}
-                    pauseOnSpaces={true}
-                    pauseDuration={200}
-                    variableSpeed={true}
-                    highlightWords={true}
-                  />
+                  {isMobile ? (
+                    <span>Empowering the Future with Mobility & AI Innovation</span>
+                  ) : (
+                    <TypingAnimation
+                      text="Empowering the Future with Mobility & AI Innovation"
+                      speed={60}
+                      delay={800}
+                      className="hero-typing-text"
+                      showCursor={true}
+                      cursorBlinkSpeed={400}
+                      pauseOnSpaces={true}
+                      pauseDuration={200}
+                      variableSpeed={true}
+                      highlightWords={true}
+                    />
+                  )}
                 </h2>
               </div>
 
@@ -131,7 +154,10 @@ export default function HomeContent() {
               </div>
             </div>
             <div className='col-xl-6'>
-              <div className='hero-image-container image tf-animate-1 position-relative' style={{ minHeight: '450px', aspectRatio: '16 / 9', width: '100%' }}>
+              <div
+                className={`hero-image-container image position-relative ${!isMobile ? 'tf-animate-1' : ''}`}
+                style={{ minHeight: '450px', aspectRatio: '16 / 9', width: '100%' }}
+              >
                 <Image
                   src='/image/page-title/herobanner-final.jpg'
                   alt='Hero banner showcasing InheritX Solutions'
@@ -148,6 +174,7 @@ export default function HomeContent() {
       </div>
 
 
+      {!isMobile && (
       <div className='tf-container tf-spacing-2'>
         {/* Counter Section Title */}
         <div className='row mb-5 mb-lg-5 pb-lg-5'>
@@ -285,6 +312,7 @@ export default function HomeContent() {
           </div>
         </div>
       </div>
+      )}
 
       {/* <!-- /.page-title --> */}
 
@@ -411,6 +439,7 @@ export default function HomeContent() {
           </div>
         </section>
 
+        {!isMobile && (
         <section className='section-counting tf-spacing-2'>
           <div className='mask mask-1'>
             <svg
@@ -562,6 +591,7 @@ export default function HomeContent() {
             </div>
           </div>
         </section>
+        )}
 
         <section className='section-company tf-spacing-3'>
           <div className='tf-container w-1810'>

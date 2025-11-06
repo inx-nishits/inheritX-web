@@ -10,6 +10,9 @@ export const useCounterFix = () => {
     const initializeCounters = () => {
       // Check if we're in the browser
       if (typeof window === 'undefined') return;
+      // Disable counters on mobile to improve performance
+      const isMobileViewport = window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+      if (isMobileViewport) return;
 
       // Clear existing observers
       observersRef.current.forEach(observer => observer.disconnect());

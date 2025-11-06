@@ -452,15 +452,15 @@ export default function Footer() {
             >
               <i className='icon-arrow-up'></i>
             </a>
-            <div className='list-bottom flex align-items-center justify-content-between flex-wrap rg-15 g-30'>
+            <div className='list-bottom flex align-items-center justify-content-center flex-wrap rg-15 g-30 pt-5'>
               <span className='text-center lh-30'>
                 © 2025
                 <Link href='/' className='fw-7'>
                   &nbsp;Inheritx&nbsp;
                 </Link>
-                - IT Services. All&nbsp;rights&nbsp;reserved.
+                - IT Services.<br className='d-block d-md-none' />&nbsp;All&nbsp;rights&nbsp;reserved.
               </span>
-              <ul className='d-none d-lg-flex align-items-center justify-content-center flex-wrap rg-15'>
+              <ul className='d-none align-items-center justify-content-center flex-wrap rg-15'>
                 <li>
                   <Link href='/'>Home</Link>
                 </li>

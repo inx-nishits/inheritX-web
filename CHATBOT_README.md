@@ -370,60 +370,18 @@ Submissions are stored in `submissions.json`:
 
 ### Email Not Sending
 
-**Issue:** Email not received (works locally but not in production)
-
-**Common Causes:**
-1. ❌ **Environment variables not set in production** (most common)
-2. ❌ Using regular Gmail password instead of App Password
-3. ❌ Gmail blocking connection from production server
-4. ❌ Network/firewall restrictions
+**Issue:** Email not received
 
 **Solutions:**
-
-#### For Local Development:
 1. Check `MAIL_USER` and `MAIL_PASS` in `.env.local`
 2. Ensure you're using **App Password**, not regular password
 3. Enable "Less secure app access" in Gmail (if needed)
 4. Check spam folder
 5. Look at terminal logs for error messages
 
-#### For Production (Vercel/Netlify/Other):
-1. **Set Environment Variables in hosting platform:**
-   - Go to your hosting platform's dashboard
-   - Navigate to Settings → Environment Variables
-   - Add these variables:
-     ```
-     MAIL_USER=your-email@gmail.com
-     MAIL_PASS=your-16-char-app-password
-     MAIL_TO=nishit.s@inheritx.com
-     ```
-   - **Important:** Redeploy after adding environment variables
-
-2. **Verify Gmail App Password:**
-   - Go to: https://myaccount.google.com/security
-   - Enable 2-Step Verification
-   - Generate App Password for "Mail"
-   - Use the 16-character password (not your regular password)
-
-3. **Check Production Logs:**
-   - View server logs in your hosting platform
-   - Look for: `⚠️ Email credentials not configured` (missing env vars)
-   - Look for: `❌ Email sending failed` (authentication/connection issue)
-   - Check for specific error codes: `EAUTH` (auth failed), `ECONNECTION` (network issue)
-
-4. **Test Email in Production:**
-   - Visit: `https://your-domain.com/api/chatbot/debug-email`
-   - Should return: `{"success": true, "verifyOk": true}`
-   - If error, check the response for details
-
-**Debug Endpoints:**
-- `/api/chatbot/debug-email` - Check email configuration
-- `/api/chatbot/test-email` - Send test email
-- Check browser console Network tab when submitting form
-
 **Test email configuration:**
 ```bash
-# Check terminal/server logs when submitting form
+# Check terminal output when submitting form
 # Should see: ✅ Email sent: <message-id>
 # If error: ❌ Email sending failed: [error details]
 ```
