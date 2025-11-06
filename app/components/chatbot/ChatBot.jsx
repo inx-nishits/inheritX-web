@@ -561,7 +561,7 @@ export default function ChatBot() {
   return (
     <>
       {/* Chat Widget */}
-      <div className={`chat-widget ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
+      <div className={`chat-widget d-none ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
         {/* Minimized Bar */}
         {isOpen && isMinimized && (
           <div className='chat-minimized-bar' onClick={handleMaximize}>
@@ -649,12 +649,10 @@ export default function ChatBot() {
                   </div>
                   <h2 className='greeting-title'>Welcome to InheritX!</h2>
                   <p className='greeting-message'>
-                    <strong>850+ Apps Built.</strong> Trusted by Global Brands.
-                    <br />
-                    AI-Powered Solutions. Expert Developers. Proven Results.
+                    Your trusted partner in <strong>Web, Mobile & AI Solutions</strong>
                   </p>
                   <p className='greeting-tagline'>
-                    🚀 Let's Build Something Amazing Together
+                    Let's bring your ideas to life
                   </p>
                   <button onClick={handleStartChat} className='start-chat-btn'>
                     <MessageCircle size={20} />
@@ -1077,17 +1075,23 @@ export default function ChatBot() {
           </div>
         )}
 
-        {/* Floating Button */}
-        {!isOpen && (
-          <button
-            onClick={() => setIsOpen(true)}
-            className='chat-toggle-btn'
-            aria-label='Open chat'
-          >
-            <MessageCircle size={28} />
-            <span className='chat-notification-badge'>1</span>
-          </button>
-        )}
+        {/* Floating Button - Converts to Close Button when Open */}
+        <button
+          onClick={() => {
+            if (isOpen) {
+              handleClose()
+            } else {
+              setIsOpen(true)
+              setIsMinimized(false)
+            }
+          }}
+          className={`chat-toggle-btn ${isOpen ? 'chat-open' : ''}`}
+          aria-label={isOpen ? 'Close chat' : 'Open chat'}
+          title={isOpen ? 'Close chat' : 'Open chat'}
+        >
+          {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
+          {!isOpen && <span className='chat-notification-badge'>1</span>}
+        </button>
       </div>
     </>
   )

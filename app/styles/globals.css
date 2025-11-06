@@ -555,7 +555,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 /* Chat Widget Container */
 .chat-widget {
   position: fixed;
-  bottom: 100px;
+  bottom: 40px;
   right: 20px;
   z-index: 9999;
   font-family: 'Poppins', sans-serif;
@@ -563,7 +563,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 
 @media (max-height: 700px) {
   .chat-widget {
-    bottom: 100px;
+    bottom: 40px;
   }
   
   .chat-window {
@@ -584,7 +584,10 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
   flex-direction: column;
   overflow: hidden;
   animation: slideUp 0.3s ease-out;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 80px;
 }
 
 @keyframes slideUp {
@@ -688,6 +691,12 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
   transform: scale(1.05);
 }
 
+/* Close button - make it more prominent */
+.chat-header-actions button:last-child.chat-action-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+  transform: scale(1.1);
+}
+
 /* Greeting Stage */
 .chat-greeting {
   flex: 1;
@@ -722,11 +731,19 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 .greeting-content {
   text-align: center;
   max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .greeting-icon {
-  width: 74px;
-  height: 74px;
+  width: 48px;
+  height: 48px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -734,34 +751,53 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
   margin: 0 auto 24px;
   padding: 5px;
   animation: float 3s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 .logo-image {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .greeting-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 16px;
-  line-height: 1.2;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .greeting-message {
   font-size: 15px;
   color: #4b5563;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  line-height: 1.7;
+  margin: 0 0 12px 0;
+  text-align: center;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+  display: block;
 }
 
 .greeting-tagline {
   font-size: 13px;
   color: #6b7280;
   font-style: italic;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .start-chat-btn {
@@ -775,11 +811,15 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 197, 222, 0.25);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin: 0 auto;
+  width: auto;
+  min-width: 160px;
 }
 
 .start-chat-btn:hover {
@@ -1883,8 +1923,11 @@ textarea.form-input {
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(0, 197, 222, 0.4);
   transition: all 0.3s ease;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   animation: float 3s ease-in-out infinite;
+  z-index: 10;
 }
 
 @keyframes float {
@@ -1896,9 +1939,14 @@ textarea.form-input {
   }
 }
 
-.chat-toggle-btn:hover {
-  transform: scale(1.1);
+.chat-toggle-btn:not(.chat-open):hover {
+  animation: none;
+  transform: scale(1.1) translateY(-2px);
   box-shadow: 0 12px 32px rgba(0, 197, 222, 0.5);
+}
+
+.chat-toggle-btn.chat-open {
+  animation: float 3s ease-in-out infinite;
 }
 
 /* Chat Notification Badge */
@@ -1951,6 +1999,10 @@ textarea.form-input {
   justify-content: space-between;
   padding: 16px 20px;
   color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 80px;
 }
 
 .chat-minimized-bar:hover {
@@ -2022,9 +2074,37 @@ textarea.form-input {
   transform: scale(1.05);
 }
 
-/* Hide floating button when chat is minimized */
+/* Floating button when chat is open - converts to close button */
+.chat-toggle-btn.chat-open {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+}
+
+.chat-toggle-btn.chat-open:hover {
+  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 197, 222, 0.5);
+}
+
+/* Hide floating button when chat is open on mobile fullscreen */
+@media (max-width: 480px) {
+  .chat-widget.open .chat-toggle-btn.chat-open {
+    display: none;
+  }
+  
+  .chat-widget.open .chat-toggle-btn {
+    display: none;
+  }
+}
+
+/* Keep floating button visible even when chat is minimized */
 .chat-widget.minimized .chat-toggle-btn {
-  display: none;
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
 }
 
 /* Responsive Design */
@@ -2147,12 +2227,15 @@ textarea.form-input {
     height: 100vh;
     max-height: 100vh;
     border-radius: 0;
+    margin-bottom: 0;
   }
 
   .chat-minimized-bar {
     width: calc(100vw - 32px);
     margin: 0 16px;
     border-radius: 12px;
+    bottom: 24px;
+    position: fixed;
   }
 
   .minimized-bar-icon {
@@ -2194,7 +2277,7 @@ textarea.form-input {
   .chat-toggle-btn {
     width: 56px;
     height: 56px;
-    bottom: 85px;
+    bottom: 30px;
     right: 16px;
     position: fixed;
   }
@@ -2505,7 +2588,7 @@ textarea.form-input {
   }
 
   .greeting-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .main-menu-btn {
@@ -2651,5 +2734,59 @@ textarea.form-input {
 
   .chat-success {
     padding: 20px 16px;
+  }
+}
+
+/* ===============================================
+   Portfolio Mobile Animation Optimizations
+   =============================================== */
+
+/* Disable complex animations and parallax on mobile/tablet for smooth performance */
+@media (max-width: 1024px) {
+  /* Portfolio/Project grid items - disable hover transforms on mobile */
+  .project-item.project-gird-item .image::after {
+    transition: none !important;
+  }
+  
+  .project-item.project-gird-item:hover .image::after {
+    height: 0% !important;
+  }
+  
+  /* Disable complex CSS transforms on mobile */
+  .project-item .image img {
+    transform: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+  
+  .project-item:hover .image img {
+    transform: none !important;
+  }
+  
+  /* Optimize will-change property for mobile */
+  .project-item .image,
+  .project-item .image img {
+    will-change: auto !important;
+  }
+  
+  /* Reduce animation complexity */
+  .project-item:hover .title-project a::before {
+    transition: width 0.2s ease !important;
+  }
+}
+
+/* Additional optimizations for very small screens */
+@media (max-width: 768px) {
+  /* Force GPU acceleration off for better performance on low-end devices */
+  .project-item,
+  .project-item .image,
+  .project-item .image img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Disable all hover effects on touch devices */
+  .project-item.project-gird-item .image::after {
+    display: none !important;
   }
 }

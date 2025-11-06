@@ -1,0 +1,46 @@
+# ==================================================================
+# COPY THIS ENTIRE FILE INTO .env.local (in project root)
+# ==================================================================
+
+# ===================================
+# MAIL CONFIGURATION (Gmail SMTP)
+# ===================================
+# Step 1: Replace with your Gmail address
+MAIL_USER=your-email@gmail.com
+
+# Step 2: Generate Gmail App Password
+# - Go to: https://myaccount.google.com/security
+# - Enable 2-Step Verification
+# - Click "App passwords"
+# - Generate password for "Mail"
+# - Paste the 16-character password below
+MAIL_PASS=xxxx-xxxx-xxxx-xxxx
+
+# Step 3: Email recipient (leave as is or change)
+MAIL_TO=nishit.s@inheritx.com
+
+# ===================================
+# ADMIN LOGIN CREDENTIALS
+# ===================================
+# Change these for production!
+ADMIN_USER=admin
+ADMIN_PASS=1234
+
+# ===================================
+# SESSION SECRET
+# ===================================
+# Generate using: openssl rand -base64 32
+# Or use any random 32+ character string
+SESSION_SECRET=change-this-to-a-random-string-in-production
+
+# ===================================
+# APPLICATION SETTINGS
+# ===================================
+NODE_ENV=development
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+# ==================================================================
+# SAVE THIS FILE AS: .env.local (in project root directory)
+# NEVER commit this file to git!
+# ==================================================================
+

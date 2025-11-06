@@ -49,7 +49,7 @@ When users first open the chat, they see:
 >
 > Start having a chat with our AI Bot. Let us know what you're up to and connect with our team in a day."
 
-This matches the IndiaNIC website's greeting style.
+This matches the InheritX website's greeting style.
 
 ## Supported Topics
 
@@ -249,7 +249,7 @@ Possible improvements:
 
 ## Credits
 
-Inspired by the [IndiaNIC website](https://www.indianic.com/) chatbot design and functionality.
+Inspired by the [InheritX website](https://www.inheritx.com/) chatbot design and functionality.
 
 Built with:
 - Next.js 14

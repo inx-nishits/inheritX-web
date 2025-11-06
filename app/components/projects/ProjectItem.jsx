@@ -10,11 +10,33 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
   const cachedRectRef = useRef(null)
   const needsRectUpdateRef = useRef(true)
   const lastMouseEventRef = useRef(null)
+  const isMobileRef = useRef(false)
+  const scrollTimeoutRef = useRef(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollOffset, setScrollOffset] = useState({ y: 0, progress: 0 })
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
+    // Detect mobile/touch device and tablet (up to 1024px)
+    const detectMobile = () => {
+      return (
+        window.matchMedia('(max-width: 1024px)').matches ||
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      )
+    }
+    
+    isMobileRef.current = detectMobile()
+    
+    // On mobile/tablet, disable complex animations and parallax for better performance
+    if (isMobileRef.current) {
+      // Reset scroll offset to prevent any parallax effect
+      setScrollOffset({ y: 0, progress: 0 })
+      // Still allow smooth transitions but disable real-time transforms
+      return
+    }
+
     // Read DOM and update state within a single rAF loop to avoid layout thrash
     const animate = () => {
       if (!imageWrapperRef.current || !imageRef.current) {
@@ -47,7 +69,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
       }
 
       // Mouse movement easing using last event and cached rect (no reads here)
-      if (lastMouseEventRef.current && rect) {
+      if (lastMouseEventRef.current && rect && !isMobileRef.current) {
         const e = lastMouseEventRef.current
         const centerX = rect.left + rect.width / 2
         const centerY = rect.top + rect.height / 2
@@ -67,26 +89,46 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
       }
     }
     
-    // Scroll/resize handlers flag a rect update; actual read happens in rAF
+    // Scroll handler - disabled on mobile/tablet to prevent parallax
     const handleScroll = () => {
-      needsRectUpdateRef.current = true
+      if (isMobileRef.current) {
+        // On mobile/tablet, completely disable scroll-based parallax
+        // Do nothing - no scroll offset updates
+        return
+      } else {
+        needsRectUpdateRef.current = true
+      }
     }
+    
     const handleResize = () => {
-      needsRectUpdateRef.current = true
+      const wasMobile = isMobileRef.current
+      isMobileRef.current = detectMobile()
+      
+      // If switching to mobile/tablet, reset scroll offset to disable parallax
+      if (isMobileRef.current && !wasMobile) {
+        setScrollOffset({ y: 0, progress: 0 })
+        return
+      }
+      
+      if (!isMobileRef.current) {
+        needsRectUpdateRef.current = true
+      }
     }
 
-    // Mouse handlers
+    // Mouse handlers - only on desktop
     const handleMouseMove = (e) => {
-      if (!imageWrapperRef.current) return
+      if (!imageWrapperRef.current || isMobileRef.current) return
       lastMouseEventRef.current = e
     }
 
     const handleMouseEnter = () => {
+      if (isMobileRef.current) return
       setIsHovering(true)
       needsRectUpdateRef.current = true
     }
 
     const handleMouseLeave = () => {
+      if (isMobileRef.current) return
       setIsHovering(false)
       setMousePosition({ x: 0, y: 0 })
       lastMouseEventRef.current = null
@@ -96,8 +138,8 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
     
     // Initialize immediately and wait for refs to be ready
     const initParallax = () => {
-      if (wrapper && imageRef.current && !animationRunningRef.current) {
-        // Add event listeners
+      if (wrapper && imageRef.current && !animationRunningRef.current && !isMobileRef.current) {
+        // Add event listeners (desktop only)
         wrapper.addEventListener('mousemove', handleMouseMove, { passive: true })
         wrapper.addEventListener('mouseenter', handleMouseEnter)
         wrapper.addEventListener('mouseleave', handleMouseLeave)
@@ -129,6 +171,9 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
       if (timeoutId) {
         clearTimeout(timeoutId)
       }
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current)
+      }
       animationRunningRef.current = false
       
       if (frameRef.current) {
@@ -146,17 +191,21 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
     }
   }, [])
 
-  // Enhanced 3D transforms with better depth
-  const rotateX = mousePosition.y * 8 // Max 8 degrees tilt (more pronounced)
-  const rotateY = mousePosition.x * 8 // Max 8 degrees tilt
-  const translateX = mousePosition.x * 15 // Horizontal parallax
-  const translateY = scrollOffset.y + (mousePosition.y * 15) // Scroll + mouse parallax
-  const translateZ = isHovering ? 20 : 0 // Depth on hover
-  const scale = isHovering ? 1.03 : 1 // Scale on hover (reduced from 1.08)
+  // On mobile/tablet, disable complex transforms and parallax for smooth performance
+  const isMobile = isMobileRef.current
   
-  // Glow effect based on mouse position
-  const glowX = (mousePosition.x * 50) + 50 // 0-100%
-  const glowY = (mousePosition.y * 50) + 50 // 0-100%
+  // Enhanced 3D transforms with better depth (desktop only)
+  // No parallax on mobile/tablet - all scroll-based transforms disabled
+  // No scale on hover - images remain same size
+  const rotateX = isMobile ? 0 : mousePosition.y * 8 // Max 8 degrees tilt (more pronounced)
+  const rotateY = isMobile ? 0 : mousePosition.x * 8 // Max 8 degrees tilt
+  const translateX = isMobile ? 0 : mousePosition.x * 15 // Horizontal parallax
+  const translateY = isMobile ? 0 : (scrollOffset.y + (mousePosition.y * 15)) // Scroll parallax disabled on mobile/tablet
+  const translateZ = isMobile ? 0 : (isHovering ? 20 : 0) // Depth on hover
+  
+  // Glow effect based on mouse position (desktop only)
+  const glowX = isMobile ? 50 : ((mousePosition.x * 50) + 50) // 0-100%
+  const glowY = isMobile ? 50 : ((mousePosition.y * 50) + 50) // 0-100%
 
   return (
     <div className='project-card' style={{ '--stagger': index }}>
@@ -186,9 +235,15 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
               alt={item.title} 
               className='project-image'
               style={{
-                transform: `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) scale(${scale})`,
-                transition: isHovering ? 'none' : 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
-                filter: isHovering ? `brightness(1.1) contrast(1.05)` : 'brightness(1) contrast(1)'
+                transform: isMobile 
+                  ? 'none' 
+                  : `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px)`,
+                transition: isMobile 
+                  ? 'transform 0.3s ease, filter 0.3s ease' 
+                  : (isHovering ? 'none' : 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)'),
+                filter: isMobile 
+                  ? 'brightness(1) contrast(1)' 
+                  : (isHovering ? `brightness(1.1) contrast(1.05)` : 'brightness(1) contrast(1)')
               }}
             />
             <div className='project-overlay'>
@@ -341,6 +396,20 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
           transform-style: preserve-3d;
           position: relative;
           z-index: 2;
+        }
+        
+        /* Optimize for mobile/tablet - disable hardware acceleration and parallax for better performance */
+        @media (max-width: 1024px) {
+          .project-image {
+            will-change: auto;
+            transform-style: flat;
+            backface-visibility: visible;
+            transform: none !important;
+          }
+          
+          .project-image-wrapper {
+            transform-style: flat;
+          }
         }
 
     
@@ -550,7 +619,10 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         }
 
         @media (max-width: 768px) {
-          .project-image-wrapper { min-height: 200px; }
+          .project-image-wrapper { 
+            min-height: 200px;
+            transform-style: flat;
+          }
           .project-image-link { padding: 0; }
           .project-image-link::after { display: none; }
           .project-overlay { inset: 0; }
@@ -568,9 +640,19 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
             align-items: flex-start;
           }
 
-           .project-image-wrapper {
-          min-height: 240px;
-        }
+          .project-image-wrapper {
+            min-height: 240px;
+          }
+          
+          /* Disable complex animations on mobile for smooth performance */
+          .project-image {
+            transform: none !important;
+            transition: transform 0.3s ease !important;
+          }
+          
+          .project-card:hover .project-image-wrapper {
+            transform: translateY(-2px) !important;
+          }
         }
       `}</style>
     </div>

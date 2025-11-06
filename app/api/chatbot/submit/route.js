@@ -1,255 +1,248 @@
 import { NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
+import fs from 'fs/promises'
+import path from 'path'
 
 /**
  * Chatbot Lead Submission API
  * 
  * This endpoint receives lead information from the chatbot and:
- * 1. Logs it to console (for development)
- * 2. Can send email to sales team
- * 3. Can save to database
- * 4. Can integrate with CRM (Zoho, Salesforce, etc.)
+ * 1. Validates and sanitizes input
+ * 2. Sends email to admin using Nodemailer
+ * 3. Saves to submissions.json file
+ * 4. Returns success/error response
  */
 
-export async function POST(request) {
-  try {
-    // Parse FormData (to handle file uploads)
-    const formData = await request.formData()
-    
-    // Extract data from FormData
-    const leadData = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      selectedService: formData.get('selectedService'),
-      category: formData.get('category'),
-      requirements: formData.get('requirements'),
-      submittedAt: formData.get('submittedAt'),
-      // Hire team specific fields
-      selectedDevelopers: formData.get('selectedDevelopers'),
-      otherDeveloper: formData.get('otherDeveloper'),
-      selectionNotes: formData.get('selectionNotes'),
-      // Job application specific fields
-      position: formData.get('position'),
-      experience: formData.get('experience'),
-      skills: formData.get('skills'),
-      portfolioUrl: formData.get('portfolioUrl'),
-      resume: formData.get('resume') // This is the File object
-    }
-
-    // Validate required fields
-    if (!leadData.name || !leadData.email) {
-      return NextResponse.json(
-        { error: 'Name and email are required' },
-        { status: 400 }
-      )
-    }
-
-    // Log the submission (you can see this in terminal)
-    console.log('='.repeat(60))
-    console.log('🎯 NEW CHATBOT LEAD RECEIVED')
-    console.log('='.repeat(60))
-    console.log('Service:', leadData.selectedService)
-    console.log('Category:', leadData.category)
-    console.log('Name:', leadData.name)
-    console.log('Email:', leadData.email)
-    
-    // Log hire-team specific fields
-    if (leadData.category === 'hire-team') {
-      console.log('\n👨‍💻 HIRE TEAM DETAILS:')
-      if (leadData.selectedDevelopers) {
-        console.log('Selected Developers:', leadData.selectedDevelopers)
-      }
-      if (leadData.otherDeveloper) {
-        console.log('Other Developer Type:', leadData.otherDeveloper)
-      }
-      if (leadData.selectionNotes) {
-        console.log('Selection Notes:', leadData.selectionNotes)
-      }
-      if (leadData.requirements) {
-        console.log('Team Requirements:', leadData.requirements)
-      }
-    }
-    // Log job application specific fields
-    else if (leadData.category === 'apply-job') {
-      console.log('\n📝 JOB APPLICATION DETAILS:')
-      console.log('Position:', leadData.position)
-      console.log('Experience:', leadData.experience, 'years')
-      console.log('Skills:', leadData.skills)
-      console.log('Portfolio URL:', leadData.portfolioUrl || 'Not provided')
-      if (leadData.resume) {
-        console.log('Resume:', leadData.resume.name, `(${(leadData.resume.size / 1024).toFixed(2)} KB)`)
-      }
-      console.log('Cover Letter:', leadData.requirements)
-    } else {
-      console.log('Requirements:', leadData.requirements)
-    }
-    
-    console.log('\n⏰ Submitted At:', new Date(leadData.submittedAt).toLocaleString())
-    console.log('='.repeat(60))
-
-    // TODO: Save resume file to storage (S3, Google Cloud Storage, etc.)
-    // Example:
-    /*
-    if (leadData.resume) {
-      const buffer = await leadData.resume.arrayBuffer()
-      const fileName = `resumes/${Date.now()}_${leadData.resume.name}`
-      await uploadToStorage(fileName, buffer)
-    }
-    */
-
-    // TODO: Add email sending functionality
-    // Example using Nodemailer or SendGrid:
-    /*
-    await sendEmail({
-      to: 'hr@Inheritx.com', // or 'sales@Inheritx.com' for other inquiries
-      subject: `New ${leadData.category === 'apply-job' ? 'Job Application' : leadData.selectedService + ' Inquiry'}`,
-      html: generateEmailHTML(leadData),
-      attachments: leadData.resume ? [{
-        filename: leadData.resume.name,
-        content: await leadData.resume.arrayBuffer()
-      }] : []
-    })
-    */
-
-    // TODO: Save to database
-    // Example:
-    /*
-    await db.leads.create({
-      name: leadData.name,
-      email: leadData.email,
-      service: leadData.selectedService,
-      category: leadData.category,
-      requirements: leadData.requirements,
-      // Job application fields
-      position: leadData.position,
-      experience: leadData.experience,
-      skills: leadData.skills,
-      portfolioUrl: leadData.portfolioUrl,
-      resumeUrl: resumeUrl, // after uploading
-      submittedAt: leadData.submittedAt
-    })
-    */
-
-    // Return success response
-    return NextResponse.json({
-      success: true,
-      message: 'Lead information received successfully',
-      leadId: Date.now(), // You can generate a proper ID
-      timestamp: new Date().toISOString()
-    })
-  } catch (error) {
-    console.error('Lead Submission Error:', error)
-    return NextResponse.json(
-      { 
-        error: 'Failed to process lead submission',
-        message: error.message 
-      },
-      { status: 500 }
-    )
+// Sanitize input to prevent XSS
+function sanitizeInput(input) {
+  if (typeof input !== 'string') return input
+  const replacements = {
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '/': '&#x2F;'
   }
+  return input.replace(/[<>"'/]/g, char => replacements[char])
 }
 
-// Helper function to generate email HTML (you can customize this)
-function generateEmailHTML(leadData) {
-  const isJobApplication = leadData.category === 'apply-job'
+// Create verified email transporter
+async function getVerifiedTransporter() {
+  if (!process.env.MAIL_USER || !process.env.MAIL_PASS) {
+    console.warn('⚠️ Email credentials not configured')
+    return null
+  }
+
+  const configs = [
+    { host: 'smtp.gmail.com', port: 465, secure: true },
+    { host: 'smtp.gmail.com', port: 587, secure: false }
+  ]
+
+  for (const cfg of configs) {
+    try {
+      const transporter = nodemailer.createTransport({
+        ...cfg,
+        auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS }
+      })
+      await transporter.verify()
+      return transporter
+    } catch (err) {
+      console.warn(`Failed on ${cfg.port}:`, err.message)
+    }
+  }
+  console.error('❌ All email configs failed')
+  return null
+}
+
+// Generate email HTML based on category
+function generateEmailHTML(data) {
+  const category = data.category
+  const isHireTeam = category === 'hire-team'
+  const isJobApplication = category === 'apply-job'
   
+  const titles = {
+    'hire-team': '👥 Hire Dedicated Team Request',
+    'apply-job': '💼 New Job Application',
+    'default': '🎯 New Project Inquiry'
+  }
+  const categoryTitle = titles[category] || titles.default
+
   return `
     <!DOCTYPE html>
     <html>
     <head>
       <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
-        .content { background: #f8f9fa; padding: 20px; border: 1px solid #e5e7eb; }
-        .field { margin-bottom: 15px; }
-        .label { font-weight: bold; color: #00C5DE; }
-        .value { margin-top: 5px; }
-        .footer { text-align: center; padding: 20px; color: #6b7280; font-size: 12px; }
+        body { 
+          font-family: 'Arial', sans-serif; 
+          line-height: 1.6; 
+          color: #333; 
+          margin: 0; 
+          padding: 0; 
+          background-color: #f4f4f4; 
+        }
+        .container { 
+          max-width: 600px; 
+          margin: 20px auto; 
+          background: #ffffff; 
+          border-radius: 10px; 
+          overflow: hidden; 
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        .header { 
+          background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%); 
+          color: white; 
+          padding: 30px 20px; 
+          text-align: center; 
+        }
+        .header h2 { 
+          margin: 0 0 10px 0; 
+          font-size: 24px; 
+        }
+        .header p { 
+          margin: 0; 
+          opacity: 0.95; 
+          font-size: 16px; 
+        }
+        .content { 
+          padding: 30px 20px; 
+        }
+        .field { 
+          margin-bottom: 20px; 
+          padding-bottom: 15px; 
+          border-bottom: 1px solid #e5e7eb; 
+        }
+        .field:last-child { 
+          border-bottom: none; 
+        }
+        .label { 
+          font-weight: bold; 
+          color: #00C5DE; 
+          margin-bottom: 5px; 
+          font-size: 14px; 
+          display: block; 
+        }
+        .value { 
+          color: #333; 
+          font-size: 15px; 
+          word-wrap: break-word; 
+          white-space: pre-wrap; 
+        }
+        .footer { 
+          background: #f8f9fa; 
+          text-align: center; 
+          padding: 20px; 
+          color: #6b7280; 
+          font-size: 13px; 
+        }
+        .footer a { 
+          color: #00C5DE; 
+          text-decoration: none; 
+        }
+        .footer a:hover { 
+          text-decoration: underline; 
+        }
       </style>
     </head>
     <body>
       <div class="container">
         <div class="header">
-          <h2>${isJobApplication ? '💼 New Job Application' : '🎯 New Lead from InheritX Chatbot'}</h2>
-          <p style="margin: 0; opacity: 0.9;">${isJobApplication ? leadData.position : leadData.selectedService}</p>
+          <h2>${categoryTitle}</h2>
+          <p>${data.selectedService || 'Chat Inquiry'}</p>
         </div>
         <div class="content">
           <div class="field">
-            <div class="label">👤 Name:</div>
-            <div class="value">${leadData.name}</div>
+            <span class="label">👤 Name</span>
+            <div class="value">${sanitizeInput(data.name)}</div>
           </div>
           <div class="field">
-            <div class="label">📧 Email:</div>
-            <div class="value">${leadData.email}</div>
+            <span class="label">📧 Email</span>
+            <div class="value"><a href="mailto:${data.email}">${sanitizeInput(data.email)}</a></div>
           </div>
-          ${leadData.category === 'hire-team' ? `
-            ${leadData.selectedDevelopers ? `
-              <div class="field">
-                <div class="label">👨‍💻 Selected Developers:</div>
-                <div class="value">${leadData.selectedDevelopers}</div>
-              </div>
+          ${data.phone ? `
+          <div class="field">
+            <span class="label">📱 Phone</span>
+            <div class="value">${sanitizeInput(data.phone)}</div>
+          </div>
+          ` : ''}
+          
+          ${isHireTeam ? `
+            ${data.selectedDevelopers ? `
+            <div class="field">
+              <span class="label">👨‍💻 Selected Developers</span>
+              <div class="value">${sanitizeInput(data.selectedDevelopers)}</div>
+            </div>
             ` : ''}
-            ${leadData.otherDeveloper ? `
-              <div class="field">
-                <div class="label">🔧 Other Developer Type:</div>
-                <div class="value">${leadData.otherDeveloper}</div>
-              </div>
+            ${data.otherDeveloper ? `
+            <div class="field">
+              <span class="label">🔧 Other Developer Type</span>
+              <div class="value">${sanitizeInput(data.otherDeveloper)}</div>
+            </div>
             ` : ''}
-            ${leadData.selectionNotes ? `
-              <div class="field">
-                <div class="label">📝 Selection Notes:</div>
-                <div class="value">${leadData.selectionNotes}</div>
-              </div>
+            ${data.selectionNotes ? `
+            <div class="field">
+              <span class="label">📝 Selection Notes</span>
+              <div class="value">${sanitizeInput(data.selectionNotes)}</div>
+            </div>
             ` : ''}
-            ${leadData.requirements ? `
-              <div class="field">
-                <div class="label">💬 Team Requirements:</div>
-                <div class="value">${leadData.requirements}</div>
-              </div>
+            ${data.requirements ? `
+            <div class="field">
+              <span class="label">💬 Team Requirements</span>
+              <div class="value">${sanitizeInput(data.requirements)}</div>
+            </div>
             ` : ''}
           ` : isJobApplication ? `
             <div class="field">
-              <div class="label">💼 Position Applied For:</div>
-              <div class="value">${leadData.position}</div>
+              <span class="label">💼 Position Applied For</span>
+              <div class="value">${sanitizeInput(data.position)}</div>
             </div>
             <div class="field">
-              <div class="label">📊 Years of Experience:</div>
-              <div class="value">${leadData.experience}</div>
+              <span class="label">📊 Years of Experience</span>
+              <div class="value">${sanitizeInput(data.experience)}</div>
             </div>
             <div class="field">
-              <div class="label">🛠️ Key Skills:</div>
-              <div class="value">${leadData.skills}</div>
+              <span class="label">🛠️ Key Skills</span>
+              <div class="value">${sanitizeInput(data.skills)}</div>
             </div>
-            ${leadData.portfolioUrl ? `
-              <div class="field">
-                <div class="label">🔗 Portfolio/LinkedIn:</div>
-                <div class="value"><a href="${leadData.portfolioUrl}">${leadData.portfolioUrl}</a></div>
-              </div>
+            ${data.portfolioUrl ? `
+            <div class="field">
+              <span class="label">🔗 Portfolio/LinkedIn</span>
+              <div class="value"><a href="${data.portfolioUrl}">${sanitizeInput(data.portfolioUrl)}</a></div>
+            </div>
             ` : ''}
             <div class="field">
-              <div class="label">💬 Cover Letter:</div>
-              <div class="value">${leadData.requirements}</div>
+              <span class="label">💬 Cover Letter</span>
+              <div class="value">${sanitizeInput(data.requirements)}</div>
             </div>
-            ${leadData.resume ? `
-              <div class="field">
-                <div class="label">📄 Resume:</div>
-                <div class="value">Attached (${leadData.resume.name})</div>
-              </div>
+            ${data.resume ? `
+            <div class="field">
+              <span class="label">📄 Resume</span>
+              <div class="value">Attached (${sanitizeInput(data.resume.name)})</div>
+            </div>
             ` : ''}
           ` : `
+            ${data.requirements ? `
             <div class="field">
-              <div class="label">💬 Requirements:</div>
-              <div class="value">${leadData.requirements}</div>
+              <span class="label">💬 Message/Requirements</span>
+              <div class="value">${sanitizeInput(data.requirements)}</div>
             </div>
+            ` : ''}
           `}
+          
           <div class="field">
-            <div class="label">🕒 Submitted At:</div>
-            <div class="value">${new Date(leadData.submittedAt).toLocaleString()}</div>
+            <span class="label">🕒 Submitted At</span>
+            <div class="value">${new Date(data.submittedAt).toLocaleString('en-US', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric', 
+              hour: '2-digit', 
+              minute: '2-digit' 
+            })}</div>
           </div>
         </div>
         <div class="footer">
-          <p>This ${isJobApplication ? 'application' : 'lead'} was submitted through the InheritX website chatbot.</p>
-          <p><a href="mailto:${leadData.email}">Reply to ${leadData.name}</a></p>
+          <p>This ${isJobApplication ? 'application' : 'inquiry'} was submitted through the <strong>InheritX Chatbot</strong></p>
+          <p><a href="mailto:${data.email}">Reply to ${sanitizeInput(data.name)}</a></p>
         </div>
       </div>
     </body>
@@ -257,14 +250,169 @@ function generateEmailHTML(leadData) {
   `
 }
 
-// Optional: GET endpoint for testing
-export async function GET() {
-  return NextResponse.json({
-    status: 'ok',
-    message: 'Chatbot submission API is running',
-    endpoints: {
-      POST: '/api/chatbot/submit - Submit lead information'
+// Save submission to JSON file
+async function saveToJSON(data) {
+  const submissionsPath = path.join(process.cwd(), 'submissions.json')
+  
+  // Read existing submissions
+  let submissions = []
+  try {
+    const content = await fs.readFile(submissionsPath, 'utf8')
+    submissions = JSON.parse(content)
+  } catch {
+    submissions = [] // File doesn't exist or invalid
+  }
+  
+  const isHireTeam = data.category === 'hire-team'
+  const isJobApplication = data.category === 'apply-job'
+  
+  // Build submission record
+  const record = {
+    id: Date.now(),
+    name: data.name,
+    email: data.email,
+    phone: data.phone || '',
+    selectedOption: data.selectedService || data.category,
+    category: data.category,
+    timestamp: data.submittedAt,
+    requirements: data.requirements || '',
+    resumeName: data.resume?.name || '',
+    ...(isHireTeam && {
+      selectedDevelopers: data.selectedDevelopers,
+      otherDeveloper: data.otherDeveloper,
+      selectionNotes: data.selectionNotes
+    }),
+    ...(isJobApplication && {
+      position: data.position,
+      experience: data.experience,
+      skills: data.skills,
+      portfolioUrl: data.portfolioUrl
+    })
+  }
+  
+  submissions.unshift(record) // Latest first
+  await fs.writeFile(submissionsPath, JSON.stringify(submissions, null, 2), 'utf8')
+  return true
+}
+
+// Send email
+async function sendEmail(transporter, data) {
+  if (!transporter) {
+    console.warn('⚠️ Email not sent - transporter not configured')
+    return false
+  }
+
+  const mailOptions = {
+    from: `"InheritX Chatbot" <${process.env.MAIL_USER}>`,
+    to: process.env.MAIL_TO || 'nishit.s@inheritx.com',
+    subject: `New Chat Submission — ${data.selectedService || data.category}`,
+    html: generateEmailHTML(data),
+    replyTo: data.email
+  }
+
+  // Add resume attachment if present
+  if (data.resume) {
+    try {
+      const buffer = await data.resume.arrayBuffer()
+      mailOptions.attachments = [{
+        filename: data.resume.name,
+        content: Buffer.from(buffer)
+      }]
+    } catch (err) {
+      console.error('Error processing resume attachment:', err)
     }
-  })
+  }
+
+  try {
+    const info = await transporter.sendMail(mailOptions)
+    console.log('✅ Email sent:', info.messageId)
+    return true
+  } catch (error) {
+    console.error('❌ Email sending failed:', error)
+    throw error
+  }
+}
+
+export async function POST(request) {
+  try {
+    // Parse and extract FormData
+    const formData = await request.formData()
+    const get = (key) => formData.get(key)
+    
+    const leadData = {
+      name: sanitizeInput(get('name')),
+      email: sanitizeInput(get('email')),
+      phone: sanitizeInput(get('phone')),
+      selectedService: sanitizeInput(get('selectedService')),
+      category: sanitizeInput(get('category')),
+      requirements: sanitizeInput(get('requirements')),
+      submittedAt: get('submittedAt'),
+      // Hire team fields
+      selectedDevelopers: sanitizeInput(get('selectedDevelopers')),
+      otherDeveloper: sanitizeInput(get('otherDeveloper')),
+      selectionNotes: sanitizeInput(get('selectionNotes')),
+      // Job application fields
+      position: sanitizeInput(get('position')),
+      experience: sanitizeInput(get('experience')),
+      skills: sanitizeInput(get('skills')),
+      portfolioUrl: get('portfolioUrl'),
+      resume: get('resume') // File object
+    }
+
+    // Validate required fields
+    if (!leadData.name || !leadData.email) {
+      return NextResponse.json(
+        { success: false, error: 'Name and email are required' },
+        { status: 400 }
+      )
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(leadData.email)) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid email format' },
+        { status: 400 }
+      )
+    }
+
+    console.log('\n' + '='.repeat(60))
+    console.log('🎯 NEW CHATBOT LEAD:', leadData.name, `(${leadData.category})`)
+    console.log('='.repeat(60) + '\n')
+
+    // Process submission
+    const transporter = await getVerifiedTransporter()
+    
+    let emailSent = false
+    try {
+      emailSent = await sendEmail(transporter, leadData)
+    } catch (err) {
+      console.error('Email error:', err.message)
+    }
+
+    let savedToJSON = false
+    try {
+      await saveToJSON(leadData)
+      savedToJSON = true
+      console.log('✅ Saved to JSON')
+    } catch (err) {
+      console.error('JSON save error:', err.message)
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: 'Submission received successfully',
+      emailSent,
+      savedToJSON,
+      leadId: Date.now(),
+      timestamp: new Date().toISOString()
+    })
+  } catch (error) {
+    console.error('❌ Submission Error:', error)
+    return NextResponse.json(
+      { success: false, error: 'Failed to process submission', message: error.message },
+      { status: 500 }
+    )
+  }
 }
 
