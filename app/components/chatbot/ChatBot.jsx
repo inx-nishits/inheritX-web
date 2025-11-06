@@ -561,7 +561,7 @@ export default function ChatBot() {
   return (
     <>
       {/* Chat Widget */}
-      <div className={`chat-widget d-none ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
+      <div className={`chat-widget ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
         {/* Minimized Bar */}
         {isOpen && isMinimized && (
           <div className='chat-minimized-bar' onClick={handleMaximize}>
