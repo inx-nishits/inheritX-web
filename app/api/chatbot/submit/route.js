@@ -28,8 +28,15 @@ function sanitizeInput(input) {
 
 // Create verified email transporter
 async function getVerifiedTransporter() {
-  if (!process.env.MAIL_USER || !process.env.MAIL_PASS) {
-    console.warn('⚠️ Email credentials not configured')
+  // Check environment variables
+  const hasUser = !!process.env.MAIL_USER
+  const hasPass = !!process.env.MAIL_PASS
+  
+  if (!hasUser || !hasPass) {
+    console.error('⚠️ Email credentials not configured')
+    console.error('   MAIL_USER:', hasUser ? '✓ Set' : '✗ Missing')
+    console.error('   MAIL_PASS:', hasPass ? '✓ Set' : '✗ Missing')
+    console.error('   NODE_ENV:', process.env.NODE_ENV || 'not set')
     return null
   }
 
@@ -38,6 +45,7 @@ async function getVerifiedTransporter() {
     { host: 'smtp.gmail.com', port: 587, secure: false }
   ]
 
+  const errors = []
   for (const cfg of configs) {
     try {
       const transporter = nodemailer.createTransport({
@@ -45,12 +53,20 @@ async function getVerifiedTransporter() {
         auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS }
       })
       await transporter.verify()
+      console.log(`✅ Email transporter verified on port ${cfg.port}`)
       return transporter
     } catch (err) {
-      console.warn(`Failed on ${cfg.port}:`, err.message)
+      const errorMsg = `Port ${cfg.port} failed: ${err.message}`
+      console.warn(`⚠️ ${errorMsg}`)
+      errors.push(errorMsg)
     }
   }
   console.error('❌ All email configs failed')
+  console.error('   Errors:', errors.join('; '))
+  console.error('   Make sure:')
+  console.error('   1. MAIL_USER and MAIL_PASS are set in production environment')
+  console.error('   2. You are using a Gmail App Password (not regular password)')
+  console.error('   3. 2-Step Verification is enabled on Gmail account')
   return null
 }
 
@@ -299,7 +315,7 @@ async function saveToJSON(data) {
 async function sendEmail(transporter, data) {
   if (!transporter) {
     console.warn('⚠️ Email not sent - transporter not configured')
-    return false
+    return { success: false, error: 'Transporter not configured' }
   }
 
   const mailOptions = {
@@ -318,18 +334,36 @@ async function sendEmail(transporter, data) {
         filename: data.resume.name,
         content: Buffer.from(buffer)
       }]
+      console.log(`📎 Resume attached: ${data.resume.name}`)
     } catch (err) {
-      console.error('Error processing resume attachment:', err)
+      console.error('❌ Error processing resume attachment:', err.message)
     }
   }
 
   try {
+    console.log(`📧 Attempting to send email to: ${mailOptions.to}`)
     const info = await transporter.sendMail(mailOptions)
-    console.log('✅ Email sent:', info.messageId)
-    return true
+    console.log('✅ Email sent successfully!')
+    console.log('   Message ID:', info.messageId)
+    console.log('   Response:', info.response)
+    return { success: true, messageId: info.messageId, response: info.response }
   } catch (error) {
-    console.error('❌ Email sending failed:', error)
-    throw error
+    console.error('❌ Email sending failed!')
+    console.error('   Error code:', error.code)
+    console.error('   Error message:', error.message)
+    if (error.response) {
+      console.error('   SMTP Response:', error.response)
+    }
+    if (error.responseCode) {
+      console.error('   Response Code:', error.responseCode)
+    }
+    // Common Gmail errors
+    if (error.code === 'EAUTH') {
+      console.error('   ⚠️ Authentication failed - check your Gmail App Password')
+    } else if (error.code === 'ECONNECTION') {
+      console.error('   ⚠️ Connection failed - check network/firewall settings')
+    }
+    return { success: false, error: error.message, code: error.code }
   }
 }
 
@@ -383,12 +417,20 @@ export async function POST(request) {
     // Process submission
     const transporter = await getVerifiedTransporter()
     
-    let emailSent = false
-    try {
-      emailSent = await sendEmail(transporter, leadData)
-    } catch (err) {
-      console.error('Email error:', err.message)
+    let emailResult = { success: false, error: 'Not attempted' }
+    if (transporter) {
+      try {
+        emailResult = await sendEmail(transporter, leadData)
+      } catch (err) {
+        console.error('❌ Unexpected email error:', err.message)
+        emailResult = { success: false, error: err.message }
+      }
+    } else {
+      console.error('❌ Cannot send email - transporter not available')
+      emailResult = { success: false, error: 'Email service not configured' }
     }
+    
+    const emailSent = emailResult.success === true
 
     let savedToJSON = false
     try {
@@ -399,10 +441,19 @@ export async function POST(request) {
       console.error('JSON save error:', err.message)
     }
 
+    // Log final status
+    if (emailSent) {
+      console.log('✅ Submission completed successfully - Email sent and saved to JSON')
+    } else {
+      console.warn('⚠️ Submission saved but email failed:', emailResult.error || 'Unknown error')
+      console.warn('   Check production environment variables: MAIL_USER, MAIL_PASS, MAIL_TO')
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Submission received successfully',
       emailSent,
+      emailError: emailSent ? null : (emailResult.error || 'Email service not configured'),
       savedToJSON,
       leadId: Date.now(),
       timestamp: new Date().toISOString()
