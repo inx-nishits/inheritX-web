@@ -1839,7 +1839,7 @@ textarea.form-input {
 }
 
 .success-content {
-  /* max-width: 220px; */
+  max-width: 320px;
 }
 
 .success-icon {
@@ -2088,16 +2088,6 @@ textarea.form-input {
   box-shadow: 0 12px 32px rgba(0, 197, 222, 0.5);
 }
 
-/* Hide floating button when chat is open on mobile fullscreen */
-@media (max-width: 480px) {
-  .chat-widget.open .chat-toggle-btn.chat-open {
-    display: none;
-  }
-  
-  .chat-widget.open .chat-toggle-btn {
-    display: none;
-  }
-}
 
 /* Keep floating button visible even when chat is minimized */
 .chat-widget.minimized .chat-toggle-btn {
@@ -2217,17 +2207,22 @@ textarea.form-input {
 /* Mobile Devices */
 @media (max-width: 480px) {
   .chat-widget {
-    bottom: 0;
-    right: 0;
-    left: 0;
+    bottom: 20px;
+    right: 16px;
+    left: auto;
   }
 
   .chat-window {
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
-    border-radius: 0;
-    margin-bottom: 0;
+    width: calc(100vw - 32px);
+    max-width: 380px;
+    height: 600px;
+    max-height: calc(100vh - 100px);
+    border-radius: 16px;
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
   }
 
   .chat-minimized-bar {
@@ -2253,7 +2248,20 @@ textarea.form-input {
 
   .chat-header {
     padding: 14px 16px;
-    border-radius: 0;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .chat-header-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .chat-action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .chat-header-text h3 {
@@ -2269,17 +2277,14 @@ textarea.form-input {
     height: 40px;
   }
 
-  .chat-action-btn {
-    width: 30px;
-    height: 30px;
-  }
-
   .chat-toggle-btn {
     width: 56px;
     height: 56px;
-    bottom: 30px;
+    bottom: 20px;
     right: 16px;
     position: fixed;
+    z-index: 10000;
+    display: flex !important;
   }
 
   .greeting-content {
@@ -2553,16 +2558,6 @@ textarea.form-input {
   .chat-bot-avatar {
     width: 36px;
     height: 36px;
-  }
-
-  .chat-action-btn {
-    width: 28px;
-    height: 28px;
-  }
-
-  .chat-action-btn svg {
-    width: 16px;
-    height: 16px;
   }
 
   .chat-minimized-bar {
