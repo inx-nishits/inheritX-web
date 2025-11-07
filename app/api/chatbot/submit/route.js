@@ -191,28 +191,12 @@ function generateEmailHTML(data) {
             </div>
             ` : ''}
           ` : isJobApplication ? `
+            ${data.phone ? `
             <div class="field">
-              <span class="label">💼 Position Applied For</span>
-              <div class="value">${sanitizeInput(data.position)}</div>
-            </div>
-            <div class="field">
-              <span class="label">📊 Years of Experience</span>
-              <div class="value">${sanitizeInput(data.experience)}</div>
-            </div>
-            <div class="field">
-              <span class="label">🛠️ Key Skills</span>
-              <div class="value">${sanitizeInput(data.skills)}</div>
-            </div>
-            ${data.portfolioUrl ? `
-            <div class="field">
-              <span class="label">🔗 Portfolio/LinkedIn</span>
-              <div class="value"><a href="${data.portfolioUrl}">${sanitizeInput(data.portfolioUrl)}</a></div>
+              <span class="label">📱 Phone</span>
+              <div class="value">${sanitizeInput(data.phone)}</div>
             </div>
             ` : ''}
-            <div class="field">
-              <span class="label">💬 Cover Letter</span>
-              <div class="value">${sanitizeInput(data.requirements)}</div>
-            </div>
             ${data.resume ? `
             <div class="field">
               <span class="label">📄 Resume</span>
@@ -281,13 +265,8 @@ async function saveToJSON(data) {
       selectedDevelopers: data.selectedDevelopers,
       otherDeveloper: data.otherDeveloper,
       selectionNotes: data.selectionNotes
-    }),
-    ...(isJobApplication && {
-      position: data.position,
-      experience: data.experience,
-      skills: data.skills,
-      portfolioUrl: data.portfolioUrl
     })
+    // Job applications: Only name, email, phone, resume - same as Join Our Team
   }
   
   submissions.unshift(record) // Latest first
@@ -296,6 +275,8 @@ async function saveToJSON(data) {
 }
 
 // Send email
+// Note: Job applications are handled directly from frontend via WordPress API
+// This API route only handles hire-team and new-project submissions
 async function sendEmail(transporter, data) {
   if (!transporter) {
     console.warn('⚠️ Email not sent - transporter not configured')
@@ -303,11 +284,9 @@ async function sendEmail(transporter, data) {
   }
 
   // Determine recipient based on category
-  // - apply-job -> careers@inheritx.com
   // - hire-team/new project/others -> contact@inheritx.com
-  const toAddress = data.category === 'apply-job'
-    ? 'careers@inheritx.com'
-    : 'contact@inheritx.com'
+  // Note: apply-job is now handled directly via WordPress API from frontend
+  const toAddress = 'nishit.s@inheritx.com'
 
   const mailOptions = {
     from: `"InheritX Chatbot" <${process.env.MAIL_USER}>`,
@@ -316,7 +295,7 @@ async function sendEmail(transporter, data) {
     html: generateEmailHTML(data),
     replyTo: data.email
   }
-// console.log(mailOptions,'mailOptions')
+
   // Add resume attachment if present
   if (data.resume) {
     try {
@@ -358,11 +337,7 @@ export async function POST(request) {
       selectedDevelopers: sanitizeInput(get('selectedDevelopers')),
       otherDeveloper: sanitizeInput(get('otherDeveloper')),
       selectionNotes: sanitizeInput(get('selectionNotes')),
-      // Job application fields
-      position: sanitizeInput(get('position')),
-      experience: sanitizeInput(get('experience')),
-      skills: sanitizeInput(get('skills')),
-      portfolioUrl: get('portfolioUrl'),
+      // Job application fields - same as Join Our Team (name, email, phone, resume only)
       resume: get('resume') // File object
     }
 
@@ -387,7 +362,9 @@ export async function POST(request) {
     console.log('🎯 NEW CHATBOT LEAD:', leadData.name, `(${leadData.category})`)
     console.log('='.repeat(60) + '\n')
 
-    // Process submission
+    // Note: Job applications are handled directly from frontend via WordPress API
+    // This route only processes hire-team and new-project submissions
+    
     const transporter = await getVerifiedTransporter()
     
     let emailSent = false

@@ -270,9 +270,9 @@ export default function ContactForm({
         data = null
       }
 
-      const apiMessage = data?.message || (res.ok ? 'Thanks! Your message has been sent.' : 'Something went wrong')
+      const apiMessage = data?.message || (data?.status === 1 ? 'Thanks! Your message has been sent.' : 'Something went wrong')
 
-      if (res.ok) {
+      if (data?.status === 1) {
         // Reset lightweight client-side state
         form.reset()
         setNdaChecked(false)

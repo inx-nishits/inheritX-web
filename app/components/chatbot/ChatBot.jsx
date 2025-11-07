@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Send, X, MessageCircle, Minimize2, RotateCcw, ArrowLeft } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 // Main menu options - shown after "Start Chat"
 const mainMenuOptions = [
@@ -129,13 +130,11 @@ export default function ChatBot() {
     requirements: '',
     // Hire team specific fields
     selectedDevelopers: [],
-    otherDeveloper: '',
     selectionNotes: '',
     // Job application specific fields
     position: '',
     experience: '',
-    skills: '',
-    portfolioUrl: '',
+    coverLetter: '',
     resume: null,
     resumeName: ''
   })
@@ -148,22 +147,20 @@ export default function ChatBot() {
   const handleReset = () => {
     setChatStage('basic-info')
     setSelectedOption(null)
-    setFormData({
-      name: '',
-      email: '',
-      selectedService: '',
-      phone: '',
-      requirements: '',
-      selectedDevelopers: [],
-      otherDeveloper: '',
-      selectionNotes: '',
-      position: '',
-      experience: '',
-      skills: '',
-      portfolioUrl: '',
-      resume: null,
-      resumeName: ''
-    })
+      setFormData({
+        name: '',
+        email: '',
+        selectedService: '',
+        phone: '',
+        requirements: '',
+        selectedDevelopers: [],
+        selectionNotes: '',
+        position: '',
+        experience: '',
+        coverLetter: '',
+        resume: null,
+        resumeName: ''
+      })
     setFormErrors({})
   }
 
@@ -209,12 +206,7 @@ export default function ChatBot() {
         phone: '',
         requirements: '',
         selectedDevelopers: [],
-        otherDeveloper: '',
         selectionNotes: '',
-        position: '',
-        experience: '',
-        skills: '',
-        portfolioUrl: '',
         resume: null,
         resumeName: ''
       })
@@ -265,45 +257,64 @@ export default function ChatBot() {
   // Handle hire team selection submission - submit directly
   const handleHireTeamSelectionSubmit = async () => {
     // Validate at least one selection
-    if (formData.selectedDevelopers.length === 0 && !formData.otherDeveloper.trim()) {
-      setFormErrors({ selectedDevelopers: 'Please select at least one developer type or specify other' })
+    if (formData.selectedDevelopers.length === 0) {
+      setFormErrors({ selectedDevelopers: 'Please select at least one developer type' })
       return
     }
 
     setIsSubmitting(true)
 
-    // Prepare form data for submission
-    const submissionData = new FormData()
-    submissionData.append('name', formData.name)
-    submissionData.append('email', formData.email)
-    submissionData.append('selectedService', formData.selectedService)
-    submissionData.append('category', selectedOption)
-    submissionData.append('submittedAt', new Date().toISOString())
-    
-    // Add hire-team specific fields
-    const selectedDevelopersNames = formData.selectedDevelopers.map(dev => dev.name).join(', ')
-    submissionData.append('selectedDevelopers', selectedDevelopersNames)
-    if (formData.otherDeveloper) {
-      submissionData.append('otherDeveloper', formData.otherDeveloper)
-    }
-    if (formData.selectionNotes) {
-      submissionData.append('selectionNotes', formData.selectionNotes)
-    }
-
     try {
-      const response = await fetch('/api/chatbot/submit', {
-        method: 'POST',
-        body: submissionData
-      })
-
-      if (response.ok) {
-        setChatStage('success')
-      } else {
-        alert('There was an issue submitting your information. Please try again or contact us directly.')
+      // Hire Dedicated Team - Call Contact Form API
+      const hireTeamFormData = new FormData()
+      hireTeamFormData.append('name', formData.name)
+      hireTeamFormData.append('email', formData.email)
+      hireTeamFormData.append('country', 'Not specified - Message from Chatbot')
+      hireTeamFormData.append('phone', 'Not specified - Message from Chatbot')
+      hireTeamFormData.append('project_budget', 'Hire Dedicated Team - Message from Chatbot')
+      hireTeamFormData.append('project_type', formData.selectedService || 'Hire Dedicated Team')
+      
+      // Build detailed project details with all hire-team information
+      let projectDetails = `HIRE DEDICATED TEAM REQUEST\n\n`
+      projectDetails += `Service Category: ${formData.selectedService || 'Not specified'}\n\n`
+      
+      if (formData.selectedDevelopers && formData.selectedDevelopers.length > 0) {
+        const selectedDevelopersNames = formData.selectedDevelopers.map(dev => dev.name).join(', ')
+        projectDetails += `Selected Developers: ${selectedDevelopersNames}\n\n`
       }
+      
+      if (formData.selectionNotes) {
+        projectDetails += `Hire Team Additional Notes: ${formData.selectionNotes}\n\n`
+      }
+      
+      if (formData.requirements) {
+        projectDetails += `Project Requirements:\n${formData.requirements}`
+      }
+      
+      hireTeamFormData.append('project_details', projectDetails)
+      hireTeamFormData.append('project_nda', '0')
+
+      const response = await postContactForm(hireTeamFormData)
+      let data
+      try {
+        data = await response.json()
+      } catch {
+        data = {}
+      }
+
+      // Check for success status
+      const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
+      
+      if (!isSuccess) {
+        toast.error('Failed to submit your request. Please try again.')
+        return
+      }
+
+      toast.success('Your request has been submitted successfully!')
+      setChatStage('success')
     } catch (error) {
       console.error('Submission error:', error)
-      alert('There was an issue submitting your information. Please try again or contact us directly.')
+      toast.error('Failed to submit your request. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -332,11 +343,6 @@ export default function ChatBot() {
     // Clear error when user starts typing
     if (formErrors[name]) {
       setFormErrors(prev => ({ ...prev, [name]: '' }))
-    }
-    
-    // Also clear selectedDevelopers error when typing in otherDeveloper
-    if (name === 'otherDeveloper' && formErrors.selectedDevelopers) {
-      setFormErrors(prev => ({ ...prev, selectedDevelopers: '' }))
     }
   }
 
@@ -422,42 +428,50 @@ export default function ChatBot() {
     
     if (selectedOption === 'apply-job') {
       // Job application validation
+      // Position validation
       if (!formData.position.trim()) {
-        errors.position = 'Position is required'
+        errors.position = 'Position/Role is required'
       } else if (formData.position.trim().length < 2) {
         errors.position = 'Position must be at least 2 characters'
       }
       
+      // Phone validation
+      if (!formData.phone.trim()) {
+        errors.phone = 'Phone number is required'
+      } else {
+        const digits = formData.phone.replace(/\D/g, '')
+        if (digits.length < 7 || digits.length > 15) {
+          errors.phone = 'Enter a valid phone number'
+        }
+      }
+      
+      // Experience validation
       if (!formData.experience.trim()) {
         errors.experience = 'Years of experience is required'
       } else if (parseInt(formData.experience) > 50) {
         errors.experience = 'Please enter valid years of experience'
       }
       
-      if (!formData.skills.trim()) {
-        errors.skills = 'Skills are required'
-      } else if (formData.skills.trim().length < 5) {
-        errors.skills = 'Please provide at least 5 characters'
+      // Cover Letter validation
+      if (!formData.coverLetter.trim()) {
+        errors.coverLetter = 'Cover letter is required'
+      } else if (formData.coverLetter.trim().length < 20) {
+        errors.coverLetter = 'Cover letter must be at least 20 characters'
       }
       
-      if (formData.portfolioUrl && formData.portfolioUrl.trim()) {
-        const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
-        if (!urlPattern.test(formData.portfolioUrl)) {
-          errors.portfolioUrl = 'Please enter a valid URL'
-        }
-      }
-      
+      // Resume validation
       if (!formData.resume) {
         errors.resume = 'Resume/CV is required'
       }
-      
+    } else if (selectedOption === 'new-project') {
+      // New project validation - only Brief Your Details
       if (!formData.requirements.trim()) {
-        errors.requirements = 'Cover letter is required'
-      } else if (formData.requirements.trim().length < 20) {
-        errors.requirements = 'Cover letter must be at least 20 characters'
+        errors.requirements = 'Please brief your project details'
+      } else if (formData.requirements.trim().length < 10) {
+        errors.requirements = 'Please provide at least 10 characters'
       }
     } else {
-      // Requirements validation for other options
+      // Requirements validation for other options (hire-team)
       if (!formData.requirements.trim()) {
         errors.requirements = 'Please provide your requirements'
       } else if (formData.requirements.trim().length < 10) {
@@ -466,6 +480,20 @@ export default function ChatBot() {
     }
 
     return errors
+  }
+
+  // WordPress Career API - same as Join Our Team
+  const postCareerForm = async (payload) => {
+    const endpoint = 'https://admin.inheritx.com/wp-json/api/v1/careerform'
+    const res = await fetch(endpoint, { method: 'POST', body: payload })
+    return res
+  }
+
+  // Contact Form API - for new project submissions
+  const postContactForm = async (payload) => {
+    const endpoint = 'https://admin.inheritx.com/wp-json/api/contactform'
+    const res = await fetch(endpoint, { method: 'POST', body: payload })
+    return res
   }
 
   // Handle details form submission
@@ -480,54 +508,100 @@ export default function ChatBot() {
 
     setIsSubmitting(true)
 
-    // Prepare form data for submission
-    const submissionData = new FormData()
-    submissionData.append('name', formData.name)
-    submissionData.append('email', formData.email)
-    submissionData.append('selectedService', formData.selectedService)
-    submissionData.append('category', selectedOption)
-    submissionData.append('requirements', formData.requirements)
-    submissionData.append('submittedAt', new Date().toISOString())
-    
-    // Add hire-team specific fields
-    if (selectedOption === 'hire-team') {
-      const selectedDevelopersNames = formData.selectedDevelopers.map(dev => dev.name).join(', ')
-      submissionData.append('selectedDevelopers', selectedDevelopersNames)
-      if (formData.otherDeveloper) {
-        submissionData.append('otherDeveloper', formData.otherDeveloper)
-      }
-      if (formData.selectionNotes) {
-        submissionData.append('selectionNotes', formData.selectionNotes)
-      }
-    }
-    
-    // Add job-specific fields if applying for job
-    if (selectedOption === 'apply-job') {
-      submissionData.append('position', formData.position)
-      submissionData.append('experience', formData.experience)
-      submissionData.append('skills', formData.skills)
-      if (formData.portfolioUrl) {
-        submissionData.append('portfolioUrl', formData.portfolioUrl)
-      }
-      if (formData.resume) {
-        submissionData.append('resume', formData.resume)
-      }
-    }
-
     try {
-      const response = await fetch('/api/chatbot/submit', {
-        method: 'POST',
-        body: submissionData
-      })
+      if (selectedOption === 'apply-job') {
+        // Job Application - Call WordPress API directly (same as Join Our Team)
+        const jobFormData = new FormData()
+        jobFormData.append('name', formData.name)
+        jobFormData.append('email', formData.email)
+        jobFormData.append('phone', formData.phone)
+        jobFormData.append('position', formData.position)
+        jobFormData.append('experience', formData.experience)
+        jobFormData.append('coverLetter', formData.coverLetter)
+        jobFormData.append('resume', formData.resume)
 
-      if (response.ok) {
+        const response = await postCareerForm(jobFormData)
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = {}
+        }
+
+        const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
+        if (!isSuccess) {
+          toast.error('Failed to submit your application. Please try again.')
+          return
+        }
+
+        toast.success('Your application has been submitted successfully!')
+        setChatStage('success')
+      } else if (selectedOption === 'new-project') {
+        // New Project - Call Contact Form API directly
+        const projectFormData = new FormData()
+        projectFormData.append('name', formData.name)
+        projectFormData.append('email', formData.email)
+        projectFormData.append('country', 'Not specified - Message from Chatbot') // Optional field
+        projectFormData.append('phone', 'Not specified - Message from Chatbot') // Optional field
+        projectFormData.append('project_budget', '0 - Message from Chatbot') // Optional
+        projectFormData.append('project_type', 'Chatbot Inquiry') // Default value
+        projectFormData.append('project_details', formData.requirements)
+        projectFormData.append('project_nda', '0 - Message from Chatbot') // Default no NDA
+
+        const response = await postContactForm(projectFormData)
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = {}
+        }
+
+        // Check for success status
+        const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
+        
+        if (!isSuccess) {
+          toast.error('Failed to submit your project details. Please try again.')
+          return
+        }
+
+        toast.success('Your project details have been submitted successfully!')
         setChatStage('success')
       } else {
-        alert('There was an issue submitting your information. Please try again or contact us directly.')
+        // Note: hire-team is handled by handleHireTeamSelectionSubmit, not here
+        // Other categories - Use Next.js API (fallback for future categories)
+        const submissionData = new FormData()
+        submissionData.append('name', formData.name)
+        submissionData.append('email', formData.email)
+        submissionData.append('selectedService', formData.selectedService)
+        submissionData.append('category', selectedOption)
+        submissionData.append('requirements', formData.requirements)
+        submissionData.append('submittedAt', new Date().toISOString())
+
+        const response = await fetch('/api/chatbot/submit', {
+          method: 'POST',
+          body: submissionData
+        })
+
+        let data
+        try {
+          data = await response.json()
+        } catch {
+          data = {}
+        }
+
+        // Check for success status
+        const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
+        
+        if (isSuccess) {
+          toast.success('Your information has been submitted successfully!')
+          setChatStage('success')
+        } else {
+          toast.error('Failed to submit your information. Please try again.')
+        }
       }
     } catch (error) {
       console.error('Submission error:', error)
-      alert('There was an issue submitting your information. Please try again or contact us directly.')
+      toast.error('Failed to submit your information. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -732,21 +806,6 @@ export default function ChatBot() {
                       </div>
                     ))}
 
-                    {/* Other Option */}
-                    <div className='developer-category other-input'>
-                      <h4 className='category-title'>Other</h4>
-                      <div className='developer-options'>
-                        <input
-                          type='text'
-                          name='otherDeveloper'
-                          value={formData.otherDeveloper}
-                          onChange={handleInputChange}
-                          placeholder='Specify other developer type...'
-                          className='form-input'
-                        />
-                      </div>
-                    </div>
-
                     {/* Additional Notes/Description */}
                     <div className='developer-category notes-input'>
                       <h4 className='category-title'>Additional Notes (Optional)</h4>
@@ -853,7 +912,7 @@ export default function ChatBot() {
                     {/* Job Application Specific Fields */}
                     {selectedOption === 'apply-job' && (
                       <>
-                        {/* Position */}
+                        {/* Position/Role */}
                         <div className='form-group'>
                           <label htmlFor='position'>Position/Role *</label>
                           <input
@@ -866,6 +925,21 @@ export default function ChatBot() {
                             className={`form-input ${formErrors.position ? 'error' : ''}`}
                           />
                           {formErrors.position && <span className='error-text'>{formErrors.position}</span>}
+                        </div>
+
+                        {/* Phone Number */}
+                        <div className='form-group'>
+                          <label htmlFor='phone'>Contact Number *</label>
+                          <input
+                            type='tel'
+                            id='phone'
+                            name='phone'
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            placeholder='e.g., +1234567890'
+                            className={`form-input ${formErrors.phone ? 'error' : ''}`}
+                          />
+                          {formErrors.phone && <span className='error-text'>{formErrors.phone}</span>}
                         </div>
 
                         {/* Years of Experience */}
@@ -881,39 +955,6 @@ export default function ChatBot() {
                             className={`form-input ${formErrors.experience ? 'error' : ''}`}
                           />
                           {formErrors.experience && <span className='error-text'>{formErrors.experience}</span>}
-                        </div>
-
-                        {/* Skills */}
-                        <div className='form-group'>
-                          <label htmlFor='skills'>Key Skills *</label>
-                          <input
-                            type='text'
-                            id='skills'
-                            name='skills'
-                            value={formData.skills}
-                            onChange={handleInputChange}
-                            placeholder='e.g., React, Node.js, MongoDB, AWS'
-                            className={`form-input ${formErrors.skills ? 'error' : ''}`}
-                          />
-                          {formErrors.skills && <span className='error-text'>{formErrors.skills}</span>}
-                        </div>
-
-                        {/* Portfolio URL */}
-                        <div className='form-group'>
-                          <label htmlFor='portfolioUrl'>
-                            Portfolio/LinkedIn URL 
-                            <span className='optional'>(Optional)</span>
-                          </label>
-                          <input
-                            type='url'
-                            id='portfolioUrl'
-                            name='portfolioUrl'
-                            value={formData.portfolioUrl}
-                            onChange={handleInputChange}
-                            placeholder='https://linkedin.com/in/yourprofile'
-                            className={`form-input ${formErrors.portfolioUrl ? 'error' : ''}`}
-                          />
-                          {formErrors.portfolioUrl && <span className='error-text'>{formErrors.portfolioUrl}</span>}
                         </div>
 
                         {/* Resume Upload */}
@@ -995,33 +1036,47 @@ export default function ChatBot() {
                           </div>
                           {formErrors.resume && <span className='error-text'>{formErrors.resume}</span>}
                         </div>
+
+                         {/* Cover Letter */}
+                         <div className='form-group'>
+                          <label htmlFor='coverLetter'>Cover Letter / Why You? *</label>
+                          <textarea
+                            id='coverLetter'
+                            name='coverLetter'
+                            value={formData.coverLetter}
+                            onChange={handleInputChange}
+                            placeholder='Tell us why you would be a great fit for this role...'
+                            rows='4'
+                            className={`form-input ${formErrors.coverLetter ? 'error' : ''}`}
+                          />
+                          {formErrors.coverLetter && <span className='error-text'>{formErrors.coverLetter}</span>}
+                        </div>
                       </>
                     )}
 
-                    {/* Requirements - Dynamic based on selection */}
-                    <div className='form-group'>
-                      <label htmlFor='requirements'>
-                        {selectedOption === 'hire-team' && 'Team Requirements *'}
-                        {selectedOption === 'new-project' && 'Project Requirements *'}
-                        {selectedOption === 'apply-job' && 'Cover Letter / Why You? *'}
-                      </label>
-                      <textarea
-                        id='requirements'
-                        name='requirements'
-                        value={formData.requirements}
-                        onChange={handleInputChange}
-                        placeholder={
-                          selectedOption === 'hire-team' 
-                            ? 'e.g., Need 2 Flutter developers for 6 months, experience with Firebase and REST APIs...'
-                            : selectedOption === 'new-project'
-                            ? 'e.g., I need a mobile app for e-commerce with payment gateway integration...'
-                            : 'Tell us why you would be a great fit for this role...'
-                        }
-                        rows='4'
-                        className={`form-input ${formErrors.requirements ? 'error' : ''}`}
-                      />
-                      {formErrors.requirements && <span className='error-text'>{formErrors.requirements}</span>}
-                    </div>
+                    {/* Requirements - Only for non-job categories */}
+                    {selectedOption !== 'apply-job' && (
+                      <div className='form-group'>
+                        <label htmlFor='requirements'>
+                          {selectedOption === 'hire-team' && 'Team Requirements *'}
+                          {selectedOption === 'new-project' && 'Brief Your Details *'}
+                        </label>
+                        <textarea
+                          id='requirements'
+                          name='requirements'
+                          value={formData.requirements}
+                          onChange={handleInputChange}
+                          placeholder={
+                            selectedOption === 'hire-team' 
+                              ? 'e.g., Need 2 Flutter developers for 6 months, experience with Firebase and REST APIs...'
+                              : 'Tell us about your project requirements...'
+                          }
+                          rows='6'
+                          className={`form-input ${formErrors.requirements ? 'error' : ''}`}
+                        />
+                        {formErrors.requirements && <span className='error-text'>{formErrors.requirements}</span>}
+                      </div>
+                    )}
 
                     {/* Submit Button */}
                     <button
