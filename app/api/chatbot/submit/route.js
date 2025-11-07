@@ -316,7 +316,7 @@ async function sendEmail(transporter, data) {
     html: generateEmailHTML(data),
     replyTo: data.email
   }
-console.log(mailOptions,'mailOptions')
+// console.log(mailOptions,'mailOptions')
   // Add resume attachment if present
   if (data.resume) {
     try {
