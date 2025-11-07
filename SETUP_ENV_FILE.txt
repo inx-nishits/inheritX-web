@@ -17,7 +17,7 @@ MAIL_USER=your-email@gmail.com
 MAIL_PASS=xxxx-xxxx-xxxx-xxxx
 
 # Step 3: Email recipient (leave as is or change)
-MAIL_TO=nishit.s@inheritx.com
+MAIL_TO=contact@inheritx.com
 
 # ===================================
 # ADMIN LOGIN CREDENTIALS

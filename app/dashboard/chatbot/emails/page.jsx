@@ -149,7 +149,7 @@ export default function EmailDraftsPanel() {
                     </div>
                     <div style={styles.emailTo}>
                       <span style={styles.toLabel}>To:</span>
-                      <span style={styles.toText}>{process.env.NEXT_PUBLIC_MAIL_TO || 'nishit.s@inheritx.com'}</span>
+                      <span style={styles.toText}>{process.env.NEXT_PUBLIC_MAIL_TO || 'contact@inheritx.com'}</span>
                     </div>
                     <div style={styles.emailDate}>
                       <span style={styles.dateLabel}>Date:</span>

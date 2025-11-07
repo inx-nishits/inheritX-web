@@ -286,7 +286,7 @@ async function sendEmail(transporter, data) {
   // Determine recipient based on category
   // - hire-team/new project/others -> contact@inheritx.com
   // Note: apply-job is now handled directly via WordPress API from frontend
-  const toAddress = 'nishit.s@inheritx.com'
+  const toAddress = process.env.MAIL_TO || 'contact@inheritx.com'
 
   const mailOptions = {
     from: `"InheritX Chatbot" <${process.env.MAIL_USER}>`,
