@@ -556,9 +556,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Migration Service</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize their infrastructure and optimize performance seamlessly.
                 </div>
@@ -577,9 +577,9 @@ export default function HireExpertContent() {
                 <div className='icon'>
                   <i className='icon-chat-2'></i>
                 </div>
-                <h5 className='fw-4 title'>
+                <h4 className='fw-4 title fs-2'>
                   Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
-                </h5>
+                </h4>
                 <a
                   href='/contact'
                   className='tf-btn no-bg text-underline hover-color-main-dark'

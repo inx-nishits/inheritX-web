@@ -3,7 +3,7 @@
 
 
 :root {
-  --primary: #00C5DE;
+  --primary: #00BED4;
   --main-dark: #19272B;
   --stroke-2: #FFFFFF26;
   --surface: #E1F2F2;
@@ -4658,7 +4658,7 @@ a.mapboxgl-ctrl-logo {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: linear-gradient(180deg, rgba(67, 186, 255, 0) 42.89%, #00C5DE 100%);
+  background: linear-gradient(180deg, rgba(67, 186, 255, 0) 42.89%, #00BED4 100%);
 }
 .project-item.style-2 .item-content {
   max-width: 50%;
@@ -4693,7 +4693,7 @@ a.mapboxgl-ctrl-logo {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: linear-gradient(180deg, rgba(67, 186, 255, 0) 42.89%, #00C5DE 100%);
+  background: linear-gradient(180deg, rgba(67, 186, 255, 0) 42.89%, #00BED4 100%);
 }
 .project-item.project-gird-item .item-content {
   padding: 0 !important;
@@ -6662,12 +6662,12 @@ color: var(--primary) !important;
 
 
 .year-animate {
-  color: #00C5DE; /* base color */
+  color: #00BED4; /* base color */
   font-weight: bold;
   position: relative;
   display: inline-block;
 
-  background: linear-gradient(90deg, #00C5DE, #6C5BFF, #00F0FF, #00C5DE);
+  background: linear-gradient(90deg, #00BED4, #6C5BFF, #00F0FF, #00BED4);
   background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6704,7 +6704,7 @@ color: var(--primary) !important;
 .icon-phone{display:inline-block;transform:scaleX(-1);transform-origin:center}
 
 .swiper-pagination-bullet-active {
-  background: #00C5DE !important;
+  background: #00BED4 !important;
 }
 
 .form-contact-us .error {

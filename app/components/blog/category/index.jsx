@@ -547,7 +547,7 @@ export default function CategoryDetailsPage() {
                     <div className="fl-item" key={`category-${post.id}`}>
                       <div className="tf-post-grid hover-image ">
                         <div className="top">
-                          <Link href={`/blog/${post.slug}`} className="image">
+                          <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                             <BlogImage
                               src={post.feature_image}
                               alt={post.title}

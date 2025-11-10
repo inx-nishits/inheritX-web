@@ -96,22 +96,22 @@ export default function LifeAtInheritX() {
           <div className='mb-4 fw-6'>Follow us for more photos and updates</div>
           <ul className='post-social d-inline-flex align-items-center justify-content-center rg-15 g-20'>
             <li>
-              <Link href='https://www.facebook.com/inheritxSolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://www.facebook.com/inheritxSolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer' aria-label='Visit our Facebook page'>
                 <i className='icon-fb'></i>
               </Link>
             </li>
             <li>
-              <Link href='https://x.com/inheritx' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://x.com/inheritx' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer' aria-label='Visit our Twitter/X page'>
                 <i className='icon-X'></i>
               </Link>
             </li>
             <li>
-              <Link href='https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer' aria-label='Visit our LinkedIn page'>
                 <i className='icon-linkedin'></i>
               </Link>
             </li>
             <li>
-              <Link href='https://www.instagram.com/inheritxsolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer'>
+              <Link href='https://www.instagram.com/inheritxsolutions/' className='icon-social d-inline-flex align-items-center justify-content-center rounded-circle border' style={{ width: 44, height: 44 }} target='_blank' rel='noopener noreferrer' aria-label='Visit our Instagram page'>
                 <i className='icon-instagram'></i>
               </Link>
             </li>

@@ -50,7 +50,7 @@ export default function Footer() {
           <div className='footer-middle flex justify-content-between'>
             <div className='left'>
               <div className='logo logo-header mb-5'>
-                <Link href='/' className='d-flex align-items-center'>
+                <Link href='/' className='d-flex align-items-center' aria-label='InheritX - Go to homepage'>
                   <Image src='/image/logo/inx-logo.svg' alt='logo' width={250} height={40} />
                 </Link>
               </div>
@@ -448,7 +448,7 @@ export default function Footer() {
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }
               }}
-              aria-label='Go to top'
+              aria-label='Scroll back to top'
             >
               <i className='icon-arrow-up'></i>
             </a>

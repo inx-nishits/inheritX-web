@@ -310,9 +310,9 @@ export default function ServicesContent() {
                 <div className='icon'>
                   <i className='icon-chat-2'></i>
                 </div>
-                <h5 className='fw-4 title'>
+                <h4 className='fw-4 title fs-2'>
                   Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
-                </h5>
+                </h4>
                 <a
                   href='/contact'
                   className='tf-btn no-bg text-underline hover-color-main-dark'

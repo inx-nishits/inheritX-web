@@ -89,7 +89,7 @@ function generateEmailHTML(data) {
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
         }
         .header { 
-          background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%); 
+          background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%); 
           color: white; 
           padding: 30px 20px; 
           text-align: center; 
@@ -116,7 +116,7 @@ function generateEmailHTML(data) {
         }
         .label { 
           font-weight: bold; 
-          color: #00C5DE; 
+          color: #00BED4; 
           margin-bottom: 5px; 
           font-size: 14px; 
           display: block; 
@@ -135,7 +135,7 @@ function generateEmailHTML(data) {
           font-size: 13px; 
         }
         .footer a { 
-          color: #00C5DE; 
+          color: #00BED4; 
           text-decoration: none; 
         }
         .footer a:hover { 

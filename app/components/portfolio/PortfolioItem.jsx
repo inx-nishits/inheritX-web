@@ -12,7 +12,7 @@ export default function PortfolioItem({ item, category }) {
   return (
     <div className='col-sm-6 col-md-4 col-lg-3'>
       <div className='project-gird-item project-item'>
-        <Link href={`/porfolio-details/${item.slug}${getCategoryParam()}`} className='image w-100 rounded-4 overflow-hidden'>
+        <Link href={`/porfolio-details/${item.slug}${getCategoryParam()}`} className='image w-100 rounded-4 overflow-hidden' aria-label={`View ${item.title} portfolio details`}>
           <img 
             src={item.thumb} 
             data-src={item.thumb} 

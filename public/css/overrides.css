@@ -2195,7 +2195,7 @@ div .page-title-home.hero-fullscreen {
 }
 
 .hero-typing-text .typing-cursor {
-  color: #00C5DE;
+  color: #00BED4;
   /* Theme blue color */
   font-weight: 400;
   margin-left: 2px;
@@ -2450,7 +2450,7 @@ div .page-title-home.hero-fullscreen {
 
 /* Enhanced cursor with typing effect */
 .typing-cursor {
-  color: #00C5DE;
+  color: #00BED4;
   font-weight: 400;
   margin-left: 2px;
   font-size: inherit;
@@ -2543,7 +2543,7 @@ div .page-title-home.hero-fullscreen {
   left: 0;
   width: 2px;
   height: 0;
-  background: linear-gradient(to bottom, transparent, #00C5DE, transparent);
+  background: linear-gradient(to bottom, transparent, #00BED4, transparent);
   transform: translateY(-50%);
   animation: typing-sound-wave 0.1s ease-out;
   opacity: 0;

@@ -739,10 +739,11 @@ export default function HomeContent() {
                         <Link
                           href='/services/web-app-development'
                           className='image rounded-4 overflow-hidden'
+                          aria-label='View Web Development services'
                         >
                           <Image
                             src='/image/home/website-dev.jpg'
-                            alt=''
+                            alt='Web Development services'
                             className='lazyload'
                             fill
                           />
@@ -778,10 +779,11 @@ export default function HomeContent() {
                         <Link
                           href='/services/machine-learning-development'
                           className='image rounded-4 overflow-hidden'
+                          aria-label='View Artificial Intelligence services'
                         >
                           <Image
                             src='/image/home/artificial-int.jpg'
-                            alt=''
+                            alt='Artificial Intelligence services'
                             className='lazyload'
                             fill
                           />
@@ -828,10 +830,11 @@ export default function HomeContent() {
                         <Link
                           href='/services/mobile-app-development'
                           className='image rounded-4 overflow-hidden'
+                          aria-label='View Mobile App Development services'
                         >
                           <Image
                             src='/image/home/mobile-dev.jpg'
-                            alt=''
+                            alt='Mobile App Development services'
                             className='lazyload'
                             fill
                           />
@@ -879,10 +882,11 @@ export default function HomeContent() {
                         <Link
                           href='/services'
                           className='image rounded-4 overflow-hidden'
+                          aria-label='View DevOps services'
                         >
                           <Image
                             src='/image/home/services-3.jpg'
-                            alt=''
+                            alt='DevOps services'
                             className='lazyload'
                             fill
                           />
@@ -929,10 +933,11 @@ export default function HomeContent() {
                         <Link
                           href='/services/google-cloud-services'
                           className='image rounded-4 overflow-hidden'
+                          aria-label='View Cloud Computing services'
                         >
                           <Image
                             src='/image/home/services-5.jpg'
-                            alt=''
+                            alt='Cloud Computing services'
                             className='lazyload'
                             fill
                           />
@@ -1210,9 +1215,9 @@ export default function HomeContent() {
                 <div className='icon'>
                   <i className='icon-chat-2'></i>
                 </div>
-                <h5 className='fw-4 title'>
+                <h3 className='fw-4 title fs-2'>
                   Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
-                </h5>
+                </h3>
                 <a
                   href='/contact'
                   className='tf-btn no-bg text-underline hover-color-main-dark'

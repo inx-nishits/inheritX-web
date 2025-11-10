@@ -378,11 +378,14 @@ export default function ContactForm({
 
       {/* Math Captcha Row */}
       <div className='d-flex flex-wrap calculation-fields' data-aos='zoom-in'>
-        <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' value={captcha.x} className='text-center p-1 h-full' disabled /></div>
+        <label htmlFor='captcha-x'  className='d-none'>First number</label>
+        <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' id='captcha-x' value={captcha.x} className='text-center p-1 h-full' disabled /></div>
         <label className='check_label px-3'>+</label>
-        <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' value={captcha.y} className='text-center p-1 h-full' disabled /></div>
+        <label htmlFor='captcha-y'  className='d-none'>Second number</label>
+        <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' id='captcha-y' value={captcha.y} className='text-center p-1 h-full' disabled /></div>
         <label className='check_label px-3'>=</label>
-        <div className='col-xl-2 col-lg-4 col-md-4 col-sm-5 col-5'><input type='number' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} /></div>
+        <label htmlFor='captcha-result' className='d-none'>Enter the sum</label>
+        <div className='col-xl-2 col-lg-4 col-md-4 col-sm-5 col-5'><input type='number' id='captcha-result' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} /></div>
       </div>
       {errors.userResult ? <div className='error-important' style={{ marginTop: '10px', fontSize: '17px' }}>{errors.userResult}</div> : null}
 

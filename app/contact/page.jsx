@@ -55,6 +55,7 @@ export default function Page() {
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
+                        aria-label='Visit our Facebook page'
                       >
                         <i className='icon-fb'></i>
                       </a>
@@ -65,6 +66,7 @@ export default function Page() {
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
+                        aria-label='Visit our Twitter/X page'
                       >
                         <i className='icon-X'></i>
                       </a>
@@ -75,6 +77,7 @@ export default function Page() {
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
+                        aria-label='Visit our LinkedIn page'
                       >
                         <i className='icon-linkedin'></i>
                       </a>
@@ -85,6 +88,7 @@ export default function Page() {
                         className='icon-social'
                         target='_blank'
                         rel='noopener noreferrer'
+                        aria-label='Visit our Instagram page'
                       >
                         <i className='icon-instagram'></i>
                       </a>

@@ -222,7 +222,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
             }}
           />
           
-          <Link href={`${detailsBasePath}/${item.slug}`} className='project-image-link d-block w-100 h-100' onClick={() => {
+          <Link href={`${detailsBasePath}/${item.slug}`} className='project-image-link d-block w-100 h-100' aria-label={`View ${item.title} project details`} onClick={() => {
             try {
               sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
               sessionStorage.setItem('inx_restore_projects', '1')

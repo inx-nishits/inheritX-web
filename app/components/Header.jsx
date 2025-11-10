@@ -82,6 +82,7 @@ export default function Header() {
                   className='icon-social'
                   target='_blank'
                   rel='noopener noreferrer'
+                  aria-label='Visit our Facebook page'
                 >
                   <i className='icon-fb'></i>
                 </Link>
@@ -92,6 +93,7 @@ export default function Header() {
                   className='icon-social'
                   target='_blank'
                   rel='noopener noreferrer'
+                  aria-label='Visit our Twitter/X page'
                 >
                   <i className='icon-X'></i>
                 </Link>
@@ -102,6 +104,7 @@ export default function Header() {
                   className='icon-social'
                   target='_blank'
                   rel='noopener noreferrer'
+                  aria-label='Visit our LinkedIn page'
                 >
                   <i className='icon-linkedin'></i>
                 </Link>
@@ -112,6 +115,7 @@ export default function Header() {
                   className='icon-social'
                   target='_blank'
                   rel='noopener noreferrer'
+                  aria-label='Visit our Instagram page'
                 >
                   <i className='icon-instagram'></i>
                 </Link>
@@ -125,7 +129,7 @@ export default function Header() {
         <div className='header-content flex justify-content-between align-items-center'>
           <div className='header-left flex align-items-center'>
             <div className='logo logo-header'>
-              <Link href='/' className='d-flex align-items-center'>
+              <Link href='/' className='d-flex align-items-center' aria-label='InheritX - Go to homepage'>
                 <Image src='/image/logo/inx-logo.svg' alt='InheritX logo' width={250} height={40} priority />
               </Link>
             </div>
@@ -156,7 +160,7 @@ export default function Header() {
             </div>
 
             <div className='mobile-button nav-item d-xl-none'>
-              <a href='#canvasMobile' aria-expanded={isMobileOpen} aria-controls='canvasMobile' onClick={(e) => { e.preventDefault(); setIsMobileOpen(true) }}>
+              <a href='#canvasMobile' aria-expanded={isMobileOpen} aria-controls='canvasMobile' aria-label='Open navigation menu' onClick={(e) => { e.preventDefault(); setIsMobileOpen(true) }}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -172,10 +176,10 @@ export default function Header() {
         id='canvasMobile'
         aria-hidden={!isMobileOpen}
       >
-        <div className='inner-mobile-nav'>
+          <div className='inner-mobile-nav'>
           <div className='top-header-mobi'>
             <div className='logo-mobile'>
-              <Link href='/' onClick={() => { setIsMobileOpen(false); window.scrollTo(0, 0) }}>
+              <Link href='/' onClick={() => { setIsMobileOpen(false); window.scrollTo(0, 0) }} aria-label='InheritX - Go to homepage'>
                 <Image src='/image/logo/inx-logo.svg' alt='InheritX logo' width={250} height={40} priority />
               </Link>
             </div>

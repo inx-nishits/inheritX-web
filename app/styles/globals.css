@@ -603,7 +603,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 
 /* Chat Header */
 .chat-header {
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   color: white;
   padding: 16px 20px;
   display: flex;
@@ -801,7 +801,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 }
 
 .start-chat-btn {
-  background: #00C5DE;
+  background: #00BED4;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -903,7 +903,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 }
 
 .main-menu-btn:hover:not(:disabled) {
-  border-color: #00C5DE;
+  border-color: #00BED4;
   background: linear-gradient(135deg, rgba(0, 197, 222, 0.05) 0%, rgba(0, 163, 184, 0.05) 100%);
   transform: translateX(4px);
   box-shadow: 0 4px 16px rgba(0, 197, 222, 0.15);
@@ -932,7 +932,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 
 .menu-arrow {
   font-size: 20px;
-  color: #00C5DE;
+  color: #00BED4;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -1036,12 +1036,12 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 
 .developer-option-btn:hover {
   background: #f3f4f6;
-  border-color: #00C5DE;
+  border-color: #00BED4;
 }
 
 .developer-option-btn.selected {
   background: #e0f7fa;
-  border-color: #00C5DE;
+  border-color: #00BED4;
   color: #006d7a;
 }
 
@@ -1059,8 +1059,8 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 }
 
 .developer-option-btn.selected .checkbox {
-  background: #00C5DE;
-  border-color: #00C5DE;
+  background: #00BED4;
+  border-color: #00BED4;
   color: white;
 }
 
@@ -1169,7 +1169,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 }
 
 .user-message .message-content {
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   color: white;
   border-bottom-right-radius: 4px;
 }
@@ -1204,7 +1204,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 .typing-indicator span {
   width: 8px;
   height: 8px;
-  background: #00C5DE;
+  background: #00BED4;
   border-radius: 50%;
   display: inline-block;
   animation: typing 1.4s infinite;
@@ -1258,7 +1258,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 .quick-reply-btn {
   background: linear-gradient(135deg, rgba(0, 197, 222, 0.08) 0%, rgba(0, 163, 184, 0.08) 100%);
   border: 1px solid rgba(0, 197, 222, 0.2);
-  color: #00C5DE;
+  color: #00BED4;
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 13px;
@@ -1272,9 +1272,9 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 }
 
 .quick-reply-btn:hover {
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   color: white;
-  border-color: #00C5DE;
+  border-color: #00BED4;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 197, 222, 0.2);
 }
@@ -1302,7 +1302,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 }
 
 .chat-input-wrapper:focus-within {
-  border-color: #00C5DE;
+  border-color: #00BED4;
   box-shadow: 0 0 0 3px rgba(0, 197, 222, 0.1);
 }
 
@@ -1324,7 +1324,7 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
 .chat-send-btn {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   color: white;
   border: none;
   border-radius: 50%;
@@ -1591,7 +1591,7 @@ textarea.form-input {
 }
 
 .file-upload-content:hover {
-  border-color: #00C5DE;
+  border-color: #00BED4;
   background: linear-gradient(135deg, rgba(0, 197, 222, 0.05) 0%, rgba(0, 197, 222, 0.02) 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 197, 222, 0.1);
@@ -1600,7 +1600,7 @@ textarea.form-input {
 .upload-icon {
   width: 36px;
   height: 36px;
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1625,7 +1625,7 @@ textarea.form-input {
   }
 
 .upload-text strong {
-  color: #00C5DE;
+  color: #00BED4;
   font-weight: 600;
 }
 
@@ -1688,7 +1688,7 @@ textarea.form-input {
 }
 
 .file-header svg {
-  color: #00C5DE;
+  color: #00BED4;
   flex-shrink: 0;
 }
 
@@ -1733,7 +1733,7 @@ textarea.form-input {
 
 .file-change-btn {
   background: rgba(0, 197, 222, 0.1);
-  color: #00C5DE;
+  color: #00BED4;
   border: 1px solid rgba(0, 197, 222, 0.3);
 }
 
@@ -1758,7 +1758,7 @@ textarea.form-input {
 .form-submit-btn {
   margin-top: 4px;
   padding: 10px 20px;
-  background: #00C5DE;
+  background: #00BED4;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1889,7 +1889,7 @@ textarea.form-input {
 
 .back-to-menu-btn {
   padding: 10px 20px;
-  background: #00C5DE;
+  background: #00BED4;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1913,7 +1913,7 @@ textarea.form-input {
 .chat-toggle-btn {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   color: white;
   border: none;
   border-radius: 50%;
@@ -1988,7 +1988,7 @@ textarea.form-input {
 /* Minimized Chat Bar */
 .chat-minimized-bar {
   width: 320px;
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 197, 222, 0.4);
   cursor: pointer;
@@ -2079,11 +2079,11 @@ textarea.form-input {
   opacity: 1;
   cursor: pointer;
   pointer-events: auto;
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
 }
 
 .chat-toggle-btn.chat-open:hover {
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
   transform: scale(1.1) translateY(-2px);
   box-shadow: 0 12px 32px rgba(0, 197, 222, 0.5);
 }
@@ -2094,7 +2094,7 @@ textarea.form-input {
   display: flex;
   opacity: 1;
   pointer-events: auto;
-  background: linear-gradient(135deg, #00C5DE 0%, #00A3B8 100%);
+  background: linear-gradient(135deg, #00BED4 0%, #00A3B8 100%);
 }
 
 /* Responsive Design */
@@ -2784,4 +2784,9 @@ textarea.form-input {
   .project-item.project-gird-item .image::after {
     display: none !important;
   }
+}
+@media (max-width: 575px) {
+.hover-image .image img {
+  object-fit: initial !important;
+}
 }

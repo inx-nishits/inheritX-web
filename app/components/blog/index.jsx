@@ -303,7 +303,7 @@ export default function BlogListPage() {
         }
         
         .sw-blog-popular .swiper-pagination-bullet-active {
-          background: #00C5DE !important;
+          background: #00BED4 !important;
           transform: scale(1.2) !important;
           opacity: 1 !important;
         }
@@ -325,7 +325,7 @@ export default function BlogListPage() {
         }
         
         .sw-blog-popular .swiper-pagination .swiper-pagination-bullet-active {
-          background: #00C5DE !important;
+          background: #00BED4 !important;
           opacity: 1 !important;
         }
         
@@ -352,7 +352,7 @@ export default function BlogListPage() {
         }
         
         .sw-blog-trending .swiper-pagination-bullet-active {
-          background: #00C5DE !important;
+          background: #00BED4 !important;
           transform: scale(1.2) !important;
           opacity: 1 !important;
         }
@@ -374,7 +374,7 @@ export default function BlogListPage() {
         }
         
         .sw-blog-trending .swiper-pagination .swiper-pagination-bullet-active {
-          background: #00C5DE !important;
+          background: #00BED4 !important;
           opacity: 1 !important;
         }
         
@@ -711,7 +711,7 @@ export default function BlogListPage() {
                                         <div className="fl-item" key={`single-${post.id}`}>
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
-                                                    <Link href={`/blog/${post.slug}`} className="image">
+                                                    <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title}
@@ -741,7 +741,7 @@ export default function BlogListPage() {
                                         <div className="fl-item" key={`recent-${post.id}`}>
                                             <div className="tf-post-grid hover-image ">
                                                 <div className="top">
-                                                    <Link href={`/blog/${post.slug}`} className="image">
+                                                    <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title}
@@ -871,7 +871,7 @@ export default function BlogListPage() {
                                         <div className="swiper-slide" key={`popular-${post.id}`}>
                                             <div className="tf-post-grid hover-image">
                                                 <div className="top">
-                                                    <Link href={`/blog/${post.slug}`} className="image">
+                                                    <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title || ''}
@@ -963,7 +963,7 @@ export default function BlogListPage() {
                                         <div className="swiper-slide" key={`trending-${post.id}`}>
                                             <div className="tf-post-grid hover-image">
                                                 <div className="top">
-                                                    <Link href={`/blog/${post.slug}`} className="image">
+                                                    <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                                                         <BlogImage
                                                             src={post.feature_image}
                                                             alt={post.title || ''}

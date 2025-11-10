@@ -7,7 +7,7 @@ export default function BlogImage({
     src, 
     alt = '', 
     className = '', 
-    fallbackSrc = '/image/blog/blog-fallback.jpg',
+    fallbackSrc = '/image/blog/blog-fallback-b.jpg',
     width = 400,
     height = 300,
     priority = false,
@@ -66,9 +66,20 @@ export default function BlogImage({
                     display: block;
                 }
                 .image-container.ratio {
-                    height: auto;
+                    height: 260px;
                     aspect-ratio: ${aspectRatio || 'auto'};
                 }
+                
+                /* Responsive: auto height on mobile */
+                @media (max-width: 575px) {
+                    .image-container.ratio {
+                        height: auto;
+                    }
+                        .hover-image .image img {
+                        object-fit: initial !important;
+                        }
+                }
+                
                 /* Cut-corner shape (8px default) */
                 .image-container.cut {
                     --cut: 12px;
