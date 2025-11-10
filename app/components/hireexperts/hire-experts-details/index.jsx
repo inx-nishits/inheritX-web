@@ -38,10 +38,10 @@ export default function HireDetailsPage({ params }) {
   useEffect(() => {
     if (full) {
       const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com';
-      
+
       // Update document title
       document.title = `${full.heading} | InheritX Experts`;
-      
+
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
@@ -85,13 +85,13 @@ export default function HireDetailsPage({ params }) {
             "description": "160 Hours/Month - Email, Teams, Phone communication"
           },
           {
-            "@type": "Offer", 
+            "@type": "Offer",
             "name": "Part-Time Hiring",
             "description": "80 Hours/Month - Email, Teams, Phone communication"
           },
           {
             "@type": "Offer",
-            "name": "Hourly Hiring", 
+            "name": "Hourly Hiring",
             "description": "Pay Per Use - Email, Teams, Phone communication"
           }
         ]

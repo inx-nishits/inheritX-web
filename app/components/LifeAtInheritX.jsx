@@ -7,22 +7,35 @@ export default function LifeAtInheritX() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
 
+  // Images ordered by modification date (newest first)
   const galleryImages = [
-    '/image/image-gallery/gallery-1.jpg',
-    '/image/image-gallery/gallery-2.jpg',
-    '/image/image-gallery/gallery-3.jpg',
-    '/image/image-gallery/gallery-4.jpg',
-    '/image/image-gallery/gallery-5.jpg',
-    '/image/image-gallery/gallery-6.jpg',
-    '/image/image-gallery/gallery-7.jpg',
-    '/image/image-gallery/gallery-8.jpg',
-    '/image/image-gallery/gallery-9.jpg',
-    '/image/image-gallery/gallery-10.jpg',
-    '/image/image-gallery/gallery-11.jpg',
-    '/image/image-gallery/gallery-12.jpg',
-    '/image/image-gallery/gallery-13.jpg',
-    '/image/image-gallery/gallery-14.jpg',
-    '/image/image-gallery/gallery-15.jpg'
+    '/image/image-gallery/gallery-27.jpg', // Nov 10, 2025 4:38 PM
+    '/image/image-gallery/gallery-26.jpg', // Nov 10, 2025 4:35 PM
+    '/image/image-gallery/gallery-25.jpg', // Nov 10, 2025 4:38 PM
+    '/image/image-gallery/gallery-24.jpg', // Nov 10, 2025 4:35 PM
+    '/image/image-gallery/gallery-23.jpg', // Nov 10, 2025 4:30 PM
+    '/image/image-gallery/gallery-22.jpg', // Nov 10, 2025 4:29 PM
+    '/image/image-gallery/gallery-21.jpg', // Nov 10, 2025 4:29 PM
+    '/image/image-gallery/gallery-20.jpg', // Nov 10, 2025 4:28 PM
+    '/image/image-gallery/gallery-19.jpg', // Nov 10, 2025 4:26 PM
+    '/image/image-gallery/gallery-18.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-17.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-16.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-15.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-14.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-13.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-12.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-11.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-10.jpg', // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-9.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-8.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-7.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-6.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-5.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-4.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-3.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-2.jpg',  // Oct 17, 2025 11:42 AM
+    '/image/image-gallery/gallery-1.jpg',  // Oct 17, 2025 11:42 AM
   ]
   const gridImages = galleryImages.slice(0, 8)
 
@@ -85,7 +98,7 @@ export default function LifeAtInheritX() {
                 style={{ cursor: 'pointer' }}
               >
                 <div className='position-relative' style={{ paddingBottom: '75%' }}>
-                  <Image src={src} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw' className='object-fit-cover' priority={idx < 4} quality={90} unoptimized />
+                  <Image src={src} alt='AI Banner' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw' className='object-fit-cover' priority={idx < 4} quality={90} unoptimized />
                 </div>
               </button>
             </div>

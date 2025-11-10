@@ -34,10 +34,24 @@ const nextConfig = {
   // Optimize production builds
   productionBrowserSourceMaps: false,
   
-  // Add cache headers for static assets under public/
+  // Add cache headers for static assets
   // This sets 1 year cache for all static assets (immutable means they won't change)
   async headers() {
     return [
+      // Next.js static files - These are hashed and immutable, perfect for long caching
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Next.js image optimization files
+      {
+        source: '/_next/image/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
       // JavaScript files in /js directory (matches all .js files)
       {
         source: '/js/:path*',
@@ -71,6 +85,25 @@ const nextConfig = {
         source: '/fonts/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Favicon and other root-level static files
+      {
+        source: '/favicon.ico',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400' }
+        ]
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400' }
         ]
       }
     ]

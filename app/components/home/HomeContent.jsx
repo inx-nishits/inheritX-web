@@ -12,7 +12,7 @@ const TestimonialSection = dynamic(() => import('../TestimonialSection'), { ssr:
 const OurPartners = dynamic(() => import('../OurPartners'))
 const OurValuableClients = dynamic(() => import('../OurValuableClients'))
 // TypingAnimation only loads on desktop for better mobile performance
-const TypingAnimation = dynamic(() => import('../TypingAnimation'), { 
+const TypingAnimation = dynamic(() => import('../TypingAnimation'), {
   ssr: false,
   loading: () => <span>Empowering the Future with Mobility & AI Innovation</span>
 })
@@ -147,7 +147,7 @@ export default function HomeContent() {
                   </p>
                 </div>
 
-                <Link href='/contact' className='tf-btn'>
+                <Link href='/contact' className='tf-btn' aria-label='Click for free consultancy'>
                   <span>Click For Free Consultancy</span>
                   <i className='icon-arrow-right'></i>
                 </Link>
@@ -175,143 +175,143 @@ export default function HomeContent() {
 
 
       {!isMobile && (
-      <div className='tf-container tf-spacing-2'>
-        {/* Counter Section Title */}
-        <div className='row mb-5 mb-lg-5 pb-lg-5'>
-          <div className='col-12 text-center'>
-            <div className='heading-section'>
-              <div className='sub-title body-2 fw-7 mb-17'>
-                Our <span className='text-primary'>Achievements</span>
+        <div className='tf-container tf-spacing-2'>
+          {/* Counter Section Title */}
+          <div className='row mb-5 mb-lg-5 pb-lg-5'>
+            <div className='col-12 text-center'>
+              <div className='heading-section'>
+                <div className='sub-title body-2 fw-7 mb-17'>
+                  Our <span className='text-primary'>Achievements</span>
+                </div>
+                <h2 className='title fw-6 mb-4'>
+                  <span className='fw-3'>Numbers That Speak</span>
+                  &nbsp;for Our Excellence
+                </h2>
+                <p className='fs-2 lh-30'>
+                  Trusted by clients worldwide, we deliver exceptional results that drive business growth and innovation.
+                </p>
               </div>
-              <h2 className='title fw-6 mb-4'>
-                <span className='fw-3'>Numbers That Speak</span>
-                &nbsp;for Our Excellence
-              </h2>
-              <p className='fs-2 lh-30'>
-                Trusted by clients worldwide, we deliver exceptional results that drive business growth and innovation.
-              </p>
+            </div>
+          </div>
+
+          {/* Enhanced Counter Grid */}
+          <div className='row g-4'>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer text-white'
+                      data-to='400'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='text-white ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-white text-center'>
+                    Verified 5* Client Reviews
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer color-primary'
+                      data-to='850'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='color-primary ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-center'>
+                    Projects Delivered Successfully
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer text-white'
+                      data-to='97'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='text-white ms-1'>%</span>
+                  </div>
+                  <p className='title-counter fw-5 text-white text-center'>
+                    Client Retention Ratio
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer color-primary'
+                      data-to='40'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='color-primary ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-center'>
+                    Industries Served
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer text-white'
+                      data-to='120'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='text-white ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-white text-center'>
+                    Development Staff
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
+                      24/7
+                    </span>
+                  </div>
+                  <p className='title-counter fw-5 text-black text-center'>
+                    Support
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Enhanced Counter Grid */}
-        <div className='row g-4'>
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className='number odometer text-white'
-                    data-to='400'
-                    data-inviewport='yes'
-                  >
-                    0
-                  </span>
-                  <span className='text-white ms-1'>+</span>
-                </div>
-                <p className='title-counter fw-5 text-white text-center'>
-                  Verified 5* Client Reviews
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className='number odometer color-primary'
-                    data-to='850'
-                    data-inviewport='yes'
-                  >
-                    0
-                  </span>
-                  <span className='color-primary ms-1'>+</span>
-                </div>
-                <p className='title-counter fw-5 text-center'>
-                  Projects Delivered Successfully
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className='number odometer text-white'
-                    data-to='97'
-                    data-inviewport='yes'
-                  >
-                    0
-                  </span>
-                  <span className='text-white ms-1'>%</span>
-                </div>
-                <p className='title-counter fw-5 text-white text-center'>
-                  Client Retention Ratio
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className='number odometer color-primary'
-                    data-to='40'
-                    data-inviewport='yes'
-                  >
-                    0
-                  </span>
-                  <span className='color-primary ms-1'>+</span>
-                </div>
-                <p className='title-counter fw-5 text-center'>
-                  Industries Served
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className='number odometer text-white'
-                    data-to='120'
-                    data-inviewport='yes'
-                  >
-                    0
-                  </span>
-                  <span className='text-white ms-1'>+</span>
-                </div>
-                <p className='title-counter fw-5 text-white text-center'>
-                  Development Staff
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
-                    24/7
-                  </span>
-                </div>
-                <p className='title-counter fw-5 text-black text-center'>
-                  Support
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       )}
 
       {/* <!-- /.page-title --> */}
@@ -324,7 +324,7 @@ export default function HomeContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOps Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
+                  <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOps Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
                   <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOps Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
                   <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOps Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
                   <div className='big-text'>AWS Experts <span className='text-stroke'>Vibe Code</span> Agentic AI Makers <span className='text-stroke'>Gen AI</span> DevOps Specialist <span className='text-stroke'>Dedicated Developers</span>&nbsp;</div>
@@ -365,7 +365,7 @@ export default function HomeContent() {
                 <div className='wg-curve-img'>
                   <Image
                     src='/image/page-title/rotate-text.svg'
-                    alt=''
+                    alt='Placeholder Alt'
                     width={300}
                     height={300}
                     className='rotating-image'
@@ -428,6 +428,7 @@ export default function HomeContent() {
                     <Link
                       href='/about-us'
                       className='tf-btn no-bg text-underline'
+                      aria-label='Learn more about InheritX Solutions'
                     >
                       <span>Learn More About Us</span>
                       <i className='icon-arrow-right'></i>
@@ -440,157 +441,157 @@ export default function HomeContent() {
         </section>
 
         {!isMobile && (
-        <section className='section-counting tf-spacing-2'>
-          <div className='mask mask-1'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='700'
-              height='700'
-              fill='none'
-            >
-              <circle
-                cx='350'
-                cy='350'
-                r='285'
-                stroke='url(#a2)'
-                strokeWidth='130'
-              />
-              <defs>
-                <linearGradient
-                  id='a2'
-                  x1='154'
-                  x2='497.875'
-                  y1='61.688'
-                  y2='589.75'
-                >
-                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
-                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className='tf-container w-1810'>
-            <div className='section-counting-inner flex'>
-              <div className='left rounded-4 overflow-hidden'>
-                <div className={`image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
-                  <Image
-                    src='/image/page-title/company-2.jpg'
-                    alt=''
-                    className='lazyload'
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-
-                <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
-                  <div className='text relative'>
-                    <p className='fs-20 fw-6'>
-                      600+ Trusted
-                      <br />
-                      Global Clients
-                    </p>
+          <section className='section-counting tf-spacing-2'>
+            <div className='mask mask-1'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='700'
+                height='700'
+                fill='none'
+              >
+                <circle
+                  cx='350'
+                  cy='350'
+                  r='285'
+                  stroke='url(#a2)'
+                  strokeWidth='130'
+                />
+                <defs>
+                  <linearGradient
+                    id='a2'
+                    x1='154'
+                    x2='497.875'
+                    y1='61.688'
+                    y2='589.75'
+                  >
+                    <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                    <stop offset='1' stopColor='#fff' stopOpacity='0' />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div className='tf-container w-1810'>
+              <div className='section-counting-inner flex'>
+                <div className='left rounded-4 overflow-hidden'>
+                  <div className={`image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
                     <Image
-                      src='/image/icon/icon-box-avatar.png'
+                      src='/image/page-title/company-2.jpg'
+                      alt='Company'
                       className='lazyload'
-                      alt=''
-                      width={40}
-                      height={10}
+                      fill
+                      style={{ objectFit: 'cover' }}
                     />
                   </div>
-                  <div className='list-agent'>
-                    <div className='agent agent-1'>
+
+                  <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
+                    <div className='text relative'>
+                      <p className='fs-20 fw-6'>
+                        600+ Trusted
+                        <br />
+                        Global Clients
+                      </p>
                       <Image
-                        src='/image/home/section-testimonial-1.png'
-                        alt=''
-                        width={45}
-                        height={45}
+                        src='/image/icon/icon-box-avatar.png'
                         className='lazyload'
+                        alt='Placeholder Alt'
+                        width={40}
+                        height={10}
                       />
                     </div>
-                    <div className='agent agent-2'>
-                      <Image
-                        src='/image/home/section-testimonial-2.png'
-                        alt=''
-                        width={45}
-                        height={45}
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-3'>
-                      <Image
-                        src='/image/home/section-testimonial-3.png'
-                        alt=''
-                        width={45}
-                        height={45}
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-plus'>
-                      <span>+</span>
+                    <div className='list-agent'>
+                      <div className='agent agent-1'>
+                        <Image
+                          src='/image/home/section-testimonial-1.png'
+                          alt='Placeholder Alt'
+                          width={45}
+                          height={45}
+                          className='lazyload'
+                        />
+                      </div>
+                      <div className='agent agent-2'>
+                        <Image
+                          src='/image/home/section-testimonial-2.png'
+                          alt='Placeholder Alt'
+                          width={45}
+                          height={45}
+                          className='lazyload'
+                        />
+                      </div>
+                      <div className='agent agent-3'>
+                        <Image
+                          src='/image/home/section-testimonial-3.png'
+                          alt='Placeholder Alt'
+                          width={45}
+                          height={45}
+                          className='lazyload'
+                        />
+                      </div>
+                      <div className='agent agent-plus'>
+                        <span>+</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className='right'>
-                <div className='heading-section mb-5 mb-xl-5'>
-                  <div className='sub-title body-2 fw-7 mb-17'>
-                    Explore Our
-                    <span className='text-primary'>&nbsp;Achievement</span>
+                <div className='right'>
+                  <div className='heading-section mb-5 mb-xl-5'>
+                    <div className='sub-title body-2 fw-7 mb-17'>
+                      Explore Our
+                      <span className='text-primary'>&nbsp;Achievement</span>
+                    </div>
+                    <h2 className='title fw-6'>
+                      Premier Tech Innovations
+                      <span className='fw-3'>&nbsp;InheritX Software Agency</span>
+                    </h2>
                   </div>
-                  <h2 className='title fw-6'>
-                    Premier Tech Innovations
-                    <span className='fw-3'>&nbsp;InheritX Software Agency</span>
-                  </h2>
-                </div>
-                <div className='wg-counter flex g-30'>
-                  <div className='counter-item style-2 style-bg-primary px-md-15 rounded-4 overflow-hidden'>
-                    <div className='icon'>
-                      <i className='icon-check'></i>
-                    </div>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-7'>
-                        <span
-                          className='number odometer'
-                          data-to='600'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='title-counter'>+</span>
+                  <div className='wg-counter flex g-30'>
+                    <div className='counter-item style-2 style-bg-primary px-md-15 rounded-4 overflow-hidden'>
+                      <div className='icon'>
+                        <i className='icon-check'></i>
                       </div>
-                      <p className='title-counter lh-30 fw-5'>
-                        Trusted Global Clients
-                      </p>
-                    </div>
-                  </div>
+                      <div className='counter'>
+                        <div className='number-counter flex fs-65 fw-7'>
+                          <span
+                            className='number odometer'
+                            data-to='600'
+                            data-inviewport='yes'
+                          >
 
-                  <div className='counter-item style-2 style-bg-surface px-md-15 rounded-4 overflow-hidden'>
-                    <div className='icon'>
-                      <i className='icon-check'></i>
-                    </div>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-7'>
-                        <span
-                          className='number odometer'
-                          data-to='850'
-                          data-inviewport='yes'
-                        >
-
-                          0
-                        </span>
-                        <span className='title-counter'>+</span>
+                            0
+                          </span>
+                          <span className='title-counter'>+</span>
+                        </div>
+                        <p className='title-counter lh-30 fw-5'>
+                          Trusted Global Clients
+                        </p>
                       </div>
-                      <p className='title-counter lh-30 fw-5'>
-                        Best Projects Completed
-                      </p>
+                    </div>
+
+                    <div className='counter-item style-2 style-bg-surface px-md-15 rounded-4 overflow-hidden'>
+                      <div className='icon'>
+                        <i className='icon-check'></i>
+                      </div>
+                      <div className='counter'>
+                        <div className='number-counter flex fs-65 fw-7'>
+                          <span
+                            className='number odometer'
+                            data-to='850'
+                            data-inviewport='yes'
+                          >
+
+                            0
+                          </span>
+                          <span className='title-counter'>+</span>
+                        </div>
+                        <p className='title-counter lh-30 fw-5'>
+                          Best Projects Completed
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
         )}
 
         <section className='section-company tf-spacing-3'>
@@ -611,8 +612,8 @@ export default function HomeContent() {
               <div className='right-section w-100'>
                 <div className={`position-relative image image-section rounded-4 overflow-hidden minwidth accordion-section-image ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
-                    src='/image/page-title/presentationPm.jpg'
-                    alt=''
+                    src='/image/page-title/presentationPmrd.jpg'
+                    alt='Placeholder Alt'
                     className='lazyload'
                     width={900}
                     height={600}
@@ -752,6 +753,7 @@ export default function HomeContent() {
                           <Link
                             href='/services/web-app-development'
                             className='tf-btn-readmore'
+                            aria-label='Read more about Web Development services'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
@@ -792,6 +794,7 @@ export default function HomeContent() {
                           <Link
                             href='/services/machine-learning-development'
                             className='tf-btn-readmore'
+                            aria-label='Read more about Artificial Intelligence services'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
@@ -819,6 +822,7 @@ export default function HomeContent() {
                           <Link
                             href='/services/mobile-app-development'
                             className='title-service fs-1 text-primary'
+                            aria-label='Mobile App Development'
                           >
                             Mobile App Development
                           </Link>
@@ -843,6 +847,7 @@ export default function HomeContent() {
                           <Link
                             href='/services/mobile-app-development'
                             className='tf-btn-readmore'
+                            aria-label='Mobile App Development'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
@@ -871,6 +876,7 @@ export default function HomeContent() {
                           <Link
                             href='/services'
                             className='title-service fs-1 text-primary'
+                            aria-label='Mobile App Development'
                           >
                             DevOps
                           </Link>
@@ -895,6 +901,7 @@ export default function HomeContent() {
                           <Link
                             href='/services'
                             className='tf-btn-readmore'
+                            aria-label='Read more about DevOps services'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
@@ -923,6 +930,7 @@ export default function HomeContent() {
                           <Link
                             href='/services/google-cloud-services'
                             className='title-service fs-1 text-primary'
+                             aria-label='View Cloud Computing services'
                           >
                             Cloud Computing
                           </Link>
@@ -946,6 +954,7 @@ export default function HomeContent() {
                           <Link
                             href='/services/google-cloud-services'
                             className='tf-btn-readmore'
+                            aria-label='Read more about Cloud Computing services'
                           >
                             <span className='plus'>+</span>
                             <span className='text'>Read More</span>
@@ -1007,12 +1016,12 @@ export default function HomeContent() {
                   </p>
                   <div className='list-btn flex align-items-center g-15 d-none'>
                     <div className='scrolling-effect effectBottom'>
-                      <a className='arrow-btn style-border arrow-prev team-prev'>
+                      <a className='arrow-btn style-border arrow-prev team-prev' aria-label='Previous team member'>
                         <i className='icon-arrow-left2'></i>
                       </a>
                     </div>
                     <div className='scrolling-effect effectBottom'>
-                      <a className='arrow-btn style-border arrow-next team-next'>
+                      <a className='arrow-btn style-border arrow-next team-next' aria-label='Next team member'>
                         <i className='icon-arrow-right2'></i>
                       </a>
                     </div>
@@ -1082,7 +1091,7 @@ export default function HomeContent() {
                           <div className='image  rounded-4 overflow-hidden'>
                             <Image
                               src='/image/home/ceo-sandip-modi.png'
-                              alt=''
+                              alt='Placeholder Alt'
                               className='lazyload rounded-4 overflow-hidden'
                               fill
                             />
@@ -1103,7 +1112,7 @@ export default function HomeContent() {
                           <div className='image  rounded-4 overflow-hidden'>
                             <Image
                               src='/image/home/aiyub_munshi_profile.jpg'
-                              alt=''
+                              alt='Placeholder Alt'
                               className='lazyload rounded-4 overflow-hidden'
                               fill
                             />
@@ -1124,7 +1133,7 @@ export default function HomeContent() {
                           <div className='image  rounded-4 overflow-hidden'>
                             <Image
                               src='/image/home/krishHinduja.jpg'
-                              alt=''
+                              alt='Placeholder Alt'
                               className='lazyload rounded-4 overflow-hidden'
                               fill
                             />
@@ -1145,7 +1154,7 @@ export default function HomeContent() {
                           <div className='image  rounded-4 overflow-hidden'>
                             <Image
                               src='/image/home/HrManager.jpg'
-                              alt=''
+                              alt='Placeholder Alt'
                               className='lazyload rounded-4 overflow-hidden'
                               fill
                             />
@@ -1177,7 +1186,7 @@ export default function HomeContent() {
                 <div className={`position-relative rounded-4 overflow-hidden image ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
                   <Image
                     src='/image/page-title/image-9.jpg'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload rounded-4'
                     fill
                   />

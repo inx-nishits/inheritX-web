@@ -288,7 +288,7 @@ export default function HireIPhoneDeveloperPage() {
                 <div className='icon'>
                   <i className='icon-chat-2'></i>
                 </div>
-                <h5 className='fw-4 title'>Ready to hire iPhone developers? Let’s discuss your requirements.</h5>
+                <h4 className='fw-4 title fs-2'>Ready to hire iPhone developers? Let’s discuss your requirements.</h4>
                 <Link href='/contact' className='tf-btn no-bg text-underline hover-color-main-dark'>
                   <span>Consult our experts</span>
                   <i className='icon-arrow-right'></i>

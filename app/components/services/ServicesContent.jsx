@@ -63,7 +63,7 @@ export default function ServicesContent() {
                 <div className={`h-100 position-relative rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-2' : ''}`} style={{ minHeight: '300px' }}>
                   <Image
                     src='/image/page-title/image-12.jpg'
-                    alt=''
+                    alt='Placeholder Alt'
                     fill
                     className='lazyload'
                     objectFit='cover'
@@ -448,7 +448,7 @@ export default function ServicesContent() {
                 <div className={`image image-section rounded-4 overflow-hidden position-relative accordion-section-image ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/page-title/image-7.jpg'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload'
                     width={900}
                     height={600}

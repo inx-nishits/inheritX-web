@@ -150,6 +150,7 @@ export default function Header() {
                 href='#canvnasMegamenu'
                 data-bs-toggle='offcanvas'
                 className='megamenu-btn'
+                aria-label='Open mega menu'
               >
                 <div className='burger'>
                   <span></span>

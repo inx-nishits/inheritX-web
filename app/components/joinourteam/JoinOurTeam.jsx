@@ -1370,7 +1370,7 @@ export default function JoinOurTeam() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-1.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}
@@ -1379,7 +1379,7 @@ export default function JoinOurTeam() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-2.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}
@@ -1388,7 +1388,7 @@ export default function JoinOurTeam() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-4.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}
@@ -1397,7 +1397,7 @@ export default function JoinOurTeam() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-3.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}

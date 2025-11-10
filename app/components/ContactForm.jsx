@@ -312,12 +312,14 @@ export default function ContactForm({
 
       <div className='cols mb-20 g-20'>
         <fieldset className='item'>
+          <label htmlFor='name' className='visually-hidden'>Name</label>
           <input type='text' name='name' id='name' placeholder='Name*' onBlur={handleBlur} onChange={handleChange} />
           <i className='icon-user'></i>
           {errors.name ? <div className='error-important' style={errorStyle}>{errors.name}</div> : null}
         </fieldset>
 
         <fieldset className='item'>
+          <label htmlFor='mail' className='visually-hidden'>Email</label>
           <input type='email' name='mail' id='mail' placeholder='Email*' onBlur={handleBlur} onChange={handleChange} />
           <i className='icon-email'></i>
           {errors.mail ? <div className='error-important' style={errorStyle}>{errors.mail}</div> : null}
@@ -326,6 +328,7 @@ export default function ContactForm({
 
       <div className='cols mb-20 g-20'>
         <fieldset className='item'>
+          <label htmlFor='country' className='visually-hidden'>Country</label>
           <input type='text' name='country' id='country' placeholder='Country*' onBlur={handleBlur} onChange={handleChange} />
           <i className='icon'>
             <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
@@ -338,6 +341,7 @@ export default function ContactForm({
         </fieldset>
 
         <fieldset className='item'>
+          <label htmlFor='phone' className='visually-hidden'>Phone</label>
           <input type='text' name='phone' id='phone' placeholder='Phone*' inputMode='tel' maxLength={20} onBlur={handleBlur} onChange={handleChange} />
           <i className='icon-phone'></i>
           {errors.phone ? <div className='error-important' style={errorStyle}>{errors.phone}</div> : null}
@@ -346,6 +350,7 @@ export default function ContactForm({
 
       <div className='cols mb-20 g-20'>
         <fieldset className='item'>
+          <label htmlFor='projectType' className='visually-hidden'>Project Type</label>
           <input type='text' name='projectType' id='projectType' placeholder='Project Type*' onBlur={handleBlur} onChange={handleChange} />
           {errors.projectType ? <div className='error-important' style={errorStyle}>{errors.projectType}</div> : null}
         </fieldset>
@@ -354,7 +359,9 @@ export default function ContactForm({
       {showBudget && (
         <>
           <div className={`cols  g-20 ${errors.projectBudget ? '' : 'mb-20'}`}>
+            <label htmlFor='projectBudget' className='visually-hidden'>{budgetLabel}</label>
             <select
+              id='projectBudget'
               ref={budgetSelectRef}
               className='select_js'
               defaultValue=''
@@ -372,27 +379,28 @@ export default function ContactForm({
       )}
 
       <fieldset className='mb-20'>
+        <label htmlFor='message' className='visually-hidden'>Project Details</label>
         <textarea name='message' id='message' className='resize-none' placeholder='Brief Your Details*' onBlur={handleBlur} onChange={handleChange} />
         {errors.message ? <div className='error-important' style={errorStyle}>{errors.message}</div> : null}
       </fieldset>
 
       {/* Math Captcha Row */}
       <div className='d-flex flex-wrap calculation-fields' data-aos='zoom-in'>
-        <label htmlFor='captcha-x'  className='d-none'>First number</label>
+        <label htmlFor='captcha-x' className='visually-hidden'>First number</label>
         <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' id='captcha-x' value={captcha.x} className='text-center p-1 h-full' disabled /></div>
         <label className='check_label px-3'>+</label>
-        <label htmlFor='captcha-y'  className='d-none'>Second number</label>
+        <label htmlFor='captcha-y' className='visually-hidden'>Second number</label>
         <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' id='captcha-y' value={captcha.y} className='text-center p-1 h-full' disabled /></div>
         <label className='check_label px-3'>=</label>
-        <label htmlFor='captcha-result' className='d-none'>Enter the sum</label>
+        <label htmlFor='captcha-result' className='visually-hidden'>Enter the sum</label>
         <div className='col-xl-2 col-lg-4 col-md-4 col-sm-5 col-5'><input type='number' id='captcha-result' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} /></div>
       </div>
       {errors.userResult ? <div className='error-important' style={{ marginTop: '10px', fontSize: '17px' }}>{errors.userResult}</div> : null}
 
       {/* NDA Checkbox */}
       <div className='mb-20 mt-5'>
-        <label className='check_label d-flex align-items-center'>
-          <input type='checkbox' checked={ndaChecked} onChange={(e) => setNdaChecked(e.target.checked)} className='me-2' />
+        <label htmlFor='ndaCheckbox' className='check_label d-flex align-items-center'>
+          <input type='checkbox' id='ndaCheckbox' checked={ndaChecked} onChange={(e) => setNdaChecked(e.target.checked)} className='me-2' />
           <span className='text-black'>Request Non-Disclosure Agreement for a Confidential Consultation.</span>
         </label>
       </div>

@@ -578,9 +578,9 @@ export default function CategoryDetailsPage() {
                       <div className="fl-item" key={`category-skeleton-${idx}`}>
                         <div className="tf-post-grid hover-image">
                           <div className="top">
-                            <a className="image skeleton">
+                            <div className="image skeleton">
                               <div className="skeleton-image"></div>
-                            </a>
+                            </div>
                             <div className="post-content" style={{ padding: '24px' }}>
                               <p className="title lh-32">
                                 <span className="skeleton skeleton-text" style={{ width: '90%', marginBottom: '8px', display: 'block' }}></span>

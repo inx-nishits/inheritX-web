@@ -53,7 +53,7 @@ export default async function PortfolioDetailsPage({ params, searchParams }) {
                 <div className='tf-container'>
                     <div className='project-modal-style mb-50 pb-5'>
                         <div className='project-modal-header'>
-                            <Link href='/portfolio' className='project-modal-back'>
+                            <Link href='/portfolio' className='project-modal-back' aria-label='Back to portfolio'>
                                 <i className='icon-arrow-left'></i>
                             </Link>
                             <h1 className='project-modal-title'>{item.title}</h1>

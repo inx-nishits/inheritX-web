@@ -773,9 +773,9 @@ export default function BlogListPage() {
                                                 <div className="fl-item" key={`skeleton-${idx}`}>
                                                     <div className="tf-post-grid hover-image ">
                                                         <div className="top">
-                                                            <a className="image skeleton">
+                                                            <div className="image skeleton">
                                                                 <div className="skeleton-image"></div>
-                                                            </a>
+                                                            </div>
                                                             <div className="post-content px-md-15">
                                                                 <p className="title lh-32">
                                                                     <span className="skeleton skeleton-text"></span>

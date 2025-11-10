@@ -297,7 +297,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/collaboration.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -328,7 +328,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/App_Maintenance.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -357,7 +357,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/appplatformmigration.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -387,7 +387,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/App_Marketing.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -416,7 +416,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/transparency.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -447,7 +447,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/communication.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -478,7 +478,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/trust.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -509,7 +509,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/support-after-development.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -541,7 +541,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/Web_Maintenance_and_Upgrade.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -572,7 +572,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/migrationservice.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -603,7 +603,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/Digital_Marketing_and_SEO_Services.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -634,7 +634,7 @@ export default function ServiceDetails({ params }) {
                 >
                   <img
                     src='/image/services-icon/migration_service.png'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -663,7 +663,7 @@ export default function ServiceDetails({ params }) {
                 <div className="icon">
                   <i className="icon-chat-2"></i>
                 </div>
-                <h5 className="fw-4 title">How about connecting with our experts to resolve your queries or doubts?</h5>
+                <h4 className="fw-4 title fs-2">How about connecting with our experts to resolve your queries or doubts?</h4>
                 <Link href="/contact" className="tf-btn no-bg text-underline hover-color-main-dark">
                   <span>Let’s Talk</span>
                   <i className="icon-arrow-right"></i>

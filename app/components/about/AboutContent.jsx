@@ -136,9 +136,7 @@ export default function AboutContent() {
                     alt='Counting section'
                     fill
                   />
-
                 </div>
-
               </div>
               <div className='right'>
                 <div className='heading-section mb-0'>
@@ -475,7 +473,7 @@ export default function AboutContent() {
                 <div className={`image image-section rounded-4 overflow-hidden position-relative accordion-section-image ${!isMobile ? 'tf-animate-1' : ''}`}>
                   <Image
                     src='/image/page-title/company-1.jpg'
-                    alt=''
+                    alt='Placeholder Alt'
                     className='overflow-hidden'
                     width={900}
                     height={600}
@@ -942,7 +940,7 @@ export default function AboutContent() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-1.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}
@@ -951,7 +949,7 @@ export default function AboutContent() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-2.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}
@@ -960,7 +958,7 @@ export default function AboutContent() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-4.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}
@@ -969,7 +967,7 @@ export default function AboutContent() {
                     <div className="col-6 mb-3 d-flex justify-content-center align-items-center">
                       <Image
                         src='/image/home/section-testimonial-3.png'
-                        alt=''
+                        alt='Placeholder Alt'
                         className='img-fluid lazyload'
                         height={200}
                         width={200}

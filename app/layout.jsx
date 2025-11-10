@@ -1,13 +1,26 @@
 import Script from 'next/script'
 import { Suspense } from 'react'
+import { Poppins } from 'next/font/google'
 import './styles/globals.css'
 import Header from './components/Header'
 import RouteHistoryTracker from './components/RouteHistoryTracker'
 import Footer from './components/Footer'
 import CounterInitializer from './components/CounterInitializer'
 import LazyScripts from './components/LazyScripts'
+import AsyncCSS from './components/AsyncCSS'
 import ChatBot from './components/chatbot/ChatBot'
 import { Toaster } from 'react-hot-toast'
+
+// Optimize Google Fonts using Next.js font optimization
+// This eliminates render-blocking font requests
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-poppins',
+  preload: true
+})
 
 // SEO base configuration
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com' // Placeholder: set NEXT_PUBLIC_SITE_URL in env
@@ -171,55 +184,19 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html lang='en'>
+    <html lang='en' className={poppins.className}>
       <head>
         <link rel='icon' href='/image/logo/favicon.ico' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-        {/* Google Fonts: optimized loading with font-display swap */}
-        <link
-          rel='preload'
-          as='style'
-          href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-        />
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-        />
-        <noscript>
-          <link
-            rel='stylesheet'
-            href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-          />
-        </noscript>
         {/* Preload critical hero image for LCP with high priority */}
         <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' fetchPriority='high' />
-        {/* Safe CSS preloads to speed up first paint without changing behavior */}
+        {/* Preload critical CSS for faster first paint */}
         <link rel='preload' as='style' href='/css/bootstrap.min.css' />
         <link rel='preload' as='style' href='/css/styles.min.css' />
-        {/* Keep core CSS render-path-critical */}
+        {/* Keep only critical CSS render-path-critical to avoid blocking */}
         <link rel='stylesheet' href='/css/bootstrap.min.css' />
         <link rel='stylesheet' href='/css/styles.min.css' />
         <link rel='stylesheet' href='/css/overrides.min.css' />
-        {/* Defer non-critical CSS to avoid render-blocking */}
-        {/* Defer lower-priority CSS */}
-        <link rel='preload' as='style' href='/css/animate.min.css' />
-        <link rel='stylesheet' href='/css/animate.min.css' />
-        <link rel='preload' as='style' href='/css/animate2.min.css' />
-        <link rel='stylesheet' href='/css/animate2.min.css' />
-        <link rel='preload' as='style' href='/css/magnific-popup.min.css' />
-        <link rel='stylesheet' href='/css/magnific-popup.min.css' />
-        <link rel='stylesheet' href='/css/nice-select.css' />
-        <link rel='preload' as='style' href='/css/jquery-ui.min.css' />
-        <link rel='stylesheet' href='/css/jquery-ui.min.css' />
-        <link rel='preload' as='style' href='/css/map.min.css' />
-        <link rel='stylesheet' href='/css/map.min.css' />
-        <link rel='preload' as='style' href='/css/nouislider.min.css' />
-        <link rel='stylesheet' href='/css/nouislider.min.css' />
-        {/* Keep essential interactive CSS render-ready to avoid feature regressions */}
-        <link rel='stylesheet' href='/css/swiper-bundle.min.css' />
-        <link rel='stylesheet' href='/css/odometer-theme-default.css' />
-        <link rel='stylesheet' href='/icons/icomoon/style.css' />
+        {/* Non-critical CSS is loaded asynchronously via AsyncCSS component */}
 
         {/* Canonical and alternate */}
         <link rel='canonical' href={siteUrl} />
@@ -240,6 +217,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className='counter-scroll'>
+        {/* Load non-critical CSS asynchronously to prevent render-blocking */}
+        <AsyncCSS />
         <div className='d-flex flex-column min-vh-100'>
           <Header />
           <Suspense fallback={null}>
