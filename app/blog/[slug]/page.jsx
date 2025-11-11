@@ -8,16 +8,27 @@ export async function generateMetadata({ params }) {
   const postTitle = slug ? slug.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : 'Blog'
   const postDescription = `Read insights about ${postTitle} from InheritX.`
   const ogImage = `${siteUrl}/image/logo/inx-logo.png`
+  const publishedTime = new Date().toISOString()
+  const authors = [{ name: 'InheritX Team' }]
+  const keywords = postTitle
+    .split(' ')
+    .filter(Boolean)
+    .map((w) => w.toLowerCase())
 
   return {
     title: postTitle,
     description: postDescription,
     alternates: { canonical: `${siteUrl}/blog/${slug}` },
+    authors,
+    keywords,
     openGraph: {
       type: 'article',
       url: `${siteUrl}/blog/${slug}`,
       title: postTitle,
       description: postDescription,
+      authors: ['InheritX Team'],
+      publishedTime,
+      tags: keywords,
       images: [
         {
           url: ogImage,

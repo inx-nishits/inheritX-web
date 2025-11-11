@@ -83,7 +83,17 @@ export const metadata = {
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1
+    }
   },
   icons: {
     icon: '/image/logo/favicon.ico'
@@ -112,15 +122,15 @@ export default function RootLayout({ children }) {
     url: siteUrl,
     logo: `${siteUrl}/image/logo/og-banner-schema.png`,
     sameAs: [
-      'https://www.linkedin.com/company/inheritx/',
-      'https://twitter.com/inhx_tech',
-      'https://www.facebook.com/InheritX',
-      'https://clutch.co/profile/inheritx' // Placeholder profiles
+      'https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/',
+      'https://x.com/inheritx',
+      'https://www.facebook.com/InheritxSolutions/',
+      'https://www.instagram.com/inheritxsolutions/'
     ],
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+1-000-000-0000', // Placeholder
+        telephone: '+91 84870 06480',
         contactType: 'sales',
         areaServed: 'Worldwide',
         availableLanguage: ['English']
@@ -183,6 +193,25 @@ export default function RootLayout({ children }) {
     ]
   }
 
+  const localBusinessJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'InheritX Technologies',
+    image: `${siteUrl}/image/logo/og-banner-schema.png`,
+    url: siteUrl,
+    telephone: '+91 84870 06480',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'IN'
+    },
+    sameAs: [
+      'https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/',
+      'https://x.com/inheritx',
+      'https://www.facebook.com/InheritxSolutions/',
+      'https://www.instagram.com/inheritxsolutions/'
+    ]
+  }
+
   return (
     <html lang='en' className={poppins.className}>
       <head>
@@ -214,6 +243,10 @@ export default function RootLayout({ children }) {
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
       </head>
       <body className='counter-scroll'>

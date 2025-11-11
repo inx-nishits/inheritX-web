@@ -1,3 +1,7 @@
+import { servicesData } from './components/services/servicesData'
+import { portfolioItems } from './components/portfolio/portfolioData'
+import { HireUsData } from '../hire-experts/hireusJsonData'
+
 export default async function sitemap () {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
@@ -9,16 +13,34 @@ export default async function sitemap () {
     '/blog-list',
     '/blog-standard',
     '/contact',
-    '/faq',
     '/portfolio',
-    '/pricing',
     '/services',
-    '/services-details',
-    '/team'
+    '/join-our-team',
+    '/hire-experts'
   ]
 
+  // Derive dynamic routes from local data (safe, no UI impact)
+  const serviceRoutes = Object.keys(servicesData || {}).map(
+    (slug) => `/services/${slug}`
+  )
+
+  const portfolioRoutes = (portfolioItems || []).map(
+    (item) => `/portfolio/${item.slug}`
+  )
+
+  const hireExpertsRoutes = (HireUsData?.Data || []).map(
+    (item) => `/hire-experts/${item.category}`
+  )
+
   // Normalize and build entries
-  const entries = staticRoutes.map((path) => ({
+  const allRoutes = [
+    ...staticRoutes,
+    ...serviceRoutes,
+    ...portfolioRoutes,
+    ...hireExpertsRoutes
+  ]
+
+  const entries = allRoutes.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date()
   }))

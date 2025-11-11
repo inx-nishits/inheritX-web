@@ -2,14 +2,49 @@ import PageTitle from '../components/PageTitle'
 import Link from 'next/link'
 import dynamicImport from 'next/dynamic'
 import Breadcrumbs from '../components/Breadcrumbs'
+import JsonLd from '../components/seo/JsonLd'
 
 const ContactForm = dynamicImport(() => import('../components/ContactForm'), { ssr: false })
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
+
+export const metadata = {
+  title: 'Contact InheritX — Start a Project or Hire Developers',
+  description:
+    'Contact InheritX to discuss your software project. Hire expert developers for AI, mobile, and web apps.',
+  alternates: { canonical: `${siteUrl}/contact` },
+  keywords: ['Contact Inheritx', 'business inquiry', 'hire developers']
+}
 
 export const dynamic = 'force-static'
 
 export default function Page() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How quickly can we start?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most projects kick off within 1–2 weeks after scope alignment.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which industries do you serve?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We work with fintech, healthcare, wellness, retail, and SaaS startups and enterprises.'
+        }
+      }
+    ]
+  }
+
   return (
     <>
+      <JsonLd data={faqJsonLd} />
       {/* <!-- Page-title --> */}
 
       <div className='page-title'>
