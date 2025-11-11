@@ -35,7 +35,7 @@ export const metadata = {
     template: '%s | InheritX'
   },
   description:
-    'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
+    'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
   keywords: [
     'AI development',
     'Machine Learning',
@@ -54,7 +54,7 @@ export const metadata = {
   publisher: 'InheritX',
   alternates: {
     canonical: '/',
-    languages: { en: '/' }
+    languages: { en: '/', 'x-default': '/' }
   },
   openGraph: {
     type: 'website',
@@ -62,7 +62,7 @@ export const metadata = {
     siteName: 'InheritX',
     title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
-      'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
+      'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
     images: [
       {
         url: defaultOgImage,
@@ -78,7 +78,7 @@ export const metadata = {
     card: 'summary',
     title: 'Top AI, Web, and Mobile App Development Company | InheritX',
     description:
-      'We are a top AI, Web, and Mobile App Development Company from India and the USA, offering custom software, Artificial Intelligence, Machine Learning, Automation, Cloud, and DevOps solutions for businesses worldwide.',
+      'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
     images: [defaultOgImage]
   },
   robots: {
@@ -96,7 +96,8 @@ export const metadata = {
     }
   },
   icons: {
-    icon: '/image/logo/favicon.ico'
+    icon: '/image/logo/favicon.ico',
+    apple: [{ url: '/image/logo/inx-icon.png', sizes: '180x180' }]
   },
 }
 
@@ -228,8 +229,7 @@ export default function RootLayout({ children }) {
         {/* Non-critical CSS is loaded asynchronously via AsyncCSS component */}
 
         {/* Canonical and alternate */}
-        <link rel='canonical' href={siteUrl} />
-        <link rel='alternate' hrefLang='en' href={`${siteUrl}/`} />
+
 
         {/* Structured Data (JSON-LD) */}
         <script
