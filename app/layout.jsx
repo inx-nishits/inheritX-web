@@ -195,8 +195,27 @@ export default function RootLayout({ children }) {
         {/* Keep only critical CSS render-path-critical to avoid blocking */}
         <link rel='stylesheet' href='/css/bootstrap.min.css' />
         <link rel='stylesheet' href='/css/styles.min.css' />
-        <link rel='stylesheet' href='/css/overrides.min.css' />
         {/* Non-critical CSS is loaded asynchronously via AsyncCSS component */}
+        {/* Fast, non-blocking load of overrides to avoid FOUC without blocking render */}
+        <link
+          rel='preload'
+          as='style'
+          href='/css/overrides.min.css'
+          onLoad="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript>
+          {/* SSR-safe fallback when JS is disabled */}
+          <link rel='stylesheet' href='/css/overrides.min.css' />
+        </noscript>
+
+        {/* Preload icon font to reduce critical path latency */}
+        <link
+          rel='preload'
+          as='font'
+          href='/icons/icomoon/icomoon.ttf?7udb3'
+          type='font/ttf'
+          crossOrigin='anonymous'
+        />
 
         {/* Canonical and alternate */}
         <link rel='canonical' href={siteUrl} />
