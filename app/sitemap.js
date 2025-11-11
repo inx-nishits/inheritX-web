@@ -1,6 +1,6 @@
 import { servicesData } from './components/services/servicesData'
 import { portfolioItems } from './components/portfolio/portfolioData'
-import { HireUsData } from '../hire-experts/hireusJsonData'
+import { HireUsData } from './hire-experts/hireusJsonData'
 
 export default async function sitemap () {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
