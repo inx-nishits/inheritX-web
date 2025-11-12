@@ -456,7 +456,7 @@ export default function Footer() {
               <span className='text-center lh-30'>
                 © 2025
                 <Link href='/' className='fw-7'>
-                  &nbsp;Inheritx&nbsp;
+                  &nbsp;InheritX&nbsp;
                 </Link>
                 - IT Services.<br className='d-block d-md-none' />&nbsp;All&nbsp;rights&nbsp;reserved.
               </span>

@@ -20,7 +20,7 @@ const platforms = [
 
 export default function OurPlatforms({
   heading = 'Our Platforms',
-  description = 'Inheritx provides web app development services in PHP, ASP.NET, AngularJS, Node.js, and UI/UX design.',
+  description = 'InheritX provides web app development services in PHP, ASP.NET, AngularJS, Node.js, and UI/UX design.',
 }) {
   return (
     <section className='section-services p-services tf-spacing-2'>
