@@ -1224,11 +1224,11 @@ a:hover {
   opacity: 0;
   visibility: hidden;
   z-index: 9999;
-  -webkit-transition: opacity 0.15s ease, visibility 0.15s ease, top 0.15s ease;
-  -moz-transition: opacity 0.15s ease, visibility 0.15s ease, top 0.15s ease;
-  -ms-transition: opacity 0.15s ease, visibility 0.15s ease, top 0.15s ease;
-  -o-transition: opacity 0.15s ease, visibility 0.15s ease, top 0.15s ease;
-  transition: opacity 0.15s ease, visibility 0.15s ease, top 0.15s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   pointer-events: none;
   background-color: var(--white);
 }

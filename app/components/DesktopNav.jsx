@@ -8,29 +8,41 @@ export default function DesktopNav ({ menuData }) {
 
   // Ensure any hover-based mega menu is force-closed during navigation
   useEffect(() => {
-    // On route change, suppress hover-open briefly just to prevent menu from opening during transition
-    // Remove quickly so menu can open instantly on hover after navigation
+    // On route change, suppress hover-open. Remove when the cursor leaves the header,
+    // or after a fallback timeout if the user doesn't move the mouse.
     const remove = () => { document.body.classList.remove('menu-closing') }
+    const headerEl = document.getElementById('header')
     document.body.classList.add('menu-closing')
-    
-    // Remove the blocking class very quickly (100ms) - just enough to prevent opening during nav transition
-    // This allows the menu to open instantly when user hovers after navigation
-    const quickRemoveTimer = window.setTimeout(remove, 100)
+    const fallbackTimer = window.setTimeout(remove, 3000)
 
-    return () => {
-      window.clearTimeout(quickRemoveTimer)
-      // Ensure class is removed on cleanup
+    const onHeaderLeave = () => {
       remove()
+      if (headerEl) headerEl.removeEventListener('mouseleave', onHeaderLeave)
+      window.removeEventListener('mousemove', onFirstMove)
+      window.clearTimeout(fallbackTimer)
+    }
+
+    const onFirstMove = () => {
+      // If user moves the mouse outside header quickly, header leave may not fire immediately
+      if (!headerEl) {
+        remove()
+        window.clearTimeout(fallbackTimer)
+        window.removeEventListener('mousemove', onFirstMove)
+      }
+    }
+
+    if (headerEl) headerEl.addEventListener('mouseleave', onHeaderLeave)
+    window.addEventListener('mousemove', onFirstMove, { once: true })
+    return () => {
+      window.clearTimeout(fallbackTimer)
+      if (headerEl) headerEl.removeEventListener('mouseleave', onHeaderLeave)
+      window.removeEventListener('mousemove', onFirstMove)
     }
   }, [pathname])
 
   const handleLinkClick = useCallback(() => {
     // Add a temporary class that disables hover-open so menu closes immediately
     document.body.classList.add('menu-closing')
-    // Remove quickly so menu can open instantly on next hover
-    setTimeout(() => {
-      document.body.classList.remove('menu-closing')
-    }, 100)
   }, [])
 
   const isActive = path => pathname === path || pathname.startsWith(`${path}/`)

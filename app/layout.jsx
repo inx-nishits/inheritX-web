@@ -13,15 +13,13 @@ import { Toaster } from 'react-hot-toast'
 
 // Optimize Google Fonts using Next.js font optimization
 // This eliminates render-blocking font requests
-// Load only weights that are actually used in the codebase
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'], // Includes 800 which is used in overrides.css
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
-  display: 'swap', // Ensures text is visible during font load
+  display: 'swap',
   variable: '--font-poppins',
-  preload: true,
-  fallback: ['system-ui', 'arial'] // Fallback fonts for faster rendering
+  preload: true
 })
 
 // SEO base configuration
@@ -219,39 +217,15 @@ export default function RootLayout({ children }) {
     <html lang='en' className={poppins.className}>
       <head>
         <link rel='icon' href='/image/logo/favicon.ico' />
-        {/* DNS prefetch for external domains to reduce network latency */}
-        <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
-        <link rel='dns-prefetch' href='https://fonts.gstatic.com' />
         {/* Preload critical hero image for LCP with high priority */}
         <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' fetchPriority='high' />
-        {/* Preload critical CSS for faster loading */}
+        {/* Preload critical CSS for faster first paint */}
         <link rel='preload' as='style' href='/css/bootstrap.min.css' />
         <link rel='preload' as='style' href='/css/styles.min.css' />
-        <link rel='preload' as='style' href='/css/overrides.min.css' />
-        {/* Load critical CSS asynchronously using media trick to prevent render blocking */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var cssFiles = ['/css/bootstrap.min.css', '/css/styles.min.css', '/css/overrides.min.css'];
-                cssFiles.forEach(function(href) {
-                  var link = document.createElement('link');
-                  link.rel = 'stylesheet';
-                  link.href = href;
-                  link.media = 'print';
-                  link.onload = function() { this.media = 'all'; };
-                  document.head.appendChild(link);
-                });
-              })();
-            `
-          }}
-        />
-        {/* Fallback for no-JS: load CSS normally */}
-        <noscript>
-          <link rel='stylesheet' href='/css/bootstrap.min.css' />
-          <link rel='stylesheet' href='/css/styles.min.css' />
-          <link rel='stylesheet' href='/css/overrides.min.css' />
-        </noscript>
+        {/* Keep only critical CSS render-path-critical to avoid blocking */}
+        <link rel='stylesheet' href='/css/bootstrap.min.css' />
+        <link rel='stylesheet' href='/css/styles.min.css' />
+        <link rel='stylesheet' href='/css/overrides.min.css' />
         {/* Non-critical CSS is loaded asynchronously via AsyncCSS component */}
 
         {/* Canonical and alternate */}
@@ -319,30 +293,25 @@ export default function RootLayout({ children }) {
         <ChatBot />
 
 
-        {/* Vendor scripts - optimized loading order to reduce critical request chain */}
-        {/* Critical: jQuery must load first as other scripts depend on it */}
+        {/* Vendor scripts (kept for parity; can be refactored to React later) */}
+        {/* Defer jQuery to not block rendering */}
         <Script src='/js/jquery.min.js' strategy='afterInteractive' />
         <Script src='/js/jquery-init.js' strategy='afterInteractive' />
-        
-        {/* Main wrapper needs to load after jQuery but early enough for UI features */}
-        {/* It waits for jQuery internally, so it's safe to load with afterInteractive */}
-        <Script src='/js/main-wrapper.js' strategy='afterInteractive' />
-        
-        {/* Defer non-critical scripts to reduce critical path latency */}
         <Script src='/js/bootstrap.min.js' strategy='lazyOnload' />
-        <Script src='/js/gsap.min.js' strategy='lazyOnload' />
-        <Script src='/js/ScrollToPlugin.min.js' strategy='lazyOnload' />
-        <Script src='/js/ScrollTrigger.min.js' strategy='lazyOnload' />
+        <Script src='/js/gsap.min.js' strategy='afterInteractive' />
+        <Script src='/js/ScrollToPlugin.min.js' strategy='afterInteractive' />
+        <Script src='/js/ScrollTrigger.min.js' strategy='afterInteractive' />
         <LazyScripts />
-        <Script src='/js/magnific-popup.min.js' strategy='lazyOnload' />
-        <Script src='/js/jquery.nice-select.min.js' strategy='lazyOnload' />
-        <Script src='/js/odometer.min.js' strategy='lazyOnload' />
-        <Script src='/js/wow.min.js' strategy='lazyOnload' />
-        <Script src='/js/lazysize.min.js' strategy='lazyOnload' />
-        <Script src='/js/gsap-animation.js' strategy='lazyOnload' />
-        <Script src='/js/ScrollSmooth.js' strategy='lazyOnload' />
-        <Script src='/js/carousel.js' strategy='lazyOnload' />
-        <Script src='/js/jquery-validate.js' strategy='lazyOnload' />
+        <Script src='/js/magnific-popup.min.js' strategy='afterInteractive' />
+        <Script src='/js/jquery.nice-select.min.js' strategy='afterInteractive' />
+        <Script src='/js/odometer.min.js' strategy='afterInteractive' />
+        <Script src='/js/wow.min.js' strategy='afterInteractive' />
+        <Script src='/js/lazysize.min.js' strategy='afterInteractive' />
+        <Script src='/js/main-wrapper.js' strategy='afterInteractive' />
+        <Script src='/js/gsap-animation.js' strategy='afterInteractive' />
+        <Script src='/js/ScrollSmooth.js' strategy='afterInteractive' />
+        <Script src='/js/carousel.js' strategy='afterInteractive' />
+        <Script src='/js/jquery-validate.js' strategy='afterInteractive' />
       </body>
     </html>
   )

@@ -7,30 +7,10 @@ const AccordionItem = ({ id, title, children, isOpen, onToggle }) => {
   const [contentHeight, setContentHeight] = useState(0);
 
   useEffect(() => {
-    // Batch DOM reads to avoid forced reflow
-    // Use requestAnimationFrame to ensure layout is complete before reading
-    const updateHeight = () => {
-      if (contentRef.current) {
-        // Use double RAF to ensure layout is fully complete
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            if (contentRef.current) {
-              setContentHeight(contentRef.current.scrollHeight);
-            }
-          });
-        });
-      }
-    };
-
-    // Only update height when accordion is opened or children change
-    if (isOpen) {
-      // Small delay to ensure DOM is ready
-      const timeoutId = setTimeout(updateHeight, 0);
-      return () => clearTimeout(timeoutId);
-    } else {
-      setContentHeight(0);
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
     }
-  }, [children, isOpen]);
+  }, [children]);
 
   return (
     <div className='according-item'>

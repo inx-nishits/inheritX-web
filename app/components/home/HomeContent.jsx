@@ -195,122 +195,122 @@ export default function HomeContent() {
 
         {/* Enhanced Counter Grid */}
         <div className='row g-4'>
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className={`number ${!isMobile ? 'odometer' : ''} text-white`}
-                    data-to='400'
-                    data-inviewport='yes'
-                  >
-                    {isMobile ? '400' : '0'}
-                  </span>
-                  <span className='text-white ms-1'>+</span>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer text-white'
+                      data-to='400'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='text-white ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-white text-center'>
+                    Verified 5* Client Reviews
+                  </p>
                 </div>
-                <p className='title-counter fw-5 text-white text-center'>
-                  Verified 5* Client Reviews
-                </p>
               </div>
             </div>
-          </div>
 
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className={`number ${!isMobile ? 'odometer' : ''} color-primary`}
-                    data-to='850'
-                    data-inviewport='yes'
-                  >
-                    {isMobile ? '850' : '0'}
-                  </span>
-                  <span className='color-primary ms-1'>+</span>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer color-primary'
+                      data-to='850'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='color-primary ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-center'>
+                    Projects Delivered Successfully
+                  </p>
                 </div>
-                <p className='title-counter fw-5 text-center'>
-                  Projects Delivered Successfully
-                </p>
               </div>
             </div>
-          </div>
 
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className={`number ${!isMobile ? 'odometer' : ''} text-white`}
-                    data-to='97'
-                    data-inviewport='yes'
-                  >
-                    {isMobile ? '97' : '0'}
-                  </span>
-                  <span className='text-white ms-1'>%</span>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer text-white'
+                      data-to='97'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='text-white ms-1'>%</span>
+                  </div>
+                  <p className='title-counter fw-5 text-white text-center'>
+                    Client Retention Ratio
+                  </p>
                 </div>
-                <p className='title-counter fw-5 text-white text-center'>
-                  Client Retention Ratio
-                </p>
               </div>
             </div>
-          </div>
 
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className={`number ${!isMobile ? 'odometer' : ''} color-primary`}
-                    data-to='40'
-                    data-inviewport='yes'
-                  >
-                    {isMobile ? '40' : '0'}
-                  </span>
-                  <span className='color-primary ms-1'>+</span>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer color-primary'
+                      data-to='40'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='color-primary ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-center'>
+                    Industries Served
+                  </p>
                 </div>
-                <p className='title-counter fw-5 text-center'>
-                  Industries Served
-                </p>
               </div>
             </div>
-          </div>
 
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span
-                    className={`number ${!isMobile ? 'odometer' : ''} text-white`}
-                    data-to='120'
-                    data-inviewport='yes'
-                  >
-                    {isMobile ? '120' : '0'}
-                  </span>
-                  <span className='text-white ms-1'>+</span>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-primary px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span
+                      className='number odometer text-white'
+                      data-to='120'
+                      data-inviewport='yes'
+                    >
+                      0
+                    </span>
+                    <span className='text-white ms-1'>+</span>
+                  </div>
+                  <p className='title-counter fw-5 text-white text-center'>
+                    Development Staff
+                  </p>
                 </div>
-                <p className='title-counter fw-5 text-white text-center'>
-                  Development Staff
-                </p>
               </div>
             </div>
-          </div>
 
-          <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
-            <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
-              <div className='counter text-center'>
-                <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
-                  <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
-                    24/7
-                  </span>
+            <div className='col-6 col-lg-4 col-xxl-2 mb-4'>
+              <div className='counter-item style-2 style-bg-surface px-3 py-5 rounded-4 overflow-hidden h-100 d-flex align-items-center justify-content-center'>
+                <div className='counter text-center'>
+                  <div className='number-counter flex justify-content-center align-items-center fs-65 fw-7 mb-1'>
+                    <span className='number color-primary' data-to='24/7' data-inviewport='yes'>
+                      24/7
+                    </span>
+                  </div>
+                  <p className='title-counter fw-5 text-black text-center'>
+                    Support
+                  </p>
                 </div>
-                <p className='title-counter fw-5 text-black text-center'>
-                  Support
-                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* <!-- /.page-title --> */}
 
@@ -438,155 +438,159 @@ export default function HomeContent() {
           </div>
         </section>
 
-        <section className='section-counting tf-spacing-2'>
-          <div className='mask mask-1'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='700'
-              height='700'
-              fill='none'
-            >
-              <circle
-                cx='350'
-                cy='350'
-                r='285'
-                stroke='url(#a2)'
-                strokeWidth='130'
-              />
-              <defs>
-                <linearGradient
-                  id='a2'
-                  x1='154'
-                  x2='497.875'
-                  y1='61.688'
-                  y2='589.75'
-                >
-                  <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
-                  <stop offset='1' stopColor='#fff' stopOpacity='0' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className='tf-container w-1810'>
-            <div className='section-counting-inner flex'>
-              <div className='left rounded-4 overflow-hidden'>
-                <div className={`image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
-                  <Image
-                    src='/image/page-title/company-2.jpg'
-                    alt='Company'
-                    className='lazyload'
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-
-                <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
-                  <div className='text relative'>
-                    <p className='fs-20 fw-6'>
-                      600+ Trusted
-                      <br />
-                      Global Clients
-                    </p>
+        {!isMobile && (
+          <section className='section-counting tf-spacing-2'>
+            <div className='mask mask-1'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='700'
+                height='700'
+                fill='none'
+              >
+                <circle
+                  cx='350'
+                  cy='350'
+                  r='285'
+                  stroke='url(#a2)'
+                  strokeWidth='130'
+                />
+                <defs>
+                  <linearGradient
+                    id='a2'
+                    x1='154'
+                    x2='497.875'
+                    y1='61.688'
+                    y2='589.75'
+                  >
+                    <stop offset='0' stopColor='#fff' stopOpacity='0.05' />
+                    <stop offset='1' stopColor='#fff' stopOpacity='0' />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div className='tf-container w-1810'>
+              <div className='section-counting-inner flex'>
+                <div className='left rounded-4 overflow-hidden'>
+                  <div className={`image rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-1' : ''}`} style={{ minHeight: '550px' }}>
                     <Image
-                      src='/image/icon/icon-box-avatar.png'
+                      src='/image/page-title/company-2.jpg'
+                      alt='Company'
                       className='lazyload'
-                      alt='Placeholder Alt'
-                      width={40}
-                      height={10}
+                      fill
+                      style={{ objectFit: 'cover' }}
                     />
                   </div>
-                  <div className='list-agent'>
-                    <div className='agent agent-1'>
-                      <Image
-                        src='/image/home/section-testimonial-1.png'
-                        alt='Placeholder Alt'
-                        width={45}
-                        height={45}
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-2'>
-                      <Image
-                        src='/image/home/section-testimonial-2.png'
-                        alt='Placeholder Alt'
-                        width={45}
-                        height={45}
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-3'>
-                      <Image
-                        src='/image/home/section-testimonial-3.png'
-                        alt='Placeholder Alt'
-                        width={45}
-                        height={45}
-                        className='lazyload'
-                      />
-                    </div>
-                    <div className='agent agent-plus'>
-                      <span>+</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='right'>
-                <div className='heading-section mb-5 mb-xl-5'>
-                  <div className='sub-title body-2 fw-7 mb-17'>
-                    Explore Our
-                    <span className='text-primary'>&nbsp;Achievement</span>
-                  </div>
-                  <h2 className='title fw-6'>
-                    Premier Tech Innovations
-                    <span className='fw-3'>&nbsp;InheritX Software Agency</span>
-                  </h2>
-                </div>
-                <div className='wg-counter flex g-30'>
-                  <div className='counter-item style-2 style-bg-primary px-md-15 rounded-4 overflow-hidden'>
-                    <div className='icon'>
-                      <i className='icon-check'></i>
-                    </div>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-7'>
-                        <span
-                          className={`number ${!isMobile ? 'odometer' : ''}`}
-                          data-to='600'
-                          data-inviewport='yes'
-                        >
-                          {isMobile ? '600' : '0'}
-                        </span>
-                        <span className='title-counter'>+</span>
-                      </div>
-                      <p className='title-counter lh-30 fw-5'>
-                        Trusted Global Clients
-                      </p>
-                    </div>
-                  </div>
 
-                  <div className='counter-item style-2 style-bg-surface px-md-15 rounded-4 overflow-hidden'>
-                    <div className='icon'>
-                      <i className='icon-check'></i>
-                    </div>
-                    <div className='counter'>
-                      <div className='number-counter flex fs-65 fw-7'>
-                        <span
-                          className={`number ${!isMobile ? 'odometer' : ''}`}
-                          data-to='850'
-                          data-inviewport='yes'
-                        >
-                          {isMobile ? '850' : '0'}
-                        </span>
-                        <span className='title-counter'>+</span>
-                      </div>
-                      <p className='title-counter lh-30 fw-5'>
-                        Best Projects Completed
+                  <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
+                    <div className='text relative'>
+                      <p className='fs-20 fw-6'>
+                        600+ Trusted
+                        <br />
+                        Global Clients
                       </p>
+                      <Image
+                        src='/image/icon/icon-box-avatar.png'
+                        className='lazyload'
+                        alt='Placeholder Alt'
+                        width={40}
+                        height={10}
+                      />
+                    </div>
+                    <div className='list-agent'>
+                      <div className='agent agent-1'>
+                        <Image
+                          src='/image/home/section-testimonial-1.png'
+                          alt='Placeholder Alt'
+                          width={45}
+                          height={45}
+                          className='lazyload'
+                        />
+                      </div>
+                      <div className='agent agent-2'>
+                        <Image
+                          src='/image/home/section-testimonial-2.png'
+                          alt='Placeholder Alt'
+                          width={45}
+                          height={45}
+                          className='lazyload'
+                        />
+                      </div>
+                      <div className='agent agent-3'>
+                        <Image
+                          src='/image/home/section-testimonial-3.png'
+                          alt='Placeholder Alt'
+                          width={45}
+                          height={45}
+                          className='lazyload'
+                        />
+                      </div>
+                      <div className='agent agent-plus'>
+                        <span>+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='right'>
+                  <div className='heading-section mb-5 mb-xl-5'>
+                    <div className='sub-title body-2 fw-7 mb-17'>
+                      Explore Our
+                      <span className='text-primary'>&nbsp;Achievement</span>
+                    </div>
+                    <h2 className='title fw-6'>
+                      Premier Tech Innovations
+                      <span className='fw-3'>&nbsp;InheritX Software Agency</span>
+                    </h2>
+                  </div>
+                  <div className='wg-counter flex g-30'>
+                    <div className='counter-item style-2 style-bg-primary px-md-15 rounded-4 overflow-hidden'>
+                      <div className='icon'>
+                        <i className='icon-check'></i>
+                      </div>
+                      <div className='counter'>
+                        <div className='number-counter flex fs-65 fw-7'>
+                          <span
+                            className='number odometer'
+                            data-to='600'
+                            data-inviewport='yes'
+                          >
+
+                            0
+                          </span>
+                          <span className='title-counter'>+</span>
+                        </div>
+                        <p className='title-counter lh-30 fw-5'>
+                          Trusted Global Clients
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className='counter-item style-2 style-bg-surface px-md-15 rounded-4 overflow-hidden'>
+                      <div className='icon'>
+                        <i className='icon-check'></i>
+                      </div>
+                      <div className='counter'>
+                        <div className='number-counter flex fs-65 fw-7'>
+                          <span
+                            className='number odometer'
+                            data-to='850'
+                            data-inviewport='yes'
+                          >
+
+                            0
+                          </span>
+                          <span className='title-counter'>+</span>
+                        </div>
+                        <p className='title-counter lh-30 fw-5'>
+                          Best Projects Completed
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <section className='section-company tf-spacing-3'>
           <div className='tf-container w-1810'>
