@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 export default function AsyncCSS() {
   useEffect(() => {
     // List of non-critical CSS files to load asynchronously
+    // Note: Icon font CSS is now loaded in the head as critical CSS
     const nonCriticalCSS = [
       '/css/animate.min.css',
       '/css/animate2.min.css',
@@ -18,8 +19,7 @@ export default function AsyncCSS() {
       '/css/map.min.css',
       '/css/nouislider.min.css',
       '/css/swiper-bundle.min.css',
-      '/css/odometer-theme-default.css',
-      '/icons/icomoon/style.css'
+      '/css/odometer-theme-default.css'
     ]
 
     // Function to load CSS asynchronously

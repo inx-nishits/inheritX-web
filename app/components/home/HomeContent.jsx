@@ -803,7 +803,7 @@ export default function HomeContent() {
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
-                          <i className='icon icon-mobile-app'>
+                          <i className='icon icon-mobile-app' style={{ width: '100%', maxWidth: '100%' }}>
                             <svg
                               id='Layer_1'
                               viewBox='0 0 24 24'
@@ -857,7 +857,7 @@ export default function HomeContent() {
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
-                          <i className='icon icon-mobile-app'>
+                          <i className='icon icon-mobile-app' style={{ width: '100%', maxWidth: '100%' }}>
                             <svg
                               id='Layer_1'
                               viewBox='0 0 24 24'
@@ -911,7 +911,7 @@ export default function HomeContent() {
                     <div className='swiper-slide'>
                       <div className='services-item hover-image px-md-15 style-1'>
                         <div className='icon' style={{ width: '40px', height: '55px', maxWidth: '40px' }}>
-                          <i className='icon icon-mobile-app'>
+                          <i className='icon icon-mobile-app' style={{ width: '100%', maxWidth: '100%' }}>
                             <svg
                               xmlns='http://www.w3.org/2000/svg'
                               id='Layer_1'

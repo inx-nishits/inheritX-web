@@ -2790,3 +2790,44 @@ textarea.form-input {
   object-fit: initial !important;
 }
 }
+
+/* ===============================================
+   Icon Font Loading Optimization
+   Prevent layout shifts when icons load
+   =============================================== */
+
+/* Ensure icon elements have proper dimensions to prevent layout shifts */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  /* Prevent layout shift by reserving space */
+  min-width: 1em;
+  min-height: 1em;
+  /* Ensure icons don't cause text reflow */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Specific icon size fixes for common icon containers */
+.icon-social i,
+.icon-social [class^="icon-"],
+.icon-social [class*=" icon-"] {
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent icon containers from collapsing */
+.tf-btn i,
+.tf-btn [class^="icon-"],
+.tf-btn [class*=" icon-"] {
+  display: inline-block;
+  width: auto;
+  min-width: 1em;
+  vertical-align: middle;
+}

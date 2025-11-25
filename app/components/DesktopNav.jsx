@@ -33,6 +33,7 @@ export default function DesktopNav ({ menuData }) {
 
     if (headerEl) headerEl.addEventListener('mouseleave', onHeaderLeave)
     window.addEventListener('mousemove', onFirstMove, { once: true })
+    
     return () => {
       window.clearTimeout(fallbackTimer)
       if (headerEl) headerEl.removeEventListener('mouseleave', onHeaderLeave)
@@ -43,6 +44,11 @@ export default function DesktopNav ({ menuData }) {
   const handleLinkClick = useCallback(() => {
     // Add a temporary class that disables hover-open so menu closes immediately
     document.body.classList.add('menu-closing')
+  }, [])
+
+  const handleMenuHover = useCallback(() => {
+    // Remove menu-closing class immediately on hover so dropdown appears instantly
+    document.body.classList.remove('menu-closing')
   }, [])
 
   const isActive = path => pathname === path || pathname.startsWith(`${path}/`)
@@ -76,6 +82,7 @@ export default function DesktopNav ({ menuData }) {
             <li
               key={item.href}
               className={`menu-item menu-item-has-children position-static ${active ? 'current-menu-item' : ''}`}
+              onMouseEnter={handleMenuHover}
             >
               <Link href={item.href} className='item-link body-2' onClick={handleLinkClick}>
                 <span>{item.label}</span>

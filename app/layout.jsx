@@ -219,13 +219,18 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/image/logo/favicon.ico' />
         {/* Preload critical hero image for LCP with high priority */}
         <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' fetchPriority='high' />
+        {/* Preload icon font for faster icon rendering */}
+        <link rel='preload' as='font' href='/icons/icomoon/fonts/icomoon.woff' type='font/woff' crossOrigin='anonymous' />
         {/* Preload critical CSS for faster first paint */}
         <link rel='preload' as='style' href='/css/bootstrap.min.css' />
         <link rel='preload' as='style' href='/css/styles.min.css' />
+        <link rel='preload' as='style' href='/icons/icomoon/style.css' />
         {/* Keep only critical CSS render-path-critical to avoid blocking */}
         <link rel='stylesheet' href='/css/bootstrap.min.css' />
         <link rel='stylesheet' href='/css/styles.min.css' />
         <link rel='stylesheet' href='/css/overrides.min.css' />
+        {/* Icon font CSS - critical for above-the-fold icons */}
+        <link rel='stylesheet' href='/icons/icomoon/style.css' />
         {/* Non-critical CSS is loaded asynchronously via AsyncCSS component */}
 
         {/* Canonical and alternate */}
