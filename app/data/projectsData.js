@@ -26,7 +26,7 @@ export const projectItems = [
     industry: "TravelTech + E-Commerce",
     technology: "Next.js, Node.js, Tailwind CSS, PWA",
     description:
-      "The platform delivers a complete travel experience that goes far beyond simple bookings by offering customized travel package estimations for families, solo travelers, and children, along with unique handicraft shopping opportunities. It features engaging blogs and community forums where travelers can share stories, tips, and cultural insights, while dedicated artisan pages showcase local creators and connect visitors with traditional crafts and regional heritage. In addition to powerful trip planning and estimation tools, the platform actively promotes cultural tourism by blending travel with authentic local experiences. It also functions as an online craft marketplace, enabling travelers to discover and purchase handmade products directly from artisans, making it a true one-stop destination for meaningful and immersive journeys.",
+      "The platform delivers a complete travel experience that goes far beyond simple bookings by offering customized travel package estimates for families, solo travelers, and children, along with unique handicraft shopping opportunities. It features engaging blogs and community forums where travelers can share stories, tips, and cultural insights, while dedicated artisan pages showcase local creators and connect visitors with traditional crafts and regional heritage. In addition to powerful trip planning and estimation tools, the platform actively promotes cultural tourism by blending travel with authentic local experiences. It also functions as an online craft marketplace, enabling travelers to discover and purchase handmade products directly from artisans, making it a true one-stop destination for meaningful and immersive journeys.",
     cover: "/image/project-item/tourwit.png",
     thumb: "/image/project-item/tourwit.png",
     features: [
@@ -278,7 +278,7 @@ export const projectItems = [
     title: "Player-Coach Skill Development",
     category: "Mobile App Development",
     industry: "Sports Technology",
-    technology: "Flutter, Node, Next.js, Node.js, MongoDB, AWS S3",
+    technology: "Flutter, Next.js, Node.js, MongoDB, AWS S3",
     description:
       "The Player–Coach Skill Development App is a dynamic mobile platform designed to connect athletes and coaches within an interactive, performance-driven sports ecosystem. Players can track and enhance their skills, communicate directly with coaches, and stay inspired through motivational posts and community engagement. Coaches are equipped with tools to monitor player progress, deliver real-time feedback, and support individual growth through consistent mentorship. By seamlessly blending skill analytics, communication, and motivation, the app fosters collaboration and continuous improvement. Together, it empowers athletes and coaches to build stronger connections and achieve performance excellence.",
     cover: "/image/project-item/player-coach.png",
@@ -300,7 +300,7 @@ export const projectItems = [
     industry: "Food & Beverage / Online Food Delivery",
     technology: "HTML5, CSS3, JavaScript, jQuery, Laravel, MySQL",
     description:
-      "GoMeal is a comprehensive online food delivery platform designed to deliver a fast, intuitive, and enjoyable ordering experience for users. Customers can browse nearby restaurants, customize their dishes, and place orders effortlessly using a real-time cart that functions even without requiring login. The integrated admin panel enables restaurant owners and staff to efficiently manage menus, categories, orders, and customer interactions with ease. With secure Stripe payment integration, smart address auto-fetch, and real-time order tracking, GoMeal ensures both reliability and convenience. Built with a responsive design and optimized for performance, it delivers a seamless experience across both web and mobile platforms.",
+      "GoMeal is a comprehensive online food delivery platform designed to deliver a fast, intuitive, and enjoyable ordering experience for users. Customers can browse nearby restaurants, customize their dishes, and place orders effortlessly using a real-time cart that functions even without requiring a login. The integrated admin panel enables restaurant owners and staff to efficiently manage menus, categories, orders, and customer interactions with ease. With secure Stripe payment integration, smart address auto-fetch, and real-time order tracking, GoMeal ensures both reliability and convenience. Built with a responsive design and optimized for performance, it delivers a seamless experience across both web and mobile platforms.",
     cover: "/image/project-item/gomeal.png",
     thumb: "/image/project-item/gomeal.png",
     features: [
@@ -340,7 +340,7 @@ export const projectItems = [
     industry: "Dairy & AgriTech",
     technology: "Flutter",
     description:
-      "DearCows is a Mumbai-based subscription platform that delivers fresh A2 milk, along with dairy, ghee, and spice products, directly to customers’ doorsteps. The brand is built on natural and ethical farming practices, including hand-milking, forest grazing, and the natural breeding of Gir-deshi cows to ensure premium quality. Through its integrated mobile app, users can effortlessly schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, fostering a sustainable, transparent, and responsible farm-to-home ecosystem.",
+      "DearCows App is a Mumbai-based subscription platform that delivers fresh A2 milk, along with dairy, ghee, and spice products, directly to customers’ doorsteps. The brand is built on natural and ethical farming practices, including hand-milking, forest grazing, and the natural breeding of Gir-deshi cows to ensure premium quality. Through its integrated mobile app, users can effortlessly schedule, track, and manage deliveries with flexible subscription options. Beyond convenience, DearCows empowers rural cow-keepers (gwalas) by connecting their organic produce with urban consumers, fostering a sustainable, transparent, and responsible farm-to-home ecosystem.",
     cover: "/image/project-item/dearcows-app.png",
     thumb: "/image/project-item/dearcows-app.png",
     features: [
@@ -578,7 +578,7 @@ export const projectItems = [
     slug: "underwriter-learn-stocks-ai",
     title: "Underwriter – Learn Stocks | AI-Powered Stock Research Platform",
     category: "AI/ML",
-    industry: "Stock market",
+    industry: "Stock Market",
     technology: "Flutter, node.js, react.js, Python",
     description:
       "Underwriter is a smart stock research platform designed to make investing simpler and more accessible for both beginners and experienced investors. It converts complex financial data into clear, actionable insights using AI and machine learning. The platform offers detailed company profiles, advanced financial metric visualizations, and a curated news feed enriched with sentiment analysis. An AI-powered chatbot acts as a personal financial analyst by summarizing reports and answering investment-related queries, helping users make informed, confident investment decisions.",
