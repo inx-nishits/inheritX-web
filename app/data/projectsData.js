@@ -542,8 +542,8 @@ export const projectItems = [
     technology: "Angular, Node.js, Python, Material UI, MongoDB",
     description:
       "T2D2 is an advanced computer-vision-driven SaaS platform that automatically detects, classifies, and monitors visible damage on building facades and physical infrastructure. Using photos, videos, and drone imagery, T2D2 identifies cracks, spalling, surface defects, and material deterioration with high accuracy. The platform enables engineers, inspectors, and asset owners to detect issues early, reduce manual inspections, improve safety, and optimize maintenance decisions through data-driven insights.",
-    cover: "/image/project-item/t2d2.png",
-    thumb: "/image/project-item/t2d2.png",
+    cover: "/image/project-item/t2d2-up.png",
+    thumb: "/image/project-item/t2d2-up.png",
     features: [
       "AI-Powered Damage Detection",
       "Manual Inspection Support",
@@ -561,8 +561,8 @@ export const projectItems = [
     technology: "Flutter, Python, Django, FastAPI, AWS Cloud",
     description:
       "Toothfit is an AI-powered dental platform focused on remote aligner treatment monitoring, oral health tracking, and clinic-based diagnostics for patients and dentists in India. It allows dentists to track treatment progress and dental issues without requiring frequent in-person visits. The platform also features AI-assisted X-ray analysis to detect abnormalities, support faster diagnosis, and enhance clinical decision-making, improving both patient experience and clinical efficiency.",
-    cover: "/image/project-item/ai-dent.png",
-    thumb: "/image/project-item/ai-dent.png",
+    cover: "/image/project-item/ai-dent-app.png",
+    thumb: "/image/project-item/ai-dent-app.png",
     features: [
       "Oral Scan & Aligner Monitoring Engine",
       "Dentist–Patient Linking System",
