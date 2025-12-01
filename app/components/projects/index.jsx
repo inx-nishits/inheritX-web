@@ -14,10 +14,10 @@ export default function ProjectsPage({
 }) {
     const searchParams = useSearchParams()
     const router = useRouter()
-    
+
     // Initialize state - always start with 'all' to avoid hydration mismatch
     const [activeCategory, setActiveCategory] = useState('all')
-    
+
     const [mounted, setMounted] = useState(false)
     const initializedRef = useRef(false)
 
@@ -25,7 +25,7 @@ export default function ProjectsPage({
     useEffect(() => {
         if (initializedRef.current) return
         initializedRef.current = true
-        
+
         try {
             const allowed = ['all', 'web', 'mobile', 'aiml']
             let nextCategory = 'all'
@@ -46,12 +46,12 @@ export default function ProjectsPage({
                     nextCategory = saved
                 }
             }
-            
+
             setActiveCategory(nextCategory)
 
             // Check if we're restoring from a detail page (used for scroll restoration)
             const restore = sessionStorage.getItem('inx_restore_projects')
-            
+
             if (restore === '1') {
                 // Restore scroll position
                 const y = sessionStorage.getItem('inx_projects_scroll')
@@ -66,7 +66,7 @@ export default function ProjectsPage({
                 sessionStorage.removeItem('inx_projects_scroll')
             }
         } catch { }
-        
+
         setMounted(true)
     }, [searchParams, enableUrlTabSync])
 
@@ -80,10 +80,10 @@ export default function ProjectsPage({
     // Keep URL in sync with active category (only when enabled, e.g. /projects)
     useEffect(() => {
         if (!mounted || !enableUrlTabSync) return
-        
+
         const currentTabParam = searchParams?.get('tab') || null
         const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
-        
+
         // Only update URL if it's different to avoid unnecessary navigation
         if (currentTabParam !== desiredTabParam) {
             const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
@@ -118,8 +118,8 @@ export default function ProjectsPage({
                     <div className='page-title-content text-center pb-5'>
                         <h1 className='title split-text effect-right'>{pageTitle}</h1>
                         <Breadcrumbs />
-                        <h3 className='text-center pt-3 mt-3 mb-3'>Innovative Solutions That Drive Success</h3>
-                        <p className='text-center'>Explore our comprehensive portfolio of cutting-edge projects that showcase our expertise in web development, mobile applications, IoT solutions, and AI-powered innovations.<br />Each project represents our commitment to delivering excellence and driving digital transformation.</p>
+                        <h3 className='text-center pt-3 mt-3 mb-3'>Innovative Solutions That Drive Real Success</h3>
+                        <p className='text-center'>Discover a curated collection of cutting-edge projects showcasing our expertise in web, mobile, IoT, and AI-powered solutions. Every project is a testament to our commitment to innovation, quality, and digital excellence, from concept to deployment. We craft scalable, secure, and high-performance digital products tailored to real-world business needs, with a strong focus on user experience, modern technologies, and future-ready architecture to deliver measurable impact and lasting value.</p>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ export default function ProjectsPage({
                     <div className='projects-filter-section mb-30 p-5 pt-4'>
                         <div className='filter-header text-center mb-4'>
                             <h2 className='filter-title fw-7 mb-3'>Browse by Category</h2>
-                            <p className='filter-subtitle body-2'>Discover projects tailored to your industry needs</p>
+                            <p className='filter-subtitle body-2'>Discover expertly crafted projects tailored to meet your industry’s unique challenges and goals.</p>
                         </div>
 
                         <div className='filter-tabs-wrapper'>

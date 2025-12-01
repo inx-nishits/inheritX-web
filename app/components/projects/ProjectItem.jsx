@@ -26,9 +26,9 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
       )
     }
-    
+
     isMobileRef.current = detectMobile()
-    
+
     // On mobile/tablet, disable complex animations and parallax for better performance
     if (isMobileRef.current) {
       // Reset scroll offset to prevent any parallax effect
@@ -83,12 +83,12 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
           return (next.x !== prev.x || next.y !== prev.y) ? next : prev
         })
       }
-      
+
       if (animationRunningRef.current) {
         frameRef.current = requestAnimationFrame(animate)
       }
     }
-    
+
     // Scroll handler - disabled on mobile/tablet to prevent parallax
     const handleScroll = () => {
       if (isMobileRef.current) {
@@ -99,17 +99,17 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         needsRectUpdateRef.current = true
       }
     }
-    
+
     const handleResize = () => {
       const wasMobile = isMobileRef.current
       isMobileRef.current = detectMobile()
-      
+
       // If switching to mobile/tablet, reset scroll offset to disable parallax
       if (isMobileRef.current && !wasMobile) {
         setScrollOffset({ y: 0, progress: 0 })
         return
       }
-      
+
       if (!isMobileRef.current) {
         needsRectUpdateRef.current = true
       }
@@ -135,7 +135,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
     }
 
     const wrapper = imageWrapperRef.current
-    
+
     // Initialize immediately and wait for refs to be ready
     const initParallax = () => {
       if (wrapper && imageRef.current && !animationRunningRef.current && !isMobileRef.current) {
@@ -143,14 +143,14 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         wrapper.addEventListener('mousemove', handleMouseMove, { passive: true })
         wrapper.addEventListener('mouseenter', handleMouseEnter)
         wrapper.addEventListener('mouseleave', handleMouseLeave)
-        
+
         // Add scroll listener
         window.addEventListener('scroll', handleScroll, { passive: true })
         window.addEventListener('resize', handleResize, { passive: true })
-        
+
         // Prime rect cache once before starting loop
         needsRectUpdateRef.current = true
-        
+
         // Start animation loop
         animationRunningRef.current = true
         frameRef.current = requestAnimationFrame(animate)
@@ -158,7 +158,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
       }
       return false
     }
-    
+
     // Try immediately, then with timeout as fallback
     let timeoutId
     if (!initParallax()) {
@@ -175,14 +175,14 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         clearTimeout(scrollTimeoutRef.current)
       }
       animationRunningRef.current = false
-      
+
       if (frameRef.current) {
         cancelAnimationFrame(frameRef.current)
       }
-      
+
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
-      
+
       if (wrapper) {
         wrapper.removeEventListener('mousemove', handleMouseMove)
         wrapper.removeEventListener('mouseenter', handleMouseEnter)
@@ -193,7 +193,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
 
   // On mobile/tablet, disable complex transforms and parallax for smooth performance
   const isMobile = isMobileRef.current
-  
+
   // Enhanced 3D transforms with better depth (desktop only)
   // No parallax on mobile/tablet - all scroll-based transforms disabled
   // No scale on hover - images remain same size
@@ -202,7 +202,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
   const translateX = isMobile ? 0 : mousePosition.x * 15 // Horizontal parallax
   const translateY = isMobile ? 0 : (scrollOffset.y + (mousePosition.y * 15)) // Scroll parallax disabled on mobile/tablet
   const translateZ = isMobile ? 0 : (isHovering ? 20 : 0) // Depth on hover
-  
+
   // Glow effect based on mouse position (desktop only)
   const glowX = isMobile ? 50 : ((mousePosition.x * 50) + 50) // 0-100%
   const glowY = isMobile ? 50 : ((mousePosition.y * 50) + 50) // 0-100%
@@ -213,7 +213,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
         {/* Project Image */}
         <div className='project-image-wrapper' ref={imageWrapperRef}>
           {/* Glow effect layer */}
-          <div 
+          <div
             className='project-image-glow'
             style={{
               background: `radial-gradient(circle at ${glowX}% ${glowY}%, rgba(0, 179, 255, ${isHovering ? 0.4 : 0.2}), transparent 70%)`,
@@ -221,39 +221,38 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
               transition: 'opacity 0.4s ease'
             }}
           />
-          
+
           <Link href={`${detailsBasePath}/${item.slug}`} className='project-image-link d-block w-100 h-100' aria-label={`View ${item.title} project details`} onClick={() => {
             try {
               sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
               sessionStorage.setItem('inx_restore_projects', '1')
               if (currentCategory) sessionStorage.setItem('inx_projects_category', currentCategory)
-            } catch {}
+            } catch { }
           }}>
-            <img 
+            <img
               ref={imageRef}
-              src={item.thumb} 
-              alt={item.title} 
+              src={item.thumb}
+              alt={item.title}
               className='project-image'
               style={{
-                transform: isMobile 
-                  ? 'none' 
+                transform: isMobile
+                  ? 'none'
                   : `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px)`,
-                transition: isMobile 
-                  ? 'transform 0.3s ease, filter 0.3s ease' 
+                transition: isMobile
+                  ? 'transform 0.3s ease, filter 0.3s ease'
                   : (isHovering ? 'none' : 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)'),
-                filter: isMobile 
-                  ? 'brightness(1) contrast(1)' 
+                filter: isMobile
+                  ? 'brightness(1) contrast(1)'
                   : (isHovering ? `brightness(1.1) contrast(1.05)` : 'brightness(1) contrast(1)')
               }}
             />
             <div className='project-overlay'>
               <div className='project-overlay-content'>
-                <i className='icon-eye'></i>
                 <span>View Details</span>
               </div>
             </div>
           </Link>
-          
+
         </div>
 
         {/* Project Content */}
@@ -265,7 +264,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
                   sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
                   sessionStorage.setItem('inx_restore_projects', '1')
                   if (currentCategory) sessionStorage.setItem('inx_projects_category', currentCategory)
-                } catch {}
+                } catch { }
               }}>{item.title}</Link>
             </h3>
             <div className='project-category'>{item.category}</div>
@@ -273,7 +272,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
 
           <p className='project-description'>{item.description}</p>
 
-          
+
           {/* Technology Tags */}
           <div className='project-technologies'>
             <div className='tech-label'>Technologies:</div>
@@ -309,7 +308,7 @@ export default function ProjectItem({ item, index, currentCategory, detailsBaseP
                 sessionStorage.setItem('inx_projects_scroll', String(window.scrollY || window.pageYOffset || 0))
                 sessionStorage.setItem('inx_restore_projects', '1')
                 if (currentCategory) sessionStorage.setItem('inx_projects_category', currentCategory)
-              } catch {}
+              } catch { }
             }}>
               <span>Explore Project</span>
             </Link>

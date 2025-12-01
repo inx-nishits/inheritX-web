@@ -207,7 +207,7 @@ export default function ProjectDetailsPage({ params }) {
                                         onClick={handleBackToProjects}
                                     >
                                         <span>View More {baseLabel}</span>
-                                        <i className='icon-eye'></i>
+                                        <i className='icon-arrow-right'></i>
                                     </Link>
                                 </div>
                             </div>
