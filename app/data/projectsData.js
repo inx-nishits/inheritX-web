@@ -8,7 +8,7 @@ export const projectItems = [
     technology: "React, Node.js, MongoDB",
     country: "India",
     description:
-      "Venuorama is an innovative online marketplace designed to simplify venue discovery and booking for any type of event. The platform allows users to explore a wide range of venues through immersive 360° virtual tours, offering a realistic experience before visiting in person. With advanced search filters based on city, area, budget, and event type, users can easily find venues that match their specific preferences. Each listing includes detailed information, images, amenities, and customer reviews to support informed decision-making. Venuorama also enables direct inquiries and booking requests, streamlining the entire event-planning process. The platform aims to bridge the gap between venue owners and customers, making venue selection more transparent, engaging, and efficient.Venuorama is an innovative online marketplace designed to simplify venue discovery and booking for any type of event. The platform allows users to explore a wide range of venues through immersive 360° virtual tours, offering a realistic experience before visiting in person. With advanced search filters based on city, area, budget, and event type, users can easily find venues that match their specific preferences. Each listing includes detailed information, images, amenities, and customer reviews to support informed decision-making. Venuorama also enables direct inquiries and booking requests, streamlining the entire event planning process. The platform aims to bridge the gap between venue owners and customers, making venue selection more transparent, engaging, and efficient.",
+      "Venuorama is an innovative online marketplace designed to simplify venue discovery and booking for any type of event. The platform allows users to explore a wide range of venues through immersive 360° virtual tours, offering a realistic experience before visiting in person. With advanced search filters based on city, area, budget, and event type, users can easily find venues that match their specific preferences. Each listing includes detailed information, images, amenities, and customer reviews to support informed decision-making. Venuorama also enables direct inquiries and booking requests, streamlining the entire event-planning process. The platform aims to bridge the gap between venue owners and customers, making venue selection more transparent, engaging, and efficient.",
     cover: "/image/project-item/venuarama.png",
     thumb: "/image/project-item/venuarama.png",
     features: [
@@ -147,7 +147,7 @@ export const projectItems = [
   {
     id: 8,
     slug: "our-little-play-home",
-    title: "Our little play home",
+    title: "Our Little Play Home",
     category: "Web Development",
     industry: "EdTech / Parenting & Child Engagement Platform",
     technology: "Next.js, Node.js, MongoDB, Tailwind CSS, TypeScript, PWA",
@@ -226,7 +226,7 @@ export const projectItems = [
     industry: "Communication",
     technology: "Kotlin, Swift, Node.js",
     description:
-      "TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of essential medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of essential medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.",
+      "TRIUNE is a safety and alert platform designed to keep users connected and protected during medical or legal emergencies. The app automatically notifies authorized contacts when a user is hospitalized or encounters legal trouble, ensuring timely awareness and support. With TRIUNE Medical Alert, loved ones are instantly informed if the user is admitted to a hospital, with consent-based sharing of essential medical documents. The TRIUNE Legal Alert feature enables users to notify family members and attorneys during police stops, sharing real-time location and voice or text messages for quick assistance. Combining technology and care, TRIUNE empowers users to stay safe, informed, and in control during life’s critical moments.",
     cover: "/image/project-item/triune.png",
     thumb: "/image/project-item/triune.png",
     features: ["Emergency Alerts", "Medical Alerts", "Ask a Lawyer feature"],
@@ -412,7 +412,7 @@ export const projectItems = [
     title: "Crack Detection and Tracking System",
     category: "Mobile App Development",
     industry: "Construction / Infrastructure / Facility Management",
-    technology: "Flutter, Dart, Webpanel: PHP",
+    technology: "Flutter, Dart, Web Panel: PHP",
     description:
       "The Defect Detection and Tracking System aims to streamline on-site defect management by enabling users to detect, record, and monitor defects through a mobile application. The web panel allows supervisors and administrators to review, assign, and track issues in real time. The system enhances transparency, reduces manual paperwork, and ensures that all defects are documented, prioritized, and resolved efficiently. The project also introduces automation in notifications and report generation, improving workflow and accountability across construction, manufacturing, and infrastructure projects.",
     cover: "/image/project-item/crack-detection.png",
@@ -423,7 +423,7 @@ export const projectItems = [
       "Defect trend analytics",
       "Online data synchronization",
       "Role-based user access",
-      "Defect trend analytics",
+      "Defect trend insights",
     ],
   },
   {
@@ -438,7 +438,7 @@ export const projectItems = [
     cover: "/image/project-item/rfg-qc.png",
     thumb: "/image/project-item/rfg-qc.png",
     features: [
-      "kiosk mode",
+      "Kiosk Mode",
       "Offline Support",
       "Auto Sync",
       "Quality Reporting",
@@ -465,7 +465,6 @@ export const projectItems = [
       "Community Engagement",
       "User Profiles",
       "Content Sharing",
-      "Content Sharing",
       "Notification System",
       "Interactive UI",
     ],
@@ -473,7 +472,7 @@ export const projectItems = [
   {
     id: 25,
     slug: "home-coming-app",
-    title: "Home coming app",
+    title: "Home Coming App",
     category: "Mobile App Development",
     industry: "Real Estate / Property Rental Technology",
     technology: "Flutter, Node.js, React.js",
@@ -491,34 +490,14 @@ export const projectItems = [
     ],
   },
   {
-    id: 26,
-    slug: "heva",
-    title: "Heva",
-    category: "AI/ML",
-    industry: "Health & Wellness / Artificial Intelligence",
-    technology: "React.js, Node.js, Python (AI/ML), Tailwind CSS",
-    description:
-      "Heva is an AI/ML-powered wellness intelligence platform designed to promote healthier lifestyles through data-driven insights. The system leverages machine learning models built with Python to analyze user data such as activity patterns, preferences, and wellness goals. Based on these insights, it provides personalized recommendations, tracks user progress, and dynamically adjusts goals using predictive analytics. The platform includes an AI chatbot for user interaction, real-time updates, and progress monitoring. Developed using React.js and Node.js, Heva ensures seamless integration, robust security, and a modern user experience through a clean, responsive interface styled with Tailwind CSS.",
-    cover: "/image/project-item/heva.png",
-    thumb: "/image/project-item/heva.png",
-    features: [
-      "AI-Powered Recommendation Engine",
-      "Health Data Analysis",
-      "Smart Goal Tracking",
-      "Intelligent Chat Assistant",
-      "Data Security & Privacy",
-      "Interactive & Modern UI",
-    ],
-  },
-  {
     id: 27,
     slug: "kavia-ai",
-    title: "Kavia AI",
+    title: "Kavia AI – AI-Driven Software Development Workflow Platform",
     category: "AI/ML",
     industry: "Artificial Intelligence / Software Development Automation Industry",
     technology: "Next.js, FastAPI, Neo4j & MongoDB databases, LLMs",
     description:
-      "Kavia AI accelerates software product development with an intelligent, AI-powered Workflow Manager that automates and optimizes every stage of the lifecycle. It transforms project definitions into actionable, trackable workflows while enhancing collaboration and code intelligence. With predictive insights and adaptive dashboards, Kavia AI empowers teams to deliver faster, smarter, and with greater precision.",
+      "Kavia AI is an end-to-end AI-powered development platform built to accelerate and simplify the complete software product lifecycle. Its core offering is an intelligent Workflow Management Platform that seamlessly integrates AI into every stage of development — from project planning and code inspection to automated code generation and performance analysis. By embedding AI across the workflow, Kavia AI helps teams build faster, reduce errors, and optimize development efficiency at scale.",
     cover: "/image/project-item/kavia-ai.png",
     thumb: "/image/project-item/kavia-ai.png",
     features: [
@@ -531,14 +510,94 @@ export const projectItems = [
     ],
   },
   {
+    id: 26,
+    slug: "heva",
+    title: "Heva – AI-Native Healthcare & Wellness Intelligence Platform",
+    category: "AI/ML",
+    industry: "Health & Wellness / Artificial Intelligence",
+    technology: "React.js, Node.js, Python (AI/ML), Tailwind CSS",
+    description:
+      "Heva is an AI-native healthcare platform focused on cross-border medical tourism and wellness intelligence. It is designed to simplify global patient-provider interactions, enable seamless access to care, and deliver personalized health insights. Powered by Python-based machine learning models, Heva analyzes user activity patterns, preferences, and health data to generate personalized wellness recommendations, predictive goal adjustments, and progress tracking. It supports natural multi-turn conversations, dynamic service routing, and real-time actions such as appointment management and health monitoring.",
+    cover: "/image/project-item/heva.png",
+    thumb: "/image/project-item/heva.png",
+    features: [
+      "AI-Powered Recommendation Engine",
+      "Health Data Analysis",
+      "Smart Goal Tracking",
+      "Intelligent Chat Assistant",
+      "Data Security & Privacy",
+      "Interactive & Modern UI",
+    ],
+  },
+  {
     id: 28,
+    slug: "T2D2-damage-detection-platform",
+    title: "T2D2 – AI-Powered Building Damage Detection Platform",
+    category: "AI/ML",
+    industry: "Digital Twin & Infrastructure Asset Management",
+    technology: "Angular, Node.js, Python, Material UI, MongoDB",
+    description:
+      "T2D2 is an advanced computer-vision-driven SaaS platform that automatically detects, classifies, and monitors visible damage on building facades and physical infrastructure. Using photos, videos, and drone imagery, T2D2 identifies cracks, spalling, surface defects, and material deterioration with high accuracy. The platform enables engineers, inspectors, and asset owners to detect issues early, reduce manual inspections, improve safety, and optimize maintenance decisions through data-driven insights.",
+    cover: "/image/project-item/t2d2.png",
+    thumb: "/image/project-item/t2d2.png",
+    features: [
+      "AI-Powered Damage Detection",
+      "Manual Inspection Support",
+      "Interactive Mapping with Leaflet",
+      "3D Visualization with Cesium",
+      "AI-Powered Chatbot for Assistance",
+    ],
+  },
+  {
+    id: 29,
+    slug: "toothFit-ai-powered-platform",
+    title: "Toothfit – AI-Enabled Dental Monitoring & Diagnostics Platform",
+    category: "AI/ML",
+    industry: "Dental Healthcare & Medical Technology",
+    technology: "Flutter, Python, Django, FastAPI, AWS Cloud",
+    description:
+      "Toothfit is an AI-powered dental platform focused on remote aligner treatment monitoring, oral health tracking, and clinic-based diagnostics for patients and dentists in India. It allows dentists to track treatment progress and dental issues without requiring frequent in-person visits. The platform also features AI-assisted X-ray analysis to detect abnormalities, support faster diagnosis, and enhance clinical decision-making, improving both patient experience and clinical efficiency.",
+    cover: "/image/project-item/ai-dent.png",
+    thumb: "/image/project-item/ai-dent.png",
+    features: [
+      "Oral Scan & Aligner Monitoring Engine",
+      "Dentist–Patient Linking System",
+      "X-Ray CRM & SSO Integration",
+      "Notification & Voice Guidance",
+      "Payments & Subscription Logic",
+      "Admin API for Web Portal",
+      "AWS Cloud Setup",
+    ],
+  },
+  {
+    id: 31,
+    slug: "underwriter-learn-stocks-ai",
+    title: "Underwriter – Learn Stocks | AI-Powered Stock Research Platform",
+    category: "AI/ML",
+    industry: "Stock market",
+    technology: "Flutter, node.js, react.js, Python",
+    description:
+      "Underwriter is a smart stock research platform designed to make investing simpler and more accessible for both beginners and experienced investors. It converts complex financial data into clear, actionable insights using AI and machine learning. The platform offers detailed company profiles, advanced financial metric visualizations, and a curated news feed enriched with sentiment analysis. An AI-powered chatbot acts as a personal financial analyst by summarizing reports and answering investment-related queries, helping users make informed, confident investment decisions.",
+    cover: "/image/project-item/underwriter.png",
+    thumb: "/image/project-item/underwriter.png",
+    features: [
+      "Easy & Smart Investing",
+      "Advanced Company Data Visualization",
+      "Curated News Feed with Sentiment Analysis",
+      "AI Chatbot – Your Personal Financial Analyst",
+      "Side-by-Side Company Comparison",
+      "Daily Market Outlook",
+    ],
+  },
+  {
+    id: 30,
     slug: "guardrail-technologies",
-    title: "Guardrail Technologies (AI Trust Layer Platform)",
+    title: "GuardRails AI – Enterprise-Grade AI Reliability & Safety Platform",
     category: "AI/ML",
     industry: "Enterprise AI Security, Data Governance, Compliance Automation",
     technology: "Python, Node.js, React.js, OpenAI API, Anthropic Claude, Google Gemini, Microsoft Azure OpenAI",
     description:
-      "Guardrail Technologies is an enterprise-grade AI security and governance platform designed to act as a protective trust layer around large language model (LLM) workflows. It enables companies to safely integrate AI into their operations while maintaining strict control over data, compliance, and user interactions. The system provides real-time visibility, risk alerts, and detailed audit logs, ensuring organizations can leverage AI responsibly and securely.",
+      "GuardRails AI is an AI reliability platform that delivers real-time safeguards for generative AI systems. It focuses on hallucination detection, intelligent agent performance optimization, and sensitive data protection to ensure secure, accurate, and trustworthy AI operations. Built for enterprise deployments, GuardRails AI helps organizations maintain high AI reliability standards while minimizing risk and ensuring regulatory compliance.",
     cover: "/image/project-item/guardrail.png",
     thumb: "/image/project-item/guardrail.png",
     features: [
@@ -549,26 +608,6 @@ export const projectItems = [
       "Prompt Injection Defense",
       "Audit Logging & Compliance",
       "Seamless Integration",
-    ],
-  },
-  {
-    id: 29,
-    slug: "underwriter-learn-stocks-ai",
-    title: "Underwriter: Learn Stocks",
-    category: "AI/ML",
-    industry: "Stock market",
-    technology: " Flutter, node.js, react.js, Python",
-    description:
-      "Underwriter is a smart stock research platform that makes investing easier and more informed. It combines an intuitive interface with advanced tools to turn complex financial data into clear insights.Users can explore detailed company profiles, visualize key financial metrics, and stay updated with a curated news feed enhanced by sentiment analysis. The AI-powered chatbot acts as a personal financial assistant, simplifying reports and answering investment-related questions instantly. Underwriter also enables side-by-side company comparisons and provides a daily market outlook, helping investors start each trading day informed and confident.",
-    cover: "/image/project-item/underwriter.png",
-    thumb: "/image/project-item/underwriter.png",
-    features: [
-      "Easy & Smart Investing",
-      "Advanced Company Data Visualization",
-      "Curated News Feed with Sentiment Analysis",
-      "AI Chatbot – Your Personal Financial Analyst",
-      "Side-by-Side Company Comparison",
-      "Daily Market Outlook",
     ],
   },
 ];
@@ -596,7 +635,7 @@ export const projectCategories = [
 ];
 
 export const getProjectBySlug = (slug) => {
-  return projectItems.find((item) => item.slug === slug);
+  return projectItems.find((item) => item && item.slug === slug);
 };
 
 export const getProjectsByCategory = (category) => {

@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { projectItems, getProjectBySlug } from '../../data/projectsData'
 
 export default function ProjectDetailsPage({ params }) {
@@ -8,14 +9,19 @@ export default function ProjectDetailsPage({ params }) {
     const { slug } = params || {}
     const item = getProjectBySlug(slug)
 
-    // Determine base path (portfolio or projects) based on current URL
-    const getBasePath = () => {
+    // Base path is derived on the client, but starts with a stable default
+    // so that server and first client render match (avoids hydration errors).
+    const [basePath, setBasePath] = useState('/projects')
+
+    useEffect(() => {
         if (typeof window !== 'undefined') {
-            return window.location.pathname.includes('/portfolio') ? '/portfolio' : '/projects'
+            setBasePath(
+                window.location.pathname.includes('/portfolio') ? '/portfolio' : '/projects'
+            )
         }
-        return '/projects' // Default for SSR
-    }
-    const basePath = getBasePath()
+    }, [])
+
+    const baseLabel = basePath === '/portfolio' ? 'Portfolio' : 'Projects'
     
     // Helper to get category tab key
     const getCategoryKey = () => {
@@ -30,6 +36,9 @@ export default function ProjectDetailsPage({ params }) {
     const handleBackToProjects = (e) => {
         if (e && typeof e.preventDefault === 'function') e.preventDefault()
         const categoryKey = getCategoryKey()
+        const isPortfolio = basePath === '/portfolio'
+        const targetHref = isPortfolio ? basePath : `${basePath}?tab=${categoryKey}`
+
         try {
             const raw = sessionStorage.getItem('inx_prev_route')
             const prev = raw ? JSON.parse(raw) : null
@@ -39,7 +48,16 @@ export default function ProjectDetailsPage({ params }) {
                 return
             }
         } catch { }
-        router.push(`${basePath}?tab=${categoryKey}`)
+
+        // For portfolio, keep URL clean (no ?tab=...) but still restore correct tab using session storage
+        if (typeof window !== 'undefined' && isPortfolio) {
+            try {
+                sessionStorage.setItem('inx_projects_category', categoryKey)
+                sessionStorage.setItem('inx_restore_projects', '1')
+            } catch { }
+        }
+
+        router.push(targetHref)
     }
 
     if (!item) {
@@ -51,8 +69,12 @@ export default function ProjectDetailsPage({ params }) {
                     </div>
                     <h2 className='not-found-title fw-6 mb-3'>Project Not Found</h2>
                     <p className='not-found-text body-2 mb-4'>The project you're looking for doesn't exist or has been moved.</p>
-                    <Link href={`${basePath}?tab=all`} className='tf-btn' onClick={handleBackToProjects}>
-                        <span>Back to {basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</span>
+                    <Link
+                        href={basePath === '/portfolio' ? basePath : `${basePath}?tab=all`}
+                        className='tf-btn'
+                        onClick={handleBackToProjects}
+                    >
+                        <span>Back to {baseLabel}</span>
                         <i className='icon-arrow-left'></i>
                     </Link>
                 </div>
@@ -64,9 +86,13 @@ export default function ProjectDetailsPage({ params }) {
             <div className='tf-container pt-5 mt-md-5'>
                 <div className='project-details-container'>
                     <div className='project-back-btn d-flex gap-2'>
-                        <Link href={`${basePath}?tab=${getCategoryKey()}`} className='back-link d-flex align-items-center gap-2' onClick={handleBackToProjects}>
+                        <Link
+                            href={basePath === '/portfolio' ? basePath : `${basePath}?tab=${getCategoryKey()}`}
+                            className='back-link d-flex align-items-center gap-2'
+                            onClick={handleBackToProjects}
+                        >
                             <i className='icon-arrow-left'></i>
-                            <span>Back to {basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</span>
+                            <span>Back to {baseLabel}</span>
                         </Link>
                     </div>
                 </div>
@@ -80,7 +106,13 @@ export default function ProjectDetailsPage({ params }) {
                             <div className='breadkcum'>
                                 <Link href='/' className='link-breadkcum body-2 fw-7 split-text effect-right'>Home</Link>
                                 <span className='dot'></span>
-                                <Link href={`${basePath}?tab=${getCategoryKey()}`} className='link-breadkcum body-2 fw-7 split-text effect-right' onClick={handleBackToProjects}>{basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</Link>
+                                <Link
+                                    href={basePath === '/portfolio' ? basePath : `${basePath}?tab=${getCategoryKey()}`}
+                                    className='link-breadkcum body-2 fw-7 split-text effect-right'
+                                    onClick={handleBackToProjects}
+                                >
+                                    {baseLabel}
+                                </Link>
                                 <span className='dot'></span>
                                 <span className='page-breadkcum body-2 fw-7 split-text effect-right'>Project Details</span>
                             </div>
@@ -125,7 +157,7 @@ export default function ProjectDetailsPage({ params }) {
                                 <div className='tech-stack'>
                                     {item.technology.split(', ').map((tech, index) => (
                                         <div key={index} className='tech-item'>
-                                            <i className='tech-icon icon-code'></i>
+                                            <i className='tech-icon icon-check'></i>
                                             <span>{tech.trim()}</span>
                                         </div>
                                     ))}
@@ -169,8 +201,12 @@ export default function ProjectDetailsPage({ params }) {
                                         <span>Start Your Project</span>
                                         <i className='icon-arrow-right'></i>
                                     </Link>
-                                    <Link href={`${basePath}?tab=${getCategoryKey()}`} className='tf-btn secondary' onClick={handleBackToProjects}>
-                                        <span>View More {basePath === '/portfolio' ? 'Portfolio' : 'Projects'}</span>
+                                    <Link
+                                        href={basePath === '/portfolio' ? basePath : `${basePath}?tab=${getCategoryKey()}`}
+                                        className='tf-btn secondary'
+                                        onClick={handleBackToProjects}
+                                    >
+                                        <span>View More {baseLabel}</span>
                                         <i className='icon-eye'></i>
                                     </Link>
                                 </div>

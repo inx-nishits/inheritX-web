@@ -6,7 +6,12 @@ import { projectItems, projectCategories } from '../../data/projectsData'
 import ProjectItem from './ProjectItem'
 import Breadcrumbs from '../Breadcrumbs'
 
-export default function ProjectsPage({ basePath = '/projects', detailsBasePath = '/project-details', pageTitle = 'Our Projects' }) {
+export default function ProjectsPage({
+    basePath = '/projects',
+    detailsBasePath = '/project-details',
+    pageTitle = 'Our Projects',
+    enableUrlTabSync = true, // allow disabling ?tab= sync for specific routes (e.g. /portfolio)
+}) {
     const searchParams = useSearchParams()
     const router = useRouter()
     
@@ -16,29 +21,35 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
     const [mounted, setMounted] = useState(false)
     const initializedRef = useRef(false)
 
+    // Initial load: decide which tab should be active
     useEffect(() => {
         if (initializedRef.current) return
         initializedRef.current = true
         
         try {
             const allowed = ['all', 'web', 'mobile', 'aiml']
-            
-            // Priority 1: URL parameter (most reliable)
-            const tabParam = searchParams?.get('tab')
-            if (tabParam && allowed.includes(tabParam)) {
-                setActiveCategory(tabParam)
-            } else {
-                // Priority 2: Restore from session storage if flag is set
-                const shouldRestore = sessionStorage.getItem('inx_restore_projects') === '1'
-                if (shouldRestore) {
-                    const saved = sessionStorage.getItem('inx_projects_category')
-                    if (saved && allowed.includes(saved)) {
-                        setActiveCategory(saved)
-                    }
+            let nextCategory = 'all'
+
+            // 1) URL parameter (only when URL sync is enabled)
+            let tabParam = null
+            if (enableUrlTabSync) {
+                tabParam = searchParams?.get('tab')
+                if (tabParam && allowed.includes(tabParam)) {
+                    nextCategory = tabParam
+                }
+            }
+
+            // 2) If there is no valid tab in URL, restore last selected tab from sessionStorage
+            if (!tabParam) {
+                const saved = sessionStorage.getItem('inx_projects_category')
+                if (saved && allowed.includes(saved)) {
+                    nextCategory = saved
                 }
             }
             
-            // Check if we're restoring from a detail page
+            setActiveCategory(nextCategory)
+
+            // Check if we're restoring from a detail page (used for scroll restoration)
             const restore = sessionStorage.getItem('inx_restore_projects')
             
             if (restore === '1') {
@@ -57,15 +68,18 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
         } catch { }
         
         setMounted(true)
-    }, [searchParams])
+    }, [searchParams, enableUrlTabSync])
 
-    // Keep URL in sync with active category
+    // Always persist the currently active category in sessionStorage
     useEffect(() => {
-        if (!mounted) return
-        
         try {
             sessionStorage.setItem('inx_projects_category', activeCategory)
         } catch { }
+    }, [activeCategory])
+
+    // Keep URL in sync with active category (only when enabled, e.g. /projects)
+    useEffect(() => {
+        if (!mounted || !enableUrlTabSync) return
         
         const currentTabParam = searchParams?.get('tab') || null
         const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
@@ -75,7 +89,7 @@ export default function ProjectsPage({ basePath = '/projects', detailsBasePath =
             const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
             router.replace(`${basePath}${query}`, { scroll: false })
         }
-    }, [activeCategory, mounted])
+    }, [activeCategory, mounted, enableUrlTabSync, searchParams, router, basePath])
 
     const filteredItems = activeCategory === 'all'
         ? (() => {
