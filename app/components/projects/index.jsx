@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { projectItems, projectCategories } from '../../data/projectsData'
 import ProjectItem from './ProjectItem'
@@ -11,15 +11,44 @@ export default function ProjectsPage({
     detailsBasePath = '/project-details',
     pageTitle = 'Our Projects',
     enableUrlTabSync = true, // allow disabling ?tab= sync for specific routes (e.g. /portfolio)
+    usePathBasedRouting = false, // use path-based routing instead of query parameters
+    initialTab = null, // initial tab from URL path (for path-based routing)
 }) {
     const searchParams = useSearchParams()
     const router = useRouter()
+    const pathname = usePathname()
 
     // Initialize state - always start with 'all' to avoid hydration mismatch
     const [activeCategory, setActiveCategory] = useState('all')
 
     const [mounted, setMounted] = useState(false)
     const initializedRef = useRef(false)
+
+    // URL tab mapping: URL tab values -> internal category IDs
+    const urlTabToCategory = (urlTab) => {
+        const mapping = {
+            'web-development': 'web',
+            'mobile-app-development': 'mobile',
+            'mobile-development': 'mobile', // Backward compatibility
+            'ai-ml-projects': 'aiml',
+            'aiml-projects': 'aiml', // Backward compatibility
+            // Backward compatibility with old tab values
+            'web': 'web',
+            'mobile': 'mobile',
+            'aiml': 'aiml',
+        }
+        return mapping[urlTab] || null
+    }
+
+    // Internal category ID -> URL tab value
+    const categoryToUrlTab = (categoryId) => {
+        const mapping = {
+            'web': 'web-development',
+            'mobile': 'mobile-app-development',
+            'aiml': 'ai-ml-projects',
+        }
+        return mapping[categoryId] || null
+    }
 
     // Initial load: decide which tab should be active
     useEffect(() => {
@@ -30,12 +59,26 @@ export default function ProjectsPage({
             const allowed = ['all', 'web', 'mobile', 'aiml']
             let nextCategory = 'all'
 
-            // 1) URL parameter (only when URL sync is enabled)
+            // 1) URL parameter (query param or path-based, only when URL sync is enabled)
             let tabParam = null
             if (enableUrlTabSync) {
-                tabParam = searchParams?.get('tab')
-                if (tabParam && allowed.includes(tabParam)) {
-                    nextCategory = tabParam
+                if (usePathBasedRouting) {
+                    // Path-based routing: get tab from URL path or initialTab prop
+                    const pathTab = initialTab || (pathname ? pathname.split('/').pop() : null)
+                    if (pathTab && pathTab !== basePath.split('/').pop()) {
+                        tabParam = pathTab
+                    }
+                } else {
+                    // Query parameter routing
+                    tabParam = searchParams?.get('tab')
+                }
+                
+                if (tabParam) {
+                    // Convert URL tab value to internal category ID
+                    const mappedCategory = urlTabToCategory(tabParam)
+                    if (mappedCategory && allowed.includes(mappedCategory)) {
+                        nextCategory = mappedCategory
+                    }
                 }
             }
 
@@ -68,7 +111,7 @@ export default function ProjectsPage({
         } catch { }
 
         setMounted(true)
-    }, [searchParams, enableUrlTabSync])
+    }, [searchParams, enableUrlTabSync, usePathBasedRouting, initialTab, pathname, basePath])
 
     // Always persist the currently active category in sessionStorage
     useEffect(() => {
@@ -81,15 +124,32 @@ export default function ProjectsPage({
     useEffect(() => {
         if (!mounted || !enableUrlTabSync) return
 
-        const currentTabParam = searchParams?.get('tab') || null
-        const desiredTabParam = activeCategory !== 'all' ? activeCategory : null
+        // Convert internal category ID to URL tab value
+        const desiredTabParam = activeCategory !== 'all' ? categoryToUrlTab(activeCategory) : null
 
-        // Only update URL if it's different to avoid unnecessary navigation
-        if (currentTabParam !== desiredTabParam) {
-            const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
-            router.replace(`${basePath}${query}`, { scroll: false })
+        if (usePathBasedRouting) {
+            // Path-based routing: use /portfolio/web-development format
+            const currentPath = pathname || ''
+            const desiredPath = desiredTabParam ? `${basePath}/${desiredTabParam}` : basePath
+
+            // Only update URL if it's different to avoid unnecessary navigation
+            // Check both exact match and handle trailing slash variations
+            const normalizedCurrent = currentPath.replace(/\/$/, '')
+            const normalizedDesired = desiredPath.replace(/\/$/, '')
+            if (normalizedCurrent !== normalizedDesired) {
+                router.replace(desiredPath, { scroll: false })
+            }
+        } else {
+            // Query parameter routing: use /projects?tab=web-development format
+            const currentTabParam = searchParams?.get('tab') || null
+
+            // Only update URL if it's different to avoid unnecessary navigation
+            if (currentTabParam !== desiredTabParam) {
+                const query = desiredTabParam ? `?tab=${desiredTabParam}` : ''
+                router.replace(`${basePath}${query}`, { scroll: false })
+            }
         }
-    }, [activeCategory, mounted, enableUrlTabSync, searchParams, router, basePath])
+    }, [activeCategory, mounted, enableUrlTabSync, usePathBasedRouting, searchParams, router, basePath, pathname])
 
     const filteredItems = activeCategory === 'all'
         ? (() => {

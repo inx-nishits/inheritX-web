@@ -82,7 +82,7 @@ export default function BlogDetailsPage({ params }) {
 
   const bloginfo = details?.bloginfo || null;
   const title = bloginfo?.title;
-  const hero = bloginfo?.feature_image || '/image/blog/blog-fallback-b.jpg';
+  const hero = bloginfo?.feature_image || '/image/blog/blog-fallback-image.jpg';
 
   // Dynamic SEO updates when blog data loads
   useEffect(() => {
@@ -109,7 +109,7 @@ export default function BlogDetailsPage({ params }) {
       }
 
       // Update Open Graph image if available
-      if (hero && hero !== '/image/blog/blog-fallback-b.jpg') {
+      if (hero && hero !== '/image/blog/blog-fallback-image.jpg') {
         const ogImage = document.querySelector('meta[property="og:image"]');
         if (ogImage) {
           ogImage.setAttribute('content', hero);
@@ -122,7 +122,7 @@ export default function BlogDetailsPage({ params }) {
         "@type": "BlogPosting",
         "headline": title,
         "description": bloginfo.excerpt || bloginfo.description || `Read insights about ${title} from InheritX.`,
-        "image": hero !== '/image/blog/blog-fallback-b.jpg' ? hero : undefined,
+        "image": hero !== '/image/blog/blog-fallback-image.jpg' ? hero : undefined,
         "author": {
           "@type": "Person",
           "name": bloginfo.author || "InheritX Team"

@@ -100,6 +100,11 @@ const menuData = [
     type: 'link'
   },
   {
+    label: 'Case Studies',
+    href: '/case-studies',
+    type: 'link'
+  },
+  {
     label: 'Blog',
     href: '/blog',
     type: 'link'

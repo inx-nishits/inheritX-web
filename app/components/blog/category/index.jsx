@@ -379,7 +379,7 @@ export default function CategoryDetailsPage() {
         .skeleton-image {
           display: block;
           width: 100%;
-          aspect-ratio: 4/2;
+          aspect-ratio: 2.09 / 1;
           margin: 15px 15px 0;
           min-height: inherit;
           height: initial !important;
@@ -552,7 +552,7 @@ export default function CategoryDetailsPage() {
                               src={post.feature_image}
                               alt={post.title}
                               className="ls-is-cached lazyloaded"
-                              aspectRatio="4/2"
+                              aspectRatio="2.09/1"
                               fit="contain"
                               priority={index < 3}
                             />

@@ -255,8 +255,8 @@ export const projectItems = [
   },
   {
     id: 14,
-    slug: "regensis",
-    title: "Regensis",
+    slug: "regenesiss",
+    title: "Regenesiss",
     category: "Mobile App Development",
     industry: "Medical Industry",
     technology: "React Native, Python, Next.js",

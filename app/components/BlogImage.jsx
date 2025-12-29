@@ -7,7 +7,7 @@ export default function BlogImage({
     src, 
     alt = '', 
     className = '', 
-    fallbackSrc = '/image/blog/blog-fallback-b.jpg',
+    fallbackSrc = '/image/blog/blog-fallback-image.jpg',
     width = 400,
     height = 300,
     priority = false,
@@ -66,7 +66,7 @@ export default function BlogImage({
                     display: block;
                 }
                 .image-container.ratio {
-                    height: 260px;
+                    height: auto;
                     aspect-ratio: ${aspectRatio || 'auto'};
                 }
                 
@@ -76,7 +76,7 @@ export default function BlogImage({
                         height: auto;
                     }
                         .hover-image .image img {
-                        object-fit: initial !important;
+                        object-fit: cover !important;
                         }
                 }
                 

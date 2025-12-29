@@ -2787,7 +2787,7 @@ textarea.form-input {
 }
 @media (max-width: 575px) {
 .hover-image .image img {
-  object-fit: initial !important;
+  object-fit: cover !important;
 }
 }
 

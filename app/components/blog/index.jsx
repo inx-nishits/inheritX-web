@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import toast from 'react-hot-toast';
 import BlogImage from '../BlogImage';
 import ImagePreloader from '../ImagePreloader';
@@ -86,6 +86,68 @@ export default function BlogListPage() {
             isMounted = false;
         };
     }, []);
+
+    // Create a map of post images from main listing to ensure consistency
+    // This ensures 'Most Popular' and 'Trending Now' use the same images as main listing
+    const imageMap = useMemo(() => {
+        if (!blogData) return {};
+        const map = {};
+        
+        // Add images from singleBlog
+        blogData.singleBlog?.forEach(post => {
+            if (post.slug && post.feature_image) {
+                map[post.slug] = post.feature_image;
+            }
+        });
+        
+        // Add images from recentBlog
+        blogData.recentBlog?.forEach(post => {
+            if (post.slug && post.feature_image) {
+                map[post.slug] = post.feature_image;
+            }
+        });
+        
+        return map;
+    }, [blogData]);
+
+    // Helper function to get normalized image URL
+    const getImageUrl = useCallback((post) => {
+        // Safety check: if no post or no feature_image, return undefined (BlogImage will use fallback)
+        if (!post || !post.feature_image) {
+            return post?.feature_image || undefined;
+        }
+        
+        // If post exists in main listing, use that image (ensures consistency)
+        if (post.slug && imageMap[post.slug]) {
+            return imageMap[post.slug];
+        }
+        
+        // For relative URLs (starting with /), return as-is
+        if (post.feature_image.startsWith('/')) {
+            return post.feature_image;
+        }
+        
+        // Otherwise, normalize the URL by removing size parameters (only for admin.inheritx.com)
+        if (post.feature_image.includes('admin.inheritx.com')) {
+            try {
+                const url = new URL(post.feature_image);
+                // Remove size-related query parameters that might cause different images
+                url.searchParams.delete('w');
+                url.searchParams.delete('h');
+                url.searchParams.delete('resize');
+                url.searchParams.delete('fit');
+                // Remove size from path (e.g., /image-300x200.jpg -> /image.jpg)
+                url.pathname = url.pathname.replace(/-\d+x\d+\.(jpg|jpeg|png|webp)$/i, '.$1');
+                return url.toString();
+            } catch (e) {
+                // If URL parsing fails, return original
+                return post.feature_image;
+            }
+        }
+        
+        // For any other URLs, return as-is
+        return post.feature_image;
+    }, [imageMap]);
 
     // Get critical images for preloading
     const criticalImages = blogData ? [
@@ -609,7 +671,7 @@ export default function BlogListPage() {
         .skeleton-image {
           display: block;
           width: 100%;
-          aspect-ratio: 4 / 2; /* match BlogImage aspectRatio */
+          aspect-ratio: 2.09 / 1; /* match BlogImage aspectRatio */
           height: auto;
           min-height: 220px; /* preserve space similar to images */
           border-radius: 8px;
@@ -716,7 +778,7 @@ export default function BlogListPage() {
                                                             src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            aspectRatio="4/2"
+                                                            aspectRatio="2.09/1"
                                                             fit="contain"
                                                             priority={true}
                                                         />
@@ -746,7 +808,7 @@ export default function BlogListPage() {
                                                             src={post.feature_image}
                                                             alt={post.title}
                                                             className="ls-is-cached lazyloaded"
-                                                            aspectRatio="4/2"
+                                                            aspectRatio="2.09/1"
                                                             fit="contain"
                                                             priority={index < 2}
                                                         />
@@ -873,9 +935,9 @@ export default function BlogListPage() {
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                                                         <BlogImage
-                                                            src={post.feature_image}
+                                                            src={getImageUrl(post)}
                                                             alt={post.title || ''}
-                                                            aspectRatio="4/2"
+                                                            aspectRatio="2.09/1"
                                                             fit="contain"
                                                             priority={false}
                                                         />
@@ -965,17 +1027,17 @@ export default function BlogListPage() {
                                                 <div className="top">
                                                     <Link href={`/blog/${post.slug}`} className="image" aria-label={`Read full article: ${post.title}`}>
                                                         <BlogImage
-                                                            src={post.feature_image}
+                                                            src={getImageUrl(post)}
                                                             alt={post.title || ''}
-                                                            aspectRatio="4/2"
+                                                            aspectRatio="2.09/1"
                                                             fit="contain"
                                                             priority={false}
                                                         />
                                                     </Link>
                                                     <div className="post-content px-md-15">
-                                                        <h6 className="title lh-32">
+                                                        <p className="title lh-32">
                                                             <Link href={`/blog/${post.slug}`} className="line-clamp-3">{post.title}</Link>
-                                                        </h6>
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 <div className="bottom-item px-md-15">
@@ -996,9 +1058,9 @@ export default function BlogListPage() {
                                                             <div className="skeleton-image"></div>
                                                         </a>
                                                         <div className="post-content px-md-15">
-                                                            <h6 className="title lh-32">
+                                                            <p className="title lh-32">
                                                                 <span className="skeleton skeleton-text"></span>
-                                                            </h6>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div className="bottom-item px-md-15">

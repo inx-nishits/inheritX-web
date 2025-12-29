@@ -79,8 +79,6 @@ function resolveLabel (segment, parentSegment) {
     'contact': 'Contact',
     'pricing': 'Pricing',
     'blog': 'Blog',
-    'blog-list': 'Blog',
-    'blog-standard': 'Blog',
     'blog-details': 'Blog Details',
     'services-details': 'Service Details',
     'join-our-team': 'Join Our Team',
