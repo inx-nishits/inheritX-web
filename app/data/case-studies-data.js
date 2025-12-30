@@ -25,6 +25,7 @@ export const caseStudiesData = [
       'Multi-platform support (iOS & Android)'
     ],
     outcomes: [
+      { metric: '60%', description: 'Reduced entry barriers' },
       { metric: '30-35%', description: 'Reduction in clinic visits' },
       { metric: '<10 min', description: 'Initial screening time' },
       { metric: 'High accuracy', description: 'AI-powered dental assessment' },
@@ -74,7 +75,7 @@ export const caseStudiesData = [
     excerpt: 'Unified platform for work order management and GPS-verified service tracking, achieving zero budget overruns across 120+ properties.',
     challenge: 'Fragmented, manual processes leading to delays and budget overruns in property maintenance across multiple facilities.',
     solution: 'Built a unified platform for work order assignment, GPS-verified service tracking, and automated budget management to streamline property maintenance operations.',
-    techStack: ['React Native', 'React.js', 'Node.js', 'AWS', 'Firebase'],
+    techStack: ['.NET Core', 'React', 'React Native', 'Azure Cloud', 'GPS & Geofencing'],
     capabilities: [
       'Centralized work order management',
       'GPS-verified service tracking',
@@ -84,6 +85,7 @@ export const caseStudiesData = [
       'Mobile and web access'
     ],
     outcomes: [
+      { metric: '85%', description: 'Elimination of billing disputes' },
       { metric: 'Zero', description: 'Budget overruns across 120+ properties' },
       { metric: '90%', description: 'Reduction in allocation time' },
       { metric: 'Real-time', description: 'Service tracking and verification' },
@@ -175,6 +177,7 @@ export const caseStudiesData = [
       'Self-paced skill improvement'
     ],
     outcomes: [
+      { metric: '50%', description: 'Reduction in coach preparation time' },
       { metric: '50-60%', description: 'Improvement in off-court practice consistency' },
       { metric: 'Reduced', description: 'Reliance on in-person demonstrations' },
       { metric: 'Enabled', description: 'Self-paced independent skill improvement' },
@@ -205,6 +208,7 @@ export const caseStudiesData = [
       'Scalable backend architecture'
     ],
     outcomes: [
+      { metric: 'Zero', description: 'Downtime during major match events' },
       { metric: '2-3 sec', description: 'Live leaderboard update time during peak traffic' },
       { metric: '~60%', description: 'Higher user engagement during live matches' },
       { metric: 'Stable', description: 'Performance under high concurrency' },
