@@ -2,7 +2,7 @@
 import JsonLd from './components/seo/JsonLd';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
-const defaultOgImage = `${siteUrl}/image/logo/og-banner-schema-theme.png`
+const defaultOgImage = `${siteUrl}/image/logo/og-social-rich-card.png`
 export const metadata = {
   title: 'Global AI & Custom Software Partner | InheritX',
   description:

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Design Concept</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            font-family: 'Outfit', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .og-canvas {
+            width: 1200px;
+            height: 630px;
+            /* Balanced dark theme */
+            background: linear-gradient(135deg, #020617 0%, #0F172A 100%);
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px #333;
+        }
+
+        /* Background Effects */
+        .bg-glow-top {
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+            top: -200px;
+            left: -100px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .bg-glow-bottom {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
+            bottom: -200px;
+            right: -100px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Abstract Tech Pattern */
+        .tech-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle 900px at 30% 50%, black, transparent);
+            pointer-events: none;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            padding: 70px 80px;
+            box-sizing: border-box;
+            gap: 60px;
+        }
+
+        /* LEFT SIDE */
+        .left-side {
+            flex: 1.1;
+            /* slightly wider */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo-wrap {
+            /* Fix layout shift */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            /* Enhance visibility against dark bg */
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.15));
+        }
+
+        .headline-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .headline-sub {
+            font-size: 24px;
+            font-weight: 500;
+            color: #60A5FA;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .headline-main {
+            font-size: 68px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #F8FAFC;
+        }
+
+        .gradient-text {
+            /* Subtle blue-purple gradient */
+            background: linear-gradient(90deg, #FFFFFF 0%, #93C5FD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* RIGHT SIDE */
+        .right-side {
+            flex: 0.9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        /* Card Component */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-left: 4px solid #3B82F6;
+            /* Accent Accent */
+            border-radius: 12px;
+            padding: 24px 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        /* Different accents for cards */
+        .card-gold {
+            border-left-color: #FBBF24;
+        }
+
+        .card-blue {
+            border-left-color: #3B82F6;
+        }
+
+        .card-green {
+            border-left-color: #34D399;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .stat-val {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-lbl {
+            font-size: 16px;
+            font-weight: 500;
+            color: #94A3B8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="og-canvas">
+        <div class="bg-glow-top"></div>
+        <div class="bg-glow-bottom"></div>
+        <div class="tech-grid"></div>
+
+        <div class="content">
+            <div class="left-side">
+                <div class="logo-wrap">
+                    <!-- Ensure correct path -->
+                    <img src="/image/logo/inx-logo.svg" class="logo-img" alt="InheritX Solutions">
+                </div>
+
+                <div class="headline-wrap">
+                    <div class="headline-sub">Since 2011</div>
+                    <div class="headline-main">
+                        Global AI & <br>
+                        <span class="gradient-text">Custom Software</span> <br>
+                        Partner
+                    </div>
+                </div>
+
+                <!-- Bottom spacer to balance layout -->
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div class="right-side">
+                <!-- Card 1 -->
+                <div class="stat-card card-gold">
+                    <div class="icon-circle">🏆</div>
+                    <div class="card-content">
+                        <div class="stat-val">Top Rated</div>
+                        <div class="stat-lbl">Upwork Agency</div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="stat-card card-blue">
+                    <div class="icon-circle">💯</div>
+                    <div class="card-content">
+                        <div class="stat-val">100%</div>
+                        <div class="stat-lbl">Client Retention</div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="stat-card card-green">
+                    <div class="icon-circle">⭐</div>
+                    <div class="card-content">
+                        <div class="stat-val">5.0 / 5.0</div>
+                        <div class="stat-lbl">Verified Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
