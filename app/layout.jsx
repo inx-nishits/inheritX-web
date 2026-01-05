@@ -31,22 +31,21 @@ const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Top AI, Web, and Mobile App Development Company | InheritX',
+    default: 'Global AI & Custom Software Partner | InheritX',
     template: '%s | InheritX'
   },
   description:
-    'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
+    'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
   keywords: [
     'AI development',
+    'Custom Software',
+    'Mobile App Development',
+    'Web Development',
+    'Automation Solutions',
+    'Enterprise Software',
+    'Cloud & DevOps',
     'Machine Learning',
-    'automation',
-    'custom software',
-    'mobile apps',
-    'web apps',
-    'cloud',
-    'DevOps',
-    'data engineering',
-    'MLOps'
+    'Data Engineering'
   ],
   applicationName: 'InheritX',
   authors: [{ name: 'InheritX' }],
@@ -60,25 +59,25 @@ export const metadata = {
     type: 'website',
     url: '/',
     siteName: 'InheritX',
-    title: 'Top AI, Web, and Mobile App Development Company | InheritX',
+    title: 'Global AI & Custom Software Partner | InheritX',
     description:
-      'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
     images: [
       {
         url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'InheritX — AI, ML, and Custom Software',
+        alt: 'InheritX — Global AI & Custom Software Partner',
         type: 'image/png'
       }
     ]
   },
   twitter: {
-    // Use the standard small summary card to avoid overly large logo previews
-    card: 'summary',
-    title: 'Top AI, Web, and Mobile App Development Company | InheritX',
+    // Large image card for better impact
+    card: 'summary_large_image',
+    title: 'Global AI & Custom Software Partner | InheritX',
     description:
-      'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
     images: [defaultOgImage]
   },
   robots: {

@@ -4,9 +4,9 @@ import JsonLd from './components/seo/JsonLd';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
 
 export const metadata = {
-  title: 'Software Development Company — AI, Web, Mobile Apps',
+  title: 'Global AI & Custom Software Partner | InheritX',
   description:
-    'InheritX is a software development company specializing in custom AI, web, and mobile app solutions. We build scalable products for startups and enterprises.',
+    'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
   alternates: { canonical: `${siteUrl}/` },
   keywords: [
     'software development company',
@@ -17,9 +17,9 @@ export const metadata = {
   ],
   openGraph: {
     url: `${siteUrl}/`,
-    title: 'Software Development Company — AI, Web, Mobile Apps',
+    title: 'Global AI & Custom Software Partner | InheritX',
     description:
-      'Custom AI, web, and mobile app development for startups and enterprises.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
   }
 }
 
