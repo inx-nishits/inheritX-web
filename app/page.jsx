@@ -2,7 +2,7 @@
 import JsonLd from './components/seo/JsonLd';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com'
-
+const defaultOgImage = `${siteUrl}/image/logo/og-banner-schema-theme.png`
 export const metadata = {
   title: 'Global AI & Custom Software Partner | InheritX',
   description:
@@ -20,6 +20,19 @@ export const metadata = {
     title: 'Global AI & Custom Software Partner | InheritX',
     description:
       'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
+    images: [{
+      url: defaultOgImage,
+      width: 1200,
+      height: 630,
+      alt: 'InheritX — Global AI & Custom Software Partner',
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Global AI & Custom Software Partner | InheritX',
+    description:
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
+    images: [defaultOgImage]
   }
 }
 
