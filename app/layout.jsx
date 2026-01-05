@@ -35,72 +35,69 @@ export const metadata = {
     template: '%s | InheritX'
   },
   description:
-    'Building secure, scalable web, mobile, and automation solutions for startups and enterprises.
-⭐ Top - Rated & Verified Software Development Partner.',
-keywords: [
-  'AI development',
-  'Custom Software',
-  'Mobile App Development',
-  'Web Development',
-  'Automation Solutions',
-  'Enterprise Software',
-  'Cloud & DevOps',
-  'Machine Learning',
-  'Data Engineering'
-],
+    'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top - Rated & Verified Software Development Partner.',
+  keywords: [
+    'AI development',
+    'Custom Software',
+    'Mobile App Development',
+    'Web Development',
+    'Automation Solutions',
+    'Enterprise Software',
+    'Cloud & DevOps',
+    'Machine Learning',
+    'Data Engineering'
+  ],
   applicationName: 'InheritX',
-    authors: [{ name: 'InheritX' }],
-      creator: 'InheritX',
-        publisher: 'InheritX',
-          alternates: {
-  canonical: '/',
+  authors: [{ name: 'InheritX' }],
+  creator: 'InheritX',
+  publisher: 'InheritX',
+  alternates: {
+    canonical: '/',
     languages: { en: '/', 'x-default': '/' }
-},
-openGraph: {
-  type: 'website',
+  },
+  openGraph: {
+    type: 'website',
     url: '/',
-      siteName: 'InheritX',
-        title: 'AI & Custom Software Development Partner',
-          description:
-  'Building secure, scalable web, mobile, and automation solutions for startups and enterprises.
-⭐ Top - Rated & Verified Software Development Partner.',
-  images: [
-    {
-      url: defaultOgImage,
-      width: 1200,
-      height: 630,
-      alt: 'InheritX — Global AI & Custom Software Partner',
-      type: 'image/png'
-    }
-  ]
-},
-twitter: {
-  // Large image card for better impact
-  card: 'summary_large_image',
+    siteName: 'InheritX',
     title: 'AI & Custom Software Development Partner',
-      description:
-  'Building secure, scalable web, mobile, and automation solutions for startups and enterprises.
-⭐ Top - Rated & Verified Software Development Partner.',
-  images: [defaultOgImage]
-},
-robots: {
-  index: true,
-    follow: true,
-      'max-image-preview': 'large',
-        'max-snippet': -1,
-          'max-video-preview': -1,
-            googleBot: {
+    description:
+      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top - Rated & Verified Software Development Partner.',
+    images: [
+      {
+        url: defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: 'InheritX — Global AI & Custom Software Partner',
+        type: 'image/png'
+      }
+    ]
+  },
+  twitter: {
+    // Large image card for better impact
+    card: 'summary_large_image',
+    title: 'AI & Custom Software Development Partner',
+    description:
+      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top - Rated & Verified Software Development Partner.',
+    images: [defaultOgImage]
+  },
+  robots: {
     index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+    googleBot: {
+      index: true,
       follow: true,
-        'max-image-preview': 'large',
-          'max-snippet': -1,
-            'max-video-preview': -1
-  }
-},
-icons: {
-  icon: '/image/logo/favicon.ico',
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1
+    }
+  },
+  icons: {
+    icon: '/image/logo/favicon.ico',
     apple: [{ url: '/image/logo/inx-icon.png', sizes: '180x180' }]
-},
+  },
 }
 
 export const viewport = {

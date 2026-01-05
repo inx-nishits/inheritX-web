@@ -19,23 +19,21 @@ export const metadata = {
     url: `${siteUrl}/`,
     title: 'AI & Custom Software Development Partner',
     description:
-      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises.
-⭐ Top - Rated & Verified Software Development Partner.',
-images: [{
-  url: defaultOgImage,
-  width: 1200,
-  height: 630,
-  alt: 'InheritX — Global AI & Custom Software Partner',
-}]
+      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top-Rated & Verified Software Development Partner.',
+    images: [{
+      url: defaultOgImage,
+      width: 1200,
+      height: 630,
+      alt: 'InheritX — Global AI & Custom Software Partner',
+    }]
   },
-twitter: {
-  card: 'summary_large_image',
+  twitter: {
+    card: 'summary_large_image',
     title: 'AI & Custom Software Development Partner',
-      description:
-  'Building secure, scalable web, mobile, and automation solutions for startups and enterprises.
-⭐ Top - Rated & Verified Software Development Partner.',
-  images: [defaultOgImage]
-}
+    description:
+      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top-Rated & Verified Software Development Partner.',
+    images: [defaultOgImage]
+  }
 }
 
 export const dynamic = 'force-static';
