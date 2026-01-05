@@ -67,7 +67,7 @@ export const metadata = {
         url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'InheritX — Global AI & Custom Software Partner',
+        alt: 'InheritX — AI & Custom Software Development Partner',
         type: 'image/png'
       }
     ]
