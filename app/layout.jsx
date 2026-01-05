@@ -120,7 +120,7 @@ export default function RootLayout({ children }) {
     '@type': 'Organization',
     name: 'InheritX',
     url: siteUrl,
-    logo: `${siteUrl}/image/logo/og-banner-schema.png`,
+    logo: `${siteUrl}/image/logo/og-banner-schema-ai.png`,
     sameAs: [
       'https://www.linkedin.com/company/inheritx-solutions-pvt-ltd/',
       'https://x.com/inheritx',
@@ -197,7 +197,7 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'InheritX Technologies',
-    image: `${siteUrl}/image/logo/og-banner-schema.png`,
+    image: `${siteUrl}/image/logo/og-banner-schema-ai.png`,
     url: siteUrl,
     telephone: '+91 84870 06480',
     address: {

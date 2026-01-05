@@ -10,7 +10,7 @@ Reference plan: `https://docs.google.com/document/d/1dLeorrToXEFaYKzIX4Z3W8LITtH
 - Global metadata (title, description, Open Graph/Twitter, robots)
   - Where: `app/layout.jsx` using Next.js App Router `export const metadata` and `export const viewport`.
   - What it does: sets sensible defaults, a title template, canonical logic, OG/Twitter, and robots directives.
-  - Uses `NEXT_PUBLIC_SITE_URL` for absolute URLs and our share image: `/image/logo/og-banner-schema.png`.
+  - Uses `NEXT_PUBLIC_SITE_URL` for absolute URLs and our share image: `/image/logo/og-banner-schema-ai.png`.
 
 - Per‑page SEO
   - Where: individual pages like `app/page.jsx`, `app/about-us/page.jsx`, `app/services/page.jsx`, `app/contact/page.jsx`, etc.
@@ -48,7 +48,7 @@ Reference plan: `https://docs.google.com/document/d/1dLeorrToXEFaYKzIX4Z3W8LITtH
   - Used in `app/layout.jsx`, `app/sitemap.js`, and `app/robots.js`.
 
 - Social share image
-  - File: `public/image/logo/og-banner-schema.png` (recommended 1200×630). Update if branding changes.
+  - File: `public/image/logo/og-banner-schema-ai.png` (recommended 1200×630). Update if branding changes.
 
 
 ## How to extend safely

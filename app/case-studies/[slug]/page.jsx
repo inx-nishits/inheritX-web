@@ -82,7 +82,7 @@ export default function CaseStudyPage({ params }) {
             url: siteUrl,
             logo: {
                 '@type': 'ImageObject',
-                url: `${siteUrl}/image/logo/og-banner-schema.png`
+                url: `${siteUrl}/image/logo/og-banner-schema-ai.png`
             }
         },
         datePublished: new Date().toISOString(),
