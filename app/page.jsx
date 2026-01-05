@@ -6,7 +6,7 @@ const defaultOgImage = `${siteUrl}/image/logo/og-banner-schema-ai.png`
 export const metadata = {
   title: 'AI & Custom Software Development Partner',
   description:
-    'AI & Custom Software Development Partner',
+    'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
   alternates: { canonical: `${siteUrl}/` },
   keywords: [
     'software development company',
@@ -17,9 +17,9 @@ export const metadata = {
   ],
   openGraph: {
     url: `${siteUrl}/`,
-    title: 'AI & Custom Software Development Partner',
+    title: 'Global AI & Custom Software Development Partner | InheritX',
     description:
-      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top-Rated & Verified Software Development Partner.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
     images: [{
       url: defaultOgImage,
       width: 1200,

@@ -35,7 +35,7 @@ export const metadata = {
     template: '%s | InheritX'
   },
   description:
-    'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top - Rated & Verified Software Development Partner.',
+    'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
   keywords: [
     'AI development',
     'Custom Software',
@@ -59,9 +59,9 @@ export const metadata = {
     type: 'website',
     url: '/',
     siteName: 'InheritX',
-    title: 'AI & Custom Software Development Partner',
+    title: 'Global AI & Custom Software Development Partner | InheritX',
     description:
-      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top - Rated & Verified Software Development Partner.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
     images: [
       {
         url: defaultOgImage,
