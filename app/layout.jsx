@@ -31,11 +31,11 @@ const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Global AI & Custom Software Development Partner | InheritX',
+    default: 'Top AI, Web, and Mobile App Development for Startups & Enterprises | InheritX',
     template: '%s | InheritX'
   },
   description:
-    'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
+    'Building scalable AI, Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top-rated team with verified 5⭐ reviews and 💯 client retention.',
   keywords: [
     'AI development',
     'Custom Software',
@@ -59,15 +59,15 @@ export const metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'InheritX',
-    title: 'Global AI & Custom Software Development Partner | InheritX',
+    title: 'Top AI, Web, and Mobile App Development for Startups & Enterprises | InheritX',
     description:
-      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
+      'Building scalable AI, Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top-rated team with verified 5⭐ reviews and 💯 client retention.',
     images: [
       {
         url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'Global AI & Custom Software Development Partner | InheritX',
+        alt: 'Top AI, Web, and Mobile App Development for Startups & Enterprises | InheritX',
         type: 'image/png'
       }
     ]
@@ -75,9 +75,9 @@ export const metadata = {
   twitter: {
     // Large image card for better impact
     card: 'summary_large_image',
-    title: 'Global AI & Custom Software Development Partner | InheritX',
+    title: 'Top AI, Web, and Mobile App Development for Startups & Enterprises | InheritX',
     description:
-      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
+      'Building scalable AI, Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top-rated team with verified 5⭐ reviews and 💯 client retention.',
     images: [defaultOgImage]
   },
   robots: {
