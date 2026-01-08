@@ -86,7 +86,9 @@ function resolveLabel (segment, parentSegment) {
     'porfolio': 'Portfolio',
     'porfolio-grid': 'Portfolio',
     'porfolio-list': 'Portfolio',
-    'porfolio-details': 'Portfolio Details'
+    'porfolio-details': 'Portfolio Details',
+    'ai-ml-projects': 'AI/ML Projects',
+    'aiml-projects': 'AI/ML Projects'
   };
 
   if (overrides[decoded]) return overrides[decoded];

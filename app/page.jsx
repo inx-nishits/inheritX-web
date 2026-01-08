@@ -24,14 +24,14 @@ export const metadata = {
       url: defaultOgImage,
       width: 1200,
       height: 630,
-      alt: 'InheritX — AI & Custom Software Development Partner',
+      alt: 'Global AI & Custom Software Development Partner | InheritX',
     }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI & Custom Software Development Partner',
+    title: 'Global AI & Custom Software Development Partner | InheritX',
     description:
-      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top-Rated & Verified Software Development Partner.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
     images: [defaultOgImage]
   }
 }

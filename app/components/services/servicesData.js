@@ -868,7 +868,7 @@ export const servicesData = {
     ]
   },
   "machine-learning-development": {
-    "breadCrumdsTitle": "AI - ML",
+    "breadCrumdsTitle": "AI/ML",
     "category": "machine-learning-development",
     "type": "AI/ML",
     "title": "AI/ML",
@@ -930,10 +930,10 @@ export const servicesData = {
     }
   },
   "ai-agents": {
-    "breadCrumdsTitle": "AI - ML",
+    "breadCrumdsTitle": "AI/ML",
     "category": "ai-agents",
-    "type": "AI - ML",
-    "title": "AI - ML",
+    "type": "AI/ML",
+    "title": "AI/ML",
     banner: "/image/page-title/ai-agents-developement.jpg",
     "heading": "Artificial Intelligence Solutions in India",
     "heading_caption": "Powering innovation, efficiency, and growth with next-Gen AI solutions.",
@@ -973,10 +973,10 @@ export const servicesData = {
     ],
   },
   "ai-ml-model-expertise": {
-    "breadCrumdsTitle": "AI - ML",
+    "breadCrumdsTitle": "AI/ML",
     "category": "ai-ml-model-expertise",
-    "type": "AI - ML",
-    "title": "AI - ML",
+    "type": "AI/ML",
+    "title": "AI/ML",
     banner: "/image/page-title/ai-ml--developement.jpg",
     "heading": "Artificial Intelligence Solutions in India",
     "heading_caption": "Powering innovation, efficiency, and growth with next-Gen AI solutions.",

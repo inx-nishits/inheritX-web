@@ -31,7 +31,7 @@ const themeColor = '#546EA4' // Placeholder: adjust theme color to match brand
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'AI & Custom Software Development Partner',
+    default: 'Global AI & Custom Software Development Partner | InheritX',
     template: '%s | InheritX'
   },
   description:
@@ -57,7 +57,7 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    url: '/',
+    url: siteUrl,
     siteName: 'InheritX',
     title: 'Global AI & Custom Software Development Partner | InheritX',
     description:
@@ -67,7 +67,7 @@ export const metadata = {
         url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'InheritX — AI & Custom Software Development Partner',
+        alt: 'Global AI & Custom Software Development Partner | InheritX',
         type: 'image/png'
       }
     ]
@@ -75,9 +75,9 @@ export const metadata = {
   twitter: {
     // Large image card for better impact
     card: 'summary_large_image',
-    title: 'AI & Custom Software Development Partner',
+    title: 'Global AI & Custom Software Development Partner | InheritX',
     description:
-      'Building secure, scalable web, mobile, and automation solutions for startups and enterprises. ⭐ Top - Rated & Verified Software Development Partner.',
+      'Building scalable Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top Rated. ⭐ Verified 5* Reviews. 💯 100% Client Retention.',
     images: [defaultOgImage]
   },
   robots: {
