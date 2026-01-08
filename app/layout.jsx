@@ -35,7 +35,7 @@ export const metadata = {
     template: '%s | InheritX'
   },
   description:
-    'Building scalable AI, Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top-rated team with verified 5⭐ reviews and 💯 client retention.',
+    'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
   keywords: [
     'AI development',
     'Custom Software',
@@ -61,7 +61,7 @@ export const metadata = {
     siteName: 'InheritX',
     title: 'Top AI, Web, and Mobile App Development for Startups & Enterprises | InheritX',
     description:
-      'Building scalable AI, Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top-rated team with verified 5⭐ reviews and 💯 client retention.',
+      'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
     images: [
       {
         url: defaultOgImage,
@@ -77,7 +77,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Top AI, Web, and Mobile App Development for Startups & Enterprises | InheritX',
     description:
-      'Building scalable AI, Web, Mobile & Automation solutions for Startups & Enterprises. 🏆 Top-rated team with verified 5⭐ reviews and 💯 client retention.',
+      'Top AI, web, and mobile app development company in India & USA. We build custom software, AI/ML, automation, cloud, and DevOps solutions that drive growth.',
     images: [defaultOgImage]
   },
   robots: {
