@@ -78,7 +78,7 @@ export default function ContactForm({
       // Listen for clicks on nice-select options (for this specific select)
       const niceSelectEl = $select.next('.nice-select')
       if (niceSelectEl.length) {
-        niceSelectEl.on('click.contactform', '.option:not(.disabled)', function() {
+        niceSelectEl.on('click.contactform', '.option:not(.disabled)', function () {
           setTimeout(() => {
             handleChange()
           }, 0)
@@ -120,7 +120,7 @@ export default function ContactForm({
   }, [budgetOptions])
 
   // Use CSS class .error-important for the red color with !important
-  const errorStyle = useMemo(() => ({ fontSize: '12px', marginTop: '3px', display: 'block' }), [])
+  const errorStyle = useMemo(() => ({ fontSize: '12px', marginTop: '1px', display: 'block', fontWeight: '400' }), [])
 
   // Phone validation helper: allow optional + and formatting chars, require 7-15 digits total
   const isValidPhone = (raw) => {
@@ -365,8 +365,8 @@ export default function ContactForm({
       </div>
 
       {showBudget && (
-        <>
-          <div className={`cols  g-20 ${errors.projectBudget ? '' : 'mb-20'}`}>
+        <div className='cols mb-20 g-20'>
+          <fieldset className='item'>
             <label htmlFor='projectBudget' className='visually-hidden'>{budgetLabel}</label>
             <select
               id='projectBudget'
@@ -381,9 +381,9 @@ export default function ContactForm({
                 </option>
               ))}
             </select>
-          </div>
-          {errors.projectBudget ? <div className='error-important mb-20' style={errorStyle}>{errors.projectBudget}</div> : null}
-        </>
+            {errors.projectBudget ? <div className='error-important' style={errorStyle}>{errors.projectBudget}</div> : null}
+          </fieldset>
+        </div>
       )}
 
       <fieldset className='mb-20'>
@@ -403,7 +403,9 @@ export default function ContactForm({
         <label htmlFor='captcha-result' className='visually-hidden'>Enter the sum</label>
         <div className='col-xl-2 col-lg-4 col-md-4 col-sm-5 col-5'><input type='number' id='captcha-result' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} /></div>
       </div>
-      {errors.userResult ? <div className='error-important' style={{ marginTop: '10px', fontSize: '17px' }}>{errors.userResult}</div> : null}
+      <div className='cols'>
+        {errors.userResult ? <div className='error-important' style={errorStyle}>{errors.userResult}</div> : null}
+      </div>
 
       {/* NDA Checkbox */}
       <div className='mb-20 mt-5'>

@@ -220,9 +220,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Collaboration</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   We utilize real-time collaboration frameworks and Agile methodologies to integrate seamlessly with your internal technical teams and domain requirements.
                 </div>
@@ -249,9 +249,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>App Maintenance</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   We provide regular updates, performance optimization, and bug fixes to ensure your app runs smoothly, securely, and efficiently across all devices.
                 </div>
@@ -278,10 +278,10 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>App Platform Migration Service
                   </h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Seamlessly migrate your app across platforms or technologies with zero data loss, ensuring enhanced performance, scalability, and compatibility.
                 </div>
@@ -308,9 +308,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Mobile App Marketing</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Leverage our data-driven growth strategies, including ASO (App Store Optimization) and multi-channel analytics, to maximize your product’s reach and user retention.
                 </div>
@@ -337,9 +337,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Transparency</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   We prioritize IP integrity with strict NDAs and 'Zero-Trust' security protocols, providing total transparency through real-time reporting and audit trails.
                 </div>
@@ -366,9 +366,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Communication</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Our developers maintain a synchronous communication pulse via Slack, Teams, and Jira, ensuring zero alignment gaps between vision and implementation.
                 </div>
@@ -395,9 +395,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Trust</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Since 2011, we have built a reputation for high-performance engineering and technical reliability, earning the long-term trust of our global B2B clientele.
                 </div>
@@ -424,9 +424,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>24/7 Technical Assistance</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Our Site Reliability Engineers (SRE) provide proactive 24/7 monitoring and technical support to ensure zero downtime and peak infrastructure health.
                 </div>
@@ -453,9 +453,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Maintenance and Upgrade</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   We go beyond regular patches, providing proactive roadmap planning and library modernization to prevent technical debt and ensure long-term scalability.
                 </div>
@@ -482,9 +482,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Migration</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Execute complex cloud and protocol migrations with zero data loss, ensuring your modernization journey is risk-free and performance-optimized.
                 </div>
@@ -511,9 +511,9 @@ export default function HireExpertContent() {
                     }}
                   />
                 </div>
-                <h5 className='lh-30 fw-6 mt-3'>
+                <div className='lh-30 fw-6 mt-3'>
                   <h3 className='title-service text-primary'>Digital Marketing and SEO</h3>
-                </h5>
+                </div>
                 <div className='desc lh-30 fs-3 mb-2'>
                   Increase your market authority with advanced technical SEO and conversion rate optimization (CRO) designed to transform your website into a lead engine.
                 </div>

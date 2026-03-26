@@ -1773,6 +1773,11 @@ div .page-title-home.hero-fullscreen {
   gap: 8px !important;
 }
 
+/* Remove bottom margin for captcha in modal specifically */
+.modal-form-content .form-contact-us .calculation-fields {
+  margin-bottom: 0px !important;
+}
+
 /* Make inline math symbols compact and vertically centered */
 .calculation-fields .check_label {
   padding: 0 !important;

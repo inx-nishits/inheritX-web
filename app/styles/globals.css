@@ -2969,7 +2969,7 @@ textarea.form-input {
   .cta-modal-inner {
     width: 92% !important;
   }
-  
+
   .cta-modal-container {
     border-radius: 12px !important;
   }
@@ -3032,7 +3032,7 @@ textarea.form-input {
   width: calc(100% - 40px) !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
-  margin-bottom: 30px !important;
+  margin-bottom: 0px !important;
 }
 
 @media (max-width: 767px) {
@@ -3174,7 +3174,7 @@ textarea.form-input {
   align-items: center !important;
   flex-wrap: nowrap !important;
   gap: 5px !important;
-  margin: 20px 0 !important;
+  margin: 10px 0px 0px !important;
 }
 
 
@@ -3202,7 +3202,7 @@ textarea.form-input {
 
 
 
-.modal-form-content .form-contact-us .calculation-fields > div {
+.modal-form-content .form-contact-us .calculation-fields>div {
   width: auto !important;
   flex: 0 0 auto !important;
   padding: 0 !important;
@@ -3234,7 +3234,7 @@ textarea.form-input {
 
 
 .modal-form-content .form-contact-us textarea {
-  padding: 15px !important;
+  padding: 16px !important;
   height: 120px !important;
   display: block !important;
   width: 100% !important;
@@ -3243,7 +3243,7 @@ textarea.form-input {
 
 .modal-form-content .form-contact-us .error-important {
   color: #ff0000 !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   display: block !important;
   margin-top: 5px !important;
 }
