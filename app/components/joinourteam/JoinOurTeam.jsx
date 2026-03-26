@@ -298,7 +298,7 @@ export default function JoinOurTeam() {
     setEmailError(validateEmail(v))
   }
   const handlePhoneChange = (e) => {
-    const v = e.target.value
+    const v = e.target.value.replace(/[^\d+]/g, '')
     setPhoneValue(v)
     setPhoneError(validatePhone(v))
   }

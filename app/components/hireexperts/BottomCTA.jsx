@@ -9,7 +9,7 @@ export default function BottomCTA({
   title,
   techName = "",
   subtitle = "Transform your vision into reality with our expert team. Let's discuss your project requirements today.",
-  buttonText = "Consult our experts",
+  buttonText = "INQUIRE NOW",
   href = "/contact"
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);

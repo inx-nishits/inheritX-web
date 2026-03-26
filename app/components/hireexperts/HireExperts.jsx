@@ -555,7 +555,7 @@ export default function HireExpertContent() {
           techName="Expert"
           title="Ready to take your project to the next level?"
           subtitle="Let’s discuss your app idea and implement an innovative solution for your business needs with our expert developers."
-          buttonText="Let's Talk"
+          buttonText="INQUIRE NOW"
         />
 
 

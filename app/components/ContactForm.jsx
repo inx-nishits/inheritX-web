@@ -191,6 +191,10 @@ export default function ContactForm({
     if (id === 'name' || id === 'country') {
       e.target.value = (e.target.value || '').replace(/[^A-Za-z\s]/g, '')
     }
+    // sanitize for numeric-plus field: phone
+    if (id === 'phone') {
+      e.target.value = (e.target.value || '').replace(/[^\d+]/g, '')
+    }
     const value = e.target.value
     if (!id) return
     validateField(id, value)

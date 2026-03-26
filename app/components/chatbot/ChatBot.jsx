@@ -331,8 +331,8 @@ export default function ChatBot() {
       // Only allow letters and spaces for name
       sanitizedValue = value.replace(/[^a-zA-Z\s]/g, '')
     } else if (name === 'phone') {
-      // Only allow digits for phone
-      sanitizedValue = value.replace(/\D/g, '').slice(0, 15)
+      // Only allow digits and plus sign for phone
+      sanitizedValue = value.replace(/[^\d+]/g, '').slice(0, 16)
     } else if (name === 'experience') {
       // Only allow numbers for experience
       sanitizedValue = value.replace(/\D/g, '').slice(0, 2)

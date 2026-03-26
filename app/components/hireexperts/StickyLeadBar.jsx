@@ -7,29 +7,53 @@ const ContactForm = dynamicImport(() => import('../ContactForm'), { ssr: false }
 export default function StickyLeadBar({ techName = "Expert" }) {
   const [isVisible, setIsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isStaticBeltVisible, setIsStaticBeltVisible] = useState(false);
 
   useEffect(() => {
+    // Hide floating bar when the real cta belt is visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsStaticBeltVisible(entry.isIntersecting);
+      },
+      { 
+        threshold: 0,
+        rootMargin: '100px 0px 0px 0px' // slightly preemptive hide
+      }
+    );
+
+    const staticBelt = document.querySelector('.wg-cta-modern');
+    if (staticBelt) {
+      observer.observe(staticBelt);
+    }
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const bodyHeight = document.body.offsetHeight;
       
-      // Show bar after scrolling 600px BUT hide if we are near the bottom (approaching the real CTA)
-      const isNearBottom = (scrollY + windowHeight) > (bodyHeight - 650);
+      // Basic distance threshold (show earlier, after 150px)
+      const isPastThreshold = scrollY > 150;
+      // Also hide if we've reached the very bottom of the page
+      const isAtBottom = (scrollY + windowHeight) > (bodyHeight - 100);
       
-      if (scrollY > 600 && !isNearBottom) {
+      if (isPastThreshold && !isStaticBeltVisible && !isAtBottom) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // initial check
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (staticBelt) {
+        observer.unobserve(staticBelt);
+      }
       document.body.style.overflow = 'auto';
     };
-  }, []);
+  }, [isStaticBeltVisible]);
 
   const openModal = (e) => {
     if (e) e.preventDefault();
