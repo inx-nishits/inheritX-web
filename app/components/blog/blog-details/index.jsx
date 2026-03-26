@@ -7,6 +7,103 @@ import { useEffect, useMemo, useState } from 'react';
 
 export const dynamic = 'force-static';
 
+function rewriteWpLinksToPublicBlog(html, { publicOrigin, adminOrigin, knownSlugs, idToSlug }) {
+  if (!html || typeof html !== 'string') return html;
+  if (typeof window === 'undefined') return html;
+
+  const publicBase = (publicOrigin || 'https://www.inheritx.com').replace(/\/$/, '');
+  const adminBase = (adminOrigin || 'https://admin.inheritx.com').replace(/\/$/, '');
+
+  const slugSet = knownSlugs instanceof Set ? knownSlugs : new Set();
+  const mapIdToSlug = idToSlug instanceof Map ? idToSlug : new Map();
+
+  const toPublicBlogUrl = (slug) => `${publicBase}/blog/${slug}`;
+
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    const anchors = Array.from(doc.querySelectorAll('a[href]'));
+    for (const a of anchors) {
+      const rawHref = a.getAttribute('href');
+      if (!rawHref) continue;
+
+      if (rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('tel:')) {
+        continue;
+      }
+
+      let url;
+      try {
+        url = new URL(rawHref, publicBase);
+      } catch {
+        continue;
+      }
+
+      const hrefLower = url.href.toLowerCase();
+
+      // A) If it's a wp-admin/wp-login link, try to map by post ID (post= / p=).
+      const looksLikeWpAdmin =
+        hrefLower.includes('/wp-admin') ||
+        hrefLower.includes('/wp-login') ||
+        hrefLower.includes('wp-admin');
+
+      if (looksLikeWpAdmin) {
+        const postIdFromQuery = url.searchParams.get('post') || url.searchParams.get('p');
+        const postId = postIdFromQuery ? Number(postIdFromQuery) : NaN;
+        const mappedSlug = Number.isFinite(postId) ? mapIdToSlug.get(postId) : undefined;
+        a.setAttribute('href', mappedSlug ? toPublicBlogUrl(mappedSlug) : publicBase);
+        continue;
+      }
+
+      // B) Any admin-domain link: normalize to public blog link when possible.
+      if (url.origin === adminBase) {
+        const parts = (url.pathname || '').split('/').filter(Boolean);
+
+        // Pattern 1: /blog/<slug>
+        const blogIdx = parts.findIndex((p) => p.toLowerCase() === 'blog');
+        if (blogIdx >= 0 && parts[blogIdx + 1]) {
+          a.setAttribute('href', toPublicBlogUrl(parts[blogIdx + 1]));
+          continue;
+        }
+
+        // Pattern 2: /<slug> (only if slug is known to be a blog post)
+        if (parts.length === 1 && slugSet.has(parts[0])) {
+          a.setAttribute('href', toPublicBlogUrl(parts[0]));
+          continue;
+        }
+
+        // Pattern 3: ID-based permalink ?p=123
+        const p = url.searchParams.get('p');
+        const pid = p ? Number(p) : NaN;
+        const mappedSlug = Number.isFinite(pid) ? mapIdToSlug.get(pid) : undefined;
+        if (mappedSlug) {
+          a.setAttribute('href', toPublicBlogUrl(mappedSlug));
+          continue;
+        }
+
+        // Fallback: keep path but on public host (still better than admin)
+        const publicUrl = new URL(url.toString());
+        const target = new URL(publicBase);
+        publicUrl.protocol = target.protocol;
+        publicUrl.host = target.host;
+        a.setAttribute('href', publicUrl.toString());
+        continue;
+      }
+
+      // C) If content contains relative wp-admin paths, never allow them
+      const rewrittenHref = (a.getAttribute('href') || '').toLowerCase();
+      if (rewrittenHref.includes('/wp-admin') || rewrittenHref.includes('/wp-login')) {
+        a.setAttribute('href', publicBase);
+      }
+    }
+
+    return doc.body.innerHTML;
+  } catch {
+    // Fallback: best-effort domain rewrite
+    return html.replaceAll(adminBase, publicBase);
+  }
+}
+
 export default function BlogDetailsPage({ params }) {
   const { slug } = params || {};
   const [details, setDetails] = useState(null);
@@ -38,12 +135,12 @@ export default function BlogDetailsPage({ params }) {
     async function loadDetails() {
       try {
         if (!slug) return;
-        
+
         // Fetch blog details
         const detailsRes = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
         if (!detailsRes.ok) throw new Error('Failed to fetch blog details');
         const detailsJson = await detailsRes.json();
-        
+
         // Fetch categories with counts from main blog API
         const categoriesRes = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
           cache: 'no-store',
@@ -56,15 +153,15 @@ export default function BlogDetailsPage({ params }) {
           const categoriesJson = await categoriesRes.json();
           categoriesWithCounts = categoriesJson?.categories || [];
         }
-        
+
         // Merge the data
         const mergedData = {
           ...detailsJson,
           categories: categoriesWithCounts
         };
-        
+
         // Data merged successfully
-        
+
         if (isMounted) {
           setDetails(mergedData || null);
           setLoading(false);
@@ -83,13 +180,38 @@ export default function BlogDetailsPage({ params }) {
   const bloginfo = details?.bloginfo || null;
   const title = bloginfo?.title;
   const hero = bloginfo?.feature_image || '/image/blog/blog-fallback-image.jpg';
+  const renderedContent = useMemo(() => {
+    const publicOrigin = (siteUrl || 'https://www.inheritx.com').replace(/\/$/, '');
+    const adminOrigin = 'https://admin.inheritx.com';
+
+    // Build mappings from the API payload so we can convert admin links -> /blog/:slug reliably.
+    const slugs = new Set();
+    const idMap = new Map();
+
+    const related = details?.relatedPost || [];
+    const featured = details?.feturedPost || [];
+    for (const p of [...related, ...featured]) {
+      if (p?.slug) slugs.add(String(p.slug));
+      if (p?.id && p?.slug) idMap.set(Number(p.id), String(p.slug));
+    }
+    // Always include current slug
+    if (slug) slugs.add(String(slug));
+    if (details?.bloginfo?.id && slug) idMap.set(Number(details.bloginfo.id), String(slug));
+
+    return rewriteWpLinksToPublicBlog(bloginfo?.content, {
+      publicOrigin,
+      adminOrigin,
+      knownSlugs: slugs,
+      idToSlug: idMap
+    });
+  }, [bloginfo?.content, details?.relatedPost, details?.feturedPost, details?.bloginfo?.id, siteUrl, slug]);
 
   // Dynamic SEO updates when blog data loads
   useEffect(() => {
     if (bloginfo && title) {
       // Update document title
       document.title = `${title} | InheritX Blog`;
-      
+
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
@@ -368,7 +490,7 @@ export default function BlogDetailsPage({ params }) {
             {/* Category Toggle Button - Only visible on mobile/tablet */}
             <div className="col-12 d-xl-none mb-0">
               <div className="d-flex justify-content-end">
-                <button 
+                <button
                   className="tf-btn category-toggle-btn  px-3 py-4"
                   onClick={openCategorySidebar}
                   aria-label="Open categories"
@@ -378,7 +500,7 @@ export default function BlogDetailsPage({ params }) {
                 </button>
               </div>
             </div>
-            
+
             <div className="col-xl-8">
               <div className="wg-details wg-blog-details">
                 <div className="details-content p-3">
@@ -408,8 +530,8 @@ export default function BlogDetailsPage({ params }) {
                     )}
                   </div>
                   <div className='p-3 p-lg-4 pt-0'>
-                    {!showSkeleton && !error && bloginfo?.content && (
-                      <div className="rich-content" dangerouslySetInnerHTML={{ __html: bloginfo.content }} />
+                    {!showSkeleton && !error && renderedContent && (
+                      <div className="rich-content" dangerouslySetInnerHTML={{ __html: renderedContent }} />
                     )}
                     {showSkeleton && (
                       <div>
@@ -435,7 +557,7 @@ export default function BlogDetailsPage({ params }) {
                   <ul className="list">
                     {!showSkeleton && (details?.categories || []).map((cat) => (
                       <li className="item" key={cat.id}>
-                            <i className="icon-arrow-right"></i>
+                        <i className="icon-arrow-right"></i>
                         <Link href={`/blog/category/${cat.slug}`} className="fs-4 fw-5">{cat.name}</Link>
                         <span className="category-count">{cat.count || cat.post_count || cat.total_posts || cat.posts_count || cat.total || cat.postCount || 0}</span>
                       </li>
@@ -463,14 +585,14 @@ export default function BlogDetailsPage({ params }) {
       {/* Category Sidebar Overlay and Sidebar */}
       {isCategorySidebarOpen && (
         <>
-          <div 
+          <div
             className={`category-sidebar-overlay ${isCategorySidebarOpen ? 'active' : ''}`}
             onClick={handleOverlayClick}
           />
           <div className={`category-sidebar ${isCategorySidebarOpen ? 'active' : ''}`}>
             <div className="category-sidebar-header">
               <div className="category-sidebar-title">Categories</div>
-              <button 
+              <button
                 className="category-sidebar-close"
                 onClick={closeCategorySidebar}
                 aria-label="Close categories"
@@ -484,8 +606,8 @@ export default function BlogDetailsPage({ params }) {
                   {(details?.categories || []).map((cat) => (
                     <li className="item" key={cat.id}>
                       <i className="icon-arrow-right"></i>
-                      <Link 
-                        href={`/blog/category/${cat.slug}`} 
+                      <Link
+                        href={`/blog/category/${cat.slug}`}
                         className="fs-4 fw-5"
                         onClick={closeCategorySidebar}
                       >

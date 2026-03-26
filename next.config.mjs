@@ -4,17 +4,17 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  
+
   // Optimize bundle size
   swcMinify: true,
   compiler: {
     removeConsole: {
-    exclude: ['error', 'warn'], // Keep errors and warnings
+      exclude: ['error', 'warn'], // Keep errors and warnings
+    },
   },
-  },
-  
+
   // Optimize images
-  images: { 
+  images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -30,10 +30,10 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  
+
   // Optimize production builds
   productionBrowserSourceMaps: false,
-  
+
   // Add cache headers for static assets
   // This sets 1 year cache for all static assets (immutable means they won't change)
   async headers() {
@@ -109,7 +109,7 @@ const nextConfig = {
     ]
   },
 
-  async redirects () {
+  async redirects() {
     return [
       {
         source: '/hire/:path*',
@@ -130,6 +130,31 @@ const nextConfig = {
         source: '/project-details/:slug',
         destination: '/portfolio/:slug',
         permanent: true
+      }
+    ]
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: '/rise2shine/android-privacy-policy',
+        destination: '/rise2shine/android-privacy-policy.html'
+      },
+      {
+        source: '/rise2shine/android-terms-of-use',
+        destination: '/rise2shine/android-terms-of-use.html'
+      },
+      {
+        source: '/rise2shine/ios-privacy-policy',
+        destination: '/rise2shine/ios-privacy-policy.html'
+      },
+      {
+        source: '/rise2shine/ios-terms-of-use',
+        destination: '/rise2shine/ios-terms-of-use.html'
+      },
+      {
+        source: '/rise2shine/delete-account',
+        destination: '/rise2shine/delete-account.html'
       }
     ]
   }

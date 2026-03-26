@@ -1168,7 +1168,7 @@ a:hover {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .menu-primary-menu .menu-item {
@@ -6833,7 +6833,7 @@ body[style*="overflow: hidden"] .progress-wrap {
 
   .footer .footer-middle .locations-contact,
   .footer .footer-middle .footer-content {
-    max-width: 50%;
+    max-width: 100%;
     width: 100%;
   }
 

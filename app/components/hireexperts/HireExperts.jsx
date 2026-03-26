@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import OurPlatforms from "../OurPlatforms";
+import BottomCTA from "./BottomCTA";
 
 // Mapping platform titles to service categories
 const platformServiceMapping = {
   "iOS Development": "iphone-app-development",
-  "Android Development": "android-app-development", 
+  "Android Development": "android-app-development",
   "Flutter Development": "flutter-app-development",
   "React Native Development": "react-native-app-development",
   "AngularJS Development": "angularjs-development",
@@ -91,7 +92,7 @@ export default function HireExpertContent() {
                 <div className={`h-100 position-relative rounded-4 overflow-hidden ${!isMobile ? 'tf-animate-2' : ''}`} style={{ minHeight: '400px' }}>
                   <Image
                     src='/image/page-title/image-6.jpg'
-                    alt='Placeholder Alt'
+                    alt='Dedicated Developers Team'
                     fill
                     className='lazyload'
                     objectFit='cover'
@@ -145,46 +146,46 @@ export default function HireExpertContent() {
             <div className='tf-marquee'>
               <div className='marquee-wrapper'>
                 <div className='initial-child-container'>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
-                  <div className='big-text'>Four <span className='text-stroke'>Pillars</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
+                  <div className='big-text'>Core <span className='text-stroke'>Advantages</span> of Our Hiring Model&nbsp;</div>
                 </div>
               </div>
             </div>
@@ -194,7 +195,7 @@ export default function HireExpertContent() {
             <h3 className='text-center p-2 mb-5'>
               Whether it is a DRE (Dedicated Resource Engagement), T&M (Time and
               Material), or a Fixed Price model, our flexible engagement models
-              come with these four key characteristics.
+              come with these key characteristics.
             </h3>
 
             <div className='custom-services-wrapper d-flex flex-wrap'>
@@ -208,7 +209,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/collaboration.png'
-                    alt='Placeholder Alt'
+                    alt='Seamless Collaboration Icon'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -223,9 +224,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Collaboration</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  We tend to collaborate with various teams of the client's
-                  company to come up with the most suitable solutions in the web
-                  and mobility domains
+                  We utilize real-time collaboration frameworks and Agile methodologies to integrate seamlessly with your internal technical teams and domain requirements.
                 </div>
               </div>
 
@@ -239,7 +238,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/App_Maintenance.png'
-                    alt='Placeholder Alt'
+                    alt='App Maintenance Icon'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -268,7 +267,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/appplatformmigration.png'
-                    alt='Placeholder Alt'
+                    alt='Platform Migration Icon'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -298,7 +297,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/App_Marketing.png'
-                    alt='Placeholder Alt'
+                    alt='Data-Driven Mobile App Marketing'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -313,7 +312,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Mobile App Marketing</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  Boost your app’s visibility and downloads with our targeted marketing strategies, including ASO, social campaigns, and user engagement optimization.
+                  Leverage our data-driven growth strategies, including ASO (App Store Optimization) and multi-channel analytics, to maximize your product’s reach and user retention.
                 </div>
               </div>
 
@@ -327,7 +326,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/transparency.png'
-                    alt='Placeholder Alt'
+                    alt='Zero-Trust Operational Transparency'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -342,9 +341,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Transparency</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  By implementing the best methods for ensuring the safety of the
-                  client's data and signing NDAs, we provide the highest level of
-                  transparency
+                  We prioritize IP integrity with strict NDAs and 'Zero-Trust' security protocols, providing total transparency through real-time reporting and audit trails.
                 </div>
               </div>
 
@@ -358,7 +355,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/communication.png'
-                    alt='Placeholder Alt'
+                    alt='Synchronous Multi-Channel Communication'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -373,9 +370,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Communication</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  Our dedicated and experienced developers can communicate
-                  easily and effectively to understand all your requirements and
-                  market trends
+                  Our developers maintain a synchronous communication pulse via Slack, Teams, and Jira, ensuring zero alignment gaps between vision and implementation.
                 </div>
               </div>
 
@@ -389,7 +384,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/trust.png'
-                    alt='Placeholder Alt'
+                    alt='Proven Technical Engineering Trust'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -404,9 +399,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Trust</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  Since inception, we have never compromised on the quality and
-                  performance of our solutions to gain the trust of our global
-                  corporate clientele
+                  Since 2011, we have built a reputation for high-performance engineering and technical reliability, earning the long-term trust of our global B2B clientele.
                 </div>
               </div>
 
@@ -420,7 +413,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/support-after-development.png'
-                    alt='Placeholder Alt'
+                    alt='Technical Assistance Icon'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -435,10 +428,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>24/7 Technical Assistance</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  Our expert team provides round-the-clock technical assistance,
-                  ensuring your systems run smoothly, problems are resolved
-                  promptly, and business operations remain uninterrupted at all
-                  times.
+                  Our Site Reliability Engineers (SRE) provide proactive 24/7 monitoring and technical support to ensure zero downtime and peak infrastructure health.
                 </div>
               </div>
 
@@ -452,7 +442,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/Web_Maintenance_and_Upgrade.png'
-                    alt='Placeholder Alt'
+                    alt='Proactive Software Modernization'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -467,9 +457,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Maintenance and Upgrade</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  We offer comprehensive maintenance and upgrades, keeping your
-                  software and systems updated, optimized, and fully secure,
-                  ensuring peak performance and reliability for your business.
+                  We go beyond regular patches, providing proactive roadmap planning and library modernization to prevent technical debt and ensure long-term scalability.
                 </div>
               </div>
 
@@ -483,7 +471,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/migrationservice.png'
-                    alt='Placeholder Alt'
+                    alt='Zero-Loss Data Migration Services'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -498,9 +486,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Migration</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  Our seamless migration services safely transfer your data and
-                  systems to new platforms, minimizing downtime, reducing risks,
-                  and ensuring a smooth transition for your business.
+                  Execute complex cloud and protocol migrations with zero data loss, ensuring your modernization journey is risk-free and performance-optimized.
                 </div>
               </div>
 
@@ -514,7 +500,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/Digital_Marketing_and_SEO_Services.png'
-                    alt='Placeholder Alt'
+                    alt='High-Conversion Technical SEO'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -529,9 +515,7 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Digital Marketing and SEO</h3>
                 </h5>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  We provide effective digital marketing and SEO strategies to
-                  enhance your online presence, drive targeted traffic, and
-                  maximize conversions for sustainable business growth
+                  Increase your market authority with advanced technical SEO and conversion rate optimization (CRO) designed to transform your website into a lead engine.
                 </div>
               </div>
 
@@ -545,7 +529,7 @@ export default function HireExpertContent() {
                 >
                   <img
                     src='/image/services-icon/migration_service.png'
-                    alt='Placeholder Alt'
+                    alt='Infrastructure Migration Icon'
                     className='lazyload img-fluid'
                     style={{
                       width: '60px',
@@ -560,37 +544,19 @@ export default function HireExpertContent() {
                   <h3 className='title-service text-primary'>Migration Service</h3>
                 </div>
                 <div className='desc lh-30 fs-3 mb-2'>
-                  Our Migration Service ensures smooth, secure, and efficient data or system transitions with minimal downtime—helping businesses modernize their infrastructure and optimize performance seamlessly.
+                  Our infrastructure experts ensure your transition to AWS, Azure, or GCP is architected for maximum cost-efficiency and enterprise-grade scalability.
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <div
-          className='wg-cta tf-spacing-2 alert alert-dismissible fade show'
-          role='alert'
-        >
-          <div className='tf-container'>
-            <div className='cta-inner flex align-items-center justify-content-center'>
-              <div className='left flex align-items-center'>
-                <div className='icon'>
-                  <i className='icon-chat-2'></i>
-                </div>
-                <h4 className='fw-4 title fs-2'>
-                  Let’s discuss your app idea and implement an innovative mobility solution for your business needs.
-                </h4>
-                <a
-                  href='/contact'
-                  className='tf-btn no-bg text-underline hover-color-main-dark'
-                >
-                  <span>Let’s Talk</span>
-                  <i className='icon-arrow-right'></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BottomCTA 
+          techName="Expert"
+          title="Ready to take your project to the next level?"
+          subtitle="Let’s discuss your app idea and implement an innovative solution for your business needs with our expert developers."
+          buttonText="Let's Talk"
+        />
 
 
         <OurPlatforms />

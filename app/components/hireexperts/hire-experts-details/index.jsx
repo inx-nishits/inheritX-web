@@ -1,28 +1,24 @@
 "use client";
 import Link from 'next/link'
 import { HireUsData } from '../../../hire-experts/hireusJsonData'
+import { HireUsRolesData } from '../../../hire-experts/hireusRolesData'
+import { HireUsTechAIData } from '../../../hire-experts/hireusTechAIData'
+import { HireUsModelsData } from '../../../hire-experts/hireusModelsData'
 import Breadcrumbs from '../../Breadcrumbs'
 import { useEffect } from 'react'
+import BottomCTA from '../BottomCTA'
+import StickyLeadBar from '../StickyLeadBar'
 
-
-export const dynamic = 'force-static'
 
 // Utility function to convert category to slug
 const toSlug = (category) => (category || '').replace(/^hire-/, '')
-
-export async function generateStaticParams() {
-  const uniqueSlugs = Array.from(new Set(
-    HireUsData.Data.map(d => toSlug(d.category)).filter(Boolean)
-  ))
-  return uniqueSlugs.map(slug => ({ slug }))
-}
 
 // Helper function to find the best candidate from multiple matches
 const findBestCandidate = (candidates) => {
   if (candidates.length === 0) return null
   if (candidates.length === 1) return candidates[0]
 
-  // Prefer candidates with more complete data
+  // Prefer candidates with more complete data (e.g., from original data source if duplicates exist)
   return candidates.find(d =>
     d.our_services_icons &&
     d.our_services_icons.length > 0 &&
@@ -31,85 +27,16 @@ const findBestCandidate = (candidates) => {
 }
 
 export default function HireDetailsPage({ params }) {
-  const candidates = HireUsData.Data.filter(d => toSlug(d.category) === params.slug)
+  const allData = [
+    ...HireUsData.Data,
+    ...HireUsRolesData.Data,
+    ...HireUsTechAIData.Data,
+    ...HireUsModelsData.Data
+  ]
+  const candidates = allData.filter(d => toSlug(d.category) === params.slug)
   const full = findBestCandidate(candidates)
 
-  // Dynamic SEO updates when hire expert data loads
-  useEffect(() => {
-    if (full) {
-      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.inheritx.com';
 
-      // Update document title
-      document.title = `${full.heading} | InheritX Experts`;
-
-      // Update meta description
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`);
-      }
-
-      // Update Open Graph title
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) {
-        ogTitle.setAttribute('content', `${full.heading} | InheritX Experts`);
-      }
-
-      // Update Open Graph description
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      if (ogDescription) {
-        ogDescription.setAttribute('content', full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`);
-      }
-
-      // Add structured data for better SEO
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": `${full.heading}`,
-        "description": full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`,
-        "provider": {
-          "@type": "Organization",
-          "name": "InheritX",
-          "url": siteUrl,
-          "logo": {
-            "@type": "ImageObject",
-            "url": `${siteUrl}/image/logo/inx-icon-link.png`
-          }
-        },
-        "serviceType": `${full.heading}`,
-        "areaServed": "Worldwide",
-        "url": `${siteUrl}/hire-experts/${params.slug}`,
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Full-Time Hiring",
-            "description": "160 Hours/Month - Email, Teams, Phone communication"
-          },
-          {
-            "@type": "Offer",
-            "name": "Part-Time Hiring",
-            "description": "80 Hours/Month - Email, Teams, Phone communication"
-          },
-          {
-            "@type": "Offer",
-            "name": "Hourly Hiring",
-            "description": "Pay Per Use - Email, Teams, Phone communication"
-          }
-        ]
-      };
-
-      // Remove existing structured data
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-
-      // Add new structured data
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-    }
-  }, [full, params.slug]);
 
   if (!full) {
     return (
@@ -370,23 +297,16 @@ export default function HireDetailsPage({ params }) {
             </div>
           </div>
         </div>
-        <div className='wg-cta tf-spacing-2 alert alert-dismissible fade show mb-0' role='alert'>
-          <div className='tf-container'>
-            <div className='cta-inner flex align-items-center justify-content-center'>
-              <div className='left flex align-items-center'>
-                <div className='icon'>
-                  <i className='icon-chat-2'></i>
-                </div>
-                <h5 className='fw-4 title'>Ready to hire {full.type} developers? Let’s discuss your requirements.</h5>
-                <Link href='/contact' className='tf-btn no-bg text-underline hover-color-main-dark'>
-                  <span>Consult our experts</span>
-                  <i className='icon-arrow-right'></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <BottomCTA 
+          techName={full.heading}
+          title={full.cta_title || (full.heading.toLowerCase().includes('hire') 
+            ? `${full.heading}?` 
+            : `Ready to hire ${full.heading} developers?`)}
+          subtitle={full.cta_subtitle || (full.heading.toLowerCase().includes('hire') 
+            ? `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${full.heading} is ready to deliver high-quality solutions for your business.`
+            : `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${full.heading} team is ready to deliver high-quality solutions for your business.`)}
+        />
+        <StickyLeadBar techName={full.heading} />
       </div>
     </>
   )

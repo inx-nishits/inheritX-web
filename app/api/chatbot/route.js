@@ -203,7 +203,7 @@ function generateResponse(message) {
     message.includes('goodbye') ||
     message.includes('see you')
   ) {
-    return "Thank you for chatting with InheritX! 👋 Feel free to reach out anytime at contact@inheritx.com or +91 84870 06480. Have a great day!"
+    return "Thank you for chatting with InheritX! 👋 Feel free to reach out anytime at contact@inheritx.com or +91 84870 06480 (Sales) / +91 8160047106 (Career). Have a great day!"
   }
 
   // Default response

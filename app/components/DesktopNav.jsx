@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useCallback } from 'react'
 
-export default function DesktopNav ({ menuData }) {
+export default function DesktopNav({ menuData }) {
   const pathname = usePathname()
 
   // Ensure any hover-based mega menu is force-closed during navigation
@@ -33,7 +33,7 @@ export default function DesktopNav ({ menuData }) {
 
     if (headerEl) headerEl.addEventListener('mouseleave', onHeaderLeave)
     window.addEventListener('mousemove', onFirstMove, { once: true })
-    
+
     return () => {
       window.clearTimeout(fallbackTimer)
       if (headerEl) headerEl.removeEventListener('mouseleave', onHeaderLeave)
@@ -87,7 +87,7 @@ export default function DesktopNav ({ menuData }) {
               <Link href={item.href} className='item-link body-2' onClick={handleLinkClick}>
                 <span>{item.label}</span>
               </Link>
-              <div className='sub-menu mega-menu p-4 py-5'>
+              <div className='sub-menu mega-menu px-4 py-4'>
                 <div className='container'>
                   <div className='row'>
                     {item.columns?.map((col, idx) => (
@@ -97,7 +97,7 @@ export default function DesktopNav ({ menuData }) {
                         ) : null}
                         <ul className='list-unstyled'>
                           {col.items.map(link => (
-                            <li key={link.href} className={`mb-3 ${isActive(link.href) ? 'current-menu-item' : ''}`}>
+                            <li key={`${link.href}-${link.label}`} className={`mb-3 ${isActive(link.href) ? 'current-menu-item' : ''}`}>
                               <Link href={link.href} className='text-decoration-none text-white' onClick={handleLinkClick}>
                                 {link.label}
                               </Link>

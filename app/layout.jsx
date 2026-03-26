@@ -134,6 +134,13 @@ export default function RootLayout({ children }) {
         contactType: 'sales',
         areaServed: 'Worldwide',
         availableLanguage: ['English']
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91 8160047106',
+        contactType: 'career',
+        areaServed: 'Worldwide',
+        availableLanguage: ['English']
       }
     ]
   }
@@ -215,6 +222,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' className={poppins.className}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HD10J6QP0Y"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-HD10J6QP0Y');
+            `,
+          }}
+        />
         <link rel='icon' href='/image/logo/favicon.ico' />
         {/* Preload critical hero image for LCP with high priority */}
         <link rel='preload' as='image' href='/image/page-title/herobanner-final.jpg' fetchPriority='high' />

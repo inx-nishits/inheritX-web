@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
+import { trackEvent } from '../utils/ga4'
 
 export default function ContactForm({
   id = 'contactform',
@@ -14,6 +15,7 @@ export default function ContactForm({
   budgetLabel = 'Select Your Budget',
   budgetOptions = ['Choose Budget', 'Below $5000', '$5000 - $25,000', 'Augmented Reality'],
   submitText = 'Schedule a free Consultation',
+  section = 'reliable_solutions',
   onSubmit
 }) {
   const [errors, setErrors] = useState({})
@@ -273,6 +275,12 @@ export default function ContactForm({
       const apiMessage = data?.message || (data?.status === 1 ? 'Thanks! Your message has been sent.' : 'Something went wrong')
 
       if (data?.status === 1) {
+        // Track successful form submission
+        trackEvent('form_submit', {
+          form_name: 'project_contact',
+          section,
+        })
+
         // Reset lightweight client-side state
         form.reset()
         setNdaChecked(false)
@@ -405,7 +413,17 @@ export default function ContactForm({
         </label>
       </div>
 
-      <button type='submit' className='tf-btn mx-auto w-100 w-md-100' disabled={isSubmitting}>
+      <button
+        type='submit'
+        className='tf-btn mx-auto w-100 w-md-100'
+        disabled={isSubmitting}
+        onClick={() => {
+          trackEvent('contact_click', {
+            section,
+            type: 'form_button',
+          })
+        }}
+      >
         <span>{isSubmitting ? 'Sending...' : submitText}</span>
         <i className='icon-arrow-right'></i>
       </button>

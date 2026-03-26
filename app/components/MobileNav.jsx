@@ -86,7 +86,7 @@ export default function MobileNav ({ menuData, onNavigate }) {
                     ) : null}
                     <ul className='list-unstyled'>
                       {col.items.map(link => (
-                        <li key={link.href} className={isActive(link.href) ? 'current-menu-item' : ''}>
+                        <li key={`${link.href}-${link.label}`} className={isActive(link.href) ? 'current-menu-item' : ''}>
                           <Link href={link.href} className='text-decoration-none' onClick={onNavigate}>
                             {link.label}
                           </Link>

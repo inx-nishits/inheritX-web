@@ -65,31 +65,59 @@ const menuData = [
     type: 'mega',
     columns: [
       {
-        title: 'Mobile App Development',
+        title: 'Hire Experts by Role',
         items: [
-          { label: 'Hire iPhone Developer', href: '/hire-experts/iphone-developer' },
-          { label: 'Hire Android Developer', href: '/hire-experts/android-developer' },
-          { label: 'Hire React Native Developer', href: '/hire-experts/react-native-developer' },
-          { label: 'Hire Flutter Developer', href: '/hire-experts/flutter-developer' },
-          { label: 'Hire Phonegap Developer', href: '/hire-experts/phonegap-developer' }
+          { label: 'Hire AI Engineers', href: '/hire-experts/ai-engineers' },
+          { label: 'Hire ML Engineers', href: '/hire-experts/ml-engineers' },
+          { label: 'Hire Data Engineers', href: '/hire-experts/data-engineers' },
+          { label: 'Hire DevOps & SRE Engineers', href: '/hire-experts/devops-sre-engineers' },
+          { label: 'Hire Cloud Engineers', href: '/hire-experts/cloud-engineers' },
+          { label: 'Hire Full-Stack Developers', href: '/hire-experts/fullstack-developers' },
+          { label: 'Hire Frontend Developers', href: '/hire-experts/frontend-developers' },
+          { label: 'Hire Backend Developers', href: '/hire-experts/backend-developers' },
+          { label: 'Hire Mobile App Developers', href: '/hire-experts/mobile-app-developers' },
+          { label: 'Hire QA Automation Engineers', href: '/hire-experts/qa-automation-engineers' },
+          { label: 'Hire Cybersecurity Engineers', href: '/hire-experts/cybersecurity-engineers' },
+          { label: 'Hire Salesforce Developers', href: '/hire-experts/salesforce-developers' },
+          { label: 'Hire Blockchain Developers', href: '/hire-experts/blockchain-developers' },
+          { label: 'Hire Embedded & IoT Engineers', href: '/hire-experts/embedded-iot-engineers' },
+          { label: 'Hire Solution Architects', href: '/hire-experts/solution-architects' },
+          { label: 'Hire UI/UX Designers', href: '/hire-experts/ui-ux-designers' }
         ]
       },
       {
-        title: 'Web Development',
+        title: 'Hire Developers by Technology',
         items: [
-          { label: 'Hire AngularJS Developer', href: '/hire-experts/angularjs-developer' },
-          { label: 'Hire ReactJS Developer', href: '/hire-experts/reactjs-developer' },
-          { label: 'Hire Node.js Developer', href: '/hire-experts/nodejs-developer' },
-          { label: 'Hire PHP Developer', href: '/hire-experts/php-developer' },
-          { label: 'Hire Laravel Developer', href: '/hire-experts/laravel-developer' }
+          { label: 'Hire React Developers', href: '/hire-experts/reactjs-developer' },
+          { label: 'Hire Angular Developers', href: '/hire-experts/angularjs-developer' },
+          { label: 'Hire Next.js Developers', href: '/hire-experts/nextjs-developer' },
+          { label: 'Hire Node.js Developers', href: '/hire-experts/nodejs-developer' },
+          { label: 'Hire Python Developers', href: '/hire-experts/python-developer' },
+          { label: 'Hire Java Developers', href: '/hire-experts/java-developers' },
+          { label: 'Hire .NET Developers', href: '/hire-experts/asp-developer' },
+          { label: 'Hire Flutter Developers', href: '/hire-experts/flutter-developer' },
+          { label: 'Hire React Native Developers', href: '/hire-experts/react-native-developer' },
+          { label: 'Hire AWS Developers', href: '/hire-experts/aws-developers' },
+          { label: 'Hire Azure Developers', href: '/hire-experts/azure-developers' },
+          { label: 'Hire GCP Developers', href: '/hire-experts/gcp-developers' }
         ]
       },
       {
-        title: 'Other Technologies',
+        title: 'Hire AI & Data Experts',
         items: [
-          { label: 'Hire Python Developer', href: '/hire-experts/python-developer' },
-          { label: 'Hire WordPress Developer', href: '/hire-experts/wordpress-developer' },
-          { label: 'Hire ASP Developer', href: '/hire-experts/asp-developer' }
+          { label: 'Hire LLM Engineers', href: '/hire-experts/llm-engineers' },
+          { label: 'Hire Prompt Engineers', href: '/hire-experts/prompt-engineers' },
+          { label: 'Hire Data Scientists', href: '/hire-experts/data-scientists' },
+          { label: 'Hire MLOps Engineers', href: '/hire-experts/mlops-engineers' }
+        ]
+      },
+      {
+        title: 'Hiring Models',
+        items: [
+          { label: 'Staff Augmentation Services', href: '/hire-experts/staff-augmentation-services' },
+          { label: 'Dedicated Development Team', href: '/hire-experts/dedicated-development-team' },
+          { label: 'Project-Based Development', href: '/hire-experts/project-based-development' },
+          { label: 'Offshore Development Center (ODC)', href: '/hire-experts/offshore-development-center' }
         ]
       }
     ]

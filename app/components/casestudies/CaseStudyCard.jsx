@@ -1,8 +1,11 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
 export default function CaseStudyCard({ caseStudy, index }) {
+  const router = useRouter()
   const imageWrapperRef = useRef(null)
   const imageRef = useRef(null)
   const frameRef = useRef(null)
@@ -169,7 +172,20 @@ export default function CaseStudyCard({ caseStudy, index }) {
   const glowY = isMobile ? 50 : ((mousePosition.y * 50) + 50)
 
   return (
-    <div className='casestudy-card' style={{ '--stagger': index }}>
+    <div
+      className='casestudy-card'
+      style={{ '--stagger': index, cursor: 'pointer' }}
+      onClick={(e) => {
+        if (e.target.closest('a') || e.target.closest('button')) return
+        try {
+          sessionStorage.setItem('inx_casestudies_scroll', String(window.scrollY || window.pageYOffset || 0))
+          sessionStorage.setItem('inx_restore_casestudies', '1')
+          if (typeof currentCategory !== 'undefined') sessionStorage.setItem('inx_casestudies_category', currentCategory)
+        } catch { }
+
+        router.push(`/case-studies/${caseStudy.slug}`)
+      }}
+    >
       <div className='casestudy-card-inner'>
         {/* Case Study Image */}
         <div className='casestudy-image-wrapper' ref={imageWrapperRef}>
@@ -178,11 +194,14 @@ export default function CaseStudyCard({ caseStudy, index }) {
             className='casestudy-image-link d-block w-100 h-100'
             aria-label={`View ${caseStudy.title} case study`}
           >
-            <img
+            <Image
               ref={imageRef}
               src={caseStudy.thumbnail}
               alt={caseStudy.title}
               className='casestudy-image'
+              fill
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              quality={95}
             />
             <div className='casestudy-overlay'>
               <div className='casestudy-overlay-content'>
@@ -238,7 +257,7 @@ export default function CaseStudyCard({ caseStudy, index }) {
               try {
                 sessionStorage.setItem('inx_casestudies_scroll', String(window.scrollY || window.pageYOffset || 0))
                 sessionStorage.setItem('inx_restore_casestudies', '1')
-                if (currentCategory) sessionStorage.setItem('inx_casestudies_category', currentCategory)
+                if (typeof currentCategory !== 'undefined') sessionStorage.setItem('inx_casestudies_category', currentCategory)
               } catch { }
             }}>
               <span>Read Case Study</span>
@@ -272,8 +291,7 @@ export default function CaseStudyCard({ caseStudy, index }) {
 
         .casestudy-image-wrapper {
           position: relative;
-          aspect-ratio: 16/10;
-          min-height: 320px;
+          aspect-ratio: 1.30 / 1;
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -430,7 +448,7 @@ export default function CaseStudyCard({ caseStudy, index }) {
         }
 
         .casestudy-outcomes {
-          margin-bottom: 20px;
+          margin-bottom: 5px;
         }
 
         .outcomes-label {
@@ -463,7 +481,7 @@ export default function CaseStudyCard({ caseStudy, index }) {
 
         .casestudy-footer {
           margin-top: auto;
-          display: flex;
+          display: none;
           justify-content: center;
           align-items: center;
           padding-top: 15px;
@@ -510,10 +528,6 @@ export default function CaseStudyCard({ caseStudy, index }) {
         }
 
         @media (max-width: 768px) {
-          .casestudy-image-wrapper {
-            min-height: 240px;
-          }
-
           .casestudy-content {
             padding: 20px;
           }

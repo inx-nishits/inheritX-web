@@ -1,7 +1,17 @@
 import Link from 'next/link'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import BottomCTA from '../../components/hireexperts/BottomCTA'
 
 export const dynamic = 'force-static'
+
+export const metadata = {
+  title: 'Hire Dedicated iPhone Developers | InheritX Experts',
+  description: 'Hire expert iPhone developers from InheritX. Professional iOS development services with flexible hiring models and deep expertise in Swift and SwiftUI.',
+  openGraph: {
+    title: 'Hire Dedicated iPhone Developers | InheritX Experts',
+    description: 'Hire expert iPhone developers from InheritX. Professional iOS development services with flexible hiring models.',
+  }
+}
 
 export default function HireIPhoneDeveloperPage() {
   return (
@@ -281,22 +291,11 @@ export default function HireIPhoneDeveloperPage() {
         </div>
 
         {/* CTA */}
-        <div className='wg-cta tf-spacing-2 alert alert-dismissible fade show mb-0' role='alert'>
-          <div className='tf-container'>
-            <div className='cta-inner flex align-items-center justify-content-center'>
-              <div className='left flex align-items-center'>
-                <div className='icon'>
-                  <i className='icon-chat-2'></i>
-                </div>
-                <h4 className='fw-4 title fs-2'>Ready to hire iPhone developers? Let’s discuss your requirements.</h4>
-                <Link href='/contact' className='tf-btn no-bg text-underline hover-color-main-dark'>
-                  <span>Consult our experts</span>
-                  <i className='icon-arrow-right'></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BottomCTA
+          techName="iPhone"
+          title="Ready to hire iPhone developers?"
+          subtitle="Whether you need a custom app, game, or enterprise solution, our team of expert iOS developers is here to bring your vision to life."
+        />
 
       </div>
     </>
