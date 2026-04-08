@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Send, X, MessageCircle, Minimize2, RotateCcw, ArrowLeft } from 'lucide-react'
 import toast from 'react-hot-toast'
+import { trackEvent } from '../../utils/ga4'
 
 // Main menu options - shown after "Start Chat"
 const mainMenuOptions = [
@@ -216,6 +217,7 @@ export default function ChatBot() {
 
   // Handle Start Chat button
   const handleStartChat = () => {
+    trackEvent('chatbot_submit', { section: 'chatbot', type: 'start_chat' })
     setChatStage('basic-info')
   }
 
@@ -256,6 +258,7 @@ export default function ChatBot() {
 
   // Handle hire team selection submission - submit directly
   const handleHireTeamSelectionSubmit = async () => {
+    trackEvent('chatbot_submit', { section: 'chatbot', type: 'hire_team' })
     // Validate at least one selection
     if (formData.selectedDevelopers.length === 0) {
       setFormErrors({ selectedDevelopers: 'Please select at least one developer type' })
@@ -411,6 +414,7 @@ export default function ChatBot() {
   // Handle basic info form submission
   const handleBasicInfoSubmit = async (e) => {
     e.preventDefault()
+    trackEvent('chatbot_submit', { section: 'chatbot', type: 'basic_info' })
     
     const errors = validateBasicInfo()
     if (Object.keys(errors).length > 0) {
@@ -499,6 +503,7 @@ export default function ChatBot() {
   // Handle details form submission
   const handleDetailsFormSubmit = async (e) => {
     e.preventDefault()
+    trackEvent('chatbot_submit', { section: 'chatbot', type: 'details_form' })
     
     const errors = validateDetailsForm()
     if (Object.keys(errors).length > 0) {
@@ -728,7 +733,13 @@ export default function ChatBot() {
                   <p className='greeting-tagline'>
                     Let's bring your ideas to life
                   </p>
-                  <button onClick={handleStartChat} className='start-chat-btn'>
+                  <button
+                    onClick={() => {
+                      trackEvent('chatbot_start', { section: 'chatbot' })
+                      handleStartChat()
+                    }}
+                    className='start-chat-btn'
+                  >
                     <MessageCircle size={20} />
                     <span>Start Chat</span>
                   </button>
@@ -1136,6 +1147,7 @@ export default function ChatBot() {
             if (isOpen) {
               handleClose()
             } else {
+              trackEvent('chatbot_open', { section: 'chatbot' })
               setIsOpen(true)
               setIsMinimized(false)
             }

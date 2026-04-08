@@ -13,7 +13,7 @@ export default function ContactForm({
   description = "We’re Here to Support Your Next Big Project — Let’s Team Up!",
   showBudget = true,
   budgetLabel = 'Select Your Budget',
-  budgetOptions = ['Choose Budget', 'Below $5000', '$5000 - $25,000', 'Augmented Reality'],
+  budgetOptions = ['Choose Budget', 'Below $5,000', '$5,000 – $15,000', '$15,000 – $30,000', 'Not sure yet'],
   submitText = 'Schedule a free Consultation',
   section = 'reliable_solutions',
   onSubmit
