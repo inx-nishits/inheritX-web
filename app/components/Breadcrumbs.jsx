@@ -98,10 +98,16 @@ function resolveLabel (segment, parentSegment) {
 }
 
 function makeTitleCase (value) {
+  const acronyms = ['AI', 'ML', 'AWS', 'GCP', 'LLM', 'ROI', 'QA', 'UI', 'UX', 'PWA', 'FAQ', 'API', 'ETL', 'CRM', 'ODC', 'SRE', 'VAPT', 'IaC', 'RAG', 'MVP', 'SaaS', 'SEO', 'CMS'];
   return (value || '')
     .replace(/[-_]+/g, ' ')
     .split(' ')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .map(w => {
+      const upper = w.toUpperCase();
+      const found = acronyms.find(a => a.toUpperCase() === upper);
+      if (found) return found;
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    })
     .join(' ');
 }
 

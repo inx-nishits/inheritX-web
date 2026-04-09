@@ -397,15 +397,15 @@ export default function ContactForm({
       </fieldset>
 
       {/* Math Captcha Row */}
-      <div className='d-flex flex-wrap calculation-fields' data-aos='zoom-in'>
+      <div className='d-flex flex-nowrap align-items-center justify-content-start calculation-fields' data-aos='zoom-in' style={{ gap: '4px' }}>
         <label htmlFor='captcha-x' className='visually-hidden'>First number</label>
-        <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' id='captcha-x' value={captcha.x} className='text-center p-1 h-full' disabled /></div>
-        <label className='check_label px-3'>+</label>
+        <div style={{ width: '44px' }}><input type='text' id='captcha-x' value={captcha.x} className='text-center p-1 h-full' disabled style={{ borderRadius: '8px', border: '1px solid #e2e8f0', height: '44px' }} /></div>
+        <label className='check_label px-1 fw-bold'>+</label>
         <label htmlFor='captcha-y' className='visually-hidden'>Second number</label>
-        <div className='col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3'><input type='text' id='captcha-y' value={captcha.y} className='text-center p-1 h-full' disabled /></div>
-        <label className='check_label px-3'>=</label>
+        <div style={{ width: '44px' }}><input type='text' id='captcha-y' value={captcha.y} className='text-center p-1 h-full' disabled style={{ borderRadius: '8px', border: '1px solid #e2e8f0', height: '44px' }} /></div>
+        <label className='check_label px-1 fw-bold'>=</label>
         <label htmlFor='captcha-result' className='visually-hidden'>Enter the sum</label>
-        <div className='col-xl-2 col-lg-4 col-md-4 col-sm-5 col-5'><input type='number' id='captcha-result' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} /></div>
+        <div style={{ width: '70px' }}><input type='number' id='captcha-result' className='text-center p-1 h-full' value={userResult} onChange={handleUserResultChange} style={{ borderRadius: '8px', border: '1px solid #e2e8f0', height: '44px' }} /></div>
       </div>
       <div className='cols'>
         {errors.userResult ? <div className='error-important' style={errorStyle}>{errors.userResult}</div> : null}
@@ -421,8 +421,7 @@ export default function ContactForm({
 
       <button
         type='submit'
-        className='tf-btn mx-auto'
-        style={{ minWidth: 'min(100%, 250px)' }}
+        className='tf-btn d-block mx-auto mt-4'
         disabled={isSubmitting}
         onClick={() => {
           trackEvent('contact_click', {
@@ -431,8 +430,8 @@ export default function ContactForm({
           })
         }}
       >
-        <span>{isSubmitting ? 'Sending...' : submitText}</span>
-        <i className='icon-arrow-right'></i>
+        <span className='fw-7'>{isSubmitting ? 'Sending...' : submitText}</span>
+        <i className='icon-arrow-right ms-2'></i>
       </button>
     </form>
   )

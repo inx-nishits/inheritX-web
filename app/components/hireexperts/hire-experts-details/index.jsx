@@ -13,13 +13,29 @@ import StickyLeadBar from '../StickyLeadBar'
 // Utility function to convert category to slug
 const toSlug = (category) => (category || '').replace(/^hire-/, '')
 
+const acronyms = ['AI', 'ML', 'AWS', 'GCP', 'LLM', 'ROI', 'QA', 'UI', 'UX', 'PWA', 'FAQ', 'API', 'ETL', 'CRM', 'ODC', 'SRE', 'VAPT', 'IaC', 'RAG', 'MVP', 'SaaS', 'SEO', 'CMS'];
+
+const formatAcronyms = (text) => {
+  if (!text) return "";
+  return text.split(' ').map(w => {
+    const cleanWord = w.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toUpperCase();
+    const found = acronyms.find(a => a.toUpperCase() === cleanWord);
+    if (found) {
+      // Reconstruct with original punctuation if possible, 
+      // but for simplicity, just replacing the core word if it matches an acronym
+      return w.toUpperCase().replace(cleanWord, found);
+    }
+    return w;
+  }).join(' ');
+}
+
 // Standardize heading for SEO and UI consistency
 const getUniformHeading = (heading) => {
   if (!heading) return "";
   // Clear out any existing Hire, Dedicated, Remote, or Experts prefixes if redundant
   let role = heading.replace(/^(Hire\s+Dedicated|Hire\s+Remote|Hire)\s+/i, '');
   // Ensure "Hire Dedicated" prefix
-  return `Hire Dedicated ${role}`;
+  return `Hire Dedicated ${formatAcronyms(role)}`;
 }
 
 // Helper function to find the best candidate from multiple matches
@@ -65,7 +81,9 @@ export default function HireDetailsPage({ params }) {
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>
-            <h1 className='title split-text effect-right'>{getUniformHeading(full.heading)}</h1>
+            <h1 className='title split-text effect-right'>
+              {params.slug === 'dedicated-development-team' ? formatAcronyms(full.heading) : getUniformHeading(full.heading)}
+            </h1>
             <Breadcrumbs />
           </div>
         </div>
@@ -90,7 +108,7 @@ export default function HireDetailsPage({ params }) {
               <div className='wg-details wg-service-details'>
                 <div className='details-content'>
                   <div className='mb-5'>
-                    <h2 className='title mb-3'>{full.heading_caption}</h2>
+                    <h2 className='title mb-3'>{formatAcronyms(full.heading_caption)}</h2>
                     {full.content && full.content.length > 0 && (
                       <div className='desc'>
                         {full.content.map((p, i) => (
@@ -133,7 +151,7 @@ export default function HireDetailsPage({ params }) {
                               data-animation-delay={`${index * 0.2}s`}
                             >
                               <h4 className=' text-primary lh-40'>
-                                {service.imageTitle || service.title}
+                                {formatAcronyms(service.imageTitle || service.title)}
                               </h4>
                               {(service.content || service.desc) && (
                                 <p className='clearfix'>{service.content || service.desc}</p>
@@ -307,15 +325,15 @@ export default function HireDetailsPage({ params }) {
           </div>
         </div>
         <BottomCTA 
-          techName={full.heading}
-          title={full.cta_title || (full.heading.toLowerCase().includes('hire') 
-            ? `${full.heading}?` 
-            : `Ready to hire ${full.heading} developers?`)}
+          techName={formatAcronyms(full.heading)}
+          title={formatAcronyms(full.cta_title) || (full.heading.toLowerCase().includes('hire') 
+            ? `${formatAcronyms(full.heading)}?` 
+            : `Ready to hire ${formatAcronyms(full.heading)} developers?`)}
           subtitle={full.cta_subtitle || (full.heading.toLowerCase().includes('hire') 
-            ? `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${full.heading} is ready to deliver high-quality solutions for your business.`
-            : `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${full.heading} team is ready to deliver high-quality solutions for your business.`)}
+            ? `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${formatAcronyms(full.heading)} is ready to deliver high-quality solutions for your business.`
+            : `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${formatAcronyms(full.heading)} team is ready to deliver high-quality solutions for your business.`)}
         />
-        <StickyLeadBar techName={full.heading} />
+        <StickyLeadBar techName={formatAcronyms(full.heading)} />
       </div>
     </>
   )

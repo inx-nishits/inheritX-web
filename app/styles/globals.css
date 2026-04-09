@@ -3105,12 +3105,24 @@ textarea.form-input {
   padding-right: 20px !important;
 }
 
-.modal-form-content .form-contact-us .tf-btn {
+.form-contact-us .tf-btn {
   width: fit-content !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 20px !important;
   display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 767px) {
+  .form-contact-us .tf-btn {
+    padding: 14px 24px !important;
+    min-width: 220px !important;
+    max-width: 90% !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3198,7 +3210,7 @@ textarea.form-input {
 .modal-form-content .form-contact-us .tf-btn {
   margin-top: 15px !important;
   padding: 22px 30px !important;
-  width: 100% !important;
+  width: fit-content !important;
   font-size: 1.5rem !important;
   font-weight: 800 !important;
   display: flex !important;
@@ -3207,6 +3219,15 @@ textarea.form-input {
   gap: 15px !important;
   text-transform: none !important;
   letter-spacing: 0.01em !important;
+}
+
+@media (max-width: 767px) {
+  .modal-form-content .form-contact-us .tf-btn {
+    padding: 14px 24px !important;
+    min-width: 200px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+  }
 }
 
 
@@ -3226,7 +3247,7 @@ textarea.form-input {
 .modal-form-content .form-contact-us .item .icon {
   position: absolute !important;
   top: 26px !important;
-  /* Fixed position center point for 52px input height */
+  /* Centering transform */
   transform: translateY(-50%) !important;
   right: 15px !important;
   left: auto !important;
@@ -3234,6 +3255,11 @@ textarea.form-input {
   margin: 0 !important;
   z-index: 2 !important;
   pointer-events: none !important;
+}
+
+/* Ensure phone icon maintains its flip direction in the modal */
+.modal-form-content .form-contact-us .item i.icon-phone {
+  transform: translateY(-50%) scaleX(-1) !important;
 }
 
 
@@ -3251,58 +3277,60 @@ textarea.form-input {
   margin: 0 !important;
 }
 
-.modal-form-content .form-contact-us .calculation-fields {
+.form-contact-us .calculation-fields {
   display: flex !important;
   align-items: center !important;
+  justify-content: flex-start !important;
   flex-wrap: nowrap !important;
-  gap: 5px !important;
+  gap: 4px !important;
   margin: 10px 0px 0px !important;
 }
 
-
-.modal-form-content .form-contact-us .calculation-fields input {
+.form-contact-us .calculation-fields input {
   padding: 0 !important;
   text-align: center !important;
   color: #0f172a !important;
   font-weight: 700 !important;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
   background: #ffffff !important;
-  height: 60px !important;
-  width: 60px !important;
-  max-width: 60px !important;
+  height: 44px !important;
+  width: 44px !important;
+  max-width: 44px !important;
   border: 1px solid #e2e8f0 !important;
   border-radius: 8px !important;
-  line-height: 58px !important;
+  line-height: 42px !important;
   display: flex !important;
   margin: 0 !important;
 }
 
-.modal-form-content .form-contact-us .calculation-fields input#captcha-result {
-  width: 150px !important;
-  max-width: 150px !important;
+.form-contact-us .calculation-fields input#captcha-result {
+  width: 70px !important;
+  max-width: 70px !important;
 }
 
-
-
-.modal-form-content .form-contact-us .calculation-fields>div {
+.form-contact-us .calculation-fields>div {
   width: auto !important;
   flex: 0 0 auto !important;
   padding: 0 !important;
 }
 
-.modal-form-content .form-contact-us .calculation-fields .check_label {
+.form-contact-us .calculation-fields .check_label {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex: 0 0 auto !important;
   width: auto !important;
   font-weight: 700 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.1rem !important;
   color: #0f172a !important;
-  padding: 0 15px !important;
-  height: 60px !important;
+  padding: 0 8px !important;
+  height: 44px !important;
   line-height: normal !important;
   margin-bottom: 0 !important;
+}
+
+.check_label span {
+  margin-left: 4px !important;
 }
 
 
@@ -3373,12 +3401,7 @@ textarea.form-input {
   }
 }
 
-@media (max-width: 576px) {
-  .modal-form-content .form-contact-us .calculation-fields {
-    justify-content: start !important;
-    flex-wrap: wrap !important;
-  }
-}
+
 
 
 
@@ -3440,9 +3463,11 @@ textarea.form-input {
 
 @media (max-width: 991px) {
   .cta-btn-prominent {
-    width: 100%;
-    min-width: 0;
+    width: fit-content !important;
+    min-width: 220px !important;
     justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-top: 15px !important;
     font-size: 1.25rem !important;
     padding: 1.25rem 2rem !important;
