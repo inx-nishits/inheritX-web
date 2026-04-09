@@ -9,6 +9,15 @@ export const dynamic = 'force-static'
 // Utility function to convert category to slug
 const toSlug = (category) => (category || '').replace(/^hire-/, '')
 
+// Standardize heading for SEO and UI consistency
+const getUniformHeading = (heading) => {
+  if (!heading) return "";
+  // Clear out any existing Hire, Dedicated, Remote, or Experts prefixes if redundant
+  let role = heading.replace(/^(Hire\s+Dedicated|Hire\s+Remote|Hire)\s+/i, '');
+  // Ensure "Hire Dedicated" prefix
+  return `Hire Dedicated ${role}`;
+}
+
 // Helper function to find the best candidate from multiple matches
 const findBestCandidate = (candidates) => {
   if (candidates.length === 0) return null
@@ -38,7 +47,7 @@ export async function generateMetadata({ params }) {
   const full = getFullData(slug)
   if (!full) return {}
 
-  const title = `${full.heading} | InheritX Experts`
+  const title = `${getUniformHeading(full.heading)} | InheritX Experts`
   const description = full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`
 
   return {
@@ -78,7 +87,7 @@ export default function HireDynamicPage({ params }) {
   const jsonLd = full ? {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": `Hire Dedicated ${full.heading}`,
+    "name": getUniformHeading(full.heading),
     "description": full.heading_caption || `Hire expert ${full.heading} developers from InheritX. Professional development services with flexible hiring models.`,
     "provider": {
       "@type": "Organization",

@@ -88,7 +88,8 @@ function resolveLabel (segment, parentSegment) {
     'porfolio-list': 'Portfolio',
     'porfolio-details': 'Portfolio Details',
     'ai-ml-projects': 'AI/ML Projects',
-    'aiml-projects': 'AI/ML Projects'
+    'aiml-projects': 'AI/ML Projects',
+    'ai-engineers': 'AI Engineers'
   };
 
   if (overrides[decoded]) return overrides[decoded];

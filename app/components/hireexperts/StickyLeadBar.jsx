@@ -9,6 +9,8 @@ export default function StickyLeadBar({ techName = "Expert" }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isStaticBeltVisible, setIsStaticBeltVisible] = useState(false);
 
+  const cleanTechName = techName.replace(/^(Hire Dedicated|Hire)\s+/i, '');
+
   useEffect(() => {
     // Hide floating bar when the real cta belt is visible
     const observer = new IntersectionObserver(
@@ -51,7 +53,8 @@ export default function StickyLeadBar({ techName = "Expert" }) {
       if (staticBelt) {
         observer.unobserve(staticBelt);
       }
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     };
   }, [isStaticBeltVisible]);
 
@@ -59,11 +62,13 @@ export default function StickyLeadBar({ techName = "Expert" }) {
     if (e) e.preventDefault();
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   };
 
   return (
@@ -110,10 +115,10 @@ export default function StickyLeadBar({ techName = "Expert" }) {
           </div>
           <div className="text-container">
             <h4 className="text-white fw-700 m-0 fs-3 d-none d-sm-block">
-              Interested in hiring {techName}?
+              Interested in hiring {cleanTechName}?
             </h4>
             <h4 className="text-white fw-700 m-0 fs-2 d-sm-none">
-              Inquire for {techName}
+              Inquire for {cleanTechName}
             </h4>
             <p className="text-white-50 m-0 d-none d-lg-block" style={{ opacity: 0.8, fontSize: '12px' }}>
               Connect with our solution architects for a free technical proposal.
@@ -191,21 +196,6 @@ export default function StickyLeadBar({ techName = "Expert" }) {
               className='cta-modal-close'
               onClick={closeModal}
               aria-label="Close modal"
-              style={{
-                position: 'absolute',
-                top: '15px',
-                right: '15px',
-                zIndex: 100,
-                background: '#f1f5f9',
-                border: 'none',
-                borderRadius: '50%',
-                width: '32px',
-                height: '32px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer'
-              }}
             >
               <i className='icon-close' style={{ fontSize: '12px', color: '#000' }}></i>
             </button>
@@ -215,8 +205,8 @@ export default function StickyLeadBar({ techName = "Expert" }) {
                 <ContactForm
                   id="sticky-lead-form-high-z"
                   className='form-contact-us px-md-15'
-                  title={`Hire Dedicated ${techName} Experts`}
-                  description={`Get a technical proposal for your ${techName} requirements today.`}
+                  title={techName.includes('Hire') ? techName : `Hire Dedicated ${cleanTechName}`}
+                  description={`Get a customized technical proposal to hire ${cleanTechName} today.`}
                   section="sticky_lead_bar_high_z"
                 />
               </div>

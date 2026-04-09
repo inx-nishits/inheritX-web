@@ -315,7 +315,7 @@ export default function ContactForm({
 
   return (
     <form id={id} className={className} noValidate onSubmit={(e) => handleSubmit(e)}>
-      <div className='heading-form text-center'>
+      <div className='heading-form text-center' style={{ paddingLeft: '40px', paddingRight: '40px' }}>
         <h3 className='title'>{title}</h3>
         <div className='desc lh-30'>
           {description}
@@ -421,7 +421,8 @@ export default function ContactForm({
 
       <button
         type='submit'
-        className='tf-btn mx-auto w-100 w-md-100'
+        className='tf-btn mx-auto'
+        style={{ minWidth: 'min(100%, 250px)' }}
         disabled={isSubmitting}
         onClick={() => {
           trackEvent('contact_click', {

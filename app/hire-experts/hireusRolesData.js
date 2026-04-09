@@ -209,7 +209,7 @@ export class HireUsRolesData {
         "Your frontend is the face of your business. When you hire dedicated frontend developers from InheritX, you gain experts who specialized in building reactive, component-based UIs that have achieved 90+ Lighthouse scores and significantly reduced bounce rates for our eCommerce clients.",
         "Our frontend developers are masters of React, Vue, and Angular frameworks. We focus on 'Pixel Perfect' conversion of designs into code, ensuring your application looks and feels premium across all devices while maintaining 60 FPS performance benchmarks for a fluid, zero-latency user experience."
       ],
-      "cta_title": "High-Conversion UI Development",
+      "cta_title": "High Conversion UI Development",
       "cta_subtitle": "Hire expert React/Next.js/Angular frontend engineers specialized in Core Web Vitals and 60 FPS performance.",
       "we_offer": [
         "InheritX Solutions provides top-tier frontend development including UI/UX implementation, single-page applications (SPA), and performance optimization."

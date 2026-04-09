@@ -13,17 +13,20 @@ export default function BottomCTA({
   href = "/contact"
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const cleanTechName = techName.replace(/^(Hire Dedicated|Hire)\s+/i, '');
 
   // Toggle modal and handle body scroll lock
   const openModal = (e) => {
     e.preventDefault();
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   };
 
   // Close on ESC key
@@ -118,13 +121,11 @@ export default function BottomCTA({
                 <ContactForm
                   id="cta-contact-form"
                   className='form-contact-us px-md-15'
-                  title={techName
-                    ? (techName.toLowerCase().includes('expert') || techName.toLowerCase().includes('engineer')
-                      ? `Consult Our ${techName}`
-                      : `Consult Our ${techName} Experts`)
+                  title={cleanTechName
+                    ? `Consult Our ${cleanTechName}`
                     : "Reliable Solutions for Your Project Needs"}
-                  description={techName
-                    ? `Ready to scale your team? Share your ${techName} project requirements with us and let's get started.`
+                  description={cleanTechName
+                    ? `Ready to scale your team? Get a technical proposal to hire ${cleanTechName} today.`
                     : "We’re Here to Support Your Next Big Project — Let’s Team Up!"}
                   section="bottom_cta_modal"
                 />

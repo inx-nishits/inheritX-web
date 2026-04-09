@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import OurPlatforms from "../OurPlatforms";
 import BottomCTA from "./BottomCTA";
+import StickyLeadBar from "./StickyLeadBar";
 
 // Mapping platform titles to service categories
 const platformServiceMapping = {
@@ -38,6 +39,7 @@ export default function HireExpertContent() {
 
   return (
     <>
+      <StickyLeadBar techName="Experts" />
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>

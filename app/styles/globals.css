@@ -33,6 +33,18 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
   pointer-events: none !important;
 }
 
+/* Make header sticky and visible when mega menu is open on desktop */
+@media (min-width: 1200px) {
+  body:not(.menu-closing) #header:has(.menu-item-has-children:hover) {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1020 !important;
+    margin-top: 0 !important;
+    transform: translateY(0) !important;
+  }
+}
+
 /* Opt-in utility: make container full-width from 1024px and up */
 .fullwidth-from-1024 {
   width: 100%;
@@ -3017,7 +3029,7 @@ textarea.form-input {
 .modal-form-content .form-contact-us {
   display: flex !important;
   flex-direction: column !important;
-  padding: 0 !important;
+  padding: 0 0 30px 0 !important;
 }
 
 .modal-form-content .form-contact-us .cols,
@@ -3029,10 +3041,11 @@ textarea.form-input {
 }
 
 .modal-form-content .form-contact-us .tf-btn {
-  width: calc(100% - 40px) !important;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
-  margin-bottom: 0px !important;
+  width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
 }
 
 @media (max-width: 767px) {
@@ -3041,6 +3054,10 @@ textarea.form-input {
   }
 
   .cta-modal-container {
+    max-height: 85vh;
+  }
+
+  .modal-scroll-body {
     max-height: 85vh;
   }
 }
@@ -3055,8 +3072,8 @@ textarea.form-input {
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background: #ffffff;
   border-radius: 50%;
   border: 1px solid #e2e8f0;
@@ -3075,14 +3092,14 @@ textarea.form-input {
 }
 
 .cta-modal-close i {
-  font-size: 16px;
+  font-size: 11px;
   color: #0f172a;
 }
 
 /* Reduced height specifically for the 36 pages' modal form */
 .modal-form-content .form-contact-us {
   padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  padding-bottom: 30px !important;
 }
 
 .modal-form-content .form-contact-us .heading-form {
@@ -3286,8 +3303,15 @@ textarea.form-input {
   }
 
   .cta-modal-close {
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-form-content .form-contact-us .calculation-fields {
+    justify-content: start !important;
+    flex-wrap: wrap !important;
   }
 }
 

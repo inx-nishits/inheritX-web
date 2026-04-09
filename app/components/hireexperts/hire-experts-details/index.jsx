@@ -13,6 +13,15 @@ import StickyLeadBar from '../StickyLeadBar'
 // Utility function to convert category to slug
 const toSlug = (category) => (category || '').replace(/^hire-/, '')
 
+// Standardize heading for SEO and UI consistency
+const getUniformHeading = (heading) => {
+  if (!heading) return "";
+  // Clear out any existing Hire, Dedicated, Remote, or Experts prefixes if redundant
+  let role = heading.replace(/^(Hire\s+Dedicated|Hire\s+Remote|Hire)\s+/i, '');
+  // Ensure "Hire Dedicated" prefix
+  return `Hire Dedicated ${role}`;
+}
+
 // Helper function to find the best candidate from multiple matches
 const findBestCandidate = (candidates) => {
   if (candidates.length === 0) return null
@@ -56,7 +65,7 @@ export default function HireDetailsPage({ params }) {
       <div className='page-title'>
         <div className='tf-container'>
           <div className='page-title-content text-center'>
-            <h1 className='title split-text effect-right'>{full.heading}</h1>
+            <h1 className='title split-text effect-right'>{getUniformHeading(full.heading)}</h1>
             <Breadcrumbs />
           </div>
         </div>
@@ -231,7 +240,7 @@ export default function HireDetailsPage({ params }) {
             <div className='row g-3 tools-grid' role='list'>
               <div className='col-12 col-sm-6 col-md-4' role='listitem'>
                 <div className='tool-card p-3 rounded-3 h-100 d-flex align-items-start gap-3'>
-                  <div className='tool-icon d-flex align-items-center justify-content-center' aria-hidden='true' style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(0, 82, 204, 0.12)' }}>
+                  <div className='tool-icon d-flex align-items-center justify-content-center' aria-hidden='true' style={{ width: '50px', height: '50px', minWidth: '50px', flexShrink: 0, borderRadius: '12px', background: 'rgba(0, 82, 204, 0.12)' }}>
 
                     <svg width="36px" height="36px" viewBox="0 0 32 32" fill="none">
                       <path d="M29.6647 15.2165L17.2075 3.1679L16 2L6.62269 11.0697L2.33526 15.2165C1.88825 15.6494 1.88825 16.3506 2.33526 16.7835L10.9025 25.0697L16 30L25.3773 20.9303L25.5225 20.7899L29.6647 16.7835C30.1118 16.3506 30.1118 15.6494 29.6647 15.2165ZM16 20.1394L11.7202 16L16 11.8606L20.2798 16L16 20.1394Z" fill="#2684FF" />
@@ -257,8 +266,8 @@ export default function HireDetailsPage({ params }) {
               </div>
               <div className='col-12 col-sm-6 col-md-4' role='listitem'>
                 <div className='tool-card p-3 rounded-3 h-100 d-flex align-items-start gap-3'>
-                  <div className='tool-icon d-flex align-items-center justify-content-center' aria-hidden='true' style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(74, 21, 75, 0.1)' }}>
-                    <svg width="36px" height="36px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div className='tool-icon d-flex align-items-center justify-content-center' aria-hidden='true' style={{ width: '50px', height: '50px', minWidth: '50px', flexShrink: 0, borderRadius: '12px', background: 'rgba(100, 116, 139, 0.12)' }}>
+                    <svg width="32px" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M26.5002 14.9996C27.8808 14.9996 29 13.8804 29 12.4998C29 11.1192 27.8807 10 26.5001 10C25.1194 10 24 11.1193 24 12.5V14.9996H26.5002ZM19.5 14.9996C20.8807 14.9996 22 13.8803 22 12.4996V5.5C22 4.11929 20.8807 3 19.5 3C18.1193 3 17 4.11929 17 5.5V12.4996C17 13.8803 18.1193 14.9996 19.5 14.9996Z" fill="#2EB67D" />
                       <path d="M5.49979 17.0004C4.11919 17.0004 3 18.1196 3 19.5002C3 20.8808 4.1193 22 5.49989 22C6.8806 22 8 20.8807 8 19.5V17.0004H5.49979ZM12.5 17.0004C11.1193 17.0004 10 18.1197 10 19.5004V26.5C10 27.8807 11.1193 29 12.5 29C13.8807 29 15 27.8807 15 26.5V19.5004C15 18.1197 13.8807 17.0004 12.5 17.0004Z" fill="#E01E5A" />
                       <path d="M17.0004 26.5002C17.0004 27.8808 18.1196 29 19.5002 29C20.8808 29 22 27.8807 22 26.5001C22 25.1194 20.8807 24 19.5 24L17.0004 24L17.0004 26.5002ZM17.0004 19.5C17.0004 20.8807 18.1197 22 19.5004 22L26.5 22C27.8807 22 29 20.8807 29 19.5C29 18.1193 27.8807 17 26.5 17L19.5004 17C18.1197 17 17.0004 18.1193 17.0004 19.5Z" fill="#ECB22E" />
@@ -273,8 +282,8 @@ export default function HireDetailsPage({ params }) {
               </div>
               <div className='col-12 col-sm-6 col-md-4' role='listitem'>
                 <div className='tool-card p-3 rounded-3 h-100 d-flex align-items-start gap-3'>
-                  <div className='tool-icon d-flex align-items-center justify-content-center' aria-hidden='true' style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(16, 185, 129, 0.12)' }}>
-                    <svg width="36px" height="36px" viewBox="0 -21.5 256 256" preserveAspectRatio="xMidYMid">
+                  <div className='tool-icon d-flex align-items-center justify-content-center' aria-hidden='true' style={{ width: '50px', height: '50px', minWidth: '50px', flexShrink: 0, borderRadius: '12px', background: 'rgba(16, 185, 129, 0.12)' }}>
+                    <svg width="34px" height="34px" viewBox="0 -21.5 256 256" preserveAspectRatio="xMidYMid">
                       <g>
                         <path d="M128.300525,0 C59.6596401,0 5.88330599,87.3292379 0.795322946,161.089363 C22.33503,198.473015 74.2776064,212.524878 128.300525,212.524878 C182.319971,212.524878 234.266021,198.473015 255.795309,161.089363 C250.707325,87.3292379 196.937937,0 128.300525,0" fill="#B6DEFF">
 
