@@ -118,17 +118,19 @@ export default function BottomCTA({
 
             <div className='modal-scroll-body'>
               <div className='modal-form-content'>
-                <ContactForm
-                  id="cta-contact-form"
-                  className='form-contact-us px-md-15'
-                  title={cleanTechName
-                    ? `Consult Our ${cleanTechName}`
-                    : "Reliable Solutions for Your Project Needs"}
-                  description={cleanTechName
-                    ? `Ready to scale your team? Get a technical proposal to hire ${cleanTechName} today.`
-                    : "We’re Here to Support Your Next Big Project — Let’s Team Up!"}
-                  section="bottom_cta_modal"
-                />
+                {isModalOpen && (
+                  <ContactForm
+                    id="cta-contact-form"
+                    className='form-contact-us px-md-15'
+                    title={cleanTechName
+                      ? `Consult Our ${cleanTechName}`
+                      : "Reliable Solutions for Your Project Needs"}
+                    description={cleanTechName
+                      ? `Ready to scale your team? Get a technical proposal to hire ${cleanTechName} today.`
+                      : "We’re Here to Support Your Next Big Project — Let’s Team Up!"}
+                    section="bottom_cta_modal"
+                  />
+                )}
               </div>
             </div>
           </div>

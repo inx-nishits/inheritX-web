@@ -202,13 +202,15 @@ export default function StickyLeadBar({ techName = "Expert" }) {
 
             <div className='modal-scroll-body'>
               <div className='modal-form-content'>
-                <ContactForm
-                  id="sticky-lead-form-high-z"
-                  className='form-contact-us px-md-15'
-                  title={techName.includes('Hire') ? techName : `Hire Dedicated ${cleanTechName}`}
-                  description={`Get a customized technical proposal to hire ${cleanTechName} today.`}
-                  section="sticky_lead_bar_high_z"
-                />
+                {isModalOpen && (
+                  <ContactForm
+                    id="sticky-lead-form-high-z"
+                    className='form-contact-us px-md-15'
+                    title={techName.includes('Hire') ? techName : `Hire Dedicated ${cleanTechName}`}
+                    description={`Get a customized technical proposal to hire ${cleanTechName} today.`}
+                    section="sticky_lead_bar_high_z"
+                  />
+                )}
               </div>
             </div>
           </div>
