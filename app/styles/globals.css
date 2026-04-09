@@ -8,6 +8,13 @@ body {
   padding: 0;
 }
 
+/* Prevent layout jump when scrollbar is hidden (Desktop only and when menu is NOT closing) */
+@media (min-width: 1200px) {
+  html:not(:has(.mobile-nav-wrap.show, .offcanvas.show)) {
+    scrollbar-gutter: stable;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -33,10 +40,20 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
   pointer-events: none !important;
 }
 
+/* Blur content when desktop mega menu is hovered (Modern high-end feel) */
+@media (min-width: 1200px) {
+  body:not(.menu-closing):has(#header .menu-item-has-children:hover) .flex-grow-1,
+  body:not(.menu-closing):has(#header .menu-item-has-children:hover) footer {
+    filter: blur(12px) brightness(0.75);
+    transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1), brightness 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none; /* Clicks only target the menu */
+  }
+}
+
 /* Make header sticky and visible when mega menu is open on desktop */
 @media (min-width: 1200px) {
   body:not(.menu-closing) #header:has(.menu-item-has-children:hover) {
-    position: fixed !important;
+    position: sticky !important;
     top: 0 !important;
     width: 100% !important;
     z-index: 1020 !important;
@@ -44,6 +61,54 @@ body.menu-closing .menu-primary-menu .menu-item:hover .sub-menu-home {
     transform: translateY(0) !important;
   }
 }
+
+/* Ensure Top Bar is always above the header but below mobile menu if open */
+.top-bar {
+  position: relative !important;
+  z-index: 1060 !important; 
+}
+
+/* Hide top bar entirely on mobile when menu is open to prevent overlapping icons/links */
+body:has(.mobile-nav-wrap.show, .offcanvas.show) .top-bar {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Standardize sticky header behavior */
+.header-sticky {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1020 !important;
+  background-color: var(--main-dark, #0b0f19) !important;
+  transition: transform 0.3s ease, top 0.3s ease !important;
+}
+
+/* Prevent fixed-position JS logic from main.js if it causes issues, 
+   but sticky + top: 0 should naturally handle the "menu only" requirement */
+.header-sticky[style*="position: fixed"] {
+  position: sticky !important;
+}
+
+/* Ensure the mobile offcanvas is always above everything */
+.mobile-nav-wrap.show {
+  z-index: 1100 !important; 
+}
+
+/* Hide stray scrollbars in the mobile nav */
+.inner-mobile-nav {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.inner-mobile-nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Ensure mobile backdrop is also high enough but below the menu */
+.offcanvas-backdrop.show {
+  z-index: 1090 !important;
+}
+
 
 /* Opt-in utility: make container full-width from 1024px and up */
 .fullwidth-from-1024 {
