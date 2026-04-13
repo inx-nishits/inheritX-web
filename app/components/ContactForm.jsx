@@ -5,7 +5,7 @@ import toast from 'react-hot-toast'
 import { trackEvent } from '../utils/ga4'
 
 export default function ContactForm({
-  id = 'contactform',
+  id: formId = 'contact-form',
   className = 'form-contact-us px-md-15',
   method = 'post',
   action = '',
@@ -16,7 +16,8 @@ export default function ContactForm({
   budgetOptions = ['Choose Budget', 'Below $5,000', '$5,000 – $15,000', '$15,000 – $30,000', 'Not sure yet'],
   submitText = 'Schedule a free Consultation',
   section = 'reliable_solutions',
-  onSubmit
+  onSubmit,
+  onSuccess
 }) {
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -136,7 +137,8 @@ export default function ContactForm({
   const isAlphaSpace = (raw) => {
     const value = (raw || '').trim()
     if (!value) return false
-    return /^[A-Za-z\s]+$/.test(value)
+    // Allow letters, spaces, dots, hyphens, and apostrophes (standard name characters)
+    return /^[A-Za-z\s.'\-]+$/.test(value)
   }
 
   // Field-level validation for real-time feedback on blur/change
@@ -187,9 +189,9 @@ export default function ContactForm({
 
   const handleChange = (e) => {
     const { id } = e.target
-    // sanitize in-place for alpha-only fields
+    // sanitize in-place for alpha-only fields (allowing dots, hyphens, spaces)
     if (id === 'name' || id === 'country') {
-      e.target.value = (e.target.value || '').replace(/[^A-Za-z\s]/g, '')
+      e.target.value = (e.target.value || '').replace(/[^A-Za-z\s.'\-]/g, '')
     }
     // sanitize for numeric-plus field: phone
     if (id === 'phone') {
@@ -276,9 +278,9 @@ export default function ContactForm({
         data = null
       }
 
-      const apiMessage = data?.message || (data?.status === 1 ? 'Thanks! Your message has been sent.' : 'Something went wrong')
+      const apiMessage = data?.message || (Number(data?.status) === 1 ? 'Thanks! Your message has been sent.' : 'Something went wrong')
 
-      if (data?.status === 1) {
+      if (Number(data?.status) === 1) {
         // Track successful form submission
         trackEvent('form_submit', {
           form_name: 'project_contact',
@@ -302,6 +304,9 @@ export default function ContactForm({
         regenerateCaptcha()
         setErrors({})
         toast.success(apiMessage)
+        if (onSuccess) {
+          onSuccess(data)
+        }
       } else {
         setErrors((prev) => ({ ...prev, submit: apiMessage }))
         toast.error(apiMessage)
@@ -314,7 +319,7 @@ export default function ContactForm({
   }
 
   return (
-    <form id={id} className={className} noValidate onSubmit={(e) => handleSubmit(e)}>
+    <form id={formId} className={className} noValidate onSubmit={(e) => handleSubmit(e)}>
       <div className='heading-form text-center' style={{ paddingLeft: '40px', paddingRight: '40px' }}>
         <h3 className='title'>{title}</h3>
         <div className='desc lh-30'>
@@ -397,7 +402,7 @@ export default function ContactForm({
       </fieldset>
 
       {/* Math Captcha Row */}
-      <div className='d-flex flex-nowrap align-items-center justify-content-start calculation-fields' data-aos='zoom-in' style={{ gap: '4px' }}>
+      <div className='d-flex flex-nowrap align-items-center justify-content-start calculation-fields' style={{ gap: '4px' }}>
         <label htmlFor='captcha-x' className='visually-hidden'>First number</label>
         <div style={{ width: '44px' }}><input type='text' id='captcha-x' value={captcha.x} className='text-center p-1 h-full' disabled style={{ borderRadius: '8px', border: '1px solid #e2e8f0', height: '44px' }} /></div>
         <label className='check_label px-1 fw-bold'>+</label>

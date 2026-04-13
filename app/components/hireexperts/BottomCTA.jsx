@@ -129,6 +129,7 @@ export default function BottomCTA({
                       ? `Ready to scale your team? Get a technical proposal to hire ${cleanTechName} today.`
                       : "We’re Here to Support Your Next Big Project — Let’s Team Up!"}
                     section="bottom_cta_modal"
+                    onSuccess={() => setTimeout(closeModal, 1500)}
                   />
                 )}
               </div>

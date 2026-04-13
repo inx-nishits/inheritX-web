@@ -2,7 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import dynamicImport from 'next/dynamic'
 import OurPlatforms from "../OurPlatforms";
+const ContactForm = dynamicImport(() => import('../ContactForm'), { ssr: false })
 import BottomCTA from "./BottomCTA";
 import StickyLeadBar from "./StickyLeadBar";
 
@@ -559,6 +561,23 @@ export default function HireExpertContent() {
           subtitle="Let’s discuss your app idea and implement an innovative solution for your business needs with our expert developers."
           buttonText="INQUIRE NOW"
         />
+
+        <section className='section-contact-form tf-spacing-2'>
+          <div className='tf-container'>
+            <div className='row justify-content-center'>
+              <div className='col-lg-10'>
+                <div className='bg-white rounded-5 shadow-lg p-4 p-md-5 border'>
+                   <ContactForm 
+                    id="hire-experts-page-form"
+                    title="Inquire Our Experts Today"
+                    description="Fill out the form below to get a detailed technical proposal and consultation from our solution architects."
+                    section="hire_experts_main_page"
+                   />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         <OurPlatforms />

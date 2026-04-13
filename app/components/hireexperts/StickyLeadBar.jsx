@@ -209,6 +209,7 @@ export default function StickyLeadBar({ techName = "Expert" }) {
                     title={techName.includes('Hire') ? techName : `Hire Dedicated ${cleanTechName}`}
                     description={`Get a customized technical proposal to hire ${cleanTechName} today.`}
                     section="sticky_lead_bar_high_z"
+                    onSuccess={() => setTimeout(closeModal, 1500)}
                   />
                 )}
               </div>

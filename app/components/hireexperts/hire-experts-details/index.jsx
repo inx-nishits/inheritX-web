@@ -6,6 +6,8 @@ import { HireUsTechAIData } from '../../../hire-experts/hireusTechAIData'
 import { HireUsModelsData } from '../../../hire-experts/hireusModelsData'
 import Breadcrumbs from '../../Breadcrumbs'
 import { useEffect } from 'react'
+import dynamicImport from 'next/dynamic'
+const ContactForm = dynamicImport(() => import('../../ContactForm'), { ssr: false })
 import BottomCTA from '../BottomCTA'
 import StickyLeadBar from '../StickyLeadBar'
 
@@ -333,6 +335,24 @@ export default function HireDetailsPage({ params }) {
             ? `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${formatAcronyms(full.heading)} is ready to deliver high-quality solutions for your business.`
             : `Whether it is a DRE, T&M, or a Fixed Price model, our expert ${formatAcronyms(full.heading)} team is ready to deliver high-quality solutions for your business.`)}
         />
+
+        <section className='section-contact-form tf-spacing-2'>
+          <div className='tf-container'>
+            <div className='row justify-content-center'>
+              <div className='col-lg-10'>
+                <div className='bg-white rounded-5 shadow-lg p-4 p-md-5 border'>
+                   <ContactForm 
+                    id={`hire-details-form-${params.slug}`}
+                    title={`Consult Our ${formatAcronyms(full.heading)}`}
+                    description={`Ready to scale your team? Get a customized technical proposal to hire ${formatAcronyms(full.heading)} today.`}
+                    section="hire_details_page"
+                   />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <StickyLeadBar techName={formatAcronyms(full.heading)} />
       </div>
     </>
