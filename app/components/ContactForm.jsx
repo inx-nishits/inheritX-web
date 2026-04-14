@@ -47,7 +47,7 @@ export default function ContactForm({
 
     const initializeNiceSelect = () => {
       const $ = window.jQuery
-      if (!$ || !$.fn.niceSelect) return false
+      if (!$ || !$.fn || !$.fn.niceSelect) return false
 
       const $select = $(budgetSelectRef.current)
       if (!$select.length) return false
@@ -297,16 +297,25 @@ export default function ContactForm({
         if (budgetSelectRef.current) {
           budgetSelectRef.current.value = ''
           const $ = window.jQuery
-          if ($ && $.fn.niceSelect) {
+          if ($ && $.fn && $.fn.niceSelect) {
             $(budgetSelectRef.current).niceSelect('update')
           }
         }
         regenerateCaptcha()
         setErrors({})
         toast.success(apiMessage)
-        if (onSuccess) {
-          onSuccess(data)
-        }
+        
+        // Decouple from current React batch phase and add the requested 0.5-second delay
+        setTimeout(() => {
+          if (typeof onSuccess === 'function') {
+            try {
+              onSuccess(data)
+            } catch (e) {
+              console.error("onSuccess failed:", e);
+            }
+          }
+        }, 500);
+        
       } else {
         setErrors((prev) => ({ ...prev, submit: apiMessage }))
         toast.error(apiMessage)

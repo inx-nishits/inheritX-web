@@ -17,7 +17,7 @@ export default function StickyLeadBar({ techName = "Expert" }) {
       ([entry]) => {
         setIsStaticBeltVisible(entry.isIntersecting);
       },
-      { 
+      {
         threshold: 0,
         rootMargin: '100px 0px 0px 0px' // slightly preemptive hide
       }
@@ -32,12 +32,12 @@ export default function StickyLeadBar({ techName = "Expert" }) {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const bodyHeight = document.body.offsetHeight;
-      
+
       // Basic distance threshold (show earlier, after 150px)
       const isPastThreshold = scrollY > 150;
       // Also hide if we've reached the very bottom of the page
       const isAtBottom = (scrollY + windowHeight) > (bodyHeight - 100);
-      
+
       if (isPastThreshold && !isStaticBeltVisible && !isAtBottom) {
         setIsVisible(true);
       } else {
@@ -77,7 +77,7 @@ export default function StickyLeadBar({ techName = "Expert" }) {
           1. belt is hidden when modal is open (isModalOpen ? false : isVisible)
           2. extremely high z-index to stay above "Back to Top" (9999999)
       */}
-      <div 
+      <div
         className={`sticky-lead-bar ${isVisible && !isModalOpen ? 'visible' : ''}`}
         style={{
           position: 'fixed',
@@ -102,11 +102,11 @@ export default function StickyLeadBar({ techName = "Expert" }) {
         }}
       >
         <div className="bar-content d-flex align-items-center gap-3">
-          <div 
+          <div
             className="d-none d-md-flex align-items-center justify-content-center rounded-circle"
-            style={{ 
-              width: '42px', 
-              height: '42px', 
+            style={{
+              width: '42px',
+              height: '42px',
               background: 'linear-gradient(135deg, #00bed4 0%, #0052cc 100%)',
               boxShadow: '0 0 15px rgba(0, 190, 212, 0.4)'
             }}
@@ -126,10 +126,10 @@ export default function StickyLeadBar({ techName = "Expert" }) {
           </div>
         </div>
 
-        <button 
+        <button
           onClick={openModal}
           className="custom-sticky-btn-final py-0 px-4 rounded-pill d-flex align-items-center justify-content-center"
-          style={{ 
+          style={{
             height: '46px',
             fontSize: '13px',
             fontWeight: '800',
@@ -184,7 +184,7 @@ export default function StickyLeadBar({ techName = "Expert" }) {
         className={`cta-modal-overlay ${isModalOpen ? 'open' : ''}`}
         onClick={closeModal}
         style={{
-           zIndex: 2147483647 // Match highest possible priority to hide body content effectively
+          zIndex: 2147483647 // Match highest possible priority to hide body content effectively
         }}
       >
         <div
@@ -209,7 +209,7 @@ export default function StickyLeadBar({ techName = "Expert" }) {
                     title={techName.includes('Hire') ? techName : `Hire Dedicated ${cleanTechName}`}
                     description={`Get a customized technical proposal to hire ${cleanTechName} today.`}
                     section="sticky_lead_bar_high_z"
-                    onSuccess={() => setTimeout(closeModal, 1500)}
+                    onSuccess={closeModal}
                   />
                 )}
               </div>
