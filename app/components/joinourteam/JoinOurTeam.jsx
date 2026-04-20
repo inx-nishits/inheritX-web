@@ -47,7 +47,7 @@ export default function JoinOurTeam() {
       try {
         setCareersLoading(true)
         setCareersError('')
-        const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/career', { cache: 'no-store' })
+        const res = await fetch('https://wpadmin.inheritx.com/wp-json/api/v1/career', { cache: 'no-store' })
         if (!res.ok) throw new Error(`Failed to load careers (${res.status})`)
         const data = await res.json()
         const list = Array.isArray(data?.career) ? data.career : []
@@ -78,7 +78,7 @@ export default function JoinOurTeam() {
         setJobLoading(true)
         setJobError('')
         setJobDetails(null)
-        const res = await fetch(`https://admin.inheritx.com/wp-json/api/v1/careerdetails/${selectedJobId}`, { cache: 'no-store' })
+        const res = await fetch(`https://wpadmin.inheritx.com/wp-json/api/v1/careerdetails/${selectedJobId}`, { cache: 'no-store' })
         if (!res.ok) throw new Error(`Failed to load job details (${res.status})`)
         const data = await res.json()
         setJobDetails(data?.career || null)
@@ -133,7 +133,7 @@ export default function JoinOurTeam() {
     setSelectedJobId(jobId)
     resetApplyForm()
     regenerateCaptcha()
-    
+
     // Push state to browser history so back button/swipe can close modal
     if (typeof window !== 'undefined') {
       window.history.pushState({ modalOpen: true }, '', window.location.href)
@@ -304,11 +304,11 @@ export default function JoinOurTeam() {
   }
 
   const postCareerForm = async (payload) => {
-    const endpoint = 'https://admin.inheritx.com/wp-json/api/v1/careerform'
+    const endpoint = 'https://wpadmin.inheritx.com/wp-json/api/v1/careerform'
     const res = await fetch(endpoint, { method: 'POST', body: payload })
     return res
   }
-  
+
   // Reset form when modal is fully hidden (e.g., close button or backdrop)
   useEffect(() => {
     const modalEl = typeof document !== 'undefined' ? document.getElementById('applyReactModal') : null
@@ -319,7 +319,7 @@ export default function JoinOurTeam() {
       setJobDetails(null)
       setJobError('')
       setJobLoading(false)
-      
+
       // Remove the history state we added when modal was opened
       if (typeof window !== 'undefined' && window.history.state?.modalOpen) {
         window.history.back()
@@ -346,7 +346,7 @@ export default function JoinOurTeam() {
 
     // Listen for browser back/forward navigation
     window.addEventListener('popstate', handlePopState)
-    
+
     return () => {
       window.removeEventListener('popstate', handlePopState)
     }
@@ -384,7 +384,7 @@ export default function JoinOurTeam() {
 
     modalEl.addEventListener('show.bs.modal', handleModalShow)
     modalEl.addEventListener('hide.bs.modal', handleModalHide)
-    
+
     return () => {
       modalEl.removeEventListener('show.bs.modal', handleModalShow)
       modalEl.removeEventListener('hide.bs.modal', handleModalHide)
@@ -747,7 +747,7 @@ export default function JoinOurTeam() {
                     priority
                   />
                 </div>
-                
+
                 <div className={`box-avatar ${!isMobile ? 'tf-animate-3' : ''}`}>
                   <div className='text'>
                     <p className='fs-20 fw-6'>

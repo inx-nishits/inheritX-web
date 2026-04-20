@@ -148,20 +148,20 @@ export default function ChatBot() {
   const handleReset = () => {
     setChatStage('basic-info')
     setSelectedOption(null)
-      setFormData({
-        name: '',
-        email: '',
-        selectedService: '',
-        phone: '',
-        requirements: '',
-        selectedDevelopers: [],
-        selectionNotes: '',
-        position: '',
-        experience: '',
-        coverLetter: '',
-        resume: null,
-        resumeName: ''
-      })
+    setFormData({
+      name: '',
+      email: '',
+      selectedService: '',
+      phone: '',
+      requirements: '',
+      selectedDevelopers: [],
+      selectionNotes: '',
+      position: '',
+      experience: '',
+      coverLetter: '',
+      resume: null,
+      resumeName: ''
+    })
     setFormErrors({})
   }
 
@@ -225,7 +225,7 @@ export default function ChatBot() {
   const handleMainMenuSelect = (option) => {
     setSelectedOption(option.category)
     setFormData(prev => ({ ...prev, selectedService: option.text }))
-    
+
     // If hiring team, go to developer selection first
     if (option.category === 'hire-team') {
       setChatStage('hire-team-selection')
@@ -276,24 +276,24 @@ export default function ChatBot() {
       hireTeamFormData.append('phone', 'Not specified - Message from Chatbot')
       hireTeamFormData.append('project_budget', 'Hire Dedicated Team - Message from Chatbot')
       hireTeamFormData.append('project_type', formData.selectedService || 'Hire Dedicated Team')
-      
+
       // Build detailed project details with all hire-team information
       let projectDetails = `HIRE DEDICATED TEAM REQUEST\n\n`
       projectDetails += `Service Category: ${formData.selectedService || 'Not specified'}\n\n`
-      
+
       if (formData.selectedDevelopers && formData.selectedDevelopers.length > 0) {
         const selectedDevelopersNames = formData.selectedDevelopers.map(dev => dev.name).join(', ')
         projectDetails += `Selected Developers: ${selectedDevelopersNames}\n\n`
       }
-      
+
       if (formData.selectionNotes) {
         projectDetails += `Hire Team Additional Notes: ${formData.selectionNotes}\n\n`
       }
-      
+
       if (formData.requirements) {
         projectDetails += `Project Requirements:\n${formData.requirements}`
       }
-      
+
       hireTeamFormData.append('project_details', projectDetails)
       hireTeamFormData.append('project_nda', '0')
 
@@ -307,7 +307,7 @@ export default function ChatBot() {
 
       // Check for success status
       const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
-      
+
       if (!isSuccess) {
         toast.error('Failed to submit your request. Please try again.')
         return
@@ -326,10 +326,10 @@ export default function ChatBot() {
   // Handle form input change
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    
+
     // Apply input restrictions
     let sanitizedValue = value
-    
+
     if (name === 'name') {
       // Only allow letters and spaces for name
       sanitizedValue = value.replace(/[^a-zA-Z\s]/g, '')
@@ -340,9 +340,9 @@ export default function ChatBot() {
       // Only allow numbers for experience
       sanitizedValue = value.replace(/\D/g, '').slice(0, 2)
     }
-    
+
     setFormData(prev => ({ ...prev, [name]: sanitizedValue }))
-    
+
     // Clear error when user starts typing
     if (formErrors[name]) {
       setFormErrors(prev => ({ ...prev, [name]: '' }))
@@ -352,7 +352,7 @@ export default function ChatBot() {
   // Handle file upload
   const handleFileUpload = (e) => {
     const file = e.target.files[0]
-    
+
     if (file) {
       // Validate file type
       const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
@@ -360,15 +360,15 @@ export default function ChatBot() {
         setFormErrors(prev => ({ ...prev, resume: 'Please upload a PDF or Word document' }))
         return
       }
-      
+
       // Validate file size (max 5MB)
       if (file.size > 5 * 1024 * 1024) {
         setFormErrors(prev => ({ ...prev, resume: 'File size must be less than 5MB' }))
         return
       }
-      
-      setFormData(prev => ({ 
-        ...prev, 
+
+      setFormData(prev => ({
+        ...prev,
         resume: file,
         resumeName: file.name
       }))
@@ -378,8 +378,8 @@ export default function ChatBot() {
 
   // Remove uploaded file
   const handleRemoveFile = () => {
-    setFormData(prev => ({ 
-      ...prev, 
+    setFormData(prev => ({
+      ...prev,
       resume: null,
       resumeName: ''
     }))
@@ -391,7 +391,7 @@ export default function ChatBot() {
   // Validate basic info form (name and email only)
   const validateBasicInfo = () => {
     const errors = {}
-    
+
     // Name validation
     if (!formData.name.trim()) {
       errors.name = 'Name is required'
@@ -400,7 +400,7 @@ export default function ChatBot() {
     } else if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
       errors.name = 'Name can only contain letters and spaces'
     }
-    
+
     // Email validation
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -415,7 +415,7 @@ export default function ChatBot() {
   const handleBasicInfoSubmit = async (e) => {
     e.preventDefault()
     trackEvent('chatbot_submit', { section: 'chatbot', type: 'basic_info' })
-    
+
     const errors = validateBasicInfo()
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors)
@@ -429,7 +429,7 @@ export default function ChatBot() {
   // Validate details form
   const validateDetailsForm = () => {
     const errors = {}
-    
+
     if (selectedOption === 'apply-job') {
       // Job application validation
       // Position validation
@@ -438,7 +438,7 @@ export default function ChatBot() {
       } else if (formData.position.trim().length < 2) {
         errors.position = 'Position must be at least 2 characters'
       }
-      
+
       // Phone validation
       if (!formData.phone.trim()) {
         errors.phone = 'Phone number is required'
@@ -448,21 +448,21 @@ export default function ChatBot() {
           errors.phone = 'Enter a valid phone number'
         }
       }
-      
+
       // Experience validation
       if (!formData.experience.trim()) {
         errors.experience = 'Years of experience is required'
       } else if (parseInt(formData.experience) > 50) {
         errors.experience = 'Please enter valid years of experience'
       }
-      
+
       // Cover Letter validation
       if (!formData.coverLetter.trim()) {
         errors.coverLetter = 'Cover letter is required'
       } else if (formData.coverLetter.trim().length < 20) {
         errors.coverLetter = 'Cover letter must be at least 20 characters'
       }
-      
+
       // Resume validation
       if (!formData.resume) {
         errors.resume = 'Resume/CV is required'
@@ -488,14 +488,14 @@ export default function ChatBot() {
 
   // WordPress Career API - same as Join Our Team
   const postCareerForm = async (payload) => {
-    const endpoint = 'https://admin.inheritx.com/wp-json/api/v1/careerform'
+    const endpoint = 'https://wpadmin.inheritx.com/wp-json/api/v1/careerform'
     const res = await fetch(endpoint, { method: 'POST', body: payload })
     return res
   }
 
   // Contact Form API - for new project submissions
   const postContactForm = async (payload) => {
-    const endpoint = 'https://admin.inheritx.com/wp-json/api/contactform'
+    const endpoint = 'https://wpadmin.inheritx.com/wp-json/api/contactform'
     const res = await fetch(endpoint, { method: 'POST', body: payload })
     return res
   }
@@ -504,7 +504,7 @@ export default function ChatBot() {
   const handleDetailsFormSubmit = async (e) => {
     e.preventDefault()
     trackEvent('chatbot_submit', { section: 'chatbot', type: 'details_form' })
-    
+
     const errors = validateDetailsForm()
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors)
@@ -563,7 +563,7 @@ export default function ChatBot() {
 
         // Check for success status
         const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
-        
+
         if (!isSuccess) {
           toast.error('Failed to submit your project details. Please try again.')
           return
@@ -596,7 +596,7 @@ export default function ChatBot() {
 
         // Check for success status
         const isSuccess = response.ok && (typeof data.status === 'undefined' || Number(data.status) === 1)
-        
+
         if (isSuccess) {
           toast.success('Your information has been submitted successfully!')
           setChatStage('success')
@@ -616,7 +616,7 @@ export default function ChatBot() {
   useEffect(() => {
     const progressWrap = document.querySelector('.progress-wrap')
     const isMobile = window.innerWidth <= 480
-    
+
     if (progressWrap && isMobile) {
       if (isOpen) {
         progressWrap.style.display = 'none'
@@ -720,9 +720,9 @@ export default function ChatBot() {
               <div className='chat-greeting'>
                 <div className='greeting-content'>
                   <div className='greeting-icon'>
-                    <img 
-                      src='/image/logo/inx-icon.png' 
-                      alt='InheritX Logo' 
+                    <img
+                      src='/image/logo/inx-icon.png'
+                      alt='InheritX Logo'
                       className='logo-image'
                     />
                   </div>
@@ -788,7 +788,7 @@ export default function ChatBot() {
                     <h3>Select Developer Types 👨‍💻</h3>
                     <p>Choose one or more developer types you want to hire</p>
                   </div>
-                  
+
                   <div className='developer-categories'>
                     {Object.entries(developerTypes).map(([category, developers]) => (
                       <div key={category} className='developer-category'>
@@ -866,7 +866,7 @@ export default function ChatBot() {
                   <h3>Let's Get Started! 👋</h3>
                   <p>Please share your basic details</p>
                 </div>
-                
+
                 <form onSubmit={handleBasicInfoSubmit} className='contact-form'>
                   {/* Name */}
                   <div className='form-group'>
@@ -1048,8 +1048,8 @@ export default function ChatBot() {
                           {formErrors.resume && <span className='error-text'>{formErrors.resume}</span>}
                         </div>
 
-                         {/* Cover Letter */}
-                         <div className='form-group'>
+                        {/* Cover Letter */}
+                        <div className='form-group'>
                           <label htmlFor='coverLetter'>Cover Letter / Why You? *</label>
                           <textarea
                             id='coverLetter'
@@ -1078,7 +1078,7 @@ export default function ChatBot() {
                           value={formData.requirements}
                           onChange={handleInputChange}
                           placeholder={
-                            selectedOption === 'hire-team' 
+                            selectedOption === 'hire-team'
                               ? 'e.g., Need 2 Flutter developers for 6 months, experience with Firebase and REST APIs...'
                               : 'Tell us about your project requirements...'
                           }
@@ -1119,17 +1119,17 @@ export default function ChatBot() {
                   <div className='success-icon'>🎉</div>
                   <h3>Thank You, {formData.name}!</h3>
                   <p>
-                    {selectedOption === 'apply-job' 
+                    {selectedOption === 'apply-job'
                       ? "We've received your application."
                       : `We've received your request for ${formData.selectedService}.`
                     }
                   </p>
                   <p>
-                    {selectedOption === 'apply-job' 
+                    {selectedOption === 'apply-job'
                       ? 'Our HR department will contact you soon.'
                       : selectedOption === 'hire-team'
-                      ? 'Our recruitment team will contact you soon.'
-                      : 'Our team will contact you soon.'
+                        ? 'Our recruitment team will contact you soon.'
+                        : 'Our team will contact you soon.'
                     }
                   </p>
                   <button onClick={handleReset} className='back-to-menu-btn'>

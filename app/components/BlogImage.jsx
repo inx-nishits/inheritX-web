@@ -3,10 +3,10 @@
 import { useState, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 
-export default function BlogImage({ 
-    src, 
-    alt = '', 
-    className = '', 
+export default function BlogImage({
+    src,
+    alt = '',
+    className = '',
     fallbackSrc = '/image/blog/blog-fallback-image.jpg',
     width = 400,
     height = 300,
@@ -21,16 +21,16 @@ export default function BlogImage({
     // Memoize the optimized image URL
     const optimizedSrc = useMemo(() => {
         if (!src || src.startsWith('/')) return src;
-        
+
         // Add optimization parameters for WordPress images
-        if (src.includes('admin.inheritx.com')) {
+        if (src.includes('wpadmin.inheritx.com')) {
             const url = new URL(src);
             // Add quality and format optimization
             url.searchParams.set('q', '80'); // 80% quality for faster loading
             url.searchParams.set('f', 'webp'); // Prefer WebP format
             return url.toString();
         }
-        
+
         return src;
     }, [src]);
 

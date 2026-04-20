@@ -266,7 +266,7 @@ export default function ContactForm({
       fd.append('project_details', form.querySelector('#message')?.value || '')
       fd.append('project_nda', ndaChecked ? '1' : '0')
 
-      const res = await fetch('https://admin.inheritx.com/wp-json/api/contactform', {
+      const res = await fetch('https://wpadmin.inheritx.com/wp-json/api/contactform', {
         method: 'POST',
         body: fd
       })

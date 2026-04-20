@@ -56,7 +56,7 @@ export default function BlogListPage() {
                 setLoading(true);
                 setError(null);
 
-                const res = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
+                const res = await fetch('https://wpadmin.inheritx.com/wp-json/api/v1/inxblog', {
                     cache: 'no-store', // Ensure fresh data
                     headers: {
                         'Accept': 'application/json',
@@ -92,21 +92,21 @@ export default function BlogListPage() {
     const imageMap = useMemo(() => {
         if (!blogData) return {};
         const map = {};
-        
+
         // Add images from singleBlog
         blogData.singleBlog?.forEach(post => {
             if (post.slug && post.feature_image) {
                 map[post.slug] = post.feature_image;
             }
         });
-        
+
         // Add images from recentBlog
         blogData.recentBlog?.forEach(post => {
             if (post.slug && post.feature_image) {
                 map[post.slug] = post.feature_image;
             }
         });
-        
+
         return map;
     }, [blogData]);
 
@@ -116,19 +116,19 @@ export default function BlogListPage() {
         if (!post || !post.feature_image) {
             return post?.feature_image || undefined;
         }
-        
+
         // If post exists in main listing, use that image (ensures consistency)
         if (post.slug && imageMap[post.slug]) {
             return imageMap[post.slug];
         }
-        
+
         // For relative URLs (starting with /), return as-is
         if (post.feature_image.startsWith('/')) {
             return post.feature_image;
         }
-        
-        // Otherwise, normalize the URL by removing size parameters (only for admin.inheritx.com)
-        if (post.feature_image.includes('admin.inheritx.com')) {
+
+        // Otherwise, normalize the URL by removing size parameters (only for wpadmin.inheritx.com)
+        if (post.feature_image.includes('wpadmin.inheritx.com')) {
             try {
                 const url = new URL(post.feature_image);
                 // Remove size-related query parameters that might cause different images
@@ -144,7 +144,7 @@ export default function BlogListPage() {
                 return post.feature_image;
             }
         }
-        
+
         // For any other URLs, return as-is
         return post.feature_image;
     }, [imageMap]);
@@ -1118,7 +1118,7 @@ export default function BlogListPage() {
                                         setSubmitting(true);
                                         const formData = new FormData();
                                         formData.append("email", subEmail);
-                                        const res = await fetch("https://admin.inheritx.com/wp-json/api/v1/subscription", {
+                                        const res = await fetch("https://wpadmin.inheritx.com/wp-json/api/v1/subscription", {
                                             method: "POST",
                                             body: formData,
                                         });

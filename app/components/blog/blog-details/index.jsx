@@ -12,7 +12,7 @@ function rewriteWpLinksToPublicBlog(html, { publicOrigin, adminOrigin, knownSlug
   if (typeof window === 'undefined') return html;
 
   const publicBase = (publicOrigin || 'https://www.inheritx.com').replace(/\/$/, '');
-  const adminBase = (adminOrigin || 'https://admin.inheritx.com').replace(/\/$/, '');
+  const adminBase = (adminOrigin || 'https://wpadmin.inheritx.com').replace(/\/$/, '');
 
   const slugSet = knownSlugs instanceof Set ? knownSlugs : new Set();
   const mapIdToSlug = idToSlug instanceof Map ? idToSlug : new Map();
@@ -137,12 +137,12 @@ export default function BlogDetailsPage({ params }) {
         if (!slug) return;
 
         // Fetch blog details
-        const detailsRes = await fetch(`https://admin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
+        const detailsRes = await fetch(`https://wpadmin.inheritx.com/wp-json/api/v1/inxblogdetails/${slug}`);
         if (!detailsRes.ok) throw new Error('Failed to fetch blog details');
         const detailsJson = await detailsRes.json();
 
         // Fetch categories with counts from main blog API
-        const categoriesRes = await fetch('https://admin.inheritx.com/wp-json/api/v1/inxblog', {
+        const categoriesRes = await fetch('https://wpadmin.inheritx.com/wp-json/api/v1/inxblog', {
           cache: 'no-store',
           headers: {
             'Accept': 'application/json',
@@ -182,7 +182,7 @@ export default function BlogDetailsPage({ params }) {
   const hero = bloginfo?.feature_image || '/image/blog/blog-fallback-image.jpg';
   const renderedContent = useMemo(() => {
     const publicOrigin = (siteUrl || 'https://www.inheritx.com').replace(/\/$/, '');
-    const adminOrigin = 'https://admin.inheritx.com';
+    const adminOrigin = 'https://wpadmin.inheritx.com';
 
     // Build mappings from the API payload so we can convert admin links -> /blog/:slug reliably.
     const slugs = new Set();
