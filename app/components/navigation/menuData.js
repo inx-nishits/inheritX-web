@@ -99,8 +99,8 @@ const menuData = [
       },
       {
         subtitle: 'FOUNDATIONS',
-        title: 'Cloud & MERN',
-        description: 'Scalable cloud architectures & full-stack apps.',
+        title: 'AI-Native Platforms',
+        description: 'Scalable cloud architecture and modern full-stack engineering.',
         href: '/services/aws-services',
         bgImage: '/image/page-title/herobanner-final.jpg'
       }
