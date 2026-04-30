@@ -10,7 +10,7 @@ export default function MobileNav ({ menuData, onNavigate }) {
     // All closed initially irrespective of current route
     const map = {}
     menuData.forEach((item, idx) => {
-      if (item.type === 'mega') {
+      if (item.type === 'mega' || item.type === 'mega-cards') {
         map[idx] = false
       }
     })
@@ -34,14 +34,21 @@ export default function MobileNav ({ menuData, onNavigate }) {
     })
   }
 
-  const isActive = href => pathname === href || pathname.startsWith(`${href}/`)
-  const isParentActive = (href, columns) => {
-    if (pathname === href || pathname.startsWith(`${href}/`)) return true
-    if (!columns) return false
-    return columns.some(col =>
-      col.items.some(i => pathname === i.href || pathname.startsWith(`${i.href}/`))
-    )
+  const isActive = path => pathname === path || (path !== '/' && path !== '#' && pathname.startsWith(`${path}/`))
+  
+  const getActiveParentIndex = () => {
+    return menuData.findIndex(item => {
+      if (pathname === item.href || (item.href !== '/' && item.href !== '#' && pathname.startsWith(`${item.href}/`))) return true
+      if (item.columns) {
+        return item.columns.some(col =>
+          col.items.some(i => pathname === i.href || (i.href !== '/' && i.href !== '#' && pathname.startsWith(`${i.href}/`)))
+        )
+      }
+      return false
+    })
   }
+  
+  const activeIndex = getActiveParentIndex()
 
   return (
     <nav className='mobile-main-nav'>
@@ -49,14 +56,14 @@ export default function MobileNav ({ menuData, onNavigate }) {
         {menuData.map((item, idx) => {
           if (item.type === 'link') {
             return (
-              <li key={item.href} className={isActive(item.href) ? 'current-menu-item' : ''}>
+              <li key={item.href} className={activeIndex === idx ? 'current-menu-item' : ''}>
                 <Link href={item.href} onClick={onNavigate}>{item.label}</Link>
               </li>
             )
           }
 
           // mega menu
-          const active = isParentActive(item.href, item.columns)
+          const active = activeIndex === idx
           const expanded = !!open[idx]
           return (
             <li key={item.href} className={active ? 'current-menu-item' : ''}>
@@ -79,22 +86,55 @@ export default function MobileNav ({ menuData, onNavigate }) {
                 aria-hidden={!expanded}
               >
                 {/* render columns stacked for mobile */}
-                {item.columns?.map((col, colIdx) => (
-                  <div className='mobile-mega-col' key={`${item.href}-col-${colIdx}`}>
-                    {col.title ? (
-                      <div className='text-primary fw-bold mb-3 cursor-default'>{col.title}</div>
-                    ) : null}
-                    <ul className='list-unstyled'>
-                      {col.items.map(link => (
-                        <li key={`${link.href}-${link.label}`} className={isActive(link.href) ? 'current-menu-item' : ''}>
-                          <Link href={link.href} className='text-decoration-none' onClick={onNavigate}>
-                            {link.label}
+                {item.type === 'mega-cards' ? (
+                  <div className='mobile-mega-cards-wrap'>
+                    {item.columns?.map((col, colIdx) => (
+                      <div className='mobile-mega-col' key={`${item.href}-col-${colIdx}`}>
+                        {col.title ? (
+                          <div className='text-primary fw-bold mb-3 cursor-default'>{col.title}</div>
+                        ) : null}
+                        <ul className='list-unstyled mb-0'>
+                          {col.items.map(link => (
+                            <li key={`${link.href}-${link.label}`} className={isActive(link.href) && activeIndex === idx ? 'current-menu-item' : 'mb-3'}>
+                              <Link href={link.href} className={`text-decoration-none d-flex align-items-center ${isActive(link.href) && activeIndex === idx ? 'text-primary' : 'text-white'}`} onClick={onNavigate}>
+                                <span>{link.label}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                    {item.promoCards && item.promoCards.length > 0 && (
+                      <div className='mt-4 pt-3 border-top border-secondary border-opacity-25'>
+                        {item.promoCards.map((card, idx) => (
+                          <Link key={`promo-mobi-${idx}`} href={card.href} onClick={onNavigate} className='d-block mb-3 p-3 rounded position-relative overflow-hidden text-decoration-none' style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            <div className='position-relative z-1'>
+                              <div className='text-primary fw-bold mb-1' style={{ fontSize: '10px', letterSpacing: '1px' }}>{card.subtitle}</div>
+                              <div className='text-white fw-bold mb-1' style={{ fontSize: '14px' }}>{card.title}</div>
+                            </div>
                           </Link>
-                        </li>
-                      ))}
-                    </ul>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))}
+                ) : (
+                  item.columns?.map((col, colIdx) => (
+                    <div className='mobile-mega-col' key={`${item.href}-col-${colIdx}`}>
+                      {col.title ? (
+                        <div className='text-primary fw-bold mb-3 cursor-default'>{col.title}</div>
+                      ) : null}
+                      <ul className='list-unstyled'>
+                        {col.items.map(link => (
+                          <li key={`${link.href}-${link.label}`} className={isActive(link.href) && activeIndex === idx ? 'current-menu-item' : ''}>
+                            <Link href={link.href} className='text-decoration-none' onClick={onNavigate}>
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+                )}
               </div>
             </li>
           )

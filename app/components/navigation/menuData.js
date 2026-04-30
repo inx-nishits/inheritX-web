@@ -60,6 +60,53 @@ const menuData = [
     ]
   },
   {
+    label: 'AI Expertise',
+    href: '#',
+    type: 'mega-cards',
+    columns: [
+      {
+        title: 'AI Integration & Models',
+        items: [
+          { label: 'Custom Machine Learning', href: '/services/machine-learning-development' },
+          { label: 'Intelligent AI Agents', href: '/services/ai-agents' },
+          { label: 'Model Tuning & Strategy', href: '/services/ai-ml-model-expertise' },
+        ]
+      },
+      {
+        title: 'AI-Powered Ecosystems',
+        items: [
+          { label: 'Scalable Cloud Architecture', href: '/services/aws-services' },
+          { label: 'AI-Driven Web Platforms', href: '/services/nextjs-development' },
+          { label: 'Automated Infrastructure', href: '/services/google-cloud-services' },
+        ]
+      },
+      {
+        title: 'Build Your AI Team',
+        items: [
+          { label: 'Hire AI & ML Engineers', href: '/hire-experts/ai-engineers' },
+          { label: 'Hire Full-Stack Developers', href: '/hire-experts/fullstack-developers' },
+          { label: 'Hire Cloud Architects', href: '/hire-experts/cloud-engineers' },
+        ]
+      }
+    ],
+    promoCards: [
+      {
+        subtitle: 'GENAI',
+        title: 'Automate with AI',
+        description: 'Leverage custom AI agents for your enterprise.',
+        href: '/services/ai-agents',
+        bgImage: '/image/page-title/herobanner-final.jpg'
+      },
+      {
+        subtitle: 'FOUNDATIONS',
+        title: 'Cloud & MERN',
+        description: 'Scalable cloud architectures & full-stack apps.',
+        href: '/services/aws-services',
+        bgImage: '/image/page-title/herobanner-final.jpg'
+      }
+    ]
+  },
+  {
     label: 'Hire Experts',
     href: '/hire-experts',
     type: 'mega',
